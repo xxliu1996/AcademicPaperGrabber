@@ -1,0 +1,477 @@
+{
+  "_comment": "六个主题各出一章，合成一份周报。改选题口径只动这个文件，不要动 scripts/fetch_papers.py。主题的 slug 会出现在 reports/<DATE>/raw/<slug>.json 和网站分类里，改了会和历史报告对不上，别轻易改。",
+
+  "shared": {
+    "_comment": "所有主题公用的参数。",
+
+    "_comment_claim_order": "一篇论文只能进一个章节。归属靠 fit 分（关键词分 + 分类分 + claim_bonus）取最大值，fit 打平时按这个顺序决定，排在前面的先认领。冷门主题放前面，否则 LLM/VLM 会把跨领域论文全吸走。",
+    "claim_order": ["wearable-xr", "robotics", "agent", "vlm", "llm", "deep-learning"],
+
+    "_comment_weights": "热度打分权重。只有 hf_upvote 和 github_star 两项是实测热度，关键词分和分类分只代表『属于这个主题』，不代表火——写周报时不许把它们说成热度。",
+    "_comment_keyword_in_rank": "关键词分 + 分类分在『章节内排序』里只按这个系数折算（归属判断仍用全权重）。同一章节里的论文都已经是主题相关的，让关键词分参与排序会把真·高票论文压下去——实测出现过 271 赞排在 90 赞之后。",
+    "_comment_github_star": "星数只在确认是论文自己的仓库时才计入（见 fetch_papers.py 的 stars_are_the_paper_s）。权重压到 1.2 是因为摘要里抽到的链接即使通过了名字校验，也不如 HF 上票可靠。",
+    "_comment_hf_upvote": "上票按 upvotes^0.5 计分（不是 log）。log 压得太狠：271 赞只比 90 赞高 3.4 分，还不如『有代码 + 有项目页』的加分，结果是关注度高三倍的论文排在后面。",
+    "weights": {
+      "hf_upvote": 1.0,
+      "hf_upvote_power": 0.5,
+      "github_star": 1.2,
+      "github_star_cap": 6.0,
+      "keyword": 1.0,
+      "keyword_in_rank": 0.25,
+      "category_primary": 2.0,
+      "category_secondary": 0.75,
+      "has_code": 1.5,
+      "has_project_page": 0.5
+    },
+
+    "_comment_exclude": "标题命中就直接丢弃。只排明确没有阅读价值的东西——综述（survey/review）不排，有些综述本身就很值得读。",
+    "exclude_title_patterns": [
+      "^comment on ",
+      "^reply to ",
+      "^corrigendum",
+      "^erratum",
+      "^withdrawn",
+      "workshop (report|summary|proceedings)",
+      "^proceedings of "
+    ],
+
+    "_comment_min_affinity": "入选某主题的第二条通道：关键词分没到 min_score，但『关键词分 + 分类分』到了这个数也算入选。用来兜住那些摘要用词冷僻、但 arXiv 分类已经把方向说得很清楚的论文。",
+    "min_affinity": 5.0,
+
+    "_comment_hf_rescue": "HF 上票达到这个数、但两条通道都没进任何主题的论文，按 arXiv 分类（不是 claim_bonus）路由到最贴近的主题，分类也看不出来就丢进 fallback_theme。防止真·爆款因为用词冷僻被静默丢掉。会在 stderr 里打 rescue 日志。",
+    "hf_rescue_min_upvotes": 20,
+    "fallback_theme": "deep-learning",
+
+    "arxiv_max_results_per_query": 150,
+    "arxiv_sleep_seconds": 3.0,
+
+    "pick": 10,
+    "emit": 25,
+    "enrich_pool": 30,
+    "min_papers": 5
+  },
+
+  "themes": {
+    "llm": {
+      "title": "大语言模型",
+      "subtitle": "预训练、后训练、推理与长上下文",
+      "accent": "#2f6f5e",
+      "claim_bonus": 0,
+      "min_score": 4,
+
+      "primary_categories": ["cs.CL"],
+      "secondary_categories": ["cs.LG", "cs.AI"],
+
+      "arxiv_queries": [
+        {
+          "cats": ["cs.CL"],
+          "terms": ["large language model", "language model", "llm"]
+        },
+        {
+          "cats": ["cs.CL", "cs.LG"],
+          "terms": ["reward model", "post-training", "instruction tuning", "preference optimization", "reinforcement learning from human feedback", "verifiable reward"]
+        },
+        {
+          "cats": ["cs.CL", "cs.LG"],
+          "terms": ["chain-of-thought", "long context", "kv cache", "speculative decoding", "mixture-of-experts", "scaling law", "test-time compute"]
+        }
+      ],
+
+      "_comment_keywords": "权重 3-4 的是强标识词，1-2 的只作辅助。匹配是字面量 + 词边界，所以连字符和空格两种写法都要列。",
+      "keywords": {
+        "large language model": 4,
+        "language model": 3,
+        "llm": 3,
+        "llms": 3,
+        "pretraining": 2,
+        "pre-training": 2,
+        "post-training": 3,
+        "instruction tuning": 3,
+        "sft": 2,
+        "rlhf": 3,
+        "rlvr": 3,
+        "dpo": 2,
+        "grpo": 3,
+        "reward model": 3,
+        "preference optimization": 3,
+        "alignment": 2,
+        "chain-of-thought": 3,
+        "chain of thought": 3,
+        "reasoning": 1,
+        "long context": 3,
+        "context length": 2,
+        "kv cache": 3,
+        "speculative decoding": 3,
+        "quantization": 2,
+        "distillation": 2,
+        "mixture-of-experts": 3,
+        "moe": 2,
+        "tokenizer": 2,
+        "tokenization": 2,
+        "decoding": 2,
+        "fine-tuning": 2,
+        "lora": 2,
+        "peft": 2,
+        "hallucination": 2,
+        "retrieval-augmented": 3,
+        "rag": 2,
+        "in-context learning": 3,
+        "scaling law": 3,
+        "test-time": 2,
+        "inference": 1,
+        "prompt": 1,
+        "gpt": 2,
+        "llama": 2,
+        "qwen": 2,
+        "deepseek": 2,
+        "transformer": 1
+      }
+    },
+
+    "vlm": {
+      "title": "多模态 / 视觉语言",
+      "subtitle": "VLM、图像与视频生成、文档与视频理解",
+      "accent": "#3a5a7a",
+      "claim_bonus": 0.5,
+      "min_score": 4,
+
+      "primary_categories": ["cs.CV", "cs.MM"],
+      "secondary_categories": ["cs.CL", "cs.AI", "eess.IV"],
+
+      "arxiv_queries": [
+        {
+          "cats": ["cs.CV"],
+          "terms": ["vision-language", "vision language model", "multimodal", "mllm"]
+        },
+        {
+          "cats": ["cs.CV", "cs.MM"],
+          "terms": ["text-to-image", "text-to-video", "image generation", "video generation", "unified multimodal"]
+        },
+        {
+          "cats": ["cs.CV", "cs.CL"],
+          "terms": ["visual question answering", "document understanding", "video understanding", "visual grounding", "visual reasoning"]
+        }
+      ],
+
+      "keywords": {
+        "vision-language": 4,
+        "vision language": 4,
+        "vision language model": 4,
+        "vlm": 4,
+        "vlms": 4,
+        "mllm": 4,
+        "mllms": 4,
+        "lvlm": 4,
+        "multimodal": 3,
+        "multi-modal": 3,
+        "unified multimodal": 4,
+        "any-to-any": 3,
+        "omni": 2,
+        "image-text": 3,
+        "visual question answering": 3,
+        "vqa": 3,
+        "video understanding": 3,
+        "document understanding": 3,
+        "image generation": 2,
+        "video generation": 3,
+        "text-to-image": 3,
+        "text-to-video": 3,
+        "image editing": 3,
+        "diffusion": 1,
+        "autoregressive image": 3,
+        "clip": 2,
+        "siglip": 3,
+        "visual encoder": 3,
+        "vision encoder": 3,
+        "captioning": 3,
+        "ocr": 2,
+        "visual grounding": 3,
+        "grounding": 1,
+        "segmentation": 1,
+        "audio-visual": 2,
+        "visual reasoning": 3,
+        "chart understanding": 3
+      }
+    },
+
+    "agent": {
+      "title": "Agent",
+      "subtitle": "工具调用、Computer Use、多智能体与编码 Agent",
+      "accent": "#6b4a8a",
+      "claim_bonus": 1.0,
+      "min_score": 4,
+
+      "primary_categories": ["cs.AI", "cs.MA", "cs.SE"],
+      "secondary_categories": ["cs.CL", "cs.LG", "cs.HC"],
+
+      "arxiv_queries": [
+        {
+          "cats": ["cs.AI", "cs.CL"],
+          "terms": ["llm agent", "agentic", "multi-agent", "agent framework"]
+        },
+        {
+          "cats": ["cs.AI", "cs.SE"],
+          "terms": ["tool use", "function calling", "computer use", "gui agent", "web agent", "coding agent", "swe-bench"]
+        },
+        {
+          "cats": ["cs.MA", "cs.AI"],
+          "terms": ["multi-agent", "agent orchestration", "agent memory", "agent planning", "agent benchmark"]
+        }
+      ],
+
+      "keywords": {
+        "agentic": 4,
+        "llm agent": 4,
+        "multi-agent": 4,
+        "multi agent": 4,
+        "agent": 3,
+        "agents": 3,
+        "tool use": 4,
+        "tool-use": 4,
+        "tool calling": 4,
+        "function calling": 3,
+        "computer use": 4,
+        "computer-use": 4,
+        "gui agent": 4,
+        "web agent": 4,
+        "browser agent": 4,
+        "coding agent": 4,
+        "code agent": 4,
+        "swe-bench": 4,
+        "software engineering agent": 4,
+        "mcp": 3,
+        "model context protocol": 4,
+        "orchestration": 2,
+        "trajectory": 2,
+        "self-evolving": 3,
+        "self-improving": 3,
+        "autonomous": 2,
+        "sandbox": 2,
+        "verifiable environment": 4,
+        "skill": 1,
+        "skills": 1,
+        "planning": 1,
+        "memory": 1,
+        "workflow": 1,
+        "role-playing": 1,
+        "deep research": 3,
+        "computer-using": 4
+      }
+    },
+
+    "deep-learning": {
+      "_comment": "兜底主题：不属于上面四个方向、也不属于机器人/可穿戴的深度学习热点。claim_bonus 是负的，fit 打平时它最后认领——避免它把别的主题的论文抢走。",
+      "title": "其他深度学习",
+      "subtitle": "架构、优化、表征学习、语音与可解释性",
+      "accent": "#7a5a2b",
+      "claim_bonus": -1.0,
+      "min_score": 3,
+
+      "primary_categories": ["cs.LG", "cs.NE", "stat.ML"],
+      "secondary_categories": ["cs.AI", "eess.AS", "eess.SP"],
+
+      "arxiv_queries": [
+        {
+          "cats": ["cs.LG"],
+          "terms": ["optimizer", "convergence", "generalization", "scaling law", "neural architecture"]
+        },
+        {
+          "cats": ["cs.LG", "cs.NE"],
+          "terms": ["state space model", "graph neural network", "time series", "flow matching", "self-supervised", "continual learning", "federated learning"]
+        },
+        {
+          "cats": ["cs.LG", "eess.AS"],
+          "terms": ["speech recognition", "text-to-speech", "audio generation", "interpretability", "mechanistic interpretability", "uncertainty quantification"]
+        }
+      ],
+
+      "keywords": {
+        "optimizer": 3,
+        "optimization": 2,
+        "convergence": 2,
+        "generalization": 2,
+        "scaling law": 2,
+        "neural architecture": 3,
+        "state space model": 3,
+        "mamba": 3,
+        "graph neural network": 3,
+        "gnn": 3,
+        "time series": 3,
+        "forecasting": 2,
+        "flow matching": 3,
+        "normalizing flow": 3,
+        "diffusion model": 2,
+        "self-supervised": 3,
+        "contrastive learning": 3,
+        "representation learning": 3,
+        "continual learning": 3,
+        "federated learning": 3,
+        "transfer learning": 2,
+        "meta-learning": 3,
+        "sparsity": 2,
+        "pruning": 2,
+        "neural network": 1,
+        "interpretability": 3,
+        "mechanistic interpretability": 4,
+        "probing": 2,
+        "uncertainty": 2,
+        "calibration": 2,
+        "out-of-distribution": 2,
+        "robustness": 1,
+        "adversarial": 2,
+        "differential privacy": 3,
+        "privacy": 1,
+        "watermark": 2,
+        "speech recognition": 3,
+        "asr": 3,
+        "text-to-speech": 3,
+        "tts": 3,
+        "audio": 1,
+        "music generation": 3,
+        "spiking": 3,
+        "neuromorphic": 3,
+        "ai for science": 3,
+        "protein": 2,
+        "molecular": 2,
+        "weather": 2
+      }
+    },
+
+    "robotics": {
+      "title": "机器人与具身智能",
+      "subtitle": "VLA、操作与运动控制、人形机器人、仿真到真机",
+      "accent": "#7a3a5a",
+      "claim_bonus": 2.0,
+      "min_score": 4,
+
+      "primary_categories": ["cs.RO"],
+      "secondary_categories": ["cs.AI", "cs.CV", "cs.LG", "eess.SY"],
+
+      "arxiv_queries": [
+        {
+          "cats": ["cs.RO"],
+          "terms": ["manipulation", "humanoid", "locomotion", "dexterous", "grasping"]
+        },
+        {
+          "cats": ["cs.RO", "cs.AI"],
+          "terms": ["vision-language-action", "embodied", "sim-to-real", "imitation learning", "teleoperation", "world model"]
+        },
+        {
+          "cats": ["cs.RO"],
+          "terms": ["navigation", "motion planning", "whole-body control", "tactile sensing", "quadruped", "legged robot"]
+        }
+      ],
+
+      "keywords": {
+        "vision-language-action": 5,
+        "vla": 4,
+        "robot": 3,
+        "robots": 3,
+        "robotic": 3,
+        "robotics": 3,
+        "manipulation": 3,
+        "manipulator": 3,
+        "grasping": 3,
+        "grasp": 3,
+        "dexterous": 4,
+        "humanoid": 4,
+        "quadruped": 4,
+        "legged": 3,
+        "locomotion": 4,
+        "whole-body": 4,
+        "embodied": 4,
+        "embodied ai": 4,
+        "teleoperation": 4,
+        "imitation learning": 3,
+        "behavior cloning": 3,
+        "sim-to-real": 4,
+        "sim2real": 4,
+        "navigation": 3,
+        "slam": 3,
+        "motion planning": 3,
+        "end-effector": 3,
+        "mujoco": 3,
+        "isaac": 3,
+        "ros": 2,
+        "lerobot": 4,
+        "tactile": 3,
+        "drone": 3,
+        "uav": 3,
+        "autonomous driving": 2,
+        "world model": 2,
+        "physical ai": 4,
+        "mobile robot": 3,
+        "soft robot": 3
+      }
+    },
+
+    "wearable-xr": {
+      "_comment": "口径已按用户确认放宽：严格意义的『智能眼镜』论文一周凑不出 10 篇，所以把 egocentric 第一人称视觉、AR/XR 交互、头显、gaze、可穿戴感知都算进来。smart glasses 一类词给到权重 5，保证真·智能眼镜论文永远排在前面。",
+      "title": "智能眼镜 / 可穿戴 / 第一人称视觉",
+      "subtitle": "AR 眼镜、头显交互、egocentric 视觉、可穿戴感知",
+      "accent": "#8a5a2b",
+      "claim_bonus": 3.0,
+      "min_score": 4,
+
+      "primary_categories": ["cs.HC"],
+      "secondary_categories": ["cs.CV", "cs.MM", "cs.GR", "cs.AI"],
+
+      "arxiv_queries": [
+        {
+          "cats": ["cs.HC", "cs.CV"],
+          "terms": ["smart glasses", "augmented reality", "mixed reality", "head-mounted display", "heads-up display"]
+        },
+        {
+          "cats": ["cs.CV", "cs.MM"],
+          "terms": ["egocentric", "first-person video", "gaze estimation", "eye tracking", "hand tracking"]
+        },
+        {
+          "cats": ["cs.HC"],
+          "terms": ["wearable", "on-device assistant", "haptic", "smartwatch", "assistive technology"]
+        }
+      ],
+
+      "keywords": {
+        "smart glasses": 5,
+        "smartglasses": 5,
+        "ar glasses": 5,
+        "ai glasses": 5,
+        "head-mounted": 4,
+        "head mounted display": 4,
+        "hmd": 4,
+        "heads-up display": 4,
+        "augmented reality": 4,
+        "mixed reality": 4,
+        "extended reality": 4,
+        "virtual reality": 3,
+        "xr": 4,
+        "vr": 2,
+        "spatial computing": 4,
+        "vision pro": 4,
+        "passthrough": 3,
+        "egocentric": 5,
+        "ego-centric": 5,
+        "first-person": 4,
+        "ego4d": 4,
+        "epic-kitchens": 4,
+        "gaze": 3,
+        "eye tracking": 4,
+        "eye-tracking": 4,
+        "hand tracking": 3,
+        "wearable": 4,
+        "wearables": 4,
+        "smartwatch": 3,
+        "on-device": 2,
+        "always-on": 3,
+        "haptic": 2,
+        "assistive": 2,
+        "imu": 2,
+        "emg": 3,
+        "human-computer interaction": 2,
+        "immersive": 3,
+        "avatar": 2,
+        "telepresence": 3
+      }
+    }
+  }
+}

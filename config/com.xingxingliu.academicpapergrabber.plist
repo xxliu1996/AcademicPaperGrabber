@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Install with:
+       cp config/com.xingxingliu.academicpapergrabber.plist ~/Library/LaunchAgents/
+       launchctl load -w ~/Library/LaunchAgents/com.xingxingliu.academicpapergrabber.plist
+     The paths below assume the repo lives at
+     ~/Projects/xxliu1996_githubrepos/AcademicPaperGrabber - update them if it moves. -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.xingxingliu.academicpapergrabber</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/xingxingliu/Projects/xxliu1996_githubrepos/AcademicPaperGrabber/scripts/run_weekly.sh</string>
+    </array>
+
+    <!-- Sunday 22:00 local time, a day after GitHubRepoGrabber so the two runs
+         do not compete for the same GitHub API quota. launchd tracks the system
+         timezone, so this stays at 22:00 across DST changes. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Weekday</key>
+        <integer>0</integer>
+        <key>Hour</key>
+        <integer>22</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/xingxingliu/Projects/xxliu1996_githubrepos/AcademicPaperGrabber</string>
+
+    <key>StandardOutPath</key>
+    <string>/Users/xingxingliu/Projects/xxliu1996_githubrepos/AcademicPaperGrabber/logs/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/xingxingliu/Projects/xxliu1996_githubrepos/AcademicPaperGrabber/logs/launchd.err.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <!-- The run takes 10-20 minutes (arXiv wants 3s between requests, then six
+         parallel subagents write the chapters); do not let launchd call it hung. -->
+    <key>ExitTimeOut</key>
+    <integer>3600</integer>
+
+    <key>ProcessType</key>
+    <string>Background</string>
+</dict>
+</plist>
