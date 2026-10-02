@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
-"""Mail one week's digest to yourself over Gmail SMTP.
+"""Mail one week's digest to yourself over SMTP. Optional and off by default.
 
-Called by run_weekly.sh, which is the only place the credential is handled: it
-reads a Gmail app password out of the macOS keychain and passes it in the
-SMTP_PASS environment variable. This script never writes the password anywhere
-and never falls back to prompting - if SMTP_PASS is absent it exits 0 having
-done nothing, so a missing keychain item can never fail the weekly run.
+Addresses are never hardcoded: they come from PAPERS_MAIL_FROM /
+PAPERS_MAIL_TO or config/local.json (see scripts/siteconf.py). With no address
+configured this exits 0 having done nothing, so a fresh clone is not expected
+to carry anyone's email.
 
-Set it up once:
+The credential is handled only by run_weekly.sh, which reads it out of the
+macOS keychain and passes it in the SMTP_PASS environment variable. This
+script never writes the password anywhere and never prompts; without
+SMTP_PASS it also exits 0, so a missing keychain item cannot fail the weekly
+run.
+
+Set it up once (Gmail example):
 
     security add-generic-password -a "$USER" -s AcademicPaperGrabber-smtp \\
              -w '<16-char app password from myaccount.google.com/apppasswords>'
@@ -26,13 +31,17 @@ from datetime import datetime, timezone
 from email.message import EmailMessage
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import siteconf  # noqa: E402  - needs the path line above
+
 ROOT = Path(__file__).resolve().parent.parent
 
-SMTP_HOST = "smtp.gmail.com"
-SMTP_PORT = 465
-MAIL_FROM = "wakeupliu1996@gmail.com"
-MAIL_TO = "wakeupliu1996@gmail.com"
-SITE_URL = "https://xxliu1996.github.io/AcademicPaperGrabber"
+_CONF = siteconf.load()
+SMTP_HOST = _CONF["smtp_host"]
+SMTP_PORT = _CONF["smtp_port"]
+MAIL_FROM = _CONF["mail_from"]
+MAIL_TO = _CONF["mail_to"]
+SITE_URL = _CONF["site_url"]
 
 
 def info(msg):
@@ -81,8 +90,14 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--date", required=True, help="YYYY-MM-DD of the report to send")
     ap.add_argument("--to", default=MAIL_TO)
+    ap.add_argument("--from", dest="mail_from", default=MAIL_FROM)
     ap.add_argument("--dry-run", action="store_true", help="print the mail instead of sending")
     args = ap.parse_args()
+
+    if not args.mail_from or not args.to:
+        info("no mail_from/mail_to configured (PAPERS_MAIL_FROM / PAPERS_MAIL_TO or "
+             "config/local.json) - skipping (this is not an error)")
+        return
 
     password = os.environ.get("SMTP_PASS", "").strip()
     if not password and not args.dry_run:
@@ -107,7 +122,7 @@ def main():
 
     msg = EmailMessage()
     msg["Subject"] = f"AI 论文周报 {args.date}{counts}"
-    msg["From"] = MAIL_FROM
+    msg["From"] = args.mail_from
     msg["To"] = args.to
     msg["Date"] = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
     msg.set_content(build_body(args.date, md))
@@ -117,7 +132,7 @@ def main():
         return
 
     with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=30) as smtp:
-        smtp.login(MAIL_FROM, password)
+        smtp.login(args.mail_from, password)
         smtp.send_message(msg)
     info(f"sent {args.date} digest to {args.to}")
 

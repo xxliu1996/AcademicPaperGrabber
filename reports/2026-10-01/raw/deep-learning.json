@@ -1,0 +1,1339 @@
+{
+  "generated_at": "2026-10-02T04:46:13.174087+00:00",
+  "theme": "deep-learning",
+  "theme_title": "其他深度学习",
+  "theme_subtitle": "架构、优化、表征学习、语音与可解释性",
+  "accent": "#7a5a2b",
+  "week_start": "2026-09-25",
+  "week_end": "2026-10-01",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 213,
+  "measured_heat_count": 15,
+  "papers": [
+    {
+      "arxiv_id": "2609.33757",
+      "title": "YuE2: Unifying Symbolic and Audio Music Generation at Frontier Quality",
+      "abstract": "Symbolic models make melody, harmony, rhythm, and form explicit but typically stop before a finished recording; audio models produce complete songs while leaving composition implicit. We introduce YuE2, which unifies symbolic and audio music generation at frontier quality through symbolic planning. A single AR-NAR Mixture-of-Transformers (MoT) first writes a readable score specifying melody and harmony, expands it into semantic music tokens, and realizes it as full-song audio. In comparisons using the same checkpoint, experts prefer symbolic planning for overall quality and musicality, with 49.3% of overall preferences versus 34.6% without planning. Experts also favor the unified model over a separate language model and diffusion Transformer. On WildSongBench, YuE2 scores 6.73 on SongBench Global Avg, exceeding all evaluated public baselines. Selecting from eight candidates (best-of-8), YuE2 reaches 6.96, the highest observed mean among all evaluated systems. Expert listening further establishes its competitiveness with proprietary song generators, favoring best-of-8 over Suno v4.5 and yielding nearly balanced preferences against Suno v5. To learn this generation process from recordings without aligned scores, we introduce MERT2 and SheetSage2 to supply semantic and symbolic supervision. MERT2 sets a new state of the art in music representation learning, surpassing previous best results on 14 of 15 MARBLE metrics; SheetSage2 leads 12 of 15 benchmark-metric pairs in our lead-sheet transcription comparison. The same checkpoint follows score edits while largely preserving unedited musical content and generates zero-shot covers without cover-specific training. Its readable score also enables agentic music editing, with external language models translating user feedback into revisions of the composition.",
+      "authors": [
+        "Ruibin Yuan",
+        "Jiahao Pan",
+        "Junyan Jiang",
+        "Zhiyue Wu",
+        "Ziya Zhou",
+        "Jiankai Sun",
+        "Yizhi Li",
+        "Ge Zhang",
+        "Yicheng Gu",
+        "Zeyue Tian",
+        "Junyu Dai",
+        "Hanfeng Lin",
+        "Kai Li",
+        "Shangda Wu",
+        "Xuanjie Liu",
+        "Jiaming Wang",
+        "Zihan Liu",
+        "Yue Wang",
+        "Yinghao Ma",
+        "Hanzhi Yin",
+        "Kangrui Chen",
+        "Xinyue Zhang",
+        "Ziyang Ma",
+        "Mengqi Liao",
+        "Hejia Zhao",
+        "Guowei Huang",
+        "Chao Yan",
+        "Lei Ke",
+        "Jianwei Yu",
+        "Bei Liu",
+        "Joe Guo",
+        "Liumeng Xue",
+        "Gus Xia",
+        "Wei Xue",
+        "Yike Guo"
+      ],
+      "published": "2026-09-27",
+      "updated": "2026-09-27",
+      "primary_category": "eess.AS",
+      "categories": [
+        "eess.AS",
+        "cs.LG",
+        "cs.SD"
+      ],
+      "comment": "56 pages. Technical report. Project: https://github.com/multimodal-art-projection/YuE",
+      "abs_url": "https://arxiv.org/abs/2609.33757",
+      "pdf_url": "https://arxiv.org/pdf/2609.33757v1",
+      "hf_upvotes": 240,
+      "hf_url": "https://huggingface.co/papers/2609.33757",
+      "github_repo": "https://github.com/multimodal-art-projection/YuE",
+      "github_repo_source": "hf",
+      "github_stars": 10694,
+      "project_page": "https://map-yue2.github.io/",
+      "organization": "Multimodal Art Projection",
+      "hf_published": "2026-09-27",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 8.75,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 19.679,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "representation learning",
+          "audio",
+          "music generation"
+        ],
+        "category": 1.75,
+        "popularity": 15.49,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Ruibin Yuan, Jiahao Pan, Junyan Jiang, Zhiyue Wu, Ziya Zhou, Jiankai Sun 等 35 人",
+      "heat_label": "🔥 HF 240 赞 ｜ 💻 [代码](https://github.com/multimodal-art-projection/YuE)"
+    },
+    {
+      "arxiv_id": "2609.32607",
+      "title": "VoxMem: Benchmarking Multimodal Memory in Large Audio Language Models",
+      "abstract": "Spoken conversational systems must recover information from prior interactions (i.e., memory), yet relevant information in speech extends beyond what was said to who said it, how it was spoken, and what was audible, information that exists only in the audio signal and cannot be recovered from a transcript. Beyond what to remember, memory also demands diverse operations: retrieving a single fact, integrating evidence across turns, tracking an evolving state. Real interactions further unfold across sessions, meaning information accumulates across distinct episodes rather than a single continuous recording. Existing benchmarks fall short on all three dimensions: they focus primarily on lexical content, adopt limited and ad hoc memory operations, and treat memory as a single-session problem. We argue that principled memory evaluation requires jointly characterizing the acoustic evidence to be retained and the operations applied to it, and introduce a taxonomy along these two axes. Building on this taxonomy, we present VoxMem: 3,196 evaluation instances over 34,743 spoken sessions (177 hours) crossing four acoustic evidence types (speech semantics, speaker identity, paralinguistic cues, environmental sound) with four memory operations (information extraction, multi-session reasoning, temporal tracking, and answer refusal), grounded in multi-session histories and stratified across context budgets from 8K to 64K tokens. Evaluating 15 LALMs, no model exceeds 40% at 32K. Models retain what was said far better than who said it, how, or what was audible, a gap that widens for complex operations, grows with history length, and manifests as qualitatively distinct failure modes across evidence types. VoxMem aims to provide a foundation to measure and drive progress on the full scope of spoken conversational memory.",
+      "authors": [
+        "Yang Xiao",
+        "Vidhyasaharan Sethu",
+        "Eun-Jung Holden",
+        "Ting Dang"
+      ],
+      "published": "2026-09-26",
+      "updated": "2026-09-26",
+      "primary_category": "eess.AS",
+      "categories": [
+        "eess.AS",
+        "cs.SD"
+      ],
+      "comment": "working in process",
+      "abs_url": "https://arxiv.org/abs/2609.32607",
+      "pdf_url": "https://arxiv.org/pdf/2609.32607v1",
+      "hf_upvotes": 136,
+      "hf_url": "https://huggingface.co/papers/2609.32607",
+      "github_repo": "https://github.com/swagshaw/voxmem",
+      "github_repo_source": "hf",
+      "github_stars": 2,
+      "project_page": "https://swagshaw.github.io/voxmem/",
+      "organization": "The University of Melbourne",
+      "hf_published": "2026-09-26",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 1.75,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 15.418,
+      "score_breakdown": {
+        "keyword_raw": 1,
+        "keyword_matched": [
+          "audio"
+        ],
+        "category": 0.75,
+        "popularity": 12.98,
+        "stars_counted": 2,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Yang Xiao, Vidhyasaharan Sethu, Eun-Jung Holden, Ting Dang",
+      "heat_label": "🔥 HF 136 赞 ｜ 💻 [代码](https://github.com/swagshaw/voxmem)"
+    },
+    {
+      "arxiv_id": "2609.18703",
+      "title": "RayOrch: Programming and Executing Lineage-Controlled Multi-Grain Dataflows for Foundation-Model Data Preparation",
+      "abstract": "Preparing high quality training data for foundation models requires scalable pipelines that transform heterogeneous documents and videos into structured records. Such pipelines expand each parent item into an ordered and input dependent sequence of children, whose counts may be long tailed. GPUs should batch children across parents while preserving parent relationships, child order, completion status, and result routing. Existing systems either hide parallelism behind coarse grained jobs or expose flat records that force applications to manage lineage and regrouping. We present RayOrch, a programming model and distributed execution engine that preserves parent child relations throughout execution. Programs declare ordered variable cardinality expansions and matching gathers. The compiler validates each pair, while the runtime records child membership, immediate parents, immutable ordinals, and terminal states. Per Call FIFO Ready Queues batch ready children across parents. Gathers reconstruct results from declared membership and ordinals rather than batch boundaries or completion order. Parents can advance as soon as all required children become terminal. Typed parent scoped failures suppress undispatched siblings of the failed parent while allowing unrelated parents to continue. On NVIDIA H20 GPUs, RayOrch achieves 15.14 times speedup when scaling MinerU from 4 to 64 GPUs and 7.82 times speedup when scaling a video pipeline from 8 to 64 GPUs. It reduces end to end time by 13.1 percent versus Ray Data and 29.0 percent versus Daft on MinerU, and by 16.0 percent versus Ray Data on Docling. Code available at https://github.com/OpenDCAI/RayOrch .",
+      "authors": [
+        "Xiaochen Ma",
+        "Zimo Meng",
+        "Junzhu Liang",
+        "Youhe Jiang",
+        "Yue Cheng",
+        "Hao Liang",
+        "Bohan Zeng",
+        "Dengchun Li",
+        "Lu Ma",
+        "Zhengyang Zhao",
+        "Zhen Hao Wong",
+        "Runming He",
+        "Meiyi Qiang",
+        "Jiangtao Guan",
+        "Binhang Yuan",
+        "Wentao Zhang"
+      ],
+      "published": "2026-09-16",
+      "updated": "2026-09-16",
+      "primary_category": "cs.DC",
+      "categories": [
+        "cs.DC"
+      ],
+      "comment": "Technical Report",
+      "abs_url": "https://arxiv.org/abs/2609.18703",
+      "pdf_url": "https://arxiv.org/pdf/2609.18703v1",
+      "hf_upvotes": 54,
+      "hf_url": "https://huggingface.co/papers/2609.18703",
+      "github_repo": "https://github.com/OpenDCAI/RayOrch",
+      "github_repo_source": "hf",
+      "github_stars": 18,
+      "project_page": "https://opendcai.github.io/RayOrch-doc/",
+      "organization": "Peking University",
+      "hf_published": "2026-09-16",
+      "hf_featured": "2026-09-28",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 12.882,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 10.88,
+        "stars_counted": 18,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Xiaochen Ma, Zimo Meng, Junzhu Liang, Youhe Jiang, Yue Cheng, Hao Liang 等 16 人",
+      "heat_label": "🔥 HF 54 赞 ｜ 💻 [代码](https://github.com/OpenDCAI/RayOrch)"
+    },
+    {
+      "arxiv_id": "2609.38157",
+      "title": "EmoRES-TTS: Residual-Enhanced Vector Steering for Emotional Speech Generation",
+      "abstract": "Emotion-conditioned text-to-speech (TTS) models may fail to express the requested emotion reliably, and improving controllability by additional training is costly in both computation and emotion-labeled speech training data. We therefore study vector steering, a training-free approach that modifies the internal representations of a frozen model. CoCoEmo, a conventional vector steering method for emotion TTS, treats each emotion vector as an indivisible direction controlled by a single global strength, limiting adherence to the requested emotion. In this work, we first discover that an emotion vector can be decomposed into a shared component that moves speech away from neutral expression and a residual component that directs generation toward the requested emotion. Building on this finding, we propose Emotion Residual-Enhanced Steering for TTS (EmoRES), a novel method that controls the two components without retraining the backbone. On IEMOCAP, EmoRES outperforms CoCoEmo across all four objective emotion metrics on the IndexTTS-2 and CosyVoice2 backbones. Rank correlation improves by 26.13 and 12.97 percentage points, corresponding to relative gains of 118.8% and 33.1%, while emotion hit rate improves by 12.95 and 6.92 points, corresponding to relative gains of 20.1% and 9.8%. Human evaluation further shows a relative improvement up to 35.0% in the rate at which listeners correctly identified the dominant requested emotion and up to a 17.3% improvement in fidelity, while listeners prefer EmoRES for naturalness in up to 63.8% of pairwise comparisons. Component ablations further demonstrate that effective control benefits from preserving the shared component while strengthening the residual of the emotion steering vectors.",
+      "authors": [
+        "Kuan-Po Huang",
+        "Haohe Liu",
+        "Puyuan Peng",
+        "Haibin Wu",
+        "Zhaoheng Ni",
+        "Hung-yi Lee",
+        "Jinwon Lee",
+        "Neha Chachra"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.CL",
+        "eess.AS"
+      ],
+      "comment": "Work done at Meta. Code at https://github.com/facebookresearch/EmoRES-TTS",
+      "abs_url": "https://arxiv.org/abs/2609.38157",
+      "pdf_url": "https://arxiv.org/pdf/2609.38157v1",
+      "hf_upvotes": 18,
+      "hf_url": "https://huggingface.co/papers/2609.38157",
+      "github_repo": "https://github.com/facebookresearch/EmoRES-TTS",
+      "github_repo_source": "hf",
+      "github_stars": 22,
+      "project_page": "https://emorestts.github.io/",
+      "organization": "Meta",
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "deep-learning",
+      "fit": 6.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.693,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "text-to-speech",
+          "tts"
+        ],
+        "category": 0.75,
+        "popularity": 8.01,
+        "stars_counted": 22,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Kuan-Po Huang, Haohe Liu, Puyuan Peng, Haibin Wu, Zhaoheng Ni, Hung-yi Lee 等 8 人",
+      "heat_label": "🔥 HF 18 赞 ｜ 💻 [代码](https://github.com/facebookresearch/EmoRES-TTS)"
+    },
+    {
+      "arxiv_id": "2609.36322",
+      "title": "Periodic Weak Spots: Phase Sensitivity from Chunked KV-Cache Compression",
+      "abstract": "Chunked KV-cache compression reduces the memory and attention costs of long-context inference by compressing windows of consecutive tokens into fewer cache entries at a fixed stride. Such compression also introduces a new positional coordinate: a token's phase, or its position relative to compression-window boundaries. We uncover a systematic asymmetry in models using such compression: the same information can be easy to retrieve at one phase and difficult at another. We call this periodic variation in retrieval performance phase sensitivity. In large open-weight models with such compression, long-context retrieval accuracy can differ by up to 40 percentage points across phases, revealing periodic weak spots that average benchmark scores can conceal. To investigate this behavior, we pretrain a family of transformers from scratch across multiple KV-compression designs, reproducing phase sensitivity across the variants. Mechanistic analysis using causal interventions in these models reveals phase specialization: different attention components contribute asymmetrically to retrieving information at different source phases. We further analyze idealized retrieval models, showing how gradient flow dynamics may favor sharp phase specialization. Evaluating models with chunked KV-cache compression thus requires measuring across compression phases: high average accuracy can coexist with systematic positional failures.",
+      "authors": [
+        "Xingyu Zhu",
+        "Pu",
+        "Yi",
+        "Ziheng Cheng",
+        "Ang Lv",
+        "Jing Liu",
+        "Lexing Ying",
+        "Yiyuan Ma",
+        "Xin Dong"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "65 pages, 20 figures, pre-print",
+      "abs_url": "https://arxiv.org/abs/2609.36322",
+      "pdf_url": "https://arxiv.org/pdf/2609.36322v1",
+      "hf_upvotes": 90,
+      "hf_url": "https://huggingface.co/papers/2609.36322",
+      "project_page": "https://ultimatejupiter.github.io/blog/periodic-weak-spots/",
+      "organization": "ByteDance Seed",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "deep-learning",
+      "fit": 2.75,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 10.674,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 2.75,
+        "popularity": 9.49,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Xingyu Zhu, Pu, Yi, Ziheng Cheng, Ang Lv, Jing Liu 等 9 人",
+      "heat_label": "🔥 HF 90 赞"
+    },
+    {
+      "arxiv_id": "2609.31948",
+      "title": "Duplex-MPE: Benchmarking Multi-Party Interaction in Full-Duplex Dialogue",
+      "abstract": "Real-time full-duplex speech models can listen while speaking, enabling natural interaction without rigid turn boundaries. Existing benchmarks evaluate turn-taking, interruption handling and multi-round dialogue, but largely centre on a designated user rather than an assistant participating in a shared conversation among several people. We introduce Duplex-MPE to evaluate when such an assistant should answer, remain silent or stop speaking. The benchmark contains 2,000 scenarios with three or four human speakers and one assistant, each paired across explicit and implicit addressing of the same request. Models receive continuous conversation audio without transcripts or supplied turn boundaries. Four scores measure fresh response initiation, answer accuracy, silence preservation and stopping when a human resolves a request. We evaluate five open-weight speech systems: MiniCPM-o 4.5, Moshi, FLM-Audio, Voila and Freeze-Omni. MiniCPM-o 4.5 leads on three scored capabilities, while frequent speech from other systems can coexist with inaccurate answers or failures to remain silent. A transcript-based Gemini 3.1 Pro reference responds 64.3 percentage points more often to explicit than implicit requests; paired tests detect no significant response-rate difference for the speech systems.",
+      "authors": [
+        "Chengqian Ma",
+        "Wenhao Feng",
+        "Weixuan Jin",
+        "Gaole Dai",
+        "Tianyu Xie",
+        "Yuexiao Ma",
+        "Zhaolu Kang",
+        "Xiangyu Zhao",
+        "Xiawu Zheng",
+        "Fei Chao"
+      ],
+      "published": "2026-09-25",
+      "updated": "2026-09-25",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "comment": "27 pages, 3 figures. Project page: https://step-out.github.io/Duplex-MPE-Page/",
+      "abs_url": "https://arxiv.org/abs/2609.31948",
+      "pdf_url": "https://arxiv.org/pdf/2609.31948v1",
+      "hf_upvotes": 89,
+      "hf_url": "https://huggingface.co/papers/2609.31948",
+      "project_page": "https://step-out.github.io/Duplex-MPE-Page/",
+      "organization": "Peking University",
+      "hf_published": "2026-09-25",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 1.75,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 10.371,
+      "score_breakdown": {
+        "keyword_raw": 1,
+        "keyword_matched": [
+          "audio"
+        ],
+        "category": 0.75,
+        "popularity": 9.43,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Chengqian Ma, Wenhao Feng, Weixuan Jin, Gaole Dai, Tianyu Xie, Yuexiao Ma 等 10 人",
+      "heat_label": "🔥 HF 89 赞"
+    },
+    {
+      "arxiv_id": "2609.33253",
+      "title": "VGGT-Diff: Visual Geometry Meets Diffusion for Sparse-View Novel View Synthesis",
+      "abstract": "We present VGGT-Diff, a geometry-routed multi-view diffusion model for sparse-view novel view synthesis. Existing novel view synthesis (NVS) methods face a fundamental trade-off: reconstruction-based approaches preserve observed geometry but struggle to synthesize unseen regions, while diffusion-based methods provide strong generative priors yet rely on implicit source-to-query correspondence. VGGT-Diff bridges these regimes by routing visual geometry latents from VGGT-Ω into a pretrained video diffusion model. Each visual token is associated with a 3D point and confidence, then transformed into query-aligned latent conditions through a confidence-aware Visual Geometry Router (VGR) that preserves front and back surface evidence. These conditions guide joint target-view denoising, while Point-Track Residual Consistency (PTRC) regularizes predicted-clean residuals along reliable 3D tracks, improving multi-view stability. We further introduce robust geometry conditioning, combining training-time regularization with inference-time guidance for improved robustness. Experiments show competitive or state-of-the-art performance across interpolation and extrapolation under different viewpoint difficulties. Our code is available at https://github.com/chenkangjie1123/VGGT-Diff.",
+      "authors": [
+        "Kangjie Chen",
+        "Xiangyu Li",
+        "Dongbin Zhang",
+        "Chaoda Zheng",
+        "Shijia Chen",
+        "Jinhao Deng",
+        "Hongbin Lin",
+        "Choo Sin Wai",
+        "Minqi Wang",
+        "Minghao Yang",
+        "Dake Zhong",
+        "Guorui Song",
+        "Yu Zhang",
+        "Xianming Liu",
+        "Boyang Wang"
+      ],
+      "published": "2026-09-27",
+      "updated": "2026-09-27",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "Project page: https://chenkangjie1123.github.io/VGGT-Diff, Code at: https://github.com/chenkangjie1123/VGGT-Diff",
+      "abs_url": "https://arxiv.org/abs/2609.33253",
+      "pdf_url": "https://arxiv.org/pdf/2609.33253v1",
+      "hf_upvotes": 4,
+      "hf_url": "https://huggingface.co/papers/2609.33253",
+      "github_repo": "https://github.com/chenkangjie1123/VGGT-Diff",
+      "github_repo_source": "hf",
+      "github_stars": 50,
+      "project_page": "https://chenkangjie1123.github.io/VGGT-Diff/",
+      "organization": "XPENG AI",
+      "hf_published": "2026-09-27",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 3.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 9.656,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "diffusion model",
+          "robustness"
+        ],
+        "category": 0.75,
+        "popularity": 6.72,
+        "stars_counted": 50,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Kangjie Chen, Xiangyu Li, Dongbin Zhang, Chaoda Zheng, Shijia Chen, Jinhao Deng 等 15 人",
+      "heat_label": "🔥 HF 4 赞 ｜ 💻 [代码](https://github.com/chenkangjie1123/VGGT-Diff)"
+    },
+    {
+      "arxiv_id": "2609.31892",
+      "title": "NVAlign: Direct-Gradient Optimization for Non-Verbal Control in Continuous Autoregressive Flow Matching Text-to-Speech",
+      "abstract": "While modern text-to-speech (TTS) systems generate highly natural speech and support inline non-verbal vocalization (NVV) tags, accurate control over these events remains challenging. A key gap is the lack of established post-training methods for non-verbal control in continuous autoregressive flow-matching TTS. To this end, we present NVAlign, a direct-gradient post-training framework for NVV tag-following in this architecture. We first perform supervised fine-tuning (SFT) of TTS models and an NVV-aware automatic speech recognition (NV-ASR) model on NVV-annotated speech, then freeze the NV-ASR model to serve as the reward model for post-training. A two-step gradient surrogate enables efficient reward backpropagation through the flow-matching sampler to jointly update the autoregressive backbone and acoustic flow head. Fidelity penalties and reference-velocity regularization help preserve speaker similarity and speech quality. Results from NVV-SuperBench and human listening evaluations show that NVAlign improves tag-following accuracy over SFT and Flow-GRPO baselines. These findings demonstrate that direct reward-gradient optimization can improve non-verbal control in continuous autoregressive flow-matching TTS. Audio samples are available at https://nvalign.github.io/.",
+      "authors": [
+        "Qiaolin Wang",
+        "Pedro Sandoval-Segura",
+        "Anunaya Joshi",
+        "Edvardas Jurkonis",
+        "Jake Downie"
+      ],
+      "published": "2026-09-25",
+      "updated": "2026-09-25",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "cs.CL",
+        "eess.AS"
+      ],
+      "comment": "5 pages, 1 figure, 2 tables. Submitted to ICASSP 2027. Audio samples: https://nvalign.github.io/",
+      "abs_url": "https://arxiv.org/abs/2609.31892",
+      "pdf_url": "https://arxiv.org/pdf/2609.31892v1",
+      "hf_upvotes": 3,
+      "hf_url": "https://huggingface.co/papers/2609.31892",
+      "project_page": "https://nvalign.github.io/",
+      "organization": "BlandAIOrg",
+      "hf_published": "2026-09-25",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 19.5,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 7.107,
+      "score_breakdown": {
+        "keyword_raw": 18,
+        "keyword_matched": [
+          "optimization",
+          "flow matching",
+          "speech recognition",
+          "asr",
+          "text-to-speech",
+          "tts",
+          "audio"
+        ],
+        "category": 1.5,
+        "popularity": 1.73,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Qiaolin Wang, Pedro Sandoval-Segura, Anunaya Joshi, Edvardas Jurkonis, Jake Downie",
+      "heat_label": "🔥 HF 3 赞"
+    },
+    {
+      "arxiv_id": "2609.31093",
+      "title": "Block Sparse Attention with Log-Linear Complexity",
+      "abstract": "Scaling language models to long contexts is limited by the quadratic cost of self-attention. Block sparse attention offers an efficient alternative, but selecting the retained blocks remains a bottleneck. Conventional block selection requires scoring all query-block pairs and therefore remains quadratic in sequence length. To address this issue, we propose PISA, a block-sparse attention mechanism that employs a pyramid Top-K selection strategy. The main idea is to gradually narrow down the candidates across different levels, making it more efficient to find the most relevant keys. Specifically, we construct a coarse-to-fine hierarchy of keys and perform selection from the coarsest level. At each level, LogSumExp scoring is applied to a bounded candidate set to select candidates for the next finer level, continuing until the finest level is reached. Through pooling, we construct O(log N) levels of keys, yielding an overall complexity of O(Nlog N), where N denotes the sequence length. We develop hardware-aware Triton kernels for both training and inference, fusing hierarchical routing and LogSumExp scoring without materializing the query-key score matrix. We further evaluate our method on language modeling tasks. Compared with the baseline, our method achieves comparable performance on benchmarks such as commonsense reasoning while delivering better results on retrieval tasks.",
+      "authors": [
+        "Bohao Tang",
+        "Zhen Qin",
+        "Yuqi Pan",
+        "Zheng Li",
+        "Pengfei Liu"
+      ],
+      "published": "2026-09-25",
+      "updated": "2026-09-25",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.31093",
+      "pdf_url": "https://arxiv.org/pdf/2609.31093v1",
+      "hf_upvotes": 30,
+      "hf_url": "https://huggingface.co/papers/2609.31093",
+      "organization": "ByteDance Seed",
+      "hf_published": "2026-09-25",
+      "hf_featured": "2026-09-28",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 5.977,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 2.0,
+        "popularity": 5.48,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Bohao Tang, Zhen Qin, Yuqi Pan, Zheng Li, Pengfei Liu",
+      "heat_label": "🔥 HF 30 赞"
+    },
+    {
+      "arxiv_id": "2609.33620",
+      "title": "Learning Dynamics of Continual Learning: A Unified View of Data Attribution, Forgetting, and Plasticity Loss",
+      "abstract": "Modern language models are likely to be updated throughout their lifetime rather than trained once and frozen. Each update therefore participates in a recurring cycle: decide which experience to learn from, understand what that update changes, and remain capable of learning from what comes next. We show that these challenges are governed by the same evolving update--behavior interaction. We derive a token- and layer-wise decomposition of how learning from one token changes another prediction. By separating the softmax force, shared readout geometry, and residual connections, it exposes two interaction channels and yields a forward-computable approximation. Following this interaction through time reveals a unified picture of continual adaptation. Positive interaction identifies useful experience; negative interaction produces either concentrated collision or accumulated erosion; over longer horizons, updates reshape the shared geometry mediating future learning signals, reducing their transmission. These predictions lead to effective data selection, mechanism-specific controls for interference, and a readout-based diagnostic of future learnability whose degradation predicts the benefit of restoring the readout. Across models and training regimes, the same local interaction thus explains both what an update changes now and how learning today changes what can be learned tomorrow. This view connects data attribution, forgetting, and plasticity loss as distinct regimes of the same evolving learning dynamics.",
+      "authors": [
+        "Yi Ren",
+        "Wenlong Deng",
+        "Guanzhe Hong",
+        "Clare Lyle",
+        "Yarin Gal"
+      ],
+      "published": "2026-09-27",
+      "updated": "2026-09-27",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "45 pages",
+      "abs_url": "https://arxiv.org/abs/2609.33620",
+      "pdf_url": "https://arxiv.org/pdf/2609.33620v1",
+      "hf_upvotes": 6,
+      "hf_url": "https://huggingface.co/papers/2609.33620",
+      "github_repo": "https://github.com/Joshua-Ren/learning-dynamics-cl",
+      "github_repo_source": "hf",
+      "github_stars": 12,
+      "project_page": "https://joshua-ren.github.io/learning-dynamics-cl/",
+      "hf_published": "2026-09-27",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.887,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "continual learning"
+        ],
+        "category": 2.75,
+        "popularity": 2.45,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Yi Ren, Wenlong Deng, Guanzhe Hong, Clare Lyle, Yarin Gal",
+      "heat_label": "🔥 HF 6 赞 ｜ 💻 [代码](https://github.com/Joshua-Ren/learning-dynamics-cl)"
+    },
+    {
+      "arxiv_id": "2606.29521",
+      "title": "Not All Objectives Are Born Equal: Priority-Constrained Descent for Hierarchical Multi-Objective Optimization",
+      "abstract": "Deep learning problems rarely involve objectives that are equal in importance. A primary objective defines the goal, whilst secondary objectives, such as sparsity, compression, or robustness constrain the solution. While existing multi-objective methods have proven effective in practice, they have a clear symmetry problem and neglect the inherent objective hierarchy built into these objective spaces. We introduce Priority-Constrained Descent (PCD), a gradient-based optimization framework designed to explicitly exploit hierarchical objective structures. PCD preserves the direction of primary descent whilst allowing for the minimal distortion necessary to guarantee progress on secondary objectives, controlled by a single τin [0, 1] that dictates the strength of the distortion. The resulting formulation is invariant to objective scaling and admits exact closed-form solutions for problems with two and three objectives. We evaluate PCD within structured network compression settings, unstructured sparsity and low-rankness, and across a variety of synthetic experiments, showing Pareto dominance and better per-objective performance with secondary progress guarantees over existing methods, further exhibiting the interpretable trade-off that τ provides.",
+      "authors": [
+        "Dara Varam",
+        "Mohamed I. Alhajri"
+      ],
+      "published": "2026-06-28",
+      "updated": "2026-09-21",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "comment": "52 pages, 17 figures, 18 tables",
+      "abs_url": "https://arxiv.org/abs/2606.29521",
+      "pdf_url": "https://arxiv.org/pdf/2606.29521v2",
+      "hf_upvotes": 4,
+      "hf_url": "https://huggingface.co/papers/2606.29521",
+      "github_repo": "https://github.com/DaraVaram/priority-constrained-descent",
+      "github_repo_source": "hf",
+      "github_stars": 4,
+      "project_page": "https://daravaram.github.io/PCD/",
+      "hf_published": "2026-09-21",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 7.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.75,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "optimization",
+          "sparsity",
+          "robustness"
+        ],
+        "category": 2.0,
+        "popularity": 2.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Dara Varam, Mohamed I. Alhajri",
+      "heat_label": "🔥 HF 4 赞 ｜ 💻 [代码](https://github.com/DaraVaram/priority-constrained-descent)"
+    },
+    {
+      "arxiv_id": "2609.34528",
+      "title": "Preference-Guided Adaptation for Open-Vocabulary Semantic Segmentation via Prompt Disagreement",
+      "abstract": "Open-vocabulary semantic segmentation (OVSS) enables pixel-level prediction over arbitrary text-specified vocabularies and has shown strong generalization on common benchmarks. However, OVSS performance often degrades in specialized domains such as medical imaging, remote sensing, and industrial inspection, where dense pixel-level masks for adaptation are costly to obtain and require domain-specific expertise. We propose a preference-guided adaptation framework that replaces dense mask supervision with binary preferences. We observe that different prompt templates produce systematically different segmentations for the same image, a phenomenon we call prompt disagreement, and we repurpose it as a built-in source of preference supervision. Building on this, we mine localized preference queries from regions of high cross-template uncertainty, and adapt the OVSS model with Region-Localized Preference Optimization (RLPO) together with consistency regularization that stabilizes updates outside the queried region. Across extensive experiments on the MESS benchmark, the proposed method achieves consistent gains across diverse OVSS backbones without any pixel-level annotation, and remains effective under noisy preferences. Our code is available at https://github.com/blue-531/pref-ovss.",
+      "authors": [
+        "Hyun-Kurl Jang",
+        "Jihun Kim",
+        "Kuk-Jin Yoon"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted to NeurIPS 2026",
+      "abs_url": "https://arxiv.org/abs/2609.34528",
+      "pdf_url": "https://arxiv.org/pdf/2609.34528v1",
+      "hf_upvotes": 5,
+      "hf_url": "https://huggingface.co/papers/2609.34528",
+      "github_repo": "https://github.com/blue-531/pref-ovss",
+      "github_repo_source": "hf",
+      "github_stars": 3,
+      "project_page": "https://blue-531.github.io/pref-ovss/",
+      "organization": "KAIST",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 6.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 5.736,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "optimization",
+          "generalization",
+          "uncertainty"
+        ],
+        "category": 0.0,
+        "popularity": 2.24,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Hyun-Kurl Jang, Jihun Kim, Kuk-Jin Yoon",
+      "heat_label": "🔥 HF 5 赞 ｜ 💻 [代码](https://github.com/blue-531/pref-ovss)"
+    },
+    {
+      "arxiv_id": "2609.31669",
+      "title": "NanoForecast v0.5: Competitive Time Series Forecasting Through Training Pipeline Optimization",
+      "abstract": "We present NanoForecast v0.5, a 6.5M-parameter forecaster that competes with models 31x its size (TimesFM, 200M parameters) after training pipeline fixes and no architecture change. Retraining the v0.3 architecture with corrected loss-scope handling, tensor shape alignment, and wider augmentation coverage cuts overall Mean Absolute Scaled Error by 43.8% under one fixed protocol (MASE 3.030 to 1.704) on the same data and compute budget. NanoForecast v0.5 beats TimesFM on all three ETT datasets (MASE 0.676/1.110/0.287 vs. 0.705/1.360/0.545) and on exchange rate (4.317 vs. 4.383); TimesFM keeps a clear lead on the high-cardinality electricity and traffic sets. Against PatchTST (15M+ parameters, official configuration), v0.5 wins all three ETT sets. Training takes about 12 hours on a single cloud GPU (NVIDIA T4, Google Colab) and inference needs no GPU (measurements in this paper are on an Apple M4 CPU). We release all code, pretrained checkpoints, and evaluation framework under Apache 2.0 at https://github.com/eulogik/NanoForecast",
+      "authors": [
+        "Gautam Kishore"
+      ],
+      "published": "2026-09-15",
+      "updated": "2026-09-15",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "17 pages, 3 figures, 4 tables. Code and checkpoints: https://github.com/eulogik/NanoForecast",
+      "abs_url": "https://arxiv.org/abs/2609.31669",
+      "pdf_url": "https://arxiv.org/pdf/2609.31669v1",
+      "hf_upvotes": 2,
+      "hf_url": "https://huggingface.co/papers/2609.31669",
+      "github_repo": "https://github.com/eulogik/NanoForecast",
+      "github_repo_source": "hf",
+      "github_stars": 6,
+      "project_page": "https://eulogik.com/models/nanoforecast-v05",
+      "organization": "Eulogik",
+      "hf_published": "2026-09-15",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 9.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.664,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "optimization",
+          "time series",
+          "forecasting"
+        ],
+        "category": 2.0,
+        "popularity": 1.41,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Gautam Kishore",
+      "heat_label": "🔥 HF 2 赞 ｜ 💻 [代码](https://github.com/eulogik/NanoForecast)"
+    },
+    {
+      "arxiv_id": "2609.37384",
+      "title": "MoTIF-X: A Multimodal Tokenized Framework for Interpretable and Extensible Molecular Representation Learning",
+      "abstract": "Molecular representation learning is central to computer-aided drug discovery. Molecular graphs, SMILES strings, and 3D conformations provide complementary structural information, yet many multimodal approaches encode these views independently and align them only at a later stage, limiting fine-grained cross-modal interaction and substructure-level interpretability. To address these limitations, we introduce MoTIF-X, a motif-centered framework that uses graph-grounded chemical motifs as shared anchors for multimodal integration and interpretation. Its first pretraining stage learns motif representations through hierarchical contrastive learning across atomic, motif, and molecular scales. The second stage contextualizes these representations with SMILES and torsion-angle tokens through multimodal masked token modeling. After pretraining on drug-like molecules with multiple conformers, MoTIF-X achieved the lowest mean absolute error on all nine OpenADMET ExpansionRx endpoints and the best overall performance among the evaluated methods. Significance analyses supported its advantage in the vast majority of endpoint-baseline comparisons after multiple-testing correction. Ablation studies supported the complementary contributions of motif-token contextualization, multimodal integration, and two-stage pretraining. Beyond molecular properties, the framework extended to drug-target interaction prediction, achieving the best average classification performance across the evaluated benchmarks and generalizing to an external drug-cold-start dataset without additional fine-tuning. Its motif-centered design also enabled substructure-level interpretation: higher motif attribution scores were associated with larger experimentally measured activity shifts. Together, these findings support MoTIF-X as a transferable and interpretable framework for molecular modeling.",
+      "authors": [
+        "Linqing Mo",
+        "Jiayu Zhou",
+        "Bin Chen"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "5 figures. Supplementary material is available as an ancillary file. Code: https://github.com/Bin-Chen-Lab/Motif-X",
+      "abs_url": "https://arxiv.org/abs/2609.37384",
+      "pdf_url": "https://arxiv.org/pdf/2609.37384v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/Bin-Chen-Lab/Motif-X",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 13.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 5.582,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "contrastive learning",
+          "representation learning",
+          "interpretability",
+          "molecular"
+        ],
+        "category": 2.0,
+        "popularity": 0.83,
+        "stars_counted": 1,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 1,
+      "heat_source": "none",
+      "authors_display": "Linqing Mo, Jiayu Zhou, Bin Chen",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/Bin-Chen-Lab/Motif-X)"
+    },
+    {
+      "arxiv_id": "2609.36813",
+      "title": "RESCUE: Repairing Language Model Errors to Sparse Circuits via Reinforcement Learning",
+      "abstract": "Large language models (LLMs) exhibit strong general capabilities that mechanistic interpretability has attributed to sparse computational circuits. However, existing circuit studies emphasize preserving functionality or explaining safety, leaving the mechanisms underlying failures across a broader range of tasks largely unexplored. Extending circuit analysis from abilities to errors, we explore the perspective that such failures may likewise arise from erroneous internal computations and that targeted tuning of the corresponding parameters can correct such errors while largely preserving other capabilities. Motivated by this insight, we introduce RESCUE (Reasoning-Error Sparse-Circuit Uncovering and Editing), a framework that localizes error-associated circuits and surgically repairs them for performance enhancement. General tasks typically involve multi-step reasoning and long-form generation, where early deviations can cause prefixes to drift from supervised references, leading SFT-based mask optimization to overlook circuits involved in generation-time errors. RESCUE therefore refines these masks through reinforcement learning with multiple masked-model rollouts, improving their relevance to observed task failures. Finally, RESCUE introduces a pruning technique and precisely fine-tunes error circuits to correct task failures, thereby translating error localization into a sparse and targeted model update. We validate RESCUE on heterogeneous repair sets across two domains: (1) mathematical reasoning, identifying a math error circuit of 1.40% density whose repair raises accuracy from 6.0% to 75.5%; and (2) medical QA, where a similarly compact 1.44% circuit improves repair-set accuracy from 0% to 81%. Our code is available at: https://github.com/chuanpupig/RESCUE.",
+      "authors": [
+        "Chuanpu Liu",
+        "Miao Yu",
+        "Yikai Cai",
+        "Yuanhe Zhang",
+        "Zhenhong Zhou",
+        "Li Sun",
+        "Zuming Jiang",
+        "Yufei Guo"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.36813",
+      "pdf_url": "https://arxiv.org/pdf/2609.36813v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/chuanpupig/RESCUE",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 13.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 4.75,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "optimization",
+          "pruning",
+          "interpretability",
+          "mechanistic interpretability"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 0,
+      "heat_source": "none",
+      "authors_display": "Chuanpu Liu, Miao Yu, Yikai Cai, Yuanhe Zhang, Zhenhong Zhou, Li Sun 等 8 人",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/chuanpupig/RESCUE)"
+    },
+    {
+      "arxiv_id": "2610.00398",
+      "title": "WIPSNet: Deep Learning for Paediatric Wheeze Detection from Overnight Impedance Pneumography",
+      "abstract": "Overnight impedance pneumography (IP) is used to monitor paediatric respiratory health. Its current clinical readout, the Expiratory Variability Index (EVI), compresses each IP recording into a single scalar and achieves an AUC of 0.633 for night-level wheeze classification. We introduce Wheeze Impedance Pneumography Scalogram Network (WIPSNet), a 3D ResNet operating on stacked continuous wavelet transform scalograms of overnight IP signals. On a 15-patient cohort (60 nights, 281 hours), WIPSNet achieves an AUC of $0.783 \\pm 0.026$, outperforming EVI, a state-space model (Mamba), and two modern sleep-staging architectures. Performance peaks at a volumetric depth corresponding to 32 minutes of temporal context, suggesting that multi-scale temporal aggregation is important for modelling nocturnal respiratory dynamics. Overall, these results indicate that structured time-frequency representations combined with 3D convolutional architectures provide an effective approach for learning from long, irregular physiological time series.",
+      "authors": [
+        "Felix Oury",
+        "Harley Day",
+        "Karina Mayoral",
+        "Ville-Pekka Seppä",
+        "Sejal Saglani",
+        "Reiko J. Tanaka"
+      ],
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "eess.SP"
+      ],
+      "comment": "Accepted at the Workshop on Structured Data for Health, ICML 2026. Code: https://github.com/felix-oury/WIPSNet",
+      "abs_url": "https://arxiv.org/abs/2610.00398",
+      "pdf_url": "https://arxiv.org/pdf/2610.00398v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/felix-oury/WIPSNet",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 8.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.519,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "mamba",
+          "time series"
+        ],
+        "category": 2.75,
+        "popularity": 0.83,
+        "stars_counted": 1,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 1,
+      "heat_source": "none",
+      "authors_display": "Felix Oury, Harley Day, Karina Mayoral, Ville-Pekka Seppä, Sejal Saglani, Reiko J. Tanaka",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/felix-oury/WIPSNet)"
+    },
+    {
+      "arxiv_id": "2609.35021",
+      "title": "Addressing Spatial Indistinguishability in Spatiotemporal Prediction via Optimal Transport-Guided Masking",
+      "abstract": "Spatiotemporal prediction aims to learn discriminative representations from correlated temporal signals over spatial structures for accurate future inference. A central challenge is \\emph{spatial indistinguishability}: different nodes may share similar historical patterns yet evolve toward divergent futures, severely degrading forecasting performance in real-world sensor networks. Existing embedding-based and graph neural network (GNN)-based approaches can partially detect such ambiguous nodes but rely on historical similarity, struggling to capture \\emph{future behavioral divergence}. We propose \\textbf{STOT} (\\textbf{S}patio\\textbf{T}emporal \\textbf{O}ptimal \\textbf{T}ransport), a self-supervised framework that resolves spatiotemporal ambiguity via structured masking guided by optimal transport. Our key idea treats indistinguishability as a \\emph{disambiguation} problem: future states are inferred by exploiting concurrent spatial correlations and their time-varying similarity. We design a similarity-aware metric for dynamic inter-node relationships and an optimal transport-based masking strategy to emphasize ambiguous positions during pre-training. A batch consistency constraint preserves semantic coherence, while a random-walk masking mechanism promotes structured context exploration. Experiments on six real-world datasets show that STOT performs competitively with state-of-the-art baselines on the evaluated benchmarks and improved interpretability through transport-plan visualizations.",
+      "authors": [
+        "Guangyu Wang",
+        "Jiawei Tong"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "Accepted by Pattern Recognition",
+      "abs_url": "https://arxiv.org/abs/2609.35021",
+      "pdf_url": "https://arxiv.org/pdf/2609.35021v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 17.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.438,
+      "score_breakdown": {
+        "keyword_raw": 15,
+        "keyword_matched": [
+          "graph neural network",
+          "gnn",
+          "forecasting",
+          "self-supervised",
+          "neural network",
+          "interpretability"
+        ],
+        "category": 2.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Guangyu Wang, Jiawei Tong",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2610.00968",
+      "title": "Structure-agnostic Causal Representation Learning",
+      "abstract": "Causal representation learning aims to discover robust features by exploiting the causal structure underlying data generation. Existing methods require specifying the causal structure a priori, yet different structures demand fundamentally incompatible invariance constraints, and misspecification leads to representations that discard predictive information. We introduce SaCRL, a framework that jointly identifies the causal structure and learns the corresponding invariant representation without prior structural knowledge. Our approach formulates structure selection as a soft optimization over candidate invariances using HSIC-based violation metrics, with adaptive weights that automatically concentrate on the achievable structure. We provide theoretical guarantees for structure identification, including under random-feature approximation, invariance satisfaction, and out-of-distribution generalization. Empirically, SaCRL recovers the true structure on synthetic and semi-synthetic Bayesian-network benchmarks, outperforms fixed-invariance baselines on Colored MNIST, achieves state-of-the-art accuracy on three DomainBed benchmarks (PACS, VLCS, OfficeHome), and degrades gracefully under structural misspecification and limited environment diversity. Code is available at: https://github.com/ArmanBehnam/sacrl.",
+      "authors": [
+        "Arman Behnam",
+        "Binghui Wang"
+      ],
+      "published": "2026-10-01",
+      "updated": "2026-10-01",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.00968",
+      "pdf_url": "https://arxiv.org/pdf/2610.00968v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/ArmanBehnam/sacrl",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 11.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.438,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "optimization",
+          "generalization",
+          "representation learning",
+          "out-of-distribution"
+        ],
+        "category": 2.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Arman Behnam, Binghui Wang",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/ArmanBehnam/sacrl)"
+    },
+    {
+      "arxiv_id": "2610.00730",
+      "title": "Reformulation-Contrastive Learning for Mixed Integer Programs",
+      "abstract": "Mixed-integer linear programs (MILP) model many real-world decision problems, motivating machine-learning methods that exploit recurring structure to accelerate MILP solving. MILPs can admit many equivalent formulations: integrality-preserving changes of variables and the addition of redundant constraints can alter their formulations while preserving the optimization problem. We leverage these reformulations as a source of self-supervision for learning general-purpose representations of MILP variables and constraints. We characterize the affine reformulations that are valid for every input instance, and distinguish re-descriptions, which leave variables unchanged, from substitutions, which transform them predictably. Building on equivariant self-supervised learning, we introduce ReMILP (reformulation-contrastive MILP representation learning), which jointly trains a graph neural network and a hypernetwork to predict how variable embeddings transform under changes of variables. Without solver-derived labels, ReMILP learns representations that exhibit the intended invariance and equivariance on unseen problem classes. Across binary solution, constraint activity and integrality gap prediction, these representations carry task-relevant information when frozen and provide a useful initialization for fine-tuning.",
+      "authors": [
+        "Ousema Bouaneni",
+        "Mathis Le Bail",
+        "Clément Elliker",
+        "Maël Jenny",
+        "Sonia Vanier"
+      ],
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.00730",
+      "pdf_url": "https://arxiv.org/pdf/2610.00730v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 17.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.25,
+      "score_breakdown": {
+        "keyword_raw": 15,
+        "keyword_matched": [
+          "optimization",
+          "graph neural network",
+          "self-supervised",
+          "contrastive learning",
+          "representation learning",
+          "neural network"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Ousema Bouaneni, Mathis Le Bail, Clément Elliker, Maël Jenny, Sonia Vanier",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.36873",
+      "title": "Seeing Time: Visual-Temporal Representation Learning for Interpretable Time Series Clustering",
+      "abstract": "Multivariate Time Series (MTS) clustering is an important tool in temporal data mining, aiming to discover latent group structures from complex observations without supervision. Although existing deep clustering methods can learn discriminative temporal representations, the resulting latent clusters are often difficult to relate back to waveform characteristics that practitioners can directly inspect and compare, limiting their ability to assess whether the discovered patterns reflect meaningful temporal behaviors. This paper, therefore, proposes WAVE (Waveform Aligned Visual-temporal Embedding), which treats time series and their deterministically rendered waveform plots as complementary views of the same observations. To produce discriminative representations whose cluster structures can be traced to observable waveform characteristics, WAVE aligns and integrates fine-grained temporal variations with holistic visual patterns, while associating each discovered cluster with its centroid-nearest authentic sample. Accordingly, interpretability in this work specifically refers to waveform-level traceability rather than a general explanation of model decisions. Extensive evaluations across 10 real-world public datasets show that WAVE achieves the highest macro-averaged clustering performance and the best average rank among the compared methods, while qualitative case studies illustrate how the discovered clusters can be inspected through authentic waveform records. The source code is available at https://github.com/Zheng-Zhu1/WAVE.",
+      "authors": [
+        "Zheng Zhu",
+        "Zexi Tan",
+        "Yuming Deng",
+        "Yiqun Zhang"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Accepted by ICDM 2026",
+      "abs_url": "https://arxiv.org/abs/2609.36873",
+      "pdf_url": "https://arxiv.org/pdf/2609.36873v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/Zheng-Zhu1/WAVE",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 11.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.25,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "time series",
+          "representation learning",
+          "interpretability"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Zheng Zhu, Zexi Tan, Yuming Deng, Yiqun Zhang",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/Zheng-Zhu1/WAVE)"
+    },
+    {
+      "arxiv_id": "2609.32241",
+      "title": "Residual Transferability in Neural Image Watermarking",
+      "abstract": "Neural image watermarks can be forged by extracting watermark-bearing residuals from released images and transferring them to unrelated content. While prior work has demonstrated this vulnerability, what makes these residuals transferable remains poorly understood. We formalize this vulnerability with residual transferability (RT), a metric that quantifies how well watermark evidence remains decodable after transfer across unrelated images. Through comparative analyses and controlled interventions, we find that common training-side variations do not account for the large RT differences across watermarking systems; instead, architectural design plays a central role. By contrasting high- and low-RT systems and validating their architectural differences through controlled interventions, we identify two mechanisms that strengthen the dependence of watermark evidence on the cover image, thereby suppressing the residual transferability. These findings provide concrete design guidance for developing more forgery-resistant watermarking architectures. Complementarily, for existing watermarking systems where architectural redesign is impractical, we introduce CoverLock, a plug-and-play strategy for existing watermarking systems that strengthens such image dependence without architectural redesign. Across representative watermarking systems exhibiting high residual transferability, CoverLock achieves a more favorable security--robustness trade-off than both traditional handcrafted defenses and learned classifier-based defenses.",
+      "authors": [
+        "Ziping Dong",
+        "Qi Li",
+        "Xinchao Wang"
+      ],
+      "published": "2026-09-26",
+      "updated": "2026-09-26",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.CV"
+      ],
+      "comment": "Preprint",
+      "abs_url": "https://arxiv.org/abs/2609.32241",
+      "pdf_url": "https://arxiv.org/pdf/2609.32241v1",
+      "hf_upvotes": 12,
+      "hf_url": "https://huggingface.co/papers/2609.32241",
+      "hf_published": "2026-09-26",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 3.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.214,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "robustness",
+          "watermark"
+        ],
+        "category": 0.0,
+        "popularity": 3.46,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Ziping Dong, Qi Li, Xinchao Wang",
+      "heat_label": "🔥 HF 12 赞"
+    },
+    {
+      "arxiv_id": "2610.02190",
+      "title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
+      "abstract": "Step-size selection remains a central challenge in large-scale neural network optimization; conservative steps slow convergence, while aggressive steps can destabilize it. We combine \\textbf{Z}ero-and-\\textbf{F}irst-\\textbf{O}rder optimization~(ZFO) and propose a lightweight framework that decouples direction selection from step-size. ZFO uses a trusted first-order optimizer to determine the direction and performs zeroth-order evaluations only along this one-dimensional subspace to choose how far to move. Using the current {gradient information} and two additional objective function evaluations, ZFO instances construct a local model of the objective function along the proposed direction and select a curvature-aware step within a bounded search interval. This yields an adaptive step-selection mechanism that costs less than a full line search. We provide theoretical guarantees to show that shared-sample evaluations produce reliable finite-difference curvature estimates, that the induced local model selects a near-optimal step along the search interval, and that ZFO converges to a neighborhood of a stationary point. Across the evaluated settings, language models and datasets, ZFO frequently improves optimization and final performance relative to fixed-step first-order baselines, with the magnitude and preferred local model depending on the objective. Our code is publicly available at: https://github.com/nizswan/Zeroth-First-Order-Framework.",
+      "authors": [
+        "Cristian McGee",
+        "El Houcine Bergou",
+        "Aritra Dutta"
+      ],
+      "published": "2026-10-01",
+      "updated": "2026-10-01",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "comment": "Accepted to 40th Conference on Neural Information Processing Systems (NeurIPS 2026). Code: https://github.com/nizswan/Zeroth-First-Order-Framework",
+      "abs_url": "https://arxiv.org/abs/2610.02190",
+      "pdf_url": "https://arxiv.org/pdf/2610.02190v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/nizswan/Zeroth-First-Order-Framework",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 10.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 4.0,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "optimizer",
+          "optimization",
+          "convergence",
+          "neural network"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Cristian McGee, El Houcine Bergou, Aritra Dutta",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/nizswan/Zeroth-First-Order-Framework)"
+    },
+    {
+      "arxiv_id": "2609.37509",
+      "title": "ScaGNN: a Graph Neural Network for Multiple Scattering Simulations",
+      "abstract": "The boundary element method (BEM) provides an efficient numerical framework for solving multiple scattering problems in unbounded homogeneous domains. By restricting the discretization to the domain boundaries, it substantially reduces computational complexity. The procedure first consists in determining the solution trace on the boundaries of the domain by solving a boundary integral equation. Then, the volumetric solution can be recovered at low computational cost using a boundary integral representation. As the first step of the BEM represents the main computational bottleneck, we present ScaGNN, a learning-based approach designed to approximate the solution trace. It relies on a graph neural network architecture that incorporates a dynamic adaptive edge sampling mechanism for selecting the most relevant interactions to model. Guided by intermediate predictions of expected error and edge length, this mechanism selects, at various stages of the forward pass, the most relevant distant interactions to model. The proposed method is tailored to achieve linear complexity with the number of nodes in the input graph. To train and evaluate our network, we present a benchmark consisting of several datasets with different types of multiple scattering problems. Our experiments show that our approach surpasses existing state-of-the-art learning-based methods on the considered tasks and investigate the generalization capabilities to settings with an increased number of obstacles and out-of-distribution obstacle shapes. github.com/LARIAD/ScaGNN",
+      "authors": [
+        "Rémi Marsal",
+        "Stéphanie Chaillat",
+        "Alexandre Chapoutot"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.37509",
+      "pdf_url": "https://arxiv.org/pdf/2609.37509v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/LARIAD/ScaGNN",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 10.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.0,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "generalization",
+          "graph neural network",
+          "neural network",
+          "out-of-distribution"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": null,
+      "heat_source": "none",
+      "authors_display": "Rémi Marsal, Stéphanie Chaillat, Alexandre Chapoutot",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/LARIAD/ScaGNN)"
+    },
+    {
+      "arxiv_id": "2609.33591",
+      "title": "Pretraining Transformers with Quantized Softmax in Attention",
+      "abstract": "Low-precision Transformer systems increasingly quantize attention matrix multiplications, while softmax often remains at higher precision. During pretraining, an approximate softmax changes the gradients that train the model as well as its forward computation. We study this interaction with K-interval attention, which approximates the exponential using K+1 grid values. We vary per-row grid calibration, interpolation versus hard rounding, and the placement of a straight-through surrogate relative to normalization. We derive the corresponding backward rules, including calibration derivatives, and compare these choices in pretraining experiments matched on model, data, and optimizer. Detaching the row extrema leaves the forward computation unchanged but produces a delayed increase in validation loss. With hard rounding at K=4, min-max calibration and a pre-normalization surrogate incur a large loss gap; changing either choice substantially reduces it. At 124M parameters and 2.5B training tokens, fixed-window calibration with a post-normalization surrogate yields a validation loss gap of +0.019 nats relative to softmax at K=4, and with a pre-normalization surrogate yields +0.004 nats at K=16.",
+      "authors": [
+        "Shangzhen Zhu",
+        "Muyan Hu",
+        "Tomasz Kozlowski"
+      ],
+      "published": "2026-09-27",
+      "updated": "2026-09-27",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.33591",
+      "pdf_url": "https://arxiv.org/pdf/2609.33591v1",
+      "hf_upvotes": 5,
+      "hf_url": "https://huggingface.co/papers/2609.33591",
+      "organization": "University of Illinois at Urbana-Champaign",
+      "hf_published": "2026-09-27",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 7.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.986,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "optimizer",
+          "calibration"
+        ],
+        "category": 2.0,
+        "popularity": 2.24,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Shangzhen Zhu, Muyan Hu, Tomasz Kozlowski",
+      "heat_label": "🔥 HF 5 赞"
+    },
+    {
+      "arxiv_id": "2609.39074",
+      "title": "HO-FL: Hybrid-Order Federated Learning for Heterogeneous Edge Devices",
+      "abstract": "Federated learning (FL) on memory-constrained edge devices faces a dilemma: first-order (FO) optimization (i.e., backpropagation) demands substantial memory, whereas zeroth-order (ZO) optimization suffers from severe convergence slowdown. To resolve this dilemma, we introduce HO-FL, a hybrid-order FL framework that trains a model's bottom segment with ZO optimization and its top segment with FO optimization. Each device can flexibly select its order boundary according to its memory budget while participating in the training of the same global model. Moreover, our convergence analysis reveals a new, fundamental trade-off: clients with larger FO-trained segments can provide more accurate updates, but favoring them can underrepresent other clients' data. We connect this trade-off to the bias and variance of actual multi-step local updates, yielding a sampling optimization problem and a practical dimension-aware approximation with direct model averaging. Experiments on language tasks examine task performance, client memory, and sampling under data heterogeneity. The results show that hybrid-order local training can retain much of the full-FO performance with substantially lower client memory requirements. Our code is available at https://github.com/HKU-WILL-Lab/HO-FL.",
+      "authors": [
+        "Qiyuan Chen",
+        "Xian Wu",
+        "Yanan Ma",
+        "Xianhao Chen"
+      ],
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "30 pages, 2 figures",
+      "abs_url": "https://arxiv.org/abs/2609.39074",
+      "pdf_url": "https://arxiv.org/pdf/2609.39074v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/HKU-WILL-Lab/HO-FL",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 9.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.938,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "optimization",
+          "convergence",
+          "federated learning"
+        ],
+        "category": 2.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 0,
+      "heat_source": "none",
+      "authors_display": "Qiyuan Chen, Xian Wu, Yanan Ma, Xianhao Chen",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/HKU-WILL-Lab/HO-FL)"
+    }
+  ],
+  "rescored_at": "2026-10-02T05:04:17.697107+00:00"
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2026-10-01",
+    "title": "AI 论文周报（2026-09-25 – 2026-10-01）",
+    "week_start": "2026-09-25",
+    "week_end": "2026-10-01",
+    "count": 60,
+    "counts": {
+      "llm": 10,
+      "vlm": 10,
+      "agent": 10,
+      "deep-learning": 10,
+      "robotics": 10,
+      "wearable-xr": 10
+    },
+    "measured_heat_count": 53,
+    "slug": "2026-10-01",
+    "url": "https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-01.html"
+  }
+]

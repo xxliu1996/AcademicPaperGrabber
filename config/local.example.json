@@ -1,0 +1,16 @@
+{
+  "_comment": "把这个文件复制成 config/local.json 再改。全部可选——不填就用默认值，站点地址会从 git remote 自动推导。local.json 已被 gitignore，不会提交。",
+
+  "_site_url": "留空即从 git remote 推导出 https://<owner>.github.io/<repo>",
+  "site_url": "",
+
+  "site_title": "AI 论文周报",
+  "site_tagline": "每周自动抓取六个方向最近一周的热门论文，每个方向 10 篇，人读的那种周报。",
+
+  "_mail": "两个都留空就不发邮件。密码不写在这里，放 keychain（见 README）。",
+  "mail_from": "",
+  "mail_to": "",
+  "smtp_host": "smtp.gmail.com",
+  "smtp_port": 465,
+  "keychain_service": "AcademicPaperGrabber-smtp"
+}

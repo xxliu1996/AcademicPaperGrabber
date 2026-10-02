@@ -1,0 +1,1508 @@
+{
+  "generated_at": "2026-10-02T04:46:13.174087+00:00",
+  "theme": "llm",
+  "theme_title": "大语言模型",
+  "theme_subtitle": "预训练、后训练、推理与长上下文",
+  "accent": "#2f6f5e",
+  "week_start": "2026-09-25",
+  "week_end": "2026-10-01",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 461,
+  "measured_heat_count": 25,
+  "papers": [
+    {
+      "arxiv_id": "2609.29233",
+      "title": "Post-Training Leaves Behavioral Shadows on Unrelated Decisions",
+      "abstract": "We find that language models can transfer capabilities through task-unrelated text. Post-training typically improves language models using task-specific data. Prior work on subliminal learning shows that information about these updates can pass through unrelated generations, but has largely focused on traits or preferences using extensive teacher outputs. We introduce Active Taskless Distillation (ATD), which achieves capability transfer using only a single word from the teacher per prompt. ATD probes the behavioral shadow of post-training by selecting prompts where the teacher and student's shared public ancestor is nearly indifferent between two ordinary words. A student initialized from this ancestor learns solely from the resulting prompt-word pairs, without target-task examples, teacher logits, or teacher parameters. In the primary coding experiment with Qwen2.5-1.5B, 5,664nses yield a 5.34 pp gain on HumanEval+ over an exact nuisance-matched control thadisrupts prompt-resperiments showtransfer in scientific knowledge, commonsense reasoning, and reading comprehensins across additional model generations, sizes, and families. Functional analyses show that the learned sid composable, andthat its strength tracks the teacher's update strength.",
+      "authors": [
+        "Ziyang Zhang",
+        "Yubin Jing",
+        "Yuanhao Zeng",
+        "Yuyao Li",
+        "Haofan Wang",
+        "Yichen Gong"
+      ],
+      "published": "2026-09-24",
+      "updated": "2026-09-24",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "17 pages, 6 figures, 13 tables. Code: https://github.com/myboker/ATD",
+      "abs_url": "https://arxiv.org/abs/2609.29233",
+      "pdf_url": "https://arxiv.org/pdf/2609.29233v1",
+      "hf_upvotes": 271,
+      "hf_url": "https://huggingface.co/papers/2609.29233",
+      "github_repo": "https://github.com/myboker/ATD",
+      "github_repo_source": "hf",
+      "github_stars": 17,
+      "organization": "Peking University",
+      "hf_published": "2026-09-24",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 10.5,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 20.587,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "post-training",
+          "reasoning",
+          "distillation",
+          "prompt"
+        ],
+        "category": 3.5,
+        "popularity": 16.46,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Ziyang Zhang, Yubin Jing, Yuanhao Zeng, Yuyao Li, Haofan Wang, Yichen Gong",
+      "heat_label": "🔥 HF 271 赞 ｜ 💻 [代码](https://github.com/myboker/ATD)"
+    },
+    {
+      "arxiv_id": "2609.32722",
+      "title": "Scaling Properties of Same-Family On-Policy Distillation",
+      "abstract": "*Reinforcement learning (RL)* can induce substantial reasoning capabilities in large language models (LLMs), but how much of this capability transfers across model scales, and how quickly, remains unclear. We study the scaling properties of *on-policy distillation (OPD)* across *weak-to-strong*, *same-base*, and *strong-to-weak* teacher--student setups. We find that early OPD training dynamics uniformly exhibit a regular *useful-transfer* regime, in which held-out accuracy (the *gold score*, G) rises approximately linearly in d=mathrm{KL(π_θVert π_{ref})}, the square root of token-level reverse KL divergence from the student initialization. In every observed weak-to-strong pair, the student's peak gold score exceeds its teacher's own, so a compact RL expert can transfer capability to a much larger student via OPD. To estimate OPD outcomes, we fit *power laws* for how G_{peak} and the slope of the useful-transfer regime scale with student and teacher parameter counts and with teacher gold score. These laws show that peak gold score improves with teacher scale only up to roughly the student's scale, and that at a matched gold score smaller teachers transfer better, so a teacher's score alone does not define its supervision value. We also study the scaling effects of two OPD variants, bootstrapping weak-to-strong OPD, and the degree of on-policy supervision.",
+      "authors": [
+        "Yuntai Bao",
+        "Qinfeng Li",
+        "Guoqing Jiang",
+        "Liwei Chen",
+        "Zhiheng Qin",
+        "Xuanping Li",
+        "Wenqi Zhang",
+        "Xuhong Zhang"
+      ],
+      "published": "2026-09-26",
+      "updated": "2026-09-26",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "35 pages, 20 figures",
+      "abs_url": "https://arxiv.org/abs/2609.32722",
+      "pdf_url": "https://arxiv.org/pdf/2609.32722v1",
+      "hf_upvotes": 293,
+      "hf_url": "https://huggingface.co/papers/2609.32722",
+      "project_page": "https://colored-dye.github.io/blog/2026/opd-scaling/",
+      "organization": "Zhejiang University",
+      "hf_published": "2026-09-26",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 6.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 19.305,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "llms",
+          "reasoning",
+          "distillation"
+        ],
+        "category": 0.75,
+        "popularity": 17.12,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Yuntai Bao, Qinfeng Li, Guoqing Jiang, Liwei Chen, Zhiheng Qin, Xuanping Li 等 8 人",
+      "heat_label": "🔥 HF 293 赞"
+    },
+    {
+      "arxiv_id": "2609.26333",
+      "title": "Disaggregated Quantization: Specializing LLM Prefill and Decode",
+      "abstract": "Prefill and decode reward different approaches to quantization: low-precision arithmetic accelerates prompt processing, while compact weights reduce memory traffic during generation. We propose \"disaggregated quantization\" (DQ), which specializes computation formats, weights and storage placement to both of these phases. On Qwen 3 and Gemma 3, removing activation quantization specifically on decode improves accuracy on decode-heavy tasks without increasing inference cost. Training separate compute-native prefill weights accelerates prompt processing relative to weight-only inference while matching or exceeding its accuracy at 2-3-bit decode on both decode-heavy and prefill-heavy tasks. With released Qwen3.8-27B GGUF decoders, training an NVFP4 prefiller improves 1-bit accuracy by 32.5 points on MMLU-Pro and 35.3 on MMMU-Pro without modifying the decode checkpoint. To accommodate the additional checkpoint on a single device, offloaded disaggregated prefill (ODP) streams its weights from SSD, amortizing loading over prompt length. On the same 27B model, ODP delivers a 1.78x time-to-first-token speedup over the weight-only baseline at 8K prompt length in llama.cpp. We evaluate accuracy under disaggregated serving in vLLM and further validate shared-weight format disaggregation through post-training quantization on models up to 2.8T parameters.",
+      "authors": [
+        "Andrei Panferov",
+        "Maximilian Kleinegger",
+        "Sweta Priyadarshi",
+        "Tijmen Blankevoort",
+        "Dan Alistarh"
+      ],
+      "published": "2026-09-22",
+      "updated": "2026-09-22",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.26333",
+      "pdf_url": "https://arxiv.org/pdf/2609.26333v1",
+      "hf_upvotes": 90,
+      "hf_url": "https://huggingface.co/papers/2609.26333",
+      "github_repo": "https://github.com/IST-DASLab/disaggregated-quantization",
+      "github_repo_source": "hf",
+      "github_stars": 19,
+      "organization": " IST Austria Distributed Algorithms and Systems Lab",
+      "hf_published": "2026-09-22",
+      "hf_featured": "2026-09-28",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 14.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 18.269,
+      "score_breakdown": {
+        "keyword_raw": 14,
+        "keyword_matched": [
+          "llm",
+          "post-training",
+          "quantization",
+          "inference",
+          "prompt",
+          "llama",
+          "qwen"
+        ],
+        "category": 0.75,
+        "popularity": 13.08,
+        "stars_counted": 19,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Andrei Panferov, Maximilian Kleinegger, Sweta Priyadarshi, Tijmen Blankevoort, Dan Alistarh",
+      "heat_label": "🔥 HF 90 赞 ｜ 💻 [代码](https://github.com/IST-DASLab/disaggregated-quantization)"
+    },
+    {
+      "arxiv_id": "2609.36484",
+      "title": "The Teacher Is a Direction, Not a Destination: Extrapolating RL-Induced Representation Residuals in On-Policy Distillation",
+      "abstract": "On-policy distillation (OPD) trains a student to match the teacher's next-token distributions on the student's own trajectories and has yielded substantial empirical gains. Generalized variants allow the student to surpass the teacher by extrapolating an implicit reward in output space. The language-model head, however, attenuates this change anisotropically: much of the change encoded in the teacher's hidden states reaches the logits at a small fraction of its weight, and the sampled-token log-probability ratios on which output-space extrapolation relies inject noise that the extrapolation amplifies, making training unstable. We observe that reinforcement learning (RL) shifts a model's internal representations relative to its base checkpoint, and that the direction of this shift can be measured at every layer. Motivated by this observation, we propose RIDE (RL-Induced Direction Extrapolation), which extrapolates the RL-induced change directly in representation space: at every layer and token position, RIDE computes the residual between the teacher and its pre-RL checkpoint and regresses the student's hidden states toward targets displaced beyond the teacher along this residual. Conditioned on a sampled trajectory, this regression is equivalent to maximizing a linear directional reward defined by the residual under a quadratic penalty centered at the teacher, which makes explicit how the objective moves the student along the RL-induced direction while limiting its deviation from the teacher. Across four base/RL-teacher pairs spanning different scales, architectures, and pre-training lineages, RIDE approaches or exceeds the RL-trained teacher on every pair and is the only method whose mean does so, and it consistently outperforms output-space extrapolation, which degrades the student whenever the teacher is close to its base. Project page: https://github.com/xixixixixxxx/RIDE.",
+      "authors": [
+        "Hao Li",
+        "MeiJia Chen",
+        "Weijie Ren",
+        "Donghan Li",
+        "Zijun Tian",
+        "Jingchun Huang",
+        "Naibo Wang"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "19 pages",
+      "abs_url": "https://arxiv.org/abs/2609.36484",
+      "pdf_url": "https://arxiv.org/pdf/2609.36484v1",
+      "hf_upvotes": 231,
+      "hf_url": "https://huggingface.co/papers/2609.36484",
+      "github_repo": "https://github.com/xixixixixxxx/RIDE",
+      "github_repo_source": "hf",
+      "github_stars": 2,
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-10-01",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 4.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 17.886,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "pre-training",
+          "distillation"
+        ],
+        "category": 0.75,
+        "popularity": 15.2,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Hao Li, MeiJia Chen, Weijie Ren, Donghan Li, Zijun Tian, Jingchun Huang 等 7 人",
+      "heat_label": "🔥 HF 231 赞 ｜ 💻 [代码](https://github.com/xixixixixxxx/RIDE)"
+    },
+    {
+      "arxiv_id": "2609.35347",
+      "title": "Beyond Teacher Assignment: Domain-Normalized Multi-Teacher On-Policy Distillation",
+      "abstract": "Reinforcement learning can turn one language model into several specialists, each excellent at a single skill such as mathematics, coding or following instructions, but users need one model with all of these skills. Multi-teacher on-policy distillation (MOPD) merges them by letting the specialists teach one student: the student answers each prompt, and the specialist for that prompt's domain gives feedback on every token. This routing decides which specialist teaches, but not how strongly its feedback moves the shared student. In Qwen3.5 models at three sizes, we find that MOPD's student does not beat one taught by the best single specialist and gains little of the mathematics specialist's advantage. The feedback is unbalanced: instruction-following feedback is several times more spread out than mathematics feedback and dominates the student's updates. We propose Domain-Normalized MOPD (DN-MOPD), which keeps the routing and rescales each domain's feedback by its measured spread. On six public benchmarks, DN-MOPD improves the average score over MOPD at every size, across three random seeds and under two answer-length limits, and recovers most of the lost mathematics gain. Controls with fixed domain weights show that the gain comes mainly from turning down instruction-following feedback rather than turning up mathematics alone, and that fixed weights close to those DN-MOPD measures perform comparably. Combining specialists therefore requires deciding not only which one teaches, but also how strongly its feedback counts.",
+      "authors": [
+        "Xin Li",
+        "Hao Jiang",
+        "Xin Gao",
+        "Annan Wang",
+        "Yuchen Xie",
+        "Jinghao Guo",
+        "Xingwei Qu",
+        "Yichi Zhang",
+        "Chau Yuen"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Project page: https://lixin.ai/DN-MOPD . Code: https://github.com/LiXin97/DN-MOPD",
+      "abs_url": "https://arxiv.org/abs/2609.35347",
+      "pdf_url": "https://arxiv.org/pdf/2609.35347v1",
+      "hf_upvotes": 176,
+      "hf_url": "https://huggingface.co/papers/2609.35347",
+      "github_repo": "https://github.com/LiXin97/DN-MOPD",
+      "github_repo_source": "hf",
+      "github_stars": 17,
+      "project_page": "https://lixin.ai/DN-MOPD/",
+      "organization": "Nanyang Technological University",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 6.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 16.954,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "language model",
+          "distillation",
+          "prompt"
+        ],
+        "category": 0.75,
+        "popularity": 13.27,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Xin Li, Hao Jiang, Xin Gao, Annan Wang, Yuchen Xie, Jinghao Guo 等 9 人",
+      "heat_label": "🔥 HF 176 赞 ｜ 💻 [代码](https://github.com/LiXin97/DN-MOPD)"
+    },
+    {
+      "arxiv_id": "2609.33295",
+      "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+      "abstract": "An agent can complete a task while exhibiting undesirable behavior during execution. Developers need tests for the specific behaviors encountered in deployment, beyond fixed benchmark suites. We present TraceDance, an agent system that constructs targeted benchmarks from deployment traces for user-specified undesirable behaviors. For efficient construction, Anchor-and-Confirm combines programmable retrieval with candidate-level confirmation by a Flash large language model (LLM), while the Anchor Synthesis Loop generates and revises specifications for custom behaviors. The benchmarks use decision-point continuation to evaluate an LLM's next turn at a recorded decision point with a behavior-specific rubric, without a reference answer or environment replay. Experiments in coding and general tool use draw on 252,557 sessions and produce 107 benchmarks with 4,125 instances, fulfilling 95.3% of build-target requests. Both human annotators confirm the requested behavior in 84% of sampled instances, and the automated grader's agreement with human pass/fail judgments is comparable to that between the annotators. Nine frontier LLMs achieve a mean pass rate of only 26.7%, showing that they still struggle to respond appropriately at the evaluated decision points. Analysis across behavior-specific benchmarks further reveals weaknesses in how current LLMs behave as agents. By turning deployment problems into targeted benchmarks, TraceDance could serve as a key component of the recursive self-improvement (RSI) loop.",
+      "authors": [
+        "Dehai Min",
+        "Daoan Zhang",
+        "Yiming Zeng",
+        "Huayi Zhang",
+        "Ziyi Chen",
+        "Yan Zhang",
+        "Qinbo Bai",
+        "Mengyuan Chao",
+        "Jing Ning",
+        "Qiyue Hua",
+        "Huiyi Chen",
+        "Hanrong Zhang",
+        "Henry Peng Zou",
+        "Jie Yang",
+        "Wei Xu",
+        "Philip S. Yu"
+      ],
+      "published": "2026-09-27",
+      "updated": "2026-09-27",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": "34 pages, 7 figures. Project website: https://zhishanq.github.io/TraceDance/",
+      "abs_url": "https://arxiv.org/abs/2609.33295",
+      "pdf_url": "https://arxiv.org/pdf/2609.33295v1",
+      "hf_upvotes": 69,
+      "hf_url": "https://huggingface.co/papers/2609.33295",
+      "github_repo": "https://github.com/ZhishanQ/TraceDance",
+      "github_repo_source": "hf",
+      "github_stars": 9,
+      "project_page": "https://zhishanq.github.io/TraceDance/",
+      "organization": "ByteDance",
+      "hf_published": "2026-09-27",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "llm",
+      "fit": 14.75,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 16.757,
+      "score_breakdown": {
+        "keyword_raw": 13,
+        "keyword_matched": [
+          "large language model",
+          "language model",
+          "llm",
+          "llms"
+        ],
+        "category": 1.75,
+        "popularity": 11.07,
+        "stars_counted": 9,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Dehai Min, Daoan Zhang, Yiming Zeng, Huayi Zhang, Ziyi Chen, Yan Zhang 等 16 人",
+      "heat_label": "🔥 HF 69 赞 ｜ 💻 [代码](https://github.com/ZhishanQ/TraceDance)"
+    },
+    {
+      "arxiv_id": "2609.40340",
+      "title": "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
+      "abstract": "Evolutionary search with large language models (LLMs) can stall when progress requires external knowledge the model lacks. Supplying relevant documents helps, but simply adding web search tool can keep returning the same pages as solutions change. We introduce EvoDuet, a bi-level optimization method that co-evolves solutions and search queries with fixed model parameters. At each iteration, a retrieval gate lets the LLM assess its knowledge gap and choose to retrieve new documents, reuse stored ones, or proceed without them. An inner loop refines queries and ranks documents by the solution scores they are predicted to yield; an outer loop generates candidates in parallel from these documents and records the evaluated outcomes for later searches. Across 21 optimization tasks with one candidate per iteration, EvoDuet raises OpenEvolve's normalized discovery gain from 74.1% to 78.0% with GPT-5.6-Luna and from 61.3% to 82.3% with Gemini-3.8-Flash, whereas Qwen3.5-9B does not benefit. Our best runs surpass the previously reported best scores on eight tasks, including Swap Reduction on Q20 and Rosetta, and match them on three more. EvoDuet also improves with other scaffolds (e.g., Top-K, EvoX) on Sums/Diffs and Denoising, demonstrating its applicability across evolutionary search scaffolds.",
+      "authors": [
+        "Young-Jun Lee",
+        "Jinheon Baek",
+        "Soyeong Jeong",
+        "Minki Kang",
+        "Seungyeon Jwa",
+        "Jonghyun Choi",
+        "Seungho Han",
+        "Dongyeop Kang"
+      ],
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "comment": "Project page: https://open-galapagos.github.io/evoduet_project_page/",
+      "abs_url": "https://arxiv.org/abs/2609.40340",
+      "pdf_url": "https://arxiv.org/pdf/2609.40340v1",
+      "hf_upvotes": 97,
+      "hf_url": "https://huggingface.co/papers/2609.40340",
+      "github_repo": "https://github.com/Open-Galapagos/EvoDuet",
+      "github_repo_source": "hf",
+      "github_stars": 4,
+      "project_page": "https://open-galapagos.github.io/evoduet_project_page/",
+      "organization": "Minnesota NLP",
+      "hf_published": "2026-09-30",
+      "hf_featured": "2026-10-01",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "llm",
+      "fit": 10.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 16.28,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "llm",
+          "llms",
+          "gpt"
+        ],
+        "category": 2.0,
+        "popularity": 11.78,
+        "stars_counted": 4,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Young-Jun Lee, Jinheon Baek, Soyeong Jeong, Minki Kang, Seungyeon Jwa, Jonghyun Choi 等 8 人",
+      "heat_label": "🔥 HF 97 赞 ｜ 💻 [代码](https://github.com/Open-Galapagos/EvoDuet)"
+    },
+    {
+      "arxiv_id": "2609.38334",
+      "title": "EVOKE: Eliciting World Knowledge in Agents for Transferable Decision-Making",
+      "abstract": "Large language models (LLMs) are increasingly deployed as agents for multi-step decision-making, yet transfer poorly to unseen environments. World-model methods address this by training agents to predict future observations, at the cost of additional training and errors that compound when predictions are used for planning. However, for LLM agents operating in digital environments, much of this world knowledge is already internalized during pretraining, which shifts the problem from acquiring it to eliciting it. We argue that typical post-training provides little pressure for such elicitation, since supervision under a single goal at each visited state inadvertently drives policies to rely on superficial contextual habits. We introduce EVOKE, a post-training method that supplies this pressure through goal diversity at fixed states. Motivated by theory showing that an agent competent across diverse goals must encode a world model recoverable from its action preferences, EVOKE holds the environment state and interaction history fixed and ranks the same candidate actions under alternative goals, forcing action preferences to change, so that a policy relying on contextual habits or single-goal correlations cannot order them correctly. This implicitly elicits the policy's pretrained world knowledge to inform decisions. We evaluate EVOKE across diverse tasks in three backbones, demonstrating improved task performance, unseen environment generalization, and data efficiency. We further conduct controlled analyses to better understand what drives these gains. These findings offer a new perspective on eliciting internalized world knowledge for transferable action through direct decision supervision.",
+      "authors": [
+        "Yuhan Guo",
+        "Jinming Liu",
+        "Liang Xu",
+        "Ziqiang Li",
+        "Jianguo Huang",
+        "Zhicheng Wang",
+        "Hu Zhu",
+        "Qiuyu Chen",
+        "Yuntao Wei",
+        "Xin Jin",
+        "Wenjun Zeng"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-10-01",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "comment": "19 pages. Project page: https://gnonymous.github.io/EVOKE ; Code: https://github.com/Gnonymous/EVOKE ; Models: https://huggingface.co/Gnonymous/EVOKE",
+      "abs_url": "https://arxiv.org/abs/2609.38334",
+      "pdf_url": "https://arxiv.org/pdf/2609.38334v2",
+      "hf_upvotes": 68,
+      "hf_url": "https://huggingface.co/papers/2609.38334",
+      "github_repo": "https://github.com/Gnonymous/EVOKE",
+      "github_repo_source": "hf",
+      "github_stars": 4,
+      "project_page": "https://gnonymous.github.io/EVOKE",
+      "organization": "Shanghai Jiao Tong University",
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-10-01",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "llm",
+      "fit": 13.0,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 15.428,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "llm",
+          "llms",
+          "pretraining",
+          "post-training"
+        ],
+        "category": 2.0,
+        "popularity": 10.18,
+        "stars_counted": 4,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Yuhan Guo, Jinming Liu, Liang Xu, Ziqiang Li, Jianguo Huang, Zhicheng Wang 等 11 人",
+      "heat_label": "🔥 HF 68 赞 ｜ 💻 [代码](https://github.com/Gnonymous/EVOKE)"
+    },
+    {
+      "arxiv_id": "2609.28416",
+      "title": "Agent-Editing World Model: Rethinking World Modeling for LLM Agents",
+      "abstract": "Recent advances in large language models (LLMs) have enabled agents to tackle long-horizon tasks across diverse environments. To further improve agent performance, existing language world models typically predict environment observations, yet reconstructing high-entropy, execution-dependent tool responses offers limited value when real feedback is available. Meanwhile, agents suffer from task-state contamination, where unsupported assumptions and outdated plans persist in history and distort subsequent decisions. We propose the Agent-Editing World Model (AEWM), which models how reasoning and actions shape future task progress rather than simulating tool responses. AEWM combines Action Judge to distinguish Critical, Exploratory, and Noisy decisions with State Revision to edit noisy reasoning--action continuations from the same observed history. EditAct integrates these capabilities with real execution, directly changing the state underlying subsequent decisions rather than merely providing critiques. We train AEWM across Search, Terminal, and Software Engineering through mid-training and supervised fine-tuning. AEWM achieves 70.5\\% macro-F1 on our Action Judge benchmark, exceeding the strongest frontier baseline by 10.6 points. Across six benchmarks and three agent backbones, EditAct improves average scores by 3.2--6.7 points over the strongest baseline. Furthermore, rejection sampling fine-tuning on verified EditAct trajectories, termed AEWM-RFT, improves over Self-RFT by 2.2--2.6 points across three domains without online AEWM guidance.",
+      "authors": [
+        "Shuang Sun",
+        "Guoxin Chen",
+        "Fanzhe Meng",
+        "Jia Deng",
+        "Huatong Song",
+        "Jinhao Jiang",
+        "Wayne Xin Zhao",
+        "Hongteng Xu",
+        "Ji-Rong Wen"
+      ],
+      "published": "2026-09-23",
+      "updated": "2026-09-23",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.28416",
+      "pdf_url": "https://arxiv.org/pdf/2609.28416v1",
+      "hf_upvotes": 42,
+      "hf_url": "https://huggingface.co/papers/2609.28416",
+      "github_repo": "https://github.com/RUCAIBox/Agent-Editing-World-Model",
+      "github_repo_source": "hf",
+      "github_stars": 9,
+      "project_page": "https://huggingface.co/RUC-AIBOX/collections",
+      "organization": "Renmin University of China",
+      "hf_published": "2026-09-23",
+      "hf_featured": "2026-09-25",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 12.5,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 14.369,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "llm",
+          "llms",
+          "reasoning",
+          "fine-tuning"
+        ],
+        "category": 3.5,
+        "popularity": 9.24,
+        "stars_counted": 9,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Shuang Sun, Guoxin Chen, Fanzhe Meng, Jia Deng, Huatong Song, Jinhao Jiang 等 9 人",
+      "heat_label": "🔥 HF 42 赞 ｜ 💻 [代码](https://github.com/RUCAIBox/Agent-Editing-World-Model)"
+    },
+    {
+      "arxiv_id": "2609.37959",
+      "title": "TabFM: A Zero-Shot Foundation Model for Tabular Data",
+      "abstract": "Tabular machine learning typically relies on per-dataset workflows, fitting tree ensembles or running AutoML searches from scratch for every task. We present TabFM, a 400M-parameter tabular foundation model that formulates supervised tabular prediction as in-context learning. TabFM produces calibrated zero-shot predictions in a single forward pass without task-specific tuning. Trained entirely on synthetic tables generated from structural causal models, TabFM learns general tabular representations that transfer zero-shot to real-world tasks. Across all 51 benchmark datasets in TabArena (38 classification and 13 regression), zero-shot TabFM ranks first among default tabular foundation models and outperforms tuned AutoML pipelines. Two extensions over the same frozen weights improve performance further on both tracks: multi-view feature expansion with ensembling and post-hoc calibration (TabFM+), and LLM-guided, dataset-specific data processing and feature engineering (TabFM-Auto).",
+      "authors": [
+        "Weihao Kong",
+        "Erez Louidor Ilan",
+        "Shuxin Nie",
+        "Taman Narayan",
+        "Rajat Sen",
+        "Yichen Zhou",
+        "Deqing Fu",
+        "Samet Oymak",
+        "Abhimanyu Das"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.37959",
+      "pdf_url": "https://arxiv.org/pdf/2609.37959v1",
+      "hf_upvotes": 16,
+      "hf_url": "https://huggingface.co/papers/2609.37959",
+      "github_repo": "https://github.com/google-research/tabfm",
+      "github_repo_source": "hf",
+      "github_stars": 2700,
+      "project_page": "https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data/",
+      "organization": "Google",
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 6.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 13.688,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "llm",
+          "in-context learning"
+        ],
+        "category": 0.75,
+        "popularity": 10.0,
+        "stars_counted": 2700,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Weihao Kong, Erez Louidor Ilan, Shuxin Nie, Taman Narayan, Rajat Sen, Yichen Zhou 等 9 人",
+      "heat_label": "🔥 HF 16 赞 ｜ 💻 [代码](https://github.com/google-research/tabfm)"
+    },
+    {
+      "arxiv_id": "2609.37372",
+      "title": "Think Before You Score: Thinking Reward Model for Visual Generation",
+      "abstract": "Visual reward models are essential for evaluating and improving visual generation models, yet existing approaches typically map task conditions and candidate outputs directly to scalar rewards, leaving implicit what should be evaluated for each individual case. We introduce Think Before You Score, a paradigm that explicitly determines what matters for each case before judging how well the candidate performs. Following this principle, we propose the Thinking Reward Model (TRM), which formulates case-adaptive rubrics, performs rubric-guided assessment, and produces fine-grained pointwise rewards. We further observe that conventional pairwise preference optimization can induce score polarization, and introduce Pairwise Dual-Group Relative Policy Optimization (PD-GRPO), which leverages pairwise supervision to improve reward discrimination while preserving fine-grained pointwise scoring. Extensive experiments on image generation and editing reward-modeling benchmarks demonstrate that TRM achieves state-of-the-art performance among open-source reward models while remaining highly competitive with proprietary alternatives. Moreover, using TRM as a reward for reinforcement learning consistently improves diverse visual generation models, demonstrating that its fine-grained, case-adaptive rewards translate into effective optimization signals for visual generation.",
+      "authors": [
+        "Xuehai Bai",
+        "Zhenchen Tang",
+        "Yang Shi",
+        "Dianyi Wang",
+        "Tengfei Liu",
+        "Wanshun Su",
+        "Xuanyu Zhu",
+        "Ruohui Wang",
+        "Haiwen Diao",
+        "Haotian Wang",
+        "Xiaoling Gu",
+        "Yuanxing Zhang"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "31 pages",
+      "abs_url": "https://arxiv.org/abs/2609.37372",
+      "pdf_url": "https://arxiv.org/pdf/2609.37372v1",
+      "hf_upvotes": 89,
+      "hf_url": "https://huggingface.co/papers/2609.37372",
+      "github_repo": "https://github.com/bxhsort/Thinking_Reward_Model",
+      "github_repo_source": "hf",
+      "github_stars": 31,
+      "project_page": "https://bxhsort.github.io/Thinking-Reward-Model/",
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "llm",
+      "fit": 9.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 13.684,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "grpo",
+          "reward model",
+          "preference optimization"
+        ],
+        "category": 0.0,
+        "popularity": 9.43,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Xuehai Bai, Zhenchen Tang, Yang Shi, Dianyi Wang, Tengfei Liu, Wanshun Su 等 12 人",
+      "heat_label": "🔥 HF 89 赞 ｜ 💻 [代码](https://github.com/bxhsort/Thinking_Reward_Model)"
+    },
+    {
+      "arxiv_id": "2609.29845",
+      "title": "Your Transformer Can Hold Two Thoughts at Once: Evidence of Linear Superposition in LLMs",
+      "abstract": "While Large Language Models (LLMs) rely on highly non-linear components, in this work we demonstrate that they exhibit fundamental linearity: when inputs from distinct text streams are linearly combined, the model outputs a superposition of the individual next-token distributions. We term this the Superposition Linearity Hypothesis. We provide evidence that superposition is an intrinsic property of the Transformer architecture rather than an emergent consequence of training; in fact, we observe that it tends to diminish as pretraining progresses. However, we demonstrate that linearity can be substantially restored through lightweight fine-tuning, significantly reducing the divergence between the predicted next-token distribution and the average of the individual next-token distributions. Finally, we introduce a guided decoding procedure that disentangles superposed outputs, enabling the simultaneous generation of two coherent continuations from a single forward pass.",
+      "authors": [
+        "Pavel Tikhonov",
+        "Anton Korznikov",
+        "Matvey Mikhalchuk",
+        "Nikita Dragunov",
+        "Temurbek Rahmatullaev",
+        "Polina Druzhinina",
+        "Anton Razzhigaev",
+        "Ivan Oseledets",
+        "Elena Tutubalina"
+      ],
+      "published": "2026-09-24",
+      "updated": "2026-09-24",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.29845",
+      "pdf_url": "https://arxiv.org/pdf/2609.29845v1",
+      "hf_upvotes": 100,
+      "hf_url": "https://huggingface.co/papers/2609.29845",
+      "hf_published": "2026-09-24",
+      "hf_featured": "2026-09-25",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 12.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 13.188,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "llms",
+          "pretraining",
+          "decoding",
+          "fine-tuning",
+          "transformer"
+        ],
+        "category": 2.75,
+        "popularity": 10.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Pavel Tikhonov, Anton Korznikov, Matvey Mikhalchuk, Nikita Dragunov, Temurbek Rahmatullaev, Polina Druzhinina 等 9 人",
+      "heat_label": "🔥 HF 100 赞"
+    },
+    {
+      "arxiv_id": "2609.29816",
+      "title": "AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation",
+      "abstract": "Recent years have witnessed major progress in joint audio-video generation. Existing models still suffer from limited per-modality fidelity, insufficient text-modality alignment and weak cross-modal synchronization. While reinforcement-learning post-training offers a promising remedy, directly adapting it to joint audio-video generation is challenging. Heterogeneous multimodal rewards entangle learning signals and complicate credit assignment. Joint optimization of two modality towers is computationally expensive given their divergent dynamics. Moreover, synchronization evaluation difficulty depends on paired samples, preventing fair reward comparisons. We propose AV-GRPO, a modality-anchored online diffusion RL framework, and 5DAV, a decoupled, difficulty-controllable training dataset. AV-GRPO includes three key modules: (1) modality-anchored rollouts to disentangle learning signals and stabilize difficulty; (2) trajectory-locked frozen-tower optimization to reduce cost and reassign credit; (3) adaptive objectives and perturbation strengths tailored to modality-specific dynamics. This converts coupled multimodal preference learning into unimodal subproblems for precise reward attribution and better synchronization. Our 5DAV dataset decouples samples across five dimensions for systematic training. Experiments on JavisBench and VABench demonstrate AV-GRPO outperforms LTX-2.3 in generation quality, semantic alignment and cross-modal synchronization under LoRA and full fine-tuning. Ablations confirm our designs. Code and data: https://github.com/zhiyuxu03/AV-GRPO",
+      "authors": [
+        "Zhiyu Xu",
+        "Weilong Yan",
+        "Yufei Shi",
+        "Shiyang Li",
+        "Yihao Liu",
+        "Kin-Man Lam",
+        "Yuewen Cao"
+      ],
+      "published": "2026-09-24",
+      "updated": "2026-09-28",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.SD"
+      ],
+      "comment": "22 pages",
+      "abs_url": "https://arxiv.org/abs/2609.29816",
+      "pdf_url": "https://arxiv.org/pdf/2609.29816v3",
+      "hf_upvotes": 12,
+      "hf_url": "https://huggingface.co/papers/2609.29816",
+      "github_repo": "https://github.com/zhiyuxu03/AV-GRPO",
+      "github_repo_source": "hf",
+      "github_stars": 26,
+      "organization": "Shanghai AI Laboratory",
+      "hf_published": "2026-09-24",
+      "hf_featured": "2026-09-25",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 12.0,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 11.919,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "post-training",
+          "grpo",
+          "alignment",
+          "fine-tuning",
+          "lora"
+        ],
+        "category": 0.0,
+        "popularity": 7.42,
+        "stars_counted": 26,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Zhiyu Xu, Weilong Yan, Yufei Shi, Shiyang Li, Yihao Liu, Kin-Man Lam 等 7 人",
+      "heat_label": "🔥 HF 12 赞 ｜ 💻 [代码](https://github.com/zhiyuxu03/AV-GRPO)"
+    },
+    {
+      "arxiv_id": "2609.35748",
+      "title": "Improving Test-Time Scaling with Adaptive Looped Transformers",
+      "abstract": "Looped transformers have demonstrated promising parameter efficiency by reusing layers for latent computation. Prior studies compare looped and non-looped models at matched parameters or per-token FLOPs. However, to the best of our knowledge, whether looping improves test-time scaling as outputs grow longer remains underexplored. Through post-training looped transformers, we study the accuracy-compute slope, measured as the accuracy gain per doubling of test-time decoding FLOPs. We find that existing looped transformers often yield steeper slopes than their non-looped baseline, yet underperform it at matched compute. While fixed-depth looping spends extra iterations on every token, our analysis shows that many tokens do not benefit from extra iterations. We therefore propose TaH2, which enables the model to focus extra iterations on the tokens that benefit from looping. It jointly post-trains the backbone and an iteration decider through lookahead depth supervision, which uses online labels indicating whether further iteration improves the prediction. TaH2 improves both the efficiency and attainable accuracy of test-time scaling. On challenging AIME benchmarks, TaH2 improves the accuracy-compute slope by 53% (2.74 vs. 1.79) over the non-looped baseline, exceeding the baseline's peak accuracy by about 3.4 points at matched test-time compute. As the maximum iteration depth increases, existing looped models largely plateau, while TaH2's gain over the non-looped baseline continues to grow from +2.8 points at depth 2 to +3.9 points at depth 8. Our code is available at https://github.com/thu-nics/TaH.",
+      "authors": [
+        "Yichen You",
+        "Tianyu Fu",
+        "Aosong Feng",
+        "Xingtai Lv",
+        "Xuefei Ning",
+        "Ning Ding",
+        "Yu Wang"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.35748",
+      "pdf_url": "https://arxiv.org/pdf/2609.35748v1",
+      "hf_upvotes": 54,
+      "hf_url": "https://huggingface.co/papers/2609.35748",
+      "github_repo": "https://github.com/thu-nics/TaH",
+      "github_repo_source": "hf",
+      "github_stars": 92,
+      "project_page": "https://fuvty.github.io/thinking_yard_project_page/projects/tah2/",
+      "organization": "Tsinghua-NICS-EFC",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "llm",
+      "fit": 9.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.786,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "post-training",
+          "decoding",
+          "test-time"
+        ],
+        "category": 2.75,
+        "popularity": 7.35,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Yichen You, Tianyu Fu, Aosong Feng, Xingtai Lv, Xuefei Ning, Ning Ding 等 7 人",
+      "heat_label": "🔥 HF 54 赞 ｜ 💻 [代码](https://github.com/thu-nics/TaH)"
+    },
+    {
+      "arxiv_id": "2609.32712",
+      "title": "MassAlloc Attention: Let Attention Allocate Its Own Compute",
+      "abstract": "FullAttn often assigns negligible normalized mass to much of the causal score space, yet dense kernels execute the complete post-score path after forming each QK tile. We introduce MALA, a fused attention primitive that preserves score access to every legal causal interaction and uses normalized contribution to allocate post-score computation. Forward uses its evolving online-softmax normalizer, while backward reuses the finalized normalizer to derive nested retained support using only standard attention state. A common tolerance governs training and inference, allowing for adaptive retention of the work. MALA reduces low-contribution post-score computation. A matched-work study at 8K isolates the benefit of distribution-adaptive allocation: under exactly matched total post-score work, MALA approaches a per-instance reference-mass oracle, with mean omitted mass of 0.0188% versus 0.0182%. Across context lengths from 1K to 32K tokens, the same tolerance maintains low output and gradient errors relative to the reference. Across a broader controlled associative-recall comparison, MALA closely tracks FullAttn as context grows, reaching 89.67% accuracy at 8K compared with 89.97% for FullAttn. In an attention-operator benchmark at 128K tokens with tensor parallelism, MALA reduces forward and backward latency during training by 2.2x and 3.0x and decoding latency during inference by 1.6x relative to FullAttn. Across scaling-law training from 0.6B to 14B parameters, MALA closely tracks FullAttn in perplexity while reducing total training FLOPs. The resulting 14B models and 32B models from separate continued training achieve comparable knowledge, reasoning, and long-context retrieval scores to FullAttn. These results indicate that allocating post-score computation according to normalized attention contributions can retain the evaluated capabilities of FullAttn while reducing attention computation.",
+      "authors": [
+        "Jingze Shi",
+        "Zhangyang Peng",
+        "Xianduo Li",
+        "Yanlin Qi",
+        "Xiaotian Lin",
+        "Haoxian Chen",
+        "Liangdong Wang",
+        "Guang Liu",
+        "Yuyu Luo"
+      ],
+      "published": "2026-09-26",
+      "updated": "2026-09-26",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.32712",
+      "pdf_url": "https://arxiv.org/pdf/2609.32712v1",
+      "hf_upvotes": 74,
+      "hf_url": "https://huggingface.co/papers/2609.32712",
+      "github_repo": "https://github.com/HKUSTDial/flash-sparse-attention",
+      "github_repo_source": "hf",
+      "github_stars": 765,
+      "organization": "Beijing Academy of Artificial Intelligence",
+      "hf_published": "2026-09-26",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.54,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "reasoning",
+          "decoding",
+          "inference"
+        ],
+        "category": 1.75,
+        "popularity": 8.6,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Jingze Shi, Zhangyang Peng, Xianduo Li, Yanlin Qi, Xiaotian Lin, Haoxian Chen 等 9 人",
+      "heat_label": "🔥 HF 74 赞 ｜ 💻 [代码](https://github.com/HKUSTDial/flash-sparse-attention)"
+    },
+    {
+      "arxiv_id": "2609.33781",
+      "title": "Surprising Success, Repeated Failure: Entropy-Guided Credit Assignment for Exploration in LLM Reasoning",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) enhances reasoning in large language models (LLMs) through outcome-level feedback, yet recent approaches to finer-grained credit assignment often require auxiliary models, additional sampling, or privileged information. Although policy entropy provides a readily available signal, prioritizing uncertain positions under both reinforcement and penalization concentrates penalties where failed responses still retain alternatives for recovery, which can suppress opportunities for exploration. To address this, we introduce Entropic Advantage Policy Optimization (EAPO), an entropy-guided credit assignment method that treats success and failure asymmetrically. Specifically, motivated by the observation that success under uncertainty is less repeatable while confident failures tend to recur, EAPO couples normalized policy entropy with the sign of the response advantage to reinforce surprising success and correct repeated failure. It assigns stronger reinforcement to high-entropy decisions in successful responses and stronger penalties to low-entropy decisions in failed responses, while attenuating penalties at uncertain positions to preserve opportunities for recovery. By redistributing the response advantage across tokens, EAPO derives token-level credit directly from existing rollout signals without additional supervision. We validate EAPO on a range of reasoning tasks across both base and reasoning backbones, demonstrating that it achieves the best overall performance. We further show that EAPO promotes more effective exploration, broadening problem coverage and generating more diverse candidate answers.",
+      "authors": [
+        "Woongyeong Yeo",
+        "Minki Kang",
+        "Chanuk Lee",
+        "Sangwoo Park",
+        "Jinheon Baek",
+        "Sung Ju Hwang"
+      ],
+      "published": "2026-09-27",
+      "updated": "2026-09-27",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": "Project page : https://eapo-explore.github.io",
+      "abs_url": "https://arxiv.org/abs/2609.33781",
+      "pdf_url": "https://arxiv.org/pdf/2609.33781v1",
+      "hf_upvotes": 41,
+      "hf_url": "https://huggingface.co/papers/2609.33781",
+      "github_repo": "https://github.com/wgcyeo/EAPO",
+      "github_repo_source": "hf",
+      "github_stars": 3,
+      "project_page": "https://eapo-explore.github.io/",
+      "organization": "KAIST AI",
+      "hf_published": "2026-09-27",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 12.5,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 11.528,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "llm",
+          "llms",
+          "rlvr",
+          "reasoning"
+        ],
+        "category": 2.5,
+        "popularity": 6.4,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Woongyeong Yeo, Minki Kang, Chanuk Lee, Sangwoo Park, Jinheon Baek, Sung Ju Hwang",
+      "heat_label": "🔥 HF 41 赞 ｜ 💻 [代码](https://github.com/wgcyeo/EAPO)"
+    },
+    {
+      "arxiv_id": "2609.33803",
+      "title": "Diffusion Reward Models",
+      "abstract": "Reward models underpin the alignment of large language models, yet the dominant designs reduce each prompt--response pair to a point estimate or to a distribution from a fixed parametric family. This is at odds with human preference, which is inherently multimodal: the same response can be reasonably judged in many ways, and no single family covers all of them. To better fit this structure, we introduce DRM, a Diffusion Reward Model that recasts reward modeling as conditional density estimation over p(rmid x,y). Conditioned on a frozen LLM encoder, a lightweight Diffusion Transformer denoises Gaussian noise into a reward vector, placing no parametric assumption on the output distribution and naturally representing its multimodal structure. A single architecture handles both multi-attribute regression and pairwise preference data, and at inference N samples form an empirical reward distribution that can be aggregated into a scalar, a variance, or quantiles. Across five benchmarks, DRM matches or surpasses baselines under matched data and backbone, stays competitive with much larger discriminative, distributional, and generative RMs despite its modest training scale, and recovers multimodal reward structure where conventional heads collapse to a point. Uncertainty-aware rejection and lower-confidence-bound (LCB) aggregation further demonstrate that DRM can exploit distributional information beyond a scalar reward to improve reward-model decisions. Downstream RLHF experiments additionally show that using DRM as the training-time reward leads to improved policy performance, directly validating the practical benefit of diffusion-based reward modeling for RLHF training.",
+      "authors": [
+        "Xiangyang Wang",
+        "Bingxiang He",
+        "Zeyuan Liu",
+        "Jiaze WangZiqing Qiao",
+        "Yuxin Zuo",
+        "Huan-ang Gao",
+        "Cheng Qian",
+        "Wenbin Zhang",
+        "Ran Li",
+        "Youbang Sun",
+        "Ning Ding",
+        "Yuanchun Shi",
+        "Zhiyuan Liu",
+        "Chaojun Xiao",
+        "Chun Yu"
+      ],
+      "published": "2026-09-27",
+      "updated": "2026-09-29",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.33803",
+      "pdf_url": "https://arxiv.org/pdf/2609.33803v2",
+      "hf_upvotes": 33,
+      "hf_url": "https://huggingface.co/papers/2609.33803",
+      "github_repo": "https://github.com/thunlp/DRM",
+      "github_repo_source": "hf",
+      "github_stars": 26,
+      "organization": "Tsinghua NLP Group",
+      "hf_published": "2026-09-27",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 15.5,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 11.12,
+      "score_breakdown": {
+        "keyword_raw": 14,
+        "keyword_matched": [
+          "llm",
+          "rlhf",
+          "reward model",
+          "alignment",
+          "inference",
+          "prompt",
+          "transformer"
+        ],
+        "category": 1.5,
+        "popularity": 5.74,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Xiangyang Wang, Bingxiang He, Zeyuan Liu, Jiaze WangZiqing Qiao, Yuxin Zuo, Huan-ang Gao 等 15 人",
+      "heat_label": "🔥 HF 33 赞 ｜ 💻 [代码](https://github.com/thunlp/DRM)"
+    },
+    {
+      "arxiv_id": "2609.29421",
+      "title": "Rufus-Air: An Open LLM Post-Training Recipe",
+      "abstract": "Rufus-Air is an open and reproducible post-training recipe on GLM-4.5-Air-Base (106B-A12B), organized as a serial pipeline of eight stages: SFT, Reasoning RL, Coding RL, Instruction-Following RL, General Agent, Coding Agent, Search Agent, and RLHF. We document the data, reward design, infrastructure, stage order, and stagewise results needed to reproduce the recipe. Stages progress from basic to advanced capabilities and from hard, verifiable rewards to softer judge-based signals. Training builds on open-source components and public data, much of it used as released, without new human annotation or an in-house distillation teacher. Our main findings are that (i) diverse, high-quality SFT establishes a strong capability floor; (ii) difficulty filtering keeps RL prompts within a productive learning range; (iii) reward reliability provides a practical principle for ordering stages; and (iv) infrastructure and engineering choices are part of the recipe, not just an implementation detail. Rufus-Air improves over the official GLM-4.5-Air post-trained release and is competitive with similarly sized open models.",
+      "authors": [
+        "Chia-Yuan Chang",
+        "Renyuan Cheng",
+        "Rui Feng",
+        "Xiaotian Han",
+        "Yuan He",
+        "Hongye Jin",
+        "Linwei Li",
+        "Shiyang Li",
+        "Fenglin Liu",
+        "Xin Liu",
+        "Priyanka Nigam",
+        "Haoyang Wen",
+        "Zhenghao Xu",
+        "Zhuocheng Xu",
+        "Bing Yin",
+        "Qingyu Yin",
+        "Chao Zhang",
+        "Rongzhi Zhang",
+        "Zhihan Zhang",
+        "Zixuan Zhang",
+        "Zixuan Zhang",
+        "Tuo Zhao"
+      ],
+      "published": "2026-09-24",
+      "updated": "2026-09-25",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "48 pages, 9 figures, 20 tables. Authors are listed alphabetically by surname; all contributed while at Amazon. The two authors named Zixuan Zhang are different people",
+      "abs_url": "https://arxiv.org/abs/2609.29421",
+      "pdf_url": "https://arxiv.org/pdf/2609.29421v2",
+      "hf_upvotes": 37,
+      "hf_url": "https://huggingface.co/papers/2609.29421",
+      "organization": "Amazon",
+      "hf_published": "2026-09-24",
+      "hf_featured": "2026-09-25",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 17.5,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 10.458,
+      "score_breakdown": {
+        "keyword_raw": 14,
+        "keyword_matched": [
+          "llm",
+          "post-training",
+          "sft",
+          "rlhf",
+          "reasoning",
+          "distillation"
+        ],
+        "category": 3.5,
+        "popularity": 6.08,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Chia-Yuan Chang, Renyuan Cheng, Rui Feng, Xiaotian Han, Yuan He, Hongye Jin 等 22 人",
+      "heat_label": "🔥 HF 37 赞"
+    },
+    {
+      "arxiv_id": "2609.29429",
+      "title": "Just Ask Jev: Reinforcement Learning for Calibrated Decisions as a Zero-Shot Detector of AI Alignment Failures",
+      "abstract": "Detectors of alignment failures screen deployed language models and score alignment benchmarks. Most are generative judges that spend a decoding pass on every criterion, and classifiers that read token probabilities, such as Llama Guard, still score one fixed label per call. Jev, a model trained with reinforcement learning for calibrated decisions (RLCD), answers many typed questions about one input with calibrated probabilities in a single call. Whether it detects alignment failures has not been measured. We present RLCDAlignBench, which benchmarks Jev on ten alignment failures: sycophancy, jailbreaks, deception, prompt injection, hallucination, privacy violation, social bias, reward hacking, concealing uncertainty, and power seeking. It spans 44 benchmarks and five target models, labelled by each benchmark's scorer and, on two, by humans. Many of these failures are relational, defined against a reference, such as the user's belief or an injected instruction, that the response alone does not reveal. Our key idea is therefore to vary what Jev is asked separately from what it sees: the question's wording and answer type on one side, the fields of the input on the other. A single generic question reaches a median AUROC of 0.886 zero-shot and beats supervised baselines on most benchmarks. Question wording matters little, while context matters more, mostly through fields that encode the label. Jev matches the reference scorer's agreement with human labels, surfaces label defects in existing benchmarks, and costs 63x less than LLM-judge scorers. Code and data: https://github.com/sumleo/RLCDAlignBench.",
+      "authors": [
+        "Ruoqi Guo",
+        "Yi Liu",
+        "Gelei Deng",
+        "Yuekang Li",
+        "Lida Zhao",
+        "Yutao Wu",
+        "Simin Chen",
+        "Ying Zhang",
+        "Leo Yu Zhang"
+      ],
+      "published": "2026-09-24",
+      "updated": "2026-09-24",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CR"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.29429",
+      "pdf_url": "https://arxiv.org/pdf/2609.29429v1",
+      "hf_upvotes": 23,
+      "hf_url": "https://huggingface.co/papers/2609.29429",
+      "github_repo": "https://github.com/sumleo/RLCDAlignBench",
+      "github_repo_source": "hf",
+      "github_stars": 21,
+      "project_page": "https://sumleo.github.io/RLCDAlignBench/",
+      "hf_published": "2026-09-24",
+      "hf_featured": "2026-09-25",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 13.75,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 10.233,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "llm",
+          "alignment",
+          "decoding",
+          "hallucination",
+          "prompt",
+          "llama"
+        ],
+        "category": 1.75,
+        "popularity": 4.8,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Ruoqi Guo, Yi Liu, Gelei Deng, Yuekang Li, Lida Zhao, Yutao Wu 等 9 人",
+      "heat_label": "🔥 HF 23 赞 ｜ 💻 [代码](https://github.com/sumleo/RLCDAlignBench)"
+    },
+    {
+      "arxiv_id": "2609.32444",
+      "title": "Rethinking Training-Inference Mismatch in LLM Reinforcement Learning: Where It Arises and How to Correct It",
+      "abstract": "We study training-inference mismatch in reinforcement learning with verifiable rewards (RLVR) for large language models, where rollouts are sampled by an inference engine while gradients are computed by a training engine, and the two engines assign different probabilities to the same tokens. To account for this discrepancy in policy updates, we introduce calibrated importance sampling (CIS). CIS is motivated by an empirically supported logit-displacement characterization that expresses the mismatch as an additive displacement varepsilon_t in log-odds, determined by the per-logit perturbation before the softmax, whose distribution is approximately invariant to token confidence. This characterization motivates a confidence-aware truncation: large positive displacements are truncated at a single constant threshold, which maps back to an importance-ratio cap that tightens as token confidence increases. Theoretically, we show that CIS replaces the unbounded second moment that governs the error of exact importance sampling with a term bounded by a constant, at the cost of a bias controlled by the truncated excess. In evaluation across three mixture-of-experts models and five mathematical reasoning benchmarks, CIS achieves the highest five-benchmark average on all three models among the evaluated baselines. Diagnostic analyses show that CIS places less truncation bias on low-confidence tokens than truncated importance sampling, while upward clipping of small importance weights reduces held-out accuracy.",
+      "authors": [
+        "Tianrun Yu",
+        "Kaixiang Zhao",
+        "Shangzhe Li",
+        "Yuxiao Yang",
+        "Porter Jenkins",
+        "Weitong Zhang",
+        "Taylor W. Killian"
+      ],
+      "published": "2026-09-26",
+      "updated": "2026-09-26",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "32 pages. Code: https://github.com/kzhao5/CIS-RL",
+      "abs_url": "https://arxiv.org/abs/2609.32444",
+      "pdf_url": "https://arxiv.org/pdf/2609.32444v1",
+      "hf_upvotes": 26,
+      "hf_url": "https://huggingface.co/papers/2609.32444",
+      "github_repo": "https://github.com/kzhao5/CIS-RL",
+      "github_repo_source": "hf",
+      "github_stars": 4,
+      "project_page": "https://kzhao5.github.io/CIS-website/",
+      "hf_published": "2026-09-26",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 12.5,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 10.224,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "llm",
+          "rlvr",
+          "reasoning",
+          "mixture-of-experts",
+          "inference"
+        ],
+        "category": 1.5,
+        "popularity": 5.1,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Tianrun Yu, Kaixiang Zhao, Shangzhe Li, Yuxiao Yang, Porter Jenkins, Weitong Zhang 等 7 人",
+      "heat_label": "🔥 HF 26 赞 ｜ 💻 [代码](https://github.com/kzhao5/CIS-RL)"
+    },
+    {
+      "arxiv_id": "2609.38827",
+      "title": "More Choices, Fewer Decisions: Ordinal-Scale Bias in JEV-like Direct-Decision Models",
+      "abstract": "Direct-decision models turn text into low-latency structured labels and scores, making them attractive for classification and automatic evaluation. Yet reliability requires more than accuracy: a model must also use the ordinal decision scale supplied by the user faithfully. We analyze JEV~1.13 and three open KEV models. Our investigation begins with ANLI, where JEV assigns 38.8\\% of all predictions and 51.3\\% of errors to Neutral despite 74.95\\% accuracy, nearly balanced gold labels, and balanced candidate positions. Across 36 ordinal datasets, final decisions use only 67--76\\% of the effective gold support, versus 87--102\\% on four nominal tasks. Randomizing candidate order weakens but does not remove this compression. Holding items and source scores fixed while balancing gold support and positions, we refine scales from K=2 to 14; utilization falls for every model and reaches 26--75\\% at K=14, although candidate probabilities remain broad for most models. Targeted BA-LoRA post-training raises gold-relative utilization from roughly 47\\% to 86\\% on eight supervised scales at both KEV sizes, showing that the compression is learned and modifiable rather than an immutable architectural limit. We call this ordinal scale-utilization bias: decision-stage candidate-space compression distinct from accuracy, gold imbalance, fixed position, and candidate count alone. The code and data are available at https://github.com/Glax147/jev_ordinal_scale_bia",
+      "authors": [
+        "Tianxiang Gao",
+        "Jinzhe Li",
+        "Zhiyuan Li",
+        "Yi Chang",
+        "Yuan Wu"
+      ],
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.38827",
+      "pdf_url": "https://arxiv.org/pdf/2609.38827v1",
+      "hf_upvotes": 51,
+      "hf_url": "https://huggingface.co/papers/2609.38827",
+      "github_repo": "https://github.com/Glax147/jev_ordinal_scale_bia",
+      "github_repo_source": "hf",
+      "github_stars": 3,
+      "organization": "Jilin University",
+      "hf_published": "2026-09-30",
+      "hf_featured": "2026-10-01",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 10.079,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "post-training",
+          "lora"
+        ],
+        "category": 0.75,
+        "popularity": 7.14,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Tianxiang Gao, Jinzhe Li, Zhiyuan Li, Yi Chang, Yuan Wu",
+      "heat_label": "🔥 HF 51 赞 ｜ 💻 [代码](https://github.com/Glax147/jev_ordinal_scale_bia)"
+    },
+    {
+      "arxiv_id": "2609.34327",
+      "title": "Knowing When Thinking Is Not Enough: Teaching Small Reasoning Models to Reason Beyond Their Parametric Knowledge",
+      "abstract": "Scaling test-time computation is a powerful way to improve language-model reasoning, and is particularly appealing for small reasoning models (sRMs) that are cheap to serve. However, is additional thinking always the right operation? By intervening at intermediate reasoning states across two model families and multiple scales, we find that self-refinement largely consolidates probability mass onto solutions already reachable from the current state, rather than making new ones reachable. These interventions reveal two failure regimes: execution bottlenecks, where the correct path is reachable and reflection can recover it, and knowledge bottlenecks, where relevant external information makes it reachable. Motivated by this distinction, we introduce FlyBy, a selective querying framework, and train 4B and 8B variants to reason first, diagnose what remains unresolved, and, at a knowledge bottleneck, query stronger models whose parametric knowledge extends beyond its own. Supervised fine-tuning bootstraps a multi-depth query action, and cost-aware reinforcement learning calibrates whether to query, what to ask, and how much to spend. On 1,158 hard problems across six benchmarks, FlyBy-4B achieves 45.96% pass@8, surpassing Qwen3-14B (41.64%) at 2.7 times lower serving cost, while also exceeding Qwen3-8B in pass@1 (16.85% vs. 15.31%). Scaling to FlyBy-8B further improves pass@8 to 51.81%.",
+      "authors": [
+        "Chanuk Lee",
+        "Minki Kang",
+        "Sangwoo Park",
+        "Woongyeong Yeo",
+        "Jinheon Baek",
+        "Sung Ju Hwang"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": "preprint",
+      "abs_url": "https://arxiv.org/abs/2609.34327",
+      "pdf_url": "https://arxiv.org/pdf/2609.34327v1",
+      "hf_upvotes": 40,
+      "hf_url": "https://huggingface.co/papers/2609.34327",
+      "github_repo": "https://github.com/tally0818/FlyBy",
+      "github_repo_source": "hf",
+      "github_stars": 5,
+      "organization": "KAIST AI",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 6.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 9.512,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "reasoning",
+          "fine-tuning",
+          "test-time"
+        ],
+        "category": 1.75,
+        "popularity": 6.32,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Chanuk Lee, Minki Kang, Sangwoo Park, Woongyeong Yeo, Jinheon Baek, Sung Ju Hwang",
+      "heat_label": "🔥 HF 40 赞 ｜ 💻 [代码](https://github.com/tally0818/FlyBy)"
+    },
+    {
+      "arxiv_id": "2609.36651",
+      "title": "FocusVTC: Efficient and High-Performance Visual Text Compression with Adaptive Resolution",
+      "abstract": "Long-context reasoning in large language models incurs substantial computation and memory costs. Visual text compression (VTC) reduces input length by rendering text as images, but fixed-resolution rendering creates a compression-performance trade-off: low DPI saves tokens at the expense of legibility, whereas high DPI spends tokens on irrelevant content. We introduce FocusVTC, which breaks this trade-off through adaptive resolution while preserving general multimodal capabilities. It combines compressed low-DPI global views with selective region enhancement, integrating enhanced views into ongoing reasoning. We construct 29.4K high-quality Reasoning-Evidence Localization (REL) chain-of-thought examples (REL-CoT) that link reasoning traces to page indices and bounding boxes. Multi-resolution REL supervised fine-tuning (REL-SFT) teaches the model to localize relevant regions, and Group Relative Policy Optimization learns when to enhance resolution and how to use the resulting observations, without a separate continual-pretraining stage. At 72 DPI on RULER v1, FocusVTC scores 87.4 at 2.9times input compression, including tool observations, versus 57.5 for Glyph at 3.0times input compression. It surpasses its text-input backbone on LongBench (56.40 versus 55.86), improves the MRCR macro-average by 13.91 points, and achieves a 51.19 macro-average on VTCBench. The MRCR latency evaluation also shows a 2.79times online end-to-end speedup over Text. General multimodal capabilities are preserved, with MMMU increasing from 65.12 to 66.73 and MME from 2424.02 to 2457.62.",
+      "authors": [
+        "FangZhi Zhong",
+        "Xuerui Qiu",
+        "Yuqi Pan",
+        "Ya Liu",
+        "Shaowei Gu",
+        "Bo Xu",
+        "Guoqi Li"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "23 pages, 10 figures. Code: https://github.com/fangzhi-zhong/FoucsVTC",
+      "abs_url": "https://arxiv.org/abs/2609.36651",
+      "pdf_url": "https://arxiv.org/pdf/2609.36651v1",
+      "hf_upvotes": 23,
+      "hf_url": "https://huggingface.co/papers/2609.36651",
+      "github_repo": "https://github.com/fangzhi-zhong/FoucsVTC",
+      "github_repo_source": "hf",
+      "github_stars": 3,
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 10.75,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 8.983,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "pretraining",
+          "sft",
+          "chain-of-thought",
+          "reasoning",
+          "fine-tuning"
+        ],
+        "category": 0.75,
+        "popularity": 4.8,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "FangZhi Zhong, Xuerui Qiu, Yuqi Pan, Ya Liu, Shaowei Gu, Bo Xu 等 7 人",
+      "heat_label": "🔥 HF 23 赞 ｜ 💻 [代码](https://github.com/fangzhi-zhong/FoucsVTC)"
+    },
+    {
+      "arxiv_id": "2609.37402",
+      "title": "Routing Should Pay for Itself: Sparse Supervision for Economical LLM Routing",
+      "abstract": "Large language model (LLM) routing reduces serving cost by assigning each query to an appropriate model while preserving response quality. Learning such a router, however, often requires executing multiple candidate models on historical queries to collect query--model quality feedback, creating a nontrivial supervision cost before deployment. Existing work largely focuses on serving-time efficiency, overlooking whether the resulting savings are sufficient to recover this upfront expenditure. We further observe that routing quality often saturates well before all query--model feedback is collected, suggesting that dense supervision can be economically over-provisioned. We propose SaveRouter, a sparse-supervision routing framework that selectively acquires informative model feedback and shares capability information across related queries, while retaining query-level refinement for fine-grained routing. We evaluate routing by jointly accounting for supervision expenditure and subsequent serving-time savings. Across four routing benchmarks, the main setting uses only about 33--41% of available training feedback while maintaining competitive or better routing quality, and reduces the break-even deployment volume by approximately 1.9--9.5 times compared with the fastest conventional router. Further analysis shows that acquiring more supervision is not always economically preferable: the supervision level that minimizes serving cost can differ from the one that achieves the earliest payback. Our code is publicly available at https://github.com/LAMDA-Model-Reuse/SaveRouter.",
+      "authors": [
+        "Guannan Lai",
+        "Gelin Bian",
+        "Hao-Xuan Ma",
+        "Jun-Peng Jiang",
+        "Long Chen",
+        "Jian-Dong Liu",
+        "Zhi-Hao Tan",
+        "Han-Jia Ye"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.37402",
+      "pdf_url": "https://arxiv.org/pdf/2609.37402v1",
+      "hf_upvotes": 13,
+      "hf_url": "https://huggingface.co/papers/2609.37402",
+      "github_repo": "https://github.com/LAMDA-Model-Reuse/SaveRouter",
+      "github_repo_source": "hf",
+      "github_stars": 23,
+      "organization": "SinapisAI",
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 10.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.793,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "large language model",
+          "language model",
+          "llm"
+        ],
+        "category": 0.75,
+        "popularity": 3.61,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Guannan Lai, Gelin Bian, Hao-Xuan Ma, Jun-Peng Jiang, Long Chen, Jian-Dong Liu 等 8 人",
+      "heat_label": "🔥 HF 13 赞 ｜ 💻 [代码](https://github.com/LAMDA-Model-Reuse/SaveRouter)"
+    },
+    {
+      "arxiv_id": "2609.33645",
+      "title": "Pruned CTC for Memory-Efficient Large-Vocabulary ASR Training",
+      "abstract": "Connectionist temporal classification (CTC) naturally supports offline and streaming speech recognition with utterance-level supervision, but conventional implementations materialize frame-by-vocabulary activations in memory, making CTC training with native LLM vocabularies prohibitively memory-intensive. A key observation is that every valid CTC alignment uses only target tokens and blank, and their union across a batch typically forms a small subset of the full vocabulary. We introduce Pruned CTC, which restricts alignment computation to this subset while retaining full-vocabulary normalization. We prove that this vocabulary reduction is exactly equivalent to full-vocabulary CTC in loss and gradients. Head-and-loss activation memory no longer scales linearly with vocabulary size. We further apply finite-beam alignment pruning. Building on Pruned CTC, we develop LLM-CTC, which adapts pretrained LLMs for non-autoregressive ASR while retaining causal attention and native vocabularies, and extend it to bounded-history streaming, avoiding chunk-level speech--text alignments. Experiments show that, with Zipformer-M encoder and 180K vocabulary, Pruned CTC reduces full-step memory by 5.1times with only 17% step-time overhead. Across three corpora, it matches standard CTC accuracy. On GigaSpeech, across six Qwen3 model sizes from 0.6B to 32B, LLM-CTC remains within 7% relative WER of LLM-CE with 7 to 10times faster recognition; when fine-tuning Qwen3-ASR for bounded-history streaming, LLM-CTC remains within 3% relative WER of matched offline models on the test set. Together, these results establish Pruned CTC as a scalable sequence objective for native-vocabulary LLM ASR across offline and streaming settings.",
+      "authors": [
+        "Yifan Yang",
+        "Xiaoyu Yang",
+        "Zengrui Jin",
+        "Xian Shi",
+        "Yuxuan Wang",
+        "Yu Xi",
+        "Ziyang Ma",
+        "Qi Chen",
+        "Ruiyang Xu",
+        "Hui Wang",
+        "Dongchao Yang",
+        "Jin Xu",
+        "Xie Chen"
+      ],
+      "published": "2026-09-27",
+      "updated": "2026-09-29",
+      "primary_category": "eess.AS",
+      "categories": [
+        "eess.AS"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.33645",
+      "pdf_url": "https://arxiv.org/pdf/2609.33645v2",
+      "hf_upvotes": 3,
+      "hf_url": "https://huggingface.co/papers/2609.33645",
+      "github_repo": "https://github.com/yfyeung/PrunedCTC",
+      "github_repo_source": "hf",
+      "github_stars": 42,
+      "organization": "SJTU Cross Media Language Intelligence Lab",
+      "hf_published": "2026-09-27",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 10.0,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 5.732,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "llm",
+          "llms",
+          "alignment",
+          "fine-tuning"
+        ],
+        "category": 0.0,
+        "popularity": 1.73,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Yifan Yang, Xiaoyu Yang, Zengrui Jin, Xian Shi, Yuxuan Wang, Yu Xi 等 13 人",
+      "heat_label": "🔥 HF 3 赞 ｜ 💻 [代码](https://github.com/yfyeung/PrunedCTC)"
+    }
+  ],
+  "rescored_at": "2026-10-02T05:04:17.647612+00:00"
+}

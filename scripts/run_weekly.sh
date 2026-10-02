@@ -7,10 +7,9 @@
 
 set -uo pipefail
 
-# Resolve the repo from this script's own location, so moving the checkout
-# (CluadeProjects -> xxliu1996_githubrepos) needs no edit here.
+# Resolve the repo from this script's own location, so the checkout can live
+# anywhere and be moved without editing anything here.
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-CLAUDE="/Users/xingxingliu/.local/bin/claude"
 LOG_DIR="$ROOT/logs"
 DATE="$(date +%F)"
 LOG="$LOG_DIR/$DATE.log"
@@ -19,15 +18,30 @@ START_EPOCH="$(date +%s)"
 mkdir -p "$LOG_DIR"
 
 # git needs to find its credential helper and the system binaries
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:$HOME/.local/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:${HOME:-$(cd ~ && pwd)}/.local/bin"
 
 # claude reads its login token from the "Claude Code-credentials" keychain item,
 # and the keychain lookup needs USER/LOGNAME set. Without these the run dies
-# with "Not logged in - Please run /login".
-export HOME="${HOME:-/Users/xingxingliu}"
-export USER="${USER:-xingxingliu}"
+# with "Not logged in - Please run /login". launchd supplies almost nothing, so
+# derive them rather than assuming any particular account.
+export USER="${USER:-$(id -un)}"
+export HOME="${HOME:-$(eval echo "~$USER")}"
 export LOGNAME="${LOGNAME:-$USER}"
-export SHELL="${SHELL:-/bin/zsh}"
+export SHELL="${SHELL:-/bin/bash}"
+
+# Find the Claude Code CLI. CLAUDE_BIN overrides, otherwise look on PATH and
+# then in the usual install locations, since launchd's PATH is minimal.
+CLAUDE="${CLAUDE_BIN:-$(command -v claude 2>/dev/null)}"
+if [ -z "$CLAUDE" ]; then
+  for candidate in "$HOME/.local/bin/claude" "/usr/local/bin/claude" \
+                   "/opt/homebrew/bin/claude" "$HOME/.bun/bin/claude"; do
+    [ -x "$candidate" ] && CLAUDE="$candidate" && break
+  done
+fi
+if [ -z "$CLAUDE" ]; then
+  echo "FATAL: cannot find the claude CLI. Set CLAUDE_BIN=/path/to/claude." >&2
+  exit 1
+fi
 
 {
   echo "==================== $(date '+%F %T %Z') ===================="
@@ -109,6 +123,16 @@ export SHELL="${SHELL:-/bin/zsh}"
     fi
   fi
 
+  # Machine-check the prose against the fetched data before publishing it: the
+  # heat line and the links are the parts a model must not improvise, and --fix
+  # rewrites that one fully-derivable line rather than failing over a typo.
+  if [ "$STATUS" -eq 0 ]; then
+    if ! python3 "$ROOT/scripts/check_report.py" "$DATE" --fix; then
+      echo "FAILED: report.md does not agree with the fetched data"
+      STATUS=1
+    fi
+  fi
+
   # The site is the deliverable, so rebuild it here too rather than trusting the
   # model to have run step 5. Idempotent, so a second build is harmless.
   if ! python3 "$ROOT/scripts/build_site.py"; then
@@ -119,15 +143,17 @@ export SHELL="${SHELL:-/bin/zsh}"
   # ---------------------------------------------------------------------------
   # Optional email digest.
   #
-  # Off until you put a Gmail app password in the keychain yourself:
+  # Off until you set PAPERS_MAIL_FROM / PAPERS_MAIL_TO (or config/local.json)
+  # and put an app password in the keychain yourself:
   #
   #   security add-generic-password -a "$USER" -s AcademicPaperGrabber-smtp \
   #            -w '<16-char app password from myaccount.google.com/apppasswords>'
   #
   # Nothing here ever writes the password to disk or to the log. Without the
-  # keychain item the run just skips this block.
+  # keychain item, or without addresses configured, the run skips this block.
   # ---------------------------------------------------------------------------
-  SMTP_PASS="$(security find-generic-password -a "$USER" -s AcademicPaperGrabber-smtp -w 2>/dev/null)"
+  KEYCHAIN_SERVICE="${PAPERS_KEYCHAIN_SERVICE:-AcademicPaperGrabber-smtp}"
+  SMTP_PASS="$(security find-generic-password -a "$USER" -s "$KEYCHAIN_SERVICE" -w 2>/dev/null)"
   if [ -n "$SMTP_PASS" ] && [ "$STATUS" -eq 0 ]; then
     if SMTP_PASS="$SMTP_PASS" python3 "$ROOT/scripts/send_email.py" --date "$DATE"; then
       echo "email   : sent"
@@ -136,7 +162,7 @@ export SHELL="${SHELL:-/bin/zsh}"
       echo "WARN: email digest failed to send"
     fi
   else
-    [ -z "$SMTP_PASS" ] && echo "email   : skipped (no AcademicPaperGrabber-smtp keychain item)"
+    [ -z "$SMTP_PASS" ] && echo "email   : skipped (no $KEYCHAIN_SERVICE keychain item)"
   fi
 
   # Surface the outcome in Notification Center so a silent failure is visible

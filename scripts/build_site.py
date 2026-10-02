@@ -30,14 +30,21 @@ from datetime import date, datetime, timedelta, timezone
 from email.utils import format_datetime
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import siteconf  # noqa: E402  - needs the path line above
+
 ROOT = Path(__file__).resolve().parent.parent
 REPORTS = ROOT / "reports"
 DOCS = ROOT / "docs"
 CONFIG = ROOT / "config" / "topics.json"
 
-SITE_URL = "https://xxliu1996.github.io/AcademicPaperGrabber"
-SITE_TITLE = "AI 论文周报"
-SITE_TAGLINE = "每周日自动抓取六个方向最近一周的热门论文，每个方向 10 篇，人读的那种周报。"
+# Nothing here is tied to one account: the site URL is derived from the origin
+# remote (a Pages address is a function of owner + repo name), and the title
+# and tagline are overridable. See scripts/siteconf.py.
+_CONF = siteconf.load()
+SITE_URL = _CONF["site_url"]
+SITE_TITLE = _CONF["site_title"]
+SITE_TAGLINE = _CONF["site_tagline"]
 
 # Reports older than this fall off the front page into the archive.
 RECENT_DAYS = 92
@@ -233,10 +240,12 @@ def collect(themes, by_title):
 
         parsed = parse_report(md, by_title)
 
-        # raw/ carries week bounds and how many of the candidates had a
-        # measured heat signal - worth surfacing, since it is the honest
-        # caveat on the whole ranking.
-        week_start, week_end, measured = "", date_dir.name, 0
+        # raw/ carries the week bounds and the per-paper heat signal. The count
+        # has to be taken over the papers the report actually wrote up, not
+        # over the candidate pools - summing the pools reported 121 of 60,
+        # which is worse than no number at all.
+        week_start, week_end = "", date_dir.name
+        heat_by_id = {}
         for slug in themes:
             raw_path = date_dir / "raw" / f"{slug}.json"
             if not raw_path.exists():
@@ -248,7 +257,11 @@ def collect(themes, by_title):
                 continue
             week_start = raw.get("week_start") or week_start
             week_end = raw.get("week_end") or week_end
-            measured += raw.get("measured_heat_count") or 0
+            for paper in raw.get("papers", []):
+                heat_by_id[paper["arxiv_id"]] = paper.get("heat_source", "none")
+
+        cited = dict.fromkeys(re.findall(r"\[arXiv:([^\]]+)\]", md))
+        measured = sum(1 for aid in cited if heat_by_id.get(aid, "none") != "none")
 
         counts = {c["slug"] or c["title"]: len(c["papers"]) for c in parsed["chapters"]}
         total = sum(counts.values())
@@ -419,6 +432,71 @@ def build_report_page(rep, reports, themes):
 {FILTER_JS}
 """
     return shell(f"{rep['title']} · {SITE_TITLE}", body, css_depth=1)
+
+
+def build_standalone(rep, themes):
+    """One self-contained HTML file for reports/<DATE>/report.html.
+
+    The site under docs/ shares a stylesheet and cross-links between weeks;
+    this is the same report as a single file with the CSS inlined and no
+    outbound links, so it can be mailed, archived or opened straight off disk
+    next to its report.md.
+    """
+    parsed = rep["parsed"]
+    blocks = []
+    if parsed["lede_html"]:
+        blocks.append(f'<div class="lede">{parsed["lede_html"]}</div>')
+    if parsed["top_html"]:
+        blocks.append(
+            f'<section class="top"><h2>{html.escape(TOP_HEADING)}</h2>{parsed["top_html"]}</section>'
+        )
+    for chap in parsed["chapters"]:
+        slug = chap["slug"] or ""
+        spec = themes.get(slug, {})
+        accent = spec.get("accent", "#2f6f5e")
+        subtitle = spec.get("subtitle") or ""
+        sub_html = f'<p class="chapter-sub">{html.escape(subtitle)}</p>' if subtitle else ""
+        papers = "".join(
+            f'<section class="paper"><h3><span class="num">{html.escape(p["num"])}</span>'
+            f'{inline(p["name"])}</h3>{render_block(p["lines"])}</section>'
+            for p in chap["papers"]
+        )
+        blocks.append(
+            f'<div class="chapter" style="--accent:{accent}">'
+            f'<h2>{html.escape(chap["title"])}'
+            f'<span class="chapter-n">{len(chap["papers"])} 篇</span></h2>'
+            f'{sub_html}{render_block(chap["preamble"])}{papers}</div>'
+        )
+
+    window = f'{rep["week_start"]} – {rep["week_end"]}' if rep["week_start"] else rep["date"]
+    body = f"""
+<div class="page report">
+  <header class="cover">
+    <h1>{html.escape(rep['title'])}</h1>
+    <div class="meta">
+      <span>{window}</span>
+      <span>{rep['count']} 篇</span>
+      <span>其中 {rep['measured_heat_count']} 篇有实测热度</span>
+    </div>
+  </header>
+  {''.join(blocks)}
+</div>
+"""
+    return f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{html.escape(rep['title'])}</title>
+<style>
+{CSS.strip()}
+</style>
+</head>
+<body>
+{body}
+</body>
+</html>
+"""
 
 
 def build_index(reports, themes):
@@ -687,6 +765,10 @@ def main():
     for rep in reports:
         (DOCS / "r" / f"{rep['slug']}.html").write_text(
             build_report_page(rep, reports, themes), encoding="utf-8"
+        )
+        # the same report as one portable file, next to its own report.md
+        (REPORTS / rep["date"] / "report.html").write_text(
+            build_standalone(rep, themes), encoding="utf-8"
         )
 
     (DOCS / "index.html").write_text(build_index(reports, themes), encoding="utf-8")

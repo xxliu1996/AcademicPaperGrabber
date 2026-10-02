@@ -1,0 +1,1240 @@
+{
+  "generated_at": "2026-10-02T04:46:13.174087+00:00",
+  "theme": "wearable-xr",
+  "theme_title": "智能眼镜 / 可穿戴 / 第一人称视觉",
+  "theme_subtitle": "AR 眼镜、头显交互、egocentric 视觉、可穿戴感知",
+  "accent": "#8a5a2b",
+  "week_start": "2026-09-25",
+  "week_end": "2026-10-01",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 25,
+  "measured_heat_count": 4,
+  "papers": [
+    {
+      "arxiv_id": "2609.37559",
+      "title": "APM-Bench: Benchmarking Cross-session Persistent Memory for Egocentric Streaming Video Assistants",
+      "abstract": "To serve as real-world personal assistants, streaming video models need persistent memory that retains past experiences for later use. Yet existing streaming benchmarks and methods often focus on individual continuous videos or short clips, overlooking that real-world interactions are often intermittent and require memory to persist across interruptions. To fill this gap, we introduce APM-Bench, which reformulates real-world streaming interaction as multi-session life trajectories. It contains 549 sessions, 104 trajectories, and 2,719 candidates, spanning both objective and open-ended questions. Each session is a video with fine-grained annotations, and sessions within a trajectory revolve around related activities. Models then use persistent memory to answer questions about past sessions and provide proactive responses while maintaining real-time interaction. This raises challenges: persistent memory must be storable, selectively retain information, be injected at the right time, and remain efficient. Moreover, finite storage may leave required evidence unavailable, so assistants should recognize missing evidence. Therefore, we systematically evaluate general video models under different memory protocols and diverse specialized streaming memory systems, and test whether models acknowledge insufficient evidence. Our evaluation reveals a clear utility--latency--storage trade-off: existing methods still struggle to simultaneously achieve reliable long-term recall, low overhead, and effective proactive assistance across sessions. APM-Bench provides a comprehensive testbed for developing and comparing persistent memory systems under realistic streaming conditions. We hope it encourages future work that jointly considers utility, latency, and storage toward more practical persistent memory for real-world streaming assistants.",
+      "authors": [
+        "Jianguo Huang",
+        "Jinming Liu",
+        "Qiyao Wang",
+        "Liang Xu",
+        "Jianhang Li",
+        "Zhimian Wen",
+        "Mingda Li",
+        "Shule Lu",
+        "Zhicheng Wang",
+        "Yuhan Guo",
+        "Xin Jin",
+        "Wenjun Zeng"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "33 pages, 11 figures, 15 tables",
+      "abs_url": "https://arxiv.org/abs/2609.37559",
+      "pdf_url": "https://arxiv.org/pdf/2609.37559v1",
+      "hf_upvotes": 36,
+      "hf_url": "https://huggingface.co/papers/2609.37559",
+      "github_repo": "https://github.com/Jianguo-Huang11/APM-Bench",
+      "github_repo_source": "hf",
+      "github_stars": 5,
+      "project_page": "https://jianguo-huang11.github.io/APM-Bench/",
+      "organization": "Shanghai Jiao Tong University",
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf"
+      ],
+      "theme": "wearable-xr",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.588,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "egocentric"
+        ],
+        "category": 0.75,
+        "popularity": 8.15,
+        "stars_counted": 5,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Jianguo Huang, Jinming Liu, Qiyao Wang, Liang Xu, Jianhang Li, Zhimian Wen 等 12 人",
+      "heat_label": "🔥 HF 36 赞 ｜ 💻 [代码](https://github.com/Jianguo-Huang11/APM-Bench)"
+    },
+    {
+      "arxiv_id": "2609.33419",
+      "title": "TT-VidT: Decoupling the Temporal Axis for Efficient Motion-Centric Video Pretraining",
+      "abstract": "Comparisons in video self-supervised learning often evaluate complete training recipes rather than isolating the method itself: architecture, objective, data exposure, schedule, scale, and decoder capacity can all vary at once. This makes it hard to identify which choices yield motion-prioritized representations, whose gains concentrate on frame-to-frame change while retaining useful appearance. We address this with a matched 4 times 6 = 24 architecture-objective study at roughly 170M ~ 190M encoder scale on sim1.7M OpenVid and Moments-in-Time v2 clips for 8 epochs, and propose TT-VidT. TT-VidT combines a DINOv3-initialized ViT-B/16 per-frame spatial path with a compact Temporal Transfer Layer, trained by Diff Compression to reconstruct target frames from a first-frame appearance anchor and frame-specific motion tokens. The sweep shows that TT3D with Diff Compression, not either component alone, enters the strongest motion-sensitive regime, and decoder ablations favor a compact video-pretrained decoder. In final comparison, TT-VidT leads Jester, Something-Something V2, ARID, and Diving48 fine-tuning simultaneously, improving over the strongest non-TT row by 54% ~ 121%, while using 48% fewer encoder FLOPs than DisMo and 55% fewer than VideoMAE or V-JEPA2. HMDB51, IARD, and EPIC-Kitchens bound the claim.",
+      "authors": [
+        "Shih-Ying Yeh",
+        "Daniel Z. Kaplan",
+        "Xuehai Wang",
+        "Fu-En Yang",
+        "Min-Hung Chen",
+        "Shang-Hong Lai"
+      ],
+      "published": "2026-09-27",
+      "updated": "2026-09-29",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted by NeurIPS 2026 main track, Project page: https://kohakublueleaf.github.io/TTVidT/",
+      "abs_url": "https://arxiv.org/abs/2609.33419",
+      "pdf_url": "https://arxiv.org/pdf/2609.33419v2",
+      "hf_upvotes": 18,
+      "hf_url": "https://huggingface.co/papers/2609.33419",
+      "github_repo": "https://github.com/KohakuBlueleaf/TTVidT",
+      "github_repo_source": "hf",
+      "github_stars": 7,
+      "project_page": "https://kohakublueleaf.github.io/TTVidT/",
+      "organization": "NVIDIA",
+      "hf_published": "2026-09-27",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "wearable-xr",
+      "fit": 4.75,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 9.925,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "epic-kitchens"
+        ],
+        "category": 0.75,
+        "popularity": 6.74,
+        "stars_counted": 7,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Shih-Ying Yeh, Daniel Z. Kaplan, Xuehai Wang, Fu-En Yang, Min-Hung Chen, Shang-Hong Lai",
+      "heat_label": "🔥 HF 18 赞 ｜ 💻 [代码](https://github.com/KohakuBlueleaf/TTVidT)"
+    },
+    {
+      "arxiv_id": "2609.35743",
+      "title": "InfiniHand: Streaming World-Space Hand Motion Estimation from Egocentric Video",
+      "abstract": "World-space hand motion estimation from egocentric video requires recovering 3D articulated hand geometry while tracking camera egomotion. Existing approaches heavily rely on cascading independent hand pose estimators and SLAM systems, resulting in error accumulation, complex pipelines, and severe computational overhead. To address these limitations, we present InfiniHand, an end-to-end streaming feed-forward framework that jointly estimates MANO parameters, camera trajectories, and hand locations directly from uncalibrated egocentric video. InfiniHand integrates persistent spatiotemporal memory with hand-centered visual features, explicitly coupling camera motion with local hand geometry within a unified architecture. We train InfiniHand in two progressive stages by first learning robust camera-space hand priors and then extending to streaming world-space reconstruction. To support this process, we aggregate a pretraining corpus of approximately 5,000 hours of egocentric data across multiple public datasets. Extensive evaluations demonstrate that InfiniHand outperforms state-of-the-art baselines on in-domain benchmarks, achieving a 21.4% reduction in ARCTIC PA-p compared to ViDiHand while substantially mitigating world-space drift. Furthermore, InfiniHand generalizes robustly to in-the-wild videos and operates at 11.19 FPS, delivering more than twice the throughput of HaWoR.",
+      "authors": [
+        "Kerui Ren",
+        "Kaiwen Song",
+        "Weiguang Zhao",
+        "Yuxi Wang",
+        "Yufei Liu",
+        "Bo Dai",
+        "Haoyu Guo",
+        "Chunhua Shen",
+        "Mulin Yu",
+        "Tao Lu",
+        "Junting Dong"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Project page: https://infinihand.github.io/",
+      "abs_url": "https://arxiv.org/abs/2609.35743",
+      "pdf_url": "https://arxiv.org/pdf/2609.35743v1",
+      "hf_upvotes": 9,
+      "hf_url": "https://huggingface.co/papers/2609.35743",
+      "github_repo": "https://github.com/infinihand/InfiniHand",
+      "github_repo_source": "hf",
+      "github_stars": 16,
+      "project_page": "https://infinihand.github.io/",
+      "organization": "Shanghai AI Laboratory",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "wearable-xr",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 9.837,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "egocentric"
+        ],
+        "category": 0.75,
+        "popularity": 6.4,
+        "stars_counted": 16,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Kerui Ren, Kaiwen Song, Weiguang Zhao, Yuxi Wang, Yufei Liu, Bo Dai 等 11 人",
+      "heat_label": "🔥 HF 9 赞 ｜ 💻 [代码](https://github.com/infinihand/InfiniHand)"
+    },
+    {
+      "arxiv_id": "2609.31138",
+      "title": "Evaluating the Impact of Adaptive Extended Reality on Human-Robot Interaction Across the Reality-Virtuality Continuum",
+      "abstract": "As populations in developed countries age and labor shortages intensify, Cybernetic Avatars (CAs) are proposed to extend human capabilities through robotic embodiments, requiring effective Human-Robot Interaction (HRI) frameworks. Extended Reality (XR), an umbrella term for Augmented Reality (AR), Augmented Virtuality (AV), and Virtual Reality (VR), offers such interfaces, but prior research typically fixes the XR modality without evaluating its effect on task outcomes. This study examines whether the XR modality impacts HRI performance and whether an adaptive interface adjusting the level of virtuality along the Reality-Virtuality Continuum (RVC) at runtime improves it. A custom XR application interfaced with a mobile manipulator supports immersive control and runtime modality switching. In a within-participant multi-room pick-and-place experiment comparing fixed AR, AV, and VR with dynamic RVC through task metrics, the NASA-TLX, and the System Usability Scale (SUS), this study demonstrates that 1) the fixed reality modality affects HRI results, and 2) dynamically changing the modality along the RVC improves them. AR yielded significantly lower mental demand, effort, and frustration than AV and VR, while the dynamic RVC condition achieved the highest throughput and lowest workload, highlighting the value of adaptive XR interfaces for human-robot symbiosis. The implementation is available at https://github.com/CarlTornberg/XR-HRI.",
+      "authors": [
+        "Carl Tornberg",
+        "Alicia Torck",
+        "Lotfi El Hafi",
+        "Tadahiro Taniguchi"
+      ],
+      "published": "2026-09-25",
+      "updated": "2026-09-25",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.HC"
+      ],
+      "comment": "Submitted to Advanced Robotics, Special Issue on \"Next Generation Cognitive Robotics: Nurturing Embodied Intelligence for a Symbiotic Future with Humans and AI\"",
+      "abs_url": "https://arxiv.org/abs/2609.31138",
+      "pdf_url": "https://arxiv.org/pdf/2609.31138v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/CarlTornberg/XR-HRI",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 21.0,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 6.75,
+      "score_breakdown": {
+        "keyword_raw": 20,
+        "keyword_matched": [
+          "augmented reality",
+          "extended reality",
+          "virtual reality",
+          "xr",
+          "vr",
+          "immersive"
+        ],
+        "category": 1.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Carl Tornberg, Alicia Torck, Lotfi El Hafi, Tadahiro Taniguchi",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/CarlTornberg/XR-HRI)"
+    },
+    {
+      "arxiv_id": "2609.38525",
+      "title": "Beyond Monoscopic Viewing: A Study on 3D Gaussian Splatting Quality in VR",
+      "abstract": "Stereoscopy is fundamental to virtual reality (VR), providing depth perception through binocular viewing. Recent advances in 3D Gaussian Splatting (3DGS) enable high-quality novel view synthesis, making it well suited to immersive VR. We render 3DGS reconstructions stereoscopically and evaluate them in a head-mounted display, replicating how they would actually be viewed in VR. Real-world capture provides only a limited number of views, and under this constraint 3DGS reconstruction often produces localized floaters and misplaced structures. Standard metrics miss these localized artifacts, which become salient under stereoscopic viewing, where geometry is placed at the wrong depth. We investigate whether standard image-quality evaluation reflects the perceptual quality of 3DGS reconstructions under reduced capture. We compare SfM-only baseline with a union initialization that combines SfM with a dense VGGT network. All other training components are held fixed, isolating the effect of initialization coverage. We conduct a user study comparing preferences under monoscopic and stereoscopic HMD viewing, and test whether image-quality metrics predict the observed preferences. Monoscopically, preference for the more consistent reconstruction is weak, reaching 58.4\\% overall. Stereoscopically, the same preference rises to 78.2\\% and is consistent across all participants, while image-quality metrics (PSNR, SSIM and LPIPS) and stereo-aware metrics (iSQoe and StereoQA) show only modest differences and fail to penalize them. Our results indicate that monoscopic evaluation and standard image-quality metrics substantially underestimate perceptual artifacts observed in 3DGS reconstructions for VR, making stereoscopic assessment essential for 3DGS quality evaluation in VR.",
+      "authors": [
+        "Shreyas Shivakumara",
+        "Gabriel Eilertsen",
+        "Karljohan Lundin Palmerius"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": "12 pages",
+      "abs_url": "https://arxiv.org/abs/2609.38525",
+      "pdf_url": "https://arxiv.org/pdf/2609.38525v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 18.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.5,
+      "score_breakdown": {
+        "keyword_raw": 16,
+        "keyword_matched": [
+          "head-mounted",
+          "hmd",
+          "virtual reality",
+          "vr",
+          "immersive"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Shreyas Shivakumara, Gabriel Eilertsen, Karljohan Lundin Palmerius",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.40195",
+      "title": "MemLife: Curating and Reasoning over Long-Term Egocentric Video Memories",
+      "abstract": "Long-term egocentric video enables personalized AI assistants to reason about daily life. However, as video histories grow to hundreds of hours spanning months or years, reprocessing raw clips for every query becomes computationally prohibitive. Memory systems offer a scalable alternative by compacting videos into text representations, but often fail on practical benchmarks: either the memory does not preserve key evidence, or the retriever fails to locate relevant entries due to retrieval competition in growing search spaces. To address these challenges, we introduce MemLife, a multimodal memory system that constructs entity-grounded, first-person text episodes and retrieves them via a time-indexed agentic reader. Without training or query-time video access, MemLife improves over the strongest training-free baseline by 4.6--12.0% across four long-horizon benchmarks. To further improve memory quality, we propose MemOpt, a reinforcement learning framework that optimizes the memory writer to produce faithful, informative, and retrievable memories. MemOpt consistently improves MemLife by 2.7--5.0% across different video and question distributions, with gains that generalize across writer and reader backbones and memory systems.",
+      "authors": [
+        "Guangzhi Xiong",
+        "Xinyuan Zhang",
+        "Xiao Yang",
+        "Hyokun Yun",
+        "Kai Zhang",
+        "Shiun-Zu Kuo",
+        "Hyeonjeong Ha",
+        "Xilun Chen",
+        "Kai Sun",
+        "Lucas Liang",
+        "Guangqiang Dong",
+        "Ejaz Ahmed",
+        "Ahmed A Aly",
+        "Anuj Kumar",
+        "Raffay Hamid",
+        "Aidong Zhang",
+        "Xin Luna Dong"
+      ],
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.40195",
+      "pdf_url": "https://arxiv.org/pdf/2609.40195v1",
+      "hf_upvotes": 2,
+      "hf_url": "https://huggingface.co/papers/2609.40195",
+      "organization": "Meta",
+      "hf_published": "2026-09-30",
+      "hf_featured": "2026-10-01",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 10.5,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 4.039,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "egocentric",
+          "first-person"
+        ],
+        "category": 1.5,
+        "popularity": 1.41,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Guangzhi Xiong, Xinyuan Zhang, Xiao Yang, Hyokun Yun, Kai Zhang, Shiun-Zu Kuo 等 17 人",
+      "heat_label": "🔥 HF 2 赞"
+    },
+    {
+      "arxiv_id": "2610.00922",
+      "title": "EyeTAG: Eye Trajectory-Aware Gaze Estimation",
+      "abstract": "Gaze estimation under natural head-eye motion underpins applications from driver monitoring to human-computer interaction. Single-frame methods predict each frame independently, so consecutive outputs fluctuate as jitter. Multi-frame methods reduce this, but they learn motion implicitly inside appearance features, so the gaze trajectory is never an explicit variable. We propose EyeTAG (Eye Trajectory-Aware Gaze Estimation), a causal multi-frame framework built around an explicit first-order gaze prior: at each step it differentiates its own recent predictions and feeds the resulting trajectory back as a compact kinematic token. Because differencing is translation-invariant in gaze space, this token carries subject-invariant motion rather than personal gaze offsets. Face and eye streams supply visual evidence, fused by cross-attention and a causal Transformer decoder. EyeTAG reduces the mean angular error by about 1.0$^\\circ$ on Gaze360 and performs on par with the strongest baseline on EVE (2.56$^\\circ$ vs. 2.58$^\\circ$). Within-model ablations, which keep the encoder and the rest of the architecture fixed and vary only the gaze history, show that the differential formulation, rather than temporal context alone, removes the systematic saccade bias that persists even with an absolute gaze-history prior. Our code is available at https://github.com/peter8366/EyeTAG.",
+      "authors": [
+        "Jungmin Lee",
+        "Niamat Ullah",
+        "Yoseob Han"
+      ],
+      "published": "2026-10-01",
+      "updated": "2026-10-01",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "Accepted to BMVC 2026",
+      "abs_url": "https://arxiv.org/abs/2610.00922",
+      "pdf_url": "https://arxiv.org/pdf/2610.00922v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/peter8366/EyeTAG",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.769,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "gaze",
+          "human-computer interaction"
+        ],
+        "category": 0.75,
+        "popularity": 0.83,
+        "stars_counted": 1,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 1,
+      "heat_source": "none",
+      "authors_display": "Jungmin Lee, Niamat Ullah, Yoseob Han",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/peter8366/EyeTAG)"
+    },
+    {
+      "arxiv_id": "2609.34978",
+      "title": "One Sensor, Whole Body - 3D Body Pose from a Single Consumer Earbud IMU",
+      "abstract": "Consumer earbuds already stream inertial motion data from the head, one of the most widely worn sensor locations on the body. We ask how much of the 3D body pose a single such head IMU can recover, and whether adding more consumer sensors actually helps. We build a multimodal capture pipeline that records four-view RGB-D video together with an AirPods head IMU and two Striv insole IMUs, synchronize the streams post-hoc, and generate pseudo-ground-truth with SAM 3D Body, yielding a 35-take single-subject benchmark spanning gait, turning, vertical, everyday, and clinically inspired motions. Adapting two recurrent model families (IMUPoser and MobilePoser), we show that one head IMU recovers lower-body pose at 79.0 mm rigid-MPJPE and per-foot ground contact at 0.809 macro-F1, and that a causal variant retains most of this accuracy at streaming latency. In paired per-take significance tests across both families, adding the consumer foot IMUs never significantly improves pose and significantly degrades it in two of four model-split combinations; a mounting-bias probe and feet-only ablation identify insole orientation quality, not foot placement, as the mechanism. Extending the output to a 20-joint full-body skeleton maps the boundary: gross distal-arm motion is partially recoverable from the head alone, proximal upper-body pose is not, and staged fine-tuning recovers the leg accuracy that naive joint training sacrifices to multi-task dilution. For learned pose from consumer wearables, sensor reliability, not sensor count, is the binding constraint here. For the devices tested, the earbud is its sweet spot. Code is available at https://github.com/ZhilinGuo/one-sensor-whole-body.",
+      "authors": [
+        "Zhilin Guo",
+        "Boqiao Zhang",
+        "Oszkár Urbán",
+        "Josef Bengtson",
+        "Hakan Aktas",
+        "Wenzhao Li",
+        "Siyu Hong",
+        "Kyle Fogarty",
+        "Chenliang Zhou",
+        "Ali Senguel",
+        "Cengiz Oztireli"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.HC"
+      ],
+      "comment": "5 pages, 2 figures, 2 tables. Accepted at the 6th International Workshop on Human-centric Multimedia Analysis (HUMA '26), ACM Multimedia 2026, Rio de Janeiro, Brazil. Code: https://github.com/ZhilinGuo/one-sensor-whole-body",
+      "abs_url": "https://arxiv.org/abs/2609.34978",
+      "pdf_url": "https://arxiv.org/pdf/2609.34978v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/ZhilinGuo/one-sensor-whole-body",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 7.75,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 3.438,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "wearables",
+          "imu"
+        ],
+        "category": 1.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Zhilin Guo, Boqiao Zhang, Oszkár Urbán, Josef Bengtson, Hakan Aktas, Wenzhao Li 等 11 人",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/ZhilinGuo/one-sensor-whole-body)"
+    },
+    {
+      "arxiv_id": "2609.31117",
+      "title": "Comparative Evaluation of an XR Pen-based Control Interface for Semi-Autonomous Mobile Robot Navigation in Service Environments",
+      "abstract": "Service robots remain difficult to deploy in domestic environments, partly because fully autonomous operation is not yet reliable in unpredictable surroundings, and partly because conventional control methods remain inaccessible to novice users. Extended Reality (XR) enables operators to visualize robot information overlaid onto the real world and to interact with augmented elements. Yet, common XR control methods, such as motion controllers and hand gestures, are still perceived as unintuitive. This paper presents a control interface that uses a commercial XR pen to command a semi-autonomous mobile robot in Augmented Reality (AR): the operator points at a position in the room, selects it, and drags an augmented arrow to set the desired orientation of the robot at this destination. Two additional interfaces, based on the XR motion controllers and hand gestures, were developed within the same framework. To assess the performance and users' perception of these interfaces, and of the XR pen in particular, a study with 10 participants compared four control methods, i.e., the XR pen, the XR motion controllers, hand gestures, and a computer-based baseline RViz, in navigation tasks performed in a home-like environment. Results show that the XR pen significantly outperforms the other methods in task selection time with the most consistent selections, and that the XR motion controllers obtain the best perceived workload and usability scores, ahead of the computer-based baseline, supporting XR-based control as an intuitive alternative for novice users. However, technical limitations in the integration of the recently released XR pen currently hold back its user experience.",
+      "authors": [
+        "Alicia Torc",
+        "Carl Tornberg",
+        "Eric Piette",
+        "Renaud Ronsse",
+        "Benoit Macq",
+        "Gustavo Alfonso Garcia Ricardez",
+        "Lotfi El Hafi",
+        "Tadahiro Taniguchi"
+      ],
+      "published": "2026-09-25",
+      "updated": "2026-09-25",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.HC"
+      ],
+      "comment": "Submitted for presentation at the 2027 IEEE/SICE International Symposium on System Integration (SII), Kobe, Japan",
+      "abs_url": "https://arxiv.org/abs/2609.31117",
+      "pdf_url": "https://arxiv.org/pdf/2609.31117v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 13.0,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 3.25,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "augmented reality",
+          "extended reality",
+          "xr"
+        ],
+        "category": 1.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Alicia Torc, Carl Tornberg, Eric Piette, Renaud Ronsse, Benoit Macq, Gustavo Alfonso Garcia Ricardez 等 8 人",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.34817",
+      "title": "ESTHER: Egocentric Stereo Hand Estimation and Reconstruction in the Wild",
+      "abstract": "Human dexterity is guided by two eyes watching two hands: binocular vision supplies the metric 3D structure that fine-grained manipulation consumes. Egocentric stereo is therefore the natural perceptual interface for robots, AR, and VR-yet metric 3D hand reconstruction from this very signal still has neither an end-to-end model nor an in-the-wild benchmark. We propose ESTHER, a model whose stereo geometry, temporal reasoning, and output representation are designed for wearable egocentric stereo. It is trained on pseudo-labels from a calibrated labeling pipeline and in turn assembles our benchmark ESTHER3D, an egocentric stereo hand dataset pairing a large in-the-wild training set of model-generated labels with a motion capture test set of true metric ground truth. Experiments show state-of-the-art accu?racy, superior external generalization, and robustness to the missing views, dropped frames, and lighting and motion blur extremes of real egocentric capture that break existing meth?ods. This robustness runs deeper than graceful degradation: stereo guidance teaches the model to bind apparent hand scale to metric depth, so it not only adapts to different stereo rigs and modalities with minimal fine-tuning, but more strikingly preserves true metric scale even after collapsing to a single monocular view.",
+      "authors": [
+        "Hongyu Ma",
+        "Hairong Qu",
+        "Shiqi Zhao",
+        "Yongsong Yang",
+        "Peng Yin"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.34817",
+      "pdf_url": "https://arxiv.org/pdf/2609.34817v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 12.5,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 3.125,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "vr",
+          "egocentric",
+          "wearable"
+        ],
+        "category": 1.5,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Hongyu Ma, Hairong Qu, Shiqi Zhao, Yongsong Yang, Peng Yin",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.30981",
+      "title": "STORM-Bench: Evaluating Online Video QA under Evolving and Incomplete Evidence",
+      "abstract": "Reliable online video question answering requires tracking state transitions while selectively abstaining when visual evidence is insufficient. Existing benchmarks focus on static recognition or long-range retrieval, rarely evaluating these coupled capabilities under evolving and incomplete evidence. We present STORM-Bench, comprising 5,736 questions across 630 compact, change-dense episodes spanning five egocentric domains (STORM-Real) and two controlled simulation subsets (STORM-Sim) at 1 FPS. Questions are stratified by a proxy for accumulated change intensity (Low, Medium, High) and query-time answerability (Known, Uncertain). To measure reliability, we introduce STORM-BR, a harmonic metric over joint answer-status correctness that exposes abstention failures masked by aggregate accuracy, alongside STORM-BR-ATTR for uncertainty attribution. Across 14 video LLMs, online accuracy peaks at 60.3\\% (mean 51.7\\%), whereas STORM-BR ranges from 5.7\\% to 35.6\\% (mean 18.8\\%), driven by pervasive overconfidence on uncertain queries. STORM-Bench shows that task accuracy masks these gaps in epistemic reliability and state tracking. Benchmark and code are available at https://github.com/siruzhong/STORM-Bench.",
+      "authors": [
+        "Siru Zhong",
+        "Shenghan Tan",
+        "Rihong Yan",
+        "Xiaohui Lv",
+        "Yuzheng Zhuang",
+        "Shuai Tao",
+        "Wulong Liu",
+        "Haohuan Fu",
+        "Yuxuan Liang"
+      ],
+      "published": "2026-09-25",
+      "updated": "2026-09-25",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "50 pages, 19 figures, 27 tables",
+      "abs_url": "https://arxiv.org/abs/2609.30981",
+      "pdf_url": "https://arxiv.org/pdf/2609.30981v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/siruzhong/STORM-Bench",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 2.938,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "egocentric"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 0,
+      "heat_source": "none",
+      "authors_display": "Siru Zhong, Shenghan Tan, Rihong Yan, Xiaohui Lv, Yuzheng Zhuang, Shuai Tao 等 9 人",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/siruzhong/STORM-Bench)"
+    },
+    {
+      "arxiv_id": "2609.32975",
+      "title": "Exploring the Effects of Olfactory Cues and Ventilation on Teleportation-based Navigation in VR",
+      "abstract": "Spatial cognition supports how people interpret spatial relationships and navigate their surroundings. Although vision plays a dominant role, other sensory modalities, including olfaction, may also contribute under limited visual conditions. This paper investigates the role of olfactory cues in location recognition during virtual reality (VR) navigation. We conducted two formal studies using a wearable olfactory prototype. Study 1 examined whether olfactory cues and ventilation influenced users' recognition of encountered locations during \\HDY{teleportation-} and dash-based navigation. Study 2 extended this investigation to repeated navigation and examined whether ventilation duration influenced recognition performance and user experience across successive movements. Results show that olfactory cues can support recognition of encountered locations during navigation, while ventilation was associated with reduced residual interference and improved usability. However, longer ventilation did not clearly improve recognition accuracy in repeated navigation. These findings suggest the potential of olfactory cues as contextual signals during VR navigation, while also highlighting the importance of scent management for maintaining perceptual clarity and user comfort.",
+      "authors": [
+        "Dongyun Han",
+        "Heecheol Kim",
+        "Siyeon Bak",
+        "Chang-Guen Song",
+        "Sun-Jeong Kim",
+        "Isaac Cho"
+      ],
+      "published": "2026-09-26",
+      "updated": "2026-09-26",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.32975",
+      "pdf_url": "https://arxiv.org/pdf/2609.32975v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 11.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 2.75,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "virtual reality",
+          "vr",
+          "wearable"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Dongyun Han, Heecheol Kim, Siyeon Bak, Chang-Guen Song, Sun-Jeong Kim, Isaac Cho",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.38615",
+      "title": "Exo2EgoHOI: Hand-Object-Interaction Aware Exocentric-to-Egocentric Video Generation",
+      "abstract": "Egocentric videos of human manipulation provide valuable visual experience for embodied intelligence, yet collecting such data at scale is costly. Exocentric-to-egocentric video generation offers a scalable alternative by transforming abundant third-person manipulation videos into first-person observations. However, existing methods often struggle to faithfully preserve demonstrated hand-object interactions (HOI) across large viewpoint changes due to insufficient fine-grained interaction guidance and weak object-centric anchoring. We present Exo2EgoHOI, an HOI-aware video generative framework for interaction-preserving exocentric-to-egocentric translation. To preserve fine-grained HOI, we introduce a unified 4D HOI prior that combines scene geometry, articulated hand renderings, and dense hand-object relation fields, together with a dual-branch residual adapter for injecting structural and relational cues into the video generation backbone. To preserve object consistency, we introduce Decomposed Gated Cross-Attention, which separately encodes object and background references and adaptively integrates global semantic and local appearance features as object-centric anchors. Experiments on ARCTIC-HOI and Ego-Exo4D demonstrate substantial improvements in object consistency and HOI preservation while maintaining competitive visual fidelity. In particular, on ARCTIC-HOI, Exo2EgoHOI improves object mIoU by 32.3% and reduces MPJPE and PA-MPJPE by 34.7% and 50.0%, respectively, relative to the respective best baseline results. Project page: https://rcl-robotics.github.io/Exo2EgoHOI/.",
+      "authors": [
+        "Hongjia Zhai",
+        "Xiyu Zhang",
+        "Haoran Zhang",
+        "Zhichao Ye",
+        "Haomin Liu",
+        "Guofeng Zhang",
+        "Ian Reid",
+        "Xingxing Zuo"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "18 pages",
+      "abs_url": "https://arxiv.org/abs/2609.38615",
+      "pdf_url": "https://arxiv.org/pdf/2609.38615v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 10.5,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 2.625,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "egocentric",
+          "first-person"
+        ],
+        "category": 1.5,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Hongjia Zhai, Xiyu Zhang, Haoran Zhang, Zhichao Ye, Haomin Liu, Guofeng Zhang 等 8 人",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2610.01692",
+      "title": "Artifact Annotations Partially Substitute for Per-User Calibration: SAFE-EDA and a Normalization-Controlled Evaluation of Wrist-EDA Affect Recognition",
+      "abstract": "Wrist electrodermal activity (EDA) differs in amplitude from one person to the next, so affect-recognition models normalize their input before classification. Studies that test such models on held-out subjects seldom report where the normalization statistics come from, yet statistics computed from the held-out subject's own recording give the model information that a device does not have when it is first worn. We asked how this choice alters the measured benefit of pretraining. A compact convolutional network, SAFE-EDA, was pretrained on expert artifact annotations from 43 subjects and compared with the same network trained from scratch on the Wearable Stress and Affect Detection (WESAD) dataset (15 subjects, leave-one-subject-out), with two normalization sources crossed with four window hops. When the statistics came only from training subjects, pretraining raised macro-F1 by 0.078 to 0.227; when they came from the held-out user's full recording, the gain fell to between 0.020 and 0.050 and was no longer significant. Artifact supervision was far more useful than self-supervised pretraining on the same recordings (0.078 versus 0.008). Across 13 configurations in two datasets, the pretrained network was better in 12, but on the second dataset (26 subjects) per-user normalization increased the gain instead of reducing it, so the interaction depends on the data. Only five of 50 published WESAD studies state which data were used for normalization. Reporting this choice is necessary to separate first-use performance from performance after calibration.",
+      "authors": [
+        "Haochen Chai",
+        "Xinbi Luo",
+        "Zining Liu",
+        "Fangfang Jiang"
+      ],
+      "published": "2026-10-01",
+      "updated": "2026-10-01",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "eess.SP"
+      ],
+      "comment": "12 pages, 6 figures, 6 tables, plus 2 pages of supplementary material. Code: https://github.com/rtb-1005/SAFE-EDA",
+      "abs_url": "https://arxiv.org/abs/2610.01692",
+      "pdf_url": "https://arxiv.org/pdf/2610.01692v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/rtb-1005/SAFE-EDA",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 4.0,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 2.5,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "wearable"
+        ],
+        "category": 0.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Haochen Chai, Xinbi Luo, Zining Liu, Fangfang Jiang",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/rtb-1005/SAFE-EDA)"
+    },
+    {
+      "arxiv_id": "2610.01056",
+      "title": "HierGF: Hierarchical Gaussian Fields via Geometry-perception Message Passing for Sparse-view 3D Reconstruction",
+      "abstract": "Sparse view 3D reconstruction is an important and common scenario in multimedia applications, such as augmented reality/virtual reality (AR/VR) content creation, cultural heritage digitization, and certain robotic applications, where only a limited number of randomly captured views may be available. However, sparse views contain only limited 3D information, posing two major challenges:1) too few images are available for matching, making it difficult to build multi-view consistency; 2) insufficient view coverage leads to a lack of information in under-sampled regions, resulting in missing parts of object structure. Existing methods mostly still rely on limited reprojection errors and regularization terms, which are prone to overfitting to a single view and inconsistent appearances across views. In geometrically under-sampled regions, they often rely on heuristic density control, lacking reliable guidance and often resulting in blurring and structural holes.To address these issues, this paper proposes Hierarchical Gaussian Fields (HierGF), which revisits sparse-view reconstruction from a hierarchical geometry-perception perspective and converts limited observations into reliable self-generated supervision beyond fixed priors and heuristic density control. In particular, we transform coarse 3D geometric information and additional 2D generative priors into structured pseudo-supervision through a two-stage geometry-perception backbone network, thereby enhancing multi-view consistency with very few input views. In addition, we introduce a learnable confidence network to guide gradients toward cross-view consistent content, and a geometrically consistent densification module to improve the reconstruction of multi-view alignment and under-sampled regions.",
+      "authors": [
+        "Bi'an Du",
+        "Zhimin Zhang",
+        "Daizong Liu",
+        "Baoquan Chen",
+        "Wei Hu"
+      ],
+      "published": "2026-10-01",
+      "updated": "2026-10-01",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "eess.IV"
+      ],
+      "comment": "Accepted to IEEE Transactions on Multimedia (TMM), 2026",
+      "abs_url": "https://arxiv.org/abs/2610.01056",
+      "pdf_url": "https://arxiv.org/pdf/2610.01056v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 9.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 2.438,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "augmented reality",
+          "virtual reality",
+          "vr"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Bi'an Du, Zhimin Zhang, Daizong Liu, Baoquan Chen, Wei Hu",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.38689",
+      "title": "EPIC: Epipolar-Consistent 360° Immersive Stereo Video Generation",
+      "abstract": "Immersive displays can enable rich and diverse virtual experiences. Manually authoring every possible experience to realize this potential, however, is prohibitively expensive, difficult to scale, and impractical. Generative AI models could remove this bottleneck, but today's models are built for conventional displays and cannot generate the high-resolution, stereoscopic $360^\\circ$ content required for immersive viewing. Further, temporal and stereo inconsistencies that may be tolerable on conventional displays can become highly disruptive when viewed through an immersive headset. Here, we address this gap with a zero-shot generative pipeline that extends existing video diffusion models into 4K stereoscopic $360^\\circ$ videos. Inspired from binocular vision and depth perception, we develop an epipolar-aware $360^\\circ$ image matching metric that captures the temporal and stereo geometric inconsistencies across views. We then use this metric as a preference signal for direct preference optimization with limited training data. Our work enables $360^\\circ$ stereo video generation and provides a scalable path for bringing generative content to immersive displays, allowing diverse mixed reality experiences on demand.",
+      "authors": [
+        "Debabrata Mandal",
+        "Dongdong Fu",
+        "Jonathon Miller",
+        "William Villareal",
+        "Xi Peng",
+        "Praneeth Chakravarthula"
+      ],
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.HC"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.38689",
+      "pdf_url": "https://arxiv.org/pdf/2609.38689v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 8.75,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 2.188,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "mixed reality",
+          "immersive"
+        ],
+        "category": 1.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Debabrata Mandal, Dongdong Fu, Jonathon Miller, William Villareal, Xi Peng, Praneeth Chakravarthula",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.38519",
+      "title": "GazeFlow: From Human Gaze Behavior to Generative Egocentric Gaze Prediction",
+      "abstract": "Egocentric gaze prediction enables many downstream applications but remains challenging, as human gaze is inherently stochastic. This stochasticity is constrained by structured temporal dynamics alternating between fixations and saccades, top-down influences from tasks, and bottom-up visual saliency. Based on this observation, we introduce GazeFlow, a framework that directly models gaze as a joint distribution of temporal gaze positions conditioned upon both top-down and bottom-up information. In particular, GazeFlow uses conditional flow matching (CFM): a learned velocity field iteratively transports a Gaussian noise sample into a plausible gaze trajectory drawn from this joint distribution. The velocity field is conditioned on bottom-up visual features extracted by a video encoder and on top-down task information obtained by globally querying these features. On standard datasets, GazeFlow achieves state-of-the-art performance on per-frame metrics, and the generated trajectories align better with human gaze temporal dynamics.",
+      "authors": [
+        "Sheng Zhao",
+        "Weikai Lin",
+        "Yuhao Zhu"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "Accepted at NeurIPS 2026. 25 pages",
+      "abs_url": "https://arxiv.org/abs/2609.38519",
+      "pdf_url": "https://arxiv.org/pdf/2609.38519v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 8.75,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 2.188,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "egocentric",
+          "gaze"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Sheng Zhao, Weikai Lin, Yuhao Zhu",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.34950",
+      "title": "\"Black Mirror?\": Public Sensemaking of AI-Powered Lifelogging",
+      "abstract": "AI-powered lifelogging wearables are emerging as a new class of consumer devices that transform everyday experience into searchable, AI-curated memory archives. We study early public sensemaking around these systems at the moment of their market entry, using the Looki L1 as an empirical lens. Analysing large-scale Chinese-language and English-language social media discourse (N = 5,053 comments), we combine topic clustering with inductive thematic analysis to examine how users interpret the social, moral, and political implications of AI-mediated memory. Across contexts, users reference dystopian surveillance imaginaries, express privacy resignation and bystander concerns, and debate assistive value alongside consumer logics. English-language comments more often framed these devices through interpersonal power, evidentiary use, and hacking anxieties, while Chinese-language comments more often foregrounded labour exploitation, governance surveillance, and technological inevitability.",
+      "authors": [
+        "Ying Ma",
+        "Jarod Govers",
+        "Le Fang",
+        "Shuning Zhang",
+        "Yongquan 'Owen' Hu",
+        "Xin Yi",
+        "Jorge Goncalves"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.34950",
+      "pdf_url": "https://arxiv.org/pdf/2609.34950v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 8.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 2.0,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "wearables",
+          "assistive"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Ying Ma, Jarod Govers, Le Fang, Shuning Zhang, Yongquan 'Owen' Hu, Xin Yi 等 7 人",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.30753",
+      "title": "Skill Profiling with Attributable Reasoning (SPAR): A Wearable Analysis System for Boxing",
+      "abstract": "A punch is a ballistic, full-body action driven by a kinetic chain running from the legs through the trunk to the arm, where a small sequencing error separates a scoring strike from a miss. Wearable sensors can capture this movement in the gym, but most deployable systems only classify which punch was thrown rather than assess how well it was thrown. We present Skill Profiling with Attributable Reasoning (SPAR), an eight-IMU garment and pressure-insole system that classifies each punch as expert or novice and treats an explanation of that prediction as feedback. Feedback is only useful if the person receiving it can act on it, so SPAR explains the prediction at three tiers, a per-joint attribution for the analyst, a counterfactual over kinetic-chain layers for the coach, and a plain-language narrative of the two for the athlete. Across 17 participants and 4,713 punches, SPAR reaches a leave-one-participant-out AUC of 0.842 (95% CI [0.769, 0.907] over participants). A frozen time-series foundation model encodes the joint-angle and plantar-force series, and a small transformer trained on the cohort classifies the encoding. We audit the two quantitative tiers and report six themes from a thematic analysis of interviews with six practicing boxing coaches.",
+      "authors": [
+        "Nibraas Khan",
+        "Hanchen David Wang",
+        "Enya Bullard",
+        "Ritam Ghosh",
+        "Ruj Haan",
+        "Aarav Agrawal",
+        "Meiyi Ma",
+        "Nilanjan Sarkar"
+      ],
+      "published": "2026-09-25",
+      "updated": "2026-09-25",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.30753",
+      "pdf_url": "https://arxiv.org/pdf/2609.30753v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 8.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 2.0,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "wearable",
+          "imu"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Nibraas Khan, Hanchen David Wang, Enya Bullard, Ritam Ghosh, Ruj Haan, Aarav Agrawal 等 8 人",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.30695",
+      "title": "Multi-Objective Human-in-the-Loop Bayesian Optimization of a Lower-Limb Exoskeleton",
+      "abstract": "Human-in-the-loop optimization (HILO) is a common approach for optimizing the control of assistive devices to account for the wearer's unique biomechanics and subjective preferences. However, despite research suggesting that a person may have a different prioritization of objectives depending on time-varying factors such as the environment, their mood, or energy levels, existing HILO approaches only consider a single objective or enforce a fixed weighting on a set of objectives. Neither approach is capable of representing an individual's preferences over objectives. In this work, we propose Multi-Objective Human-in-the-loop Bayesian Optimization (MO-HILBO), which builds on explicit multi-objective Bayesian optimization to efficiently infer a personalized set of Pareto-optimal controllers. We compare our approach with an existing multi-objective HILO method and experimentally demonstrate MO-HILBO on a lower-limb exoskeleton across two objectives: metabolic cost (efficiency) and ordinal human feedback (comfort). We find that MO-HILBO (1) discovers Pareto-optimal controllers, and (2) that the pairwise ordering of points on the Pareto front itself is consistent with validation trials. Lastly, we open-source mohilo, a Python package for running both HILO and MO-HILBO on wearable devices: https://dynamicmobility.github.io/mohilo/.",
+      "authors": [
+        "Neil Janwani",
+        "Matthew T. Lerner",
+        "Aaron J. Young",
+        "Maegan Tucker"
+      ],
+      "published": "2026-09-25",
+      "updated": "2026-09-25",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.HC"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.30695",
+      "pdf_url": "https://arxiv.org/pdf/2609.30695v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 7.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.75,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "wearable",
+          "assistive"
+        ],
+        "category": 1.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Neil Janwani, Matthew T. Lerner, Aaron J. Young, Maegan Tucker",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.32983",
+      "title": "VocalEyes: Speaker-Aware Augmented Reality Captioning through In-Conversation Registration",
+      "abstract": "Co-located augmented reality (AR) captions make speech readable, but they can separate an utterance from the person who produced it. In unfamiliar groups, losing that source complicates immediate responses and later review: users must recover not only what was said, but also who said it. Conventional diarization returns anonymous clusters, while speaker recognition typically assumes pre-meeting enrollment. We built VocalEyes, a speaker-aware AR captioning system that creates named voice profiles from natural self-introductions. The interface coordinates speaker-attributed captions, a fixed profile card, and a visual cue that marks the articulating face. In a controlled within-subjects study with 20 participants who reported typical hearing, VocalEyes identified speakers with 88.0% accuracy and increased participant speaker-tracking accuracy from 47.2% with caption-only AR to 87.3% with the complete interface. Participants also reported lower workload with the complete interface. These findings show how in-conversation registration can preserve speaker attribution across live captions and meeting records in scripted small-group meetings.",
+      "authors": [
+        "Yuxiao Wang",
+        "Xulong Tang",
+        "Chen Chen",
+        "Rawan alghofaili"
+      ],
+      "published": "2026-09-26",
+      "updated": "2026-09-26",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.32983",
+      "pdf_url": "https://arxiv.org/pdf/2609.32983v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.5,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "augmented reality"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Yuxiao Wang, Xulong Tang, Chen Chen, Rawan alghofaili",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2610.01210",
+      "title": "EgoFound3R: End-to-End Egocentric Hand Reconstruction in World Space with Point-Wise Interaction Attributes",
+      "abstract": "Egocentric video has become a primary source of supervision for embodied models, and its value rests on recovering hand motion in world coordinates, which camera motion and hand occlusion make difficult. Existing reconstruction pipelines typically separate hand and scene estimation, leave interaction attributes to separate task-specific models, and invoke several models per video, so no prior reconstruction model estimates these attributes and throughput becomes a practical constraint on large-scale annotation. We therefore introduce EgoFound3R, a unified end-to-end model that estimates world-space hand geometry in a metric scale shared with the scene, and predicts point-wise interaction attributes, including visibility, contact, and distance. The model integrates three designs: (i) structured hand prompts that transfer pretrained geometric priors to world-space hand reconstruction; (ii) an explicit hand representation that decodes hand geometry and interaction attributes; and (iii) a shared-parameter multi-rate design that lowers inference cost. Together, these designs predict hand geometry and point-wise attributes in one pass. On OakInk-v2, TACO, and HOI4D, EgoFound3R reduces the mean per-joint position error (MPJPE) by 43.2%, 22.4%, and 11.6% over previous methods and predicts point-wise contact and distance alongside the geometry in the same pass, while attaining approximately 6x higher throughput.",
+      "authors": [
+        "Hongming Fu",
+        "Jingcheng Shi",
+        "Wenjia Wang",
+        "Binhua Zuo",
+        "Bo Zhao"
+      ],
+      "published": "2026-10-01",
+      "updated": "2026-10-01",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.01210",
+      "pdf_url": "https://arxiv.org/pdf/2610.01210v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 5.75,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 1.438,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "egocentric"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Hongming Fu, Jingcheng Shi, Wenjia Wang, Binhua Zuo, Bo Zhao",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.34149",
+      "title": "Functional Hand Type Prior for 3D Hand Pose Estimation and Action Recognition from Egocentric View Monocular Videos",
+      "abstract": "Current methods for egocentric view action recognition often face challenges in perceiving dynamic hand movements relying solely on geometrical or physical information. In this work, we effectively address this problem by gaining insights into the correlation between functional hand configurations and objects, which improves the detailed interpretation of real-world scenarios. To this end, we introduce a practical taxonomy of hand types based on the functioning perspective and utilize it for per-frame hand type labeling on existing datasets. We also propose a novel hand action recognition framework considering semantic details of the hand type as prior. This approach boosts the network's understanding of the continuous hand interaction throughout the action sequence. Our whole pipeline consists of three main modules: (1) Feature Extraction, (2) Egocentric Knowledge Module, which estimates 3D hand pose, object category, and hand type leveraging short-term cues, and (2) Egocentric Action Module, which aggregates per-frame knowledge, including text embeddings of hand type, over a longer time. In our extensive experiments with large-scale benchmarks, FPHA and H2O, our model outperforms current state-of-the-art methods, demonstrating its superior performance.",
+      "authors": [
+        "Wonseok Roh",
+        "Seung Hyun Lee",
+        "Won Jeong Ryoo",
+        "Jakyung Lee",
+        "Gyeongrok Oh",
+        "Sooyeon Hwang",
+        "Hyung-gun Chi",
+        "Sangpil Kim"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "BMVC 2023 Oral Paper",
+      "abs_url": "https://arxiv.org/abs/2609.34149",
+      "pdf_url": "https://arxiv.org/pdf/2609.34149v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.438,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "egocentric"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Wonseok Roh, Seung Hyun Lee, Won Jeong Ryoo, Jakyung Lee, Gyeongrok Oh, Sooyeon Hwang 等 8 人",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.38932",
+      "title": "EFormer: Temporally Aligned Local Correction for Continuous sEMG-Based Hand Pose Tracking",
+      "abstract": "Surface electromyography (sEMG) provides a wearable, camera-free signal for continuous hand-motion inference. Mapping muscle activity to joint kinematics remains challenging because the recorded waveforms are indirect measurements, their relationship with motion changes over time, and individual anatomy and sensor placement alter the signal distribution. This paper presents EFormer, a residual feature-correction network built on a frozen tracking backbone. EFormer combines a high-rate event branch, temporally aligned local cross-attention, two causal rotary position embedding (RoPE) temporal layers, and a bounded, dynamically gated residual. EFormer receives 16-channel sEMG sampled at 2 kHz and fuses a 64-channel tracking representation at 25 Hz with a 128-channel event representation at 200 Hz. Cross-attention uses a nominal delay of 100 ms, a 300 ms history parameter, and a 50 ms tolerance; its causal mask restricts each query to events occurring 50-400 ms earlier. The correction scale is 0.15. The evaluated continuation-training configuration contains 585,376 trainable parameters and 5,974,508 frozen parameters. On the test set, EFormer achieves an MAE of 0.1546634 rad, an RMSE of 0.24063 rad, and an R^2 of 0.74801, compared with 0.1745326 rad, 0.2715448 rad, and 0.6791103 for the official tracking baseline. EFormer reduces MAE by 11.38% relative to the baseline. The results show that temporally aligned event-feature correction can reduce continuous hand-pose tracking error.",
+      "authors": [
+        "JiaCheng Ge",
+        "SiYu Zhang"
+      ],
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.HC"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.38932",
+      "pdf_url": "https://arxiv.org/pdf/2609.38932v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 5.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.25,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "wearable"
+        ],
+        "category": 1.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "JiaCheng Ge, SiYu Zhang",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.37645",
+      "title": "Beyond Productivity: Measuring Developers' Cognitive Load During GenAI-Supported Software Development",
+      "abstract": "Generative AI (GenAI) is changing software development workflows and how developers work. Industry evaluations of GenAI adoption often monitor productivity gains, usage, and output quality, but limited attention is paid to the interaction experience and cognitive load of the actual adopters and drivers of GenAI technology - the software developers. Understanding whether GenAI changes or shifts developers' cognitive demands during everyday development is important for a developer-centered evaluation of GenAI-supported software development. It can inform organizations in designing and evaluating effective AI-supported workflows. In this work, we study how GenAI use and task context relate to professional developers' perceived cognitive load and whether wearable-derived physiological characteristics provide additional information beyond this context. In a four-day industrial field study at two SAP sites, 21 developers documented their tasks, task duration, GenAI use, and perceived cognitive load while wearing an EmbracePlus wristband. The results show that perceived cognitive load is associated with both GenAI use and task context, while physiological measures provide only limited additional information. These findings suggest that developers' perceived cognitive load during GenAI-supported software development should be evaluated in relation to the concrete work context, with wearable physiological data used as complementary rather than standalone information.",
+      "authors": [
+        "Charlotte Brandebusemeyer",
+        "Daniela Gasser",
+        "Tobias Schimmer",
+        "Bert Arnrich"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.HC"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.37645",
+      "pdf_url": "https://arxiv.org/pdf/2609.37645v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 5.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.25,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "wearable"
+        ],
+        "category": 1.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "authors_display": "Charlotte Brandebusemeyer, Daniela Gasser, Tobias Schimmer, Bert Arnrich",
+      "heat_label": "热度未测得"
+    }
+  ],
+  "rescored_at": "2026-10-02T05:04:17.478483+00:00"
+}

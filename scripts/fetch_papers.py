@@ -36,7 +36,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config" / "topics.json"
 
-UA = "AcademicPaperGrabber/1.0 (+https://github.com/xxliu1996/AcademicPaperGrabber)"
+UA = "AcademicPaperGrabber/1.0 (+https://github.com/topics/academicpapergrabber)"
 HF_API = "https://huggingface.co/api/daily_papers"
 ARXIV_API = "https://export.arxiv.org/api/query"
 GITHUB_API = "https://api.github.com"
@@ -424,16 +424,23 @@ def stars_are_the_paper_s(paper):
     from its own previous version. Those stars measure the other project's
     popularity, so counting them fabricates heat.
 
-    A link Hugging Face's submitter attached is curated and trusted. An
-    abstract-mined link only counts if the repo is named after the paper (the
-    name before the title's colon). This deliberately errs toward
-    under-claiming: a real repo whose name differs from its paper keeps its
-    link in the report and merely loses the score bonus.
+    The check applies to HF-curated links too, which is the opposite of what
+    this code first assumed. Submitters attach the *related* repo just as
+    readily: `MassAlloc Attention` carried a link to `flash-sparse-attention`
+    (765 stars, the baseline it beats), `YuE2` to `YuE` (10.7k, its own
+    previous version), and `LongLive-Plug` to `NVlabs/LongLive` (2.6k, the
+    backbone it plugs into). All three were HF-curated and all three would
+    have shown a star count that is not theirs.
+
+    So a repo only counts when it is named after the paper (the name before
+    the title's colon). That rejects those three and also rejects two honest
+    cases - a repo called `object-permanence` for a paper titled "Training
+    Object Permanence in World Models", for instance. Under-claiming is the
+    right direction to fail: the link still appears in the report, it just
+    stops being quoted as this paper's popularity.
     """
     if not paper.get("github_repo"):
         return False
-    if paper.get("github_repo_source") == "hf":
-        return True
     title = paper.get("title") or ""
     short = title.split(":")[0] if ":" in title else title
     paper_name = _normalize_name(short)
@@ -606,14 +613,39 @@ def route(paper, themes, rank_of, weights, min_affinity, rescue_min, fallback_th
 
 
 def heat_source(paper):
-    """Where this paper's measured heat comes from, if anywhere. Stars only
-    count when the repo is actually the paper's own - see
-    stars_are_the_paper_s."""
-    if (paper.get("hf_upvotes") or 0) > 0:
-        return "hf"
-    if (paper.get("github_stars") or 0) > 0 and stars_are_the_paper_s(paper):
-        return "github"
-    return "none"
+    """Whether this paper has a measured heat signal the report may cite.
+
+    Only HF upvotes qualify. Stars still nudge the score (capped, and only
+    when the repo is the paper's own), but they cannot back a heat claim in
+    the prose: they are a lifetime total rather than this week's attention,
+    and the report does not print them at all. Letting them set this field
+    produced a paper labelled 热度未测得 that was nonetheless eligible for the
+    top-5 block - the label and the gate have to mean the same thing.
+    """
+    return "hf" if (paper.get("hf_upvotes") or 0) > 0 else "none"
+
+
+def heat_label(paper):
+    """The exact string the report prints for this paper's heat.
+
+    Computed here rather than described to the agent that writes the prose,
+    because this is the one line in the report that must not be improvised -
+    an invented or inflated number is the failure mode this whole project has
+    to avoid.
+
+    Star counts are deliberately NOT printed. Even an HF-curated link is
+    routinely the baseline, the backbone or the paper's own previous version,
+    and `LongLive-Plug` pointing at `LongLive` cannot be told apart from a
+    legitimate link by any rule this script could apply. A count that might be
+    someone else's is worse than no count, so the report says only that code
+    exists and links it - the reader can see the stars themselves.
+    """
+    upvotes = paper.get("hf_upvotes") or 0
+    parts = [f"🔥 HF {upvotes} 赞"] if upvotes > 0 else ["热度未测得"]
+    repo = paper.get("github_repo")
+    if repo:
+        parts.append(f"💻 [代码]({repo})")
+    return " ｜ ".join(parts)
 
 
 # --------------------------------------------------------------------------
@@ -663,6 +695,14 @@ def main():
         "paper gets arXiv categories, so routing falls back to keywords only.",
     )
     ap.add_argument("--quiet-stdout", action="store_true", help="do not echo the payload to stdout")
+    ap.add_argument(
+        "--rescore",
+        metavar="DIR",
+        help="recompute scores, heat labels and ordering for the <slug>.json files "
+        "already in DIR, then rewrite them in place. No network at all. Use this "
+        "after changing weights in topics.json so a retune does not cost another "
+        "full fetch - and remember arXiv throttles hard if you refetch repeatedly.",
+    )
     args = ap.parse_args()
 
     shared, themes, claim_order = load_config()
@@ -675,6 +715,10 @@ def main():
     if args.theme and args.theme not in themes:
         sys.exit(f"unknown theme '{args.theme}'; config has: {', '.join(themes)}")
     wanted = [args.theme] if args.theme else claim_order
+
+    if args.rescore:
+        rescore(Path(args.rescore), themes, shared, wanted)
+        return
 
     weights = shared["weights"]
     excludes = shared.get("exclude_title_patterns", [])
@@ -844,6 +888,7 @@ def main():
         papers = sorted(assigned[slug], key=lambda p: (p["score"], p["fit"]), reverse=True)[:emit]
         for paper in papers:
             paper["heat_source"] = heat_source(paper)
+            paper["heat_label"] = heat_label(paper)
             paper["authors_display"] = _authors_display(paper.get("authors") or [])
 
         measured = sum(1 for p in papers if p["heat_source"] != "none")
@@ -889,6 +934,36 @@ def main():
     if thin:
         warn(f"below min_papers: {', '.join(thin)} - treating this run as degraded")
         sys.exit(2)
+
+
+def rescore(outdir, themes, shared, wanted):
+    """Recompute scores and labels for already-fetched JSON, in place.
+
+    Theme ownership is NOT revisited: it depends on keywords and categories,
+    neither of which a weight change touches, and re-routing would need the
+    whole cross-theme pool rather than six already-trimmed top-25 lists.
+    """
+    if not outdir.is_absolute():
+        outdir = ROOT / outdir
+    weights = shared["weights"]
+    for slug in wanted:
+        path = outdir / f"{slug}.json"
+        if not path.exists():
+            warn(f"no {path} to rescore")
+            continue
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        papers = payload.get("papers", [])
+        for paper in papers:
+            total, affinity, breakdown = score_paper(paper, themes[slug], weights)
+            paper["score"], paper["fit"], paper["score_breakdown"] = total, affinity, breakdown
+            paper["heat_source"] = heat_source(paper)
+            paper["heat_label"] = heat_label(paper)
+        papers.sort(key=lambda p: (p["score"], p["fit"]), reverse=True)
+        payload["measured_heat_count"] = sum(1 for p in papers if p["heat_source"] != "none")
+        payload["rescored_at"] = datetime.now(timezone.utc).isoformat()
+        path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        info(f"rescored {path} ({len(papers)} papers, "
+             f"{payload['measured_heat_count']} with measured heat)")
 
 
 def _authors_display(authors, cap=6):

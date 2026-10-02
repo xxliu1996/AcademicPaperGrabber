@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>AI 论文周报</title>
+  <link>https://xxliu1996.github.io/AcademicPaperGrabber/</link>
+  <description>每周自动抓取六个方向最近一周的热门论文，每个方向 10 篇，人读的那种周报。</description>
+  <language>zh-CN</language>
+  <lastBuildDate>Fri, 02 Oct 2026 05:29:48 +0000</lastBuildDate>
+  <item>
+    <title>AI 论文周报（2026-09-25 – 2026-10-01）</title>
+    <link>https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-01.html</link>
+    <guid isPermaLink="true">https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-01.html</guid>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    <description>本周 60 篇里最清晰的信号是 蒸馏与自进化 ：同族 on-policy 蒸馏的缩放定律、把教师当&quot;方向&quot;而非&quot;终点&quot;的表示空间外插、多教师反馈的音量校准、统一多模态模型拿自评当特权信息自蒸馏、代码 Agent 的分组评审信用重分配，一路排到揭露自进化搜索里&quot;出题器与解题器串通作弊&quot;的诊断工作。研究重心明显不在堆更大的模型，而在 把已有能力更省地搬到另一个模型或另一段推理里，同时防住自我改进过程中的指标幻觉 。 第二个高频信号是&quot;harness&quot;这个词本身——Raven 做&quot;harness 的 harness&quot;、Omni-IO 给已有 Agent 外挂全模态手脚、Mid-Harness 在模型与执行层之间插一道动作验证、MaLiang-Harness 把图像生成组织成构建-检查-修订流程，还有机器人侧的递归 harness 蒸馏。共同点是 不碰模型权重，改模型外面那层执行环境 。世界模型这条线也出现了类似的收敛：实证表明收益来自&quot;准备未来&quot;而非&quot;生成未来&quot;，一次前向就够。 两点需要如实说明：机器人方向本周 25 篇候选里有 24 篇拿到了社区投票，数据相当扎实；但 智能眼镜方向本周没有任何以眼镜硬件或整机系统为主题的论文 ，25 篇候选里只有 5 篇有公开热度数据，那一章的排序主要靠主题相关性，不是靠热度。 ｜ llm 10 篇；vlm 10 篇；agent 10 篇；deep-learning 10 篇；robotics 10 篇；wearable-xr 10 篇</description>
+  </item>
+</channel>
+</rss>

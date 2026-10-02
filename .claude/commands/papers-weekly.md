@@ -5,16 +5,13 @@ argument-hint: [YYYY-MM-DD 可选，默认今天]
 
 生成本周的 AI 论文周报。**六个主题合成一份报告**，然后重建网站。
 
-**第 0 步：定位仓库根目录 `<ROOT>`**（本地和云端 sandbox 路径不同，必须先确定）：
+**第 0 步：定位仓库根目录 `<ROOT>`**（不同机器、不同 clone 位置都不一样，必须先确定）：
 
 ```bash
-for d in /Users/xingxingliu/Projects/xxliu1996_githubrepos/AcademicPaperGrabber \
-         /Users/xingxingliu/Projects/CluadeProjects/AcademicPaperGrabber; do
-  [ -d "$d/scripts" ] && echo "$d" && break
-done || git rev-parse --show-toplevel
+git rev-parse --show-toplevel
 ```
 
-后续所有路径都以 `<ROOT>` 为基准，不要写死绝对路径。
+如果不在 git 仓库里，就用当前目录往上找到含 `scripts/fetch_papers.py` 的那一层。**后续所有路径都以 `<ROOT>` 为基准，一律不要写死绝对路径。**
 
 **重要：无条件重新生成。** 如果 `<ROOT>/reports/<DATE>/` 已经存在，**照样从第 1 步开始全部重跑并覆盖**，不要因为"文件已存在"就跳过、也不要反问用户要不要重做。定时任务是无人值守的，静默跳过会伪装成成功。
 
@@ -74,6 +71,7 @@ cd <ROOT> && python3 scripts/fetch_papers.py --outdir reports/<DATE>/raw --week-
 - 它负责的主题 slug、章节标题、以及 `picks.json` 里属于它的 arXiv ID 列表
 - 让它 **Read `<ROOT>/reports/<DATE>/raw/<THEME>.json`**，摘要已经在里面了 —— **禁止 WebFetch / 联网**。摘要是抓取阶段随 API 一起拿到的，再去抓网页纯属浪费。
 - 严格照抄第 4 步的条目骨架，按 `picks.json` 的顺序编号
+- **热度那一行必须原样照抄 `heat_label` 字段**，一个字都不要改、不要自己拼
 - **不许夸大热度**：`heat_source: "none"` 的论文，一个字都不能提热度，不准出现"爆火""刷屏""本周最热"这类词
 - 每条四个要点合计控制在 120 字左右，别复述摘要、别贴公式、别展开实验细节
 - 中文译名要意译得像人话，不要机翻腔；原题照抄英文原文
@@ -130,17 +128,27 @@ cd <ROOT> && python3 scripts/fetch_papers.py --outdir reports/<DATE>/raw --week-
 - 每个链接都用 `raw/<THEME>.json` 里的 `abs_url`，不要手拼。
 - 导语要针对**本周整体**写，别写成六个章节导语的拼接。
 
-## 5. 重建网站
+## 5. 校验报告
+
+```bash
+cd <ROOT> && python3 scripts/check_report.py <DATE> --fix
+```
+
+机器校验正文和抓取数据是否一致：热度行是否等于 `heat_label`、链接是否等于 `abs_url`、章节与编号结构、无实测热度的论文有没有被用了"爆火"这类词、Top5 有没有混进零信号论文。`--fix` 会按数据重写每篇那一行元信息（机构 ｜ 热度 ｜ 链接），这一行完全可由数据推导，所以不用人工抄。
+
+**退出码非零就必须回第 4 步修**，不要跳过——这一步存在的意义就是不让编造的数字发出去。
+
+## 6. 重建网站
 
 ```bash
 cd <ROOT> && python3 scripts/build_site.py
 ```
 
-它会清空并重建 `docs/`（GitHub Pages 的发布目录）：首页放最近三个月、`archive.html` 放全部历史、每周一个 `docs/r/<DATE>.html`、`docs/feed.xml` 是 RSS，主题筛选是纯前端的。
+它会生成 `reports/<DATE>/report.html`（自带样式的单文件报告），并清空重建 `docs/`（GitHub Pages 的发布目录）：首页放最近三个月、`archive.html` 放全部历史、每周一个 `docs/r/<DATE>.html`、`docs/feed.xml` 是 RSS，主题筛选是纯前端的。
 
 跑完检查 `docs/data/reports.json` 里本周那条的 `counts`：如果某个主题是 0，说明那一章的 `###` 格式写错了，回第 4 步修，别放着不管。
 
-## 6. 提交
+## 7. 提交
 
 ```bash
 cd <ROOT> && git add reports/<DATE> docs && \
@@ -149,11 +157,11 @@ git commit -m "Weekly paper digest: <DATE>"
 
 然后 `git push`（远端是 `origin main`）。push 失败就报告错误，不要吞掉 —— 不 push 网站就不会更新。
 
-## 7. 汇报
+## 8. 汇报
 
 告诉用户：
 
 - `report.md` 路径，以及哪个主题本周没凑满 10 篇（如果有）
 - Top5 名单
 - 六个主题各自的收录数，以及其中有实测热度的篇数（诚实交代：`none` 占比高说明这周这个方向缺公开热度数据）
-- 网站地址：https://xxliu1996.github.io/AcademicPaperGrabber/
+- 网站地址：`python3 scripts/siteconf.py` 会打印这个 checkout 对应的站点地址（从 git remote 推导），用它报给用户

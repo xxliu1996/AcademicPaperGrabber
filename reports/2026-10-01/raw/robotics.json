@@ -1,0 +1,1525 @@
+{
+  "generated_at": "2026-10-02T04:46:13.174087+00:00",
+  "theme": "robotics",
+  "theme_title": "机器人与具身智能",
+  "theme_subtitle": "VLA、操作与运动控制、人形机器人、仿真到真机",
+  "accent": "#7a3a5a",
+  "week_start": "2026-09-25",
+  "week_end": "2026-10-01",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 326,
+  "measured_heat_count": 24,
+  "papers": [
+    {
+      "arxiv_id": "2609.36012",
+      "title": "In-Context Learning for Robots: Methods and Applications",
+      "abstract": "General-purpose robots must infer what a new task requires and translate that understanding into appropriate physical action. In-context learning (ICL) for robots supports this process by using demonstrations and interaction to direct existing competence with neural parameters held fixed during deployment. We organize this literature review around the interfaces connecting contextual evidence to execution, distinguishing four families: context-conditioned policies, geometric demonstration transfer, world-model-based control, and skill- and agent-based execution. Comparing these interfaces clarifies their transfer assumptions and the roles of training, correspondence, and memory in making context useful. Across manipulation and navigation, we examine how these mechanisms preserve taught requirements as objects, environments, and execution conditions change. This analysis links method design to evaluation practices that distinguish responsiveness to teaching, physical transfer, and benefits from retained experience. The resulting agenda connects compositional task acquisition and faithful transfer with physical recursive self-improvement, in which experience improves the ability to learn subsequent tasks.",
+      "authors": [
+        "Haojian Huang",
+        "Zexi Li",
+        "Junhao Guo",
+        "Yehang Zhang",
+        "Wenxuan Peng",
+        "Bohan Zhou",
+        "Weilin Ruan",
+        "Leyi Wu",
+        "Chenxu Wang",
+        "Jianchong Su",
+        "Binghui Xie",
+        "Wosong Chen",
+        "Yingjie Xu",
+        "Tianhao Zhou",
+        "Suzeyu Chen",
+        "Pukun Zhao",
+        "Jiaqi He",
+        "Xinyi Li",
+        "Runze Li",
+        "Peiran Dong",
+        "Shaoxiang Dang",
+        "Jing Huang",
+        "Yingbing Chen",
+        "Yifan Chang",
+        "Tianyi Zhang",
+        "Shiyuan Deng",
+        "Haozhi Wang",
+        "Yangkai Wei",
+        "Wenqian Li",
+        "Han Yang",
+        "Kaiwen Zhou",
+        "Huaping Liu",
+        "James Cheng",
+        "Rui Shao",
+        "Donglin Wang",
+        "Yaochu Jin",
+        "Jianye Hao",
+        "Ying-Cong Chen",
+        "Yinchuan Li"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "comment": "100 pages, 26 figures, 25 tables. Project page: https://jethrojames.github.io/awesome-robots-icl/ ; Code and literature: https://github.com/JethroJames/awesome-robots-icl",
+      "abs_url": "https://arxiv.org/abs/2609.36012",
+      "pdf_url": "https://arxiv.org/pdf/2609.36012v1",
+      "hf_upvotes": 360,
+      "hf_url": "https://huggingface.co/papers/2609.36012",
+      "github_repo": "https://github.com/JethroJames/awesome-robots-icl",
+      "github_repo_source": "hf",
+      "github_stars": 15,
+      "project_page": "https://jethrojames.github.io/awesome-robots-icl/",
+      "organization": "Knowin AI",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "robotics",
+      "fit": 11.75,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 23.911,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "robots",
+          "manipulation",
+          "navigation"
+        ],
+        "category": 2.75,
+        "popularity": 18.97,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Haojian Huang, Zexi Li, Junhao Guo, Yehang Zhang, Wenxuan Peng, Bohan Zhou 等 39 人",
+      "heat_label": "🔥 HF 360 赞 ｜ 💻 [代码](https://github.com/JethroJames/awesome-robots-icl)"
+    },
+    {
+      "arxiv_id": "2609.34759",
+      "title": "PanoVLN: Towards Effective Panoramic Vision-and-Language Navigation",
+      "abstract": "Recent vision-language models (VLMs) have advanced vision-and-language navigation (VLN), enabling models to predict navigation actions from visual observations and language instructions. In this work, we explore VLN with panoramic observations and introduce PanoVLN. The motivation is straightforward: more complete visual context should enable better-informed navigation decisions. For example, a panorama can reveal a passage outside a perspective camera's field of view, allowing the model to identify the intended route without additional exploration. However, we find that simply replacing perspective images with panoramas yields only limited gains. Our diagnosis suggests that fully exploiting wider visibility requires modifications to action prediction, training supervision, and visual representation. First, wider visibility supports longer-horizon action planning. We make the model predict longer action sequences, enabling larger turns and subsequent movement from a single panorama. Specifically, we introduce a confidence-guided execution (CGE) strategy that dynamically determines how many predicted actions to execute before replanning. Second, wider visibility also brings more complex route choices. We therefore construct training routes with frequent branching points and clear instructions to provide targeted supervision for route selection. Third, panoramic navigation requires understanding spatial relationships across viewing directions, beyond recognizing individual landmarks. We combine semantic and geometric features from RGB panoramas to capture both scene content and spatial layout without adding visual tokens. With a 4B backbone and RGB-only input, PanoVLN surpasses the previous SOTA by 11.9% and 8.7% in success rate on R2R-CE and RxR-CE Val-Unseen. Real-world experiments on a quadruped further demonstrate faster navigation with fewer pauses than prior VLN methods.",
+      "authors": [
+        "Zhen Wang",
+        "Changpeng Wang",
+        "Zhe Liu",
+        "Zhangyang Qi",
+        "Yuxiang Lu",
+        "Zimo Zeng",
+        "Donglian Qi",
+        "Xi Chen"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "comment": "22 pages, 14 figures. Project page: https://wangzhen-w.github.io/PanoVLN/",
+      "abs_url": "https://arxiv.org/abs/2609.34759",
+      "pdf_url": "https://arxiv.org/pdf/2609.34759v1",
+      "hf_upvotes": 152,
+      "hf_url": "https://huggingface.co/papers/2609.34759",
+      "github_repo": "https://github.com/wangzhen-w/PanoVLN",
+      "github_repo_source": "hf",
+      "github_stars": 26,
+      "project_page": "https://wangzhen-w.github.io/PanoVLN/",
+      "organization": "Zhejiang University",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "robotics",
+      "fit": 8.75,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 20.471,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "quadruped",
+          "navigation"
+        ],
+        "category": 1.75,
+        "popularity": 16.28,
+        "stars_counted": 26,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Zhen Wang, Changpeng Wang, Zhe Liu, Zhangyang Qi, Yuxiang Lu, Zimo Zeng 等 8 人",
+      "heat_label": "🔥 HF 152 赞 ｜ 💻 [代码](https://github.com/wangzhen-w/PanoVLN)"
+    },
+    {
+      "arxiv_id": "2609.35432",
+      "title": "Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence",
+      "abstract": "Vision-language-action (VLA) and world-action (WAM) models map observations and instructions directly to robot actions. This directness ties a policy to training: minor layout or viewpoint changes cause failure, and instructions generalize poorly. The root cause lies in representation: task requirements, conditions, progress, and failure recovery are implicitly encoded in action sequences, making them difficult to inspect or revise. Digital coding agents offer a precedent: LLMs call tools, verify results, and revise from feedback as executable code. The same working pattern of explicit state, manageable execution, and revisable procedures underlies generalization and long-horizon execution in the physical world, letting physical experience return as reusable programs, memory, or evidence. We propose Physical Coding, representing task state and execution as code. Code as World records objects, relations, constraints, and progress; Code as Policy organizes planning, verification, recovery, and execution. We build HexaAnything, which calls perception, planning, and control tools, including VLA/WAM policies, and makes in-the-loop decisions from external feedback. Verified traces become data and memory, enabling evolution from tools and Harness to model weights, architectures, and ultimately hardware and task design. On RoboCasa365, HexaAnything improves Composite-Unseen and overall success over XR-1 VLA, and its Harness-trained HexaModel beats the base on every split, indicating code traces internalize physical execution. On PhyBench and a dual-arm AgileX robot, the agent autonomously completes physics experiments and most tabletop tasks, often faster than published results. We observe data, model, and tool self-evolution; future work targets weight internalization, autonomous redesign of architectures, languages, representations, and tasks, and deployment in manufacturing and science.",
+      "authors": [
+        "Hongcheng Gao",
+        "Jingjing Zhou",
+        "Zelin Zheng",
+        "Shijia Ge",
+        "Jay Zhu",
+        "Yazhe Wang",
+        "Jianshu Zeng",
+        "Xuan Shangguan",
+        "Di Wu",
+        "Lingyu He",
+        "Zhiqi Jia",
+        "Sihang Wu",
+        "Xiao He"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "Technical report",
+      "abs_url": "https://arxiv.org/abs/2609.35432",
+      "pdf_url": "https://arxiv.org/pdf/2609.35432v1",
+      "hf_upvotes": 106,
+      "hf_url": "https://huggingface.co/papers/2609.35432",
+      "github_repo": "https://github.com/HexaFuture/PhysicalCoding",
+      "github_repo_source": "hf",
+      "github_stars": 46,
+      "project_page": "https://hexafuture.ai/blog/physical-coding",
+      "organization": "HexaFuture",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "robotics",
+      "fit": 14.0,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 15.796,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "vision-language-action",
+          "vla",
+          "robot"
+        ],
+        "category": 2.0,
+        "popularity": 10.3,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Hongcheng Gao, Jingjing Zhou, Zelin Zheng, Shijia Ge, Jay Zhu, Yazhe Wang 等 13 人",
+      "heat_label": "🔥 HF 106 赞 ｜ 💻 [代码](https://github.com/HexaFuture/PhysicalCoding)"
+    },
+    {
+      "arxiv_id": "2609.38537",
+      "title": "Systematically Exploring the Capabilities of GPT-6 Astra as Embodied Policies",
+      "abstract": "GPT-6 Astra exhibits a remarkable ability to generate numerical robot actions, extending its role beyond high-level planning. To assess Astra's capabilities as general-purpose embodied policies, we conduct comprehensive evaluations across six domains, examining direct control, cooperation with learned policies, and feedback-driven adaptation. In gripper manipulation, Astra can correct task targets and prepare contact conditions for subsequent policy execution; hybrid control with π0.5 achieves 48% success on the evaluated RoboDojo subset. In dexterous manipulation, hybrid control achieves 50% success in ten experience-guided DexJoCo trials, while direct in-hand control struggles to coordinate finger contacts. In mobile manipulation, hybrid control reaches 38.7% success on the evaluated RoboCasa365. In navigation, Astra leads our local comparisons, reaching 92% success on RxR instruction following and 82% on HM3D object search, although search incurs substantial detours. In locomotion, dense motion-reference generation remains unreliable: none of five sequential attempts on a single obstacle course reaches the goal, despite improvements in stability and forward progress. In humanoid loco-manipulation, Astra exceeds baseline methods on 13 of 30 HumanoidBench tasks with pretrained whole-body controllers. These findings reveal a gap between useful task decisions and reliable physical control. Inference latency further constrains practical control: across 50 RoboDojo instances per condition, policy-assisted and direct control consume 624.8 million and 1.132 billion tokens. A 30-second locomotion run requires 250 model calls averaging 39.86 seconds each, with physics paused during inference.",
+      "authors": [
+        "Galbot Team",
+        "Xuchuan Chen",
+        "Xiaoqian Cheng",
+        "Yu Deng",
+        "Lihe Ding",
+        "Shaocong Dong",
+        "Xiangjun Gao",
+        "Haozhe Jia",
+        "Zekai Li",
+        "Zhoujian Li",
+        "Yunrui Lian",
+        "Sikai Liang",
+        "Chenghuai Lin",
+        "Dairu Liu",
+        "Jiahang Liu",
+        "Qingtao Liu",
+        "Yuxuan Ma",
+        "Zekun Qi",
+        "Jiayi Su",
+        "He Wang",
+        "Ruochen Xu",
+        "Tianyu Xu",
+        "Xudong Xu",
+        "Zhe Xu",
+        "Mi Yan",
+        "Siming Yan",
+        "Li Yi",
+        "Ruixi Yu",
+        "Jinlu Zhang",
+        "Yintianrun Zhang",
+        "Zhikai Zhang",
+        "Zhizheng Zhang",
+        "Yixin Zheng",
+        "Weiyi Zhu"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.38537",
+      "pdf_url": "https://arxiv.org/pdf/2609.38537v1",
+      "hf_upvotes": 28,
+      "hf_url": "https://huggingface.co/papers/2609.38537",
+      "github_repo": "https://github.com/anonymous-report-421/GPT-as-Policy",
+      "github_repo_source": "hf",
+      "github_stars": 565,
+      "project_page": "https://galaxygeneralrobotics.github.io/astra-policy/",
+      "organization": "Galbot",
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-10-01",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "robotics",
+      "fit": 31.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 15.042,
+      "score_breakdown": {
+        "keyword_raw": 29,
+        "keyword_matched": [
+          "robot",
+          "manipulation",
+          "dexterous",
+          "humanoid",
+          "locomotion",
+          "whole-body",
+          "embodied",
+          "navigation"
+        ],
+        "category": 2.0,
+        "popularity": 5.29,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Galbot Team, Xuchuan Chen, Xiaoqian Cheng, Yu Deng, Lihe Ding, Shaocong Dong 等 34 人",
+      "heat_label": "🔥 HF 28 赞 ｜ 💻 [代码](https://github.com/anonymous-report-421/GPT-as-Policy)"
+    },
+    {
+      "arxiv_id": "2609.04355",
+      "title": "VLA-Precision: Asymmetric Co-Bootstrapping for Efficient Real-World Online RL of Vision-Language-Action Models",
+      "abstract": "Pretrained vision-language-action (VLA) models enable broad manipulation but remain unreliable in tasks demanding precision and repeatability. Applying real-world online reinforcement learning (RL) to VLA post-training enables autonomous trial-and-error improvement beyond demonstrations alone, but exposes two bottlenecks: 1) unreliable value signals can induce policy drift; 2) large-VLA overhead constrains throughput and sample efficiency. To address these challenges, we present VLA-Precision, an efficient real-world online RL framework featuring the Asymmetric Co-Bootstrapping (ACoB) algorithm and the ACoB-Stream architecture. Specifically, ACoB establishes asymmetric co-bootstrapping across timescales: early intervention-guided behavioral learning rapidly improves policy performance while enhancing online experience quality. As autonomous experience accumulates, global return propagation and local preference ranking progressively calibrate value estimates, yielding relative action advantages for reference-regularized policy improvement while suppressing drift. To enable ACoB on large VLAs, we develop ACoB-Stream, a closed-loop experience--policy architecture that establishes invariant-state decoupling and on-demand streaming as design principles, delivering up to 10.9times improvements in throughput and computational efficiency. Extensive evaluations on nine high-precision chemistry tasks across four categories and four robot embodiments show that VLA-Precision achieves 98.3\\% mean success rate in 45.8 min/task, with 27.6 s episodes running at 1.2times and 1.8times the speeds of VLA and RL baselines. Resources are available at https://vla-precision.github.io.",
+      "authors": [
+        "Chenyu Su",
+        "Zhaolong Shen",
+        "Yuan Qian",
+        "Chen Qian",
+        "Rui Zhang",
+        "Feng Yan",
+        "Weixing Chen",
+        "Fei Zhang",
+        "Jiamin Wang",
+        "Shuang Cong",
+        "Weiwei Shang"
+      ],
+      "published": "2026-09-03",
+      "updated": "2026-09-18",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "comment": "17 pages, 14 figures",
+      "abs_url": "https://arxiv.org/abs/2609.04355",
+      "pdf_url": "https://arxiv.org/pdf/2609.04355v3",
+      "hf_upvotes": 9,
+      "hf_url": "https://huggingface.co/papers/2609.04355",
+      "github_repo": "https://github.com/scy-v/VLA-Precision",
+      "github_repo_source": "hf",
+      "github_stars": 81,
+      "project_page": "https://vla-precision.github.io/",
+      "organization": "university of science and technology  of china",
+      "hf_published": "2026-09-18",
+      "hf_featured": "2026-09-28",
+      "sources": [
+        "hf"
+      ],
+      "theme": "robotics",
+      "fit": 18.5,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 14.913,
+      "score_breakdown": {
+        "keyword_raw": 15,
+        "keyword_matched": [
+          "vision-language-action",
+          "vla",
+          "robot",
+          "manipulation"
+        ],
+        "category": 3.5,
+        "popularity": 8.29,
+        "stars_counted": 81,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Chenyu Su, Zhaolong Shen, Yuan Qian, Chen Qian, Rui Zhang, Feng Yan 等 11 人",
+      "heat_label": "🔥 HF 9 赞 ｜ 💻 [代码](https://github.com/scy-v/VLA-Precision)"
+    },
+    {
+      "arxiv_id": "2609.33095",
+      "title": "REALM: A Coarse-to-Fine Generative Framework for Embodied Reactive Listening",
+      "abstract": "Generating responsive listener facial motion is an important task for embodied conversational AI. Two modeling challenges are central: accounting for the timing of speaker cues while maintaining continuity with the listener's ongoing motion, and capturing locally variable facial events alongside the overall motion trajectory. Listener responses may follow preceding cues with a temporal lag, while brief expressions and blinks introduce variation that is difficult to predict deterministically. These challenges motivate a framework that combines history-aware temporal alignment with stochastic expression refinement. We propose REALM (Reactive Embodied Audio-driven Listening Model), a coarse-to-fine framework for audio-driven reactive listening. A Reactive Gated Speaker-Listener Fusion module combines listener motion history with speaker audio through a delay-centered attention prior and adaptive gating. A coarse decoder predicts a base motion trajectory, which is augmented by audio-conditioned stochastic residuals in the expression subspace while retaining the coarse pose parameters. Evaluations on ViCo and L2L show improvements over the evaluated baselines across multiple motion-quality metrics. Additional analyses examine delay sensitivity, gate behavior, and blink dynamics. Finally, deployment on an Ameca humanoid robot and a perceptual user study demonstrate the applicability of the generated behavior to physical embodiment. Code: https://github.com/lipzh5/REALM Demo: https://youtu.be/Tf5mpd5S8VQ",
+      "authors": [
+        "Peizhen Li",
+        "Longbing Cao",
+        "Yang Zhang"
+      ],
+      "published": "2026-09-27",
+      "updated": "2026-09-27",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "22 pages, 3 figures",
+      "abs_url": "https://arxiv.org/abs/2609.33095",
+      "pdf_url": "https://arxiv.org/pdf/2609.33095v1",
+      "hf_upvotes": 20,
+      "hf_url": "https://huggingface.co/papers/2609.33095",
+      "github_repo": "https://github.com/lipzh5/REALM",
+      "github_repo_source": "hf",
+      "github_stars": 28,
+      "project_page": "https://www.youtube.com/watch?v=Tf5mpd5S8VQ",
+      "organization": "Macquarie University",
+      "hf_published": "2026-09-27",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "robotics",
+      "fit": 13.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 13.763,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "robot",
+          "humanoid",
+          "embodied"
+        ],
+        "category": 2.0,
+        "popularity": 8.51,
+        "stars_counted": 28,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Peizhen Li, Longbing Cao, Yang Zhang",
+      "heat_label": "🔥 HF 20 赞 ｜ 💻 [代码](https://github.com/lipzh5/REALM)"
+    },
+    {
+      "arxiv_id": "2609.24749",
+      "title": "D-JEPA: A Decision-Aligned Latent World Model",
+      "abstract": "Latent world models predict the consequences of actions, but accurate prediction does not guarantee that latent distance reflects which candidate will execute successfully. We identify a decision-local prediction gap: among the few futures competing for execution, a candidate predicted closer to the goal can produce a worse realized outcome than an available alternative. We introduce D-JEPA, a decision-aligned latent world model that learns decision-relevant relations among candidate futures from executed outcomes. A bounded, permutation-equivariant operator jointly reasons over goal-relative predictive features and ordinal evidence, refining pretrained predictive geometry where action choices are most consequential. Restricted predictor adaptation and a shared ordinal interface extend this alignment across complementary predictive geometries. D-JEPA further realizes the learned decision structure in JEPA-compatible future representations, enabling deployment through native latent-distance planning. Evaluations across latent control, manipulation, pretrained action-producing models, physical robots and autonomous driving demonstrate improved action selection, including 87.89% success on PushT, a 15.04-point average gain on RoboTwin, and a 17-point gain on physical robot tasks. These results establish decision-relevant relational structure as a direct bridge between predictive world modeling and effective control.",
+      "authors": [
+        "Shuaijun Liu",
+        "Chengyu Wu",
+        "Qifu Wen",
+        "Feiyang You",
+        "Chenglong Zhang",
+        "Shuyang Hao",
+        "Xi Lin",
+        "Ningxin Su"
+      ],
+      "published": "2026-09-21",
+      "updated": "2026-09-21",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "comment": "26 pages, including references and appendices. Project website: https://nebulis-lab.com/D-JEPA",
+      "abs_url": "https://arxiv.org/abs/2609.24749",
+      "pdf_url": "https://arxiv.org/pdf/2609.24749v1",
+      "hf_upvotes": 17,
+      "hf_url": "https://huggingface.co/papers/2609.24749",
+      "github_repo": "https://github.com/NEBULIS-Lab/D-JEPA",
+      "github_repo_source": "hf",
+      "github_stars": 10,
+      "project_page": "https://nebulis-lab.com/D-JEPA",
+      "organization": "NEBULIS Lab",
+      "hf_published": "2026-09-21",
+      "hf_featured": "2026-09-28",
+      "sources": [
+        "hf"
+      ],
+      "theme": "robotics",
+      "fit": 15.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 12.938,
+      "score_breakdown": {
+        "keyword_raw": 13,
+        "keyword_matched": [
+          "robot",
+          "robots",
+          "manipulation",
+          "autonomous driving",
+          "world model"
+        ],
+        "category": 2.75,
+        "popularity": 7.0,
+        "stars_counted": 10,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Shuaijun Liu, Chengyu Wu, Qifu Wen, Feiyang You, Chenglong Zhang, Shuyang Hao 等 8 人",
+      "heat_label": "🔥 HF 17 赞 ｜ 💻 [代码](https://github.com/NEBULIS-Lab/D-JEPA)"
+    },
+    {
+      "arxiv_id": "2609.23407",
+      "title": "OmniEcho: Spatial Audio Understanding for Embodied Agents",
+      "abstract": "Humans can effortlessly localize the direction of a sound source and integrate it with visual cues for reasoning, yet this remains challenging for embodied agents. In particular, it is still unclear how to effectively evaluate and model spatial audio understanding in embodied settings. To address this gap, we introduce OmniEchoBench, a unified benchmark for spatial audio-visual perception and audio-vision-language navigation. OmniEchoBench comprises six tasks over 197 real-world spatial audio-visual scenes, 2,972 question-answer pairs, and 900 navigation samples with first-order ambisonics (FOA) audio collected from 30 real-world environments. To enable scalable training supervision, we develop a controllable rendering pipeline for spatial audio. It preserves geometric consistency among sound sources, visual observations, and agent trajectories. Building on this, we propose OmniEcho, a spatially aware omni-modal model. It introduces an FOA spatial encoder alongside a pretrained semantic audio pathway. Extensive experiments show that OmniEcho achieves state-of-the-art performance on spatial audio-visual perception. For our sound-guided navigation, OmniEcho reaches a performance level close to that of traditional vision-language navigation. These results demonstrate that spatial audio can serve as a valuable signal for embodied scene reasoning and navigation, while also highlighting fine-grained spatial localization and distance estimation as important open challenges.",
+      "authors": [
+        "Ruixun Liu",
+        "Yuxuan Wang",
+        "Jiacheng Xie",
+        "Yuhuan You",
+        "Donghua Cai",
+        "Junming Lin",
+        "Xiong-Hui Chen",
+        "Zhifang Guo",
+        "Yunfei Chu",
+        "Qize Yang",
+        "Xize Cheng",
+        "Jin Xu",
+        "Yiwu Zhong"
+      ],
+      "published": "2026-09-20",
+      "updated": "2026-09-23",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.23407",
+      "pdf_url": "https://arxiv.org/pdf/2609.23407v2",
+      "hf_upvotes": 35,
+      "hf_url": "https://huggingface.co/papers/2609.23407",
+      "github_repo": "https://github.com/PKU-VaLuE-Lab/OmniEcho",
+      "github_repo_source": "hf",
+      "github_stars": 16,
+      "organization": "PKU-VaLuE-Lab",
+      "hf_published": "2026-09-20",
+      "hf_featured": "2026-09-25",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "robotics",
+      "fit": 7.75,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 12.753,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "embodied",
+          "navigation"
+        ],
+        "category": 0.75,
+        "popularity": 9.32,
+        "stars_counted": 16,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Ruixun Liu, Yuxuan Wang, Jiacheng Xie, Yuhuan You, Donghua Cai, Junming Lin 等 13 人",
+      "heat_label": "🔥 HF 35 赞 ｜ 💻 [代码](https://github.com/PKU-VaLuE-Lab/OmniEcho)"
+    },
+    {
+      "arxiv_id": "2609.34674",
+      "title": "HOI-Retarget: Contact-Centric Retargeting for Human-Object Interaction",
+      "abstract": "Learning from demonstration (LfD) has enabled humanoid robots to acquire diverse whole-body skills, but extending this paradigm to human-object interaction (HOI) is limited by the availability of robot-compatible interaction references. We present HOI-Retarget, a contact-centric retargeting method that transfers HOI onto a humanoid robot for large-scale motion-data generation. Its windowed trajectory optimization uses every labeled contact as a target in the object frame, balancing body tracking, foot support and smoothness under the robot's kinematic limits. The method can augment a single demonstration across object sizes, absorb contacts reconstructed from monocular video, and extend to several robots manipulating one object. We publicly release the code and the retargeted motion dataset.",
+      "authors": [
+        "Jihwan Shin",
+        "Adrià López Escoriza",
+        "Junzhe He",
+        "Matthias Heyrman",
+        "Marco Hutter"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "8 pages, 6 figures. Submitted to ICRA. Website: http://shinben0327.github.io/hoi-retarget",
+      "abs_url": "https://arxiv.org/abs/2609.34674",
+      "pdf_url": "https://arxiv.org/pdf/2609.34674v1",
+      "hf_upvotes": 1,
+      "hf_url": "https://huggingface.co/papers/2609.34674",
+      "github_repo": "https://github.com/shinben0327/hoi-retarget",
+      "github_repo_source": "hf",
+      "github_stars": 110,
+      "project_page": "https://shinben0327.github.io/hoi-retarget/",
+      "hf_published": "2026-09-28",
+      "sources": [
+        "hf"
+      ],
+      "theme": "robotics",
+      "fit": 16.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 12.651,
+      "score_breakdown": {
+        "keyword_raw": 14,
+        "keyword_matched": [
+          "robot",
+          "robots",
+          "humanoid",
+          "whole-body"
+        ],
+        "category": 2.0,
+        "popularity": 6.65,
+        "stars_counted": 110,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Jihwan Shin, Adrià López Escoriza, Junzhe He, Matthias Heyrman, Marco Hutter",
+      "heat_label": "🔥 HF 1 赞 ｜ 💻 [代码](https://github.com/shinben0327/hoi-retarget)"
+    },
+    {
+      "arxiv_id": "2609.33378",
+      "title": "Recursive Harness Distillation across Agents for Robot Manipulation",
+      "abstract": "A central goal in robotics is to enable manipulation across changing tasks and environments. Vision-language-action (VLA) models provide broad manipulation capabilities but can struggle when execution requires diagnosing failures and adapting behavior. Strong agents can discover effective interventions through interaction with these policies. We propose Recursive Harness Distillation to accumulate this experience as reusable guidance across agents. A strong agent distills its experience into a playbook for a light agent, then recursively refines the playbook using the light agent's execution feedback. The resulting playbook enables agents to reuse accumulated intervention knowledge in new task instances without updating model parameters. In real-world manipulation, the harness improves success from 37.3% to 64.0%. On SimplerEnv Bridge, the light agent with the playbook achieves 66.7% success, compared with 41.7% for the GR00T-only baseline, and outperforms the strong agent without a playbook. The same playbook also benefits the strong agent, which reaches 79.2% success. These results demonstrate the feasibility of harness distillation for robotics: intervention experience can be accumulated, refined through execution, and reused across agents to improve manipulation.",
+      "authors": [
+        "Seungyeon Kim",
+        "Junhoo Lee",
+        "Minkyu Kim",
+        "Baekseung Kim",
+        "Nojun Kwak"
+      ],
+      "published": "2026-09-27",
+      "updated": "2026-09-27",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.33378",
+      "pdf_url": "https://arxiv.org/pdf/2609.33378v1",
+      "hf_upvotes": 40,
+      "hf_url": "https://huggingface.co/papers/2609.33378",
+      "project_page": "https://seungyeon.me/RHD",
+      "organization": "Seoul National University",
+      "hf_published": "2026-09-27",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "robotics",
+      "fit": 22.25,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 12.387,
+      "score_breakdown": {
+        "keyword_raw": 18,
+        "keyword_matched": [
+          "vision-language-action",
+          "vla",
+          "robot",
+          "robotics",
+          "manipulation"
+        ],
+        "category": 4.25,
+        "popularity": 6.32,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Seungyeon Kim, Junhoo Lee, Minkyu Kim, Baekseung Kim, Nojun Kwak",
+      "heat_label": "🔥 HF 40 赞"
+    },
+    {
+      "arxiv_id": "2609.38653",
+      "title": "TERRA: Terrain-Aware Reconstruction, Retargeting and Control for Musculoskeletal Locomotion",
+      "abstract": "Recent advances in musculoskeletal modeling and reinforcement learning have enabled muscle-actuated agents to reproduce increasingly complex human motions. Yet these capabilities remain largely confined to flat ground, in part because motion datasets rarely include aligned terrain geometry and because retargeting terrain interactions to complex musculoskeletal bodies is challenging. We present TERRA, an end-to-end pipeline for terrain-aware retargeting and control of musculoskeletal locomotion. From kinematic trajectories alone, TERRA combines terrain priors, estimated contacts, and negative free-space evidence to recover task-relevant support geometry. TERRA further considers anatomical, tendon-continuity, and contact constraints during retargeting. Using the resulting motion-terrain pairs from five datasets, we successfully train a single muscle-actuated control policy on 9.4 hours of diverse locomotion. Across reconstruction, retargeting, and held-out tracking benchmarks, TERRA improves terrain accuracy, sharply reduces anatomical and interaction violations, and achieves the highest observed completion rate over supported terrain families. Overall, TERRA provides a practical route from scene-less motion data to muscle-actuated locomotion over diverse non-flat terrain. Project website: https://cnai.epfl.ch/terra/",
+      "authors": [
+        "Merkourios Simos",
+        "Chengkun Li",
+        "Bianca Ziliotto",
+        "Alexander Mathis"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.38653",
+      "pdf_url": "https://arxiv.org/pdf/2609.38653v1",
+      "hf_upvotes": 32,
+      "hf_url": "https://huggingface.co/papers/2609.38653",
+      "github_repo": "https://github.com/amathislab/terra",
+      "github_repo_source": "hf",
+      "github_stars": 7,
+      "project_page": "https://cnai.epfl.ch/terra/",
+      "organization": "Mathis Group @ EPFL",
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-10-01",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "robotics",
+      "fit": 7.5,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 12.027,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "locomotion"
+        ],
+        "category": 3.5,
+        "popularity": 8.15,
+        "stars_counted": 7,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Merkourios Simos, Chengkun Li, Bianca Ziliotto, Alexander Mathis",
+      "heat_label": "🔥 HF 32 赞 ｜ 💻 [代码](https://github.com/amathislab/terra)"
+    },
+    {
+      "arxiv_id": "2609.38059",
+      "title": "WorldLine: Action-Driven Visual Simulation for Robotic Manipulation",
+      "abstract": "Real-world robot learning is constrained by the cost of collecting experience and evaluating candidate behaviors. Video generation models offer a scalable foundation for visual simulators that predict action outcomes before physical execution. Yet they often favor visual plausibility over accurate action following and coherent robot--object dynamics, while action-conditioned simulators depend on scarce, embodiment-specific data that are difficult to share across incompatible control spaces. We introduce WorldLine, an action-driven visual simulator that decouples transferable dynamics learning from heterogeneous action grounding. WorldLine learns manipulation dynamics from more than 10,000 hours of action-free robot videos and grounds them using over 2,000 hours of action trajectories across more than ten embodiments. An image-space action representation provides a shared control interface across embodiments, while multi-view and failure-enriched training with relational regularization improves interaction-sensitive prediction. Robot-focused few-step distillation enables efficient causal rollout while preserving action-critical motion. Across held-out and out-of-domain settings, WorldLine maintains strong visual quality and robot-motion agreement; on failed trajectories, it improves robot-mask IoU by 0.1626 over the strongest baseline. It predicts trajectory success with 74% mean accuracy across RoboTwin and AgiBot, one percentage point above the strongest baseline. Without RoboTwin training or adaptation, its rollouts improve task success by up to 21.4 percentage points over direct policy execution. Together, these capabilities make WorldLine a scalable and efficient visual simulator for policy evaluation and embodied planning. More results are available at https://zhengsh123.github.io/WorldLine/{project page}.",
+      "authors": [
+        "Shenghe Zheng",
+        "Wenbo Li",
+        "Jiyao Zhang",
+        "Bin Xia",
+        "Haoyang Huang",
+        "Nan Duan",
+        "Jiaya Jia"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "comment": "A work about visual simulators for embodied AI",
+      "abs_url": "https://arxiv.org/abs/2609.38059",
+      "pdf_url": "https://arxiv.org/pdf/2609.38059v1",
+      "hf_upvotes": 17,
+      "hf_url": "https://huggingface.co/papers/2609.38059",
+      "github_repo": "https://github.com/Zhengsh123/WorldLine",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "project_page": "https://zhengsh123.github.io/WorldLine/",
+      "organization": "The Hong Kong University of Science and Technology",
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "robotics",
+      "fit": 19.75,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 11.892,
+      "score_breakdown": {
+        "keyword_raw": 17,
+        "keyword_matched": [
+          "robot",
+          "robotic",
+          "manipulation",
+          "embodied",
+          "embodied ai"
+        ],
+        "category": 2.75,
+        "popularity": 4.95,
+        "stars_counted": 1,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Shenghe Zheng, Wenbo Li, Jiyao Zhang, Bin Xia, Haoyang Huang, Nan Duan 等 7 人",
+      "heat_label": "🔥 HF 17 赞 ｜ 💻 [代码](https://github.com/Zhengsh123/WorldLine)"
+    },
+    {
+      "arxiv_id": "2609.34606",
+      "title": "WorldAttention: An Efficient Attention Architecture for Interactive Video World Models",
+      "abstract": "Leveraging the paradigm of autoregressive diffusion, text-conditioned interactive video world models aim to simulate temporally coherent environments guided by textual instructions. While enabling low-latency, long-duration generation is pivotal for embodied AI and simulation-based planning, current frameworks primarily rely on sliding-window mechanisms to bound computational complexity. However, this approach inherently sacrifices historical context, undermining the long-range interactive capabilities. Conversely, maintaining a full-history cache remains computationally prohibitive and memory-intensive: the quadratic complexity of attention leads to excessive computational overhead, while the linear growth of the KV cache inevitably leads to GPU memory saturation. To overcome these limitations, we propose WorldAttention, a system-oriented attention architecture that achieves high efficiency through the co-design of specialized attention kernels and hierarchical KV cache management. First, we introduce Hybrid Sparse Attention (HSA), which integrates linear global attention supplemented with head-adaptive sparse attention. Additionally, we design a Hierarchical KV Cache (HKV) that organizes historical KV pairs into semantically indexed pages across multi-tier memory, enabling fine-grained retrieval and controlled GPU residency. These two designs are supported by tailored kernels to effectively translate their theoretical efficiency into real-world performance. Extensive experiments on VBench-Long and InterVBench demonstrate that WorldAttention consistently surpasses prior state-of-the-art methods, achieving subject consistency scores of 0.9472 on VBench-Long and 0.9668 on InterVBench, respectively.",
+      "authors": [
+        "Zeyu Zhang",
+        "Jinyuan Mao",
+        "Dakai An",
+        "Wangbo Zhao",
+        "Hanfeng Lu",
+        "Jiasheng Tang",
+        "Yinghao Yu",
+        "Wei Wang",
+        "Bohan Zhuang"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Website: https://alibaba-damo-academy.github.io/WorldAttention, Code: https://github.com/alibaba-damo-academy/WorldAttention",
+      "abs_url": "https://arxiv.org/abs/2609.34606",
+      "pdf_url": "https://arxiv.org/pdf/2609.34606v1",
+      "hf_upvotes": 22,
+      "hf_url": "https://huggingface.co/papers/2609.34606",
+      "github_repo": "https://github.com/alibaba-damo-academy/WorldAttention",
+      "github_repo_source": "hf",
+      "github_stars": 10,
+      "project_page": "https://alibaba-damo-academy.github.io/WorldAttention/",
+      "organization": "DAMO Academy",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf"
+      ],
+      "theme": "robotics",
+      "fit": 8.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.755,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "embodied",
+          "embodied ai"
+        ],
+        "category": 0.75,
+        "popularity": 7.57,
+        "stars_counted": 10,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Zeyu Zhang, Jinyuan Mao, Dakai An, Wangbo Zhao, Hanfeng Lu, Jiasheng Tang 等 9 人",
+      "heat_label": "🔥 HF 22 赞 ｜ 💻 [代码](https://github.com/alibaba-damo-academy/WorldAttention)"
+    },
+    {
+      "arxiv_id": "2609.24385",
+      "title": "Tactile-JEPA: Topology-Aware Self-Supervised Representation Learning for Distributed Tactile Sensors",
+      "abstract": "Tactile sensing is an essential modality for robots performing contact-rich, dexterous manipulation, particularly under visual occlusion. While pre-trained image encoders are standard in robot learning pipelines, tactile encoders are still commonly trained from scratch from raw, noisy signals, which might limit their expressivity. Existing self-supervised learning (SSL) approaches focus predominantly on vision-based tactile sensors, leaving distributed electronic skins largely unaddressed. These sensors, however, have a distinctive property: their sensing elements are sparse and irregularly arranged over the surface they cover, which makes direct reuse of visual SSL methods suboptimal. We present Tactile-JEPA, an efficient self-supervised pre-training method that uses the spatial arrangement of tactile sensors to learn topology-aware representations. Specifically, it is trained to predict the embeddings of masked sensing elements from the unmasked remainder, using the sensor connectivity graph to guide spatial masking. Our analysis shows that effective tactile representations require capturing both local contact details and the global state of the tactile surface, which we achieve through dual-scale masking. Across three diverse datasets spanning magnetic and piezoresistive sensors, different robot embodiments, and single- and paired-sensor configurations, Tactile-JEPA reduces force estimation error by 6.3% and in-hand orientation error by 20.8% over the prior state-of-the-art, with consistent gains in other downstream applications, including policy learning. Overall, our results demonstrate that the benefit of tactile sensing depends critically on the quality of encoder pre-training, a problem which Tactile-JEPA addresses directly. Code is available at https://github.com/E-Kovtun/tactile.",
+      "authors": [
+        "Elizaveta Kovtun",
+        "Matvey Konovalov",
+        "Andrey Sakhovskiy",
+        "Semen Budennyy"
+      ],
+      "published": "2026-09-21",
+      "updated": "2026-09-21",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.24385",
+      "pdf_url": "https://arxiv.org/pdf/2609.24385v1",
+      "hf_upvotes": 22,
+      "hf_url": "https://huggingface.co/papers/2609.24385",
+      "github_repo": "https://github.com/E-Kovtun/tactile",
+      "github_repo_source": "hf",
+      "github_stars": 14,
+      "project_page": "https://bosbobos.github.io/Tactile-JEPA/",
+      "hf_published": "2026-09-21",
+      "hf_featured": "2026-09-28",
+      "sources": [
+        "hf"
+      ],
+      "theme": "robotics",
+      "fit": 18.75,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 11.378,
+      "score_breakdown": {
+        "keyword_raw": 16,
+        "keyword_matched": [
+          "robot",
+          "robots",
+          "manipulation",
+          "dexterous",
+          "tactile"
+        ],
+        "category": 2.75,
+        "popularity": 4.69,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Elizaveta Kovtun, Matvey Konovalov, Andrey Sakhovskiy, Semen Budennyy",
+      "heat_label": "🔥 HF 22 赞 ｜ 💻 [代码](https://github.com/E-Kovtun/tactile)"
+    },
+    {
+      "arxiv_id": "2609.28811",
+      "title": "DeltaWAM: Delta World Action Models for Bimanual Manipulation",
+      "abstract": "World-action models (WAMs) transfer visual and motion priors from pretrained video generators to robot control by jointly modeling visual dynamics and actions. Existing WAMs, however, predict dense future frames during training, repeatedly modeling largely unchanged content and coupling action-conditioned dynamics to nuisance appearance variations. At inference, processing each complete observation with the heavy video expert bottlenecks few-step action generation. Accordingly, we propose DeltaWAM, which jointly predicts visual deltas and actions using dense-anchor, sparse-delta, and action streams, with three architectures that differ in representation and computation sharing. We further develop Streaming Delta Memory (SDM), which updates cached anchor context with compact observed deltas, reducing heavy video-expert processing. On RoboTwin, DeltaWAM with SDM improves average success over Fast-WAM from 81.3% to 85.4% in the clean setting and from 75.8% to 83.9% under visual randomization. The three architectures reduce training FLOPs by 17.78-23.77%, while SDM reduces one-step inference latency and FLOPs by 36.57% and 31.55%, respectively; real-world evaluations further show the highest overall success rate and normalized progress among the evaluated policies. Code: https://github.com/AIGeeksGroup/DeltaWAM. Website: https://aigeeksgroup.github.io/DeltaWAM.",
+      "authors": [
+        "Han Yan",
+        "Zishang Xiang",
+        "Haokai Jiang",
+        "Zeyu Zhang",
+        "Qilin Wang",
+        "Weiyu Guo",
+        "Yandong Guo",
+        "Boxin Shi",
+        "Hao Tang"
+      ],
+      "published": "2026-09-23",
+      "updated": "2026-09-23",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.28811",
+      "pdf_url": "https://arxiv.org/pdf/2609.28811v1",
+      "hf_upvotes": 18,
+      "hf_url": "https://huggingface.co/papers/2609.28811",
+      "github_repo": "https://github.com/AIGeeksGroup/DeltaWAM",
+      "github_repo_source": "hf",
+      "github_stars": 4,
+      "project_page": "https://aigeeksgroup.github.io/DeltaWAM/",
+      "organization": "Peking University",
+      "hf_published": "2026-09-23",
+      "hf_featured": "2026-09-25",
+      "sources": [
+        "hf"
+      ],
+      "theme": "robotics",
+      "fit": 7.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 10.111,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "robot",
+          "manipulation"
+        ],
+        "category": 1.75,
+        "popularity": 6.17,
+        "stars_counted": 4,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Han Yan, Zishang Xiang, Haokai Jiang, Zeyu Zhang, Qilin Wang, Weiyu Guo 等 9 人",
+      "heat_label": "🔥 HF 18 赞 ｜ 💻 [代码](https://github.com/AIGeeksGroup/DeltaWAM)"
+    },
+    {
+      "arxiv_id": "2609.36352",
+      "title": "StructRL: Online Structured Reinforcement Learning for Long-Horizon Vision-Language-Action Tasks",
+      "abstract": "Vision-language-action (VLA) models perform well on shorter-horizon manipulation tasks but still struggle with long-horizon tasks that require multiple dependent manipulations from a single command. Online reinforcement learning (RL) can improve these policies through environment interaction, yet many existing methods provide reward only after the complete task succeeds. However, such terminal supervision is sparse and does not distinguish early failures from rollouts that make substantial partial progress. We propose StructRL, an online RL framework that constructs structured intermediate supervision from verifiable subtask completions. StructRL decomposes each task into verifiable subtasks, grants intermediate rewards only after the prerequisite subtasks have been completed, and scales each reward according to completion pace. Across RoboCasa365 and LIBERO-Long with GR00T-N1.5 and pi 0.5, StructRL consistently outperforms evaluated online RL baselines. These results show that verifiable, structured intermediate rewards improve long-horizon VLA post-training. Code is available at https://github.com/amazon-science/StructRL.",
+      "authors": [
+        "Ziyi Yin",
+        "Sangmin Woo",
+        "Kang Zhou",
+        "Sungyeon Kim",
+        "Aosong Feng",
+        "Haibo Ding",
+        "Jun Huan"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.36352",
+      "pdf_url": "https://arxiv.org/pdf/2609.36352v1",
+      "hf_upvotes": 5,
+      "hf_url": "https://huggingface.co/papers/2609.36352",
+      "github_repo": "https://github.com/amazon-science/StructRL",
+      "github_repo_source": "hf",
+      "github_stars": 4,
+      "project_page": "https://amazon-science.github.io/StructRL",
+      "organization": "Amazon",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "robotics",
+      "fit": 14.5,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 9.792,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "vision-language-action",
+          "vla",
+          "manipulation"
+        ],
+        "category": 2.5,
+        "popularity": 4.17,
+        "stars_counted": 4,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Ziyi Yin, Sangmin Woo, Kang Zhou, Sungyeon Kim, Aosong Feng, Haibo Ding 等 7 人",
+      "heat_label": "🔥 HF 5 赞 ｜ 💻 [代码](https://github.com/amazon-science/StructRL)"
+    },
+    {
+      "arxiv_id": "2609.37089",
+      "title": "Real2Gym: Building Gyms from Videos, Bringing Skills to Robots",
+      "abstract": "Real-world videos provide rich demonstrations of manipulation, but turning them into reusable robot skills requires visually aligned environments, executable physical interactions, and mechanisms for learning from experience. We introduce Real2Gym, an agentic Real2Sim2Real framework that turns human and robot demonstrations into interactive simulation gyms and brings skills acquired in simulation to physical robots. The Real2Sim module reconstructs editable scenes, aligns objects and cameras with the input, validates demonstrated or retargeted actions through native physics execution, and generates task-conditioned variations with action-feasibility checks. Within these environments, the agent generates executable code for manipulation stages, observes their outcomes, and distills successful attempts and failures into reusable task procedures, object-relative motions, and recovery strategies. Through a shared perception-and-control interface, these skills guide subsequent execution in simulation and on real robots, with motions adapted to current observations and no updates to the underlying model weights. Extensive evaluations demonstrate that Real2Gym enables high-fidelity simulation environment reconstruction, outperforming GPT-6 Astra Direct Mode by 16.7% in success rate with approximately 74.9% fewer policy-execution tokens across these environments, while exceeding it by 33.3% in physical robot execution success rate across four tasks on a real Franka robot.",
+      "authors": [
+        "Kerui Ren",
+        "Yingxiang Xu",
+        "Kaiwen Song",
+        "Linning Xu",
+        "Bo Dai",
+        "Mulin Yu",
+        "Tao Lu"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Project page: https://real2gym.github.io/",
+      "abs_url": "https://arxiv.org/abs/2609.37089",
+      "pdf_url": "https://arxiv.org/pdf/2609.37089v1",
+      "hf_upvotes": 6,
+      "hf_url": "https://huggingface.co/papers/2609.37089",
+      "github_repo": "https://github.com/real2gym/Real2Gym",
+      "github_repo_source": "hf",
+      "github_stars": 10,
+      "project_page": "https://real2gym.github.io/",
+      "organization": "Shanghai AI Laboratory",
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf"
+      ],
+      "theme": "robotics",
+      "fit": 9.75,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 9.764,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "robot",
+          "robots",
+          "manipulation"
+        ],
+        "category": 0.75,
+        "popularity": 5.33,
+        "stars_counted": 10,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Kerui Ren, Yingxiang Xu, Kaiwen Song, Linning Xu, Bo Dai, Mulin Yu 等 7 人",
+      "heat_label": "🔥 HF 6 赞 ｜ 💻 [代码](https://github.com/real2gym/Real2Gym)"
+    },
+    {
+      "arxiv_id": "2609.28660",
+      "title": "Morphometric Imitation: From Morphology and Contact Aware Hand Retargeting to Sim-to-Real Visuomotor Policy",
+      "abstract": "Human hand-object interactions (HOIs) provide a rich source of demonstrations for dexterous manipulation, but learning directly from them presents challenges in bridging morphology gaps, ensuring dynamical feasibility, and sim-to-real deployment. We present Morphometric Imitation, a three-stage framework that transforms reconstructed HOIs into zero-shot sim-to-real visuomotor policies. First, morphometric optimization (MMO) kinematically retargets human motion across hand morphologies while preserving demonstrated contacts. Second, residual reinforcement learning (RL) refines the kinematic reference using object pose and contact information from the human motion to produce dynamically feasible robot demonstrations. Third, these demonstrations are distilled into visuomotor policies. Across three robot hands and ten HOIs, MMO improves contact F1 over the strongest of five baselines by at least 8 points for every hand, while also improving the success rate of downstream dynamic retargeting by as much as 35 points. Ablations on the residual RL show complementary benefits from using object pose and contact information. Finally, the visuomotor policies achieve 89.3% zero-shot success in 300 real-world trials on 30 objects. Project page: https://morphometricimitation.github.io{this https URL}",
+      "authors": [
+        "Tara Sadjadpour",
+        "Siming He",
+        "C. K. Wolfe",
+        "Haozhi Qi",
+        "Lea Wilken",
+        "S. Shankar Sastry",
+        "Claire Tomlin",
+        "Jitendra Malik"
+      ],
+      "published": "2026-09-23",
+      "updated": "2026-09-25",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "24 pages, 10 figures",
+      "abs_url": "https://arxiv.org/abs/2609.28660",
+      "pdf_url": "https://arxiv.org/pdf/2609.28660v2",
+      "hf_upvotes": 13,
+      "hf_url": "https://huggingface.co/papers/2609.28660",
+      "github_repo": "https://github.com/tsadja/morphometric",
+      "github_repo_source": "hf",
+      "github_stars": 23,
+      "project_page": "https://morphometricimitation.github.io/",
+      "organization": "UC Berkeley",
+      "hf_published": "2026-09-23",
+      "hf_featured": "2026-09-28",
+      "sources": [
+        "hf"
+      ],
+      "theme": "robotics",
+      "fit": 16.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 9.606,
+      "score_breakdown": {
+        "keyword_raw": 14,
+        "keyword_matched": [
+          "robot",
+          "manipulation",
+          "dexterous",
+          "sim-to-real"
+        ],
+        "category": 2.0,
+        "popularity": 3.61,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Tara Sadjadpour, Siming He, C. K. Wolfe, Haozhi Qi, Lea Wilken, S. Shankar Sastry 等 8 人",
+      "heat_label": "🔥 HF 13 赞 ｜ 💻 [代码](https://github.com/tsadja/morphometric)"
+    },
+    {
+      "arxiv_id": "2609.30247",
+      "title": "Rolling-WAM: World Action Models with Rolling Imagination",
+      "abstract": "World Action Models (WAMs) couple action generation with future visual prediction for robotic manipulation. However, completing the joint video-action denoising process at each replanning cycle incurs substantial latency, delaying action updates and limiting closed-loop responsiveness. We present Rolling-WAM, a formulation that distributes joint denoising across successive replanning cycles. Our method maintains a sliding window of video-action chunks at staggered noise levels. At each step, a rolling noise schedule fully denoises the imminent action chunk for execution, while partially refining farther-future chunks. As the window advances with new camera observations, the retained future chunks continue their denoising process. This distributes the computational cost over time while carrying an evolving visual-action context across chunk boundaries. Evaluations on LIBERO, RoboTwin, and a real-world Unitree G1 humanoid show that Rolling-WAM achieves competitive manipulation performance. By removing the need to denoise the entire prediction horizon from scratch, it delivers a 4.5x steady-state replanning speedup over standard joint WAMs.",
+      "authors": [
+        "Yinghua Zhou",
+        "Junjie Ye",
+        "Yiqi Zhao",
+        "Hao Dong",
+        "Celina Shiyu Wang",
+        "Ruohai Ge",
+        "Tingyi Yang",
+        "Basile Van Hoorick",
+        "Gaurav Sukhatme",
+        "Vitor Guizilini",
+        "Yue Wang"
+      ],
+      "published": "2026-09-24",
+      "updated": "2026-09-24",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "comment": "10 pages, 7 figures, 5 tables. Under review. Project page: https://rolling-wam.github.io/",
+      "abs_url": "https://arxiv.org/abs/2609.30247",
+      "pdf_url": "https://arxiv.org/pdf/2609.30247v1",
+      "hf_upvotes": 3,
+      "hf_url": "https://huggingface.co/papers/2609.30247",
+      "github_repo": "https://github.com/zyinghua/Rolling-WAM",
+      "github_repo_source": "hf",
+      "github_stars": 7,
+      "project_page": "https://rolling-wam.github.io/",
+      "organization": "USC Physical Superintelligence (PSI) Lab",
+      "hf_published": "2026-09-24",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "robotics",
+      "fit": 13.5,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 9.602,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "robotic",
+          "manipulation",
+          "humanoid"
+        ],
+        "category": 3.5,
+        "popularity": 4.23,
+        "stars_counted": 7,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Yinghua Zhou, Junjie Ye, Yiqi Zhao, Hao Dong, Celina Shiyu Wang, Ruohai Ge 等 11 人",
+      "heat_label": "🔥 HF 3 赞 ｜ 💻 [代码](https://github.com/zyinghua/Rolling-WAM)"
+    },
+    {
+      "arxiv_id": "2609.38216",
+      "title": "Fiatlux: A Long-Horizon Benchmark for Humanoid Ladder Climbing and Light-Bulb Replacement",
+      "abstract": "Existing benchmarks evaluate tabletop manipulation, flat-floor household activity, or humanoid locomotion and manipulation as separate task groups; none scores vertical mobility and dexterous work on a fragile payload in one long-horizon episode. We present Fiatlux, a light-bulb replacement benchmark built on NVIDIA Isaac Lab. In one episode, a Unitree G1 humanoid positions a step ladder under a ceiling or wall fixture, climbs it, exchanges a spent bulb in a socket for a fresh one, and leaves the spent one in a disposal crate. We decompose the episode into twelve subtask environments scored on difficulty-weighted gates. The goal is a successful replacement, with the fresh bulb seated, the spent one disposed of, neither dropped, and a fragility bound not crossed. Runs that fall short can earn partial credit. Observations are split into a standard mode (signals a physical robot could sense or estimate) and a privileged mode (exact simulator state). We specify the evaluation protocol and provide reference baseline implementations spanning RSL-RL PPO, zero-shot NVIDIA GR00T N1.7 Vision-Language-Action (VLA) models, and whole-body controllers. Additionally, we provide the teleoperated recordings used to specify and check the success gates. The benchmark code and the teleoperated recordings are available at fiatlux-bench.github.io.",
+      "authors": [
+        "Pavel Bushuyeu",
+        "Yujin Chen",
+        "Anton Nikolaev",
+        "Brian Shu",
+        "Igor Molybog"
+      ],
+      "published": "2026-09-27",
+      "updated": "2026-09-27",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "10 pages, 4 tables, 2 figures. Project page: https://fiatlux-bench.github.io",
+      "abs_url": "https://arxiv.org/abs/2609.38216",
+      "pdf_url": "https://arxiv.org/pdf/2609.38216v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": "https://fiatlux-bench.github.io",
+      "theme": "robotics",
+      "fit": 36.0,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 9.5,
+      "score_breakdown": {
+        "keyword_raw": 34,
+        "keyword_matched": [
+          "vision-language-action",
+          "vla",
+          "robot",
+          "manipulation",
+          "dexterous",
+          "humanoid",
+          "locomotion",
+          "whole-body",
+          "isaac"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "none",
+      "authors_display": "Pavel Bushuyeu, Yujin Chen, Anton Nikolaev, Brian Shu, Igor Molybog",
+      "heat_label": "热度未测得"
+    },
+    {
+      "arxiv_id": "2609.34276",
+      "title": "NavHarness: Towards Lifelong Embodied Navigation",
+      "abstract": "Frontier models can now perform well on individual embodied navigation tasks through multi-round multimodal reasoning with simple tools. Across successive tasks, however, an agent must also rely on an evolving map and earlier search records, both of which may be incomplete or conflict with new observations. We present NavHarness, a training-free embodied harness towards lifelong navigation that makes memory processing part of the navigation loop. During navigation, its multi-round agentic session draws on maps, task records, and house knowledge, checking them against observations and recording corrections to guide its actions. NavHarness preserves this experience across fresh conversations for new tasks or recovery attempts, while outcome verification and run-end summaries support its later reuse. On GOAT-Bench, NavHarness improves s-SR over context-only independent sessions by 18.6 points with Astra and 22.6 with Opus 5. Using SLAM-estimated poses, NavHarness with GPT-6 Astra achieves state-of-the-art task success of 83.7 s-SR with 36.9 e-SR on GOAT-Bench and 85.9 s-SR on IR2R-CE. To understand these gains, we examine how experience is carried between sessions and find that structured recovery handovers outperform length-matched summaries. In extended deployments across houses, consolidation improves navigation beyond retaining maps and task records, with case studies showing how agents use earlier experience to interpret new goals, investigate unresolved questions, and resume failed searches. We suggest that progress towards lifelong navigation depends on how successive reasoning sessions build on prior experience, alongside improvements in single-task capability.",
+      "authors": [
+        "Xunyi Zhao",
+        "Jian Zhou",
+        "Sihao Lin",
+        "Gengze Zhou",
+        "Zerui Li",
+        "Xinyu Yan",
+        "Jiajun Liu",
+        "Anton van den Hengel",
+        "Qi Wu"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.34276",
+      "pdf_url": "https://arxiv.org/pdf/2609.34276v1",
+      "hf_upvotes": 4,
+      "hf_url": "https://huggingface.co/papers/2609.34276",
+      "github_repo": "https://github.com/billzhao1030/NavHarness",
+      "github_repo_source": "hf",
+      "github_stars": 7,
+      "project_page": "https://billzhao1030.github.io/NavHarness/",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-10-01",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "robotics",
+      "fit": 12.0,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 9.495,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "embodied",
+          "navigation",
+          "slam"
+        ],
+        "category": 2.0,
+        "popularity": 4.5,
+        "stars_counted": 7,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Xunyi Zhao, Jian Zhou, Sihao Lin, Gengze Zhou, Zerui Li, Xinyu Yan 等 9 人",
+      "heat_label": "🔥 HF 4 赞 ｜ 💻 [代码](https://github.com/billzhao1030/NavHarness)"
+    },
+    {
+      "arxiv_id": "2609.38087",
+      "title": "CrossBFM: Distilling a Shared Latent Behavior Space Across Humanoid Embodiments",
+      "abstract": "Behavior Foundation Models (BFMs) give humanoids a promptable policy over a latent behavior space, enabling one single vector to represent a motion to imitate, a pose to reach, or a reward to maximize. Forward-Backward representations successfully produce such spaces, but at the cost of hundreds of GPU-hours for a single robot. Moreover, when the training process is repeated for a second robot, it produces a second space unrelated to the first, resulting in embodiment-specific latents that do not unify or transfer. We address these problems with CrossBFM, treating the latent space as the transferable asset for various embodiments. As retargeting provides frame-level cross-embodiment correspondence, we propose a unified encoder architecture with no robot-specific parameters for distilling the behavior space to address all training embodiments simultaneously in less than a GPU-hour. Following this encoder, latent-conditioned trackers turn the distilled latent into whole-body control in a conventional PPO training manner in just 10 more GPU-hours. On three distilled humanoids, all three prompting modes transfer: motion tracking with latent-conditioned policy losing only 0.025 rad to its joint-conditioned counterpart, smooth goal reaching between poses with no falls, and reward optimization for all 41 reward prompts. Our experiments further reveal that 1) regressing the encoder on a quarter of the motion corpus costs only 5% of tracking performance and 2) training the encoder on a subset of robots and evaluating on an unseen one recovers up to 89% of the tracking performance of seen robots, demonstrating cross-embodiment generalization to morphologically similar robots. We also verify the pipeline on real robots across all three prompting modes and with flow-based generated latents. Project website: https://dotandung.github.io/crossbfm/",
+      "authors": [
+        "Tan-Dzung Do",
+        "Tuan Dat Phuong",
+        "Nico Bohlinger",
+        "Cuc T. Trinh",
+        "Siwei Ju",
+        "Vien Anh Ngo",
+        "Jan Peters",
+        "Xinchao Wang",
+        "An T. Le"
+      ],
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "Project Website: https://dotandung.github.io/crossbfm/",
+      "abs_url": "https://arxiv.org/abs/2609.38087",
+      "pdf_url": "https://arxiv.org/pdf/2609.38087v1",
+      "hf_upvotes": 21,
+      "hf_url": "https://huggingface.co/papers/2609.38087",
+      "project_page": "https://dotandung.github.io/crossbfm/",
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-09-30",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "robotics",
+      "fit": 16.0,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 9.083,
+      "score_breakdown": {
+        "keyword_raw": 14,
+        "keyword_matched": [
+          "robot",
+          "robots",
+          "humanoid",
+          "whole-body"
+        ],
+        "category": 2.0,
+        "popularity": 4.58,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Tan-Dzung Do, Tuan Dat Phuong, Nico Bohlinger, Cuc T. Trinh, Siwei Ju, Vien Anh Ngo 等 9 人",
+      "heat_label": "🔥 HF 21 赞"
+    },
+    {
+      "arxiv_id": "2609.39685",
+      "title": "RoboCoach: World Models as Active Coaches for Compositional Robot Skills",
+      "abstract": "Long-horizon robot manipulation reuses skills across many task compositions, but improving these compositions with additional end-to-end demonstrations is costly. A practical self-improving system must decide both what to teach next and where to apply that supervision. We present ROBOCOACH, a world-model-guided coaching framework that uses imagined failures to guide demonstration requests and expert updates. Its Route-Imagine-Diagnose-Improve (RIDI) loop executes reusable skill experts inside COACHWORLD, our shared action-conditioned world model, and uses a progress judge to record the first subtask that fails to complete. Aggregated records select which subtask demonstrations to acquire and which expert adapters to update. Across two simulation suites and two real-robot platforms, imagined and deployed success correlate over 22 task-policy pairs (rho = 0.840). Controlled comparisons show that our coaching method outperforms matched baselines under matched data budgets and update schedules. With only 150 additional subtask demonstrations, success rises from 13.3% to 75.0% on Franka and from 40.0% to 83.8% on AgileX. The coached experts also transfer to four held-out compositions, achieving an average success of 35.0%, compared with 0% for a shared-policy baseline updated with uniformly acquired demonstrations. Together, these results show that world models can serve as active coaches, turning imagined failures into targeted supervision for modular policy improvement. Project Page: https://robocoach-ai.github.io/",
+      "authors": [
+        "Jiajun Liu",
+        "Yifan Chen",
+        "Yichao Liu",
+        "Jiayi Zhang",
+        "Ruoqu Chen",
+        "Shaoxuan Xie",
+        "Guocai Yao",
+        "Mengdi Xu",
+        "Sen Cui",
+        "Changshui Zhang"
+      ],
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "comment": "https://robocoach-ai.github.io/",
+      "abs_url": "https://arxiv.org/abs/2609.39685",
+      "pdf_url": "https://arxiv.org/pdf/2609.39685v1",
+      "hf_upvotes": 12,
+      "hf_url": "https://huggingface.co/papers/2609.39685",
+      "github_repo": "https://github.com/RoboCoach-AI/CoachWorld",
+      "github_repo_source": "hf",
+      "github_stars": 2,
+      "project_page": "https://robocoach-ai.github.io/",
+      "organization": "Tsinghua University",
+      "hf_published": "2026-09-30",
+      "hf_featured": "2026-10-01",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "robotics",
+      "fit": 10.75,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 8.152,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "robot",
+          "manipulation",
+          "world model"
+        ],
+        "category": 2.75,
+        "popularity": 3.46,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "authors_display": "Jiajun Liu, Yifan Chen, Yichao Liu, Jiayi Zhang, Ruoqu Chen, Shaoxuan Xie 等 10 人",
+      "heat_label": "🔥 HF 12 赞 ｜ 💻 [代码](https://github.com/RoboCoach-AI/CoachWorld)"
+    },
+    {
+      "arxiv_id": "2609.34470",
+      "title": "Precise Editing and Flexible Referencing for Interactable Worlds",
+      "abstract": "We present EditWorld, a video world model for precise editing and flexible referencing in interactable worlds. Existing video world models primarily focus on navigation, letting users explore generated worlds but offering limited control over how existing world content is modified. EditWorld extends world modeling from exploration to precise modification by streaming editing instructions and reference images during autoregressive generation. To support these capabilities, EditWorld introduces Gated Causal Attention for temporally varying editing conditions and reference images, together with a Sparse Context mechanism that maintains a bounded historical context for long-horizon inference. We further adopt joint autoregressive and bidirectional training with annealed self-resampling, and construct a dedicated data synthesis and annotation pipeline that provides supervision for world editing. We also present WBench-Editing to systematically evaluate streaming world editing capabilities. EditWorld achieves the best overall performance on WBench-Editing with an overall score of 73.8 and an editing score of 80.0, substantially outperforming existing methods on editing-related metrics. https://github.com/leoisufa/EditWorld",
+      "authors": [
+        "Xinyao Liao",
+        "Xianfang Zeng",
+        "Zhu Liang",
+        "Zhoujie Fu",
+        "Qianxun Xu",
+        "Jiachi Liu",
+        "Gang Yu",
+        "Guosheng Lin"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.34470",
+      "pdf_url": "https://arxiv.org/pdf/2609.34470v1",
+      "hf_upvotes": 19,
+      "hf_url": "https://huggingface.co/papers/2609.34470",
+      "github_repo": "https://github.com/leoisufa/EditWorld",
+      "github_repo_source": "hf",
+      "github_stars": 17,
+      "organization": "Nanyang Technological University",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-09-29",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "robotics",
+      "fit": 6.5,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.484,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "navigation",
+          "world model"
+        ],
+        "category": 1.5,
+        "popularity": 4.36,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Xinyao Liao, Xianfang Zeng, Zhu Liang, Zhoujie Fu, Qianxun Xu, Jiachi Liu 等 8 人",
+      "heat_label": "🔥 HF 19 赞 ｜ 💻 [代码](https://github.com/leoisufa/EditWorld)"
+    },
+    {
+      "arxiv_id": "2605.22493",
+      "title": "Understanding Multimodality in Generative Behavioral Cloning",
+      "abstract": "Behavioral cloning becomes challenging when the same observation admits several valid actions. We study how generative behavioral-cloning policies represent such multimodal expert behavior and identify different bottlenecks across model parameterizations. For latent-variable policies, preserving demonstrated modes requires action-conditioned information in the latent representation. Excessive posterior-prior regularization can suppress this information and prevent the policy from distinguishing demonstrated modes. Weaker or aggregate regularization can preserve mode information, but shifts the challenge to ensuring that the deployment-time prior covers the relevant latent regions. For action-space generative policies, multimodality is constrained by the smoothness of the base-to-action transport: a map with a small Lipschitz constant cannot assign substantial probability to many well-separated modes. Covering many modes therefore requires either sharp transitions in base space or off-support bridge regions in action space. Experiments on synthetic multimodal navigation and a physical-robot bimodal manipulation task support these mechanisms. In contrast, our analysis reveals limited conditional multimodality in standard robotic simulation benchmarks, where deterministic regression remains competitive.",
+      "authors": [
+        "Lorenzo Mazza",
+        "Massimiliano Datres",
+        "Ariel Rodriguez",
+        "Sebastian Bodenstedt",
+        "Gitta Kutyniok",
+        "Stefanie Speidel"
+      ],
+      "published": "2026-05-21",
+      "updated": "2026-09-30",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "comment": "NeurIPS 2026",
+      "abs_url": "https://arxiv.org/abs/2605.22493",
+      "pdf_url": "https://arxiv.org/pdf/2605.22493v2",
+      "hf_upvotes": 4,
+      "hf_url": "https://huggingface.co/papers/2605.22493",
+      "github_repo": "https://github.com/Lorenzo-Mazza/VersatIL",
+      "github_repo_source": "hf",
+      "github_stars": 18,
+      "organization": "Department of Translational Surgical Oncology (TSO) at NCT Dresden",
+      "hf_published": "2026-09-30",
+      "hf_featured": "2026-10-01",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "robotics",
+      "fit": 14.5,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.125,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "robot",
+          "robotic",
+          "manipulation",
+          "navigation"
+        ],
+        "category": 2.5,
+        "popularity": 2.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "authors_display": "Lorenzo Mazza, Massimiliano Datres, Ariel Rodriguez, Sebastian Bodenstedt, Gitta Kutyniok, Stefanie Speidel",
+      "heat_label": "🔥 HF 4 赞 ｜ 💻 [代码](https://github.com/Lorenzo-Mazza/VersatIL)"
+    }
+  ],
+  "rescored_at": "2026-10-02T05:04:17.522401+00:00"
+}
