@@ -92,14 +92,39 @@ fi
     fi
   fi
 
-  echo "--- running /papers-weekly ---"
-  "$CLAUDE" -p "/papers-weekly" \
-    --permission-mode acceptEdits \
-    --allowedTools "Bash,Read,Write,Edit,Glob,Grep,Agent,TodoWrite" \
-    2>&1
-  STATUS=$?
+  # Fetch here, in the foreground, rather than letting the model drive it.
+  #
+  # This is not a style preference. In `claude -p` the model gets one turn, and
+  # it twice chose to launch the fetch as a background task and end its turn
+  # saying it would wait to be notified - there is no second turn in one-shot
+  # mode, so the process exited 0 and took the background fetch with it. Two
+  # weeks of reports were lost that way, with every check downstream reporting
+  # success right up to "report.md was never written".
+  #
+  # The fetch is a deterministic script with no judgement in it, so the shell
+  # should own it and the model should only write prose.
+  STATUS=0
+  echo "--- fetching papers (foreground) ---"
+  python3 "$ROOT/scripts/fetch_papers.py" \
+    --outdir "reports/$DATE/raw" --week-of "$DATE" --quiet-stdout
+  FETCH_STATUS=$?
+  if [ "$FETCH_STATUS" -eq 2 ]; then
+    # exit 2 means a theme came up thin, which is a normal quiet week
+    echo "fetch   : exit 2 - at least one theme is thin, continuing"
+  elif [ "$FETCH_STATUS" -ne 0 ]; then
+    echo "FAILED: fetch_papers.py exited $FETCH_STATUS - no point writing prose"
+    STATUS=1
+  fi
 
-  echo "--- claude exited with $STATUS ---"
+  if [ "${STATUS:-0}" -eq 0 ]; then
+    echo "--- running /papers-weekly ---"
+    "$CLAUDE" -p "/papers-weekly $DATE" \
+      --permission-mode acceptEdits \
+      --allowedTools "Bash,Read,Write,Edit,Glob,Grep,Agent,TodoWrite" \
+      2>&1
+    STATUS=$?
+    echo "--- claude exited with $STATUS ---"
+  fi
 
   # Checking that the file merely exists is not enough: a re-run on a date that
   # already has a report will happily exit 0 without regenerating anything.

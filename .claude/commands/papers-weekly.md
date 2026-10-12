@@ -35,11 +35,25 @@ git rev-parse --show-toplevel
 
 ## 1. 抓数据
 
+**先看数据是不是已经有了。** 定时任务（`scripts/run_weekly.sh`）会在调用你之前自己把抓取跑完，所以多数情况下这一步什么都不用做：
+
+```bash
+ls <ROOT>/reports/<DATE>/raw/*.json 2>/dev/null | wc -l
+```
+
+结果是 6 就直接跳到第 2 步。不是 6 才自己抓：
+
 ```bash
 cd <ROOT> && python3 scripts/fetch_papers.py --outdir reports/<DATE>/raw --week-of <DATE> --quiet-stdout
 ```
 
-- 脚本纯标准库，不需要 venv。一次跑完六个主题，约 4–7 分钟（arXiv 要求请求间隔 3 秒）。
+> ⚠️ **这条命令必须前台阻塞执行，绝对不许放后台**（不要 `&`，不要 `run_in_background`，不要起 Monitor 等通知）。
+>
+> 无人值守模式（`claude -p`）只给你一个回合。把抓取放后台然后结束回合说「等通知」，进程会立刻退出并把后台任务一起杀掉 —— 实际发生过两次，连续两周的周报就是这样丢的，而且下游每一步检查都显示成功，直到最后报 `report.md was never written`。
+>
+> 它要跑 4–7 分钟（arXiv 强制 3 秒间隔），**等它跑完就行，这不算卡住**。
+
+- 脚本纯标准库，不需要 venv。一次跑完六个主题。
 - **把 stderr 的 `[grab]` / `WARN:` 日志展示给用户**。
 - 看到 `arXiv returned 0 parsed entries for a non-empty result set`，说明 arXiv 的 Atom 结构变了，先修 `scripts/fetch_papers.py` 的解析再继续，不要拿残缺数据往下走。
 - 退出码 2 表示有主题的候选数低于 `min_papers`。**这不算整体失败**：那个主题少写几篇或整章跳过，继续做其余主题，最后在汇报里说明。
