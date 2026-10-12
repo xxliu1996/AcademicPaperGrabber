@@ -591,6 +591,20 @@ def build_feed(reports):
     <description>{html.escape(summary + (' ｜ ' + counts if counts else ''))}</description>
   </item>"""
         )
+    # Dated from the newest report, not from now. With `now` the file changed on
+    # every build even when no report had, so the working tree was permanently
+    # dirty and each scheduled run had to stash and restore it before pulling.
+    # A deterministic build means no diff unless something actually changed.
+    if reports:
+        try:
+            built = format_datetime(
+                datetime.strptime(reports[0]["date"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+            )
+        except ValueError:
+            built = format_datetime(datetime.now(timezone.utc))
+    else:
+        built = format_datetime(datetime.now(timezone.utc))
+
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
@@ -598,7 +612,7 @@ def build_feed(reports):
   <link>{SITE_URL}/</link>
   <description>{html.escape(SITE_TAGLINE)}</description>
   <language>zh-CN</language>
-  <lastBuildDate>{format_datetime(datetime.now(timezone.utc))}</lastBuildDate>
+  <lastBuildDate>{built}</lastBuildDate>
 {chr(10).join(items)}
 </channel>
 </rss>

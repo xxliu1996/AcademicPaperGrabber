@@ -137,8 +137,17 @@ fi
     echo "FAILED: $REPORT is stale (not rewritten this run)"
     STATUS=1
   else
-    PAPERS="$(grep -c '^### [0-9]' "$REPORT" 2>/dev/null || echo 0)"
-    CHAPTERS="$(grep -c '^## [一二三四五六]、' "$REPORT" 2>/dev/null || echo 0)"
+    # Counted with python, not grep. A CJK bracket expression matched fine in
+    # an interactive shell but returned 0 under launchd's minimal environment,
+    # which printed "0 chapters" for a report that has six - python reading
+    # with an explicit encoding does not depend on the locale at all.
+    read -r CHAPTERS PAPERS <<<"$(python3 - "$REPORT" <<'PY'
+import re, sys
+text = open(sys.argv[1], encoding="utf-8").read()
+print(len(re.findall(r"^## [一二三四五六七八九十]+、", text, re.M)),
+      len(re.findall(r"^### \d+\.", text, re.M)))
+PY
+)"
     echo "ok: report.md ($(wc -c < "$REPORT" | tr -d ' ') bytes, $CHAPTERS chapters, $PAPERS papers)"
     # Six chapters of ten is the target; a run that produced almost nothing
     # parsed wrong or the fetch failed, and must not pass as a success.
