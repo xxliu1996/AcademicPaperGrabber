@@ -5,7 +5,14 @@
   <link>https://xxliu1996.github.io/AcademicPaperGrabber/</link>
   <description>每周自动抓取六个方向最近一周的热门论文，每个方向 10 篇，人读的那种周报。</description>
   <language>zh-CN</language>
-  <lastBuildDate>Mon, 12 Oct 2026 04:40:11 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 12 Oct 2026 23:09:58 +0000</lastBuildDate>
+  <item>
+    <title>AI 论文周报（2026-10-06 – 2026-10-12）</title>
+    <link>https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-12.html</link>
+    <guid isPermaLink="true">https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-12.html</guid>
+    <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+    <description>本周最清晰的一条暗线是「强化学习进入抠成本阶段」：从 FP4/NVFP4 低精度回滚（TRACE、TRIAGE）、低秩梯度草图省显存（LoGRA），到 MoE 大模型的稳定 RL（MiMo-V2.6），大家不再争谁的 RL 更强，而是争谁的 RL 更便宜、更稳。与之呼应的是「环境即训练数据」的集体转向——Agent 方向这周几乎被各种 Gym 和 World 刷屏（AgentGarten、SoftwareGym、从轨迹重建的语言世界模型），机器人方向则被「世界-动作模型」统治（Long-WAM、UniWAM、ViGAR），核心命题都是：既然真实交互数据贵，那就把环境本身造出来。相比之下，多模态仍在生成与评测两头使劲，而智能眼镜 / 第一人称视觉这周偏安静，多是感知与交互的扎实工作，公开热度数据明显偏少。一句话：这是打地基的一周，不是放烟花的一周。 ｜ llm 10 篇；vlm 10 篇；agent 10 篇；deep-learning 10 篇；robotics 10 篇；wearable-xr 10 篇</description>
+  </item>
   <item>
     <title>AI 论文周报（2026-09-25 – 2026-10-01）</title>
     <link>https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-01.html</link>

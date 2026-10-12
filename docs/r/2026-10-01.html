@@ -84,7 +84,7 @@
 <ul class="facets"><li><strong>问题</strong>：具身智能需要大量第一人称操作视频但采集昂贵，而视角转换生成常在大幅换视角时丢掉手物交互细节。</li><li><strong>做法</strong>：构建融合场景几何、关节手渲染与稠密手物关系场的统一 4D 交互先验，经双分支残差适配器注入生成主干；再用解耦门控交叉注意力分别编码物体与背景参考，做物体中心锚定。</li><li><strong>效果</strong>：ARCTIC-HOI 上物体 mIoU 提升 32.3%，MPJPE 与 PA-MPJPE 分别降 34.7% 和 50.0%，视觉保真度保持竞争力。</li><li><strong>值得看</strong>：第一人称训练数据的供给问题，可能靠生成而非采集解决。</li></ul></section><section class="paper"><h3><span class="num">10</span>一个传感器看全身：只用一只耳机 IMU 估计 3D 人体姿态</h3><p><strong>One Sensor, Whole Body - 3D Body Pose from a Single Consumer Earbud IMU</strong> 热度未测得 ｜ 💻 <a href="https://github.com/ZhilinGuo/one-sensor-whole-body">代码</a> ｜ <a href="https://arxiv.org/abs/2609.34978">arXiv:2609.34978</a></p>
 <ul class="facets"><li><strong>问题</strong>：消费级耳机早已在头部持续输出惯性数据，但单个头部 IMU 能还原多少全身姿态、加传感器是否真有用，并无定论。</li><li><strong>做法</strong>：搭建多模态采集管线同步四视角 RGB-D、AirPods 头部 IMU 与两只 Striv 鞋垫 IMU，用 SAM 3D Body 生成伪真值，构成涵盖步态、转身、日常与临床动作的 35 组基准，并改造 IMUPoser 与 MobilePoser 两族模型。</li><li><strong>效果</strong>：单头部 IMU 下肢姿态刚性 MPJPE 79.0 mm、单脚触地 macro-F1 0.809，因果变体在流式延迟下基本保住精度；加鞋垫 IMU 从未显著提升，四种模型-划分组合里有两种反而显著变差，根因是鞋垫朝向质量而非脚部位置。</li><li><strong>值得看</strong>：约束是传感器可靠性而不是数量，这个结论对多设备融合的产品设计是个冷水也是个省钱的方向。</li></ul></section></div>
 
-  <nav class="pager"></nav>
+  <nav class="pager"><a href="2026-10-12.html">← 更新一期（2026-10-12）</a></nav>
   <footer class="foot">
     <a href="../index.html">← 返回首页</a>
     <a href="../archive.html">历史归档</a>

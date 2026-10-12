@@ -1,0 +1,1336 @@
+{
+  "generated_at": "2026-10-12T22:59:53.309310+00:00",
+  "theme": "deep-learning",
+  "theme_title": "其他深度学习",
+  "theme_subtitle": "架构、优化、表征学习、语音与可解释性",
+  "accent": "#7a5a2b",
+  "week_start": "2026-10-06",
+  "week_end": "2026-10-12",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 163,
+  "measured_heat_count": 18,
+  "papers": [
+    {
+      "arxiv_id": "2610.09087",
+      "title": "U-Space: Uncovering When and Why Uncertainty Arises in Language Models",
+      "abstract": "Large language models are informing decisions with ever-higher stakes. As the consequences of their errors grow, a central question becomes harder to ignore: how much can we trust an individual answer? Yet recognizing when to defer remains difficult because language models can present incorrect conclusions with fluent explanations and an authoritative tone. Uncertainty quantification seeks to address this disconnect by estimating the reliability of individual predictions. However, many existing methods require repeated generations or separately trained components, and their scalar estimates do not reveal where uncertainty arises or how it evolves during reasoning. Recent work has also shown that generation length can be strongly associated with uncertainty estimates and correctness, raising the question of how much of an estimator's predictive power comes from uncertainty-specific information rather than output length alone. Mechanistic interpretability offers a way to address these limitations by connecting human-interpretable concepts to intermediate model states. Building on this capability, we introduce the U-Space, a low-dimensional subspace that makes a model's evolving uncertainty measurable and interpretable. We identify semantic anchors for doubt and certainty, map their unembedding directions back into the residual space, and combine their contrasts into an orthogonal basis. The U-Lens projects each token state onto these basis vectors, yielding an interpretable token-level uncertainty map that can be inspected directly or aggregated into a scalar uncertainty score. Our approach requires no correctness labels, repeated generations, or training. Across reasoning benchmarks, its confidence score outperforms established baselines under both standard and length-controlled evaluation and transfers more reliably than supervised estimators. Code: https://github.com/s2labres/U-Space.",
+      "authors": [
+        "Tobias Braun",
+        "Nils Loose",
+        "Alexander Herzog",
+        "Virginia Ceccatelli",
+        "Marcus Rohrbach",
+        "Thomas Eisenbarth",
+        "Lorenzo Cavallaro"
+      ],
+      "published": "2026-10-06",
+      "updated": "2026-10-06",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "Code: https://github.com/s2labres/U-Space",
+      "abs_url": "https://arxiv.org/abs/2610.09087",
+      "pdf_url": "https://arxiv.org/pdf/2610.09087v1",
+      "hf_upvotes": 43,
+      "hf_url": "https://huggingface.co/papers/2610.09087",
+      "github_repo": "https://github.com/s2labres/U-Space",
+      "github_repo_source": "hf",
+      "github_stars": 7,
+      "project_page": "https://s2lab.org/U-Space/",
+      "organization": "Multimodal AI Lab - Technical University of Darmstadt",
+      "hf_published": "2026-10-06",
+      "hf_featured": "2026-10-09",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "deep-learning",
+      "fit": 10.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 13.74,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "interpretability",
+          "mechanistic interpretability",
+          "uncertainty"
+        ],
+        "category": 1.75,
+        "popularity": 9.05,
+        "stars_counted": 7,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 43 赞 ｜ 💻 [代码](https://github.com/s2labres/U-Space)",
+      "authors_display": "Tobias Braun, Nils Loose, Alexander Herzog, Virginia Ceccatelli, Marcus Rohrbach, Thomas Eisenbarth 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.05416",
+      "title": "Prism: Dynamic Sparse Attention for Native 2K Joint Video-Audio Generation Model Training",
+      "abstract": "Natively training joint video-audio generation models at higher resolutions empowers them to learn richer visual details and sharper motion dynamics. However, full attention incurs quadratic cost and, as resolution increases, spreads attention over increasingly redundant tokens, diluting learning signals for informative content and disrupting pretrained priors. Existing sparse attention methods either target training-free acceleration or overlook the unique structure of joint video-audio data, where cross-modal interactions are inherently concentrated around sound-producing regions. To address this, we propose Prism, a dynamic sparse attention framework for natively training joint video-audio generation models at 2K. In particular, Prism organizes the token sequence into spatiotemporal macro-zones, enabling the attention structure to adapt to local content. For each zone, it estimates local information structure via video feature variance along the channel and feature norms from the audio-to-video cross-attention, jointly capturing how visual content varies directionally and how strongly audio influences each visual region. Based on these signals, Prism dynamically assigns a tailored block shape to each zone, applying finer partitioning along axes of rapid visual content variation and strong audio-visual coupling. This encourages tokens within each block to remain semantically coherent, allowing block-level features to capture both visual content and joint video-audio interaction patterns. Prism further adopts a hybrid block selection strategy to dynamically determine per-query sparsity. Experiments show that Prism achieves 2.5times training speedup compared to full attention, while surpassing it in generation quality.",
+      "authors": [
+        "Shuyuan Tu",
+        "Qi Tian",
+        "Yinming Huang",
+        "Yue Wu",
+        "Xintong Han",
+        "Kaihang Pan",
+        "Weijie Kong",
+        "Jiangfeng Xiong",
+        "Jian-Wei Zhang",
+        "Zuxuan Wu",
+        "Yu-Gang Jiang"
+      ],
+      "published": "2026-10-04",
+      "updated": "2026-10-04",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.05416",
+      "pdf_url": "https://arxiv.org/pdf/2610.05416v1",
+      "hf_upvotes": 21,
+      "hf_url": "https://huggingface.co/papers/2610.05416",
+      "github_repo": "https://github.com/Tencent-Hunyuan/Prism",
+      "github_repo_source": "hf",
+      "github_stars": 212,
+      "project_page": "https://francis-rings.github.io/Prism/",
+      "organization": "Tencent Hunyuan",
+      "hf_published": "2026-10-04",
+      "hf_featured": "2026-10-06",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 3.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 13.333,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "sparsity",
+          "audio"
+        ],
+        "category": 0.0,
+        "popularity": 10.58,
+        "stars_counted": 212,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 21 赞 ｜ 💻 [代码](https://github.com/Tencent-Hunyuan/Prism)",
+      "authors_display": "Shuyuan Tu, Qi Tian, Yinming Huang, Yue Wu, Xintong Han, Kaihang Pan 等 11 人"
+    },
+    {
+      "arxiv_id": "2609.29792",
+      "title": "TimeBraid: Unifying Time Series and Language for Understanding and Forecasting",
+      "abstract": "We present TimeBraid, a series of unified time-series and language models that align pretrained language models and pretrained time-series foundation models through interleaved global residual attention layers. Each model inherits knowledge, instruction following, and reasoning from one side, continuous-signal perception and zero-shot forecasting from the other, and fuses the two in a shared representation space where both modalities are understood and generated. We study the design choices that make such unified modeling work: where to align the two representation spaces, how to ground language in temporal structure, how to balance understanding with generation, and how to keep joint optimization stable. The resulting recipe combines a unified prompting scheme for diverse time-series and text tasks, stabilized joint training, and supervision from 2.2M curated series--text pairs and 4.9M instruction-tuning samples. Across benchmarks spanning time-series perception, understanding, reasoning, and both context-aided and unimodal forecasting, TimeBraid remains competitive with far larger general-purpose models and task-specific counterparts.",
+      "authors": [
+        "Xinyue Wang",
+        "Jiacheng Pang",
+        "Kun Zhou",
+        "Kexin Zhang",
+        "Defu Cao",
+        "Fan Feng",
+        "Faisal",
+        "Songyao Jin",
+        "Yan Liu",
+        "Biwei Huang"
+      ],
+      "published": "2026-09-24",
+      "updated": "2026-09-24",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CE"
+      ],
+      "comment": "57 pages",
+      "abs_url": "https://arxiv.org/abs/2609.29792",
+      "pdf_url": "https://arxiv.org/pdf/2609.29792v1",
+      "hf_upvotes": 29,
+      "hf_url": "https://huggingface.co/papers/2609.29792",
+      "github_repo": "https://github.com/CharonWangg/TimeBraid",
+      "github_repo_source": "hf",
+      "github_stars": 9,
+      "project_page": "https://xinyuewangg.com/projects/timebraid/",
+      "organization": "AetherLabs-AI",
+      "hf_published": "2026-09-24",
+      "hf_featured": "2026-10-07",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 7.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 12.086,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "optimization",
+          "time series",
+          "forecasting"
+        ],
+        "category": 0.75,
+        "popularity": 8.15,
+        "stars_counted": 9,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 29 赞 ｜ 💻 [代码](https://github.com/CharonWangg/TimeBraid)",
+      "authors_display": "Xinyue Wang, Jiacheng Pang, Kun Zhou, Kexin Zhang, Defu Cao, Fan Feng 等 10 人"
+    },
+    {
+      "arxiv_id": "2610.07043",
+      "title": "TRIAGE: Direction-Aware Mismatch Stabilization of Native NVFP4 Reinforcement Learning",
+      "abstract": "Low-precision execution can substantially accelerate reinforcement learning (RL) for large language models, but discrepancies between learner and sampler execution can destabilize policy optimization. In this paper, we characterize the interaction between mismatch and the policy-gradient direction, distinguishing locally amplifying from contracting update contributions that mismatch magnitude alone cannot identify. In native NVFP4 runs, we observe an early imbalance between the two amplifying regions, favoring negative-advantage, negative-gap updates. Their tail tokens become concentrated in a small fraction of response segments before mismatch spreads globally. Motivated by these findings, we introduce TRIAGE, a direction-aware stabilization method that uses segment-level diagnosis to selectively rebalance policy-gradient updates and applies bounded repair to residual severe mismatch. TRIAGE modifies the optimization objective while retaining native NVFP4 weight-and activation 4-bit (W4A4) forward execution on both the sampler and learner. Experiments on Qwen3-4B and Qwen3-30B-A3B show stable optimization throughout the evaluated training horizon and achieve full precision level performance across five mathematical reasoning benchmarks, while native NVFP4 with TRIAGE provides up to 2.3x higher rollout throughput than BF16.",
+      "authors": [
+        "Zhen Li",
+        "Shuai Zhang",
+        "Yanggan Gu",
+        "Yiming Zhang",
+        "Yang Yu",
+        "Mingfa Feng",
+        "Congkai Xie",
+        "Shuang Yu",
+        "Junjie Lai",
+        "Hongxia Yang"
+      ],
+      "published": "2026-10-05",
+      "updated": "2026-10-09",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.07043",
+      "pdf_url": "https://arxiv.org/pdf/2610.07043v2",
+      "hf_upvotes": 44,
+      "hf_url": "https://huggingface.co/papers/2610.07043",
+      "github_repo": "https://github.com/InfiXAI/TRIAGE",
+      "github_repo_source": "hf",
+      "github_stars": 8,
+      "organization": "InfiX.ai",
+      "hf_published": "2026-10-05",
+      "hf_featured": "2026-10-07",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 4.75,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 11.957,
+      "score_breakdown": {
+        "keyword_raw": 2,
+        "keyword_matched": [
+          "optimization"
+        ],
+        "category": 2.75,
+        "popularity": 9.27,
+        "stars_counted": 8,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 44 赞 ｜ 💻 [代码](https://github.com/InfiXAI/TRIAGE)",
+      "authors_display": "Zhen Li, Shuai Zhang, Yanggan Gu, Yiming Zhang, Yang Yu, Mingfa Feng 等 10 人"
+    },
+    {
+      "arxiv_id": "2609.29123",
+      "title": "Accent Analogy Guidance: More Speaker Similarity at Equal Accent in Cross-Lingual Voice Cloning",
+      "abstract": "In cross-lingual zero-shot text-to-speech, the accent of the reference leaks into the target speech. We propose accent analogy guidance (AAG), a training-free sampler term that subtracts an accent direction estimated from the model's own predictions for one synthetic voice rendered in both languages, so the voice cancels and only the accent remains. By a blind LLM accent judge on real dubbing data, reweighting classifier-free guidance between reference and text, and its variants, stay near one identity-accent trade-off curve; we score a method by its speaker similarity above that curve at equal accent (ΔSIM). Across four open TTS models AAG lies above the curve: on OmniVoice ΔSIM is +0.11 to +0.27 on three test sets (accent 3.51 to 4.28 on a 1-5 scale at speaker similarity 0.29, where reweighting keeps 0.02); MaskGCT and CosyVoice 2 also lie above their curves, and on F5-TTS it is more native than any reweighting setting. An LLM-free language-ID measure and a twelve-listener panel agree. A premise test and the reach of a model's own curve indicate in advance whether and roughly how much AAG can gain, predicting the one model where it gains nothing (X-Voice).",
+      "authors": [
+        "Yoomee Cho",
+        "Jisun Lee"
+      ],
+      "published": "2026-09-24",
+      "updated": "2026-09-24",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.CL",
+        "eess.AS"
+      ],
+      "comment": "5 pages, 1 figure, 2 tables. Submitted to ICASSP 2027. Listening samples: https://yoomee-cho.github.io/accent-analogy-guidance/",
+      "abs_url": "https://arxiv.org/abs/2609.29123",
+      "pdf_url": "https://arxiv.org/pdf/2609.29123v1",
+      "hf_upvotes": 8,
+      "hf_url": "https://huggingface.co/papers/2609.29123",
+      "github_repo": "https://github.com/yoomee-cho/accent-analogy-guidance",
+      "github_repo_source": "hf",
+      "github_stars": 6,
+      "project_page": "https://yoomee-cho.github.io/accent-analogy-guidance/",
+      "organization": "ESTsoft AI",
+      "hf_published": "2026-09-24",
+      "hf_featured": "2026-10-07",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 6.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 8.851,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "text-to-speech",
+          "tts"
+        ],
+        "category": 0.75,
+        "popularity": 5.16,
+        "stars_counted": 6,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 8 赞 ｜ 💻 [代码](https://github.com/yoomee-cho/accent-analogy-guidance)",
+      "authors_display": "Yoomee Cho, Jisun Lee"
+    },
+    {
+      "arxiv_id": "2610.09457",
+      "title": "DSReg: Provably Recovering Individual World Latents without Reconstruction",
+      "abstract": "Methods that recover individual latent variables of the world, from nonlinear ICA to dictionary learning and causal representation learning, anchor the latents to observations through reconstruction, auxiliary supervision, or distributional asymmetries such as non-Gaussianity. Methods without these anchors, including joint-embedding predictive architectures (JEPAs), identify the latent state only up to a linear transformation, so individual latents remain mixed. We close this gap: individual world latents can be provably recovered with no reconstruction, no decoder, and no labels. The key condition is Structural Diversity: different latents leave distinct dependency footprints on observations, just as no two snowflakes are alike. Building on the linear identifiability that LeJEPA provides, we prove that under Structural Diversity, DSReg (Dependency-Sparsity Regularization) recovers individual world latents up to signed permutation, without reconstruction or a decoder. It applies post hoc to any linearly identified representation, reusing trained checkpoints at no loss over joint training, and establishes the first fully identifiable JEPA that recovers every world latent. Moreover, as a condition on dependency footprints, Structural Diversity is strictly weaker than all structural conditions of prior identifiable latent variable models. Across synthetic regimes, world model probes, learned visual encoders, and external renderers, DSReg preserves dense prediction while improving individual-latent recovery and downstream use with scales.",
+      "authors": [
+        "Yujia Zheng",
+        "David Klindt",
+        "Randall Balestriero",
+        "Bernhard Schölkopf"
+      ],
+      "published": "2026-10-07",
+      "updated": "2026-10-07",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO",
+        "stat.ML"
+      ],
+      "comment": "Project page: https://dsreg.github.io/",
+      "abs_url": "https://arxiv.org/abs/2610.09457",
+      "pdf_url": "https://arxiv.org/pdf/2610.09457v1",
+      "hf_upvotes": 3,
+      "hf_url": "https://huggingface.co/papers/2610.09457",
+      "github_repo": "https://github.com/kunwuz/dsreg",
+      "github_repo_source": "hf",
+      "github_stars": 12,
+      "project_page": "https://dsreg.github.io",
+      "organization": "University of Illinois at Urbana-Champaign",
+      "hf_published": "2026-10-07",
+      "hf_featured": "2026-10-08",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "deep-learning",
+      "fit": 7.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 8.747,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "representation learning",
+          "sparsity"
+        ],
+        "category": 2.75,
+        "popularity": 4.81,
+        "stars_counted": 12,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 3 赞 ｜ 💻 [代码](https://github.com/kunwuz/dsreg)",
+      "authors_display": "Yujia Zheng, David Klindt, Randall Balestriero, Bernhard Schölkopf"
+    },
+    {
+      "arxiv_id": "2610.06577",
+      "title": "Optimizing the Optimizer: Language Models Discover Faster Molecular Relaxation",
+      "abstract": "Geometry optimization is a major cost in many quantum-chemical workflows: each optimization step requires one force evaluation, and at the density-functional level that evaluation dominates the wall time. Research in this area has produced a broad range of optimization methods, and we ask whether a language model can improve on the best of them through autoresearch. An agent rewrites the optimizer itself to minimize force-call counts, restrained by two admission gates that reject premature stopping and improvements that do not generalize to unseen molecules. Starting from Sella, the fastest open-source optimizer available, the search produces AutoSella, a family of two optimizers. Both of them deliver consistent force-call reductions relative to Sella across held-out molecular benchmarks and potentials not used during the search. Most notably, at the r2SCAN-3c DFT level, the best variant requires only 40.2--77.2% of Sella's force calls while achieving the same energy reduction, even though agent used no DFT gradients.",
+      "authors": [
+        "Artem Tsypin",
+        "Vladimir Deshchenya",
+        "Kuzma Khrabrov",
+        "Denis Potapov",
+        "Maxim Radchenko",
+        "Artur Kadurin",
+        "Michael G. Medvedev"
+      ],
+      "published": "2026-10-05",
+      "updated": "2026-10-07",
+      "primary_category": "physics.chem-ph",
+      "categories": [
+        "physics.chem-ph"
+      ],
+      "comment": "27 pages, 4 figures, 7 tables. Code available at https://github.com/vdeshchenya/autosella",
+      "abs_url": "https://arxiv.org/abs/2610.06577",
+      "pdf_url": "https://arxiv.org/pdf/2610.06577v2",
+      "hf_upvotes": 24,
+      "hf_url": "https://huggingface.co/papers/2610.06577",
+      "github_repo": "https://github.com/vdeshchenya/autosella",
+      "github_repo_source": "hf",
+      "github_stars": 3,
+      "hf_published": "2026-10-05",
+      "hf_featured": "2026-10-06",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 7.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 8.149,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "optimizer",
+          "optimization",
+          "molecular"
+        ],
+        "category": 0.0,
+        "popularity": 4.9,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 24 赞 ｜ 💻 [代码](https://github.com/vdeshchenya/autosella)",
+      "authors_display": "Artem Tsypin, Vladimir Deshchenya, Kuzma Khrabrov, Denis Potapov, Maxim Radchenko, Artur Kadurin 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.07226",
+      "title": "Minimal Witness Reinforcement Learning",
+      "abstract": "``What are the irreducible conditions that are sufficient to produce an outcome?'' is one of the most common questions that recur across computation and science. Its answers, the minimal sufficient witnesses, are what we mean by explanations, mechanisms and reasons. These problems usually ask for multiple minimal witnesses, yet standard RL methods may reveal only one solution or redundant ones. We formalize this problem as minimal-witness identification and introduce Minimal-Witness Reinforcement Learning (MWRL). MWRL takes the union of the sets certified by successful proposals sampled from the policy and credits each proposal for the coverage the group union would lose without that proposal. This credit assignment, derived directly from the problem definition, unifies the demands for minimality and recovery of alternatives from a single black-box verifier bit. Under this principle, we derive a value iteration planner that recovers the entire family of witnesses and a policy gradient method that can scale to large language models. Across different experimental settings, MWRL recovers most minimal witnesses, while other methods return redundant supersets or a single witness. By making witness families learnable from verifier feedback, MWRL expands the scope of reinforcement learning beyond single-solution optimization. Our code is available at https://github.com/TSUITUENYUE/MWRL.",
+      "authors": [
+        "T. Y. Tsui",
+        "Zihao Ye",
+        "Pengxiang Cai",
+        "Yanchao Li",
+        "Yuqiang Li",
+        "Zhehong Ai"
+      ],
+      "published": "2026-10-05",
+      "updated": "2026-10-05",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.LO"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.07226",
+      "pdf_url": "https://arxiv.org/pdf/2610.07226v1",
+      "hf_upvotes": 23,
+      "hf_url": "https://huggingface.co/papers/2610.07226",
+      "github_repo": "https://github.com/TSUITUENYUE/MWRL",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "project_page": "https://tytsui.com/blog/correct-minimal-and-all/",
+      "organization": "University of Pennsylvania",
+      "hf_published": "2026-10-05",
+      "hf_featured": "2026-10-08",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 4.75,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 7.983,
+      "score_breakdown": {
+        "keyword_raw": 2,
+        "keyword_matched": [
+          "optimization"
+        ],
+        "category": 2.75,
+        "popularity": 4.8,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 23 赞 ｜ 💻 [代码](https://github.com/TSUITUENYUE/MWRL)",
+      "authors_display": "T. Y. Tsui, Zihao Ye, Pengxiang Cai, Yanchao Li, Yuqiang Li, Zhehong Ai"
+    },
+    {
+      "arxiv_id": "2610.04226",
+      "title": "PaLoRA: Paced Low-Rank Adaptation for Continual Learning",
+      "abstract": "LoRA-based continual learning methods mitigate catastrophic forgetting through various mechanisms, yet nearly all complement these with small learning rates as a heuristic to restrict gradient scaling magnitude. Such fixed heuristics lack theoretical guidance on how the strength of this restriction should evolve as tasks accumulate. We reveal that even under directional constraints such as nullspace projection, finite-precision updates inevitably leak into the subspace of accumulated prior knowledge along multiple directions. While small learning rates attenuate such leakage, they cannot prevent the accumulated forgetting from intensifying as the effective rank of historical knowledge grows. We show that the optimal magnitude restriction should adaptively increase with this effective rank to balance stability and plasticity, i.e., preservation of previous knowledge and acquisition of new task information. Under an anisotropic leakage model, we derive a pacing law s^*=R/c that characterizes the optimal scaling of gradient steps, i.e., the magnitude restriction itself, where R is the effective rank of past updates. Based on this insight, we propose PaLoRA, which compresses historical knowledge via adaptive SVD truncation, projects gradients onto the nullspace of prior tasks, and applies rank-aware adaptive pacing. Experiments demonstrate consistent improvements over prior methods, with particularly strong performance in long-horizon settings, achieving substantial gains of 4% accuracy on challenging 50-task ImageNet-A and ImageNet-R benchmarks.",
+      "authors": [
+        "Yuxuan Li",
+        "Fanhu Zeng",
+        "Hao Tang"
+      ],
+      "published": "2026-10-03",
+      "updated": "2026-10-03",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Accepted at NeurIPS 2026. Code: https://github.com/liyuxuan-github/PaLoRA",
+      "abs_url": "https://arxiv.org/abs/2610.04226",
+      "pdf_url": "https://arxiv.org/pdf/2610.04226v1",
+      "hf_upvotes": 10,
+      "hf_url": "https://huggingface.co/papers/2610.04226",
+      "github_repo": "https://github.com/liyuxuan-github/PaLoRA",
+      "github_repo_source": "hf",
+      "github_stars": 2,
+      "hf_published": "2026-10-03",
+      "hf_featured": "2026-10-06",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 5.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.231,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "continual learning"
+        ],
+        "category": 2.0,
+        "popularity": 4.48,
+        "stars_counted": 2,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 10 赞 ｜ 💻 [代码](https://github.com/liyuxuan-github/PaLoRA)",
+      "authors_display": "Yuxuan Li, Fanhu Zeng, Hao Tang"
+    },
+    {
+      "arxiv_id": "2605.09742",
+      "title": "TIDES: Implicit Time-Awareness in Selective State Space Models",
+      "abstract": "Selective state space models (SSMs), such as Mamba, achieve strong per-token expressivity by making the time discretization step TildeΔ a learned function of the input. However, in doing so, TildeΔ no longer equals the physical time gap Δ between consecutive observations, limiting the ability of these models to handle irregular time series. Continuous time SSMs, such as S5, keep TildeΔequivΔ and therefore handle irregular timestamps natively, but their dynamics remain linear time invariant (LTI), limiting per token expressivity. We propose TIDES, a selective SSM variant that reconciles selective and continuous architectures by moving input dependence off the step size and onto the diagonal state matrix. As a result, TildeΔequivΔ as in S5, allowing the model to handle irregular timestamps natively without sacrificing the per-token expressivity that makes selective SSMs effective. We show this on a novel Fading Flash experimental benchmark, a compact controlled diagnostic for sequence models that jointly tests input dependence and extrapolation to out-of-distribution Δ values, and isolates the distinct failure modes of current state-of-the-art architectures that TIDES avoids by construction. On large-scale benchmarks, TIDES sets the new best average rank on UEA time series classification and the Physiome ODE regression benchmark, and matches or exceeds the reference baseline model on 6 of 8 natively irregular datasets from astronomy, agriculture, neuromorphic sensing, and climate events. Code available at: https://github.com/TaylanSoydan/TIDES.",
+      "authors": [
+        "Taylan Soydan",
+        "Miguel A. Bessa",
+        "Dirk Mohr",
+        "Rui Barreira"
+      ],
+      "published": "2026-05-10",
+      "updated": "2026-10-05",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "Preprint submitted for peer-review",
+      "abs_url": "https://arxiv.org/abs/2605.09742",
+      "pdf_url": "https://arxiv.org/pdf/2605.09742v2",
+      "hf_upvotes": 2,
+      "hf_url": "https://huggingface.co/papers/2605.09742",
+      "github_repo": "https://github.com/TaylanSoydan/TIDES",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "organization": "ETH Zurich",
+      "hf_published": "2026-10-05",
+      "hf_featured": "2026-10-08",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 13.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.183,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "mamba",
+          "time series",
+          "out-of-distribution",
+          "neuromorphic"
+        ],
+        "category": 2.75,
+        "popularity": 2.25,
+        "stars_counted": 1,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 2 赞 ｜ 💻 [代码](https://github.com/TaylanSoydan/TIDES)",
+      "authors_display": "Taylan Soydan, Miguel A. Bessa, Dirk Mohr, Rui Barreira"
+    },
+    {
+      "arxiv_id": "2610.05870",
+      "title": "Certification of Real Images through Calibrated Content Authentication",
+      "abstract": "Generative models can synthesize high-quality inauthentic multimedia content that is already being misused at scale. We evaluate twenty deepfake detectors against ten generators released in the last four years and find accuracy decreasing over time, from near-perfect 99.5% to 76%. Adversarial perturbations further reduce every baseline detector to below 2% accuracy, effectively inverting the detector's assigned label. We argue that this unreliability reflects a fundamental ambiguity: generators can reproduce authentic content exactly (e.g., through memorization), so content alone cannot reveal the true provenance label.For this reason, content produced by a generator must admit a faithful reconstruction by that same generator, and finding such a reconstruction makes synthetic provenance plausible and authenticity plausibly deniable.We therefore propose and evaluate a detection paradigm that outputs a calibrated prediction of whether authenticity is plausibly deniable: a faithful reconstruction by any known generator establishes plausible deniability, while calibration bounds how often content from known generators fails to be reproduced. Our evaluation shows that (i) our detector can be calibrated so that at most 1% of generated content is wrongly certified, an operating point at which most baseline detectors reach near-zero recall, including the strongest with 93% accuracy; (ii) calibrating a stricter security threshold on attacked samples preserves this bound against adaptive adversaries within the evaluated bounded-perturbation attack space, whose perturbations break every baseline, but does not cover arbitrary adversarial transformations; and (iii) post-hoc verifiability is eroding, as 1,116 of 3,000 Reddit images resist reproduction by a 2022 generator, but only 55 to 79 resist reproduction by 2024 generators.",
+      "authors": [
+        "Sarim Hashmi",
+        "Abdelrahman Elsayed",
+        "Mohammed Talha Alam",
+        "Samuele Poppi",
+        "Nils Lukas"
+      ],
+      "published": "2026-10-05",
+      "updated": "2026-10-06",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.05870",
+      "pdf_url": "https://arxiv.org/pdf/2610.05870v2",
+      "hf_upvotes": 17,
+      "hf_url": "https://huggingface.co/papers/2610.05870",
+      "github_repo": "https://github.com/Sarim-MBZUAI/content-authentication",
+      "github_repo_source": "hf",
+      "github_stars": 3,
+      "project_page": "https://sarim-mbzuai.github.io/content-authentication/",
+      "organization": "Mohamed Bin Zayed University of Artificial Intelligence",
+      "hf_published": "2026-10-05",
+      "hf_featured": "2026-10-06",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 4.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.123,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "calibration",
+          "adversarial"
+        ],
+        "category": 0.0,
+        "popularity": 4.12,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 17 赞 ｜ 💻 [代码](https://github.com/Sarim-MBZUAI/content-authentication)",
+      "authors_display": "Sarim Hashmi, Abdelrahman Elsayed, Mohammed Talha Alam, Samuele Poppi, Nils Lukas"
+    },
+    {
+      "arxiv_id": "2610.08400",
+      "title": "Atom-JEPA: Joint-Embedding Predictive Architecture for 3D Atomistic Systems",
+      "abstract": "Large-scale self-supervised pretraining has reshaped modern machine learning, substantially advancing the ability of language and vision models to generalize across downstream tasks. While deep learning has driven considerable progress in modeling atomistic systems in recent years, self-supervised pretraining in this domain has not yet achieved comparable downstream generalization. To address this, we introduce Atom-JEPA, a self-supervised pretraining framework that learns latent representations from unlabeled 3D structures through complementary atom-level and substructure-level objectives inspired by joint-embedding predictive architectures. We pretrain Atom-JEPA on large-scale molecular and crystalline datasets and evaluate its transfer performance by fine-tuning on a diverse set of downstream property prediction tasks. Atom-JEPA achieves state-of-the-art performance on molecular ADMET and quantum-chemical property prediction tasks, and is highly competitive in predicting the physical properties of crystalline materials. These results demonstrate the potential of latent-space predictive pretraining to support broad downstream generalization from structural data alone. Code and pretrained model checkpoints are publicly available at https://github.com/khelverskovp/atom-jepa",
+      "authors": [
+        "Kasper Helverskov Petersen",
+        "Rasmus Hannibal Tirsgaard",
+        "François R J Cornet",
+        "Mikkel Jordahn",
+        "Mikkel N. Schmidt"
+      ],
+      "published": "2026-10-06",
+      "updated": "2026-10-06",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "physics.comp-ph"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.08400",
+      "pdf_url": "https://arxiv.org/pdf/2610.08400v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/khelverskovp/atom-jepa",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 9.75,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 6.088,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "generalization",
+          "self-supervised",
+          "molecular"
+        ],
+        "category": 2.75,
+        "popularity": 2.15,
+        "stars_counted": 5,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 5,
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/khelverskovp/atom-jepa)",
+      "authors_display": "Kasper Helverskov Petersen, Rasmus Hannibal Tirsgaard, François R J Cornet, Mikkel Jordahn, Mikkel N. Schmidt"
+    },
+    {
+      "arxiv_id": "2610.01789",
+      "title": "iADD: Improving Alignment and Diversity in Diffusion Policy Optimization",
+      "abstract": "Reinforcement learning based post training of diffusion models, such as Denoising Diffusion Policy Optimization (DDPO), optimizes a reverse diffusion process under a reward function. However, current approaches to reward optimizations do so at the cost of diversity and quality. In this paper, we provide better tradeoffs through careful theoretical considerations and method design. We analyze the theoretical framework and mathematically demonstrate that only-latter timestep updates of diffusion model may be harmful for diversity contrary to the conclusions presented in a previous work. Additionally, we propose an incremental Feynman-Kac training based on strong theoretical foundations in order to achieve the best-yet alignment-diversity tradeoffs. We perform extensive experiments and compare our method against related diffusion policy optimization approaches in three different tasks and also provide strong ablations for each component, thus validating strong performance gains in both alignment and diversity.",
+      "authors": [
+        "Ashok Prasad Neupane",
+        "Saugat Adhikari",
+        "Pramish Paudel",
+        "Ajad Chhatkuli",
+        "Danda Pani Paudel"
+      ],
+      "published": "2026-10-01",
+      "updated": "2026-10-01",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.01789",
+      "pdf_url": "https://arxiv.org/pdf/2610.01789v1",
+      "hf_upvotes": 5,
+      "hf_url": "https://huggingface.co/papers/2610.01789",
+      "github_repo": "https://github.com/Saugat2002/iADD",
+      "github_repo_source": "hf",
+      "github_stars": 0,
+      "project_page": "https://saugat2002.github.io/iadd/",
+      "hf_published": "2026-10-01",
+      "hf_featured": "2026-10-06",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 6.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.924,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "optimization",
+          "diffusion model"
+        ],
+        "category": 2.75,
+        "popularity": 2.24,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 5 赞 ｜ 💻 [代码](https://github.com/Saugat2002/iADD)",
+      "authors_display": "Ashok Prasad Neupane, Saugat Adhikari, Pramish Paudel, Ajad Chhatkuli, Danda Pani Paudel"
+    },
+    {
+      "arxiv_id": "2609.32921",
+      "title": "Adaptive Latent Capacity for World Models",
+      "abstract": "We introduce Adaptive LeWorldModel (ALeWM), a world model based on a joint-embedding predictive architecture (JEPA) that learns to concentrate predictive information in compact prefixes of a wide latent representation. To encourage this ordering, ALeWM learns a sequence-conditioned distribution over prefix lengths and trains the predictor to estimate the full next embedding from a sampled input prefix. As standard anti-collapse objectives encourage variation across latent coordinates and do not organize them by predictive importance, we also introduce MixSIGReg. MixSIGReg regularizes the masked embeddings against a prior-weighted mixture with Gaussian active prefixes and zeros in the remaining coordinates. As a result, the ALeWM objective encourages early coordinates to retain information useful for prediction and recursive planning. Our analysis shows that the mixture distribution used by MixSIGReg assigns higher variance to earlier coordinate blocks and lower variance to later ones. In addition, we show that, under specified assumptions, prediction error is minimized by placing the information most useful for prediction in earlier blocks. Empirically, we study the behavior of ALeWM in a controlled dynamical system with known state variables and in goal-conditioned visual control. We show that ALeWM consistently achieves higher mean success rates than tuned fixed-width LeWM, with lower planning capacity on average.",
+      "authors": [
+        "Idan Achituve",
+        "Lior Dikstein",
+        "Idit Diamant",
+        "Arnon Netzer",
+        "Hai Victor Habi"
+      ],
+      "published": "2026-09-26",
+      "updated": "2026-10-06",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.32921",
+      "pdf_url": "https://arxiv.org/pdf/2609.32921v2",
+      "hf_upvotes": 23,
+      "hf_url": "https://huggingface.co/papers/2609.32921",
+      "project_page": "https://arm-research.github.io/AAIR-ALeWM",
+      "organization": "Arm",
+      "hf_published": "2026-09-26",
+      "hf_featured": "2026-10-07",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 5.796,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 2.0,
+        "popularity": 4.8,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 23 赞",
+      "authors_display": "Idan Achituve, Lior Dikstein, Idit Diamant, Arnon Netzer, Hai Victor Habi"
+    },
+    {
+      "arxiv_id": "2609.36099",
+      "title": "Data Unlearning via Inverse Distillation",
+      "abstract": "Multi-step matching models, including flow and diffusion models, produce high-quality outputs but incur substantial inference costs and may reproduce unwanted components of their training datasets. We introduce Inverse Distillation Unlearning (IDU), a unified framework that simultaneously distills a teacher multi-step matching model into an efficient one-step student generator and suppresses outputs corresponding to a designated training subset. We first formulate distillation as a min-max objective over a data distribution and then represent this distribution as a mixture of the forget-set and the generated distributions. This allows us to compare this mixture with the teacher's training distribution and recover only the retained data at the optimum. Our method requires only a pretrained full-data teacher and data from the forget set, without access to retained training examples, extra feature extractors or classifiers. Extensive experiments on MNIST and CIFAR-10 datasets under flow-matching and score-based diffusion settings demonstrate that IDU substantially reduces the generation frequency of forgotten classes while preserving generation quality on the retained classes. To the best of our knowledge, IDU is the first unified framework for simultaneous unlearning and distillation in unconditional flow-matching and score-based models.",
+      "authors": [
+        "Aleksei Leonov",
+        "Nikita Kornilov",
+        "Zhenhe Zhang",
+        "Evgeny Burnaev",
+        "Iaroslav Koshelev",
+        "Alexander Korotin"
+      ],
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.36099",
+      "pdf_url": "https://arxiv.org/pdf/2609.36099v1",
+      "hf_upvotes": 27,
+      "hf_url": "https://huggingface.co/papers/2609.36099",
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-10-06",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 5.696,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 2.0,
+        "popularity": 5.2,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 27 赞",
+      "authors_display": "Aleksei Leonov, Nikita Kornilov, Zhenhe Zhang, Evgeny Burnaev, Iaroslav Koshelev, Alexander Korotin"
+    },
+    {
+      "arxiv_id": "2610.11165",
+      "title": "CARE: A Lightweight Plug-in Gated Correction and Uncertainty-aware Module for Long-term Time Series Forecasting",
+      "abstract": "Multivariate long-horizon forecasting is critical to electricity load scheduling and traffic flow management, and to financial risk control. Existing deterministic backbones output a single trajectory, masking heterogeneous prediction difficulty across horizons and channels and providing no localized reliability signal. We present CARE (Corrective branch with Aligned context and Relative-error Estimation), a lightweight plug-in that enhances any deterministic forecaster without architectural redesign. Operating in parallel with the base model, CARE resamples historical context to match the forecast horizon, learns residual correction patterns from this aligned history, and applies scale-aware bounded updates modulated by per-coordinate sigmoid risk gates. A multi-objective loss jointly optimizes forecast accuracy, residual tracking, risk alignment, and base-model anchoring. Across eight benchmarks with three representative backbones, CARE improves accuracy with marginal parameter and latency overhead. Its risk gates reliably identify high-error regions: on Weather, the highest-gate tertile exhibits nearly four times the error of the lowest-gate tertile, offering planners an interpretable per-step trust signal. Code is available at https://github.com/CG-BNYC/CARE.",
+      "authors": [
+        "Guo Cheng",
+        "Changlong Lv",
+        "Jingyi Hou"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "15pages, 2figures",
+      "abs_url": "https://arxiv.org/abs/2610.11165",
+      "pdf_url": "https://arxiv.org/pdf/2610.11165v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/CG-BNYC/CARE",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 11.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.568,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "time series",
+          "forecasting",
+          "uncertainty",
+          "weather"
+        ],
+        "category": 2.0,
+        "popularity": 1.32,
+        "stars_counted": 2,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 2,
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/CG-BNYC/CARE)",
+      "authors_display": "Guo Cheng, Changlong Lv, Jingyi Hou"
+    },
+    {
+      "arxiv_id": "2610.05790",
+      "title": "FairRSFM: A Biome-Aware Benchmark and Debiasing Framework for Remote Sensing Foundation Models",
+      "abstract": "Remote sensing foundation models (RSFMs) are commonly evaluated using aggregate metrics, which can hide systematic performance disparities across ecological regions. We introduce FairRSFM, a biome-aware benchmark for evaluating ecological group robustness in RSFMs. FairRSFM maps georeferenced samples from 14 terrestrial biome classes into six ecologically meaningful macro-groups and evaluates models under a unified frozen-backbone evaluation protocol. The benchmark covers four downstream datasets: m-EuroSAT, m-BigEarthNet, m-SA-Crop-Type, and MMEarth20K with Dynamic World label maps. Using Prithvi-EO-2.0, SatMAE, and DOFA across three random seeds, we show that aggregate performance consistently masks biome-dependent disparities across architectures and tasks. For example, Prithvi-EO-2.0 reaches 90.98% overall macro-F1 on m-EuroSAT but a mean worst-group score of only 83.72%, while m-SA-Crop-Type drops from 27.30% overall mIoU to 18.47% in the Xeric and Mineralogical group. We further evaluate Biome-Orthogonal Linear Probing (BOLP), Dynamic Biome Reweighting (DBR), and GroupDRO as complementary mitigation baselines. Their effectiveness is model- and task-dependent; for example, BOLP improves Prithvi-EO-2.0 worst-group F1@opt on m-BigEarthNet from 46.12% to 50.27% without updating the RSFM backbone. FairRSFM provides a reusable protocol for diagnosing and mitigating ecological robustness gaps in remote sensing foundation models. Code and datasets are available at: https://github.com/aminurhossain/FairRSFM.",
+      "authors": [
+        "Md Aminur Hossain",
+        "Omkumar Vaghasiya",
+        "Rajeev Ranjan Dwivedi",
+        "Vinod Kurmi",
+        "Biplab Banerjee"
+      ],
+      "published": "2026-10-05",
+      "updated": "2026-10-05",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "13",
+      "abs_url": "https://arxiv.org/abs/2610.05790",
+      "pdf_url": "https://arxiv.org/pdf/2610.05790v1",
+      "hf_upvotes": 6,
+      "hf_url": "https://huggingface.co/papers/2610.05790",
+      "github_repo": "https://github.com/aminurhossain/FairRSFM",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "hf_published": "2026-10-05",
+      "hf_featured": "2026-10-06",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 3.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.531,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "probing",
+          "robustness"
+        ],
+        "category": 0.0,
+        "popularity": 3.28,
+        "stars_counted": 1,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 6 赞 ｜ 💻 [代码](https://github.com/aminurhossain/FairRSFM)",
+      "authors_display": "Md Aminur Hossain, Omkumar Vaghasiya, Rajeev Ranjan Dwivedi, Vinod Kurmi, Biplab Banerjee"
+    },
+    {
+      "arxiv_id": "2610.12393",
+      "title": "HRIL: Learning Multimodal Synergy via Higher-Order Tensor Modeling",
+      "abstract": "Self-supervised multimodal representation learning has achieved remarkable success across diverse domains, yet capturing synergistic information remains challenging due to the complexity of cross-modal interactions. Unlike the shared information across individual modalities, synergy arises when task-relevant signals emerge only from the joint configuration of multiple modalities and cannot be recovered from any modality in isolation. This work focuses on how to preserve the information capacity for such synergistic signals in multimodal representations. The key observation is that synergistic information is reflected in higher-order statistical dependence among modalities, which provides a principled target for explicitly modeling joint interactions. Motivated by this insight, we propose Higher-order Representation and Information Learning (HRIL), which constructs an empirical cross-moment tensor over modality embeddings to represent multi-way interactions. HRIL employs Tucker decomposition to obtain a core tensor, complemented by a synergy-aware regularizer that prevents energy concentration and preserves higher-order coupling capacity for synergistic information capture. Experiments on the controlled synergy task and real-world benchmarks demonstrate consistent improvements over existing multimodal contrastive methods, with notable gains on tasks dominated by synergistic interactions. Code is released at https://github.com/brightest66/HRIL.",
+      "authors": [
+        "Qun Dai",
+        "Liangjian Wen",
+        "Jiang Duan",
+        "Yong Dai",
+        "Dongkai Wang",
+        "Maolin Wang",
+        "Mingjie Wang",
+        "Jianzhuang Liu",
+        "He Yan",
+        "Zhao Kang"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "Accepted at NeurIPS 2026",
+      "abs_url": "https://arxiv.org/abs/2610.12393",
+      "pdf_url": "https://arxiv.org/pdf/2610.12393v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/brightest66/HRIL",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 7.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.369,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "self-supervised",
+          "representation learning"
+        ],
+        "category": 1.75,
+        "popularity": 1.93,
+        "stars_counted": 4,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 4,
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/brightest66/HRIL)",
+      "authors_display": "Qun Dai, Liangjian Wen, Jiang Duan, Yong Dai, Dongkai Wang, Maolin Wang 等 10 人"
+    },
+    {
+      "arxiv_id": "2610.04703",
+      "title": "Learning Discriminative Geometry for Drifting Models",
+      "abstract": "Recently proposed Drifting Models shift iterative distribution refinement from inference to training, enabling effective one-step generation. However, their performance on complex image datasets depends strongly on the representation used to construct the drifting field: pixel-space drifting performs poorly, whereas pretrained feature spaces substantially improve sample quality for reasons that remain unclear. We trace this gap to the discriminative geometry of the representation, which determines sample weighting in kernel density estimation (KDE) and, consequently drift. We introduce persistent representation learning, which continuously learns a more discriminative representation geometry as the generator evolves across batches. We further establish a current-step gradient equivalence between the KDE ratio loss and drift regression loss under matched conditions, connecting density-ratio-based generator optimization to empirical drifting and motivating direct control of the drifting velocity. Across multiple datasets, our method learns effective discriminative representations directly from pixels and reduces FID by approximately 82-95% over the original pixel-space Drifting Models, without pretrained encoders. Adapting pretrained representations and applying velocity clipping provide further gains.",
+      "authors": [
+        "Doudou Zhang",
+        "Wenwen Hou",
+        "Yilin Chen",
+        "Qi Chen"
+      ],
+      "published": "2026-10-03",
+      "updated": "2026-10-03",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.04703",
+      "pdf_url": "https://arxiv.org/pdf/2610.04703v1",
+      "hf_upvotes": 4,
+      "hf_url": "https://huggingface.co/papers/2610.04703",
+      "github_repo": "https://github.com/aalto-icl/DiscriminativeGeometryforDrifting",
+      "github_repo_source": "hf",
+      "github_stars": 4,
+      "organization": "Aalto University",
+      "hf_published": "2026-10-03",
+      "hf_featured": "2026-10-07",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 7.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.25,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "optimization",
+          "representation learning"
+        ],
+        "category": 2.0,
+        "popularity": 2.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 4 赞 ｜ 💻 [代码](https://github.com/aalto-icl/DiscriminativeGeometryforDrifting)",
+      "authors_display": "Doudou Zhang, Wenwen Hou, Yilin Chen, Qi Chen"
+    },
+    {
+      "arxiv_id": "2610.00423",
+      "title": "The Life Cycle of a Massive Activation: Stochastic Birth, Weight-Decay-Driven Growth, and Competitive Consolidation",
+      "abstract": "Massive activations, residual-stream coordinates with magnitudes far larger than typical activations, are associated with attention sinks in transformers, but how their scale is regulated during training remains incompletely understood. Combining training-trajectory analyses and controlled interventions, we trace their emergence, growth, and consolidation. Sink-carrying channels vary across random seeds but stabilize early within each run. Over longer training, surrounding channels erode and the sink concentrates onto a few redundant carriers. Across ablations, gradient attenuation follows the sink token's collective root-mean-square magnitude rather than any single channel, making collective scale central to understanding their effects. Our central result is that weight decay causally controls the turnover of global activation scale. In controlled continuations, removing decay near the peak allows this scale to keep rising, whereas retaining it produces decline even at constant learning rate. We develop a balance model for the rise and peak of massive-activation magnitude, in which AdamW-preconditioned growth opposes weight decay. Sweeping the decay coefficient λ shifts peak timing approximately log-linearly and yields peak magnitudes scaling approximately as λ^{-1/2}, consistent with this balance. Optimizer measurements further show that preconditioning sustains the large-channel cohort against decay even when raw maintaining forces are too small to do so. Together, these findings connect the observed life cycle to scale-regulating training dynamics and establish weight decay as a training-time lever on activation magnitude.",
+      "authors": [
+        "S. Aaron McClendon",
+        "Jorge Gallego-Feliciano",
+        "Antonios Saravanos"
+      ],
+      "published": "2026-09-30",
+      "updated": "2026-10-05",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.00423",
+      "pdf_url": "https://arxiv.org/pdf/2610.00423v2",
+      "hf_upvotes": 3,
+      "hf_url": "https://huggingface.co/papers/2610.00423",
+      "github_repo": "https://github.com/apd-smcclendon/massive_activations_2",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "project_page": "https://arxiv.org/pdf/2610.00423",
+      "organization": "Aimpoint Digital",
+      "hf_published": "2026-10-05",
+      "hf_featured": "2026-10-12",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.17,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "optimizer"
+        ],
+        "category": 2.75,
+        "popularity": 1.73,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 3 赞 ｜ 💻 [代码](https://github.com/apd-smcclendon/massive_activations_2)",
+      "authors_display": "S. Aaron McClendon, Jorge Gallego-Feliciano, Antonios Saravanos"
+    },
+    {
+      "arxiv_id": "2610.09109",
+      "title": "Breaking Adversarial Transferability in Fine-Tuned Speech Recognition",
+      "abstract": "Many organizations fine-tune publicly available pretrained Automatic Speech Recognition (ASR) models and deploy them in black-box settings, assuming limited access provides protection. We show this assumption is fragile: adversarial perturbations crafted on the public base model transfer effectively to fine-tuned target models, severely degrading performance and posing concerns for safety-critical applications. We propose TransferBreaker, a unified fine-tuning framework that suppresses adversarial transfer by integrating Base Adversarial Fine-Tuning, which restricts adversarial training to base-effective perturbations; Latent Jacobian Regularization, which enforces latent-space invariance by suppressing adversarially sensitive directions; and HybridGrad-AFT, which improves robustness against adaptive attacks by interpolating transferable perturbations from base and target gradients. We theoretically justify all components and evaluate TransferBreaker across three languages and four large ASR models, reducing adversarial WER from 92.6 to 27.8. Our code is publicly available at https://github.com/rohban-lab/TransferBreaker.",
+      "authors": [
+        "Mojtaba Nafez",
+        "Aref Mousavi",
+        "Mohammad Ebrahim Mahdavi",
+        "Mobina Poulaei",
+        "Kiarash Kiani Feriz",
+        "Mohammad Hossein Rohban"
+      ],
+      "published": "2026-10-06",
+      "updated": "2026-10-06",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "39 pages, 5 figures",
+      "abs_url": "https://arxiv.org/abs/2610.09109",
+      "pdf_url": "https://arxiv.org/pdf/2610.09109v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/rohban-lab/TransferBreaker",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 11.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.25,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "robustness",
+          "adversarial",
+          "speech recognition",
+          "asr"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/rohban-lab/TransferBreaker)",
+      "authors_display": "Mojtaba Nafez, Aref Mousavi, Mohammad Ebrahim Mahdavi, Mobina Poulaei, Kiarash Kiani Feriz, Mohammad Hossein Rohban"
+    },
+    {
+      "arxiv_id": "2610.12754",
+      "title": "NV-Tesseract-AD: Curriculum-Enhanced Conditional Diffusion for Multivariate Time-Series Anomaly Detection",
+      "abstract": "We propose NV-Tesseract-AD, a curriculum learning-enhanced conditional diffusion framework for multivariate time-series anomaly detection. Our central hypothesis is that reconstruction difficulty can be explicitly structured along two complementary axes, masking severity and diffusion noise level, and that training from easier to harder tasks along both axes simultaneously stabilizes optimization and improves residual discriminability. We integrate a Transformer-based diffusion backbone with a three-stage dual curriculum over masking ratios and diffusion timesteps, retaining anomalous samples throughout training and relying on structured corruption to drive self-supervised representation learning. We evaluate NV-Tesseract-AD under two regimes: in-distribution training on the TSB-UAD-M corpus and strict zero-shot transfer to ten EasyTSAD benchmark families without per-dataset tuning. The dual-axis curriculum produces masking-invariant reconstruction, confirmed by a near-zero loss gap between complementary masking strategies within the first training stage, and yields an approximately 3.7-fold improvement in F1 and a 56 percent reduction in MSE relative to a non-curriculum baseline. Zero-shot performance reaches F1 = 0.984 on NAB and F1 = 0.948 on NormA. Weaker results on heterogeneous families are traced to unsupervised threshold calibration rather than reconstruction quality, identifying calibration as the dominant remaining detection bottleneck. Accelerated inference via DPM-Solver++ reduces sampling cost by a factor of 3.5 to 5.7 at the dataset level but couples to thresholding behavior, establishing that the sampler and threshold must be validated jointly. Together, these findings demonstrate that aligning diffusion denoising difficulty with curriculum learning principles provides a principled and practical approach for robust anomaly detection in complex multivariate time series.",
+      "authors": [
+        "Aditi Gautam",
+        "Manikandan Ravikiran",
+        "Saira Qureshi",
+        "Sena Fatma Ekiz",
+        "Charan Jagwani",
+        "Mahmoud Elhadidy",
+        "Sanjeev Roka"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.12754",
+      "pdf_url": "https://arxiv.org/pdf/2610.12754v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 15.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.75,
+      "score_breakdown": {
+        "keyword_raw": 13,
+        "keyword_matched": [
+          "optimization",
+          "time series",
+          "self-supervised",
+          "representation learning",
+          "calibration"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Aditi Gautam, Manikandan Ravikiran, Saira Qureshi, Sena Fatma Ekiz, Charan Jagwani, Mahmoud Elhadidy 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.07628",
+      "title": "Complementary Supervised and Self-Supervised Representations for Out-of-Distribution Graph Learning",
+      "abstract": "Out-of-distribution (OOD) generalization remains challenging for graph neural networks (GNNs), as graph distributions can vary substantially across time and domains. Supervised and self-supervised graph representation learning are guided by distinct objectives and offer different perspectives on graph representations. In this work, we study whether self-supervised representations (SSL) can provide complementary signals to improve supervised OOD node classification. We develop two backbone-agnostic frameworks that exploit such information at different stages of learning and prediction. Co-Train jointly learns supervised and SSL representations and adaptively integrates them during training, while Dual-Space Retrieval performs non-parametric prediction in the two representation spaces and combines their predictions through confidence-aware fusion at inference time. The supervised and SSL encoders are separately parameterized and need not share the same GNN architecture. We evaluate multiple GNN backbones and two distinct SSL objectives, DGI and GRACE, on four graph benchmarks spanning temporal and cross-domain distribution shifts. Extensive experiments show that Co-Train consistently outperforms strong supervised OOD baselines, while Dual-Space Retrieval achieves competitive performance as a flexible non-parametric alternative. Results across different backbones and SSL objectives, together with representation analyses and ablations, demonstrate that SSL representations provide complementary information to supervised representations and can improve OOD node classification across diverse settings.",
+      "authors": [
+        "Qingying Hao",
+        "Zikang Chen",
+        "Chuxuan Hu",
+        "Jinyuan Jia",
+        "Bo Li",
+        "Gang Wang",
+        "Carl Gunter"
+      ],
+      "published": "2026-10-06",
+      "updated": "2026-10-06",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.07628",
+      "pdf_url": "https://arxiv.org/pdf/2610.07628v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 15.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.75,
+      "score_breakdown": {
+        "keyword_raw": 13,
+        "keyword_matched": [
+          "generalization",
+          "gnn",
+          "self-supervised",
+          "representation learning",
+          "out-of-distribution"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Qingying Hao, Zikang Chen, Chuxuan Hu, Jinyuan Jia, Bo Li, Gang Wang 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.12737",
+      "title": "Kernelized Parameter Sensitivity Atlases for Amortized Conditional Interpretability",
+      "abstract": "Gradient-based attribution provides input-specific information about model parameters, but computing it via backpropagation for many samples is expensive, while static importance scores discard input dependence. We derive KPSA (Kernelized Parameter Sensitivity Atlas) from a block decomposition of the empirical neural tangent kernel. It measures normalized parameter-group sensitivity, embeds those sources in an explicit query space, and uses a lightweight kernel to estimate sensitivities for unseen inputs. We derive bounds that separate finite-source from irreducible representation error and give margin-based top-$k$ recovery. This paper studies two interpretability applications. Firstly, KPSA identifies parameter groups with high susceptibility to perturbations across vision, forecasting, and protein-modeling setups. Across a fivefold range of parameter budgets ($0.02$-$0.1\\%$), its selected groups attain $39$-$85\\%$ of the perturbation susceptibility of a first-order backpropagation oracle. In vision and forecasting, these parameter groups form sparse sensitivity circuits that extend across depth and vary systematically with the input. Secondly, we use KPSA on an activation-attribution problem for MLP features in transformers. It retains $81\\%$ of the gap between a backpropagation oracle and a constant-sensitivity baseline on vision while increasing batched query-time throughput from 551 to 2,041 images/s and reducing peak GPU memory from 4.55 to 0.44GB. On the protein-modeling task, it recovers $68\\%$ of this gap. An ablation of KPSA's kernel aggregation shows that nearest-neighbor retrieval in KPSA space can remain competitive. The empirics show that compact kernel atlases can store useful input-dependent parameter sensitivity while amortizing repeated gradient attribution, a step toward scalable conditional interpretability. Code can be found at https://github.com/Axym-Labs/kpsa .",
+      "authors": [
+        "Davide Wiest",
+        "Ahanaf Hasan Ariq",
+        "Abdul Monaf Chowdhury"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV",
+        "stat.ML"
+      ],
+      "comment": "22 pages, 10 figures. Code: https://github.com/Axym-Labs/kpsa",
+      "abs_url": "https://arxiv.org/abs/2610.12737",
+      "pdf_url": "https://arxiv.org/pdf/2610.12737v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/Axym-Labs/kpsa",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 9.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.75,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "forecasting",
+          "interpretability",
+          "protein"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/Axym-Labs/kpsa)",
+      "authors_display": "Davide Wiest, Ahanaf Hasan Ariq, Abdul Monaf Chowdhury"
+    },
+    {
+      "arxiv_id": "2610.09059",
+      "title": "EDiS: Edge Disjoint Subgraph Sparsification Framework for Graph Neural Networks",
+      "abstract": "Sparse GNN training reduces computation, but deciding which edges to keep can be costly. Reusing one sparse graph is cheap, but locks training to a fixed topology, while varying it across epochs can require repeated sampling or recomputation. We introduce EDiS (Edge-Disjoint Subgraph sparsification framework), which separates one-time structural extraction from per-epoch graph composition. EDiS decomposes the graph once into cacheable edge-disjoint subgraphs, then recombines them into graphs with edge-budget constraints across epochs and retention ratios without re-extracting structure. Our default construction uses feature-based scores and successive maximum score covering forests, while the same composition mechanism also supports alternative edge selection rules. We provide a combinatorial analysis of the per-epoch sampler, the composition step that draws a training graph from the cached decomposition. We show that, under the default covering-forest selector, the stored decomposition deterministically preserves high-score cut edges, and we derive a selector-agnostic conditional bound on high-score cut survival in composed training graphs. Across 19 homophilic, heterophilic, and large-scale node classification benchmarks against 17 baselines under the same edge budget, EDiS achieves the highest mean benchmark score (accuracy/ROC-AUC) and the lowest average rank and gap-to-best among ranked methods. Ablations show the clearest benefits of structural decomposition and epoch variation at tight edge budgets.",
+      "authors": [
+        "Sai Karthik Navuluru",
+        "Siddhartha Shankar Das",
+        "Franck Dernoncourt",
+        "S M Ferdous",
+        "Ryan A. Rossi",
+        "Nesreen K. Ahmed",
+        "Baris Coskunuzer",
+        "Alex Pothen",
+        "Lakshman Tamil",
+        "Mahantesh M Halappanavar"
+      ],
+      "published": "2026-10-06",
+      "updated": "2026-10-06",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "46 pages, including references and appendices",
+      "abs_url": "https://arxiv.org/abs/2610.09059",
+      "pdf_url": "https://arxiv.org/pdf/2610.09059v1",
+      "hf_upvotes": 6,
+      "hf_url": "https://huggingface.co/papers/2610.09059",
+      "hf_published": "2026-10-06",
+      "hf_featured": "2026-10-09",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 5.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.699,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "gnn"
+        ],
+        "category": 2.0,
+        "popularity": 2.45,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 6 赞",
+      "authors_display": "Sai Karthik Navuluru, Siddhartha Shankar Das, Franck Dernoncourt, S M Ferdous, Ryan A. Rossi, Nesreen K. Ahmed 等 10 人"
+    }
+  ]
+}

@@ -1,0 +1,988 @@
+{
+  "generated_at": "2026-10-12T22:59:53.309310+00:00",
+  "theme": "wearable-xr",
+  "theme_title": "智能眼镜 / 可穿戴 / 第一人称视觉",
+  "theme_subtitle": "AR 眼镜、头显交互、egocentric 视觉、可穿戴感知",
+  "accent": "#8a5a2b",
+  "week_start": "2026-10-06",
+  "week_end": "2026-10-12",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 20,
+  "measured_heat_count": 4,
+  "papers": [
+    {
+      "arxiv_id": "2610.09455",
+      "title": "RLHND: Video Foundation Models as Physically Grounded Hand Trackers for Robot Learning",
+      "abstract": "Recently, approaches that leverage human video datasets for robot policy training have become increasingly prevalent. However, most existing hand trackers regress pose from cropped frames with limited priors on hand motion and object interaction, resulting in inaccurate and physically inconsistent estimates. Moreover, the lack of physical cues, e.g., contact and force, limits the use of human videos for robot policy training. To this end, we propose RLHND, a video foundation model-based hand tracking model that jointly estimates hand pose and realistic tactile information from monocular egocentric videos. RLHND turns the pre-trained Cosmos 3 video diffusion backbone into a deterministic clip-level feature extractor via clean-latent conditioning, carrying its learned priors on hand motion and hand-object interaction into tracking. For pose estimation, RLHND (i) predicts hand poses with anatomically plausible joint angles and (ii) enables optional conditioning on the shape parameter to maintain consistent hand shape within the same video and even across videos recorded by the same actor. For tactile estimation, a separate tactile expert stream, trained with the pose stream frozen, predicts dense contact and force over the hand surface. We further adopt LBS-based feature spreading to enable vertex-wise feature extraction without costly per-vertex attention. RLHND achieves state-of-the-art performance across various benchmark datasets for pose estimation, while also achieving state-of-the-art performance in contact and force estimation. Moreover, we demonstrate the utility of RLHND for robot learning through retargeting results and real-world robot experiments. The code will be publicly available at https://seungjun-moon.github.io/rlhnd/.",
+      "authors": [
+        "Seungjun Moon",
+        "Subin Jeon",
+        "Sangwoo Kim",
+        "Hanbyul Joo",
+        "Jinwoo Shin"
+      ],
+      "published": "2026-10-07",
+      "updated": "2026-10-07",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "comment": "34 pages, 15 figures",
+      "abs_url": "https://arxiv.org/abs/2610.09455",
+      "pdf_url": "https://arxiv.org/pdf/2610.09455v1",
+      "hf_upvotes": 45,
+      "hf_url": "https://huggingface.co/papers/2610.09455",
+      "github_repo": "https://github.com/seungjun-moon/rlhnd",
+      "github_repo_source": "hf",
+      "github_stars": 10,
+      "project_page": "https://seungjun-moon.github.io/rlhnd/",
+      "organization": "RLWRLD",
+      "hf_published": "2026-10-07",
+      "hf_featured": "2026-10-07",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "wearable-xr",
+      "fit": 8.75,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 13.773,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "egocentric",
+          "hand tracking"
+        ],
+        "category": 0.75,
+        "popularity": 9.59,
+        "stars_counted": 10,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 45 赞 ｜ 💻 [代码](https://github.com/seungjun-moon/rlhnd)",
+      "authors_display": "Seungjun Moon, Subin Jeon, Sangwoo Kim, Hanbyul Joo, Jinwoo Shin"
+    },
+    {
+      "arxiv_id": "2610.12442",
+      "title": "LEGO: A Lifting-Free Approach for Exocentric-to-Egocentric Video Generation",
+      "abstract": "Generating an egocentric video from a single exocentric recording is a challenging case of novel view synthesis, as the two cameras share little overlap and much of the target view is unobserved. Current state-of-the-art methods reconstruct the scene explicitly by estimating depth, lifting the video into a point cloud, and re-rendering it from the egocentric camera to condition a video diffusion model. This deterministic mapping assigns each pixel to a single reprojected location, which preserves texture but translates depth errors into misplaced content. We ask what a video diffusion model should receive as its condition and propose a lifting-free answer: a learned view synthesizer, an LVSM-style transformer fine-tuned to render the egocentric view directly without depth, point clouds, or reprojection, resolving cross-view correspondence internally. In contrast, its probabilistic mapping averages each region over candidate source locations according to a learned correspondence distribution, preserving structure while fine texture is averaged away. We argue that this trade-off suits a diffusion generator, whose denoising training excels at restoring detail, so an effective condition should prioritize structural alignment over sharpness. This distribution's concentration also yields a per-region confidence, used both to mask low-confidence regions and to guide the generator toward high-confidence areas during early layout-forming denoising steps. Our approach consistently outperforms the state-of-the-art explicit pipeline and generalizes to other datasets without retraining. The synthesizer thus supplies view structure, and the diffusion model its detail.",
+      "authors": [
+        "Suhwan Cho",
+        "Yonwoo Choi",
+        "Soongjin Kim",
+        "Jicheol Park",
+        "Taegyu Lim"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.12442",
+      "pdf_url": "https://arxiv.org/pdf/2610.12442v1",
+      "hf_upvotes": 25,
+      "hf_url": "https://huggingface.co/papers/2610.12442",
+      "github_repo": "https://github.com/suhwan-cho/LEGO",
+      "github_repo_source": "hf",
+      "github_stars": 23,
+      "project_page": "https://suhwan-cho.github.io/LEGO/",
+      "organization": "25frms",
+      "hf_published": "2026-10-08",
+      "hf_featured": "2026-10-09",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "wearable-xr",
+      "fit": 5.75,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 12.251,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "egocentric"
+        ],
+        "category": 0.75,
+        "popularity": 8.81,
+        "stars_counted": 23,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 25 赞 ｜ 💻 [代码](https://github.com/suhwan-cho/LEGO)",
+      "authors_display": "Suhwan Cho, Yonwoo Choi, Soongjin Kim, Jicheol Park, Taegyu Lim"
+    },
+    {
+      "arxiv_id": "2610.12299",
+      "title": "Multi-Agent Egocentric World Model with Fine-Grained Embodied Interaction",
+      "abstract": "Egocentric world models predict first-person observations conditioned on an agent's actions, but most focus on a single agent. Real embodied settings often involve multiple agents that act and interact within a shared environment. Existing multi-agent world models rely on coarse actions like locomotion, camera control, or discrete commands, leaving fine-grained embodied interactions underexplored. We formulate multi-agent egocentric world modeling as synchronized ego-stream generation for multiple agents interacting through fine-grained actions in a shared world. This requires cross-view action consistency, shared-environment consistency, and consistent propagation of interaction-induced state updates. We propose Multi-agent Egocentric World Model (ME-World), which jointly denoises multiple ego streams in a shared token sequence, conditions each stream on all agents' target-view poses, and grounds generation with shared environment memory. We train and evaluate on real and synthetic multi-agent data and introduce shared-world consistency metrics for environment, update, and identity consistency. Experiments show ME-World improves shared-world consistency, action control, identity preservation, and video quality over existing methods.",
+      "authors": [
+        "Dahyun Chung",
+        "Siyoon Jin",
+        "Hyunwook Choi",
+        "Honggyu An",
+        "Junyoung Seo",
+        "Hyunsung Kim",
+        "Seung Wook Kim",
+        "Seungryong Kim"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.12299",
+      "pdf_url": "https://arxiv.org/pdf/2610.12299v1",
+      "hf_upvotes": 55,
+      "hf_url": "https://huggingface.co/papers/2610.12299",
+      "github_repo": "https://github.com/cvlab-kaist/ME-World",
+      "github_repo_source": "hf",
+      "github_stars": 19,
+      "project_page": "https://cvlab-kaist.github.io/ME-World/",
+      "organization": "KAIST AI",
+      "hf_published": "2026-10-08",
+      "hf_featured": "2026-10-09",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "wearable-xr",
+      "fit": 10.5,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 12.041,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "egocentric",
+          "first-person"
+        ],
+        "category": 1.5,
+        "popularity": 7.42,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 55 赞 ｜ 💻 [代码](https://github.com/cvlab-kaist/ME-World)",
+      "authors_display": "Dahyun Chung, Siyoon Jin, Hyunwook Choi, Honggyu An, Junyoung Seo, Hyunsung Kim 等 8 人"
+    },
+    {
+      "arxiv_id": "2609.38748",
+      "title": "Here the World in Stereo: Learning Dynamic Spatial Correspondence for Immersive Joint Video-Audio Generation",
+      "abstract": "Recent joint video-audio generation models have achieved strong semantic correspondence and temporal synchronization. However, applications such as AR/VR and interactive gaming further require stereo audio to provide an immersive sense, which remains largely overlooked. Effective stereo audio requires the perceived sound location to evolve consistently with the motion of its corresponding visual source. We refer to this property as Dynamic Spatial Correspondence and propose StereoBind, a framework that binds visual source motion to stereo sound generation. StereoBind uses motion tracks to coordinate visual motion and stereo audio through three complementary mechanisms. Visual Motion Binding establishes source-aware audiovisual correspondence, the Spatial Track Encoder captures absolute source positions, and Residual Track RoPE models relative motion. For supervision and evaluation, we construct StereoWorld-29K, a large-scale stereo audio-video dataset with paired motion tracks, and StereoWorldBench for measuring audiovisual spatial consistency. Experiments show that StereoBind substantially improves spatial alignment in stereo audio generation over existing models while preserving overall audiovisual quality.",
+      "authors": [
+        "Hanmo Chen",
+        "Chengcheng Liu",
+        "Tianxiao Chen",
+        "Zheyu Zhang",
+        "Siming Zheng",
+        "Jinwei Chen",
+        "Xu Yang",
+        "Cheng Deng",
+        "Bo Li",
+        "Peng-tao Jiang"
+      ],
+      "published": "2026-09-30",
+      "updated": "2026-10-08",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2609.38748",
+      "pdf_url": "https://arxiv.org/pdf/2609.38748v2",
+      "hf_upvotes": 52,
+      "hf_url": "https://huggingface.co/papers/2609.38748",
+      "github_repo": "https://github.com/vivoCameraResearch/StereoBind",
+      "github_repo_source": "hf",
+      "github_stars": 11,
+      "project_page": "https://vivocameraresearch.github.io/Stereo-Bind-Project/",
+      "hf_published": "2026-09-30",
+      "hf_featured": "2026-10-12",
+      "sources": [
+        "hf"
+      ],
+      "theme": "wearable-xr",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 10.649,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "vr",
+          "immersive"
+        ],
+        "category": 0.75,
+        "popularity": 7.21,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 52 赞 ｜ 💻 [代码](https://github.com/vivoCameraResearch/StereoBind)",
+      "authors_display": "Hanmo Chen, Chengcheng Liu, Tianxiao Chen, Zheyu Zhang, Siming Zheng, Jinwei Chen 等 10 人"
+    },
+    {
+      "arxiv_id": "2610.12248",
+      "title": "EgoVoice: Proactive Spoken Assistance from Egocentric Multimodal Streams",
+      "abstract": "Wearable augmented reality (AR) assistants are moving toward continuous real-world interaction, where they perceive the user's activity through first-person video and audio and provide timely spoken guidance without being explicitly asked. While proactive video assistants, spoken dialog systems, and egocentric task understanding have each advanced rapidly, existing systems do not address the joint problem of deciding when to speak and what to say from continuous first-person streams. We introduce EgoVoice, a framework for training and evaluating proactive egocentric spoken assistants. From HoloAssist video recordings of real human instructors, we construct clean audio streams through source separation and speech resynthesis, and convert each video session into a format where the model must decide at each moment whether to remain silent or provide spoken guidance. We fine-tune an omni-modal LLM with our data, and further improve its proactive intervention behavior with direct preference optimization. Experiments across closed and open-source models show that existing systems rarely produce well-timed, meaningful proactive interventions, while EgoVoice yields clear improvements in intervention timing, content relevance, and human preference over the zero-shot backbone.",
+      "authors": [
+        "Heeseung Kim"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CV",
+        "cs.SD"
+      ],
+      "comment": "Accepted to EMNLP 2026 (Main Conference). 25 pages, 12 figures, 11 tables. Project page: https://egocentricvoice.github.io/",
+      "abs_url": "https://arxiv.org/abs/2610.12248",
+      "pdf_url": "https://arxiv.org/pdf/2610.12248v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": "https://egocentricvoice.github.io/",
+      "theme": "wearable-xr",
+      "fit": 17.75,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 4.938,
+      "score_breakdown": {
+        "keyword_raw": 17,
+        "keyword_matched": [
+          "augmented reality",
+          "egocentric",
+          "first-person",
+          "wearable"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Heeseung Kim"
+    },
+    {
+      "arxiv_id": "2610.10538",
+      "title": "Never Look Back: Understanding Persistence in 3D Object Memory from Egocentric Videos",
+      "abstract": "As we move through the world and carry out everyday tasks, we encounter objects that may become relevant only later. We are capable of recalling where we left something or what was inside a container, even without knowing we would need it later. Here, we study how an embodied assistant can build a similar memory from egocentric videos, by observing a person's day-to-day activities. We present Ledger, a persistent 3D object memory that combines object locations, their histories, and contextual descriptions. It associates observations across the recording and retains objects after they leave the view, including those the person never touches. It clusters each object's observations by resting locations and records a move only after repeated evidence, reducing the effect of localization noise. Short descriptions preserve details such as an object's contents or supporting surface. It saves these records to later answer spatial questions without having to access the original images or video. Our memory raises HD-EPIC accuracy from 29.7% to 42.6%, UCS-Bench accuracy from 33.8% to 38.5% and localizes Ego4D objects with a 0.99 m median error on returned predictions. Our analyses identify complementary roles for temporal persistence, contextual descriptions, and retrieval. Our study on 100 stitched streams of multiple scenes each further exposes failures in both retrieval and construction. Per-scene construction partially recovers the performance lost across scene changes compared to that of single scene streams.",
+      "authors": [
+        "Shravan Chaudhari",
+        "William Paul",
+        "Suchi Saria",
+        "Rama Chellappa",
+        "Homanga Bharadhwaj"
+      ],
+      "published": "2026-10-07",
+      "updated": "2026-10-07",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "comment": "Project page: https://ledger-3d.github.io . Code: https://github.com/LEDGER-3D/LEDGER",
+      "abs_url": "https://arxiv.org/abs/2610.10538",
+      "pdf_url": "https://arxiv.org/pdf/2610.10538v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/LEDGER-3D/LEDGER",
+      "github_repo_source": "abstract",
+      "project_page": "https://ledger-3d.github.io",
+      "theme": "wearable-xr",
+      "fit": 10.5,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 4.625,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "egocentric",
+          "ego4d"
+        ],
+        "category": 1.5,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/LEDGER-3D/LEDGER)",
+      "authors_display": "Shravan Chaudhari, William Paul, Suchi Saria, Rama Chellappa, Homanga Bharadhwaj"
+    },
+    {
+      "arxiv_id": "2610.12735",
+      "title": "Reference-Free Food Volume Estimation from Egocentric Stereo Video",
+      "abstract": "Current stereo vision-based approaches for food portion estimation are hindered by the user burden of using a mobile phone to capture multiple images or placing a reference object in the scene for scale calibration. As a step towards passive dietary intake monitoring, we introduce a method that uses stereo video from a wearable egocentric device to reconstruct food items in true physical scale to accurately estimate volume. By utilizing FoundationStereo for zero-shot stereo matching, SAM 2 for food segmentation, and TSDF fusion over a set of keyframes, our method yields a visually and metrically accurate 3D mesh of any plated food item from a single stereo recording. We leverage the unique offerings of wearables, such as a factory-calibrated stereo baseline and camera poses estimated on-device via visual-inertial odometry (VIO), to perform fully automatic reconstruction without a scale reference object in the scene. We show strong initial volume estimation results across five recorded food items, achieving a mean absolute percentage error of 9.1%.",
+      "authors": [
+        "Vivan Kumar",
+        "Gautham Vinod",
+        "Fengqing Zhu"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "9 pages, 4 figures, 1 table",
+      "abs_url": "https://arxiv.org/abs/2610.12735",
+      "pdf_url": "https://arxiv.org/pdf/2610.12735v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 15.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.938,
+      "score_breakdown": {
+        "keyword_raw": 15,
+        "keyword_matched": [
+          "egocentric",
+          "wearable",
+          "wearables",
+          "on-device"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Vivan Kumar, Gautham Vinod, Fengqing Zhu"
+    },
+    {
+      "arxiv_id": "2610.09304",
+      "title": "emg2face: Expressive Facial Animation with High-Density Surface EMG",
+      "abstract": "Facial movements convey subtle and important information that is critical for human social communication. Optical methods for face capture are difficult or impossible to use when the face is occluded by head-mounted devices (HMDs), such as VR headsets. Even with a clear line of sight, such methods raise privacy concerns and require head-mounted capture rigs that offset cameras and lighting from the face. We show that high-density surface electromyography (HD-sEMG) provides a viable non-optical alternative that addresses these challenges. We measured 64 EMG channels, using two textile EMG grids, with 32 from the forehead (typically occluded by an HMD) and 32 from the side of the face. EMG data were digitized at 2048 Hz and filtered. Facial movements were simultaneously recorded and used to estimate 478 3D facial landmarks using MediaPipe's Face Landmarker. A major challenge in such multimodal recordings is synchronizing EMG and video data, which have different sampling frequencies and independent clocks. We developed a novel synchronization method using analog audio bursts that is capable of sub-millisecond synchronization. We also developed a staged fitting method that fits a recent high-resolution parametric head model (GNM), with 253 identity blendshapes and 383 expression blendshapes, to the MediaPipe landmarks as participants performed different facial expressions. We trained a deep neural network comprising per-grid spatial encoders followed by a dilated temporal convolutional network (TCN) to predict blendshape parameters from HD-sEMG signals at 100 Hz. Once trained, the network can predict expression blendshapes solely from HD-sEMG recordings. The output can be rendered using standard real-time blendshape animation methods. We demonstrate the methods using recordings from 25 participants, and direct expression transfer to a variety of human faces and non-human characters.",
+      "authors": [
+        "Ganidhu Abey",
+        "Wendy Greening",
+        "Ashika Kamboj",
+        "Leonhard Helminger",
+        "Abhijeet Ghosh",
+        "Karel Petranek",
+        "Sergio Orts Escolano",
+        "Dinesh K. Pai"
+      ],
+      "published": "2026-10-07",
+      "updated": "2026-10-07",
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.CV",
+        "cs.ET",
+        "cs.LG"
+      ],
+      "comment": "12 pages plus supplmentary material",
+      "abs_url": "https://arxiv.org/abs/2610.09304",
+      "pdf_url": "https://arxiv.org/pdf/2610.09304v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 14.5,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 3.625,
+      "score_breakdown": {
+        "keyword_raw": 13,
+        "keyword_matched": [
+          "head-mounted",
+          "hmd",
+          "vr",
+          "emg"
+        ],
+        "category": 1.5,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Ganidhu Abey, Wendy Greening, Ashika Kamboj, Leonhard Helminger, Abhijeet Ghosh, Karel Petranek 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.09818",
+      "title": "AI-Driven Urge Regulation Assistant (AURA): Designing Preemptive Smart Wearables for Smoking Cessation",
+      "abstract": "Smoking cessation remains a complex self-regulatory challenge, often undermined by cue-triggered cravings arising from habitual, emotional, and social contexts. Existing wearable cessation systems are largely reactive, detecting smoking events only after lapses occur and thus missing the critical window for timely intervention. Guided by cue-reactivity theory and Self-Determination Theory (SDT), we argue that future digital health systems should shift from retrospective feedback toward proactive craving management that supports user autonomy and competence. To inform the design of such systems, we present a formative pilot qualitative study involving semi-structured interviews with 10 smokers and ex-smokers from a multi-ethnic Asian population, a demographic underrepresented in current wearable AI and smoking cessation research. Through an iterative co-design interview process, we examine (1) the barriers and facilitators to smoking cessation and (2) the desired design features of wearable systems targeting cravings before lapses occur. Our findings identify key craving predictors across habitual, emotional, and social dimensions, alongside user-preferred intervention strategies such as social accountability, personalized support, rewards, and just-in-time distraction techniques. Participants also emphasized the importance of trust, privacy, personalization, and non-judgmental interaction styles. These insights directly inform the design of AURA, a novel smartwatch-smartphone ecosystem for proactive craving detection and intervention using commercially available wearable devices.",
+      "authors": [
+        "Antoni Timothy",
+        "Lam Fu Yuan Kevin",
+        "Hou Junyi",
+        "Cheong Wei Soon"
+      ],
+      "published": "2026-10-07",
+      "updated": "2026-10-07",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.09818",
+      "pdf_url": "https://arxiv.org/pdf/2610.09818v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 13.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.25,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "wearable",
+          "wearables",
+          "smartwatch"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Antoni Timothy, Lam Fu Yuan Kevin, Hou Junyi, Cheong Wei Soon"
+    },
+    {
+      "arxiv_id": "2610.13435",
+      "title": "PPG-Bench: A Unified Benchmark for PPG Foundation Models",
+      "abstract": "Photoplethysmography (PPG) is increasingly recorded by wearable and clinical devices at enormous scale, and a growing number of PPG foundation models (FMs) have been developed to compute reusable representations for various downstream tasks. These models are difficult to compare: different evaluations use different datasets, task definitions, preprocessing, downstream heads, hyperparameter tuning, and baselines. We present PPG-Bench, a unifying open-source benchmark evaluating five public PPG FMs across nine open-access datasets and 26 tasks spanning cardiovascular state estimation, activity, sleep, screening, and identification. We evaluate models under four downstream regimes of increasing adaptability (linear probing, random forests, frozen MLP probes, and end-to-end finetuning), with model-specific hyperparameter optimization and subject-disjoint cross-validation. We also evaluate against three controls: random/constant baseline, a deterministic pulse-rate-variability (PRV) feature set, and a generic time-series FM (MOMENT). Across all 68 task-regime combinations, 35.3% show no meaningful FM advantage over the random/constant baseline, and in 83.8% no PPG-specific FM outperforms both PRV and MOMENT. We also find that added downstream head capacity generally improves performance, but can cause significant degradation if the model is performing at chance/constant level. Current PPG FMs therefore cannot yet claim to provide generalised and transferrable representations of PPG signals, and future evaluation in this field should include checks against simple, non-learned controls. Code for the benchmark and instructions to evaluate more models can be found here - https://github.com/mannas-ai/ppg-bench.",
+      "authors": [
+        "Arvasu Kulkarni",
+        "Mahir Jain",
+        "Aditya Ray Mishra",
+        "Sandeep Singh",
+        "Siddharth Panwar"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.13435",
+      "pdf_url": "https://arxiv.org/pdf/2610.13435v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/mannas-ai/ppg-bench",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 4.0,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 2.5,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "wearable"
+        ],
+        "category": 0.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": null,
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/mannas-ai/ppg-bench)",
+      "authors_display": "Arvasu Kulkarni, Mahir Jain, Aditya Ray Mishra, Sandeep Singh, Siddharth Panwar"
+    },
+    {
+      "arxiv_id": "2610.08192",
+      "title": "MacJEPA: Missingness-Robust Audio-Visual Recognition from Untrimmed Egocentric Videos",
+      "abstract": "Audio-visual models improve egocentric action recognition by exploiting complementary cues, yet typically assume that both streams remain available at inference. Existing missing-modality methods operate on trimmed, single-event clips in which a stream is entirely present or absent, whereas real sensors fail and recover within long, untrimmed observations. We redefine egocentric modality missingness as temporally localized sensor outages within untrimmed, multi-event observations, with whole-clip absence as the limiting case. We introduce \\textbf{MacJEPA}, a missing-modality-robust \\textbf{Ma}sked-\\textbf{c}ontext query \\textbf{JEPA} that recognizes visual actions and acoustic events from supplied interval queries over audio-visual context. Window-local modality dropout simulates these sensor outages during training. MacJEPA further repurposes masking in JEPA from a self-supervised pretext into a supervised robustness objective, aligning masked and clean latent representations of both multimodal content tokens and the task-conditioned queries. All objectives are optimized jointly with recognition in a single stage, requiring no test-time adaptation. Across Epic-Kitchens-100 and Epic-Sounds, a single checkpoint remains competitive under complete input and consistently surpasses published missing-modality baselines when either the dominant or auxiliary stream is removed. MacJEPA thus unifies strong full-input recognition with temporal missing-modality robustness in a single model operating on untrimmed multi-event videos.",
+      "authors": [
+        "Souptik Sen",
+        "Zahra Ahmadi"
+      ],
+      "published": "2026-10-06",
+      "updated": "2026-10-09",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.08192",
+      "pdf_url": "https://arxiv.org/pdf/2610.08192v2",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 9.75,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 2.438,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "egocentric",
+          "epic-kitchens"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Souptik Sen, Zahra Ahmadi"
+    },
+    {
+      "arxiv_id": "2610.09284",
+      "title": "Beyond Activation: Gaze Invocation with Visible Status for an Embodied AR Assistant in Co-Located Collaboration",
+      "abstract": "Wake words face an inherent trade-off: higher sensitivity reduces missed commands but increases accidental activations. In co-located augmented reality (AR), the system must also determine whether the user is speaking to the assistant or to a nearby person. We introduce a new perspective on this problem: combining gaze-based address with an embodied assistant, visible listening status, and turn management across activation, continued interaction, and release. In our implementation, users look at an assistant anchored in the scene and see activation progress and listening status on its body. Sustained gaze opens a local interaction channel; speech and playback keep it open when attention returns to the task; and inactivity closes it. We evaluated this design with 25 participants. After selecting the assistant's placement and dwell duration, each participant worked with a partner to plan a trip while using the assistant. The study recorded 500 interaction outcomes, including 496 assistant-directed utterance attempts. Gaze acquisition completed before speech for 490 of these attempts (98.8\\%): 467 began while the channel remained open, whereas 23 began after it had been released. The other 6 attempts began before acquisition completed. Among 102 reviewed attempts in which gaze left after acquisition but before speech, the configured retention policy kept the channel open for 79 and released it before 23. The results show that an embodied target with visible status can support clear entry into an assistant interaction while revealing a different problem at release: after users look back to their work, they may not see that the assistant has stopped listening. We contribute the implemented gaze-invocation design and design implications for communicating assistant state after visual attention moves elsewhere.",
+      "authors": [
+        "Chenrui Ma",
+        "Yoshio Ishiguro",
+        "Qing Zhang"
+      ],
+      "published": "2026-10-07",
+      "updated": "2026-10-07",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": "11 pages, 9 figures, 2 tables",
+      "abs_url": "https://arxiv.org/abs/2610.09284",
+      "pdf_url": "https://arxiv.org/pdf/2610.09284v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 9.0,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 2.25,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "augmented reality",
+          "gaze"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Chenrui Ma, Yoshio Ishiguro, Qing Zhang"
+    },
+    {
+      "arxiv_id": "2610.12703",
+      "title": "Bridging Human and Model Attention: Explainability Analysis of CNN, Mamba, and ViT Architectures with Gaze-Based Validation",
+      "abstract": "High-risk applications of deep learning require precise characterization of model decision-making. We conduct a systematic explainability evaluation across Convolutional Neural Networks (CNNs), Vision Transformers (ViTs), and Vision Mamba (ViM). Unlike predominantly qualitative studies, we quantify the alignment between model attention and human visual perception using eye-tracking ground truth. We formalize this comparison via a standardized normalization pipeline mapping post-hoc attribution maps and gaze heatmaps onto spatial probability distributions. Alignment is evaluated across fine-grained classification, medical imaging, and emotion recognition using architecture-specific XAI methods. We measure fidelity using Jensen-Shannon similarity, Chi-square similarity, and Pearson correlation, three complementary estimators capturing support overlap, mass discrepancy, and structural co-variation. Our results reveal distinct attention dynamics: CNNs tend to exhibit a more global focus, with spatially more diffuse saliency maps that correlate well with human perception in general contexts, while ViTs demonstrate fine-grained, patch-level attention, often focused on discriminative microfeatures. The Mamba architecture shows biased behavior: it achieves strong explainability in medical tasks but exhibits divergent intensity distributions in natural images; our analytical characterization of the metrics makes this dissociation explicit, since near-unit support overlap is attained simultaneously with a vanishing linear correlation. We further analyze the effect of backbone freezing and ensemble strategies on model interpretability. The results highlight how architectural and training choices influence the alignment between model saliency and human visual attention.",
+      "authors": [
+        "Marco Stefani",
+        "Edoardo Parpaiola",
+        "Matteo Bino",
+        "Gianluca Caregnato",
+        "Francesco Roncolato",
+        "Daniel Fusaro",
+        "Loris Nanni",
+        "Alberto Pretto"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "comment": "Submitted to Image and Vision Computing",
+      "abs_url": "https://arxiv.org/abs/2610.12703",
+      "pdf_url": "https://arxiv.org/pdf/2610.12703v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 8.75,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 2.188,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "gaze",
+          "eye-tracking"
+        ],
+        "category": 1.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Marco Stefani, Edoardo Parpaiola, Matteo Bino, Gianluca Caregnato, Francesco Roncolato, Daniel Fusaro 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.12455",
+      "title": "Hybrid Cinematography: Previsualizing and Managing Hallucination Risk in Generative Video Reshooting",
+      "abstract": "On a film set, the camera move is committed during a take. Generative video reshooting lets filmmakers change it afterward, but may require hallucinating unrecorded content, a gap sometimes discovered only after leaving the set. We present Hybrid Cinematography, a workflow that bridges physical capture and generative reshooting to manage hallucination risk while filmmakers can still act on it. Using an editable 3D shot plan and a proxy of the take, our previsualization evaluates hallucination risk in real time. Seeing where the take lacks support, filmmakers can iteratively adjust the plan, explore moves that balance capture and generation, shoot guided pickups, or knowingly accept hallucination. We demonstrate the workflow through a mobile augmented reality application for on-set planning, capture, and review, and an offline pipeline for existing video. A study with experienced filmmakers reveals how previsualizing risk informs camera decisions and exposes tensions between creative intent and generative hallucination.",
+      "authors": [
+        "Nhan",
+        "Tran",
+        "Neal Wadhwa",
+        "Abe Davis",
+        "Stefan Stojanov"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.CV"
+      ],
+      "comment": "Project page: https://hybridcinematography.github.io/",
+      "abs_url": "https://arxiv.org/abs/2610.12455",
+      "pdf_url": "https://arxiv.org/pdf/2610.12455v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": "https://hybridcinematography.github.io/",
+      "theme": "wearable-xr",
+      "fit": 6.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 2.188,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "augmented reality"
+        ],
+        "category": 2.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Nhan, Tran, Neal Wadhwa, Abe Davis, Stefan Stojanov"
+    },
+    {
+      "arxiv_id": "2610.08305",
+      "title": "Hugging Suit: Pneumatically-Actuated System Design for Remote Haptic Experiences",
+      "abstract": "The COVID-19 pandemic emphasised the importance of remote emotional communication and highlighted a gap in existing technologies that lack haptic channels. While video calls maintain visual and auditory presence, they cannot convey the emotional depth of physical contact, especially hugging, a universally recognised form of intimacy and support. To explore this challenge, we developed the Hugging Suit, a pneumatically-actuated wearable system that enables users to simulate and receive remote hugs in real time. Unlike prior haptic systems that focus solely on tactile sensation, our approach integrates both technical and experiential considerations. The system integrates a programmable Air Actuator Matrix (AAM), a portable high-pressure pneumatic unit, and a fabric-based pressure sensor layer, enabling precise, wearable haptic feedback while remaining lightweight and mobile. Guided by a Research through Design (RtD) methodology, we iteratively refined the prototype to improve tactile resolution, overall usability, and user comfort, while introducing modular components to support flexible and scalable haptic configurations. In parallel, we explored how specific contextual factors, such as lighting, privacy, and the visibility of the remote partner, might shape the emotional and perceptual experience of receiving a remote hug. Preliminary feedback suggests that low-lit, private spaces, especially when users could also see their remote partner via video, improved emotional engagement and comfort during mediated haptic experiences. Our low-cost, maker-space-friendly approach contributes to affective haptics applications in long-distance relationships, emotional regulation, and remote therapeutic support.",
+      "authors": [
+        "Russian",
+        "Wu",
+        "Luke Hespanhol",
+        "Marius Hoggenmueller",
+        "Hannes Waldschütz",
+        "Eva Hornecker"
+      ],
+      "published": "2026-10-06",
+      "updated": "2026-10-06",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.ET"
+      ],
+      "comment": "Accepted Work in Progress at the IEEE World Haptics Conference 2025, July 8-11, 2025, Suwon, South Korea. 2 pages, 1 figure",
+      "abs_url": "https://arxiv.org/abs/2610.08305",
+      "pdf_url": "https://arxiv.org/pdf/2610.08305v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 8.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 2.0,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "wearable",
+          "haptic"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Russian, Wu, Luke Hespanhol, Marius Hoggenmueller, Hannes Waldschütz, Eva Hornecker"
+    },
+    {
+      "arxiv_id": "2610.10370",
+      "title": "PalmSpace: Towards a Versatile On-Palm Interaction Space through Unified Touch Modeling",
+      "abstract": "As smart glasses and lightweight MR devices become increasingly practical, input remains a key challenge. The bare palm is an always-available, tactile, and proprioceptively accessible surface, but it has neither an explicit coordinate system nor embedded touch sensing. Prior on-palm systems typically expose isolated touch events, discrete regions, continuous trajectories, or task-specific gestures, limiting the palm's ability to support precise selection and gesture manipulation through a common input representation. We present PalmSpace, a wrist-worn infrared system that exposes mode-aware, body-referenced absolute input on the bare palm without per-user sensing calibration. At the interaction level, PalmSpace jointly represents contact occurrence, interaction mode, and palm-referenced absolute location; at the model level, it learns these coupled outputs through a shared real-time representation. In leave-one-participant-out evaluation with 17 participants, PalmSpace achieved 6.7 mm mean localization error, 98.9% contact detection accuracy, and 96.7% F1 for four-class interaction-state recognition. User studies further demonstrated absolute pointing and dragging, eyes-free digit input, and representative multi-finger controls including scrolling and pinch-based map manipulation. These results show that a morphologically variable bare palm can function as a transferable, mode-aware interaction surface.",
+      "authors": [
+        "Chentao Li",
+        "Mingze Gao",
+        "Runze Sun",
+        "Zhaoguo Wang",
+        "Jianjiang Feng",
+        "Jie Zhou"
+      ],
+      "published": "2026-10-07",
+      "updated": "2026-10-07",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.CV"
+      ],
+      "comment": "Preprint. Initial version",
+      "abs_url": "https://arxiv.org/abs/2610.10370",
+      "pdf_url": "https://arxiv.org/pdf/2610.10370v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 7.75,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 1.938,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "smart glasses"
+        ],
+        "category": 2.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Chentao Li, Mingze Gao, Runze Sun, Zhaoguo Wang, Jianjiang Feng, Jie Zhou"
+    },
+    {
+      "arxiv_id": "2610.12926",
+      "title": "What Egocentric Video Embeddings Encode and How to Combine Them with Inertial Sensors for Human Activity Recognition",
+      "abstract": "Egocentric video and body-worn inertial sensors are increasingly recorded together, and the video is usually encoded by pretrained models. What these embeddings represent when the camera sits on the head, and how they should be combined with inertial sensing, has received little attention. Across VideoMAEv2, CLIP, DINOv2 and the egocentric VC-1, the leading principal directions of the embedding are dominated by where the camera looks. Measured head orientation explains them on Ego-Exo4D for egocentric (R^2 0.49-0.70) but not exocentric cameras, and the scene layout explains them on WEAR. The part that the limbs' inertial signals predict separates activities across people. In a set-level probe, the rest separates exercise sets within a participant but not activities across people. This is consistent with separate roles: the video finds the clips of the same set, and the inertial classifier labels them. On WEAR, with temporal order removed and one random limb per one-second clip, we propagate inertial predictions over a within-participant video graph whose leading components are removed. This raises subject-wise cross-validated macro-F1 from 0.648 to 0.852. In our comparisons, propagation helps only over the video graph, and fusing the modalities in one classifier, or adding inertial edges to the graph, performs worse.",
+      "authors": [
+        "Kansuke Habano"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "31 pages, 11 figures, 11 tables. Solution to the 3rd WEAR Dataset Challenge @ HASCA 2026",
+      "abs_url": "https://arxiv.org/abs/2610.12926",
+      "pdf_url": "https://arxiv.org/pdf/2610.12926v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.438,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "egocentric"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Kansuke Habano"
+    },
+    {
+      "arxiv_id": "2610.11347",
+      "title": "EgoPhys: Estimating Peak Contact Force and Mechanical Work from Egocentric Manipulation Video",
+      "abstract": "Physically grounded manipulation of articulated objects requires understanding both the maximum forces encountered during contact and the work performed as their parts move. Peak contact force and mechanical work quantify these complementary aspects, but estimating them from egocentric video is challenging because physical interaction cues are local and indirect. Moreover, peak force is associated with brief contact events, whereas mechanical work depends on force-motion coupling throughout the contact duration. To address these challenges, we propose EgoPhys, an RGB-only framework comprising Contact-Aware Spatial Aggregation (CASA) and Target-Specific Multi-Expert Temporal Routing (TMTR). CASA integrates appearance and geometry features to emphasize interaction-relevant cues, while TMTR models semantic, event, and motion cues with specialized temporal experts and routes them separately for force and work prediction. On the test split from Hoi! dataset, EgoPhys substantially improves predictions of peak force and mechanical work, achieving MAEs of \\(5.205 \\pm 0.584\\) $N$ and $0.894 \\pm 0.081$ $J$, respectively.",
+      "authors": [
+        "Zhuo Dong",
+        "Jianhua Yang",
+        "Haohao Li",
+        "Yumeng Zhao",
+        "Keji He",
+        "Yan Huang",
+        "Liang Wang"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.11347",
+      "pdf_url": "https://arxiv.org/pdf/2610.11347v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.438,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "egocentric"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Zhuo Dong, Jianhua Yang, Haohao Li, Yumeng Zhao, Keji He, Yan Huang 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.08684",
+      "title": "RenderBench: Benchmarking Render-to-Real Video Transfer with Reconstructed Digital Twins",
+      "abstract": "Modern video models can generate realistic videos from real appearance references and proxy renders that specify scene structure, viewpoint changes, and motion. Evaluating this render-to-real capability requires a real target video depicting the same scene evolution, paired with an editable, geometrically registered 3D replica. Such data has traditionally required substantial manual modeling, calibration, and animation effort. We introduce RenderBench, a benchmark of 12 reconstructed real-world scenes spanning large-scale indoor environments and egocentric viewpoints, with both static and dynamic settings. Our construction pipeline combines visual geometry, neural reconstruction, and assisted 3D authoring. Each scene is decomposed into static objects and dynamic actors, registered to the capture cameras, and accepted only after multi-view geometric and temporal validation. Each evaluation unit contains appearance reference images, a held-out real target video, an editable digital twin, a matched proxy render, and renderer-native scene annotations. We evaluate transfer models against paired real target videos, retain PAI-Bench-C-compatible structural projections, and use scene annotations to localize failures by object, visibility, articulation, and motion. The first release retains 12 of 14 registered samples (85.7%), comprising 1,496 paired real-proxy frames. All released scenes pass file-integrity and environment-edit audits, while proxy diagnostics yield a depth si-RMSE of 0.2170 and instance mIoU of 0.3673. RenderBench provides paired real observations and editable scene state for assessing both appearance fidelity and preservation of geometry and dynamics.",
+      "authors": [
+        "Dicong Qiu",
+        "Zhiyuan Xu",
+        "Yaosheng Liu",
+        "Feng Han",
+        "Bo Ye"
+      ],
+      "published": "2026-10-06",
+      "updated": "2026-10-06",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "10 pages, 4 figures, 2 tables",
+      "abs_url": "https://arxiv.org/abs/2610.08684",
+      "pdf_url": "https://arxiv.org/pdf/2610.08684v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.438,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "egocentric"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Dicong Qiu, Zhiyuan Xu, Yaosheng Liu, Feng Han, Bo Ye"
+    },
+    {
+      "arxiv_id": "2610.11638",
+      "title": "UXBench Pro: Benchmarking Personalized User Experience in Multi-Turn Dialogue Interactions",
+      "abstract": "Evaluating user experience (UX) with automated computational methods has gained increasing attention, supported by empirical evidence from UXBench. However, binary preference prediction provides limited insight, while relying on a single user-agnostic reward model overlooks the inherent heterogeneity of users, whose expectations can differ substantially. In this paper, we present UXBench Pro, comprising 1{,}000 test instances derived from real user interactions across 12 task scenarios and 82 domains. Each instance is paired with a FACTORS user profile that characterizes the user through seven interpretable behavioral facets, differentiating user groups. To provide richer evaluation insights, we introduce a dual-perspective paradigm that combines a personalized User Reward Model (URM) for third-person judgment with Sim4Eval, a user simulator that enables multi-turn interactions and provides first-person evaluation across four cognitive state dimensions. To assess the reliability of these based evaluators, we further introduce two meta-benchmarks, URMBench and USimBench, that evaluate how faithfully they reproduce real human preferences and behaviors. Extensive experiments reveal seven key findings that highlight the importance of user modeling and multi-perspective evaluation, offering a fresh perspective on user-centric benchmarking and motivating personalized model optimization.",
+      "authors": [
+        "Mengze Hong",
+        "Zeyang Lei",
+        "Wenbo Shang",
+        "Xia Zeng",
+        "Xiying Zhao",
+        "Qi Zhu",
+        "Chen Jason Zhang",
+        "Di Jiang",
+        "Taiming Fu",
+        "Qiongyi Zhou",
+        "Qinghe Chang",
+        "Fubao Zhang",
+        "Chenxuan Ma",
+        "Minlong Peng",
+        "Jinfeng Huang",
+        "Zineng Zhou",
+        "Jindou Wu",
+        "Muge Qi",
+        "Sijun He",
+        "Xin Cui",
+        "Di Liang",
+        "Yuan Hua",
+        "Davey Chen"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.11638",
+      "pdf_url": "https://arxiv.org/pdf/2610.11638v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 4.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 1.0,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "first-person"
+        ],
+        "category": 0.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Mengze Hong, Zeyang Lei, Wenbo Shang, Xia Zeng, Xiying Zhao, Qi Zhu 等 23 人"
+    }
+  ]
+}
