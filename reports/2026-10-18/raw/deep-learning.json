@@ -1,0 +1,1268 @@
+{
+  "generated_at": "2026-10-19T03:55:50.380424+00:00",
+  "theme": "deep-learning",
+  "theme_title": "其他深度学习",
+  "theme_subtitle": "架构、优化、表征学习、语音与可解释性",
+  "accent": "#7a5a2b",
+  "week_start": "2026-10-12",
+  "week_end": "2026-10-18",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 180,
+  "measured_heat_count": 21,
+  "papers": [
+    {
+      "arxiv_id": "2610.21601",
+      "title": "Waypoint-OPD: Transferring RL-Induced Policy Shifts via Gated On-Policy Distillation",
+      "abstract": "Policy-shift distillation reuses the difference between a teacher's log probabilities before and after reinforcement learning (RL) as supervision on student-generated trajectories. However, this endpoint policy shift cannot reveal whether local action preferences evolved consistently during teacher training. The same endpoint shift can result from early and late shifts that reinforce or partially cancel each other. We investigate whether agreement between early and late teacher policy shifts can guide selective transfer. We introduce Waypoint-guided On-Policy Distillation (Waypoint-OPD), which uses an intermediate teacher checkpoint from the same RL run to compare early and late shifts in relative action preferences at student-visited prefixes. We gate the endpoint shift according to the directional agreement between the early and late shifts, suppressing it when they point in opposing directions. Compared with endpoint-only transfer, our method requires only one additional frozen-teacher scoring pass. Using RL-trained Qwen3-4B teachers, we evaluate our method with Qwen3-8B, Qwen3-14B, and Qwen3-30B-A3B as student models in mathematical and code reasoning. In all six domain--student settings, Waypoint-OPD achieves the highest domain-average score among the compared distillation methods. Ablations with the Qwen3-8B student show that removing or shuffling gates reduces mathematical reasoning performance. These results support the use of directional agreement between early and late teacher policy shifts to weight the endpoint shift during student training.",
+      "authors": [
+        "Bingxi Hou",
+        "Guochao Jiang",
+        "Guofeng Quan",
+        "Weiqing Li",
+        "Wenfeng Feng",
+        "Guohua Liu",
+        "Yuewei Zhang"
+      ],
+      "published": "2026-10-15",
+      "updated": "2026-10-15",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.21601",
+      "pdf_url": "https://arxiv.org/pdf/2610.21601v1",
+      "hf_upvotes": 669,
+      "hf_url": "https://huggingface.co/papers/2610.21601",
+      "github_repo": "https://github.com/hhhbxloveai/WaypointOPD",
+      "github_repo_source": "hf",
+      "github_stars": 4,
+      "hf_published": "2026-10-15",
+      "hf_featured": "2026-10-16",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 29.796,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 2.0,
+        "popularity": 27.8,
+        "stars_counted": 4,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 669 赞 ｜ 💻 [代码](https://github.com/hhhbxloveai/WaypointOPD)",
+      "authors_display": "Bingxi Hou, Guochao Jiang, Guofeng Quan, Weiqing Li, Wenfeng Feng, Guohua Liu 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.18773",
+      "title": "Jeva: System One Models from First Principles",
+      "abstract": "System one models enable direct, low-latency decision-making. Yet recent practice of predicting an answer from serialized text does not, by itself, respect the structure of a decision problem. We argue that current designs underemphasize four important structural requirements. (i) null-aware: Models should distinguish answer absence from uncertainty among candidates; (ii) permutation-invariant: Reordering alternatives should not change the decision; (iii) option-scalable: Growing candidate sets should not require redefining the output space; (iv) cacheable: Request-independent computation over recurring alternatives should be reusable across requests. We introduce Jeva, a decision-native architecture that addresses these requirements jointly. A shared encoder independently represents the request and each option, while a compact decision stack refines only the request state against immutable option memory. Symmetric aggregation yields permutation-equivariant probabilities; shared scoring accommodates variable-size candidate sets. A separate coverage estimate distinguishes answer absence from candidate competition, enabling explicit null outcomes. Request-independent option representations and layer projections support reuse across newly assembled sets. These mechanisms unify Choice, Noul, and Score outputs. Across evaluations, Jeva combines strong typed-decision performance with near-perfect null detection and no decision flips under any tested permutations. It scales to thousands of candidates and substantially reduces latency through cross-request reuse without changing decisions.",
+      "authors": [
+        "Qi Li",
+        "Xinchao Wang"
+      ],
+      "hf_upvotes": 419,
+      "hf_url": "https://huggingface.co/papers/2610.18773",
+      "github_repo": "https://github.com/LiQiiiii/Jeva",
+      "github_repo_source": "hf",
+      "github_stars": 103,
+      "project_page": "https://liqiiiii.github.io/Jeva/",
+      "organization": "National University of Singapore",
+      "hf_published": "2026-10-13",
+      "hf_featured": "2026-10-14",
+      "abs_url": "https://arxiv.org/abs/2610.18773",
+      "pdf_url": "https://arxiv.org/pdf/2610.18773",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 28.543,
+      "score_breakdown": {
+        "keyword_raw": 2,
+        "keyword_matched": [
+          "uncertainty"
+        ],
+        "category": 0.0,
+        "popularity": 26.04,
+        "stars_counted": 103,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 419 赞 ｜ 💻 [代码](https://github.com/LiQiiiii/Jeva)",
+      "authors_display": "Qi Li, Xinchao Wang"
+    },
+    {
+      "arxiv_id": "2610.16794",
+      "title": "TPPO: Tracking-Value PPO For Language Model Reasoning",
+      "abstract": "Proximal Policy Optimization (PPO) is widely used in reinforcement learning with verifiable rewards for language-model reasoning. While value evolution along trajectory characterizes relative token-level credit, yet standard critics often fail to track it under sparse terminal rewards. To model this evolution, we analyze the relation between successive prefix values and show that they admit a Bayesian decomposition with additive updates in log-odds space. We use this additive structure to construct Tracking-Value PPO (\\method), a cumulative value parameterization that sums position-wise scalar outputs into value logits. These outputs are learned through terminal-outcome supervision on the reconstructed values. \\method improves aggregate mathematical reasoning scores over PPO by 7.0 and 8.4 points on Qwen3-4B-Base and Qwen3-8B-Base, respectively, while improving out-of-distribution generalization. Gains extend to Qwen3-4B, Qwen2.5-Math-1.5B, Qwen3.5-9B and to countdown, and scientific coding tasks. Further analysis shows more accurate tracking of value evolution and more reliable advantage estimates. Our code is publicly available in https://github.com/LINs-lab/TPPO.",
+      "authors": [
+        "Futing Wang",
+        "Chenxi Li",
+        "Jianhao Yan",
+        "Yun Luo",
+        "Zhi Wang",
+        "Yizhuo Li",
+        "Runzhe Zhan",
+        "Yu Cheng",
+        "Tao Lin"
+      ],
+      "hf_upvotes": 95,
+      "hf_url": "https://huggingface.co/papers/2610.16794",
+      "github_repo": "https://github.com/LINs-lab/TPPO",
+      "github_repo_source": "hf",
+      "github_stars": 19,
+      "hf_published": "2026-10-12",
+      "hf_featured": "2026-10-14",
+      "abs_url": "https://arxiv.org/abs/2610.16794",
+      "pdf_url": "https://arxiv.org/pdf/2610.16794",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "published": "2026-10-12",
+      "updated": "2026-10-12",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 8.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 16.842,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "optimization",
+          "generalization",
+          "out-of-distribution"
+        ],
+        "category": 2.0,
+        "popularity": 13.34,
+        "stars_counted": 19,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 95 赞 ｜ 💻 [代码](https://github.com/LINs-lab/TPPO)",
+      "authors_display": "Futing Wang, Chenxi Li, Jianhao Yan, Yun Luo, Zhi Wang, Yizhuo Li 等 9 人"
+    },
+    {
+      "arxiv_id": "2610.13912",
+      "title": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
+      "abstract": "Recursive self-improvement (RSI) aims to transform interaction experience into persistent improvements, yet external feedback is costly and world-model predictions may become unreliable as policies evolve. We introduce RSI-Anything, a domain-general framework built on JEPA-Anything that uses predictive world models to guide action and learning-data selection. Observed feedback drives policy or workflow improvement and conditional world-model adaptation, while component and compatibility checks govern the retention of updated policy-model pairs. Across diverse computational and scientific domains, RSI-Anything demonstrates substantial gains. In code repair, with the coder fixed, success increases from 26.3% with a static verifier to 29.2% through predictive selection and 31.2% after world-model adaptation, at comparable test usage. Graphical user interface (GUI) evaluations showed higher task completion, while average actions decrease by 39.4%. Across five successive policy versions, laboratory-planning scores more than double from 21.80% to 46.01%. In reaction optimization, RSI-Anything achieves 96.15% mean best observed yield versus 82.16% for Bayesian optimization under the same 40-experiment budget. An end-to-end immune-science application further connects workflow evolution and predictive modeling with therapeutic hypothesis generation. These results demonstrate how predictive world models and retained system updates enable recursive improvement across diverse environments.",
+      "authors": [
+        "Taoyong Cui",
+        "Pinxian Zeng",
+        "Wanghan Xu",
+        "Hao Xiao",
+        "Shuhan Xue",
+        "Qiang Gao",
+        "Wanli Ouyang",
+        "Pheng Ann Heng",
+        "Zhenfei Yin",
+        "Yingcheng Wu",
+        "Ling Yang"
+      ],
+      "hf_upvotes": 50,
+      "hf_url": "https://huggingface.co/papers/2610.13912",
+      "github_repo": "https://github.com/Gen-Verse/RSI-Anything",
+      "github_repo_source": "hf",
+      "github_stars": 785,
+      "project_page": "https://huggingface.co/datasets/Gen-Verse/RSI-Anything",
+      "organization": "PhAI Labs",
+      "hf_published": "2026-10-09",
+      "hf_featured": "2026-10-12",
+      "abs_url": "https://arxiv.org/abs/2610.13912",
+      "pdf_url": "https://arxiv.org/pdf/2610.13912",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 15.571,
+      "score_breakdown": {
+        "keyword_raw": 2,
+        "keyword_matched": [
+          "optimization"
+        ],
+        "category": 0.0,
+        "popularity": 13.07,
+        "stars_counted": 785,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 50 赞 ｜ 💻 [代码](https://github.com/Gen-Verse/RSI-Anything)",
+      "authors_display": "Taoyong Cui, Pinxian Zeng, Wanghan Xu, Hao Xiao, Shuhan Xue, Qiang Gao 等 11 人"
+    },
+    {
+      "arxiv_id": "2610.14993",
+      "title": "Learning Where to Split: Dynamic Band Splitting for Audio Source Separation",
+      "abstract": "Audio source separation models must preserve fine spectral structure while keeping the cost of the separator tractable. Band-split architectures reduce this cost by manually partitioning the spectrum into predefined frequency bands and encoding each band as a token, but the same boundaries are used for every mixture. Because informative spectral structure varies with source content, fixed boundaries can merge discriminative components or spend tokens where little resolution is needed. We introduce Dynamic Band Splitting (DBS), an end-to-end framework that adapts boundary locations and band widths to each mixture under a fixed band-token budget. DBS predicts content-conditioned boundary scores within frequency blocks, selects a prescribed number of boundaries using hard Top-K, and applies content-dependent pooling to obtain compact band tokens. After separation, it smooths and expands these tokens to the original STFT grid, refines them along frequency, and decodes complex masks with a frequency-shared head. DBS improved separation over the corresponding static models on DnR v2, MUSDB18-HQ, and EchoSet, with DBS-BSRNN achieving relative gain of 29.0% in average SI-SDR on DnR v2. These results and boundary analyses on DnR v2 show that content-adaptive frequency partitioning benefits multiple separator backbones under a fixed band-token budget. Code and audio demos are available at https://cslikai.cn/Dynamic-Band-Splitting",
+      "authors": [
+        "Bingzhe Zhang",
+        "Kai Li",
+        "Xiaolin Hu"
+      ],
+      "published": "2026-10-10",
+      "updated": "2026-10-10",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD"
+      ],
+      "comment": "25 pages, 11 figures, including appendices. Code and audio demos: https://cslikai.cn/Dynamic-Band-Splitting",
+      "abs_url": "https://arxiv.org/abs/2610.14993",
+      "pdf_url": "https://arxiv.org/pdf/2610.14993v1",
+      "hf_upvotes": 134,
+      "hf_url": "https://huggingface.co/papers/2610.14993",
+      "github_repo": "https://github.com/JusperLee/Dynamic-Band-Splitting",
+      "github_repo_source": "hf",
+      "github_stars": 22,
+      "project_page": "https://cslikai.cn/Dynamic-Band-Splitting/",
+      "organization": "Tsinghua Machine Learning Group",
+      "hf_published": "2026-10-10",
+      "hf_featured": "2026-10-16",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 1.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 13.826,
+      "score_breakdown": {
+        "keyword_raw": 1,
+        "keyword_matched": [
+          "audio"
+        ],
+        "category": 0.0,
+        "popularity": 11.58,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 134 赞 ｜ 💻 [代码](https://github.com/JusperLee/Dynamic-Band-Splitting)",
+      "authors_display": "Bingzhe Zhang, Kai Li, Xiaolin Hu"
+    },
+    {
+      "arxiv_id": "2610.21261",
+      "title": "Behavioral Compositionality of Sparse Autoencoder Representations",
+      "abstract": "Sparse autoencoders (SAEs) represent model activations with sparse, linearly decoded features, but the downstream effects of those features need not compose additively. We introduce SAE Additivity Residuals (SAR), which measure the behavioral variation left unexplained above a chosen interaction order. Under independent feature subset sampling, population SAR is exactly the normalized energy of interactions above that order and bounds coalition ordering error for the optimal low order approximation. To distinguish compositionality associated with the SAE representation from that induced by downstream computation, we compare learned SAE coordinates with sum preserving random rotations of the same selected subspace and find lower first order residuals for the learned coordinates across all 18 model and behavior settings. The coordinates are nevertheless not fully additive: pairwise terms improve held out coalition ordering in every setting and outperform parameter matched models using randomly selected third order terms. In a combined steering experiment, pairwise modeling raises rank fidelity from 0.5874 to 0.7790 and reduces ordering error from 0.1444 to 0.0606. Together, these results show that SAE coordinates support comparatively compositional behavioral descriptions while faithful joint explanations and interventions still require interactions beyond individual feature effects. Code is available at https://github.com/OpenSAE/SAE-Behavioral-Compositionality.",
+      "authors": [
+        "Haotian Ma",
+        "Ziye Mei",
+        "Frederic Sala"
+      ],
+      "published": "2026-10-15",
+      "updated": "2026-10-15",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": "29 pages, 9 figures. Code: https://github.com/OpenSAE/SAE-Behavioral-Compositionality",
+      "abs_url": "https://arxiv.org/abs/2610.21261",
+      "pdf_url": "https://arxiv.org/pdf/2610.21261v1",
+      "hf_upvotes": 107,
+      "hf_url": "https://huggingface.co/papers/2610.21261",
+      "github_repo": "https://github.com/OpenSAE/SAE-Behavioral-Compositionality",
+      "github_repo_source": "hf",
+      "github_stars": 14,
+      "project_page": "https://opensae.github.io/SAE-Behavioral-Compositionality",
+      "organization": "OpenSAE",
+      "hf_published": "2026-10-15",
+      "hf_featured": "2026-10-16",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 2.75,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 13.032,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 2.75,
+        "popularity": 10.34,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 107 赞 ｜ 💻 [代码](https://github.com/OpenSAE/SAE-Behavioral-Compositionality)",
+      "authors_display": "Haotian Ma, Ziye Mei, Frederic Sala"
+    },
+    {
+      "arxiv_id": "2609.37712",
+      "title": "PolyOCR-Venus: Unified OCR Foundation Models for Text-Centric Visual Intelligence",
+      "abstract": "Optical Character Recognition (OCR) is evolving from plain-text transcription toward general visual intelligence, requiring models to recognize, localize, and reason over textual information in complex visual environments. However, existing OCR systems often excel at only some tasks and struggle to balance recognition, parsing, and reasoning across scenarios. In this report, we present PolyOCR, a family of unified OCR foundation models of varying scales. PolyOCR combines a shared instruction-following framework with a large-scale data engine that converts heterogeneous visual resources into quality-verified OCR supervision. We introduce Competence-Guided Policy Optimization, which combines verifier-based Group Relative Policy Optimization with on-policy distillation through sample-wise routing based on teacher reliability and the teacher--student competence gap. We also introduce OCRBench v2.1, our revision of OCRBench v2 with manually verified annotation corrections and task-aligned scoring metrics. Extensive experiments across OCRBench v2.1, CC-OCR, in-house KIE Benchmark, OmniDocBench v1.6 and MDPBench demonstrate that PolyOCR achieves state-of-the-art or highly competitive performance.",
+      "authors": [
+        "GuangJian Team",
+        "Kaili Huang",
+        "Yongshuo Zhang",
+        "Bingtao Fu",
+        "Changjiang Jiang",
+        "Chenfan Qu",
+        "Chenfeng Zhang",
+        "Fangming Cui",
+        "Gaoyang Zhang",
+        "Jiangwei Xie",
+        "Jianshu Li",
+        "Jing Huang",
+        "Jingwen Bai",
+        "Mingqi Fang",
+        "Tao Fang",
+        "Weihong Zhang",
+        "Wenbo Du",
+        "Xiongfei Bai",
+        "Xuekang Zhu",
+        "Yinan Xia",
+        "Zhenming Wang",
+        "Jian Liu",
+        "Jingjing Liu",
+        "Xiang Qi",
+        "Weiqiang Wang"
+      ],
+      "hf_upvotes": 37,
+      "hf_url": "https://huggingface.co/papers/2609.37712",
+      "github_repo": "https://github.com/inclusionAI/PolyOCR-Venus",
+      "github_repo_source": "hf",
+      "github_stars": 60,
+      "organization": "inclusionAI",
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-10-12",
+      "abs_url": "https://arxiv.org/abs/2609.37712",
+      "pdf_url": "https://arxiv.org/pdf/2609.37712",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 13.016,
+      "score_breakdown": {
+        "keyword_raw": 2,
+        "keyword_matched": [
+          "optimization"
+        ],
+        "category": 0.0,
+        "popularity": 11.02,
+        "stars_counted": 60,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 37 赞 ｜ 💻 [代码](https://github.com/inclusionAI/PolyOCR-Venus)",
+      "authors_display": "GuangJian Team, Kaili Huang, Yongshuo Zhang, Bingtao Fu, Changjiang Jiang, Chenfan Qu 等 25 人"
+    },
+    {
+      "arxiv_id": "2610.11361",
+      "title": "SepGen: Multi-Stem Audio-Video Separation and Generation in a Single Model",
+      "abstract": "A 4D audio-visual scene comprises a video, the dynamic geometry it depicts, and the sound sources that populate it, each with its own position and trajectory. Rendering such a scene from a novel viewpoint requires that every source be available as an individual waveform, so that it can be localized in the scene and propagated to the observer before the signals are mixed. Joint audio-video generators can synthesize the video and its soundtrack, but the soundtrack is emitted as a single audio-mix in which the sources are not individually accessible. We present SepGen, which extends a pretrained audio-video generator to emit the video, the mixed soundtrack, and one waveform per captioned source in one joint sampling run. SepGen supports two complementary modes: generation and separation. In generation mode, each source caption specifies what its stem contains. A two-speaker dialogue, for example, comes out as one stem per speaker in the original turn order. In separation mode, the input audio-mix remains clean while the captions specify what to extract, so the model can decompose a recording from a free-text description. We evaluate generation on scenes synthesized from text, and separation on scenes rendered by other generators and on real recordings of speech, music, and sound effects. Given an audio-mix and captions that carry the spoken lines, SepGen outperforms language-conditioned separators, most clearly on speech, and it keeps the lead when the lines are removed from the captions. Code, checkpoints, and datasets are available at https://sepgen.github.io/",
+      "authors": [
+        "Aviad Dahan",
+        "Rajaei Khatib",
+        "Yonatan Bitton",
+        "Idan Szpektor",
+        "Lior Wolf",
+        "Raja Giryes"
+      ],
+      "hf_upvotes": 45,
+      "hf_url": "https://huggingface.co/papers/2610.11361",
+      "github_repo": "https://github.com/AviadDahan/SepGen",
+      "github_repo_source": "hf",
+      "github_stars": 11,
+      "project_page": "https://sepgen.github.io/",
+      "hf_published": "2026-10-08",
+      "hf_featured": "2026-10-12",
+      "abs_url": "https://arxiv.org/abs/2610.11361",
+      "pdf_url": "https://arxiv.org/pdf/2610.11361",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 1.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 11.94,
+      "score_breakdown": {
+        "keyword_raw": 1,
+        "keyword_matched": [
+          "audio"
+        ],
+        "category": 0.0,
+        "popularity": 9.69,
+        "stars_counted": 11,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 45 赞 ｜ 💻 [代码](https://github.com/AviadDahan/SepGen)",
+      "authors_display": "Aviad Dahan, Rajaei Khatib, Yonatan Bitton, Idan Szpektor, Lior Wolf, Raja Giryes"
+    },
+    {
+      "arxiv_id": "2610.20572",
+      "title": "Recovering Reliable Supervision via Critique-Guided On-Policy Distillation",
+      "abstract": "On-policy distillation (OPD) trains a student model on its own rollouts with token-level supervision from a teacher, assuming that the teacher can reach a correct answer from any prefix the student writes. We call this property the recoverability of the teacher and show it fails on incorrect rollouts: the teacher follows student errors, although it recognizes them. We propose CriticOPD, using error recognition to restore recoverability. The teacher critiques an incorrect rollout, allowing the student to rewrite its solution following the error. The resulting output, including the critique as privileged information, is scored by the teacher while the student uses the revision without the critique for training. On two Qwen3 students and six mathematical reasoning benchmarks, CriticOPD improves OPD, with the largest gains on competition problems.",
+      "authors": [
+        "Kaixiang Zhao",
+        "Tianrun Yu",
+        "Shangzhe Li",
+        "Yuxiao Yang",
+        "Amanda Hughes",
+        "Weitong Zhang",
+        "Taylor W. Killian"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "21 pages. Code: https://github.com/kzhao5/CriticOPD",
+      "abs_url": "https://arxiv.org/abs/2610.20572",
+      "pdf_url": "https://arxiv.org/pdf/2610.20572v1",
+      "hf_upvotes": 80,
+      "hf_url": "https://huggingface.co/papers/2610.20572",
+      "github_repo": "https://github.com/kzhao5/CriticOPD",
+      "github_repo_source": "hf",
+      "github_stars": 3,
+      "project_page": "https://kzhao5.github.io/CriticOPD-website/",
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-15",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 2.75,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 11.632,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 2.75,
+        "popularity": 8.94,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 80 赞 ｜ 💻 [代码](https://github.com/kzhao5/CriticOPD)",
+      "authors_display": "Kaixiang Zhao, Tianrun Yu, Shangzhe Li, Yuxiao Yang, Amanda Hughes, Weitong Zhang 等 7 人"
+    },
+    {
+      "arxiv_id": "2609.38847",
+      "title": "Scoring Higher, Answering Worse: Mitigating Reward Hacking in Rubric-Based RL via Protocol-Level Rubrics",
+      "abstract": "Rubric-based reinforcement learning (Rubric-RL) trains language models where no verifier exists. A judge checks each criterion of a rubric, and the verdicts are aggregated into a reward, most often by a weighted sum. We show that this additive aggregation is the weak point. Under a sum, criteria compensate for one another: a policy that misses the one decision that matters can buy the points back with advice nobody asked for. On clinical consultation, such a policy scores higher and answers worse. Rubric coverage rises while appropriateness on held-out physician criteria falls below the untrained model. The medical criteria are not to blame. Grouped so that they must hold together, the same criteria, unchanged to the word, recover a third of the loss; shorter answers recover almost none. We therefore propose Protocol-level Rubrics (ProRubric), which keeps what the criteria ask for and changes how they are aggregated. It groups a checklist into a few protocol-level dimensions. A dimension counts only when all of its criteria hold and its failure clause does not fire. The grouping is done once, offline, and leaves the optimizer unchanged. ProRubric raises appropriateness by 10.8 points without losing coverage and has the best seven-benchmark average at both scales. Reward validity is set not only by what a rubric verifies, but by how it aggregates. Code is available at https://github.com/Estrellajer/ProRubric",
+      "authors": [
+        "Maoqi Liu",
+        "Junwei He",
+        "Bowen Zhang",
+        "Feiran Li",
+        "Wentao Ma",
+        "Rongyi Lin",
+        "Shuhan Zhong",
+        "Quan Fang"
+      ],
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "Under Review",
+      "abs_url": "https://arxiv.org/abs/2609.38847",
+      "pdf_url": "https://arxiv.org/pdf/2609.38847v1",
+      "hf_upvotes": 70,
+      "hf_url": "https://huggingface.co/papers/2609.38847",
+      "github_repo": "https://github.com/Estrellajer/ProRubric",
+      "github_repo_source": "hf",
+      "github_stars": 22,
+      "organization": "ByteDance",
+      "hf_published": "2026-09-30",
+      "hf_featured": "2026-10-14",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.304,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "optimizer"
+        ],
+        "category": 2.75,
+        "popularity": 8.37,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 70 赞 ｜ 💻 [代码](https://github.com/Estrellajer/ProRubric)",
+      "authors_display": "Maoqi Liu, Junwei He, Bowen Zhang, Feiran Li, Wentao Ma, Rongyi Lin 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.13990",
+      "title": "DoSA: Dots Sparse Attention",
+      "abstract": "Sparse attention visits few keys, yet finding them can still require scoring every key with every indexer head. We introduce DoSA (Dots Sparse Attention), a lossless method for making this computation conditional while preserving exact token selection. Its central observation is that Top-K selection requires sufficient evidence to reject a candidate, not necessarily its full score. A seed set supplies a lower bound on the winning threshold. Nonnegative head projections and joint residual bounds upper-bound positive contributions, while activation-informed aggregation bounds the magnitude subtracted by negative heads. The certificate directs full scoring toward candidates that remain eligible; exact-score filtering further reduces writeback and selection work. We establish the certificate and its exact-selection conditions, and analyze how geometry and selection margins govern its effectiveness. Our GPU implementation accelerates the complete Indexer by up to 2.74 times over SGLang and 1.69 times over LiteTopK across English, Chinese, and code workloads. End-to-end evaluation on GLM-5.2 and DeepSeek-V3.2 achieves up to 1.94 times and 1.50 times time-to-first-token speedups over the two baselines, respectively.",
+      "authors": [
+        "Fanxu Meng",
+        "Taosong Fang"
+      ],
+      "published": "2026-09-26",
+      "updated": "2026-09-26",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.13990",
+      "pdf_url": "https://arxiv.org/pdf/2610.13990v1",
+      "hf_upvotes": 81,
+      "hf_url": "https://huggingface.co/papers/2610.13990",
+      "github_repo": "https://github.com/llm-sys/flash-indexer",
+      "github_repo_source": "hf",
+      "github_stars": 27,
+      "organization": "dots studio",
+      "hf_published": "2026-09-26",
+      "hf_featured": "2026-10-14",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 11.0,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 2.0,
+        "popularity": 9.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 81 赞 ｜ 💻 [代码](https://github.com/llm-sys/flash-indexer)",
+      "authors_display": "Fanxu Meng, Taosong Fang"
+    },
+    {
+      "arxiv_id": "2610.01496",
+      "title": "SALD: Self-Referenced Advantage Learning for Diffusion Models",
+      "abstract": "Recent work on language-model adaptation has shown that single models can obtain informative training signals by evaluating their behavior in demonstrationor feedback-augmented contexts, with the help of a teacher network, which is driven by the student's learned parameters. Inspired by this internal-reference principle, we investigate how diffusion models can identify self-referenced training signals without external demonstrations or teacher networks. We introduce SALD, a self-referenced training framework that evaluates each image-caption pair at two noise levels using the same model. The easier, lower-noise path is evaluated without gradient tracking to provide a reference, while the harder, higher-noise path provides the training gradient. Rather than directly distilling the easy-path prediction, SALD uses the difference between two path errors to adapt the hardpath objective. The proposed Advantage-Guided Diffusion (AGD) converts this relative error into a differentiable sample-level weight. Temporal Advantage Memory (TAM) accumulates relative difficulty across training and adapts the future gap between the two noise levels. Spectral Advantage Decomposition (SAD) further compares the residual power spectra of the two paths and constructs a differentiable, frequency-derived latent-element weight. All components share a single set of model parameters, requiring neither an external teacher network nor additional trainable parameters during training or inference, and no modification to the inference procedure. Experiments across multiple architectures and datasets demonstrate consistent improvements in generation quality, while component-wise ablations quantify the contributions of the proposed components.",
+      "authors": [
+        "Aryan Das",
+        "Surjo Dey",
+        "Koushik Biswas",
+        "Swalpa Kumar Roy",
+        "Moloud Abdar",
+        "Arnab Bhattacharya",
+        "Vinay Kumar Verma"
+      ],
+      "hf_upvotes": 103,
+      "hf_url": "https://huggingface.co/papers/2610.01496",
+      "organization": "Indian Institute of Technology, Kanpur",
+      "hf_published": "2026-10-07",
+      "hf_featured": "2026-10-14",
+      "abs_url": "https://arxiv.org/abs/2610.01496",
+      "pdf_url": "https://arxiv.org/pdf/2610.01496",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 10.149,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 10.15,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 103 赞",
+      "authors_display": "Aryan Das, Surjo Dey, Koushik Biswas, Swalpa Kumar Roy, Moloud Abdar, Arnab Bhattacharya 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.20220",
+      "title": "Glance Forcing: Making Bidirectional Diffusion Autoregressive at a Glance",
+      "abstract": "Autoregressive generation underlies real-time, causal video synthesis and is the backbone of video world models. Today's dominant approach distills a bidirectional diffusion model into a causal few-step student, but existing pipelines make this conversion prohibitively expensive, requiring offline Probability Flow ODE} (PF-ODE) trajectories that cost tens of thousands of GPU-hours and terabytes of storage. We show it can be made dramatically more efficient. Pushing this efficiency to its extreme, we reduce trajectory supervision to a single sample, the strictest setting possible, and find that it causes severe quality collapse. We trace this to the teacher's trajectory geometry: the high-noise regime, governing semantic layout and motion, and the low-noise regime, governing fine texture exhibit fundamentally different curvature and optimization behavior, so a single monolithic student cannot jointly fit both, causing severe representation interference. Motivated by this, we propose Glance Forcing, a lightweight distillation framework that decouples the denoising trajectory into two complementary slow and fast experts, each guided by a tailored, stage-specific objective, while keeping the pretrained teacher entirely frozen. This decoupling further reveals a general mechanism underlying few-step distillation: PF-ODE distillation mainly straightens the few-step trajectory geometry, while the subsequent distribution-matching stage independently governs distributional quality. Using only one PF-ODE trajectory, Glance Forcing already surpasses the fully-trained state-of-the-art baseline, raising the VBench Total score from 84.04 to 84.22 while cutting trajectory-collection cost from thousands of GPU-hours to about one A100-GPU-hour, with markedly larger gains in dynamic degree, VisionReward, and instruction-following, and consistent preference from human raters over strong baselines.",
+      "authors": [
+        "Zhuobai Dong",
+        "Junchao Yi",
+        "Hu Jian Guo",
+        "Linjie Li",
+        "Rui Zhao",
+        "Alex Jinpeng Wang"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.20220",
+      "pdf_url": "https://arxiv.org/pdf/2610.20220v1",
+      "hf_upvotes": 9,
+      "hf_url": "https://huggingface.co/papers/2610.20220",
+      "github_repo": "https://github.com/CSU-JPG/Glance-Forcing",
+      "github_repo_source": "hf",
+      "github_stars": 27,
+      "project_page": "https://zhuobaidong.github.io/Glance-Forcing/",
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-15",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 4.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 9.999,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "optimization",
+          "diffusion model"
+        ],
+        "category": 0.0,
+        "popularity": 7.0,
+        "stars_counted": 27,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 9 赞 ｜ 💻 [代码](https://github.com/CSU-JPG/Glance-Forcing)",
+      "authors_display": "Zhuobai Dong, Junchao Yi, Hu Jian Guo, Linjie Li, Rui Zhao, Alex Jinpeng Wang"
+    },
+    {
+      "arxiv_id": "2610.15166",
+      "title": "ExeWorldBench: Benchmarking Code-Based Executable 3D World Modeling",
+      "abstract": "Coding agents are increasingly evolving beyond reproducing what a world looks like toward constructing executable worlds that capture how a world works. This shift calls for executable world modeling, which integrates two core capabilities: world understanding, reasoning about the underlying structural, mechanical, and causal principles of a world, and executable realization, translating that understanding into a code-based system whose behavior emerges from physical interactions. However, existing benchmarks provide only fragmented evaluations centered on physical reasoning, visual fidelity, or behavioral correctness, leaving the integration of these capabilities insufficiently assessed. To bridge this gap, we introduce ExeWorldBench, to our knowledge the first benchmark to comprehensively evaluate world understanding and executable realization through code-based 3D world construction. ExeWorldBench comprises three progressively challenging tasks: Mechanism Executability, which evaluates the realization of individual mechanisms from visual observations; Compositional Executability, which extends to multi-stage systems with spatial, mechanical, and causal dependencies; and Intent-Driven Executable World Synthesis, which requires constructing executable worlds from high-level goals and physical requirements. Extensive experiments on frontier models reveal substantial limitations in executable world modeling, offering insights into the development of more physically grounded and causally coherent world construction systems.",
+      "authors": [
+        "Xinge Peng",
+        "Zhen Fang",
+        "Ruibing Wang",
+        "Yongxuan Lv",
+        "Haodong Li",
+        "Guohui Zhang",
+        "Xiaoxiao Ma",
+        "Yiting Lu",
+        "Lin Chen",
+        "Zehui Che",
+        "Feng Zhao"
+      ],
+      "hf_upvotes": 90,
+      "hf_url": "https://huggingface.co/papers/2610.15166",
+      "project_page": "https://helen1p.github.io/ExeWorldBench/",
+      "organization": "University of Science and Technology of China",
+      "hf_published": "2026-10-10",
+      "hf_featured": "2026-10-14",
+      "abs_url": "https://arxiv.org/abs/2610.15166",
+      "pdf_url": "https://arxiv.org/pdf/2610.15166",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 9.987,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 9.49,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 90 赞",
+      "authors_display": "Xinge Peng, Zhen Fang, Ruibing Wang, Yongxuan Lv, Haodong Li, Guohui Zhang 等 11 人"
+    },
+    {
+      "arxiv_id": "2610.17016",
+      "title": "ProbabilityBench: Model Evaluation and Calibration with Exact Ground-Truth Uncertainty",
+      "abstract": "Evaluating model uncertainty on real-world data is challenging because each instance provides only a single observed label, leaving true conditional class probabilities unknown. To address this, we introduce ProbabilityBench, a benchmark that provides exact, instance-level class probabilities across three simulated text-based domains: peer review, covert information transfer, and credit risk. By explicitly defining the full data-generating process for each environment, we analytically compute both exact class probabilities and Bayes error. Furthermore, we provide a theoretical guarantee that rendering these cases into natural-language memos strictly preserves their underlying generative probabilities. This exactness enables direct measurement of reported probability quality via KL divergence. Across 16 evaluated models, most models on the observed cost-quality Pareto frontiers are decision models, including Jev and Perplexity Decider. Finally, ProbabilityBench serves as a meta-evaluation framework, leveraging known ground-truth values to benchmark the accuracy of standard calibration metrics and Bayes-error estimators themselves.",
+      "authors": [
+        "Yuyang Dai",
+        "Yuting Tang",
+        "Futoshi Futami",
+        "Takashi Ishida"
+      ],
+      "published": "2026-10-12",
+      "updated": "2026-10-12",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.17016",
+      "pdf_url": "https://arxiv.org/pdf/2610.17016v1",
+      "hf_upvotes": 10,
+      "hf_url": "https://huggingface.co/papers/2610.17016",
+      "github_repo": "https://github.com/ishida-lab/ProbabilityBench",
+      "github_repo_source": "hf",
+      "github_stars": 10,
+      "project_page": "https://ishida-lab.github.io/blog_probabilitybench.html",
+      "organization": "ishidalab",
+      "hf_published": "2026-10-12",
+      "hf_featured": "2026-10-15",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 6.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 9.727,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "uncertainty",
+          "calibration"
+        ],
+        "category": 2.75,
+        "popularity": 6.04,
+        "stars_counted": 10,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 10 赞 ｜ 💻 [代码](https://github.com/ishida-lab/ProbabilityBench)",
+      "authors_display": "Yuyang Dai, Yuting Tang, Futoshi Futami, Takashi Ishida"
+    },
+    {
+      "arxiv_id": "2610.20588",
+      "title": "Your Transformer Is Secretly Elastic",
+      "abstract": "Scaling up transformers has produced models with broad capabilities, deployed across heterogeneous hardware and fluctuating workloads. Yet, model families offer only a few fixed sizes (e.g., S, B, L), forcing users to commit to a model based on hardware and latency constraints. This rigidity is often suboptimal under varying query loads. We introduce a retraining-free method that elastifies pre-trained transformers into a single model that adapts on-the-fly across a continuum of computational budgets. Our key contribution is a differentiable relaxation of the functional unit-ranking problem: unlike prior work, which optimizes a single importance weight per MLP block or attention head, we rank every individual MLP neuron and attention head jointly, on a common scale, by minimizing the model's loss under soft pruning across many sparsity targets, all at once. Across 27 vision and text transformer encoders ranging from 22M to 8B parameters, our method yields smooth degradation up to 60% sparsity and outperforms one-shot baselines under deep pruning. For example, pruning DINOv3 ViT-H+/16 to 50% sparsity removes 427M parameters while reducing ImageNet-1k linear-probing accuracy by only 0.8%, without the need for weight correction or retraining. At 60% sparsity, a pruned AugReg ViT-B/16 model achieves up to 1.80times higher throughput and 1.26times lower single-query latency on an A100 GPU. Elastic models are produced in minutes, with construction time scaling sub-linearly with parameter count.",
+      "authors": [
+        "Walter Simoncini",
+        "Dheeraj Varghese",
+        "Gertjan J. Burghouts",
+        "Cees G. M. Snoek"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "Code available at https://github.com/WalterSimoncini/secretly-elastic",
+      "abs_url": "https://arxiv.org/abs/2610.20588",
+      "pdf_url": "https://arxiv.org/pdf/2610.20588v1",
+      "hf_upvotes": 5,
+      "hf_url": "https://huggingface.co/papers/2610.20588",
+      "github_repo": "https://github.com/WalterSimoncini/secretly-elastic",
+      "github_repo_source": "hf",
+      "github_stars": 5,
+      "project_page": "https://secretly-elastic.ashita.nl/",
+      "organization": "Video & Image Sense Lab",
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-15",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 8.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 6.424,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "sparsity",
+          "pruning",
+          "probing"
+        ],
+        "category": 2.75,
+        "popularity": 2.24,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 5 赞 ｜ 💻 [代码](https://github.com/WalterSimoncini/secretly-elastic)",
+      "authors_display": "Walter Simoncini, Dheeraj Varghese, Gertjan J. Burghouts, Cees G. M. Snoek"
+    },
+    {
+      "arxiv_id": "2610.19118",
+      "title": "DecisionRobust: Benchmarking Robustness for JEV Style Decision Models Across Text and Vision",
+      "abstract": "Emerging decision models such as JEV provide typed interfaces that map task instructions and observations directly to choices, judgments, and scores. As these models are increasingly used for automated decision-making, understanding their reliability under adversarial manipulation becomes critical. We introduce DecisionRobust, a benchmark for systematically evaluating the robustness of decision models across textual and visual inputs. Our benchmark covers practical decision-making scenarios and a diverse suite of attacks, including semantics-preserving text perturbations, image perturbations, and prompt injection in both modalities. We curate evaluation sets through external validity checks and cross-model candidate selection. We evaluate 30 model configurations on text tasks and 17 on vision tasks, including 24 and 12 held-out models, respectively, that are excluded from candidate selection. Our experiments reveal several key findings. First, attacks expose vulnerabilities beyond the models used for construction and selection, although optimized image perturbations transfer weakly to many targets even with multiple surrogates. Second, relative model robustness varies across tasks and attack types, and resistance to input perturbations does not necessarily imply resistance to prompt injection. Third, label-consistency checks substantially reduce measured attack success across text and image settings, highlighting the importance of validating apparent failures. The benchmark is available at https://yifan-lan.github.io/DecisionRobust/.",
+      "authors": [
+        "Yifan Lan",
+        "Zhongye Liu",
+        "Yurui Chang",
+        "Hanyu Wang",
+        "Yongkang Du",
+        "Lu Lin",
+        "Jinghui Chen"
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "comment": "21 pages, 6 figures, including references and appendices. Benchmark website: https://yifan-lan.github.io/DecisionRobust/",
+      "abs_url": "https://arxiv.org/abs/2610.19118",
+      "pdf_url": "https://arxiv.org/pdf/2610.19118v1",
+      "hf_upvotes": 20,
+      "hf_url": "https://huggingface.co/papers/2610.19118",
+      "project_page": "https://Yifan-Lan.github.io/DecisionRobust/",
+      "hf_published": "2026-10-13",
+      "hf_featured": "2026-10-15",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 3.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.722,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "robustness",
+          "adversarial"
+        ],
+        "category": 0.0,
+        "popularity": 4.47,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 20 赞",
+      "authors_display": "Yifan Lan, Zhongye Liu, Yurui Chang, Hanyu Wang, Yongkang Du, Lu Lin 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.10808",
+      "title": "Controlled Acquisition and Abstention in Three-Channel Score Conflicts",
+      "abstract": "When audio, video, and text disagree, accuracy alone does not show whether to acquire another source or abstain. We study these choices in a controlled three-score benchmark: a policy observes two signed scores, may request the third at a cost, and can abstain. The primary reward is mechanism-specific: abstention is correct only for one designated ambiguity mechanism and is penalized under mixed corruption. Matched controls show that a threshold policy matches always-request decisions with fewer requests; its advantage over always-answer fusion depends on the reward assigned to that ambiguity. On a partially held-out synthetic split, the threshold policy reaches 0.789 +/- 0.006 targeted decision accuracy and 0.481 +/- 0.014 utility across 83 seeds. A three-score majority reference reaches 0.626 +/- 0.008 and 0.252 +/- 0.016, but uses more information. In a matched-budget test, a train-only value selector improves utility over no-query and matched-random policies at 10% and 25% budgets, while pair uncertainty has higher utility at every budget. At 50% and 63.7% budgets, the selector lowers utility despite slightly higher non-ambiguous accuracy. If all abstentions are scored incorrect, majority outranks the threshold policy in utility. At a central temporal setting, full-trace controls match the neural models while position perturbations separate them. On held-out-actor emotion clips, eight-frame fusion has opposite-signed accuracy differences for two encoder pairs, with both actor intervals containing zero; matched-request routing gains are small and uncertain. These results separate full-modality accuracy from pre-request selection value and show that selection value depends on budget and the observed-pair ranking.",
+      "authors": [
+        "Mengzhe Geng"
+      ],
+      "published": "2026-10-07",
+      "updated": "2026-10-07",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.MM",
+        "eess.AS"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.10808",
+      "pdf_url": "https://arxiv.org/pdf/2610.10808v1",
+      "hf_upvotes": 7,
+      "hf_url": "https://huggingface.co/papers/2610.10808",
+      "github_repo": "https://github.com/MENGZHEGENG/audio-video-text-conflicts",
+      "github_repo_source": "hf",
+      "github_stars": 0,
+      "organization": "National Research Council Canada",
+      "hf_published": "2026-10-07",
+      "hf_featured": "2026-10-14",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.583,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "uncertainty",
+          "audio"
+        ],
+        "category": 2.75,
+        "popularity": 2.65,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 7 赞 ｜ 💻 [代码](https://github.com/MENGZHEGENG/audio-video-text-conflicts)",
+      "authors_display": "Mengzhe Geng"
+    },
+    {
+      "arxiv_id": "2610.00423",
+      "title": "The Life Cycle of a Massive Activation: Stochastic Birth, Weight-Decay-Driven Growth, and Competitive Consolidation",
+      "abstract": "Massive activations, residual-stream coordinates with magnitudes far larger than typical activations, are associated with attention sinks in transformers, but how their scale is regulated during training remains incompletely understood. Combining training-trajectory analyses and controlled interventions, we trace their emergence, growth, and consolidation. Sink-carrying channels vary across random seeds but stabilize early within each run. Over longer training, surrounding channels erode and the sink concentrates onto a few redundant carriers. Across ablations, gradient attenuation follows the sink token's collective root-mean-square magnitude rather than any single channel, making collective scale central to understanding their effects. Our central result is that weight decay causally controls the turnover of global activation scale. In controlled continuations, removing decay near the peak allows this scale to keep rising, whereas retaining it produces decline even at constant learning rate. We develop a balance model for the rise and peak of massive-activation magnitude, in which AdamW-preconditioned growth opposes weight decay. Sweeping the decay coefficient λ shifts peak timing approximately log-linearly and yields peak magnitudes scaling approximately as λ^{-1/2}, consistent with this balance. Optimizer measurements further show that preconditioning sustains the large-channel cohort against decay even when raw maintaining forces are too small to do so. Together, these findings connect the observed life cycle to scale-regulating training dynamics and establish weight decay as a training-time lever on activation magnitude.",
+      "authors": [
+        "S. Aaron McClendon",
+        "Jorge Gallego-Feliciano",
+        "Antonios Saravanos"
+      ],
+      "hf_upvotes": 8,
+      "hf_url": "https://huggingface.co/papers/2610.00423",
+      "github_repo": "https://github.com/apd-smcclendon/massive_activations_2",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "project_page": "https://arxiv.org/pdf/2610.00423",
+      "organization": "Aimpoint Digital",
+      "hf_published": "2026-10-05",
+      "hf_featured": "2026-10-12",
+      "abs_url": "https://arxiv.org/abs/2610.00423",
+      "pdf_url": "https://arxiv.org/pdf/2610.00423",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 3.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.578,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "optimizer"
+        ],
+        "category": 0.0,
+        "popularity": 2.83,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 8 赞 ｜ 💻 [代码](https://github.com/apd-smcclendon/massive_activations_2)",
+      "authors_display": "S. Aaron McClendon, Jorge Gallego-Feliciano, Antonios Saravanos"
+    },
+    {
+      "arxiv_id": "2610.18621",
+      "title": "Deterministic Prediction as Global Velocity: Flow Matching for Probabilistic Time-Series Forecast",
+      "abstract": "Accurate uncertainty quantification is critical for many time series forecasting applications, and recent studies have increasingly adopted generative models to capture predictive uncertainty. Existing approaches often combine deterministic forecasting with generative modeling to improve predictive performance. However, their joint training is typically unstable because the deterministic model is embedded within the generative process, resulting in deep computational graphs and changing the probability transport path. In this work, we propose DV-Flow, a unified flow-matching formulation that incorporates the deterministic predictor as a parallel velocity component rather than as the endpoint of the transport path. This design enables stable end-to-end optimization while subsuming several existing formulations as special cases, allowing direct comparisons among them. Extensive experiments on six real-world datasets demonstrate that DV-Flow consistently improves probabilistic forecasting performance over strong baselines. Our code is available at https://github.com/tufts-ml/dv-flow-time-series.",
+      "authors": [
+        "Jiajing Hu",
+        "Xu Han",
+        "Li-Ping Liu"
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.18621",
+      "pdf_url": "https://arxiv.org/pdf/2610.18621v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/tufts-ml/dv-flow-time-series",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 14.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.0,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "optimization",
+          "time series",
+          "forecasting",
+          "flow matching",
+          "uncertainty"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/tufts-ml/dv-flow-time-series)",
+      "authors_display": "Jiajing Hu, Xu Han, Li-Ping Liu"
+    },
+    {
+      "arxiv_id": "2610.22358",
+      "title": "PathFM: Fast Generative Forecasting of Multivariate Trajectories",
+      "abstract": "Time series foundation models are becoming increasingly popular for general-purpose forecasting. However, most leading models predict marginal quantiles, leaving the dependence structure of future trajectories unspecified. This distinction matters for trajectory-dependent quantities such as cumulative demand, peak load, and event timing, yet point and marginal scores do not reveal it. To model this dependence, we introduce PathFM, a trajectory-based forecasting model that uses flow matching to generate complete future paths. We further distill the model to one or two steps and share history attention cache across draws. Together, these enable PathFM to generate multiple paths for a single series in roughly the time needed for one query to a quantile model. The distilled sampler also makes it practical to optimize a calibration loss directly. PathFM achieves competitive marginal accuracy on the established forecasting benchmarks fev-bench and TIME. To complement these evaluations, we introduce Forecast Path Score Bench (fps-bench), which augments fev-bench tasks with energy and variogram scores and downstream metrics. PathFM achieves a higher aggregate path score on fps-bench than all evaluated external baselines. Experiments on chaotic systems further show that our flow model sustains long-run variability, while strong baselines rapidly collapse. PathFM makes generative time series forecasting both competitive and practical, enabling diverse downstream applications.",
+      "authors": [
+        "Jiachen Yao",
+        "Xiyuan Zhang",
+        "Annan Yu",
+        "Boran Han",
+        "Abdul Fatir Ansari",
+        "Shuai Zhang",
+        "Michael Bohlke-Schneider",
+        "Bernie Wang"
+      ],
+      "published": "2026-10-15",
+      "updated": "2026-10-15",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.22358",
+      "pdf_url": "https://arxiv.org/pdf/2610.22358v1",
+      "hf_upvotes": 3,
+      "hf_url": "https://huggingface.co/papers/2610.22358",
+      "organization": "Autogluon",
+      "hf_published": "2026-10-15",
+      "hf_featured": "2026-10-16",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 12.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.732,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "time series",
+          "forecasting",
+          "flow matching",
+          "calibration"
+        ],
+        "category": 2.0,
+        "popularity": 1.73,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 3 赞",
+      "authors_display": "Jiachen Yao, Xiyuan Zhang, Annan Yu, Boran Han, Abdul Fatir Ansari, Shuai Zhang 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.21547",
+      "title": "Federated Art Chase: Privacy Leakage and Data Poisoning in Federated Fine-Tuning",
+      "abstract": "Federated learning (FL) is increasingly used to adapt a pretrained, centrally fine-tuned model to data that remain on user devices, beyond training a model from scratch. In this report, prepared for the 4th Federated Machine Learning International Summer School, we study the privacy and integrity of this approach with a reproducible pipeline. An ImageNet-pretrained MobileNetV4-Conv-Small model is fine-tuned centrally on ten Quick, Draw! classes (97.50% test accuracy) and then adapted with head-only FedAvg over ten non-IID clients, which raises client training accuracy from 90.34% to 91.49% while preserving global accuracy. We evaluate four adversarial scenarios. First, from a single one-step client update, an honest-but-curious server recovers the complete private label set, but its reconstructions follow class prototypes rather than the private drawings (mean SSIM 0.130). Second, from a one-round FedAvg aggregate, label-count recovery falls from 87.5% with one client to 75.0% with five and ten clients, below the 80.0% of an uninformed uniform guess. Third, under FedAvg, a backdoor injected by 30%, 50%, and 100% of the clients reaches an attack success rate (ASR) of 21.9%, 31.3%, and 54.7% at a cost of at most 0.8 percentage points of clean accuracy, whereas label flipping is effective only when most of the source-class data are relabeled. Fourth, FLTrust with a root set retained from centralized fine-tuning lowers the backdoor ASR to 1.8% and 4.0% at 30% and 50% malicious clients and the label-flipping ASR from 12.6% to 0.8% without measurable clean-accuracy loss, but provides no protection when every client is malicious. The report closes with a live session in which participants draw, fine-tune, and poison the model through Indigma's FedMaestro orchestrator. Code and executed notebooks, runnable on Google Colab, are at https://github.com/Indigma-Innovations/fl-summer-school.",
+      "authors": [
+        "Vasileios Perifanis",
+        "Nikolaos Pavlidis"
+      ],
+      "published": "2026-10-15",
+      "updated": "2026-10-15",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "comment": "Technical report accompanying the hands-on tutorial at the 4th Federated Machine Learning International Summer School (FLTA), Paris, France, October 2026",
+      "abs_url": "https://arxiv.org/abs/2610.21547",
+      "pdf_url": "https://arxiv.org/pdf/2610.21547v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/Indigma-Innovations/fl-summer-school",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 11.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.25,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "federated learning",
+          "adversarial",
+          "privacy",
+          "asr"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/Indigma-Innovations/fl-summer-school)",
+      "authors_display": "Vasileios Perifanis, Nikolaos Pavlidis"
+    },
+    {
+      "arxiv_id": "2610.14232",
+      "title": "Speech event detector: Timestamped detection of non-verbal vocalizations and background sounds for rich speech transcription",
+      "abstract": "Automatic speech recognition produces words but drops the non-verbal content of a recording: the breaths, coughs, sighs and laughter of the speaker, and the horns, music or barking around them. We describe Speech Event Detector, a 5.8-million-parameter convolutional-Transformer model that outputs probabilities every 40 ms for 54 event classes (20 speaker vocalizations and 34 background sounds), together with post-processing that converts these probabilities into timestamped events and a procedure for merging the events into a Whisper transcript. The model is trained on material drawn from seven public datasets whose labels come in incompatible forms: single detected regions, free-text tags with timestamps, temporally strong ontology labels, symbols embedded in transcripts, isolated recordings and environmental recordings. We unify them using rule-based label mapping, recover timestamps for transcript-embedded labels through CTC forced alignment, locating 6,360 of 8,620 sounds, and combine about 168 hours of real annotated training recordings with synthetic mixtures and augmentation using real background noise. Per-class thresholds for two operating profiles are tuned on real held-out recordings, and performance is estimated using two-fold cross-validation. On whole held-out recordings from four datasets, considering the 48 classes with at least ten held-out events, the sensitive profile detects an average of 49 percent of a class's events, covering 67 percent of all 9,367 events, at a macro precision of 0.30. The balanced profile achieves a macro recall of 0.37 at a precision of 0.36, with macro event F1 scores of 0.32 and 0.33, respectively. The detector runs about 39 times faster than real time on eight CPU threads.",
+      "authors": [
+        "Ayush Kumar Bar",
+        "Promila Ghosh"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD"
+      ],
+      "comment": "Code is available at https://github.com/theboringai-work/surround-sound and pre-trained weights are hosted at https://huggingface.co/theboringai-work/surround-sound",
+      "abs_url": "https://arxiv.org/abs/2610.14232",
+      "pdf_url": "https://arxiv.org/pdf/2610.14232v1",
+      "hf_upvotes": 2,
+      "hf_url": "https://huggingface.co/papers/2610.14232",
+      "github_repo": "https://github.com/theboringai-work/surround-sound",
+      "github_repo_source": "hf",
+      "github_stars": 7,
+      "project_page": "https://theboringai-work.github.io/surround-sound/",
+      "hf_published": "2026-10-09",
+      "hf_featured": "2026-10-16",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 3.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.164,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "speech recognition"
+        ],
+        "category": 0.0,
+        "popularity": 1.41,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 2 赞 ｜ 💻 [代码](https://github.com/theboringai-work/surround-sound)",
+      "authors_display": "Ayush Kumar Bar, Promila Ghosh"
+    },
+    {
+      "arxiv_id": "2610.16547",
+      "title": "Know Yourself and Know Your Neighbour: A Syntactically Informed Self-Supervised Compositional Sentence Representation Learning Framework using a Recursive Hypernetwork",
+      "abstract": "Sentence representation learning is still an open challenge in Natural Language Processing. In this work, we propose a new self-supervised framework for learning sentence representations, using a special type of neural network called a recursive hypernetwork. Our proposed model composes the representation of a sentence from representations of words by applying a recursive composition through the parse tree. We maintain a separate syntactic and semantic representation, and the semantic composition is guided by the information from the syntactic representation. To train this model, we introduce a novel set of six self-supervised tasks. By analysing the performance on 7 probing tasks, we validate that the generated sentence representation encodes richer linguistic information than both averaging baselines and state-of-the-art alternatives. Furthermore, we assess the impact of the six proposed self-supervised training tasks through ablation studies. We also demonstrate that the representations generated by our model are stable for sentences of varying length and that the semantic composition operators adapt to different syntactic categories\\footnote{Code available: https://github.com/vasudev2020/codi/tree/main}.",
+      "authors": [
+        "Vasudevan Nedumpozhimana",
+        "John Kelleher"
+      ],
+      "published": "2026-10-12",
+      "updated": "2026-10-12",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.16547",
+      "pdf_url": "https://arxiv.org/pdf/2610.16547v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/vasudev2020/codi",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 10.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.0,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "self-supervised",
+          "representation learning",
+          "neural network",
+          "probing"
+        ],
+        "category": 1.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/vasudev2020/codi)",
+      "authors_display": "Vasudevan Nedumpozhimana, John Kelleher"
+    },
+    {
+      "arxiv_id": "2610.17715",
+      "title": "MissPath-FM: Flow Matching with Structured Priors for Partially Observed Time Series",
+      "abstract": "Flow matching has emerged as a powerful alternative to diffusion models for generative modeling, but standard conditional flow matching is fundamentally misaligned with partially observed time series: starting from an uninformed Gaussian source forces the model to transport even already-observed entries from noise to the target, wasting capacity on trivially known regions. We propose MissPath-FM, a partial-observation-aware flow matching framework that redesigns the source prior and probability path for incomplete time series. MissPath-FM employs structured source priors (interpolation priors and Gaussian process posterior priors) to initialize the flow close to the observed signal, paired with a missingness-aware smooth path that allocates transport asymmetrically between observed and missing regions. We evaluate systematically across four datasets, four missingness mechanisms (MCAR, block, MNAR, irregular), two missing ratios, and three sequence lengths (T in {24, 48, 96}), totaling 48 settings against eight baselines. MissPath-FM wins 29 of 32 settings at T=48 and 45 of 48 overall (93.8%). Our ablations reveal a regime-dependent design hierarchy in which no single component suffices: under random missingness the source prior yields a large initial gain, but under structured block missingness it can fail entirely and the learned flow becomes indispensable; the missingness-aware path contributes a further 12%-26% across all regimes. Mechanistically, structured priors shorten observed-region transport by up to 15x, concentrating the velocity field on genuinely uncertain entries. Project page: https://zgp110.github.io/misspath-fm/",
+      "authors": [
+        "Genpei Zhang"
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Accepted at NeurIPS 2026. 24 pages. Project page: https://zgp110.github.io/misspath-fm/ Code: https://github.com/zgp110/misspath-fm",
+      "abs_url": "https://arxiv.org/abs/2610.17715",
+      "pdf_url": "https://arxiv.org/pdf/2610.17715v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/zgp110/misspath-fm",
+      "github_repo_source": "abstract",
+      "project_page": "https://zgp110.github.io/misspath-fm/",
+      "theme": "deep-learning",
+      "fit": 8.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.0,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "time series",
+          "flow matching"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "github_stars": 0,
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/zgp110/misspath-fm)",
+      "authors_display": "Genpei Zhang"
+    }
+  ]
+}

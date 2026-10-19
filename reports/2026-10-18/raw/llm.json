@@ -1,0 +1,1413 @@
+{
+  "generated_at": "2026-10-19T03:55:50.380424+00:00",
+  "theme": "llm",
+  "theme_title": "大语言模型",
+  "theme_subtitle": "预训练、后训练、推理与长上下文",
+  "accent": "#2f6f5e",
+  "week_start": "2026-10-12",
+  "week_end": "2026-10-18",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 386,
+  "measured_heat_count": 25,
+  "papers": [
+    {
+      "arxiv_id": "2610.12572",
+      "title": "DiffusionART: Efficient, Stable and Scalable Reinforcement of Diffusion Models",
+      "abstract": "Online reinforcement learning (RL) fine-tunes diffusion models with black-box rewards, but reverse-process methods such as Flow-GRPO are limited in efficiency by poor credit assignment, while forward-process methods such as DiffusionNFT are efficient yet unstable without carefully tuned exponential-moving-average (EMA) off-policy training. We show that NFT-style objectives contain a hidden forward--reverse consistency force that joint positive--negative training cancels only partially, and that EMA stabilizes training through restoration rather than off-policy rollouts. We introduce DiffusionART (Diffusion Reinforcement with Aggregation-First Reward Tilting), which aggregates each prompt's rewards into a shared reward-improving direction for reverse-process states, removing the consistency force by construction, and adds a trust-region-masked second update for drift-adaptive restoration without EMA tuning. It requires no differentiable reward model, remains effective with fewer samples per prompt, and supports pairwise reward models (DiffusionART-Pairwise). Across image and video generation, DiffusionART trains efficiently and stably without per-task tuning. In particular, on HunyuanVideo-13B with equally weighted visual and motion quality rewards, DiffusionART reaches the late-stage mean reward levels of DiffusionNFT and Flow-GRPO-Fast with 12.02 and 11.72 times fewer GPU hours, respectively, while achieving 28.8% and 53.0% higher mean training rewards.",
+      "authors": [
+        "Zhenglin Wan",
+        "Jiayu Chen",
+        "Zhengfeiyang Zhang",
+        "Pengfei Zhou",
+        "Wangbo Zhao",
+        "Fangyuan Kong",
+        "Pengfei Wan",
+        "Kun Gai",
+        "Yang You"
+      ],
+      "hf_upvotes": 320,
+      "hf_url": "https://huggingface.co/papers/2610.12572",
+      "github_repo": "https://github.com/vanzll/DiffusionART",
+      "github_repo_source": "hf",
+      "github_stars": 143,
+      "project_page": "https://vanzll.github.io/diffusionart-project/",
+      "organization": "KlingAI Research",
+      "hf_published": "2026-10-08",
+      "hf_featured": "2026-10-12",
+      "abs_url": "https://arxiv.org/abs/2610.12572",
+      "pdf_url": "https://arxiv.org/pdf/2610.12572",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 7.0,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 27.602,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "grpo",
+          "reward model",
+          "prompt"
+        ],
+        "category": 0.0,
+        "popularity": 23.85,
+        "stars_counted": 143,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 320 赞 ｜ 💻 [代码](https://github.com/vanzll/DiffusionART)",
+      "authors_display": "Zhenglin Wan, Jiayu Chen, Zhengfeiyang Zhang, Pengfei Zhou, Wangbo Zhao, Fangyuan Kong 等 9 人"
+    },
+    {
+      "arxiv_id": "2609.39600",
+      "title": "GroundAnything: Reconciling Parallel Decoding with Precise Visual Grounding at Flash Speed",
+      "abstract": "Autoregressive (AR) grounding models serialize spatial predictions, introducing sequential latency and imposing a causal order on output tokens. We view grounding as visual evidence extraction: objects, locations, and spatial relations are jointly constrained by the image and query, yet their dependencies do not imply an intrinsic left-to-right generation order. This distinction makes bidirectional diffusion a natural fit, allowing spatial hypotheses to emerge in parallel and be jointly refined through iterative denoising. We introduce GroundAnything, a 4B-parameter grounding foundation model that reconciles fast parallel decoding with precise localization through blockwise denoising. Training combines grounding pretraining from public datasets and dedicated data engines, direct AR-to-diffusion conversion with joint AR and diffusion objectives, supervised fine-tuning, and GRPO-based reinforcement post-training. Across 30 grounding benchmarks, our autoregressive variant, GroundAnything-VLM, establishes a new overall state of the art among similarly sized models at 72.42%, remaining competitive with GPT-6 Astra (71.35%). With entropy-guided decoding, GroundAnything also surpasses the prior state of the art at this scale, averaging 61.75% versus 53.32% for the fast MTP-based LocateAnything model. We further explore decoding strategies, showing that an optional self-speculative mode achieves a 4.51times speedup over the AR counterpart with a 0.74 percentage-point drop in COCO F1mIoU. Infrastructure experiments show that progressive inference optimizations translate parallel decoding into practical speedups. These support efficient visual grounding in latency-sensitive real-world systems.",
+      "authors": [
+        "Qize Yu",
+        "Lianrui Fan",
+        "Bowen Ping",
+        "Xini Ding",
+        "Zetian Song",
+        "Junbo Niu",
+        "Kaixuan Wang",
+        "Tianxing Chen",
+        "Yue Chen",
+        "Minghua He",
+        "Yuran Wang",
+        "Jie Huang",
+        "Haojun Zhang",
+        "Min Chen",
+        "Hao Li",
+        "Wenxuan Song",
+        "Ruihai Wu",
+        "Xianming Liu",
+        "Shilong Liu",
+        "Shuchang Zhou",
+        "Ping Luo",
+        "Shiyu Huang"
+      ],
+      "hf_upvotes": 98,
+      "hf_url": "https://huggingface.co/papers/2609.39600",
+      "github_repo": "https://github.com/groundingpi/GroundAnything",
+      "github_repo_source": "hf",
+      "github_stars": 62,
+      "project_page": "https://groundingpi.github.io/groundanything/",
+      "organization": "XPENG AI",
+      "hf_published": "2026-09-30",
+      "hf_featured": "2026-10-13",
+      "abs_url": "https://arxiv.org/abs/2609.39600",
+      "pdf_url": "https://arxiv.org/pdf/2609.39600",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 15.0,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 20.621,
+      "score_breakdown": {
+        "keyword_raw": 15,
+        "keyword_matched": [
+          "pretraining",
+          "post-training",
+          "grpo",
+          "decoding",
+          "fine-tuning",
+          "inference",
+          "gpt"
+        ],
+        "category": 0.0,
+        "popularity": 14.87,
+        "stars_counted": 62,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 98 赞 ｜ 💻 [代码](https://github.com/groundingpi/GroundAnything)",
+      "authors_display": "Qize Yu, Lianrui Fan, Bowen Ping, Xini Ding, Zetian Song, Junbo Niu 等 22 人"
+    },
+    {
+      "arxiv_id": "2610.11765",
+      "title": "Thinking Inertia: LLMs Keep Thinking When Told Not To",
+      "abstract": "Large Language Models (LLMs) increasingly ship with explicit \"thinking modes\", yet their counterpart, \"no-thinking\", has received far less attention. We study LLMs' no-thinking behavior along two axes. a. How to measure no-thinking? Prior work typically defines no-thinking through proxies such as a disabled thinking mode or the absence of long traces. These proxies are unreliable: disabled thinking modes may still emit reasoning, while long traces may contain filler rather than genuine inference. We instead normalize each response into a pre-answer trace and final answer, and evaluate it at three levels: (i) Empty-Thinking Rate for strict answer-only compliance; (ii) instruction-aware Question-Pre-answer Relevance for similarity between the question and pre-answer trace; and (iii) LLM-as-judge Explicit Inference Rate for visible explicit inference. Together, these metrics distinguish answer-only output, relevant but non-inferential text, and explicit inference. b. How does no-thinking vary across tasks and models? We evaluate six prompting interventions on six LLMs across Boolean, multiple-choice, and open-ended questions. We find that explicit no-think controls cannot reliably eliminate visible inference. Models instead exhibit \"Thinking Inertia\": explicit inference persists even under strict controls and becomes more prevalent as the answer space opens. Accuracy remains stable on Boolean and multiple-choice tasks, whereas open-ended tasks reveal a trade-off between answer-only compliance and task accuracy. Rewriting the same questions across answer spaces shows that supplying candidate answers makes answer-only responses easier to produce. These findings establish no-thinking as a non-trivial capability: stopping explicit reasoning cannot be assumed from model settings or instructions alone and deserves systematic evaluation alongside reasoning ability.",
+      "authors": [
+        "Dianqiao Lei",
+        "Kevin Qinghong Lin",
+        "Pan Lu",
+        "Philip Torr",
+        "James Zou"
+      ],
+      "hf_upvotes": 250,
+      "hf_url": "https://huggingface.co/papers/2610.11765",
+      "github_repo": "https://github.com/thinking-inertia/code",
+      "github_repo_source": "hf",
+      "github_stars": 7,
+      "project_page": "https://thinking-inertia.github.io/",
+      "organization": "Stanford University",
+      "hf_published": "2026-10-08",
+      "hf_featured": "2026-10-13",
+      "abs_url": "https://arxiv.org/abs/2610.11765",
+      "pdf_url": "https://arxiv.org/pdf/2610.11765",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 8.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 19.811,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "llm",
+          "llms",
+          "reasoning",
+          "inference"
+        ],
+        "category": 0.0,
+        "popularity": 15.81,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 250 赞 ｜ 💻 [代码](https://github.com/thinking-inertia/code)",
+      "authors_display": "Dianqiao Lei, Kevin Qinghong Lin, Pan Lu, Philip Torr, James Zou"
+    },
+    {
+      "arxiv_id": "2610.17665",
+      "title": "RoTA-Bench: Evaluating 3D Spatial Reasoning through Interactive Projection Alignment",
+      "abstract": "Can vision-language models turn 2D observations into 3D understanding that supports precise action? This requires inferring object geometry, anticipating the effects of rotation, and refining actions through visual feedback. We introduce RoTA-Bench to evaluate these abilities through interactive 3D-to-2D projection alignment. Given a target silhouette, a model observes a rotated object and chooses successive rotations to recover the target projection within a limited action budget. Our automated pipeline constructs silhouette-preserving 3D objects from 2D icons and uses reversible initialization to guarantee solvability, yielding 674 tasks and a stratified 100-task test set. Empirically, we find that (i) a substantial human-model gap persists: GPT-5.6-Sol succeeds on only 17% of tasks, whereas 20 undergraduate participants collectively complete the test set four times with a 100% success rate; (ii) image-space and pose-space progress can diverge: at matched states, the model more often improves silhouette overlap while worsening pose alignment than humans (19.4% vs. 10.9%); and (iii) fine-grained control is sensitive to interaction history: removing it leaves 96.8% of the model's actions at a coarse 30-degree step size and sharply reduces observed task success. These findings highlight the challenge of converting visual evidence into precise 3D control, beyond recognizing or matching individual images.",
+      "authors": [
+        "Qingchuan Ma",
+        "Yuexiao Ma",
+        "Xiang Meng",
+        "Yixuan Zou",
+        "Tianyu Xie",
+        "Wang Chen",
+        "Yuhui Zeng",
+        "Yuhang Wu",
+        "Xiawu Zheng",
+        "Rongrong Ji"
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-16",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "31 pages, 2 figures",
+      "abs_url": "https://arxiv.org/abs/2610.17665",
+      "pdf_url": "https://arxiv.org/pdf/2610.17665v3",
+      "hf_upvotes": 202,
+      "hf_url": "https://huggingface.co/papers/2610.17665",
+      "github_repo": "https://github.com/MAC-AutoML/RoTA-Bench",
+      "github_repo_source": "hf",
+      "github_stars": 4,
+      "project_page": "https://www.modelscope.cn/studios/san2333333/rotabench-anon?mode=full&app_path=%2Fportal",
+      "organization": "MAC-AutoML",
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-16",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 5.75,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 19.581,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "alignment",
+          "reasoning",
+          "gpt"
+        ],
+        "category": 0.75,
+        "popularity": 16.14,
+        "stars_counted": 4,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 202 赞 ｜ 💻 [代码](https://github.com/MAC-AutoML/RoTA-Bench)",
+      "authors_display": "Qingchuan Ma, Yuexiao Ma, Xiang Meng, Yixuan Zou, Tianyu Xie, Wang Chen 等 10 人"
+    },
+    {
+      "arxiv_id": "2610.14709",
+      "title": "Vela: User Behavior as Supervision Sparks LLM Intelligence",
+      "abstract": "Large language models are increasingly deployed in applications that act on users' long-term behavior histories, from personal assistants to recommendation and advertising systems. These applications demand the user dimension of LLM intelligence: inferring a person's preferences, intent, and likely future actions from weeks to years of behavior data. Yet current models are trained on static text or synthetic data, neither of which captures how user behavior evolves over time. Real-world behavior records, already available at scale on content platforms and in personal-assistant agents, offer a natural supervisory signal. We propose user behavior as supervision and introduce Vela, a framework that converts real user behavior data into trainable tasks and trajectories. From the anonymized behavior records of 100,000 users, Vela generates 100,000 tasks across 91 real-world task templates; difficulty-based filtering and trajectory acceptance criteria retain approximately 75,000 tasks with selected training trajectories. Fine-tuning Qwen3.6-35B-A3B on these trajectories improves performance over the base model by up to 11.5 points on user-related tasks and by an average of 4 points on general benchmarks. Training on more user behavior data further improves user-related performance, and reinforcement learning after fine-tuning outperforms reinforcement learning from the base model by up to 7.7 points. These gains suggest that real-world user behavior is a scalable source of supervision for both user-centered capabilities and the broader intelligence of LLMs.",
+      "authors": [
+        "Yang Xiao",
+        "Yusong Sun",
+        "Haoyi Wu",
+        "Wenyang Hui",
+        "Weiqiang Hang",
+        "Luqing Wang",
+        "Zejian Wang",
+        "Zirui Tu",
+        "Jingsheng Mao",
+        "Shaobo Hu",
+        "Yang Luo",
+        "Jiale Guo",
+        "Jin Zhang",
+        "Yudan Liu",
+        "Zhaokai Luo",
+        "Ren Huan",
+        "Yao Hu",
+        "Chengyue Jiang",
+        "Wenjie Li",
+        "Chuan Mu"
+      ],
+      "hf_upvotes": 87,
+      "hf_url": "https://huggingface.co/papers/2610.14709",
+      "github_repo": "https://github.com/AllSpark-Research/Vela",
+      "github_repo_source": "hf",
+      "github_stars": 25,
+      "project_page": "https://allspark-research.github.io/Vela/",
+      "organization": "AllSpark Research",
+      "hf_published": "2026-10-10",
+      "hf_featured": "2026-10-14",
+      "abs_url": "https://arxiv.org/abs/2610.14709",
+      "pdf_url": "https://arxiv.org/pdf/2610.14709",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 8.0,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 17.237,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "llm",
+          "llms",
+          "fine-tuning"
+        ],
+        "category": 0.0,
+        "popularity": 13.24,
+        "stars_counted": 25,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 87 赞 ｜ 💻 [代码](https://github.com/AllSpark-Research/Vela)",
+      "authors_display": "Yang Xiao, Yusong Sun, Haoyi Wu, Wenyang Hui, Weiqiang Hang, Luqing Wang 等 20 人"
+    },
+    {
+      "arxiv_id": "2610.17552",
+      "title": "FlashVSR+: Efficient Video Super-Resolution via Hybrid Attention and Reward-Yield Distribution Matching",
+      "abstract": "Recent video super-resolution (VSR) models achieve efficient one-step generation through diffusion distillation. However, high-resolution inference remains costly, and distilled models are difficult to align with human preferences. These challenges call for improvements in both model architecture and training strategy. We present FlashVSR+ to address both limitations. On the architecture side, we introduce hybrid attention based on the strong locality observed in pretrained VSR models, while retaining sparse global interaction for long-range consistency. It achieves up to 2times DiT speedup and 45\\% lower peak memory, enabling spatially untiled 4K VSR on a single 24GB RTX 4090. On the training side, we propose Reward-Yield Distribution Matching Distillation (Ry-DMD) for preference-aligned one-step generation. Ry-DMD uses reward-weighted teacher rollouts to incorporate black-box rewards into distribution matching, without backpropagating through the reward model. We further show that Ry-DMD generalizes beyond VSR to T2I generation. Together, FlashVSR+ delivers stronger restoration quality and substantially improves high-resolution efficiency, with consistent gains in user preference. We release our code, models, and training data at https://www.flashvsr.tech{FlashBlue{www.flashvsr.tech}}.",
+      "authors": [
+        "Ruchang Yao",
+        "Shi Guo",
+        "Junhao Zhuang",
+        "Mingde Yao",
+        "Xin Cai",
+        "Jiahao Zhan",
+        "Bin Fu",
+        "Xinyuan Chen",
+        "Yu Qiao",
+        "Tianfan Xue"
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.17552",
+      "pdf_url": "https://arxiv.org/pdf/2610.17552v1",
+      "hf_upvotes": 45,
+      "hf_url": "https://huggingface.co/papers/2610.17552",
+      "github_repo": "https://github.com/OpenImagingLab/FlashVSR_Plus",
+      "github_repo_source": "hf",
+      "github_stars": 103,
+      "project_page": "https://www.flashvsr.tech",
+      "organization": "MMLab-CUHK",
+      "hf_published": "2026-10-13",
+      "hf_featured": "2026-10-14",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 6.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 15.969,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "reward model",
+          "distillation",
+          "inference"
+        ],
+        "category": 0.75,
+        "popularity": 12.28,
+        "stars_counted": 103,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 45 赞 ｜ 💻 [代码](https://github.com/OpenImagingLab/FlashVSR_Plus)",
+      "authors_display": "Ruchang Yao, Shi Guo, Junhao Zhuang, Mingde Yao, Xin Cai, Jiahao Zhan 等 10 人"
+    },
+    {
+      "arxiv_id": "2610.19975",
+      "title": "LatentLoop: Scaling Looped MoE Models with Asymmetric Compute Allocation",
+      "abstract": "Looped Mixture-of-Experts (MoE) models combine parameter reuse with sparse computation to improve performance under matched budgets. Prior work demonstrates that different loop visits can play different roles even when they share parameters. To probe the contributions of different loop visits, we learn separate residual coefficients in a model that applies a shared block twice, observing a smaller scale in the first visit. Fixed coefficient experiments show that reducing the first visit's scale preserves or improves performance, whereas the same reductions to the second hurt it. This asymmetry motivates us to explore asymmetric compute allocation. We propose LatentLoop, which compresses the first visit's sequence, retains full resolution in the second, and reallocates saved computation to increase the hidden size. We further learn how strongly the first visit updates the full sequence, and share MoE weights across visits while using separate attention parameters to accommodate their different sequence resolutions. Across 15 configurations spanning 1.3B--7B parameters, with the largest budget exceeding 10^{21} FLOPs, LatentLoop consistently lowers validation NLL. At a fitted NLL of 1.988, predicted compute savings are 19.0\\% and 7.9\\% relative to vanilla MoE and the looped baseline. It also improves average scores on nine benchmarks at all sizes in 0-shot and 5-shot settings. These results suggest asymmetric compute allocation is a promising direction for looped MoE models.",
+      "authors": [
+        "Zefeng He",
+        "Yunkai Chai",
+        "Xiaoyang Chen",
+        "Tong Zhu",
+        "Zongliang Wu",
+        "Yun Luo",
+        "Yafu Li",
+        "Yu Cheng"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "24 pages, 8 figures",
+      "abs_url": "https://arxiv.org/abs/2610.19975",
+      "pdf_url": "https://arxiv.org/pdf/2610.19975v1",
+      "hf_upvotes": 67,
+      "hf_url": "https://huggingface.co/papers/2610.19975",
+      "github_repo": "https://github.com/lcqysl/LatentLoop",
+      "github_repo_source": "hf",
+      "github_stars": 11,
+      "project_page": "https://latentloop-project.github.io/",
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-15",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "llm",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 14.605,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "mixture-of-experts",
+          "moe"
+        ],
+        "category": 0.75,
+        "popularity": 11.17,
+        "stars_counted": 11,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 67 赞 ｜ 💻 [代码](https://github.com/lcqysl/LatentLoop)",
+      "authors_display": "Zefeng He, Yunkai Chai, Xiaoyang Chen, Tong Zhu, Zongliang Wu, Yun Luo 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.17309",
+      "title": "StartLux-Decision: AutoThink Decision Models with Reinforcement Learning for Calibrated Deliberative Decisions",
+      "abstract": "We introduce StartLux-Decision, decision models from 0.8B to 27B parameters that combine efficient single-pass prediction with adaptive, confidence-guided reasoning. The Instant models use bidirectional attention in full-attention layers to improve decision accuracy while keeping single-pass inference. The AutoThink models invoke explicit reasoning for uncertain decisions and answer confident cases directly. A three-stage training pipeline establishes shared decision capabilities, specializes the two variants, and equips AutoThink with reasoning through reasoning supervision and reinforcement learning. We introduce Reinforcement Learning for Calibrated Deliberative Decisions (RLCD^2), which uses a frozen model and proper scoring rules to reward improvements in decision probability quality and applies a soft penalty to overlong reasoning traces. RLCD^2 raises the share of reasoning traces that terminate within the generation limit by up to 48 percentage points and cuts average reasoning length by up to 65%, while largely preserving decision accuracy. On the public subset of Decision Index 0.3, the Instant models outperform the strongest evaluated comparable-scale open-weight decision models by 7.4-16.9 points, and the 27B AutoThink model reaches 73.4. We also introduce DecisionPivot, a programmatically verifiable benchmark of computational decisions built from contrast pairs that differ in a single answer-changing detail. On DecisionPivot, AutoThink outperforms its Instant counterparts by 11.5-18.4 points in pair accuracy and leads among evaluated systems. The models run on vLLM, llama.cpp and MLX, with quantized variants for lower memory use.",
+      "authors": [
+        "Xialie Zhuang",
+        "Zunhai Su",
+        "Jia Pan",
+        "Ngai Wong",
+        "Guanhua Chen",
+        "Chuan-Wei Kuo"
+      ],
+      "published": "2026-10-12",
+      "updated": "2026-10-12",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "comment": "Technical report. 38 pages, 16 figures, 15 tables",
+      "abs_url": "https://arxiv.org/abs/2610.17309",
+      "pdf_url": "https://arxiv.org/pdf/2610.17309v1",
+      "hf_upvotes": 14,
+      "hf_url": "https://huggingface.co/papers/2610.17309",
+      "github_repo": "https://github.com/StartLuxLabs/StartLux-Decision",
+      "github_repo_source": "hf",
+      "github_stars": 689,
+      "project_page": "https://decision.startlux.com/",
+      "organization": "StartLux",
+      "hf_published": "2026-10-12",
+      "hf_featured": "2026-10-15",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 6.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 13.429,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "reasoning",
+          "inference",
+          "llama"
+        ],
+        "category": 2.75,
+        "popularity": 9.74,
+        "stars_counted": 689,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 14 赞 ｜ 💻 [代码](https://github.com/StartLuxLabs/StartLux-Decision)",
+      "authors_display": "Xialie Zhuang, Zunhai Su, Jia Pan, Ngai Wong, Guanhua Chen, Chuan-Wei Kuo"
+    },
+    {
+      "arxiv_id": "2610.21412",
+      "title": "JevAgentHarness: Benchmarking, Deploying and Training Decision Models That Share Control with LLMs",
+      "abstract": "Large language model (LLM) agents now fix software, operate computers and serve customers, but their harnesses, the programs that run them, call a large LLM at every step, which makes long tasks slow and costly. Most of these calls end in a multiple-choice decision, such as which tool to call next. Decision models such as Jev answer these questions directly, at a fraction of an LLM call's time and price. We ask how a harness can delegate these decisions to a decision model with little loss of success. To evaluate decision models in agentic tasks, we build AgentDecisionBench, which tests them from isolated questions up to control of a running agent, on public benchmarks and our DecisionGym environment. The decision model most accurate on isolated questions solved only 69.5% of agent tasks, and without a fitted confidence threshold, delegating tool choices lowered success by 19.0 points. Building on these findings, we then design JevAgentHarness, which fits this threshold for each choice on the agent's own trajectories and lets the LLM decide below it. Because existing decision models never see the states an agent reaches after its own mistakes, we train AgentDecision-4B, an open 4B model, on such states with Jev's answers as labels. On tasks unlike its training data, the agent solved 91.5% of them with AgentDecision-4B and 82.0% with Jev. On tasks like their training data, 4B models trained this way made agents 81.1-89.0% cheaper and up to 2.5 times faster, without losing 3 or more points of task success. The models, data, and harness will be released at https://github.com/JevAgentHarness/JevAgentHarness.",
+      "authors": [
+        "Kunlun Zhu",
+        "Tao Feng",
+        "Xu Han",
+        "Heng Wang",
+        "Ling Yang",
+        "Xiangru Tang",
+        "Jiaxuan You",
+        "Heng Ji"
+      ],
+      "published": "2026-10-15",
+      "updated": "2026-10-15",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "Code: https://github.com/JevAgentHarness/JevAgentHarness",
+      "abs_url": "https://arxiv.org/abs/2610.21412",
+      "pdf_url": "https://arxiv.org/pdf/2610.21412v1",
+      "hf_upvotes": 19,
+      "hf_url": "https://huggingface.co/papers/2610.21412",
+      "github_repo": "https://github.com/JevAgentHarness/JevAgentHarness",
+      "github_repo_source": "hf",
+      "github_stars": 17,
+      "project_page": "https://jevagentharness.github.io/",
+      "organization": "University of Illinois at Urbana-Champaign",
+      "hf_published": "2026-10-15",
+      "hf_featured": "2026-10-16",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "llm",
+      "fit": 13.75,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 13.265,
+      "score_breakdown": {
+        "keyword_raw": 13,
+        "keyword_matched": [
+          "large language model",
+          "language model",
+          "llm",
+          "llms"
+        ],
+        "category": 0.75,
+        "popularity": 7.83,
+        "stars_counted": 17,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 19 赞 ｜ 💻 [代码](https://github.com/JevAgentHarness/JevAgentHarness)",
+      "authors_display": "Kunlun Zhu, Tao Feng, Xu Han, Heng Wang, Ling Yang, Xiangru Tang 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.17771",
+      "title": "Many Right Answers, One Training Example: Removing Responder Noise from GRPO for LLM Recommenders",
+      "abstract": "A recommendation request on Reddit draws several replies, each naming different titles. When an LLM recommender is trained on such threads with reinforcement learning (RL), which replies should a generated list be rewarded against? The state-of-the-art recipe, Rank-GRPO, picks one reply per training example, so the advantage mostly records which reply was drawn (85% of its variance) rather than how good the list is. We argue that RL should train on the request, not on each answer, and propose ReMaRk: it scores every list once against the union of all replies' titles and samples each request equally. This makes RL cheaper. On seven backbones and three datasets, ReMaRk reaches the validation recall of 2,000 per-reply RL steps in 25 to 53% of the steps and leads at that budget; trained until neither improves, it is never significantly behind Rank-GRPO and in four of seven pairs reaches Rank-GRPO's best with fewer GPU-hours. The same reward helps on ProtoQA, where about 100 people answer each question, which points to a simple rule for RL with several valid human answers: reward them jointly.",
+      "authors": [
+        "Xin Li",
+        "Hao Jiang",
+        "Jinghao Guo",
+        "Weisi Lin",
+        "Chau Yuen"
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "comment": "Project Page: https://lixin.ai/ReMaRk/",
+      "abs_url": "https://arxiv.org/abs/2610.17771",
+      "pdf_url": "https://arxiv.org/pdf/2610.17771v1",
+      "hf_upvotes": 70,
+      "hf_url": "https://huggingface.co/papers/2610.17771",
+      "github_repo": "https://github.com/LiXin97/ReMaRk",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "project_page": "https://lixin.ai/ReMaRk/",
+      "organization": "Nanyang Technological University",
+      "hf_published": "2026-10-13",
+      "hf_featured": "2026-10-15",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 8.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 12.367,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "llm",
+          "grpo"
+        ],
+        "category": 2.0,
+        "popularity": 8.37,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 70 赞 ｜ 💻 [代码](https://github.com/LiXin97/ReMaRk)",
+      "authors_display": "Xin Li, Hao Jiang, Jinghao Guo, Weisi Lin, Chau Yuen"
+    },
+    {
+      "arxiv_id": "2610.13781",
+      "title": "SimVTA: Simulation-Grounded Video-Trajectory Alignment for Driving World Action Models",
+      "abstract": "Driving world action models (WAMs) learn from paired trajectories and future observations. Post-training with reinforcement learning allows the policy to explore alternative trajectories and improve planning using driving rewards. However, driving logs contain future videos only for the recorded trajectories, leaving these alternatives without corresponding visual supervision. Thus, we introduce SimVTA, a simulation-grounded post-training framework that combines trajectory optimization with video supervision. First, we sample candidate trajectories for each observation and use a real-world simulator (e.g., World Engine) to render future videos for high-reward candidates in real-world scenes reconstructed with 3D Gaussian Splatting (3DGS). This provides trajectory-matched supervision independent of the model's own predictions. Under a limited rendering budget, we prioritize video supervision for higher-error futures among these rendered candidates. Finally, we optimize trajectory planning with Group Relative Policy Optimization (GRPO) and use a flow-matching loss on the matched videos to update shared representations. At inference time, the model predicts trajectories directly, without simulator calls. On NAVSIM v1, applying SimVTA to a WAM initialization improves PDMS from 86.2 to 91.3 (+5.1). It achieves 88.2 EPDMS on NAVSIM v2 and an average HD-Score of 38.8 in closed-loop evaluation on HUGSIM. Ablations show that updating shared representations with video supervision improves planning, while prioritizing higher-error futures among high-reward trajectories further improves performance.",
+      "authors": [
+        "Changhui Jing",
+        "Haochen Tian",
+        "Hongchen Li",
+        "Tianyu Li",
+        "Caojun Wang",
+        "Zihao Zhang",
+        "Yanhao Liu",
+        "Chengen Xie",
+        "Bailin Li",
+        "Hao Zhao",
+        "Zhenjie Yang"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Project page: https://opendrivelab.com/SimVTA/",
+      "abs_url": "https://arxiv.org/abs/2610.13781",
+      "pdf_url": "https://arxiv.org/pdf/2610.13781v1",
+      "hf_upvotes": 17,
+      "hf_url": "https://huggingface.co/papers/2610.13781",
+      "github_repo": "https://github.com/OpenDriveLab/SimVTA",
+      "github_repo_source": "hf",
+      "github_stars": 23,
+      "project_page": "https://opendrivelab.com/SimVTA/",
+      "organization": "OpenDriveLab",
+      "hf_published": "2026-10-09",
+      "hf_featured": "2026-10-16",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 9.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 12.187,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "post-training",
+          "grpo",
+          "alignment",
+          "inference"
+        ],
+        "category": 0.0,
+        "popularity": 7.94,
+        "stars_counted": 23,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 17 赞 ｜ 💻 [代码](https://github.com/OpenDriveLab/SimVTA)",
+      "authors_display": "Changhui Jing, Haochen Tian, Hongchen Li, Tianyu Li, Caojun Wang, Zihao Zhang 等 11 人"
+    },
+    {
+      "arxiv_id": "2609.36616",
+      "title": "CrossTimeEdit: A Decade-Spanning Cross-View Dataset and Reward-Guided Editing for Historical Street-View Generation",
+      "abstract": "Historical street-view imagery records urban evolution, but uneven coverage leaves substantial gaps in historical records. Generating plausible past appearances requires restoring changed structures while preserving persistent scene content. We construct VIGOR-his, a decade-spanning cross-view dataset containing 43,653 location-level quadruplets across 11 cities on three continents. Its automated pipeline performs spatial pairing, consistency screening, change classification, and the generation and validation of satellite-based change descriptions and local editing instructions. Based on VIGOR-his, we propose CrossTimeEdit, a model that reformulates historical street-view generation as editing, using recent street views to constrain viewpoint and unchanged appearance and temporal satellite differences as change evidence. Starting from FLUX.2 [Klein] 4B, we train CrossTimeEdit through supervised fine-tuning (SFT) followed by online reinforcement learning (RL). We design three street-view editing criteria, namely Instruction Alignment (IA), Background Preservation (BP), and Quality and Physical Plausibility (QP), as both RL reward dimensions and evaluation metrics. We optimize this multi-reward objective using Within Group Relative Policy Optimization for flow-matching models (Flow-GRPO) with Group reward-Decoupled Normalization Policy Optimization (GDPO), which normalizes each reward dimension before aggregation. CrossTimeEdit improves overall performance across the three editing criteria by 17.12\\% over the pretrained baseline and outperforms cross-view generation models in scene consistency, visual realism, and perceptual quality. The implementation code, dataset, and model weights are available at https://luhanwen67.github.io/CrossTimeEdit-release/.",
+      "authors": [
+        "Hanwen Lu",
+        "Jun He",
+        "Mingjia Yang",
+        "Hao Wei",
+        "Jinhao Huang",
+        "Yi Lin",
+        "Xiang Zhang"
+      ],
+      "hf_upvotes": 33,
+      "hf_url": "https://huggingface.co/papers/2609.36616",
+      "github_repo": "https://github.com/LuHanwen67/CrossTimeEdit-release",
+      "github_repo_source": "hf",
+      "github_stars": 5,
+      "project_page": "https://luhanwen67.github.io/CrossTimeEdit-release/",
+      "organization": "Sun Yat-Sen University",
+      "hf_published": "2026-09-29",
+      "hf_featured": "2026-10-13",
+      "abs_url": "https://arxiv.org/abs/2609.36616",
+      "pdf_url": "https://arxiv.org/pdf/2609.36616",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 9.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 12.145,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "sft",
+          "grpo",
+          "alignment",
+          "fine-tuning"
+        ],
+        "category": 0.0,
+        "popularity": 7.89,
+        "stars_counted": 5,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 33 赞 ｜ 💻 [代码](https://github.com/LuHanwen67/CrossTimeEdit-release)",
+      "authors_display": "Hanwen Lu, Jun He, Mingjia Yang, Hao Wei, Jinhao Huang, Yi Lin 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.13944",
+      "title": "InstantFusion: A Shared Latent Interface for Heterogeneous Image Generators",
+      "abstract": "Diffusion/flow models have emerged as the de facto paradigms for image generation, giving rise to a diverse family of modern generators with increasingly heterogeneous architectures and representations. Despite their remarkable generation capabilities, the cross-model alignment of latent representations and the consistency of their underlying denoising dynamics remain underexplored. In this work, we uncover an intriguing cross-model compatibility: independently trained generators exhibit similar latent spatial organization, while directly handing off intermediate states between unaligned models can still preserve coarse visual content. Motivated by these observations, we propose InstantFusion, a lightweight shared latent interface that connects the denoising trajectories of heterogeneous image generators. Specifically, to enable flexible cross-model state translation, model-specific Latent AutoEncoders (LAEs) are introduced to project intermediate states from different generators into a shared latent space and decode them into the latent space of a target generator. This shared space is constrained by two complementary objectives: aligning intermediate states derived from the same image at matched noise levels and synchronizing their corresponding local denoising velocities. Once trained, InstantFusion allows denoising to seamlessly transition across frozen generators without requiring a dedicated mapping for every model pair. The versatility of InstantFusion is demonstrated across acceleration, multi-preference composition, cross-architecture on-policy distillation, and cross-model composition, achieving competitive performance across these diverse settings.",
+      "authors": [
+        "Xuanlang Dai",
+        "Jiazi Bu",
+        "Yujie Zhou",
+        "Yuhong Liu",
+        "Beichen Zhang",
+        "Penghui Yang",
+        "Ziyu Liu",
+        "Yuhang Zang"
+      ],
+      "hf_upvotes": 27,
+      "hf_url": "https://huggingface.co/papers/2610.13944",
+      "github_repo": "https://github.com/InternLM/InstantFusion",
+      "github_repo_source": "hf",
+      "github_stars": 21,
+      "project_page": "https://internlm.github.io/InstantFusion/",
+      "organization": "Intern Large Models",
+      "hf_published": "2026-10-09",
+      "hf_featured": "2026-10-12",
+      "abs_url": "https://arxiv.org/abs/2610.13944",
+      "pdf_url": "https://arxiv.org/pdf/2610.13944",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 4.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.905,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "alignment",
+          "distillation"
+        ],
+        "category": 0.0,
+        "popularity": 8.91,
+        "stars_counted": 21,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 27 赞 ｜ 💻 [代码](https://github.com/InternLM/InstantFusion)",
+      "authors_display": "Xuanlang Dai, Jiazi Bu, Yujie Zhou, Yuhong Liu, Beichen Zhang, Penghui Yang 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.17666",
+      "title": "DeltaTTG: Training Multi-Turn Agents with a Token-to-Go Progress Meter",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) for multi-turn agents relies on sparse terminal rewards that say little about individual steps. Within-group step comparisons depend on reliable state matching and sufficiently diverse sampled outcomes, while direct step scoring may require costly external evaluators, human annotations, or task-specific heuristics. We introduce DeltaTTG to learn a reusable progress signal through a shared progress meter, using low-cost supervision from diverse policies' recorded trajectories without task-specific progress rules. Its supervision target, Token-to-Go (TTG), the number of tokens remaining to be generated until task completion, serves as an observable proxy for remaining completion effort. During actor training, changes in the frozen meter's estimates redistribute outcome-derived advantages across steps without altering the reward, preserving each trajectory's advantage sign and token-average scale. On ALFWorld, PaperSearchQA, and BFCLv3, DeltaTTG improves the average score over GRPO by 5.7 and 7.2 points with Qwen3-4B and Llama-3.1-8B-Instruct, respectively, outperforms all compared RL baselines on average, and keeps actor-training GPU-hours close to GRPO. Further experiments show improved sample efficiency and out-of-domain performance, and support the meter's ability to distinguish step quality and guide test-time action selection across actor sizes. The code is available at https://github.com/Xuyan923r/DeltaTTG.",
+      "authors": [
+        "Xuyan Ye",
+        "Xiyan Fu",
+        "Shengda Fan",
+        "Jiawei Cui",
+        "Yankai Lin",
+        "Wei Lu"
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.17666",
+      "pdf_url": "https://arxiv.org/pdf/2610.17666v1",
+      "hf_upvotes": 34,
+      "hf_url": "https://huggingface.co/papers/2610.17666",
+      "github_repo": "https://github.com/Xuyan923r/DeltaTTG",
+      "github_repo_source": "hf",
+      "github_stars": 2,
+      "organization": "Nanyang Technological University",
+      "hf_published": "2026-10-13",
+      "hf_featured": "2026-10-14",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 12.5,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 11.774,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "rlvr",
+          "grpo",
+          "test-time",
+          "llama"
+        ],
+        "category": 2.5,
+        "popularity": 7.15,
+        "stars_counted": 2,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 34 赞 ｜ 💻 [代码](https://github.com/Xuyan923r/DeltaTTG)",
+      "authors_display": "Xuyan Ye, Xiyan Fu, Shengda Fan, Jiawei Cui, Yankai Lin, Wei Lu"
+    },
+    {
+      "arxiv_id": "2610.16811",
+      "title": "X-Ragent: Tool-Augmented Reinforcement Learning for Evidence-Grounded Chest X-Ray Reasoning",
+      "abstract": "Chest X-ray (CXR) interpretation often requires integrating visual findings with task-specific evidence rather than relying on direct visual recognition alone. While tool-augmented medical agents can supply such evidence via external modules, they often lack explicit mechanisms for learning when auxiliary evidence is needed and for preventing inapplicable quantitative evidence from entering diagnostic reasoning. To address this, we propose X-Ragent, a post-training framework for tool-augmented reinforcement learning that decouples learned auxiliary-evidence seeking from validity-gated quantitative measurement acquisition for evidence-grounded CXR reasoning. We construct Rad-CoT, a 7.7K-sample corpus combining causally ordered tool-augmented trajectories with report-style diagnostic reasoning, and use it to initialize Qwen3-VL-8B via agentic supervised fine-tuning (SFT). We then optimize the policy with Group Relative Policy Optimization (GRPO) using an accuracy-gated reward that applies process-level terms for measurement consistency and auxiliary-tool cost only to correct trajectories, preventing plausible process behavior from compensating for an incorrect diagnosis. Across three CXR benchmarks, X-Ragent achieves the strongest results, including an 8.6-point improvement on the fully held-out ChestAgentBench. By seeking evidence selectively and admitting only valid measurements, X-Ragent supports more faithful and evidence-grounded CXR reasoning.",
+      "authors": [
+        "Yi Wang",
+        "Zhenlong Yuan",
+        "Yuchan Guo",
+        "Maolei Huang",
+        "Zijian Song",
+        "Dapeng Zhang",
+        "Rongbin Tan",
+        "Jiyuan Wang",
+        "Zhiyuan Wang",
+        "Fangfang Lin",
+        "Shuhan Song",
+        "Huawei Cao"
+      ],
+      "hf_upvotes": 81,
+      "hf_url": "https://huggingface.co/papers/2610.16811",
+      "organization": "Carnegie Mellon University",
+      "hf_published": "2026-10-12",
+      "hf_featured": "2026-10-14",
+      "abs_url": "https://arxiv.org/abs/2610.16811",
+      "pdf_url": "https://arxiv.org/pdf/2610.16811",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 11.0,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 11.75,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "post-training",
+          "sft",
+          "grpo",
+          "reasoning",
+          "fine-tuning"
+        ],
+        "category": 0.0,
+        "popularity": 9.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 81 赞",
+      "authors_display": "Yi Wang, Zhenlong Yuan, Yuchan Guo, Maolei Huang, Zijian Song, Dapeng Zhang 等 12 人"
+    },
+    {
+      "arxiv_id": "2610.17246",
+      "title": "LLM-to-Flow Distillation: Teaching Natural Language Goals to Scientific Generators",
+      "abstract": "Generative discovery in science requires coupling high-level scientific reasoning with the ability to generate samples respecting the structure of a design space. Yet these capabilities remain largely separated: foundation LLMs encode broad chemical and biological knowledge, while domain-specific flow- and diffusion-based generators capture the priors needed to produce valid sequences and geometries. We study how to align such scientific generators to high-level natural-language discovery goals without requiring an explicit proxy reward, which is often unavailable or poorly captured by learned predictors in experimental sciences. We introduce LLM-to-Flow Distillation (LFD), where a frozen LLM acts as an adaptive teacher for a domain-specific generator. Given a goal such as 'generate peptides with promising anticancer activity', the teacher constructs a curriculum of intermediate sub-goals aware of the flow's current capabilities, and progressively directs them toward the original discovery goal. At each round, the LLM judges sampled candidates under the current objective. These judgments induce preferences that are iteratively distilled into the generator through DPO. This procedure provides dense learning signals even when the initial model places negligible probability on designs satisfying the final goal, enabling adaptation toward poorly covered, out-of-distribution regions. Experiments on therapeutic peptides and small-molecule structure design demonstrate that LFD enables a new form of generative control: aligning arbitrary domain-specific scientific generators to scientific discovery tasks expressed via high-level natural-language goals.",
+      "authors": [
+        "Riccardo De Santi",
+        "Federico Di Gennaro",
+        "Angelo Gnazzo",
+        "Sophia Tang",
+        "Pranam Chatterjee",
+        "Fanny Yang",
+        "İsmail İlkan Ceylan",
+        "Michael M. Bronstein",
+        "Andreas Krause"
+      ],
+      "published": "2026-10-12",
+      "updated": "2026-10-12",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.17246",
+      "pdf_url": "https://arxiv.org/pdf/2610.17246v1",
+      "hf_upvotes": 11,
+      "hf_url": "https://huggingface.co/papers/2610.17246",
+      "github_repo": "https://github.com/FedericoDiGennaro/LLM-to-Flow-Distillation",
+      "github_repo_source": "hf",
+      "github_stars": 17,
+      "project_page": "https://llm-to-flow-distillation.github.io",
+      "organization": "ETH Zurich",
+      "hf_published": "2026-10-12",
+      "hf_featured": "2026-10-15",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 11.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.723,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "llm",
+          "llms",
+          "dpo",
+          "reasoning",
+          "distillation"
+        ],
+        "category": 0.75,
+        "popularity": 6.79,
+        "stars_counted": 17,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 11 赞 ｜ 💻 [代码](https://github.com/FedericoDiGennaro/LLM-to-Flow-Distillation)",
+      "authors_display": "Riccardo De Santi, Federico Di Gennaro, Angelo Gnazzo, Sophia Tang, Pranam Chatterjee, Fanny Yang 等 9 人"
+    },
+    {
+      "arxiv_id": "2610.20399",
+      "title": "Cortex: Consolidating Context into Parametric Memory",
+      "abstract": "Context can improve large language model performance, but these gains may be lost after context removal. Inspired by biological systems consolidation, we formulate Memory Consolidation (MC) as internalizing these gains while preserving non-target capabilities, connecting context-specified editing, skill learning, and behavioral steering under a common objective. We introduce a five-task-family testbed measuring consolidation and retention under single, batch, and sequential updates. We propose Cortex, which generates prospective queries to anticipate uses of context and distills context-conditioned outputs into mergeable low-rank or structural feed-forward network updates. Across 4B--120B dense and mixture-of-experts backbones, including both text-only and multimodal models, Cortex lies on the empirical consolidation--retention Pareto frontier in most evaluated settings. After 50 sequential factual edits on a 14B model, Cortex-Structural recovers 88.9% of the context-induced gain while retaining 99.8% of original non-target performance.",
+      "authors": [
+        "Jintian Zhang",
+        "Feng He",
+        "Xinnian Liang",
+        "Ziwen Xu",
+        "Haoming Xu",
+        "Haojing Huang",
+        "Shuangzhi Wu",
+        "Ningyu Zhang"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "comment": "Technical report",
+      "abs_url": "https://arxiv.org/abs/2610.20399",
+      "pdf_url": "https://arxiv.org/pdf/2610.20399v1",
+      "hf_upvotes": 67,
+      "hf_url": "https://huggingface.co/papers/2610.20399",
+      "organization": "ByteDance Seed",
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-15",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 13.5,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 11.56,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "large language model",
+          "language model",
+          "mixture-of-experts"
+        ],
+        "category": 3.5,
+        "popularity": 8.19,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 67 赞",
+      "authors_display": "Jintian Zhang, Feng He, Xinnian Liang, Ziwen Xu, Haoming Xu, Haojing Huang 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.15028",
+      "title": "UltraBERT: Beyond the Limit of BERT Pre-Training",
+      "abstract": "Recent bidirectional encoders have been modernized with innovations from causal large language models (LLMs). However, the pretraining recipe itself remains inherited from small-scale conventions, leaving encoders underoptimized, with no single model performing competitively across both classification and retrieval tasks. In this work, we investigate how far encoder performance can be pushed by revisiting core design choices in training, revealing three key findings: (1) Encoders saturate on downstream tasks beyond a few trillion tokens, indicating that additional compute past this point does not help. (2) Across model sizes, lower masking ratios benefit classification while higher ones benefit retrieval, contradicting prior work suggesting larger ratios for larger models. (3) Distillation with pruning improves classification at low masking ratios but degrades retrieval at high ones. Guided by these findings, we present UltraBERT, a single encoder that assigns separate LM heads to low and high masking ratios within a batch and restricts the distillation objective to the low ratio. To our knowledge, UltraBERT is the first encoder to achieve state of the art on both classification and retrieval tasks, reaching 91.0 on GLUE and 47.7 on BEIR. Together, these results show how far encoder performance can be pushed and provide a principled basis for compute allocation, masking ratio design, and knowledge transfer in bidirectional models.",
+      "authors": [
+        "Jungwoo Park",
+        "Taewhoo Lee",
+        "Jaewoo Kang"
+      ],
+      "published": "2026-10-10",
+      "updated": "2026-10-10",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.15028",
+      "pdf_url": "https://arxiv.org/pdf/2610.15028v1",
+      "hf_upvotes": 72,
+      "hf_url": "https://huggingface.co/papers/2610.15028",
+      "hf_published": "2026-10-10",
+      "hf_featured": "2026-10-14",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 11.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.423,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "llms",
+          "pretraining",
+          "pre-training",
+          "distillation"
+        ],
+        "category": 2.75,
+        "popularity": 8.49,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 72 赞",
+      "authors_display": "Jungwoo Park, Taewhoo Lee, Jaewoo Kang"
+    },
+    {
+      "arxiv_id": "2610.13171",
+      "title": "PreSTO: Predictive Subtree Prefetching for Fast LLM Power Sampling",
+      "abstract": "Power sampling improves large language model (LLM) reasoning at test time by sampling from a sharpened version of the base model's distribution. Its sampler, PowerMH, is slow because its Metropolis--Hastings (MH) updates are sequential: each accept/reject decision sets the state from which the next proposal is generated. Prior work reduces this cost by changing the sampler or the model (e.g., sequential Monte Carlo, approximate lookahead, distillation). We propose Predictive SubTree Prefetching (PreSTO), which accelerates PowerMH by prefetching future proposals and provably leaves its MH transition kernel unchanged. PreSTO views future MH outcomes as a tree of accept/reject decisions: in each model call, it generates the proposals of a prefetched subtree of this tree in one batch, then follows the realized path with the original MH acceptance rule. We also observe that MH reaches only a sparse, nearly unary part of each prefetched subtree, we further design a predictive traversal rule that chooses the subtree to maximize the predicted number of completed transitions. Across seven datasets and five base LLMs, PreSTO achieves median speedups of 1.71times, 1.91times, and 2.33times on PowerMH and its follow-ups EntropyCut and MultiTryMH, respectively; on the first two, it makes a median of 3.9times fewer model calls, each only 2.1times longer. On LCB V6 with Qwen3.5-9B, the predictive traversal rule is a further 1.25times--1.37times faster than the default breadth-first traversal.",
+      "authors": [
+        "Nan Jiang",
+        "Panagiotis Theodoropoulos",
+        "Wei Deng"
+      ],
+      "hf_upvotes": 14,
+      "hf_url": "https://huggingface.co/papers/2610.13171",
+      "github_repo": "https://github.com/Nan-Jiang-Group/PreSTO",
+      "github_repo_source": "hf",
+      "github_stars": 2,
+      "project_page": "https://nan-jiang-group.github.io/PreSTO/",
+      "organization": "Morgan Stanley",
+      "hf_published": "2026-10-09",
+      "hf_featured": "2026-10-12",
+      "abs_url": "https://arxiv.org/abs/2610.13171",
+      "pdf_url": "https://arxiv.org/pdf/2610.13171",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 16.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.06,
+      "score_breakdown": {
+        "keyword_raw": 16,
+        "keyword_matched": [
+          "large language model",
+          "language model",
+          "llm",
+          "llms",
+          "reasoning",
+          "distillation"
+        ],
+        "category": 0.0,
+        "popularity": 5.06,
+        "stars_counted": 2,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 14 赞 ｜ 💻 [代码](https://github.com/Nan-Jiang-Group/PreSTO)",
+      "authors_display": "Nan Jiang, Panagiotis Theodoropoulos, Wei Deng"
+    },
+    {
+      "arxiv_id": "2610.16354",
+      "title": "Self-Distillation with Verbal Regularization",
+      "abstract": "On-policy self-distillation (OPSD) trains a large language model using supervision from a teacher instantiated from the same model as the student. The teacher is conditioned on privileged information (PI), such as verified solutions. The student, which does not observe PI, learns from the teacher's next-token distributions along its own sampled responses. However, PI can bias supervision toward shortcut reasoning with limited verification or reconsideration, accompanied by a sharp drop in the entropy of the output distribution. To address this challenge, we introduce self-distillation with verbal regularization (VRSD), which uses system prompts to regulate how the teacher uses PI, thereby encouraging rethinking and exploration to counteract premature commitment. Theoretically, we model prompting as attenuating the influence of PI on the teacher distribution and derive conditions for entropy preservation. Across three models and four tasks, VRSD improves Pass@1 over OPSD in 11 of 12 model-task settings, by 3.9 percentage points on average, while generally maintaining higher token entropy.",
+      "authors": [
+        "Jiazheng Li",
+        "Yawei Li",
+        "Junru Lu",
+        "Zhenyi Shen",
+        "Di Yin",
+        "Lin Gui",
+        "Xing Sun",
+        "David Rügamer",
+        "Xinpeng Wang",
+        "Yulan He"
+      ],
+      "published": "2026-10-12",
+      "updated": "2026-10-12",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "comment": "26 pages, 7 figures",
+      "abs_url": "https://arxiv.org/abs/2610.16354",
+      "pdf_url": "https://arxiv.org/pdf/2610.16354v1",
+      "hf_upvotes": 38,
+      "hf_url": "https://huggingface.co/papers/2610.16354",
+      "github_repo": "https://github.com/lijiazheng99/VRSD",
+      "github_repo_source": "hf",
+      "github_stars": 5,
+      "organization": "King's College London",
+      "hf_published": "2026-10-12",
+      "hf_featured": "2026-10-14",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 12.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 10.664,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "large language model",
+          "language model",
+          "reasoning",
+          "distillation"
+        ],
+        "category": 2.0,
+        "popularity": 6.16,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 38 赞 ｜ 💻 [代码](https://github.com/lijiazheng99/VRSD)",
+      "authors_display": "Jiazheng Li, Yawei Li, Junru Lu, Zhenyi Shen, Di Yin, Lin Gui 等 10 人"
+    },
+    {
+      "arxiv_id": "2610.16533",
+      "title": "Spectral-Driven Adaptive-Rank Optimizer for Large Language Model Reinforcement Learning with Verifiable Rewards",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) is reshaping how large language models (LLMs) acquire reasoning capabilities, yet the optimizers used remain largely inherited from teacher-forcing training. This raises a fundamental question: does RLVR induce a distinct optimization geometry that calls for a different optimizer? We investigate this question through the spectral structure of LLM gradients and find that gradient energy progressively concentrates into a shrinking effective subspace, which is characteristic of RLVR, as it is absent under supervised fine-tuning (SFT) and is largely removed when the verifiable reward is replaced by a random one. Moreover, the rank required to capture a fixed fraction of gradient energy steadily decreases over training, revealing that the effective dimensionality of useful updates itself evolves with training. These findings motivate a new optimization principle: rather than prescribing the update rank externally, an optimizer should adapt its rank to the evolving spectral structure of the gradient. We introduce Ares (Adaptive Rank-Effective Spectral Optimization), which estimates the effective update rank from the gradient's spectral energy distribution, tracks its evolution, and confines the gradient signal driving each update to the resulting low-rank subspace. Across LLMs of different scales, Ares improves accuracy over widely used optimizers and generalizes across RLVR algorithms and tasks. Results suggest that effective optimization may require optimizers to be designed around the geometry and dynamics of the training process. We release the code and data at https://github.com/RUCAIBox/Ares.",
+      "authors": [
+        "Zhipeng Chen",
+        "Wayne Xin Zhao",
+        "Ji-Rong Wen"
+      ],
+      "published": "2026-10-12",
+      "updated": "2026-10-12",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "comment": "23 pages, 11 figures, 8 tables. Working in progress",
+      "abs_url": "https://arxiv.org/abs/2610.16533",
+      "pdf_url": "https://arxiv.org/pdf/2610.16533v1",
+      "hf_upvotes": 10,
+      "hf_url": "https://huggingface.co/papers/2610.16533",
+      "organization": "RUC-AIBOX",
+      "hf_published": "2026-10-12",
+      "hf_featured": "2026-10-14",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/RUCAIBox/Ares",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "llm",
+      "fit": 23.75,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 10.6,
+      "score_breakdown": {
+        "keyword_raw": 21,
+        "keyword_matched": [
+          "large language model",
+          "language model",
+          "llm",
+          "llms",
+          "sft",
+          "rlvr",
+          "reasoning",
+          "fine-tuning"
+        ],
+        "category": 2.75,
+        "popularity": 3.16,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 10 赞 ｜ 💻 [代码](https://github.com/RUCAIBox/Ares)",
+      "authors_display": "Zhipeng Chen, Wayne Xin Zhao, Ji-Rong Wen"
+    },
+    {
+      "arxiv_id": "2610.12570",
+      "title": "Contextual Correction of Parallel Drafts for Speculative Decoding",
+      "abstract": "Speculative decoding accelerates large language model inference by using a lightweight drafter to propose multiple tokens that are subsequently verified in parallel by the target model. Recent diffusion-based drafters make this paradigm particularly attractive: deep attention-based neural backbones provide strong predictions, while drafting multiple future positions in parallel avoids the sequential cost of autoregressive generation. This parallelism, however, comes at a cost. Tokens within a draft block are predicted without access to the realized identities of preceding draft tokens, removing intra-block dependencies that would naturally be available under autoregressive generation. We introduce DCOCO (DFlash Contextual Corrector), a lightweight mechanism that restores these dependencies while preserving parallel drafting. Rather than committing to each position's top prediction, DCOCO retains multiple candidate tokens and evaluates their contextual compatibility across adjacent draft positions in parallel, enabling contextually informed token selection at low additional cost. Across four verifier backbones and ten benchmarks, DCOCO achieves the highest average throughput in every evaluated configuration, spanning greedy and stochastic decoding with and without extended reasoning, with speedups of up to 6.6x over vanilla decoding. Its advantage persists under concurrent serving: DCOCO outperforms the strongest competing method by 6-23% across 4-32 concurrent requests, while other sequential correctors fall below uncorrected DFlash at these loads. These results demonstrate that recovering intra-block dependencies through parallel contextual scoring delivers consistent acceleration across decoding regimes and serving loads.",
+      "authors": [
+        "Roy Eisenstadt",
+        "Harel Lidar",
+        "Tal Gonen",
+        "Omer Luxembourg",
+        "Itamar Zimerman",
+        "Lior Wolf",
+        "Eli David",
+        "Ilan Naiman"
+      ],
+      "hf_upvotes": 30,
+      "hf_url": "https://huggingface.co/papers/2610.12570",
+      "github_repo": "https://github.com/two-delta/DCOCO",
+      "github_repo_source": "hf",
+      "github_stars": 29,
+      "hf_published": "2026-10-08",
+      "hf_featured": "2026-10-12",
+      "abs_url": "https://arxiv.org/abs/2610.12570",
+      "pdf_url": "https://arxiv.org/pdf/2610.12570",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 14.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 10.477,
+      "score_breakdown": {
+        "keyword_raw": 14,
+        "keyword_matched": [
+          "large language model",
+          "language model",
+          "reasoning",
+          "speculative decoding",
+          "decoding",
+          "inference"
+        ],
+        "category": 0.0,
+        "popularity": 5.48,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 30 赞 ｜ 💻 [代码](https://github.com/two-delta/DCOCO)",
+      "authors_display": "Roy Eisenstadt, Harel Lidar, Tal Gonen, Omer Luxembourg, Itamar Zimerman, Lior Wolf 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.12933",
+      "title": "Learning More by Training Less: Uncertainty-Guided Progressive Contraction for Efficient Reasoning Post-Training",
+      "abstract": "Large language models have achieved remarkable advances in complex reasoning. However, scaling reasoning post-training with ever-larger corpora can substantially increase training cost without proportional performance gains. In this study, we therefore ask: how far can reasoning supervision be compressed without sacrificing capability? To this end, we propose an uncertainty-guided progressive contraction framework that concentrates supervision and optimization on the reasoning trajectories most valuable for learning. Specifically, rather than treating a teacher-generated chain-of-thought (CoT) as a single realized path, we construct uncertainty-profiled reasoning supervision by building Monte Carlo reasoning trees around intermediate reasoning states to expose process-level uncertainty. This uncertainty first contracts the original corpus into a compact teacher-informed pool. A second, learner-aware contraction then performs online routing during SFT, concentrating optimization according to the student's evolving learning state. Together, the two stages progressively contract both supervision and optimization, substantially reducing the student training budget. Experiments across diverse reasoning benchmarks and LLM families show that our method uses as little as 0.22% of the optimization budget of full-data SFT, over 450x less training exposure, while maintaining or improving reasoning performance. Notably, our framework generalizes well across heterogeneous student families, black-box teachers, and weak-to-strong transfer. This indicates that it is not only a way to accelerate training but can also enhance reasoning capability.",
+      "authors": [
+        "Suorong Yang",
+        "Jiaxin Wang",
+        "Jiaming Su",
+        "Chentao Yue",
+        "Furao Shen",
+        "Peng Ye",
+        "Soujanya Poria"
+      ],
+      "hf_upvotes": 12,
+      "hf_url": "https://huggingface.co/papers/2610.12933",
+      "github_repo": "https://github.com/Jackbrocp/Learning-More-by-Training-Less",
+      "github_repo_source": "hf",
+      "github_stars": 5,
+      "organization": "Nanjing University",
+      "hf_published": "2026-10-09",
+      "hf_featured": "2026-10-13",
+      "abs_url": "https://arxiv.org/abs/2610.12933",
+      "pdf_url": "https://arxiv.org/pdf/2610.12933",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 12.0,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 10.114,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "llm",
+          "post-training",
+          "sft",
+          "chain-of-thought",
+          "reasoning"
+        ],
+        "category": 0.0,
+        "popularity": 5.61,
+        "stars_counted": 5,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 12 赞 ｜ 💻 [代码](https://github.com/Jackbrocp/Learning-More-by-Training-Less)",
+      "authors_display": "Suorong Yang, Jiaxin Wang, Jiaming Su, Chentao Yue, Furao Shen, Peng Ye 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.18010",
+      "title": "Fish Audio Drama 3 Technical Report",
+      "abstract": "We introduce Fish Audio Drama 3, an open-source speech generation model that turns text into directed performances, built on a 35B-parameter mixture-of-experts backbone that activates 3B parameters per token. It clones voices from multiple references, follows natural-language direction, revises a take when the next turn gives a note, voices multi-character scenes, edits existing speech by infilling, and synthesizes long-form and streaming audio. Multi-turn revision, scene dubbing, editing by infilling, and streaming text input are new in Drama 3, all in one model. Drama 3 pairs the hybrid linear-attention backbone with a new codebook multi-token-prediction audio decoder that predicts the acoustic codebooks of each frame in dedicated layers that attend over the entire sequence. The model is trained with a three-stage pre-training recipe, instruction fine-tuning, and large-batch reinforcement learning whose only reward is a single learned model of human preference. Its inference engine decodes a single stream at 271 frames per second on one H200, against 177 for Fish Audio S2, although Drama 3 has more than seven times as many parameters. The model weights are available on GitHub (https://github.com/fishaudio/fish-speech) and Hugging Face (https://huggingface.co/fishaudio/drama-3), and inference is available through SGLang-Omni (https://github.com/sgl-project/sglang-omni). We highly encourage readers to visit https://fish.audio to direct their own performances.",
+      "authors": [
+        "Dawei Han",
+        "Shidong Li",
+        "Shijia Liao",
+        "Jiahua Liu",
+        "Songting Liu",
+        "Qingzheng Wang",
+        "Yuxuan Wang",
+        "Xin Chen",
+        "Yifan Cheng",
+        "Tianyu Li",
+        "Gangin Park",
+        "Xuehao Yang",
+        "Chang Zeng",
+        "Haoyang Zhang",
+        "Ruoyi Zhang",
+        "Xiangyu Zhang"
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-14",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.CL"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.18010",
+      "pdf_url": "https://arxiv.org/pdf/2610.18010v2",
+      "hf_upvotes": 33,
+      "hf_url": "https://huggingface.co/papers/2610.18010",
+      "project_page": "https://fish.audio",
+      "organization": "Fish Audio",
+      "hf_published": "2026-10-13",
+      "hf_featured": "2026-10-14",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/fishaudio/fish-speech",
+      "github_repo_source": "abstract",
+      "theme": "llm",
+      "fit": 9.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 9.995,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "pre-training",
+          "mixture-of-experts",
+          "fine-tuning",
+          "inference"
+        ],
+        "category": 1.0,
+        "popularity": 5.74,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 33 赞 ｜ 💻 [代码](https://github.com/fishaudio/fish-speech)",
+      "authors_display": "Dawei Han, Shidong Li, Shijia Liao, Jiahua Liu, Songting Liu, Qingzheng Wang 等 16 人"
+    },
+    {
+      "arxiv_id": "2609.35291",
+      "title": "Narrow Multimodal Fine-Tuning Can Induce Emergent Misalignment",
+      "abstract": "Modern AI models are aligned through post-training to adapt them to downstream tasks. Recent work shows that fine-tuning language models on narrow tasks can induce emergent misalignment (EM), causing broadly harmful behaviors beyond the training task. However, EM has been studied almost entirely in text-only tasks, leaving its manifestation in multimodal models unclear. In this paper, we define and analyze EM in the context of vision-language models. We first induce EM via fine-tuning on narrow multimodal tasks targeting vulnerable code, careless household-object use, and conspiratorial interpretations of ordinary scenes. Across fifteen commercial and open-source models with different scales, we find that narrow multimodal fine-tuning can induce coherent and broadly misaligned behavior that transfers to unrelated tasks, including misaligned opinions, visual factual dishonesty, unsafe image generation, vulnerability to visual jailbreaks, and risky agentic actions. We further find that multimodal EM does not depend on the apparent harmfulness of training data but is sensitive to training-evaluation modality alignment. EM can arise under both supervised fine-tuning and preference optimization and can propagate through intermediate reasoning. Finally, we explore several mitigation strategies, including prompt inoculation, benign continued training, and activation-level steering, which can partially reduce EM. Overall, our findings suggest that multimodal EM reflects a behavioral shift rather than a general loss of capability, extending beyond text to the visual modality.",
+      "authors": [
+        "Shunchang Liu",
+        "Lukas Fluri",
+        "Xin Chen",
+        "Francesco Croce"
+      ],
+      "hf_upvotes": 29,
+      "hf_url": "https://huggingface.co/papers/2609.35291",
+      "github_repo": "https://github.com/shunchang-liu/vlm-em",
+      "github_repo_source": "hf",
+      "github_stars": 2,
+      "hf_published": "2026-09-28",
+      "hf_featured": "2026-10-13",
+      "abs_url": "https://arxiv.org/abs/2609.35291",
+      "pdf_url": "https://arxiv.org/pdf/2609.35291",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 12.0,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 9.885,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "post-training",
+          "preference optimization",
+          "alignment",
+          "reasoning",
+          "fine-tuning",
+          "prompt"
+        ],
+        "category": 0.0,
+        "popularity": 5.39,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 29 赞 ｜ 💻 [代码](https://github.com/shunchang-liu/vlm-em)",
+      "authors_display": "Shunchang Liu, Lukas Fluri, Xin Chen, Francesco Croce"
+    }
+  ]
+}

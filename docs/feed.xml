@@ -5,7 +5,14 @@
   <link>https://xxliu1996.github.io/AcademicPaperGrabber/</link>
   <description>每周自动抓取六个方向最近一周的热门论文，每个方向 10 篇，人读的那种周报。</description>
   <language>zh-CN</language>
-  <lastBuildDate>Mon, 12 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 18 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <item>
+    <title>AI 论文周报（2026-10-12 – 2026-10-18）</title>
+    <link>https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-18.html</link>
+    <guid isPermaLink="true">https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-18.html</guid>
+    <pubDate>Sun, 18 Oct 2026 00:00:00 +0000</pubDate>
+    <description>本周最显眼的现象是&quot;决策模型&quot;(System One / Jev 系列) 突然集中爆发——Jeva、VideoJev、MJev-Spatial、StartLux-Decision、DecisionRobust 等多篇论文几乎同时在做同一件事：把本该由大模型自回归生成的选择题，改造成一次前向打分，用来换取数量级的推理加速。与之呼应的是&quot;在线策略蒸馏&quot;(on-policy distillation) 这条线也在快速分化出新变体——Waypoint-OPD、CriticOPD、ActionOPD、VRSD 分别从早晚策略一致性、教师可恢复性、动作级对齐、熵保持四个角度修补同一个基础配方。Agent 方向的重心则从&quot;能不能完成任务&quot;转向&quot;脚手架本身该不该自我演化&quot;，Self-Evolving Agent Harness、Harness²、WorkRover 都在给智能体的执行框架装上反馈闭环；FDE-Gym、AgentSWE 两篇基准论文则不约而同地给这股热情浇了冷水——即便功能通过率很高，真正可靠交付的比例仍然很低。机器人方向，VLA 与世界动作模型(WAM)的融合继续加深，GreenWAM、LeWAM、WAVE-0 都在探索&quot;一个模型同时做预测与控制&quot;。相比之下，智能眼镜/可穿戴方向本周明显安静，没有出现热度和技术突破都突出的工作。 ｜ llm 10 篇；vlm 10 篇；agent 10 篇；deep-learning 10 篇；robotics 10 篇；wearable-xr 8 篇</description>
+  </item>
   <item>
     <title>AI 论文周报（2026-10-06 – 2026-10-12）</title>
     <link>https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-12.html</link>

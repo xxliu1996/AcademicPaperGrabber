@@ -1,0 +1,1129 @@
+{
+  "generated_at": "2026-10-19T03:55:50.380424+00:00",
+  "theme": "wearable-xr",
+  "theme_title": "智能眼镜 / 可穿戴 / 第一人称视觉",
+  "theme_subtitle": "AR 眼镜、头显交互、egocentric 视觉、可穿戴感知",
+  "accent": "#8a5a2b",
+  "week_start": "2026-10-12",
+  "week_end": "2026-10-18",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 23,
+  "measured_heat_count": 2,
+  "papers": [
+    {
+      "arxiv_id": "2609.38748",
+      "title": "Hear the World in Stereo: Learning Dynamic Spatial Correspondence for Immersive Joint Video-Audio Generation",
+      "abstract": "Recent joint video-audio generation models have achieved strong semantic correspondence and temporal synchronization. However, applications such as AR/VR and interactive gaming further require stereo audio to provide an immersive sense, which remains largely overlooked. Effective stereo audio requires the perceived sound location to evolve consistently with the motion of its corresponding visual source. We refer to this property as Dynamic Spatial Correspondence and propose StereoBind, a framework that binds visual source motion to stereo sound generation. StereoBind uses motion tracks to coordinate visual motion and stereo audio through three complementary mechanisms. Visual Motion Binding establishes source-aware audiovisual correspondence, the Spatial Track Encoder captures absolute source positions, and Residual Track RoPE models relative motion. For supervision and evaluation, we construct StereoWorld-29K, a large-scale stereo audio-video dataset with paired motion tracks, and StereoWorldBench for measuring audiovisual spatial consistency. Experiments show that StereoBind substantially improves spatial alignment in stereo audio generation over existing models while preserving overall audiovisual quality.",
+      "authors": [
+        "Hanmo Chen",
+        "Chengcheng Liu",
+        "Tianxiao Chen",
+        "Zheyu Zhang",
+        "Siming Zheng",
+        "Jinwei Chen",
+        "Xu Yang",
+        "Cheng Deng",
+        "Bo Li",
+        "Peng-tao Jiang"
+      ],
+      "hf_upvotes": 68,
+      "hf_url": "https://huggingface.co/papers/2609.38748",
+      "github_repo": "https://github.com/vivoCameraResearch/StereoBind",
+      "github_repo_source": "hf",
+      "github_stars": 13,
+      "project_page": "https://vivocameraresearch.github.io/Stereo-Bind-Project/",
+      "hf_published": "2026-10-08",
+      "hf_featured": "2026-10-12",
+      "abs_url": "https://arxiv.org/abs/2609.38748",
+      "pdf_url": "https://arxiv.org/pdf/2609.38748",
+      "sources": [
+        "hf"
+      ],
+      "theme": "wearable-xr",
+      "fit": 5.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.496,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "vr",
+          "immersive"
+        ],
+        "category": 0.0,
+        "popularity": 8.25,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 68 赞 ｜ 💻 [代码](https://github.com/vivoCameraResearch/StereoBind)",
+      "authors_display": "Hanmo Chen, Chengcheng Liu, Tianxiao Chen, Zheyu Zhang, Siming Zheng, Jinwei Chen 等 10 人"
+    },
+    {
+      "arxiv_id": "2610.19726",
+      "title": "Generative World Simulation with DAO and JING",
+      "abstract": "We present a Generative World Simulation framework that couples persistent shared world state with continuous first-person audiovisual generation. The framework integrates DAO, a computable world engine, and JING, an Egocentric Interactive Experience Model, to support sustained interaction for humans and agents. DAO maintains the states of characters, objects, and spaces and their relationships, advancing the world according to interaction rules and world time while preserving the consequences of past actions. From this evolving state, DAO derives observer-specific conditions for JING, which combines these conditions with character, object, and scene references, observation history, and current actions to generate each observer's audiovisual experience. Users can explore environments, manipulate objects, and communicate with characters through viewpoint control and text instructions, with their actions shaping both the shared state and subsequent experiences. By connecting world-state evolution with experience generation in a continuous interaction loop, the framework offers an approach to building interactive worlds that retain their history, evolve through action, and persist beyond any individual observer.",
+      "authors": [
+        "XGEN Team",
+        "Guohao Cai",
+        "Haoxuan Che",
+        "Frank Fan",
+        "Chenran Huang",
+        "Junjia Huang",
+        "Jiayi Jiang",
+        "Yanheng Li",
+        "Leon Liu",
+        "Shaoteng Liu",
+        "Xi Liu",
+        "Feng Nie",
+        "Zhefan Rao",
+        "An Wang",
+        "Hanwen Wang",
+        "Pengxiang Yan",
+        "Jieming Yu",
+        "Qian Zha",
+        "Wentao Zheng"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "XGEN DAO and JING Technical report. Contributors listed alphabetically by surname. Project page: https://xgenlabs.ai/research/generative-world-simulation; Model: https://huggingface.co/XGENlabs/XGEN-JING",
+      "abs_url": "https://arxiv.org/abs/2610.19726",
+      "pdf_url": "https://arxiv.org/pdf/2610.19726v1",
+      "hf_upvotes": 8,
+      "hf_url": "https://huggingface.co/papers/2610.19726",
+      "github_repo": "https://github.com/XGEN-Labs/XGEN-JING",
+      "github_repo_source": "hf",
+      "github_stars": 287,
+      "project_page": "https://xgenlabs.ai/research/generative-world-simulation",
+      "organization": "XGEN-Labs",
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-15",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "wearable-xr",
+      "fit": 9.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.266,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "egocentric",
+          "first-person"
+        ],
+        "category": 0.75,
+        "popularity": 2.83,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 8 赞 ｜ 💻 [代码](https://github.com/XGEN-Labs/XGEN-JING)",
+      "authors_display": "XGEN Team, Guohao Cai, Haoxuan Che, Frank Fan, Chenran Huang, Junjia Huang 等 19 人"
+    },
+    {
+      "arxiv_id": "2610.16277",
+      "title": "FlowAvatar: Real-Time Full-Body Avatars from Sparse Egocentric Inputs on Consumer XR Devices",
+      "abstract": "Prior avatar embodiment research has studied tracking completeness (how faithfully the body, hands, and face are sensed and reproduced) and personalized appearance in isolation, each requiring specialized lab equipment. How these factors interact on consumer hardware remains an open question, because no existing system unifies body pose, face, hands, and personalized appearance on a standalone headset. We present FlowAvatar, a system enabling real-time personalized look-alike avatars with full-body pose, hand articulation, facial expression, and eye gaze tracking from sparse egocentric inputs on consumer XR devices (Meta Quest Pro). Our pose model achieves competitive spatial accuracy and state-of-the-art temporal consistency on the AMASS benchmark against prior works with comprehensive spatial and temporal losses validated through architecture and loss ablations, while running in real-time. Two user studies (N=12, N=10) provide converging evidence that tracking completeness and personalized appearance serve complementary roles: tracking completeness broadly improves perceived motion quality, while only their combination achieves positive total embodiment.",
+      "authors": [
+        "Chenfeng Gao",
+        "Taeyoung Yeon",
+        "Sungheon Park",
+        "Vasco Xu",
+        "Anish Prabhu",
+        "Mar Gonzalez-Franco",
+        "Karan Ahuja"
+      ],
+      "published": "2026-10-12",
+      "updated": "2026-10-12",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.HC"
+      ],
+      "comment": "Accepted to IEEE ISMAR 2026 (Conference Track). 10 pages, 9 figures. Code: https://github.com/SPICExLAB/FlowAvatar",
+      "abs_url": "https://arxiv.org/abs/2610.16277",
+      "pdf_url": "https://arxiv.org/pdf/2610.16277v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/SPICExLAB/FlowAvatar",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 15.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.101,
+      "score_breakdown": {
+        "keyword_raw": 14,
+        "keyword_matched": [
+          "xr",
+          "egocentric",
+          "gaze",
+          "avatar"
+        ],
+        "category": 1.75,
+        "popularity": 1.66,
+        "stars_counted": 3,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 3,
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/SPICExLAB/FlowAvatar)",
+      "authors_display": "Chenfeng Gao, Taeyoung Yeon, Sungheon Park, Vasco Xu, Anish Prabhu, Mar Gonzalez-Franco 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.19199",
+      "title": "Moving Beyond the Flat Screen: Opportunities and Challenges of Extended Reality for Studying Human Brain and Behavior",
+      "abstract": "Much of what we know about human perception and cognition comes from austere experimental settings: static stimuli presented to sedentary observers on flat monitors, complex responses reduced to simple button presses, and brain activity recorded from immobilized heads using EEG or fMRI. These highly controlled paradigms have provided remarkable insights, but capture a small and often unusual slice of behavior, raising questions about how well the findings generalize to the real world. Extended reality (XR), spanning both immersive virtual reality (VR) and augmented reality (AR) that overlays digital content on the real world, offers a way beyond these constraints, supporting controlled, reproducible experiments in which participants actively engage with three-dimensional tasks. Drawing on a growing body of VR and AR studies of attention, memory, and language -- our own and others', some involving EEG -- we outline what XR makes newly possible for cognitive neuroscience and reflect on the practical and conceptual obstacles that remain. The opportunities are substantial, but realizing them requires solving practical problems of hardware, timing, and measurement, and being realistic about what a virtual or augmented world can and cannot stand in for.",
+      "authors": [
+        "Tom Bullock",
+        "Radha Kumaran",
+        "You-Jin Kim",
+        "Emily Machniak",
+        "Tobias Höllerer",
+        "Barry Giesbrecht"
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": "4 pages, 1 figure. Workshop paper presented at the NeuroXR 2026 Workshop at IEEE ISMAR 2026 (ISMAR-Adjunct)",
+      "abs_url": "https://arxiv.org/abs/2610.19199",
+      "pdf_url": "https://arxiv.org/pdf/2610.19199v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 22.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.5,
+      "score_breakdown": {
+        "keyword_raw": 20,
+        "keyword_matched": [
+          "augmented reality",
+          "extended reality",
+          "virtual reality",
+          "xr",
+          "vr",
+          "immersive"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Tom Bullock, Radha Kumaran, You-Jin Kim, Emily Machniak, Tobias Höllerer, Barry Giesbrecht"
+    },
+    {
+      "arxiv_id": "2610.22822",
+      "title": "VISTA: A Multimodal Egocentric Benchmark for Goal-Oriented Perception and Assistance to Blind and Low-Vision Users",
+      "abstract": "Blindness and low vision limit many people's ability to complete daily tasks, motivating AI assistants that provide useful guidance. Yet, existing benchmarks do not adequately test whether vision models can provide effective everyday assistance. In particular, i) existing benchmarks primarily rely on visual and textual inputs, with limited support for other modalities that are increasingly available in egocentric wearable devices such as gaze, inertial measurements, spatial trajectories, and others; and ii) existing evaluations emphasize scene understanding and question answering, with limited coverage of goal-conditioned guidance for blind and low-vision users across everyday tasks. To bridge this gap, we introduce VISTA (Visually Impaired Scene and Task Annotations), a multimodal egocentric benchmark for goal-oriented assistance for blind and low-vision users. VISTA contains $\\sim$1,000 egocentric recordings captured with Project Aria glasses; each recording provides synchronized sensor streams, six of which serve as model inputs, and three different types of annotation, covering ten task categories (TC), from object localization to hazard detection. We evaluate 14 representative vision-language models zero-shot on VISTA and design a lightweight multimodal model baseline that integrates all six modalities. Experimental results show that, although existing models can often describe egocentric scenes, they remain limited in generating goal-directed assistive guidance. VISTA thus provides a benchmark for evaluating multimodal models that could improve everyday accessibility.",
+      "authors": [
+        "Noé Mosca",
+        "Mohamed Rayan Barhdadi",
+        "Muhammad Hamza",
+        "Joshua Yeh",
+        "Suryodaya Bikram Shahi",
+        "Zhiyan Li",
+        "Selim-Antoine Lali",
+        "Weiyue Li",
+        "Hasan Kurban",
+        "Erchin Serpedin",
+        "Gang Luo",
+        "Yue Zhang",
+        "Minghan Li",
+        "Mengyu Wang"
+      ],
+      "published": "2026-10-16",
+      "updated": "2026-10-16",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Code and dataset are available at https://harvard-ai-and-robotics-lab.github.io/VISTA",
+      "abs_url": "https://arxiv.org/abs/2610.22822",
+      "pdf_url": "https://arxiv.org/pdf/2610.22822v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": "https://harvard-ai-and-robotics-lab.github.io/VISTA",
+      "theme": "wearable-xr",
+      "fit": 14.75,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 4.188,
+      "score_breakdown": {
+        "keyword_raw": 14,
+        "keyword_matched": [
+          "egocentric",
+          "gaze",
+          "wearable",
+          "assistive"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Noé Mosca, Mohamed Rayan Barhdadi, Muhammad Hamza, Joshua Yeh, Suryodaya Bikram Shahi, Zhiyan Li 等 14 人"
+    },
+    {
+      "arxiv_id": "2610.21308",
+      "title": "PocketTSLM: Deploying an On-Device Soft-Prompt Time-Series Language Model for Privacy-Preserving Smartphone Reasoning",
+      "abstract": "Consumer phones and wearables increasingly collect physiological time-series data, yet most mobile systems treat these streams as summaries or text rather than as temporal evidence. This representation is poorly matched to personal health systems that need to retrieve, route, or summarize sensor evidence while preserving temporal structure. Cloud-hosted time-series language models avoid smartphone limits, but they repeatedly move sensitive physiology off the device and add latency and per-query compute cost. Mobile model alternatives that aggregate time-series data into statistical features or serialize raw samples as text either compress temporal structure or exhaust the context and memory budgets of small on-device models. We present PocketTSLM, a mobile-native deployment of OpenTSLM SoftPrompt, the soft-prompt variant of the OpenTSLM time-series language model. PocketTSLM runs fully on a consumer smartphone by injecting encoded time-series windows as embeddings instead of tokenizing time series as text. A numerical parity protocol verifies identical greedy-decoded token sequences between the Swift port and a Python reference using Apple's MLX machine-learning framework. Answers also match the PyTorch reference, although rationale wording can differ. An on-device context-economics benchmark compares the soft-prompt path with a text-serialized baseline on the same backbone. In our benchmark format, soft-prompting uses approximately 12 times fewer time-series tokens and reduces prompt-prefill cost. PocketTSLM processes 30-second Sleep-EDF electroencephalography clips for sleep staging and a 1,000-sample (10 s) 12-lead electrocardiogram clip from ECG-QA. In comparison, text-serialized baselines exceed the phone's context or memory budget at longer time-series windows. All inference runs entirely on the device, with no health data transmitted during inference.",
+      "authors": [
+        "Max Rosenblattl",
+        "Nikhil Krishnaswamy",
+        "Leon Nissen",
+        "Manuel Milling",
+        "Nicolas Zumarraga",
+        "Ning Wang",
+        "Thomas Kaar",
+        "Robert Jakob",
+        "Björn W. Schuller",
+        "Elgar Fleisch",
+        "Patrick Langer",
+        "Paul Schmiedmayer"
+      ],
+      "published": "2026-10-15",
+      "updated": "2026-10-15",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "comment": "15 pages, 3 figures. A version of this paper was accepted at the Workshop on Deploying AI in Healthcare (DAIH) at COLM 2026. Code: https://github.com/SchmiedmayerLab/PocketTSLM",
+      "abs_url": "https://arxiv.org/abs/2610.21308",
+      "pdf_url": "https://arxiv.org/pdf/2610.21308v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/SchmiedmayerLab/PocketTSLM",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 6.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 3.832,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "wearables",
+          "on-device"
+        ],
+        "category": 0.0,
+        "popularity": 0.83,
+        "stars_counted": 1,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 1,
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/SchmiedmayerLab/PocketTSLM)",
+      "authors_display": "Max Rosenblattl, Nikhil Krishnaswamy, Leon Nissen, Manuel Milling, Nicolas Zumarraga, Ning Wang 等 12 人"
+    },
+    {
+      "arxiv_id": "2610.17128",
+      "title": "EgoProbe: Benchmarking Long-Range and Exact Memory in Streaming Egocentric Videos",
+      "abstract": "Egocentric video provides a continuous first-person record of everyday activities, making it a natural foundation for wearable AI assistants. Unlike offline video understanding, streaming systems must process observations as they arrive, while queries may refer to experiences from the distant past. Recent work has begun to explore whether information can be recalled across long temporal gaps. Yet remembering how far is only part of the challenge: recurring objects, actions, and locations also require models to remember exactly which detail belongs to which event. We introduce EgoProbe, a benchmark that evaluates streaming egocentric memory along these two complementary dimensions: long-range retention, i.e., how far, and event-specific recall under interference, i.e., how exact. Built on long-form egocentric videos, EgoProbe uses an event-grounded data engine to extend recall intervals, identify related events, and construct event-grounded distractors, followed by human verification. It contains two subsets: EgoProbe-Base, which evaluates long-range recall without intervening related events, and EgoProbe-Echo, which challenges models with similar intervening events and event-grounded distractors. EgoProbe-Echo adopts coarse-to-fine multi-turn probing: the first turn evaluates coarse-grained event recall, while the second tests whether the model can retrieve the target-specific detail associated with the designated event. Extensive evaluation across diverse models reveals substantial limitations in long-range recall, with further challenges in recovering target-event details among related experiences. Even when models correctly answer coarse-grained questions, they often fail to recall the specific details of the designated event. EgoProbe exposes this underexplored failure mode and provides a testbed for advancing long-range and exact memory in streaming egocentric video understanding.",
+      "authors": [
+        "Haokai Pang",
+        "Yuqian Fu",
+        "Yifei Wang",
+        "Yujiao Shen",
+        "Tianwen Qian",
+        "Mohamed Elhoseiny",
+        "Hongbo Fu"
+      ],
+      "published": "2026-10-12",
+      "updated": "2026-10-12",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "22 pages, 9 figures, 8 tables",
+      "abs_url": "https://arxiv.org/abs/2610.17128",
+      "pdf_url": "https://arxiv.org/pdf/2610.17128v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 13.75,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 3.438,
+      "score_breakdown": {
+        "keyword_raw": 13,
+        "keyword_matched": [
+          "egocentric",
+          "first-person",
+          "wearable"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Haokai Pang, Yuqian Fu, Yifei Wang, Yujiao Shen, Tianwen Qian, Mohamed Elhoseiny 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.16256",
+      "title": "EgoWholeView: Camera-Only Head-Mounted Capture of Body and Bimanual Hand Motion for Embodied Demonstrations",
+      "abstract": "Head-mounted body and bimanual motion capture supports self-avatars, teleoperation, and embodied demonstrations. However, a single egocentric camera is vulnerable to a limited field of view, scale ambiguity, and hand-object occlusion. We present EgoWholeView, a wearable capture system of six synchronized wide-angle RGB cameras with a role-specialized pipeline. The outward views localize the rig in a world frame, while an overlapping downward pair independently predicts SMPL-X body and MANO hand parameters. Both predictors are adapted to egocentric fisheye data. To combine the two, reliability cues measured from the predictions themselves weight the fusion of body and hand joint rotations, while shape is aggregated across views and frames. The pair's baseline fixes metric scale, and triangulation recovers root translation. Relative to monocular prediction, fusion reduces PA-MPJPE by 3.7% for the body and 11.2% for the hands, and temporal refinement lowers angular-acceleration magnitude by 32.2% and 31.0%, respectively. On our six-camera recording, the pipeline produces body and hand states in a shared world frame using benchmark-fitted gates without retuning, and temporal refinement lowers hand acceleration magnitude by 41.08%. Using only RGB cameras and no third-person view, EgoWholeView offers a low-cost, portable route to egocentric interaction data.",
+      "authors": [
+        "Yaoqing Hu",
+        "Xuguo He",
+        "Daohan Cui",
+        "Yukun Shi",
+        "Kai Chen"
+      ],
+      "published": "2026-10-12",
+      "updated": "2026-10-12",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "17 pages, 9 figures",
+      "abs_url": "https://arxiv.org/abs/2610.16256",
+      "pdf_url": "https://arxiv.org/pdf/2610.16256v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 13.75,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 3.438,
+      "score_breakdown": {
+        "keyword_raw": 13,
+        "keyword_matched": [
+          "head-mounted",
+          "egocentric",
+          "wearable"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Yaoqing Hu, Xuguo He, Daohan Cui, Yukun Shi, Kai Chen"
+    },
+    {
+      "arxiv_id": "2610.21484",
+      "title": "Context Matters! Social, Spatial, and Semantic Coordination with an Embodied Agent in Immersive Analytics",
+      "abstract": "Embodied AI agents in Augmented Reality (AR) could enable more natural collaboration in immersive analytics by engaging users through spatial, conversational, and visual interaction. However, designing such agents requires careful attention to context. We propose a preliminary conceptual framework for context-aware design of embodied agents structured around three dimensions of spatial, social, and semantic. This framework is further categorised into embeddedness (how agents are situated in the contexts) and awareness (how agents perceive and respond to the contexts). To explore this, we present Cobot, an embodied AI agent designed as a design probe. Cobot supports context-sensitive interaction through features such as gaze cues, spatial sound, and task-aware behaviour. We reflect on its design and identify implications for future contextaware embodied agents.",
+      "authors": [
+        "Andrew Cunningham",
+        "Nicolas Barbotin",
+        "Adam Drogemuller",
+        "Jack Faser"
+      ],
+      "published": "2026-10-15",
+      "updated": "2026-10-15",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": "In 2025 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct) (pp. 189-194). IEEE",
+      "abs_url": "https://arxiv.org/abs/2610.21484",
+      "pdf_url": "https://arxiv.org/pdf/2610.21484v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 12.0,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 3.0,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "augmented reality",
+          "gaze",
+          "immersive"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Andrew Cunningham, Nicolas Barbotin, Adam Drogemuller, Jack Faser"
+    },
+    {
+      "arxiv_id": "2610.21353",
+      "title": "A Black-Box Positioning Solution for Effortless Integration in Wearable Navigation",
+      "abstract": "Accurate localization is critical for a wide range of applications, including navigation, augmented reality, safety management, and healthcare. However, achieving accurate positioning remains challenging, especially in GPS-degraded environments. Pedestrian Dead Reckoning (PDR), which estimates position based on inertial sensor data, offers a promising alternative but typically demands substantial effort in algorithm design and system integration. This complexity often leads to prolonged development timelines and elevated costs. To address these challenges, we present the PDR Sensor (PDRS), a plug-and-play, black-box PDR module optimized for seamless integration into wearable and IoT platforms. PDRS integrates a microprocessor and an inertial measurement unit (IMU) within a compact, low-power module. It executes real-time sensor fusion onboard, providing position updates via standard interfaces (I2C, SPI, UART). Experimental evaluations demonstrate its high robustness, achieving a step detection error of just 0.16% over 1250 steps and a traveled distance error of 1.87% under diverse conditions. The system further exhibits low latency (2.5 ms) and modest power consumption (52.35 mA). Unlike conventional studies, the PDRS leverages a holistic co-design of hardware and software to enhance performance and integration aspects, simplifying adoption without requiring deep expertise. By lowering technical barriers, PDRS enables developers and researchers to prioritize innovation in IoT and wearable technologies, accelerating prototyping, reducing development time, and advancing industry progress. Future work aims to enhance accuracy, reduce power usage and module size, and integrate AI-driven techniques to better mitigate drift.",
+      "authors": [
+        "Anh-Van Vu",
+        "Changmin Sung",
+        "Dongsoo Han"
+      ],
+      "published": "2026-10-15",
+      "updated": "2026-10-15",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AR"
+      ],
+      "comment": "8 pages",
+      "abs_url": "https://arxiv.org/abs/2610.21353",
+      "pdf_url": "https://arxiv.org/pdf/2610.21353v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 10.0,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 2.5,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "augmented reality",
+          "wearable",
+          "imu"
+        ],
+        "category": 0.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Anh-Van Vu, Changmin Sung, Dongsoo Han"
+    },
+    {
+      "arxiv_id": "2610.19998",
+      "title": "ShadAR: Real-time Prompting On-demand Visual Augmentation in Augmented Reality",
+      "abstract": "Augmented Reality can reshape our visual perception (e.g., simulating color blindness) yet such effects are typically pre-programmed by experts, making visual augmentation static and inflexible. We introduce ShadAR, an AR system that allows users to describe expected visual augmentations (e.g., \"Blur all people\") for changing their vision in real time. ShadAR can graphically manipulate AR passthrough in real time via shader injection. When receiving a user's prompt, ShadAR uses LLMs (GPT5.2) to interpret the user's intent, analyzes the user's view with object detection (YOLOv26), generates a pixel shader, and applies it to the targeted region on AR passthrough. To understand usage patterns, we invited 21 HCI researchers to use ShadAR, identifying four application domains (design, health, productivity, and social interaction) and two prompt-framing patterns: procedural prompts specifying what to modify and how (\"Highlight the book.\"), and end-goal prompts conveying desired mental or behavioral states (\"Make me laugh.\"). Such end-goal prompts suggest a future in which users specify outcomes (e.g., \"Make me not miss my flight\") while the system determines how to realize them, though often with inherently indeterminate results. We discuss design opportunities for ShadAR and ethical concerns.",
+      "authors": [
+        "Yanni Mei",
+        "Samuel Hartenstein",
+        "Jonas Wombacher",
+        "Florian Mueller",
+        "Jan Gugenheimer"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.19998",
+      "pdf_url": "https://arxiv.org/pdf/2610.19998v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 9.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 2.25,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "augmented reality",
+          "passthrough"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Yanni Mei, Samuel Hartenstein, Jonas Wombacher, Florian Mueller, Jan Gugenheimer"
+    },
+    {
+      "arxiv_id": "2610.22748",
+      "title": "ElectroCalm: Investigating User Experience and Physiological Responses to Multi-Node Transcutaneous Electrical Stimulation for Stress Modulation",
+      "abstract": "Transcutaneous Electrical Stimulation (TES) for stress modulation has largely focused on vagus nerve stimulation at the neck, yet two questions remain underexplored: how users experience electrotactile sensations at this sensitive site, and whether electrotactile feedback itself can function as a haptic stress intervention. To investigate this gap, we applied an 8-node TES array to two body sites during a cognitively demanding 2-back task: the neck, a site used in prior vagal TES research for its anatomical proximity to the cervical vagus nerve, and the arm, the most common haptic wearable site, which primarily provides cutaneous electrotactile sensation without vagal access. In a usability study, both sites were rated as comparably comfortable without disrupting task performance, though the same stimulation was interpreted differently across sites. A second study assessing the physiological effects of active versus inactive stimulation under identical electrode attachment revealed that only neck TES produced cortical and autonomic changes consistent with stress modulation, while arm TES did not differ from inactive conditions. These findings suggest that neck TES can be acceptable despite the site's sensitivity, and that both the physiological effects and the sensory experience of TES depend on placement.",
+      "authors": [
+        "Yoon Kyung Shon",
+        "Pablo E. Paredes"
+      ],
+      "published": "2026-10-15",
+      "updated": "2026-10-15",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": "25 pages, 6 figures, to appear in Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, Vol. 10, No. 4, December 2026",
+      "abs_url": "https://arxiv.org/abs/2610.22748",
+      "pdf_url": "https://arxiv.org/pdf/2610.22748v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 8.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 2.0,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "wearable",
+          "haptic"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Yoon Kyung Shon, Pablo E. Paredes"
+    },
+    {
+      "arxiv_id": "2610.21969",
+      "title": "Uncertainty-Aware Federated Learning for Joint Communication and Computation in XR Systems",
+      "abstract": "The convergence of communication and computation, empowered by artificial intelligence (AI) enhanced capabilities, emerges as a key enabler for realizing the promising functionalities of the sixth-generation of communication systems (6G). To this end, this paper investigates an AI-native, robust network, where multiple base stations (BSs) simultaneously serve several extended reality (XR) devices. The paper then presents an innovative distributed deep learning-based approach to simultaneously manage the transmit and computing powers, and computation allocation, amidst uncertainties in both channel and computing states information. Under such an interference network scenario, the paper proposes a robust approach for minimizing the worst-case delay across the served XR devices, subject to computation and power constraints. The paper leverages a deep neural network (DNN) that can be trained either centrally or in a federated manner to map estimated channels and computation requirements to optimized resource allocations per BS. During training, uncertainty samples, reflecting both channel and computing estimation errors, are injected after the DNN output to account for such joint uncertainties. Our results validate the enhanced robust delay performance and scalability of joint uncertainty injection as compared to uncertainty-agnostic methods and state-of-the-art benchmarks, with federated learning-based solutions achieving near-centralized performance while enhancing efficiency, privacy, and adaptability.",
+      "authors": [
+        "Robert-Jeron Reifert",
+        "Hayssam Dahrouj",
+        "Alaa Alameer Ahmad",
+        "Haris Gacanin",
+        "Aydin Sezgin"
+      ],
+      "published": "2026-10-15",
+      "updated": "2026-10-15",
+      "primary_category": "cs.IT",
+      "categories": [
+        "cs.IT",
+        "cs.LG"
+      ],
+      "comment": "18 pages, 16 figures, 3 tables. This paper has been accepted for publication in IEEE Transactions on Mobile Computing",
+      "abs_url": "https://arxiv.org/abs/2610.21969",
+      "pdf_url": "https://arxiv.org/pdf/2610.21969v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 8.0,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 2.0,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "extended reality",
+          "xr"
+        ],
+        "category": 0.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Robert-Jeron Reifert, Hayssam Dahrouj, Alaa Alameer Ahmad, Haris Gacanin, Aydin Sezgin"
+    },
+    {
+      "arxiv_id": "2610.19330",
+      "title": "NavAble: A Large-Scale Dataset and Synthetic Data Generation Pipeline for Blind Navigation",
+      "abstract": "Reliable recognition of accessibility-critical objects (e.g., audible pedestrian signals, door-activation buttons, and handrails) is essential for assistive navigation technologies that support safe, independent mobility for blind and low-vision (BLV) users. Yet these categories are underrepresented in existing large-scale vision datasets, and the few datasets that include them suffer from limited class coverage, inconsistent annotations, and poor diversity. We introduce NavAble, a large-scale dataset spanning 11 accessibility-critical object classes, combining 41K curated open-source images with 8K newly collected, densely annotated real-world images. To extend scale and diversity, we develop a synthetic data generation pipeline that renders high-fidelity 3D assets across 37 environments under diverse styles and viewpoints, yielding 452K frames with rich ground-truth annotations from 565 assets. The pipeline minimizes manual effort by combining automated web image crawling, VLM-based filtering, SAM 3D-based asset generation, and convenient camera trajectory configuration, enabling large-scale data generation at a diversity unattainable through manual collection. Experiments show that fine-tuning existing segmentation models on the NavAble Dataset achieves reliable accessibility-object segmentation (>80% mIoU on our held-out test set). We also demonstrate the effectiveness of synthetic data augmentation, which yields up to +3.5 mIoU over real-world-only fine-tuning. Beyond benchmark evaluation, validation on egocentric data from two mobility-assistive robots demonstrates improved perception reliability in real-world navigation scenarios. Together, NavAble establishes a scalable foundation for BLV navigation perception, directly addressing the data scarcity and embodiment gaps. The dataset and pipeline are publicly available at https://huggingface.co/datasets/NavAble/NeurIPS_2026_BLV.",
+      "authors": [
+        "Hochul Hwang",
+        "Jahir Sadik Monon",
+        "Soowan Yang",
+        "Shiven Umeshbhai Patel",
+        "Anh Nhat Hong Nguyen",
+        "Kien Nguyen",
+        "Keshav Garg",
+        "Dylan Gage",
+        "Duretti Hordofaa",
+        "Anshu Anjna",
+        "Eshed Ohn-Bar",
+        "Donghyun Kim"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.19330",
+      "pdf_url": "https://arxiv.org/pdf/2610.19330v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 7.75,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 1.938,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "egocentric",
+          "assistive"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Hochul Hwang, Jahir Sadik Monon, Soowan Yang, Shiven Umeshbhai Patel, Anh Nhat Hong Nguyen, Kien Nguyen 等 12 人"
+    },
+    {
+      "arxiv_id": "2610.18499",
+      "title": "EgoOmniWorld: Unifying Egocentric Understanding via Ego-Action-World Interactions",
+      "abstract": "Egocentric video understanding spans diverse capabilities, modalities, and evaluation formats, yet these are often studied in isolation despite their tight coupling in real-world interaction. We propose the Ego-Action-World interaction loop as a unifying principle: the wearer perceives the world, forms goals, acts, changes the world, and uses feedback to guide subsequent behavior. Based on this view, we introduce EgoOmniWorld, a benchmark organized around four complementary interaction structures: Node captures ego, action, and world states; Edge captures directed relations among them; Chain captures linked dependencies; and Loop captures feedback-closed interactions. We develop an interaction-first, evidence-grounded data pipeline that extracts structured interactions from egocentric videos, grounds them in visual and auditory evidence, and generates questions according to their interaction structure. Required modalities and single- or multi-turn formats follow naturally from the supporting evidence and dependencies. EgoOmniWorld contains 24,166 QA groups, including 20,284 training and 3,882 test samples. Experiments on representative open- and closed-source multimodal large language models reveal substantial and uneven limitations across interaction structures. Models trained on EgoOmniWorld improve in-domain interaction understanding and generalize to existing egocentric benchmarks. EgoOmniWorld provides a unified foundation for evaluating and advancing egocentric video understanding. Data, code, and models will be released.",
+      "authors": [
+        "Songruo Chen",
+        "Yuqian Fu",
+        "Yu Li",
+        "Mingkang Dong",
+        "Sifan Zhou",
+        "Bin Ren",
+        "Xu Zheng",
+        "Tianwen Qian",
+        "Mohamed Elhoseiny",
+        "Yanwei Fu"
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.18499",
+      "pdf_url": "https://arxiv.org/pdf/2610.18499v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 6.5,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 1.625,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "egocentric"
+        ],
+        "category": 1.5,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Songruo Chen, Yuqian Fu, Yu Li, Mingkang Dong, Sifan Zhou, Bin Ren 等 10 人"
+    },
+    {
+      "arxiv_id": "2610.19641",
+      "title": "\"The Rose Garden Is a Cemetery\": Spatial Dissonance and Divergent Public Experiences of an Indigenous Augmented Reality Tour",
+      "abstract": "Community-authored augmented reality (AR) can contest dominant heritage narratives by juxtaposing stories with physical surroundings. We examine the Thámien Ohlone AR Tour, developed with members of the Ohlone Native American community at Mission Santa Clara and Santa Clara University. Combining paired pre/post surveys from 57 participants with collaborative thematic analysis, we compare reception among Ohlone community members, university affiliates, and Mission visitors. Spatial dissonance captures felt tensions when AR challenged familiar campus readings or when surroundings conflicted with Ohlone histories the AR affirmed, such as a garden's significance as a burial ground. Cultural frames shaped interpretation; contemporary people and relationships made Ohlone continuance tangible. Participants appreciated the tour and called for permanent physical acknowledgment. We propose staging reflective encounters, clarifying community-authored meanings, and using AR to prototype public acknowledgment and support community-directed advocacy. These findings foreground relationships to land and place, informed by Indigenous scholarship, in designing and evaluating AR.",
+      "authors": [
+        "Grace Fujii",
+        "Vittorio Murtas",
+        "Sarah Sallee",
+        "Isabella 'Amne Gomez",
+        "Lauren Baines",
+        "Danielle Heitmuller",
+        "Amy Lueck",
+        "Kai Lukoff"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": "26 pages. Preprint. Submitted to CHI 2027. Survey instrument and fieldwork protocol included as ancillary files",
+      "abs_url": "https://arxiv.org/abs/2610.19641",
+      "pdf_url": "https://arxiv.org/pdf/2610.19641v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.5,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "augmented reality"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Grace Fujii, Vittorio Murtas, Sarah Sallee, Isabella 'Amne Gomez, Lauren Baines, Danielle Heitmuller 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.18183",
+      "title": "Exploring Object Recall in an Object-Rich AR Office Scene",
+      "abstract": "Augmented reality (AR) changes how users perceive and attend to their surroundings. Prior work suggests AR can reduce attention to the physical world, but it remains unclear whether this holds in environments dense with both virtual and physical objects, and which factors most affect object recall. This study examines recall in a mixed-reality office scene after an object-selection task, testing object-level factors (virtuality, size), context-level factors (semantic congruency, saliency), and user-level factors (cueing, dual tasking). Cueing informed participants of a later recall test, while dual tasking added cognitive load through a secondary audio task. Virtual objects were recalled more accurately than physical ones. Cueing produced a modest improvement in recall of present objects. Using playback software to reconstruct each participant's view throughout the trials, we computed object-level saliency and found a weak positive correlation with recall, slightly stronger than the effects of virtuality, but not reaching statistical significance. These findings have implications for AR interface design and for building mixed-reality environments that better support cognition during real-world tasks.",
+      "authors": [
+        "Sangita Kunapuli",
+        "Shane Dirksen",
+        "Radha Kumaran",
+        "Yanxiu Jin",
+        "You-Jin Kim",
+        "Misha Sra",
+        "Tobias Höllerer"
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": "11 pages, 9 figures. Accepted to IEEE ISMAR 2026 and published in IEEE Transactions on Visualization and Computer Graphics (TVCG), Vol. 32, 2026",
+      "abs_url": "https://arxiv.org/abs/2610.18183",
+      "pdf_url": "https://arxiv.org/pdf/2610.18183v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.5,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "augmented reality"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Sangita Kunapuli, Shane Dirksen, Radha Kumaran, Yanxiu Jin, You-Jin Kim, Misha Sra 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.23276",
+      "title": "\"Can Computing Systems Eventually Disappear?\": A Long-Term Tracking Study on the Use of Diabetes Computing Systems by Patients with Diabetes",
+      "abstract": "Ubiquitous computing has long pursued Weiser's vision of technologies that \"disappear\" into everyday life. As wearable health systems advance, they increasingly substitute for rather than scaffold users' judgment, yet the long-term consequences remain underexplored. We report an eight-year, five-wave longitudinal interview study from 2017 to 2025 with 37 patients with diabetes, complemented by interviews with 15 clinicians, designers, and vendors. Across three technological generations including glucometers, continuous glucose monitoring, and predictive and automated insulin delivery systems, we identify a novel user state, continued use with cognitive disengagement. In this state, devices remain in use but active interpretation and questioning recede, leaving users to respond only to alarms. This state emerges from functional expansion, delegation of interpretive authority, and information fatigue, and is reinforced by clinical prioritization, information compression, and automation. It results in less frequent independent health judgment and a shift from understanding to responding. We argue that future diabetes computing systems should reduce unnecessary cognitive work while preserving users' opportunities to interpret, contextualize, and question system outputs.",
+      "authors": [
+        "Yibo Meng",
+        "Jinyuan Zhan",
+        "Yao Lyu",
+        "Zhuoran Lu",
+        "Chengxi Zang"
+      ],
+      "published": "2026-10-16",
+      "updated": "2026-10-16",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": "Accepted to Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT), Vol. 10, No. 4, 2026",
+      "abs_url": "https://arxiv.org/abs/2610.23276",
+      "pdf_url": "https://arxiv.org/pdf/2610.23276v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.5,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "wearable"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Yibo Meng, Jinyuan Zhan, Yao Lyu, Zhuoran Lu, Chengxi Zang"
+    },
+    {
+      "arxiv_id": "2610.16176",
+      "title": "EgoAlign: Situated 3D Understanding without Situation Descriptions",
+      "abstract": "Situated 3D Question Answering requires models to interpret a 3D scene relative to an agent's pose. Existing methods commonly convey that pose through a natural-language situation description, which may be unavailable or costly to obtain in real-world deployments. While some methods additionally incorporate numerical pose, we find that randomly shuffling the agent pose causes little performance degradation, indicating limited functional dependence on the numerical pose. To address this gap, we introduce EgoAlign, a simple 3D language model that represents a scene in an agent-centric coordinate frame, together with a dedicated egocentric alignment stage comprising four complementary tasks: object category recognition, egocentric direction prediction, metric distance estimation, and spatial relation prediction. This stage teaches the model to consistently interpret scene geometry relative to the agent's pose before task-specific fine-tuning. EgoAlign achieves the strongest performance on SQA3D, Real-3DQA, and MSQA among compared methods while remaining highly efficient. More importantly, removing textual situation descriptions yields comparable or better downstream performance, whereas shuffling EgoAlign's numerical pose causes substantial degradation. These results show that EgoAlign establishes agent-centric spatial context directly from numerical pose without requiring textual situation descriptions.",
+      "authors": [
+        "Yiyang Li",
+        "Tianyi Ma",
+        "Zehong Wang",
+        "Yanfang Ye"
+      ],
+      "published": "2026-10-12",
+      "updated": "2026-10-12",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.16176",
+      "pdf_url": "https://arxiv.org/pdf/2610.16176v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 5.75,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 1.438,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "egocentric"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Yiyang Li, Tianyi Ma, Zehong Wang, Yanfang Ye"
+    },
+    {
+      "arxiv_id": "2610.19494",
+      "title": "Robust Real-Time Monocular Human Pose Estimation with Insole-Based Sensor Fusion",
+      "abstract": "Real-time monocular human pose estimation is an important sensing component for human-centered intelligent systems. While recent camera-based methods have achieved impressive accuracy, fundamental challenges persist, particularly when visual observations are incomplete, such as during lower-body occlusion or short out-of-frame intervals. In these challenging but common scenarios, vision-only systems often struggle to reconstruct physically plausible lower-limb motion and reliable foot-ground contact. Due to the highly unobtrusive and wearable nature of smart insoles, this paper investigates whether simple plantar pressure and acceleration sensors can effectively resolve these visually induced limitations. To systematically investigate this, we first collect a synchronized multimodal dataset and then propose a part-decoupled temporal fusion framework. The proposed model fuses foot-sensing features into the lower-body branch to compensate for incomplete visual evidence, while a lightweight coordinator exchanges information between the upper- and lower-body temporal representations to maintain whole-body consistency. The framework is evaluated with three representative real-time visual backbones based on 2D keypoints, 3D landmarks, and SMPL-based human mesh recovery. We evaluate our framework on three representative real-time visual backbones. Quantitative experiments demonstrate that incorporating simple foot sensors consistently improves pose accuracy, motion smoothness, and gait-related measurements over vision-only baselines, with the most significant gains observed under occlusion and short visual-dropout conditions. Ultimately, our results demonstrate that unobtrusive foot sensing provides vital and complementary physical observability when camera observations are temporarily unavailable.",
+      "authors": [
+        "Liang Yu",
+        "Tao Zhu",
+        "Xiangqing Lu",
+        "Wenjian Luo",
+        "Liming Chen"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.19494",
+      "pdf_url": "https://arxiv.org/pdf/2610.19494v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 5.5,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 1.375,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "wearable"
+        ],
+        "category": 1.5,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Liang Yu, Tao Zhu, Xiangqing Lu, Wenjian Luo, Liming Chen"
+    },
+    {
+      "arxiv_id": "2610.20811",
+      "title": "RIGen: Beyond Action Following with Reciprocal Interaction in Generative Gameplay",
+      "abstract": "Generative gameplay requires more than immediate responses to player actions.Actions should have persistent consequences, while the generated world should act according to its own state and rules, shaping the player's situation and subsequent choices. Video generation captures local dynamics, but limited history, partially observed game state, and the need for contextual behavior decisions make such interactions difficult to sustain through audiovisual prediction alone. We introduce \\rig (Reciprocally Interactive Generation), a framework for reciprocal interaction in generative gameplay. \\rig combines persistent state and configurable rules, contextual interaction reasoning, and action-conditioned audiovisual generation. Together, these components make interaction consequences and actor behavior jointly determine generated content while maintaining consistency between game state and visible outcomes. We construct a Xonotic gameplay dataset to train an audiovisual generator for learning dynamics and interactions. Further post-training enables \\rigarena, an interactive generative first-person shooter (FPS) prototype. Experiments demonstrate more reliable combat outcomes and reciprocal interaction between the player and the generated world. Project page: https://murphylmf.github.io/RIGen/.",
+      "authors": [
+        "Mengfei Li",
+        "Yi Zhang",
+        "Xingtong Ge",
+        "Lunjie Zhu",
+        "Fangyu Lin",
+        "Peng Li",
+        "Guanglu Song",
+        "Yu Liu",
+        "Wei Xue",
+        "Wenhan Luo",
+        "Yike Guo"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.20811",
+      "pdf_url": "https://arxiv.org/pdf/2610.20811v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 4.75,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 1.188,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "first-person"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Mengfei Li, Yi Zhang, Xingtong Ge, Lunjie Zhu, Fangyu Lin, Peng Li 等 11 人"
+    },
+    {
+      "arxiv_id": "2610.19013",
+      "title": "Data Density Scaling Laws for Image Self-Distillation",
+      "abstract": "Current scaling law formulations suggest that increasing the number of unique samples in a dataset improves model performance, while repeated exposure to the same samples provides diminishing value. In this work, we examine this assumption for image self-distillation models. Through systematic experiments across diverse datasets, namely Maxar, SATLAS, Waymo, nuPlan, Ego4D, ImageNet, and YFCC15M, we demonstrate that the effects of sample repetition on downstream performance are non-trivial and dataset-dependent. We identify settings where repeatedly training on a smaller random subset can outperform training on a larger set of unique samples. This finding highlights a limitation of existing scaling laws. To address this gap, we propose a modified version of a Chinchilla-style scaling law that explicitly accounts for two factors: the number of unique samples and repetition per sample. This formulation provides a framework for understanding data-compute trade-offs and improves prediction in some regimes where repetition plays a central role, although its benefits are not consistent across datasets. Finally, we examine how subset selection and augmentation affect downstream performance.",
+      "authors": [
+        "Alvard Barseghyan",
+        "Ani Vanyan",
+        "Hakob Tamazyan",
+        "Hrant Khachatrian"
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "25 pages, 11 figures",
+      "abs_url": "https://arxiv.org/abs/2610.19013",
+      "pdf_url": "https://arxiv.org/pdf/2610.19013v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 4.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 1.0,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "ego4d"
+        ],
+        "category": 0.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Alvard Barseghyan, Ani Vanyan, Hakob Tamazyan, Hrant Khachatrian"
+    },
+    {
+      "arxiv_id": "2610.19411",
+      "title": "W-JEPA: Wavelet Joint-Embedding Predictive Architecture for Wearable Activity Recognition",
+      "abstract": "A major challenge in wearable device activity recognition is the heterogeneity across datasets in sensor placement, channel count, sampling rate and subjects. Moreover, the motion patterns that distinguish activities often appear as subtle, scale-specific variations within otherwise similar waveforms. As a result, raw signals are often ambiguous, and models trained on them tend to rely on cues specific to a particular sensor setup or participant, which limits both cross-dataset transfer and generalization to unseen participants. Addressing this requires representations that preserve such activity-relevant, scale-specific variation. We introduce W-JEPA, a self-supervised framework that exploits the multiscale structure of inertial motion and leverages a joint-embedding predictive architecture, by organizing windows into a fixed grid of wavelet tokens indexed by scale, sensor axis, and time. These wavelet tokens help expose activity-specific detail within broadly similar raw signals, and serve as the units of masked latent prediction. W-JEPA predicts masked token representations supplied by an exponential-moving-average (EMA) target encoder. Because recovering a masked token requires relating motion at one scale and axis to motion at other scales and axes, the model learns the cross-scale, cross-axis structure of human movement. Across six wearable activity benchmarks, W-JEPA outperforms state-of-the-art methods under random-window splits and remains the strongest when subjects are held out, improving average macro-F1 by 8.7 percentage points over the strongest published baseline. These results indicate that physically grounded multiscale tokenization, combined together with latent predictive learning, provides a promising foundation for transferable representations of heterogeneous wearable inertial data.",
+      "authors": [
+        "Yogesh Prabhu",
+        "Loki Natarajan",
+        "Jingjing Zou"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "11 pages, 4 figures",
+      "abs_url": "https://arxiv.org/abs/2610.19411",
+      "pdf_url": "https://arxiv.org/pdf/2610.19411v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 4.0,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 1.0,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "wearable"
+        ],
+        "category": 0.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Yogesh Prabhu, Loki Natarajan, Jingjing Zou"
+    }
+  ]
+}
