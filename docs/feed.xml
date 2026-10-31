@@ -5,7 +5,14 @@
   <link>https://xxliu1996.github.io/AcademicPaperGrabber/</link>
   <description>每周自动抓取六个方向最近一周的热门论文，每个方向 10 篇，人读的那种周报。</description>
   <language>zh-CN</language>
-  <lastBuildDate>Sun, 18 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <item>
+    <title>AI 论文周报（2026-10-19 – 2026-10-25）</title>
+    <link>https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-25.html</link>
+    <guid isPermaLink="true">https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-25.html</guid>
+    <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+    <description>本周最突出的技术演进趋势是智能体与具身系统的“内化与闭环”——模型不再满足于外挂工具或事后评估，而是试图将记忆、执行与验证直接收拢进模型结构本身。在语言与智能体领域，MemT-1.0 将记忆更新深度融入 Gated DeltaNet-2 架构，Cache Engineering (AKV) 与 DLite 则从 KV 缓存的主动丢弃与无历史草稿入手破解长程交互的开销陷阱；而 BizBench、OpenDS 等基准则将视角从“能否完成任务”倒逼至“执行过程是否违规与长程策略是否稳健”，CoEvo-RSI 和 Self-HPO 更进一步探索了脚手架与模型权重的双向协同自演化。在视觉与具身方向，感知与行动的边界加速融合：WeVisOne-VL 打通了从目标框到像素级掩码的全能感知，SenseNova 对 GPT-6-Astra 的极限摸底与 HandsOn、EgoXperience 共同勾勒出具身智能从“单任务演示”迈向“世界坐标度量级理解与机群自愈”的必经之路；StreamEval 则为热度极高的交互式流式视频生成敲响了状态一致性的警钟。相比之下，智能眼镜与可穿戴方向在公众社区热度上明显归于冷静，但端侧视线压缩（GazeLens）、超低带宽频域适配与肌电 Token 化等底层硬核工作，正在为下一代随时在线的空间硬件默默筑牢地基。 ｜ llm 10 篇；vlm 10 篇；agent 10 篇；deep-learning 10 篇；robotics 10 篇；wearable-xr 10 篇</description>
+  </item>
   <item>
     <title>AI 论文周报（2026-10-12 – 2026-10-18）</title>
     <link>https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-18.html</link>

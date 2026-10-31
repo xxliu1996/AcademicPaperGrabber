@@ -1,0 +1,1292 @@
+{
+  "generated_at": "2026-10-26T03:49:55.352725+00:00",
+  "theme": "deep-learning",
+  "theme_title": "其他深度学习",
+  "theme_subtitle": "架构、优化、表征学习、语音与可解释性",
+  "accent": "#7a5a2b",
+  "week_start": "2026-10-19",
+  "week_end": "2026-10-25",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 179,
+  "measured_heat_count": 23,
+  "papers": [
+    {
+      "arxiv_id": "2610.21114",
+      "title": "Spectral-Spatial Interpretation",
+      "abstract": "Post-hoc image explanations usually show where a model looks using spatial heatmaps or indicate which channels matter using global channel scores. These separate views are limiting for multispectral data because channel relevance is often spatially localized and physically meaningful. We introduce Spectral-Spatial Interpretation (SSI), a full-grid attribution method over position-channel players (g,c). For each spatial position, SSI fixes the observed surrounding context, defines a conditional game over the channels at that position, and applies the Shapley value to this local game. The result is a full spectral-spatial attribution matrix rather than a single heatmap or a global channel ranking. SSI has a clear local interpretation. It satisfies Shapley fairness within each position, and aggregating its channel attributions exactly recovers the position-level contextual contrast obtained by replacing that position with the baseline. SSI also differs from context-averaged Owen-style hierarchical accounting, which uses the same position-channel grouping but averages over external spatial coalitions. On HLS Burn Scar, SSI outperforms an MC-Owen estimator across retained attribution metrics while using only about 6% of its evaluation budget. Across CUB-200, EuroSAT, and HLS Burn Scar under both per-channel mean and zero baselines, SSI achieves the best joint deletion and insertion AUC over dense, flat, and rank-1 baselines, yields the strongest spectral hit rates and channel deletion, and leads spatial localization on both annotated datasets. Code is available at https://github.com/AtheavenMa/Spectral-Spatial-Interpretation.",
+      "authors": [
+        "Haotian Ma",
+        "Ruqi Yang",
+        "Philip Townsend"
+      ],
+      "published": "2026-10-15",
+      "updated": "2026-10-15",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "comment": "24 pages, 4 figures. Accepted at NeurIPS 2026 (Poster)",
+      "abs_url": "https://arxiv.org/abs/2610.21114",
+      "pdf_url": "https://arxiv.org/pdf/2610.21114v1",
+      "hf_upvotes": 712,
+      "hf_url": "https://huggingface.co/papers/2610.21114",
+      "github_repo": "https://github.com/AtheavenMa/Spectral-Spatial-Interpretation",
+      "github_repo_source": "hf",
+      "github_stars": 32,
+      "project_page": "https://github.com/AtheavenMa/Spectral-Spatial-Interpretation",
+      "hf_published": "2026-10-15",
+      "hf_featured": "2026-10-22",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 33.379,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 2.0,
+        "popularity": 30.88,
+        "stars_counted": 32,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 712 赞 ｜ 💻 [代码](https://github.com/AtheavenMa/Spectral-Spatial-Interpretation)",
+      "authors_display": "Haotian Ma, Ruqi Yang, Philip Townsend"
+    },
+    {
+      "arxiv_id": "2610.20951",
+      "title": "LEV: Thinking Fast and Deep with Looped Decision Models",
+      "abstract": "Decision models answer typed questions about an input with one probability per option, computed in a single forward pass without generating text. Like the fast System 1 of dual-process theory, they answer at once, but their depth is fixed at training time, so they spend the same computation on easy and hard questions. Models that reason in generated text can think longer, but they pay for every extra step in decoded tokens. We present LEV, a decision model that thinks deeper by rerunning its layers in a loop instead of generating tokens. LEV builds on a language model pretrained as a loop, reads the options after every loop step and trains all steps jointly, so one checkpoint can answer at any depth. On three looped backbones, accuracy rises with depth on the same weights, mostly on hard questions, and a 2.6B LEV goes from 63.2% at depth one to 76.2% at depth four on JevBench. On-demand depth, set per question by a small stopper with a threshold fitted on unlabelled requests, saves 15% to 24% of the computation at a cost of under one accuracy point, level with or slightly above a fixed mix of depths. On a locked test set, the 1.4B and 3B models are 5.4 to 8.8 points more accurate than dense (non-looped) models and cascades of the same latency below 50 ms.",
+      "authors": [
+        "Dingjie Song",
+        "Zhiling Yan",
+        "Yuxuan Zhang",
+        "Lichao Sun"
+      ],
+      "hf_upvotes": 106,
+      "hf_url": "https://huggingface.co/papers/2610.20951",
+      "github_repo": "https://github.com/OpenLAIR/lev",
+      "github_repo_source": "hf",
+      "github_stars": 13,
+      "project_page": "https://openlair.github.io/lev/",
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-19",
+      "abs_url": "https://arxiv.org/abs/2610.20951",
+      "pdf_url": "https://arxiv.org/pdf/2610.20951",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 15.462,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 13.46,
+        "stars_counted": 13,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 106 赞 ｜ 💻 [代码](https://github.com/OpenLAIR/lev)",
+      "authors_display": "Dingjie Song, Zhiling Yan, Yuxuan Zhang, Lichao Sun"
+    },
+    {
+      "arxiv_id": "2610.26067",
+      "title": "PhysSkin++: Real-Time and Generalizable Physics-Based Animation via Self-Supervised Neural Skinning",
+      "abstract": "Generalizing real-time physics-based animation across diverse 3D shapes and spatial discretizations remains challenging. In this paper, we introduce PhysSkin++, a physics-informed framework that learns continuous neural skinning fields from static geometries to construct compact deformation subspaces. Specifically, we propose a Neural Skinning Fields Autoencoder that predicts shape-dependent deformation subspaces without per-object network training. To learn these subspaces without simulation trajectories, we develop a Physics-Informed Self-Supervised Learning strategy that combines skinning-field normalization with conflict-aware gradient correction, stabilizing joint optimization under physical and orthogonality constraints. The learned representation supports efficient reduced dynamics with user control and contact interactions, together with direct animation binding to meshes, point clouds, and 3D Gaussians. For prescribed rig animation, we further introduce a self-supervised complementarity objective to learn complementary elastic responses without enforcing complementarity constraints at runtime. Experiments demonstrate cross-shape generalization of the learned skinning fields, real-time reduced simulation, and applications to controllable, collision-aware, and rig-complementary animation.",
+      "authors": [
+        "Yuanhang Lei",
+        "Baofei Liu",
+        "Xingxuan Li",
+        "Tao Cheng",
+        "Zixuan Wang",
+        "Boming Zhao",
+        "Yujun Shen",
+        "Siyuan Huang",
+        "Ruizhen Hu",
+        "Peter Yichen Chen",
+        "Hujun Bao",
+        "Zhaopeng Cui"
+      ],
+      "published": "2026-10-19",
+      "updated": "2026-10-19",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "comment": "Project Page: https://zju3dv.github.io/PhysSkin_plus/",
+      "abs_url": "https://arxiv.org/abs/2610.26067",
+      "pdf_url": "https://arxiv.org/pdf/2610.26067v1",
+      "hf_upvotes": 37,
+      "hf_url": "https://huggingface.co/papers/2610.26067",
+      "github_repo": "https://github.com/zju3dv/PhysSkin",
+      "github_repo_source": "hf",
+      "github_stars": 37,
+      "project_page": "https://zju3dv.github.io/PhysSkin_plus/",
+      "organization": "zju3dv",
+      "hf_published": "2026-10-19",
+      "hf_featured": "2026-10-21",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 7.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 14.198,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "optimization",
+          "generalization",
+          "self-supervised"
+        ],
+        "category": 0.0,
+        "popularity": 10.45,
+        "stars_counted": 37,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 37 赞 ｜ 💻 [代码](https://github.com/zju3dv/PhysSkin)",
+      "authors_display": "Yuanhang Lei, Baofei Liu, Xingxuan Li, Tao Cheng, Zixuan Wang, Boming Zhao 等 12 人"
+    },
+    {
+      "arxiv_id": "2610.26824",
+      "title": "SpecMRL: Redesign Matryoshka Representation Learning within Parametric Spectrum",
+      "abstract": "Matryoshka Representation Learning (MRL) is designed to support flexible representation sizes by jointly optimizing nested prefixes. While effective, this design lacks an explicit constraint to ensure that the leading portion provides a suitable compact encoding. To address this, we propose SpecMRL, which reorganizes the feature space to enable more effective prefix readout. Specifically, we extend MRL with a parameter-derived spectral basis organized with feature importance. SpecMRL otherwise follows standard MRL, with prefix readout performed in the learned spectral space. Experiments on MTEB show that SpecMRL outperforms MRL at all evaluated reduced dimensions, with larger gains under more aggressive compression. These results suggest that the learned spectral basis better prioritizes informative directions, enabling more effective representation compression. Notably, SpecMRL extends the performance frontier of MRL, surpassing full-dimensional MRL with only half the embedding dimensions.",
+      "authors": [
+        "Zhongxin Chen",
+        "Songhao Wu",
+        "Heng Cui",
+        "Cong Li",
+        "Xiao Zhou",
+        "Rui Yan"
+      ],
+      "hf_upvotes": 87,
+      "hf_url": "https://huggingface.co/papers/2610.26824",
+      "github_repo": "https://github.com/CentreChen/Spec-MRL",
+      "github_repo_source": "hf",
+      "github_stars": 7,
+      "hf_published": "2026-10-19",
+      "hf_featured": "2026-10-20",
+      "abs_url": "https://arxiv.org/abs/2610.26824",
+      "pdf_url": "https://arxiv.org/pdf/2610.26824",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 3.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 14.073,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "representation learning"
+        ],
+        "category": 0.0,
+        "popularity": 11.82,
+        "stars_counted": 7,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 87 赞 ｜ 💻 [代码](https://github.com/CentreChen/Spec-MRL)",
+      "authors_display": "Zhongxin Chen, Songhao Wu, Heng Cui, Cong Li, Xiao Zhou, Rui Yan"
+    },
+    {
+      "arxiv_id": "2610.18784",
+      "title": "Pack Light, CarryOn: Building Object-Oriented Context for Long-Horizon Agents",
+      "abstract": "Long-horizon agents accumulate progress in persistent task state, yet repeatedly process interaction histories describing how that progress was achieved. This raises a natural question: can long-horizon context instead be organized around reusable progress rather than the history that produced it? In this paper, we introduce CarryOn, an object-oriented context runtime that organizes continuation around reusable task objects. Rather than treating compressed histories or reconstructed accounts of progress as the primary basis for continuation, CarryOn builds a context view from continuation carriers, complementary execution context, and a live tail of recent interactions. A core challenge is keeping this reusable basis valid after its surrounding history is retired: how can CarryOn update the basis without reconstructing the full representation at every fold? CarryOn maintains carrier records across folds, revising affected records against bound evidence and applicable environment checks while carrying forward unaffected records and jointly updating execution context. Experiments on OSWorld 2.0 and BrowseComp-Plus show improved gains of 5.8% and 7.0% while reducing total token usage by 51.9% and 22.9%, respectively. Project page: https://ethannju.github.io/carryon",
+      "authors": [
+        "Yuchen Lu",
+        "Julian McAuley",
+        "Lei Zhang"
+      ],
+      "hf_upvotes": 124,
+      "hf_url": "https://huggingface.co/papers/2610.18784",
+      "github_repo": "https://github.com/Ethannju/carryon",
+      "github_repo_source": "hf",
+      "github_stars": 5,
+      "project_page": "https://ethannju.github.io/carryon/",
+      "organization": "McAuley-Lab",
+      "hf_published": "2026-10-13",
+      "hf_featured": "2026-10-19",
+      "abs_url": "https://arxiv.org/abs/2610.18784",
+      "pdf_url": "https://arxiv.org/pdf/2610.18784",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 13.136,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 11.14,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 124 赞 ｜ 💻 [代码](https://github.com/Ethannju/carryon)",
+      "authors_display": "Yuchen Lu, Julian McAuley, Lei Zhang"
+    },
+    {
+      "arxiv_id": "2610.14746",
+      "title": "BridgeWAM: Bridging Video and Action Experts via Latent Bridge Queries",
+      "abstract": "World Action Models (WAMs) commonly couple video and action experts through dense, layer-wise Mixture-of-Transformers (MoT) attention, exposing action prediction to irrelevant visual features while enforcing matched expert depths. This coupling hinders selective visual-feature use and introduces redundant computation. We introduce Bridge-of-Experts (BoE), instantiated as BridgeWAM, which aggregates visual, language, and proprioceptive priors through 32 Latent Bridge Queries (LBQs) into a shared, limited latent space. Joint video-action supervision lets action gradients guide the Video Expert toward representations better suited for action prediction, while the Action Expert learns to selectively retrieve task-relevant information through cross-attention. Decoupling expert depths and reusing LBQs during action denoising yield a 5.06B model with a 30-layer Video Expert and a two-layer Action Expert, achieving 98.25% success on LIBERO and 72.24% pooled success on LIBERO-Plus, demonstrating effective task execution and strong generalization with an ultralight action head. Ablations support joint representation adaptation and unified LBQ conditioning. Relative to Fast-WAM, BridgeWAM reduces single-sample inference FLOPs by 28.72% in simulation profiling and real-robot latency to 77.1 ms (a 2.47-fold speedup). Qualitative experimental results further indicate preferential attention to target objects and task destinations across perturbations.",
+      "authors": [
+        "Jiaxin Fang",
+        "Ruitong Liu",
+        "Zeyu Lai",
+        "Xingyu Wang",
+        "Mingyuan Jia",
+        "Pingyue Sheng",
+        "Weikang Wan",
+        "Mengdi Xu",
+        "Yuxiang Gao"
+      ],
+      "hf_upvotes": 47,
+      "hf_url": "https://huggingface.co/papers/2610.14746",
+      "github_repo": "https://github.com/jxfang04/BridgeWAM-code",
+      "github_repo_source": "hf",
+      "github_stars": 22,
+      "project_page": "https://bridgewam.github.io/Bridge-Wam-show/",
+      "organization": "Fudan University",
+      "hf_published": "2026-10-10",
+      "hf_featured": "2026-10-19",
+      "abs_url": "https://arxiv.org/abs/2610.14746",
+      "pdf_url": "https://arxiv.org/pdf/2610.14746",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 13.118,
+      "score_breakdown": {
+        "keyword_raw": 2,
+        "keyword_matched": [
+          "generalization"
+        ],
+        "category": 0.0,
+        "popularity": 10.62,
+        "stars_counted": 22,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 47 赞 ｜ 💻 [代码](https://github.com/jxfang04/BridgeWAM-code)",
+      "authors_display": "Jiaxin Fang, Ruitong Liu, Zeyu Lai, Xingyu Wang, Mingyuan Jia, Pingyue Sheng 等 9 人"
+    },
+    {
+      "arxiv_id": "2610.25296",
+      "title": "World Model Interpretability: From Decoding Representations to Understanding Latent Worlds",
+      "abstract": "Emerging Joint-Embedding Predictive Architectures (JEPAs) are moving beyond representation learning towards latent world models that support prediction, planning, and control. Yet their latent worlds naturally lack a human-interpretable interface. In this Perspective, we argue that as JEPA latents become internal states for prediction and action, interpretability must move beyond what they encode to how latent variables interact, evolve, and causally drive prediction. To this end, we envision a four-stage research agenda, involving Ground, Structure, Verify, and Act, to guide this shift toward actionable latent-world understanding. Within our framework, existing JEPA interpretability efforts provide early evidence for Ground, while systematic analysis of latent structure, causal verification, and intervention remains largely unexplored. Overall, this Perspective aims to call for a broader latent-world interpretability agenda that shifts attention from decoding representations toward understanding, validating, and acting on latent worlds.",
+      "authors": [
+        "Jize Wang",
+        "Yongcheng Jing",
+        "Xinyi Le",
+        "Cailian Chen",
+        "Xinping Guan",
+        "Dacheng Tao"
+      ],
+      "published": "2026-10-18",
+      "updated": "2026-10-18",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.25296",
+      "pdf_url": "https://arxiv.org/pdf/2610.25296v1",
+      "hf_upvotes": 9,
+      "hf_url": "https://huggingface.co/papers/2610.25296",
+      "github_repo": "https://github.com/Jize-W/Awesome-World-Model-Interpretability",
+      "github_repo_source": "hf",
+      "github_stars": 99,
+      "hf_published": "2026-10-18",
+      "hf_featured": "2026-10-20",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 8.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 12.214,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "representation learning",
+          "interpretability"
+        ],
+        "category": 2.75,
+        "popularity": 8.53,
+        "stars_counted": 99,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 9 赞 ｜ 💻 [代码](https://github.com/Jize-W/Awesome-World-Model-Interpretability)",
+      "authors_display": "Jize Wang, Yongcheng Jing, Xinyi Le, Cailian Chen, Xinping Guan, Dacheng Tao"
+    },
+    {
+      "arxiv_id": "2610.25011",
+      "title": "FineSplat: Fine Patches, Local Groups, Detailed Splats",
+      "abstract": "Feed-forward 3D Gaussian Splatting (3DGS) promises instant scene reconstruction with high-quality novel-view synthesis. Yet, fine-grained geometry and appearance remain difficult to recover, motivating us to revisit how feed-forward models represent, aggregate, and refine detailed visual information. We introduce FineSplat, a feed-forward 3DGS framework built around fine-grained image patches. Since global multi-view attention becomes prohibitively expensive at such high token resolutions, we develop a dual-grouping strategy that combines two complementary forms of locality: view-wise grouping enables efficient interaction among neighboring views, while 3D spatial grouping reconnects geometrically related tokens that may never have interacted under view-wise grouping by lifting them into the 3D scene space. We further leverage reconstruction error as direct feedback, providing an explicit rendering-based signal to recover fine-grained structures and appearance, thereby overcoming the limitations of one-pass feed-forward prediction. Finally, a compact Gaussian generation scheme preserves the benefits of fine-grained features without unnecessarily increasing the number of primitives. Together, these designs enable FineSplat to recover richer geometry and appearance while remaining efficient and compact, achieving state-of-the-art results by a substantial margin, under the same or smaller Gaussian budgets than existing methods.",
+      "authors": [
+        "Hyebin Kim",
+        "Hwasik Jeong",
+        "Joonhyuk Park",
+        "Gyeongjin Kang",
+        "Jungwoo Kim",
+        "Younghyun Kim",
+        "Eunbyung Park"
+      ],
+      "hf_upvotes": 34,
+      "hf_url": "https://huggingface.co/papers/2610.25011",
+      "github_repo": "https://github.com/hyebinny/FineSplat",
+      "github_repo_source": "hf",
+      "github_stars": 32,
+      "project_page": "https://hyebinny.github.io/FineSplat/",
+      "hf_published": "2026-10-18",
+      "hf_featured": "2026-10-20",
+      "abs_url": "https://arxiv.org/abs/2610.25011",
+      "pdf_url": "https://arxiv.org/pdf/2610.25011",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 12.027,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 10.03,
+        "stars_counted": 32,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 34 赞 ｜ 💻 [代码](https://github.com/hyebinny/FineSplat)",
+      "authors_display": "Hyebin Kim, Hwasik Jeong, Joonhyuk Park, Gyeongjin Kang, Jungwoo Kim, Younghyun Kim 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.20556",
+      "title": "Speculative Sampling in Interactive Video Generation",
+      "abstract": "Interactive video generation commonly relies on small bidirectional chunks to reduce response latency. Yet our preliminary experiments show that larger chunks improve video quality and better utilize GPU parallelism, allowing more latents to be sampled with only a modest increase in sampling time. Motivated by these observations, we propose Speculative Sampling, a strategy that combines the modeling power of large bidirectional windows with the low-latency interaction of small ones. It expands the modeling window by appending noise latents as padding and caches the resulting predictions for reuse when the condition remains unchanged. Predictions are delivered incrementally, while the uncommitted future remains replaceable. Our latency analysis shows that this removes the waiting-time lower bound imposed by chunk boundaries, shifting the optimization focus from reducing chunk size to accelerating per-chunk sampling. Bidirectional window size thus becomes a decision variable for jointly optimizing visual quality and sampling time, rather than a necessary constraint on low-latency interaction. This opens a path to serving large bidirectional models in interactive streaming systems without complex streaming post-training.",
+      "authors": [
+        "Yubo Huang",
+        "Yuxuan Zhang",
+        "Jiaming Liu",
+        "Sirui Zhao",
+        "Enhong Chen"
+      ],
+      "hf_upvotes": 85,
+      "hf_url": "https://huggingface.co/papers/2610.20556",
+      "github_repo": "https://github.com/Yubo-Shankui/SpeculativeSampling",
+      "github_repo_source": "hf",
+      "github_stars": 13,
+      "project_page": "https://yubo-shankui.github.io/speculative_sampling/",
+      "organization": "university of science and technology  of china",
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-19",
+      "abs_url": "https://arxiv.org/abs/2610.20556",
+      "pdf_url": "https://arxiv.org/pdf/2610.20556",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 11.72,
+      "score_breakdown": {
+        "keyword_raw": 2,
+        "keyword_matched": [
+          "optimization"
+        ],
+        "category": 0.0,
+        "popularity": 9.22,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 85 赞 ｜ 💻 [代码](https://github.com/Yubo-Shankui/SpeculativeSampling)",
+      "authors_display": "Yubo Huang, Yuxuan Zhang, Jiaming Liu, Sirui Zhao, Enhong Chen"
+    },
+    {
+      "arxiv_id": "2610.13177",
+      "title": "CompactSplat: Spatially Adaptive Gaussian Distribution for Feedforward Scene Reconstruction",
+      "abstract": "Reconstructing 3D scenes from sparse views without per-scene optimization remains highly challenging, especially for recovering accurate geometry and fine textures. While recent feedforward approaches leverage generalizable 3D Gaussian Splatting (3DGS) for scene generation, they typically assign one or multiple Gaussians to each pixel. Such uniform allocation not only produces highly redundant representations by wasting primitives in homogeneous areas, but also fails to exploit the inherent geometric priors of planar surfaces, often resulting in sub-optimal structural modeling. To address these limitations, we present CompactSplat, a novel feedforward framework that enables a content-aware allocation of 3D Gaussians. By integrating texture-guided spatial partitioning with hierarchical sampling, CompactSplat adaptively distributes primitives - concentrating dense Gaussians in complex regions while tiling flat areas with expanded, scale-modulated primitives. Moreover, our framework inherently supports dynamic sparsity control at inference time, enabling seamless trade-offs between rendering fidelity and memory footprint without requiring network retraining. Extensive experiments on RealEstate10K, DL3DV, and ScanNet demonstrate that CompactSplat consistently outperforms prior methods on both standard metrics and high-resolution rendering consistency, achieving high-fidelity reconstructions with significantly fewer primitives.",
+      "authors": [
+        "Bing He",
+        "Jingnan Gao",
+        "Yunuo Chen",
+        "Zhengxue Cheng",
+        "Rong Xie",
+        "Li Song",
+        "Wenjun Zhang"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "NeuRIPS2026, Generalizable reconstruction, 3DGS, 2DGS",
+      "abs_url": "https://arxiv.org/abs/2610.13177",
+      "pdf_url": "https://arxiv.org/pdf/2610.13177v1",
+      "hf_upvotes": 34,
+      "hf_url": "https://huggingface.co/papers/2610.13177",
+      "github_repo": "https://github.com/hebing-sjtu/CompactSplat",
+      "github_repo_source": "hf",
+      "github_stars": 3,
+      "project_page": "https://hebing-sjtu.github.io/CompactSplat-website/",
+      "organization": "Shanghai Jiao Tong University",
+      "hf_published": "2026-10-09",
+      "hf_featured": "2026-10-22",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 4.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 10.495,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "optimization",
+          "sparsity"
+        ],
+        "category": 0.0,
+        "popularity": 7.49,
+        "stars_counted": 3,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 34 赞 ｜ 💻 [代码](https://github.com/hebing-sjtu/CompactSplat)",
+      "authors_display": "Bing He, Jingnan Gao, Yunuo Chen, Zhengxue Cheng, Rong Xie, Li Song 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.22169",
+      "title": "Lexical Reference Frames: Interpreting LM Residual Streams in Native Semantics",
+      "abstract": "The vocabulary of a language model is its native semantics: the embedding and the unembedding fix the meaning of a state at the two ends of the residual stream. Between them, existing methods either reuse a fixed lens or treat the states as a point cloud, and neither reads a state the way the model does. We argue that every hidden state has a native reference frame, induced by the layers that read it next and adaptive to the context. Lexical reference frames approximate it by reading a state through the model's own remaining layers with a stated number of rounds of attention between positions and a typical attention output for the rest, without fitting to the model's output. No lens, with fixed directions per layer, can exceed the square root of the native frame's coherence, 0.30 and 0.35 at mid-depth of SmolLM3-3B and OLMo3-7B, whereas the first-order frame, LexFrame[1], reaches 0.97 and 0.97 and reads a state within 0.16 nats of the model's output. Its coefficients attribute predictions more faithfully than attribution patching, its lexical basis steers a prediction while sparing other tokens, and its confident readings would let an early exit skip 0.45 and 0.42 of the layers, where lenses skip almost none. In this way, lexical reference frames make every hidden state of the model readable, attributable and steerable.",
+      "authors": [
+        "Jian Gu",
+        "Hongyu Zhang",
+        "Chunyang Chen",
+        "Aldeida Aleti"
+      ],
+      "hf_upvotes": 54,
+      "hf_url": "https://huggingface.co/papers/2610.22169",
+      "github_repo": "https://github.com/jianguda/lexframe",
+      "github_repo_source": "hf",
+      "github_stars": 12,
+      "project_page": "https://jianguda.github.io/blogs/lexframe/",
+      "hf_published": "2026-10-15",
+      "hf_featured": "2026-10-19",
+      "abs_url": "https://arxiv.org/abs/2610.22169",
+      "pdf_url": "https://arxiv.org/pdf/2610.22169",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 9.348,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 7.35,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 54 赞 ｜ 💻 [代码](https://github.com/jianguda/lexframe)",
+      "authors_display": "Jian Gu, Hongyu Zhang, Chunyang Chen, Aldeida Aleti"
+    },
+    {
+      "arxiv_id": "2610.28940",
+      "title": "StyleStream 2.0: Fast and Controllable Streaming Voice Style Conversion",
+      "abstract": "Voice style conversion (VSC) aims to transform a source utterance to match the timbre, accent, and emotion of a target voice while preserving linguistic content. StyleStream 1.0 introduced the first streamable zero-shot VSC system with state-of-the-art conversion quality, but remained limited in two ways: approximately 1s end-to-end latency on consumer hardware, and the lack of a text-based interface for designing or editing target voices. We present StyleStream 2.0, a fast and controllable streaming VSC framework that addresses these limitations. To reduce latency, we train a few-step pixel MeanFlow model and further fine-tune it with autoregressive feedback inspired by Self Forcing, improving robustness under streaming inference. This reduces end-to-end latency to 520~ms on a consumer GPU, a 2x speedup over StyleStream 1.0, while maintaining conversion quality. To enable controllable style manipulation, we remove the mel-spectrogram context and instead route target style information through a compact style embedding. In this embedding space, we train a unified text-conditioned flow matching model that supports both text-based voice design, which maps natural language prompts to voice styles, and instruction-based voice editing, which modifies a specific attribute of a source utterance while preserving the rest. Experiments show that StyleStream 2.0 achieves the strongest target style fidelity on VSC, voice design, and voice editing, while remaining competitive on intelligibility and non-edited attribute preservation.",
+      "authors": [
+        "Yisi Liu",
+        "Nicholas Lee",
+        "Gopala K. Anumanchipalli"
+      ],
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.AI"
+      ],
+      "comment": "accepted to NeurIPS 2026",
+      "abs_url": "https://arxiv.org/abs/2610.28940",
+      "pdf_url": "https://arxiv.org/pdf/2610.28940v1",
+      "hf_upvotes": 17,
+      "hf_url": "https://huggingface.co/papers/2610.28940",
+      "github_repo": "https://github.com/Berkeley-Speech-Group/StyleStream2.0",
+      "github_repo_source": "hf",
+      "github_stars": 2,
+      "project_page": "https://berkeley-speech-group.github.io/StyleStream2.0/",
+      "organization": "UC Berkeley",
+      "hf_published": "2026-10-20",
+      "hf_featured": "2026-10-22",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 4.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 8.629,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "flow matching",
+          "robustness"
+        ],
+        "category": 0.75,
+        "popularity": 5.44,
+        "stars_counted": 2,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 17 赞 ｜ 💻 [代码](https://github.com/Berkeley-Speech-Group/StyleStream2.0)",
+      "authors_display": "Yisi Liu, Nicholas Lee, Gopala K. Anumanchipalli"
+    },
+    {
+      "arxiv_id": "2610.26834",
+      "title": "Kronecker Delta Rule for Long Context Linear Attention",
+      "abstract": "We propose KronLSTM, a linear attention architecture based on the Kronecker Delta Rule, a novel update rule for associative matrix memories. KronLSTM extends the xLSTM family with a memory-revision mechanism that corrects targeted associations while modifying the memory only along a single direction in matrix space. This minimally invasive memory revision reduces interference with previously stored information compared with delta-rule updates, making it particularly well suited for long-context language modeling. The resulting memory dynamics can be mathematically described as a Markov chain that converges to a steady-state distribution, while the expected norm of the memory matrix remains uniformly bounded throughout the entire input sequence. Hence, KronLSTM ensures stable memory dynamics without requiring additional normalization and stabilization mechanisms for the memory state. Experiments show that KronLSTM is competitive with, and often outperforms, existing linear attention architectures, including models of the (Gated) DeltaNet family, with particularly strong performance on long context benchmarks. These results establish the Kronecker Delta Rule as an effective and analytically tractable foundation for stable associative memory in recurrent linear attention architectures. Our code (https://github.com/NX-AI/KronLSTM) and models (https://huggingface.co/collections/NX-AI/kronlstm) are open-source.",
+      "authors": [
+        "Anamaria-Roberta Hartl",
+        "Levente Zólyomi",
+        "Michael List",
+        "Günter Klambauer",
+        "Sebastian Böck",
+        "Sepp Hochreiter"
+      ],
+      "hf_upvotes": 41,
+      "hf_url": "https://huggingface.co/papers/2610.26834",
+      "organization": "NX-AI",
+      "hf_published": "2026-10-19",
+      "hf_featured": "2026-10-20",
+      "abs_url": "https://arxiv.org/abs/2610.26834",
+      "pdf_url": "https://arxiv.org/pdf/2610.26834",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "published": "2026-10-19",
+      "updated": "2026-10-19",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "github_repo": "https://github.com/NX-AI/KronLSTM",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 2.75,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 8.591,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 2.75,
+        "popularity": 6.4,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 41 赞 ｜ 💻 [代码](https://github.com/NX-AI/KronLSTM)",
+      "authors_display": "Anamaria-Roberta Hartl, Levente Zólyomi, Michael List, Günter Klambauer, Sebastian Böck, Sepp Hochreiter"
+    },
+    {
+      "arxiv_id": "2610.28711",
+      "title": "Qwen-Audio-3.1-ASR Technical Report",
+      "abstract": "We present Qwen-Audio-3.1-ASR, a family of audio-language models that builds upon its predecesor Qwen-Audio-3.0-ASR with improved speech recognition and expanded capabilities in speaker-diarized transcription and general audio understanding. The family retains support for 30 languages and 16 Chinese dialects, together with instruction-controlled capabilities including historical-context conditioning, hierarchical hotword customization, and native transcription polishing. Speaker-diarized ASR produces structured outputs containing speaker labels, timestamps, and recognized text, maintaining consistent speaker labels across turns and the representation of overlapping speech. The general audio understanding capabilities cover audio-, speech-, and music-captioning, temporal grounding and sound event detection, as well as audio question answering and multiple-choice reasoning. These tasks broaden the application scope from recognizing spoken words to interpreting speakers, acoustic events, and their temporal relations. To accommodate different deployment requirements, the family includes variants for asynchronous file transcription, low-latency streaming, interactive voice input, and non-streaming recognition, with speaker-diarized transcription and general audio understanding available in certain variants. Evaluations span conventional ASR, multilingual and dialectal speech, speaker-diarized transcription, and general audio understanding, demonstrating the capabilities of the Qwen-Audio-3.1-ASR family across transcription and broader audio analysis tasks.",
+      "authors": [
+        "Chuanmeng Bian",
+        "Daren Chen",
+        "Peixin Chen",
+        "Zhigao Chen",
+        "Chong Deng",
+        "Zhiyun Fan",
+        "Zhifu Gao",
+        "Bo Gong",
+        "Qing Gu",
+        "Jiajun He",
+        "Yawei Hu",
+        "Yunjie Ji",
+        "Wei Ju",
+        "Jingbei Li",
+        "Xiangang Li",
+        "Xu Li",
+        "Zengxi Li",
+        "Zheng Li",
+        "Chengdong Liang",
+        "Baiji Liu",
+        "Yaming Liu",
+        "Ying Liu",
+        "Bin Ma",
+        "Yiping Peng",
+        "Yuezhang Peng",
+        "Zhendong Peng",
+        "Yu Pu",
+        "Yang Shi",
+        "Xin Shu",
+        "Jian Tang",
+        "Biao Tian",
+        "Peiyao Wang",
+        "Tianzi Wang",
+        "Wen Wang",
+        "Wupeng Wang",
+        "Cheng Wen",
+        "Yuzhong Wu",
+        "Zijian Xia",
+        "Yunchong Xiao",
+        "Nan Yang",
+        "Jianwei Yu",
+        "Jixing Yu",
+        "Binbin Zhang",
+        "Lei Zhang",
+        "Sitong Zhao",
+        "Guangdong Zhou",
+        "Yuan Zhou",
+        "Jianheng Zhuo"
+      ],
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.CL"
+      ],
+      "comment": "31 pages. Authors are listed in alphabetical order of last name. Project page: https://qwenaudio.github.io/qwen-audio-3.1-asr/",
+      "abs_url": "https://arxiv.org/abs/2610.28711",
+      "pdf_url": "https://arxiv.org/pdf/2610.28711v1",
+      "hf_upvotes": 37,
+      "hf_url": "https://huggingface.co/papers/2610.28711",
+      "hf_published": "2026-10-20",
+      "hf_featured": "2026-10-22",
+      "sources": [
+        "hf"
+      ],
+      "project_page": "https://qwenaudio.github.io/qwen-audio-3.1-asr/",
+      "theme": "deep-learning",
+      "fit": 7.0,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 8.333,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "speech recognition",
+          "asr",
+          "audio"
+        ],
+        "category": 0.0,
+        "popularity": 6.08,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 37 赞",
+      "authors_display": "Chuanmeng Bian, Daren Chen, Peixin Chen, Zhigao Chen, Chong Deng, Zhiyun Fan 等 48 人"
+    },
+    {
+      "arxiv_id": "2610.09221",
+      "title": "Consistent Distribution Matching for Data-Free Diffusion Distillation",
+      "abstract": "Flow and diffusion models suffer from slow inference due to computationally expensive numerical integration. Distillation provides a promising way for a student model to learn from a teacher's dynamics, enabling one-step or few-step generation. However, existing methods often depend on curated distillation datasets, costly teacher rollouts, or auxiliary proxy networks, which complicate model training and scaling. In this work, we propose Consistent Distribution Matching, a simulation-free and data-free distillation method for accelerating diffusion and flow models while preserving strong generative capacity. Our key insight is to unify sample generation and score estimation with one student network. Thus, our framework uses only two models, a frozen teacher and a trainable student, and optimizes one objective. We prove that minimizing our objective indicates Wasserstein convergence of the student flow-map pushforwards to the teacher marginals. On ImageNet 256times256, our method attains an FID of 2.04 with a single function evaluation (1-NFE) and a 4-NFE FID of 1.37 within 40 epochs of training, surpassing the state-of-the-art distillation baselines without data. Our code code and model are available at https://consistentdmd.github.io/.",
+      "authors": [
+        "Yuxiang Fu",
+        "Qi Yan",
+        "Zike Wu",
+        "Yongxing Zhang",
+        "Purang Abolmaesumi",
+        "Lele Wang",
+        "Renjie Liao"
+      ],
+      "hf_upvotes": 24,
+      "hf_url": "https://huggingface.co/papers/2610.09221",
+      "github_repo": "https://github.com/felix-yuxiang/CDMD",
+      "github_repo_source": "hf",
+      "github_stars": 11,
+      "project_page": "https://consistentdmd.github.io/",
+      "organization": "Vector Institute",
+      "hf_published": "2026-10-06",
+      "hf_featured": "2026-10-19",
+      "abs_url": "https://arxiv.org/abs/2610.09221",
+      "pdf_url": "https://arxiv.org/pdf/2610.09221",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 7.399,
+      "score_breakdown": {
+        "keyword_raw": 2,
+        "keyword_matched": [
+          "convergence"
+        ],
+        "category": 0.0,
+        "popularity": 4.9,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 24 赞 ｜ 💻 [代码](https://github.com/felix-yuxiang/CDMD)",
+      "authors_display": "Yuxiang Fu, Qi Yan, Zike Wu, Yongxing Zhang, Purang Abolmaesumi, Lele Wang 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.23600",
+      "title": "Learning to Discriminate Scene Structures Makes Self-Supervised Depth Learning Scalable",
+      "abstract": "Self-supervised monocular depth estimation is appealing for its potential to scale with unlabeled data, yet existing methods often degrade when trained on diverse scenes. This study finds that, under self-supervision, models tend to encode dataset-specific structural biases rather than transferable scene geometry, leading to cross-domain optimization conflicts. To address this issue, this study proposes the MaSS framework, aiming to make self-supervised depth learning scalable to diverse data. MaSS introduces a dedicated structural representation pathway explicitly decoupled from contextual features, which is guided by a novel scene-structure discrimination objective to learn generalized, layout-aware structural representations for depth decoding. Trained and evaluated on four diverse datasets, both individually and jointly, MaSS substantially outperforms prior self-supervised methods and is the first to consistently benefit from mixed-domain training. Zero-shot evaluation on eight additional datasets further demonstrates its remarkable generalizability, particularly on those entirely out-of-distribution scenes. The source code is publicly available at https://mias.group/MaSS.",
+      "authors": [
+        "Mengtan Zhang",
+        "Yuchuan Cui",
+        "Yu Ma",
+        "Zizhan Guo",
+        "Wei Ye",
+        "Rui Fan"
+      ],
+      "published": "2026-10-16",
+      "updated": "2026-10-16",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted to NeurIPS 2026",
+      "abs_url": "https://arxiv.org/abs/2610.23600",
+      "pdf_url": "https://arxiv.org/pdf/2610.23600v1",
+      "hf_upvotes": 13,
+      "hf_url": "https://huggingface.co/papers/2610.23600",
+      "github_repo": "https://github.com/mengtanZ/MaSS",
+      "github_repo_source": "hf",
+      "github_stars": 8,
+      "project_page": "https://mias.group/MaSS/",
+      "organization": "Tongji Unversity",
+      "hf_published": "2026-10-16",
+      "hf_featured": "2026-10-20",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 7.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.356,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "optimization",
+          "self-supervised",
+          "out-of-distribution"
+        ],
+        "category": 0.0,
+        "popularity": 3.61,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 13 赞 ｜ 💻 [代码](https://github.com/mengtanZ/MaSS)",
+      "authors_display": "Mengtan Zhang, Yuchuan Cui, Yu Ma, Zizhan Guo, Wei Ye, Rui Fan"
+    },
+    {
+      "arxiv_id": "2610.25844",
+      "title": "SWIFT: Self-guided Weak-to-strong dIFfusion models via Target extrapolation",
+      "abstract": "Training high-quality diffusion models is computationally expensive, and inference-time guidance often adds further sampling cost. In this work, we introduce Swift, a simple yet effective self-guided training method that uses a frozen weak denoiser to improve a stronger model without adding inference overhead. For each noisy input, Swift extrapolates the clean regression target away from the weak denoiser's prediction, amplifying components that remain underfit. The weak guide can be an early training checkpoint, requires no backpropagation during main-model training, and is discarded afterward. The resulting model retains the original sampler and supports both conditional and unconditional generation without label dropout or an unconditional branch. We explain this mechanism through a spectral analysis of finite-time population gradient flow in an RKHS. With an early-stopped weak guide, we prove that a nonempty range of extrapolation strengths yields strictly lower posterior-mean error than matched standard training, despite shifting the regression target away from the posterior mean. Experiments on CIFAR-10 and ImageNet-256 demonstrate improvements across model scales and representations. In one ImageNet-256 configuration, Swift surpasses the baseline's best FID using roughly half the total training compute, including guide preparation and training overhead. On RAEv2, it achieves FID 1.15 without inference-time guidance and 0.99 with guidance. These results establish target extrapolation as an effective approach to weak-to-strong diffusion training with efficient single-model inference.",
+      "authors": [
+        "Yanjin He",
+        "Cuifeng Shen",
+        "Wanzhou Lei",
+        "Maohua Li",
+        "Tao Lan",
+        "Kan Liu",
+        "Hanlin Tang",
+        "Qing Qu"
+      ],
+      "published": "2026-10-19",
+      "updated": "2026-10-19",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "comment": "38 pages, including appendices",
+      "abs_url": "https://arxiv.org/abs/2610.25844",
+      "pdf_url": "https://arxiv.org/pdf/2610.25844v1",
+      "hf_upvotes": 35,
+      "hf_url": "https://huggingface.co/papers/2610.25844",
+      "project_page": "https://yanjinhe.github.io/swift/",
+      "organization": "alibaba",
+      "hf_published": "2026-10-19",
+      "hf_featured": "2026-10-21",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 2.75,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 7.104,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 2.75,
+        "popularity": 5.92,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 35 赞",
+      "authors_display": "Yanjin He, Cuifeng Shen, Wanzhou Lei, Maohua Li, Tao Lan, Kan Liu 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.31574",
+      "title": "Rethinking Sequence Compression with Test-time Regression",
+      "abstract": "Sequence compression is a fundamental operation and a critical information bottleneck in efficient language and multimodal models, and yet prevailing approaches based on pooling or learned projections remain underperforming. We revisit sequence compression through the lens of test-time regression: input tokens define a regression problem whose fitted coefficients form the compressed representation. Importantly, the regression problem is learned end-to-end via backpropagation, while its coefficients are computed efficiently in closed form during the forward pass. This leads to TTR-Compressor, a general alternative to conventional pooling and projection-based compression. We evaluate TTR-Compressor as the compressor for block-wise sparse attention and the visual token merger for multimodal large language models. On block-wise sparse attention, TTR-Compressor improves RULER performance over attention-based compressors by a large margin. For visual token merging, it consistently outperforms the standard MLP merger and matches its performance with 55.6% fewer visual tokens. These results establish test-time regression as an effective primitive for sequence compression in efficient language and multimodal models.",
+      "authors": [
+        "Sihan Yang",
+        "Jie Huang",
+        "Hanxuan Li",
+        "Yifan Guo",
+        "Weigao Sun",
+        "Yiran Zhong",
+        "Weiyang Liu"
+      ],
+      "published": "2026-10-22",
+      "updated": "2026-10-22",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Technical report (19 pages, 4 figures, project page: https://spherelab.ai/ttr-compressor)",
+      "abs_url": "https://arxiv.org/abs/2610.31574",
+      "pdf_url": "https://arxiv.org/pdf/2610.31574v1",
+      "hf_upvotes": 20,
+      "hf_url": "https://huggingface.co/papers/2610.31574",
+      "github_repo": "https://github.com/Sphere-AI-Lab/ttr-compressor",
+      "github_repo_source": "hf",
+      "github_stars": 13,
+      "project_page": "https://spherelab.ai/ttr-compressor/",
+      "organization": "CUHK SphereLab",
+      "hf_published": "2026-10-22",
+      "hf_featured": "2026-10-23",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 6.972,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 2.0,
+        "popularity": 4.47,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 20 赞 ｜ 💻 [代码](https://github.com/Sphere-AI-Lab/ttr-compressor)",
+      "authors_display": "Sihan Yang, Jie Huang, Hanxuan Li, Yifan Guo, Weigao Sun, Yiran Zhong 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.29441",
+      "title": "Sparsity Should Be ALLOTted by Output: Training-Free Allocation of Block-Sparse Attention for Video Diffusion Transformers",
+      "abstract": "Full 3D attention is costly in video Diffusion Transformers. Block-sparse attention reduces this cost by computing only selected attention blocks. However, existing methods either overlook the potential to optimize sparsity allocation or rely on heuristic rules or local metrics to guide it. In this work, we observe that sparsifying attention in different layers and at different denoising steps affects final-video fidelity to substantially different degrees. Yet the identities of the most sensitive layer-step pairs remain nearly unchanged across inputs. Building on these findings, we propose Allocating Layer-step Latency by Output Tests (ALLOT), a training-free sparsity allocation method. Treating each layer-step pair as a cell, ALLOT estimates each cell's contribution to final-video error through (i) cell probing and (ii) trajectory calibration, then jointly optimizes cell densities under a measured-latency budget. It preserves existing selection strategies and kernels, replacing only the allocation component. At equal or shorter wall-clock time, ALLOT outperforms every compared allocation strategy with XAttention, with an 11.8 dB PSNR gain on HunyuanVideo. Extensive experiments across four additional published pipelines on Wan2.1, Wan2.2, and HunyuanVideo show that ALLOT outperforms or ties the default in all nine settings.",
+      "authors": [
+        "Tianze Xia",
+        "Xiaoling Zhou",
+        "Ruya Lan",
+        "Yiqiao Liao",
+        "Chengru Song",
+        "Shiming Xiang"
+      ],
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "26 pages, 11 figures, including supplementary material",
+      "abs_url": "https://arxiv.org/abs/2610.29441",
+      "pdf_url": "https://arxiv.org/pdf/2610.29441v1",
+      "hf_upvotes": 24,
+      "hf_url": "https://huggingface.co/papers/2610.29441",
+      "project_page": "https://mukayi.github.io/allot-project-page/",
+      "organization": "KlingAI Research",
+      "hf_published": "2026-10-21",
+      "hf_featured": "2026-10-22",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 6.899,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "sparsity",
+          "probing",
+          "calibration"
+        ],
+        "category": 0.0,
+        "popularity": 4.9,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 24 赞",
+      "authors_display": "Tianze Xia, Xiaoling Zhou, Ruya Lan, Yiqiao Liao, Chengru Song, Shiming Xiang"
+    },
+    {
+      "arxiv_id": "2610.23751",
+      "title": "MTEdit: Packed Trajectories Beat Rollouts for Multi-Turn Image Editing",
+      "abstract": "Multi-turn image editing aims to modify an image according to a sequence of instructions, making it better aligned with human-AI collaborative creation than single-turn editing. However, constructing high-quality multi-turn training data remains challenging, as conventional sequential rollout accumulates errors and introduces visual-quality drift across editing turns. To address this challenge, we introduce MTEdit, a multi-turn image editing dataset built through a pipeline centered on packed trajectory canvas (PTC) generation. By jointly generating multiple editing states within a unified visual context, this pipeline reduces visual-quality drift across turns. Covering both step-wise and context-aware editing scenarios, MTEdit comprises 500K multi-turn image editing trajectories, with up to 8 turns and an average of 5.38 turns per trajectory, making it one of the most extensive datasets for multi-turn image editing. We further introduce MTEdit-Bench, a benchmark designed to evaluate both scenarios by assessing models' ability to follow editing instructions, maintain content consistency, resist visual-quality drift, and effectively use historical context across turns. Using MTEdit, we fine-tune Qwen-Image-Edit-Causal to obtain Qwen-Image-MTEdit. On MTEdit-Bench, we evaluate a broad range of closed-source and open-source image editing models, including Qwen-Image-MTEdit. Experimental results show that Qwen-Image-MTEdit achieves the best performance among the evaluated open-source models, demonstrating the effectiveness of MTEdit in improving models' multi-turn image editing capabilities.",
+      "authors": [
+        "Houyuan Chen",
+        "Fanzhou Wang",
+        "Xiangyu Fan",
+        "Songlin Yang",
+        "Zhitao Yang",
+        "Lvmin Zhang",
+        "Pei Yang",
+        "Hao Zhao",
+        "Lei Yang",
+        "Anyi Rao"
+      ],
+      "hf_upvotes": 35,
+      "hf_url": "https://huggingface.co/papers/2610.23751",
+      "organization": "SenseNova",
+      "hf_published": "2026-10-16",
+      "hf_featured": "2026-10-19",
+      "abs_url": "https://arxiv.org/abs/2610.23751",
+      "pdf_url": "https://arxiv.org/pdf/2610.23751",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 5.916,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 5.92,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 35 赞",
+      "authors_display": "Houyuan Chen, Fanzhou Wang, Xiangyu Fan, Songlin Yang, Zhitao Yang, Lvmin Zhang 等 10 人"
+    },
+    {
+      "arxiv_id": "2610.12586",
+      "title": "Realism VS Accuracy: Event Sequence Forecasting from a Generative Modeling Perspective",
+      "abstract": "Event sequences are chains of random events, each described by heterogeneous (numerical and categorical) features. The problem of event sequence forecasting occurs in finance, healthcare, business process intelligence, and other fields. In this work, we study multi-horizon forecasting of event sequences as a conditional generative modeling problem. We evaluate forecasts not only for prediction accuracy, but also for distributional realism. To this end, we present a benchmark comprising metrics for both quality aspects, strong statistical baselines, recent models adapted from adjacent fields, and curated real-world datasets. Careful evaluation reveals that no method excels at both accuracy and realism, highlighting a fundamental trade-off between the two. Finally, we introduce Wasserstein BaryBooster, an algorithm that aggregates samples from a realism-strong diffusion model into a state-of-the-art predictor, demonstrating that distributional realism can be converted into prediction accuracy. Code is available at https://github.com/xaosina/event-sequence-forecasting.",
+      "authors": [
+        "Dmitry Osin",
+        "Egor Surkov",
+        "Petr Mokrov",
+        "Igor Udovichenko",
+        "Ivan Karpukhin",
+        "Evgeny Burnaev",
+        "Egor Shvetsov",
+        "Alexander Korotin"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Spotlight at the NeurIPS 2026 Track on Evaluations and Datasets. Code: https://github.com/xaosina/event-sequence-forecasting",
+      "abs_url": "https://arxiv.org/abs/2610.12586",
+      "pdf_url": "https://arxiv.org/pdf/2610.12586v1",
+      "hf_upvotes": 7,
+      "hf_url": "https://huggingface.co/papers/2610.12586",
+      "github_repo": "https://github.com/xaosina/event-sequence-forecasting",
+      "github_repo_source": "hf",
+      "github_stars": 0,
+      "hf_published": "2026-10-08",
+      "hf_featured": "2026-10-23",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.646,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "forecasting",
+          "diffusion model"
+        ],
+        "category": 2.0,
+        "popularity": 2.65,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 7 赞 ｜ 💻 [代码](https://github.com/xaosina/event-sequence-forecasting)",
+      "authors_display": "Dmitry Osin, Egor Surkov, Petr Mokrov, Igor Udovichenko, Ivan Karpukhin, Evgeny Burnaev 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.26081",
+      "title": "DeOverlay: A Benchmark and Source-Anchored Flow for Video Overlay Removal",
+      "abstract": "Video overlay removal aims to recover scenes obscured by subtitles, titles, and logos while preserving surrounding content. Existing methods use temporal propagation or source-conditioned generation, but can leave residual overlays and distort scene structure when useful source information is obscured. We propose DeOverlay, a source-anchored flow model that reconstructs the clean video from the source latent with fixed source guidance. Specifically, we train a shared velocity network along paired source-to-clean paths using region-weighted flow matching, enabling successive cor- rections from intermediate states. To select local source cues, we develop visibility-normalized temporal aggregation that excludes masked positions and averages the remaining observations. Global source context and edit-region embeddings complement these cues through additive condi- tioning, retaining a single video-token sequence. To evaluate scene recovery across diverse overlay conditions, we introduce DVTE-Bench, comprising 1,631 paired videos across eight text-overlay categories, with OCR-screened clean targets, frame-aligned pixel masks, and a common evaluation protocol. Experiments on the complete release show that DeOverlay outperforms four baselines on all five reconstruction and perceptual metrics, reducing Mask LPIPS and Mask VFID by 58.3% and 70.3%, respectively, relative to the strongest evaluated baseline. Additional qualitative examples demonstrate the removal of graphic logos and stickers. We will make the complete benchmark, evaluation code, and test outputs availabl. Project page:https://yahooo-m.github.io/DVTE-Bench/",
+      "authors": [
+        "Deshui Miao",
+        "Yuhang Ma",
+        "Shaoyong Jia",
+        "Wenzhao Gao",
+        "Yue Zhang",
+        "Shaohui Jiao",
+        "Xin Li"
+      ],
+      "hf_upvotes": 19,
+      "hf_url": "https://huggingface.co/papers/2610.26081",
+      "project_page": "https://yahooo-m.github.io/DVTE-Bench/",
+      "organization": "ByteDance",
+      "hf_published": "2026-10-19",
+      "hf_featured": "2026-10-20",
+      "abs_url": "https://arxiv.org/abs/2610.26081",
+      "pdf_url": "https://arxiv.org/pdf/2610.26081",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 3.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.609,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "flow matching"
+        ],
+        "category": 0.0,
+        "popularity": 4.36,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 19 赞",
+      "authors_display": "Deshui Miao, Yuhang Ma, Shaoyong Jia, Wenzhao Gao, Yue Zhang, Shaohui Jiao 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.32195",
+      "title": "Principia: Test-Time Hypotheses to Principle Construction for Scientific Discovery",
+      "abstract": "Scientific discovery requires identifying the scientific principles underlying observed phenomena to guide further investigation. As these empirical principles are often unknown in complex discovery processes, they are constructed via a hypotheses-to-principle pipeline to obtain recurring causalities from progressively accumulated observations during test-time discovery. However, constructing this knowledge requires substantial domain expertise, time, and effort, making this translation stage a bottleneck for scientific discovery. To address this limitation, we propose Principia, an LLM-based framework that constructs and continually refines scientific principles at test time. Drawing on how human researchers develop principles, Principia forms comparative causal hypotheses from related inputs and their observed outcomes, then synthesizes recurring relationships across these hypotheses into inductive principles. By applying the constructed hypotheses and inductive principles to the task, it obtains new observations, revises the hypotheses used based on these new observations, and reconstructs principles from the updated hypotheses, allowing scientific knowledge to continuously evolve throughout test-time discovery. Across benchmarks spanning molecular optimization, protein engineering, gene perturbation, and molecular property prediction, Principia outperforms baselines relying on internal knowledge, external sources, or experience summaries, while generating principles that are plausible and consistent with the scientific literature, demonstrating its effectiveness in constructing and refining task-specific hypotheses and principles at test time for scientific discovery. Our code is available at https://github.com/DongkiKim95/Principia.",
+      "authors": [
+        "Dongki Kim",
+        "Sangwoo Park",
+        "Jinheon Baek",
+        "Soyeong Jeong",
+        "Sung Ju Hwang"
+      ],
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.32195",
+      "pdf_url": "https://arxiv.org/pdf/2610.32195v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/DongkiKim95/Principia",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 8.75,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 5.006,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "optimization",
+          "protein",
+          "molecular"
+        ],
+        "category": 2.75,
+        "popularity": 1.32,
+        "stars_counted": 2,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 2,
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/DongkiKim95/Principia)",
+      "authors_display": "Dongki Kim, Sangwoo Park, Jinheon Baek, Soyeong Jeong, Sung Ju Hwang"
+    },
+    {
+      "arxiv_id": "2610.27180",
+      "title": "Meta-iLaD: Identifiable Latent Dynamics via Meta-Learning of Dynamics Environments",
+      "abstract": "Learning latent dynamics is central to assessing the current states and forecasting the future trajectories of high-dimensional time series. For locally-stationary latent dynamics $\\mathcal{F}(\\mathbf{z}_{<t}; \\mathbf{c})$ with latent dynamics state $\\mathbf{z}_t$ and environment variable $\\mathbf{c}$, prior identifiability results have largely focused on $\\mathbf{z}_t$ when conditioned on predefined label $u$ of dynamics environments. This leaves two limitations: reliance on predefined labels that hinder generalization to unseen environments, and a limited understanding of the identifiability of $\\mathcal{F}$ and $\\mathbf{c}$ which -- although offering important structural properties for the identifiability of $\\mathbf{z}_t$ -- are learned jointly with $\\mathbf{z}_t$. We address these limitations with Meta-iLaD, a novel identifiable latent dynamics framework attained by meta-learning across dynamics environments. Meta-iLaD introduces a novel conditional prior of $\\mathbf{c}$, modeled as a feedforward meta-learner to rapidly extract $\\mathbf{c}$ from few-shot examples. Meta-iLaD further establishes identifiability for $\\mathbf{z}_t$, $\\mathbf{c}$, and $\\mathcal{F}$ simultaneously, for a general formulation of $\\mathcal{F}(\\mathbf{z}_{< t};\\mathbf{c})$ without restricting the dimension of $\\mathbf{c}$ or how it modulates $\\mathcal{F}$. On synthetic and real data, we provide strong empirical evidence that 1) conditioning on few-shot examples enables generalization to out-of-distribution environments, and 2) identifiability for $\\mathbf{c}$ and $\\mathcal{F}$ is critical for accurate forecasting beyond reconstructing observed trajectories. Code is available at https://github.com/GoForIt-YYB/Meta-iLaD.",
+      "authors": [
+        "Yubo Ye",
+        "Sweekar Piya",
+        "Xiajun Jiang",
+        "Linwei Wang"
+      ],
+      "published": "2026-10-19",
+      "updated": "2026-10-19",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "ICML 2026. 23 pages, 9 figures",
+      "abs_url": "https://arxiv.org/abs/2610.27180",
+      "pdf_url": "https://arxiv.org/pdf/2610.27180v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/GoForIt-YYB/Meta-iLaD",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 14.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.0,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "generalization",
+          "time series",
+          "forecasting",
+          "meta-learning",
+          "out-of-distribution"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 0,
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/GoForIt-YYB/Meta-iLaD)",
+      "authors_display": "Yubo Ye, Sweekar Piya, Xiajun Jiang, Linwei Wang"
+    },
+    {
+      "arxiv_id": "2610.26252",
+      "title": "SEAM: Spectral Embedding Alignment and Merging for Low-Resource TTS",
+      "abstract": "Expanding the vocabulary of conditional text-to-speech (TTS) models typically requires extensive fine-tuning with paired audio, creating a major bottleneck for low-resource and cross-lingual adaptation. To address this, we introduce SEAM, a zero-audio initialization method that constructs embeddings for unseen tokens from known subtokens. Unlike standard pooling strategies that ignore sequential structure, SEAM applies a spectral filter to preserve temporal phonetic order and uses closed-form ridge regression to align the new embeddings with the pretrained conditioning manifold. Across three languages and two TTS architectures, SEAM approaches or matches baseline performance using up to four times less training data, reducing sample complexity by 75\\% compared to random initialization and mean pooling. Our approach provides a lightweight, reproducible, and theoretically grounded solution for vocabulary expansion in low-resource speech synthesis.",
+      "authors": [
+        "Walaa Othman",
+        "Baher Mohammad",
+        "Stamatios Lefkimmiatis",
+        "Ammar Ali"
+      ],
+      "published": "2026-10-19",
+      "updated": "2026-10-19",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Accepted to Findings of the Association for Computational Linguistics: EMNLP 2026",
+      "abs_url": "https://arxiv.org/abs/2610.26252",
+      "pdf_url": "https://arxiv.org/pdf/2610.26252v1",
+      "hf_upvotes": 7,
+      "hf_url": "https://huggingface.co/papers/2610.26252",
+      "organization": "ITMO University",
+      "hf_published": "2026-10-19",
+      "hf_featured": "2026-10-23",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 9.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 4.896,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "text-to-speech",
+          "tts",
+          "audio"
+        ],
+        "category": 2.0,
+        "popularity": 2.65,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 7 赞",
+      "authors_display": "Walaa Othman, Baher Mohammad, Stamatios Lefkimmiatis, Ammar Ali"
+    }
+  ]
+}

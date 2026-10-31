@@ -1,0 +1,637 @@
+# AI 论文周报（2026-10-19 – 2026-10-25）
+
+本周最突出的技术演进趋势是智能体与具身系统的“内化与闭环”——模型不再满足于外挂工具或事后评估，而是试图将记忆、执行与验证直接收拢进模型结构本身。在语言与智能体领域，MemT-1.0 将记忆更新深度融入 Gated DeltaNet-2 架构，Cache Engineering (AKV) 与 DLite 则从 KV 缓存的主动丢弃与无历史草稿入手破解长程交互的开销陷阱；而 BizBench、OpenDS 等基准则将视角从“能否完成任务”倒逼至“执行过程是否违规与长程策略是否稳健”，CoEvo-RSI 和 Self-HPO 更进一步探索了脚手架与模型权重的双向协同自演化。在视觉与具身方向，感知与行动的边界加速融合：WeVisOne-VL 打通了从目标框到像素级掩码的全能感知，SenseNova 对 GPT-6-Astra 的极限摸底与 HandsOn、EgoXperience 共同勾勒出具身智能从“单任务演示”迈向“世界坐标度量级理解与机群自愈”的必经之路；StreamEval 则为热度极高的交互式流式视频生成敲响了状态一致性的警钟。相比之下，智能眼镜与可穿戴方向在公众社区热度上明显归于冷静，但端侧视线压缩（GazeLens）、超低带宽频域适配与肌电 Token 化等底层硬核工作，正在为下一代随时在线的空间硬件默默筑牢地基。
+
+---
+
+## ⭐ 本周最值得读的 5 篇
+
+1. **光谱-空间联合归因：为多光谱深度模型构建局部Shapley公平解释**（其他深度学习）— 712 个 HF 赞居本周榜首，用合作博弈论解耦多光谱影像的位置与通道归因｜[arXiv:2610.21114](https://arxiv.org/abs/2610.21114)
+2. **StreamEval：交互式流式视频生成模型的首个综合评估基准**（多模态 / 视觉语言）— 577 个 HF 赞，揭示流式视频生成的最大瓶颈在于多轮强约束下的状态连贯性与指令跟随｜[arXiv:2610.28402](https://arxiv.org/abs/2610.28402)
+3. **BizBench：揭秘长程智能体在真实商业业务落地中的深层合规挑战**（Agent）— 495 个 HF 赞，直击智能体评测盲区：终局成功不等于合规，中间违规会引发致命资损｜[arXiv:2610.20424](https://arxiv.org/abs/2610.20424)
+4. **GPT-6-Astra是否已跨入具身智能时代？**（机器人与具身智能）— 478 个 HF 赞，全面实测证明顶尖模型已具操作胜任力，但在真机时间与不可逆故障上仍有鸿沟｜[arXiv:2610.22471](https://arxiv.org/abs/2610.22471)
+5. **MemT-1.0：迈向原生记忆演化的基座模型**（大语言模型）— 178 个 HF 赞，用Gated DeltaNet-2将记忆内化进模型计算，持久存储开销较全KV降低66倍｜[arXiv:2610.26825](https://arxiv.org/abs/2610.26825)
+
+---
+
+## 一、大语言模型
+
+### 1. MemT-1.0：迈向原生记忆演化的基座模型
+
+**MemT-1.0: Towards Memory-Native Evolution**
+MemTensor ｜ 🔥 HF 178 赞 ｜ 💻 [代码](https://github.com/MemTensor/MemT-1.0) ｜ [arXiv:2610.26825](https://arxiv.org/abs/2610.26825)
+
+- **问题**：传统基座模型依赖外挂检索或被动KV缓存，无法将交互经验内化为模型固有的持续演化能力。
+- **做法**：提出MemT-1.0架构，基于Gated DeltaNet-2引入轮内稳定token级更新，并用Mixture-of-Storage扩展原生记忆。
+- **效果**：128K上下文下推理加速约1.86倍，持久存储较全KV缓存减少66倍，记忆任务优于参数化基线且保持通用能力。
+- **值得看**：跳出外挂RAG与全量KV缓存的二元对立，探索端到端原生记忆架构的新范式。
+
+### 2. 面向智能体的缓存工程：主动KV控制与无状态引擎
+
+**Cache Engineering for Agents**
+Tsinghua-NICS-EFC ｜ 🔥 HF 159 赞 ｜ 💻 [代码](https://github.com/thu-nics/AKV) ｜ [arXiv:2610.28577](https://arxiv.org/abs/2610.28577)
+
+- **问题**：智能体长轨迹交互中KV缓存成为主要开销，裁剪上下文会破坏前缀缓存导致高昂的重新预填充代价。
+- **做法**：提出缓存工程，让智能体主动通过drop排除指定缓存、repos重调位置编码，并研发AKV无状态服务引擎处理状态复用。
+- **效果**：工具响应滚动丢弃策略使基准均分提升1.7分，成本降低27.7%，P95延迟降低1.5倍。
+- **值得看**：将KV缓存从被动管理的系统负担转化为智能体可直接调度的可编程资源。
+
+### 3. IQuest-Q1：面向命令行智能体系统的320B稀疏MoE基座
+
+**IQuest-Q1: Advancing Foundation Capabilities for Agentic CLI Systems**
+IQuest ｜ 🔥 HF 99 赞 ｜ [arXiv:2610.30949](https://arxiv.org/abs/2610.30949)
+
+- **问题**：命令行智能体系统要求极高代码能力与环境交互稳健性，现有开源模型在复杂CLI任务上缺乏专项底座。
+- **做法**：总参数320B、激活15B，结合Stable SplitNorm与Muon优化器，经历代码递增预训练、细粒度中训与多版本RL后训练。
+- **效果**：在代码生成与综合复杂CLI智能体任务中表现突出，通过专家模型合并有效化解了多阶段更新冲突。
+- **值得看**：全面开源超大参数量稀疏MoE在CLI系统环境下的完整三阶段训练配方。
+
+### 4. PAR：对齐进度递归解决状态跟踪中的长度泛化难题
+
+**PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking**
+ant-international ｜ 🔥 HF 163 赞 ｜ [arXiv:2610.27628](https://arxiv.org/abs/2610.27628)
+
+- **问题**：循环语言模型在测试期虽然可增加迭代步数，但在长序列状态跟踪任务中往往无法实现计算深度外推。
+- **做法**：强制第k次迭代预测对齐前k步操作的状态，并将循环状态重缩放至初始范数，结合自蒸馏诱导中间监督。
+- **效果**：仅在至多32步训练的0.5B模型在外推至512步（16倍长度）时仍取得95.5%状态准确率，远超显式思维链的0.8%。
+- **值得看**：为循环深度外推确立了状态尺度锚定与进度对齐的双重必要条件。
+
+### 5. DLite：无历史记录的高效智能体推测解码
+
+**DLite: History-free Speculative Decoding for Agentic AI**
+Shanghai Jiao Tong University ｜ 🔥 HF 36 赞 ｜ 💻 [代码](https://github.com/SJTU-DAI-Sys/DLite) ｜ [arXiv:2610.23787](https://arxiv.org/abs/2610.23787)
+
+- **问题**：智能体多轮动态交互中，草稿模型因上下文极速膨胀出现接受长度骤降80%，且维护自身历史KV带来严重显存开销。
+- **做法**：直接复用目标模型的隐藏状态进行局部推测预测，无需显式维护草稿模型的历史KV，配合轻量因果头恢复块内依赖。
+- **效果**：在长上下文智能体负载下达成2至6个接受长度，相比最先进的DSpark提速高达70%。
+- **值得看**：消除了推测解码中草稿模型对历史上下文的绑定，大幅降低智能体部署系统开销。
+
+### 6. TraceForge：用自身思维风格从闭源答案中逆向蒸馏思维链
+
+**TraceForge: Distilling with Your Own Thinking**
+Independent Research ｜ 🔥 HF 50 赞 ｜ [arXiv:2610.29680](https://arxiv.org/abs/2610.29680)
+
+- **问题**：头部闭源模型API常隐藏完整思考过程仅返回最终答案，切断了开源学生模型的思维链蒸馏路径。
+- **做法**：提出两阶段生成-判别框架，由生成器基于上下文和教师答案按学生自身风格重建思维轨迹，对抗判别器筛选真实度。
+- **效果**：同等5000条题目的教师答案下，所生成的思维轨迹在HumanEval+上提升3.7分，MBPP+上大幅提升7.1分。
+- **值得看**：证明契合学生模型家族原有推理风格的思维轨迹，比强行拟合教师原生思维链更容易被吸收。
+
+### 7. Large Flow Language Models：连续流模型颠覆自回归语言建模
+
+**Large Flow Language Models**
+🔥 HF 23 赞 ｜ 💻 [代码](https://github.com/lafa-gh/large-flow-lms) ｜ [arXiv:2610.28559](https://arxiv.org/abs/2610.28559)
+
+- **问题**：自回归语言模型逐token生成难以并行，而离散扩散模型在语义连续性与生成质量上一直落后于自回归基线。
+- **做法**：将连续流匹配应用于嵌入空间构建大语言模型，并结合自推测解码利用流式草稿在单模型内进行自回归验证。
+- **效果**：指令遵循与推理质量匹敌甚至超越自回归模型，自推测解码实现2.54倍吞吐加速，支持一步与少步蒸馏。
+- **值得看**：验证了连续流可作为可扩展的通用语言建模基础，展现出非自回归生成的重大潜力。
+
+### 8. ECHO：超越外挂式多Token预测的高效因果自递归
+
+**ECHO: Efficient Causal Self-Recursion Beyond Auxiliary Multi-Token Prediction**
+ernie-research ｜ 🔥 HF 17 赞 ｜ 💻 [代码](https://github.com/ernie-research/ECHO) ｜ [arXiv:2610.24766](https://arxiv.org/abs/2610.24766)
+
+- **问题**：现有MTP多token预测依赖外挂模块，每增加一个预测步长就要增加模块参数与前向开销，梯度难以直达主干。
+- **做法**：用主干最终层直接预测所有未来步长，结合动态深度采样按深度递减概率训练，推理时模型自我草稿。
+- **效果**：预训练开销仅为全量MTP的一半，在代码和推理下游任务表现更强，且在高熵开放生成中保持出色的草稿对齐率。
+- **值得看**：让多步未来预测真正成为因果自回归的核心原生目标，无需外挂辅助头即可实现高效自推测。
+
+### 9. 先领会后取消：思考过程如何让推理模型对日常语言变得字面化
+
+**Entertain, then Cancel: How Thinking Makes Reasoning Models Read Some and Or Literally**
+🔥 HF 23 赞 ｜ 💻 [代码](https://github.com/kouzhizhuo/entertain-then-cancel) ｜ [arXiv:2610.21204](https://arxiv.org/abs/2610.21204)
+
+- **问题**：长思考推理模型在日常语用中常将“部分”（some）误按纯逻辑解读为“可能包含全部”，丢失人类潜台词理解。
+- **做法**：在保持权重固定的前提下，通过切断不同思考节点的推理轨迹，深入探究模型语用含义决策点的演化过程。
+- **效果**：发现模型初期其实正确捕获了语用潜台词，但在后续严密逻辑思考中主动取消了它；从早期解读中读取答案可恢复语用。
+- **值得看**：揭示推理模型的长思考存在过拟合形式逻辑的副作用，强调评测模型不仅要看严谨度还要看语用契合度。
+
+### 10. CulturalRiddles：跨越62种文化的多元民间谜语推理基准
+
+**CulturalRiddles: A Multicultural Benchmark of Riddles**
+Cohere Labs Community ｜ 🔥 HF 43 赞 ｜ 💻 [代码](https://github.com/Cohere-Labs-Community/CulturalRiddles) ｜ [arXiv:2610.29968](https://arxiv.org/abs/2610.29968)
+
+- **问题**：现有大模型基准严重偏向英语与直白事实记忆，缺乏对非英语本土文化隐喻、溯因与组合常识推理的深入考察。
+- **做法**：完全由全球社区人类创作者众包构建，覆盖45个国家、51种语言与62种文化，评测28种顶尖语言模型配置。
+- **效果**：即使前沿大模型在部分特定本土文化社区的谜语谜底预测准确率最高也仅有22%，表现出显著文化鸿沟。
+- **值得看**：用极富文化内涵的谜语挑战模型的高阶溯因推理与跨文化理解边界。
+
+---
+
+## 二、多模态 / 视觉语言
+
+### 1. WeVisOne-VL：从物体框到像素级掩码的全能视觉感知大模型
+
+**WeVisOne-VL: Unified Visual Perception from Objects to Pixels**
+Tencent ｜ 🔥 HF 244 赞 ｜ 💻 [代码](https://github.com/Tencent/WeVisOne-VL) ｜ [arXiv:2610.31329](https://arxiv.org/abs/2610.31329)
+
+- **问题**：主流VLM主要擅长语义对话，但在物体检测、精细分割、抠图等像素级细粒度定位与感知任务上缺乏通用能力。
+- **做法**：通过结构化next-token预测统一目标级与像素级感知，利用专属<OBJ>标记无缝接入轻量像素解码器，经历三阶段SFT与混合RL。
+- **效果**：在超过30个基准上取得领先表现，覆盖检测、指代分割及alpha抠图，并对无目标提问具备极强的拒答鲁棒性。
+- **值得看**：打通了高层视觉推理与底层精准像素生成的界限，推动VLM走向生产可用的可靠感知系统。
+
+### 2. StreamEval：交互式流式视频生成模型的首个综合评估基准
+
+**StreamEval: Evaluating Interactive Streaming Video Generation Models**
+🔥 HF 577 赞 ｜ 💻 [代码](https://github.com/StreamEval/StreamEval) ｜ [arXiv:2610.28402](https://arxiv.org/abs/2610.28402)
+
+- **问题**：流式视频生成正走向实时交互，但现有评测仅关注单段画面质量，无法衡量多轮动态指令下的执行可靠性与状态一致性。
+- **做法**：构建覆盖虚拟人对话、表演、世界生成等5类任务的300个长脚本测试用例，从任务执行、状态一致性、画面与音画协同4个维度综合打分。
+- **效果**：评测37个模型发现画面质量高并不代表指令遵从好，世界生成跟随分最高仅25.93，参考编辑成功率最高仅15.00。
+- **值得看**：用扎实的定量证据指出当前交互式视频生成的最大瓶颈在于强约束下的状态连贯性与执行鲁棒性。
+
+### 3. SpatialScout：VLM具身智能体能否主动探索并构建三维地图？
+
+**SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?**
+Peking University ｜ 🔥 HF 170 赞 ｜ 💻 [代码](https://github.com/JesseZZZZZ/SpatialScout) ｜ [arXiv:2610.26659](https://arxiv.org/abs/2610.26659)
+
+- **问题**：现有空间问答多基于给定的静态多视角图像，无法检验智能体在未知三维场景中主动移动相机、几何融合建图的真实空间智能。
+- **做法**：构建包含80个复杂室内场景与3140个物体的基准，智能体需在有限交互步数内自主移动相机并输出共享坐标系下的物体中心。
+- **效果**：最强前沿模型Claude Opus 5.5平均重叠度仅41.71%，IoU超0.9的精准定位比例仅3.25%，暴露巨大缺陷。
+- **值得看**：清晰界定了“粗粒度语义识别”与“高精度度量空间建图”之间的鸿沟，为3D具身智能提供严谨标尺。
+
+### 4. 界面对但流转错：基于表征空间世界模型的GUI智能体验证器
+
+**Right Screen, Wrong Transition: World Models as Verifiers for GUI Agents**
+🔥 HF 188 赞 ｜ 💻 [代码](https://github.com/jiamingzhang94/lgwm) ｜ [arXiv:2610.11942](https://arxiv.org/abs/2610.11942)
+
+- **问题**：恶意钓鱼界面常复用合法屏幕，单看界面本身无法判别异常，GUI智能体安全本质取决于状态流转（Transition）是否合理。
+- **做法**：提出无需解码器的无标注动作条件世界模型LGWM，直接在观测编码的隐空间预测下一帧界面表征，将验证降维为向量比对。
+- **效果**：在RSWT-BENCH上达到0.987 AUC，单次判定仅耗时17毫秒，以千倍推理速度优势比肩甚至超越顶尖闭源VLM。
+- **值得看**：摆脱了耗时的像素生成与二次模型仲裁，开辟了隐表征世界模型在智能体实时安全防御的新应用。
+
+### 5. OpenVLHarness：具备多模态持久记忆的真实视觉智能体工具调用框架
+
+**OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory**
+Apple ｜ 🔥 HF 120 赞 ｜ 💻 [代码](https://github.com/uclanlp/OpenVLHarness) ｜ [arXiv:2610.26860](https://arxiv.org/abs/2610.26860)
+
+- **问题**：单纯堆叠VLM的推理算力在复杂物理测量与视觉任务上收益递减，模型亟需可靠调用异构外部工具并留存多模态证据。
+- **做法**：构建由能力层与持久多模态记忆组成的外挂执行框架，统一异构工具渲染与数据留存，支持基于存储数据生成并执行程序。
+- **效果**：在22个基准上使Qwen3-VL、Kimi K3及GPT-6等模型平均提升9.7至12.6分，以37%的token开销战胜满血基线。
+- **值得看**：苹果展示了如何通过模块化工具抽象与结构化多模态记忆，低成本大幅补足前沿模型的长程多模态推理短板。
+
+### 6. 在三维世界中思考与探索：强化学习赋予VLM主动视点感知能力
+
+**Learning to Think and Explore in 3D World**
+University of California at San Diego ｜ 🔥 HF 141 赞 ｜ [arXiv:2610.21783](https://arxiv.org/abs/2610.21783)
+
+- **问题**：多数3D视觉模型直接喂入多视角或点云，而真实人类仅依靠单目第一人称视角并在空间中通过主动移动视点获取补充信息。
+- **做法**：提出ACT3D，保持单目输入原生机制，仅以最终答案正确性作为稀疏奖励进行强化学习，无需任何动作轨迹人工标注。
+- **效果**：6个3D基准均分达53.2%，超越Gemini 3.6 Flash且相比基座提升22.0%，同时节省50%至70%的输入帧开销。
+- **值得看**：证明仅凭最终结果驱动的RL，即可促使VLM自主涌现出遮挡主动探查、跨视角空间比对等高级具身探索行为。
+
+### 7. PrismaCoder：基于解构准则合成的大规模开源多模态代码智能模型
+
+**PrismaCoder: Pushing the Boundaries of Open Multimodal Code Intelligence through Decomposed Rubric Synthesis**
+NLP Group of The University of Hong Kong ｜ 🔥 HF 72 赞 ｜ 💻 [代码](https://github.com/QiushiSun/PrismaCoder) ｜ [arXiv:2610.20538](https://arxiv.org/abs/2610.20538)
+
+- **问题**：将图表、网页截图生成为可执行代码的多模态代码智能被闭源垄断，开源界受限于样本“代码正确且视觉完全一致”的质量瓶颈。
+- **做法**：构建PrismaForge流水线，将评估拆解为可自动检查的分级细分准则，驱动数据清洗与RL奖励，发布200万级PrismaCoder-2M数据集。
+- **效果**：训练出的9B与35B模型在多模态网页与可视化编程任务上大幅刷新开源纪录，性能直逼顶级闭源系统。
+- **值得看**：以系统化的细粒度渲染准则攻克了多模态代码难以自动化检验与对齐的核心痛点。
+
+### 8. 小米Lens-0技术报告：用视觉隐变量实现分层思考与精准分割
+
+**Xiaomi-Lens-0 Technical Report**
+SeerRay-Lab ｜ 🔥 HF 49 赞 ｜ 💻 [代码](https://github.com/SeerRay-Lab/Xiaomi-Lens-0) ｜ [arXiv:2610.23279](https://arxiv.org/abs/2610.23279)
+
+- **问题**：传统视觉语言模型多将掩码分割作为外挂任务，无法在思维链生成过程中与特定区域的深层视觉隐特征紧密交织。
+- **做法**：将掩码token状态作为视觉隐变量与语言模型对齐，让模型能够“利用视觉隐变量思考”，并在思维链生成中直接融合区域感知。
+- **效果**：在RefCOCO所有8个数据子集上相比Qwen3.5平均提升5.6分，分割cIoU取得同类最优，同时全面刷新通用感知基准。
+- **值得看**：探索了在自回归思考流中直接穿插视觉潜变量的全新融合架构。
+
+### 9. 生成侧蕴藏的先验：解锁统一多模态模型的细粒度视觉理解潜力
+
+**What Generation Knows: Unlocking Fine-Grained Understanding in Unified Multimodal Models**
+🔥 HF 39 赞 ｜ 💻 [代码](https://github.com/LRuca/GAFU) ｜ [arXiv:2610.23987](https://arxiv.org/abs/2610.23987)
+
+- **问题**：统一图文模型通常仅将图像生成作为下游输出，忽略了生成路径内部表征其实包含着极丰富的局部属性与精细空间信息。
+- **做法**：提出GAFU后训练框架，系统分析生成表征的敏感度，将其压缩为紧凑的G-token供理解分支按需检索与融合。
+- **效果**：在VStar-Bench与OmniSpatial上相对理解基线分别提升20.00%与17.94%，显著优于单纯做SFT的有监督基准。
+- **值得看**：打破了“理解与生成各走各路”的惯性思维，开辟了用原生生成表征反哺精准视觉理解的高效途径。
+
+### 10. 混淆的属性捆绑：视觉语言模型在多目标属性绑定中的隐蔽缺陷
+
+**Stuck on Shuffle: On Attribute-Object Binding in Vision-Language Models**
+🔥 HF 18 赞 ｜ 💻 [代码](https://github.com/Netanel-Tamir/Stuck-On-Shuffle) ｜ [arXiv:2610.22602](https://arxiv.org/abs/2610.22602)
+
+- **问题**：双塔CLIP与现代MLLM嵌入空间常无法正确区分“红苹果与绿香蕉”还是“绿苹果与红香蕉”，在多目标属性绑定上频频失灵。
+- **做法**：提出SABER测试基准，全面评测多达10个物体场景下的四类模态配对，并创新性地仅利用合成属性绑定的文本负例进行针对性微调。
+- **效果**：无需引入高昂图像标注，纯文本针对性训练直接迁移并攻克了图文跨模态与图图检索中的绑定失败，刷新SABER最优战绩。
+- **值得看**：揭示了跨模态对齐中组合语义的盲区，并证明低成本纯文本对抗训练可有效治愈多模态属性错配。
+
+---
+
+## 三、Agent
+
+### 1. BizBench：揭秘长程智能体在真实商业业务落地中的深层合规挑战
+
+**BizBench: Unveiling Hidden Challenges in Deploying Long-Horizon Agents for Real-World Business**
+ant-international ｜ 🔥 HF 495 赞 ｜ 💻 [代码](https://github.com/ant-intl/BizAgentBench) ｜ [arXiv:2610.20424](https://arxiv.org/abs/2610.20424)
+
+- **问题**：学术评测常只看最终任务是否完成，但在真实支付等强风控场景中，中间执行违规、过期政策误用都会引发严重资损。
+- **做法**：蚂蚁国际推出基于真实业务流程的基准，整合789份知识文档与601个真实工具，设计兼顾终局达成与过程合规的确定性验证。
+- **效果**：顶尖模型Claude Opus 5与GPT-6 Sol严格合规成功率仅64.0%与61.3%；开源模型终局达成42%但严格合规仅32.7%。
+- **值得看**：一针见血地指出仅考核最终结果的弊端，为高价值严肃业务场景树立了严格合规与过程审计的新标准。
+
+### 2. OpenDS：真实开放网络环境下的端到端深度检索智能体评测
+
+**Deep Search in Real-World Web Environments**
+🔥 HF 165 赞 ｜ 💻 [代码](https://github.com/Yu-xm/OpenDS) ｜ [arXiv:2610.30181](https://arxiv.org/abs/2610.30181)
+
+- **问题**：静态检索基准无法反映真实互联网动态交互、多模态异构文件查阅以及需要自主探索拼接证据的深度搜索挑战。
+- **做法**：定义OpenDS任务并构建含200个极难开放网络检索任务的OpenDS-World，要求智能体跨网页动态交互并获取确凿证据。
+- **效果**：评测12款前沿模型，最优模型准确率仅39.0%（千次人类尝试准确率为21.1%），暴露工具协同与长程终止判定短板。
+- **值得看**：建立起衡量“Deep Research / 深度调研”智能体在活体互联网络中端到端信息合成能力的标准化基准。
+
+### 3. 走向未知：评测AI智能体解决开放前沿科学研究问题的真实能力
+
+**Into the Unknown: Benchmarking AI agents on open scientific research problems**
+Carnegie Mellon University ｜ 🔥 HF 159 赞 ｜ 💻 [代码](https://github.com/prometheus-eval/into-the-unknown) ｜ [arXiv:2610.19159](https://arxiv.org/abs/2610.19159)
+
+- **问题**：现有科学AI评测多基于已解出的老考题，无法检验智能体面对人类尚未解决的真实开放科学前沿时的研究创新潜力。
+- **做法**：联合美国能源部国家实验室科学家，以尚未发表的真实未决科学难题为输入，要求智能体阅读种子论文并写出后续研究论文。
+- **效果**：通过与科学家真实后续工作盲测比对，顶尖AI在常规实验设计上有模有样，但在核心机制突破与非直觉洞察上差距明显。
+- **值得看**：首次引入真实科研未解难题作为基准，为AI驱动科学发现（AI for Science）提供了真实的硬核试金石。
+
+### 4. FocusGUI：通过聚焦感知消除全模态GUI智能体的序列注意力漂移
+
+**Focused Omni-Modal GUI Agents**
+Nanyang Technological University ｜ 🔥 HF 129 赞 ｜ 💻 [代码](https://github.com/fyzhang1/FocusGUI) ｜ [arXiv:2610.26203](https://arxiv.org/abs/2610.26203)
+
+- **问题**：流式全模态GUI交互中上下文冗杂，上一动作的关键信号在下一步可能沦为噪点，引发累积性“序列分心”与轨迹跑偏。
+- **做法**：提出轻量适配器FocusGUI，按每步决策动态加权多模态输入并压缩为致密隐变量，非侵入式注入冻结解码器。
+- **效果**：在四款全模态基座上无须改动主干参数，类型匹配度平均提升33.2，完全匹配率提升达3.0倍。
+- **值得看**：从认知感知注意力过滤切入，用极简适配器化解了全模态智能体易被界面冗余信息带偏的顽疾。
+
+### 5. CoEvo-RSI：解决自演化智能体中“大脑与躯体”错配的双向协同演化
+
+**CoEvo-RSI: When Harnesses Evolve, Which Models Should Follow?**
+🔥 HF 120 赞 ｜ 💻 [代码](https://github.com/SuJQ0722/CoEvo-RSI) ｜ [arXiv:2610.25078](https://arxiv.org/abs/2610.25078)
+
+- **问题**：自演化智能体（RSI）中执行脚手架（躯体）演进常与底层模型（大脑）失配，导致新脚手架要求的能力基座尚未具备。
+- **做法**：提出双向历史继承框架，利用元智能体从历史库协调脚手架设计与模型检查点选择，并在新脚手架下通过拒绝采样SFT对齐。
+- **效果**：使Qwen3.5-9B在TraceElephant上准确率超越DeepSeek-V4-Pro达14.16点，在智能家居复杂任务中战胜GLM-5.3。
+- **值得看**：深刻洞察并解决了智能体系统演进中脚手架与模型能力割裂的核心矛盾。
+
+### 6. WildAWM：面向电脑操作智能体的大规模可控合成环境与任务生成
+
+**Agent World Model in the Wild: Computer-Use Agent Environment Synthesis**
+Microsoft Research ｜ 🔥 HF 102 赞 ｜ 💻 [代码](https://github.com/MSR-Orchard/WildAWM) ｜ [arXiv:2610.26828](https://arxiv.org/abs/2610.26828)
+
+- **问题**：直接在真实电脑系统中进行强化学习试错不仅扩展成本极高，而且伴随严重的安全风险与环境不可逆修改。
+- **做法**：微软提出全开源驱动的合成管线，生成联合支持GUI、MCP协议与命令行接口的341个百步长程沙箱任务与可靠验证器。
+- **效果**：合成任务难度极高，GPT-6-Astra仅能解出60%；在其中训练的Qwen模型在8个未知域评测上泛化表现大幅提升。
+- **值得看**：展示了无需依赖闭源前沿模型，纯靠开源管线即可大规模合成高质量复杂智能体训练场的可行性。
+
+### 7. OpenMobile-2：融合App原生工具与拟真商业沙箱的全开源手机智能体
+
+**OpenMobile-2: Building Versatile Mobile Agents with Scalable Environments and App-Native Tools**
+Nanjing University ｜ 🔥 HF 61 赞 ｜ 💻 [代码](https://github.com/OpenMobile2/OpenMobile2-Code) ｜ [arXiv:2610.14157](https://arxiv.org/abs/2610.14157)
+
+- **问题**：移动手机智能体受困于闭源环境与不可控真机，且传统点击GUI操作效率低下，难以应付跨应用长程链路。
+- **做法**：构建包含35个拟真商业App的MobileGym++，提供超300个App原生工具与2000个可验证RL任务，支持GUI与API混合调用。
+- **效果**：在AndroidWorld达79.9，MobileWorld达50.4，真实设备SPA-Bench性能从31.9翻倍至59.6。
+- **值得看**：开源了极为完备的跨App沙箱与混合交互机制，推动移动智能体从“纯模拟手指点击”进化为“界面与原生工具混合交互”。
+
+### 8. Self-HPO：通过脚手架与策略协同优化实现自我演化的编程智能体
+
+**Self-Evolving Coding Agents via Harness-Policy Optimization**
+Microsoft Research ｜ 🔥 HF 55 赞 ｜ 💻 [代码](https://github.com/MSR-Orchard/Self-HPO) ｜ [arXiv:2610.22791](https://arxiv.org/abs/2610.22791)
+
+- **问题**：以往编程智能体优化要么只调Prompt与脚手架，要么只微调模型参数，两者的局部最优难以重合。
+- **做法**：每轮由当前模型自主反思失败日志提议新脚手架（H步），再在新脚手架下以RL微调更新模型策略（P步），交替迭代。
+- **效果**：在三大编程基准上使Qwen3.5-35B解决率从57.8%跃升至64.8%，且联合优化的收益显著超越单项收益相加。
+- **值得看**：将代码智能体的框架工程与模型参数调优纳入统一强化学习闭环，形成持续自我迭代飞轮。
+
+### 9. MemPilot：面向大模型智能体的按需多模态记忆自适应调度框架
+
+**MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents**
+Nanyang Technological University ｜ 🔥 HF 41 赞 ｜ 💻 [代码](https://github.com/ViktorAxelsen/MemPilot) ｜ [arXiv:2610.06830](https://arxiv.org/abs/2610.06830)
+
+- **问题**：静态统一构建的多模态记忆不仅预处理成本高昂，且难以在准确率、推理成本与调用延迟三者之间灵活权衡。
+- **做法**：通过RL优化多步调度策略，在粗粒度检索与指派专门模型细粒度整理之间按需动态切换，引入目标解耦优势估计。
+- **效果**：在五个多模态智能体记忆基准上均划定出更优的“性能-成本-延迟”帕累托前沿。
+- **值得看**：将记忆管理转化为具备成本敏感性的动态决策流，更符合实际生产系统的资源调度逻辑。
+
+### 10. 苏格拉底式技能学习：通过教学与实操交替沉淀高迁移性智能体技能
+
+**Socratic Skill Learning: Interleaving Teaching and Practice for Transferable Agent Skills**
+NJU-LINK Lab ｜ 🔥 HF 49 赞 ｜ 💻 [代码](https://github.com/NJU-LINK/Socratic-Skill-Learning) ｜ [arXiv:2610.17860](https://arxiv.org/abs/2610.17860)
+
+- **问题**：智能体单次成功完成任务并不代表掌握了通用技能，从偶发轨迹中提取的复用代码缺乏跨场景泛化力。
+- **做法**：采用苏格拉底式对话，由导师引导发问，学生智能体保持唯一执行者并边做边改写技能包，问题驱动式精准评审。
+- **效果**：在SkillTransferBench上效用达0.805，显著超越单次轨迹蒸馏与事后教学，且减少61.7%的导师token消耗。
+- **值得看**：借鉴启发式人类教学法，让智能体在质疑、尝试与验证中真正提炼出稳健的代码化技能。
+
+---
+
+## 四、其他深度学习
+
+### 1. 光谱-空间联合归因：为多光谱深度模型构建局部Shapley公平解释
+
+**Spectral-Spatial Interpretation**
+🔥 HF 712 赞 ｜ 💻 [代码](https://github.com/AtheavenMa/Spectral-Spatial-Interpretation) ｜ [arXiv:2610.21114](https://arxiv.org/abs/2610.21114)
+
+- **问题**：现有图像解释将空间热图与通道权重割裂，而多光谱遥感与医学影像中通道语义与物理位置强绑定，无法割裂评估。
+- **做法**：提出SSI，在每个空间网格点固定周围环境上下文，在局部通道上构建合作博弈并求解Shapley值，产出完整的空间-光谱归因矩阵。
+- **效果**：在HLS Burn Scar等卫星数据集上计算预算仅为MC-Owen的6%，在双向插入/删除AUC及空间定位上全面拔得头筹。
+- **值得看**：本周HF热度最高论文，严谨结合博弈论，为复杂科学与遥感AI模型提供了兼顾理论公平性与计算效率的可解释方案。
+
+### 2. LEV：通过循环决策模型兼顾快思考与深度推理
+
+**LEV: Thinking Fast and Deep with Looped Decision Models**
+🔥 HF 106 赞 ｜ 💻 [代码](https://github.com/OpenLAIR/lev) ｜ [arXiv:2610.20951](https://arxiv.org/abs/2610.20951)
+
+- **问题**：直接打分的决策模型速度极快但深度固定，遇难解题目无法像自回归语言模型那样“想更久”，而自回归思考代价高昂。
+- **做法**：提出LEV，在循环参数主干中每轮复用层参数重新前向打分，通过联合训练让单一模型支持按需循环不同深度。
+- **效果**：2.6B模型在JevBench上随循环深度从1增加到4，准确率由63.2%跃升至76.2%，且在50毫秒超低延迟约束下大幅领先密集模型。
+- **值得看**：摆脱了依赖生成token进行推理的定式，用循环神经网络机制在非生成式任务上实现了测试期算力扩展。
+
+### 3. SpecMRL：在参数谱空间重塑俄罗斯套娃表征学习
+
+**SpecMRL: Redesign Matryoshka Representation Learning within Parametric Spectrum**
+🔥 HF 87 赞 ｜ 💻 [代码](https://github.com/CentreChen/Spec-MRL) ｜ [arXiv:2610.26824](https://arxiv.org/abs/2610.26824)
+
+- **问题**：经典MRL仅靠嵌套切片强行对齐不同维度前缀，缺乏对前部空间是否具备最致密信息编码的理论先验约束。
+- **做法**：引入参数化导出的特征重要性谱基，重组表征隐空间，使信息量严格按谱特征能量递减有序排列。
+- **效果**：在MTEB所有降维评测中全面碾压标准MRL，仅用一半维度即战胜了标准MRL的全维表征性能。
+- **值得看**：为高密度向量检索与弹性向量嵌入的无损压缩提供了更坚实的谱理论基底。
+
+### 4. 交互式视频生成中的推测采样：兼顾双向长窗口与超低延迟
+
+**Speculative Sampling in Interactive Video Generation**
+university of science and technology  of china ｜ 🔥 HF 85 赞 ｜ 💻 [代码](https://github.com/Yubo-Shankui/SpeculativeSampling) ｜ [arXiv:2610.20556](https://arxiv.org/abs/2610.20556)
+
+- **问题**：交互式实时视频生成受限于小双向块以压低交互延迟，却牺牲了跨帧连贯性与GPU并行度。
+- **做法**：利用填充噪声潜变量提前向后推测采样大窗口并缓存，增量交付结果，在输入未变时直接复用，输入更新时无缝替换未确认帧。
+- **效果**：彻底打破分块边界带来的硬性等待时间下限，使双向窗口大小成为可兼顾画质与耗时的灵活调节参数。
+- **值得看**：无需复杂的流式重训，即为大体量双向视频扩散模型部署入实时交互系统开辟了捷径。
+
+### 5. 词汇参考系：用原生词汇语义解析语言模型残差流
+
+**Lexical Reference Frames: Interpreting LM Residual Streams in Native Semantics**
+🔥 HF 54 赞 ｜ 💻 [代码](https://github.com/jianguda/lexframe) ｜ [arXiv:2610.22169](https://arxiv.org/abs/2610.22169)
+
+- **问题**：现存Logit Lens等探针方法对每一层采用固定方向投影，无法自适应不同上下文，与模型真实动态解码机制严重脱节。
+- **做法**：提出LexFrame，通过模型自身后续注意力层推导自适应原生参考系，无需拟合外部标签即可直接投影残差流语义。
+- **效果**：在SmolLM3与OLMo3中间层一致性达0.97（固定Lens仅0.35），不仅因果归因更忠实，且支持置信早退跳过40%以上层数。
+- **值得看**：为机理性可解释性（Mechanistic Interpretability）提供了真正遵循Transformer内部动力学的自适应透视镜。
+
+### 6. KronLSTM：基于克罗内克Delta规则的长上下文线性注意力
+
+**Kronecker Delta Rule for Long Context Linear Attention**
+NX-AI ｜ 🔥 HF 41 赞 ｜ 💻 [代码](https://github.com/NX-AI/KronLSTM) ｜ [arXiv:2610.26834](https://arxiv.org/abs/2610.26834)
+
+- **问题**：传统线性注意力与DeltaNet更新时容易破坏先前记忆，在极长序列下联想记忆矩阵易出现数值不稳定或发散。
+- **做法**：提出基于克罗内克Delta规则的微创记忆修正机制，仅沿矩阵单方向修正目标联想，并在数学上证明记忆矩阵范数全局有界。
+- **效果**：在长上下文基准上全面媲美甚至超越Gated DeltaNet等主流架构，无需任何额外状态归一化即可保持长期稳定。
+- **值得看**：Hochreiter团队NX-AI最新力作，为循环线性注意力模型提供了优雅且可解析的数学收敛基石。
+
+### 7. 通义千问Qwen-Audio-3.1-ASR技术报告：全能语音转写与音频理解底座
+
+**Qwen-Audio-3.1-ASR Technical Report**
+🔥 HF 37 赞 ｜ [arXiv:2610.28711](https://arxiv.org/abs/2610.28711)
+
+- **问题**：传统端到端语音转写系统在应对方言口音、说话人分离重叠以及环境杂音等复杂真实声学场景时泛化力不足。
+- **做法**：基于Qwen音频大模型底座进行针对性多任务与多语种精调，统一短语音转录、长音频时序对齐、方言识别与说话人日志化。
+- **效果**：在多语言语音转写、方言识别及复杂会议级音频理解上均达到开源一流水平，展现卓越抗噪与语义解析力。
+- **值得看**：系统公开了Qwen系列在语音识别这一关键落地方向上的工业级最新优化实践。
+
+### 8. 一致分布匹配：无需数据的极速扩散与流模型单步蒸馏
+
+**Consistent Distribution Matching for Data-Free Diffusion Distillation**
+Vector Institute ｜ 🔥 HF 24 赞 ｜ 💻 [代码](https://github.com/felix-yuxiang/CDMD) ｜ [arXiv:2610.09221](https://arxiv.org/abs/2610.09221)
+
+- **问题**：现有扩散与流模型单步蒸馏依赖昂贵的教师轨迹采样、海量预选数据或代理判别器，训练过程脆弱难扩展。
+- **做法**：将样本生成与分数估计统一由单一学生网络承担，构建无模拟、无外置数据的纯两模型架构，并证明其Wasserstein收敛性。
+- **效果**：在ImageNet 256x256上仅需40个epoch即可达成单步（1-NFE）FID 2.04、四步1.37，大幅刷新无数据蒸馏最佳成绩。
+- **值得看**：极大精简了扩散模型高速推理蒸馏的系统复杂度，展现出优美的数学一致性。
+
+### 9. 重思序列压缩：将测试期回归作为紧凑表征新算子
+
+**Rethinking Sequence Compression with Test-time Regression**
+CUHK SphereLab ｜ 🔥 HF 20 赞 ｜ 💻 [代码](https://github.com/Sphere-AI-Lab/ttr-compressor) ｜ [arXiv:2610.31574](https://arxiv.org/abs/2610.31574)
+
+- **问题**：大模型长序列稀疏注意力与视觉Token合并依赖简单的池化或投影，存在严重信息丢失瓶颈。
+- **做法**：提出TTR-Compressor，将Token序列转化为回归问题，前向传播中求取闭式解系数作为压缩表征，全程端到端反向传播优化。
+- **效果**：在块稀疏注意力RULER长文本测试上远超注意力池化，用于视觉Token合并时能以减少55.6%的Token量维持原有性能。
+- **值得看**：以闭式凸优化为深度学习信息瓶颈提供了极具启发性的通用新算子。
+
+### 10. PhysSkin++：基于自监督神经蒙皮的实时可泛化物理仿真动画
+
+**PhysSkin++: Real-Time and Generalizable Physics-Based Animation via Self-Supervised Neural Skinning**
+zju3dv ｜ 🔥 HF 37 赞 ｜ 💻 [代码](https://github.com/zju3dv/PhysSkin) ｜ [arXiv:2610.26067](https://arxiv.org/abs/2610.26067)
+
+- **问题**：传统物理动力学仿真难以实时处理异构三维网格形变，而现有神经蒙皮方法通常要求逐资产独立训练且泛化差。
+- **做法**：提出自编码连续神经蒙皮场，通过无仿真轨迹的物理自监督学习与梯度正交校正，直接从静态几何预测紧致形变子空间。
+- **效果**：支持用户实时交互、碰撞响应与3D Gaussian等多元表征绑定，无需运行时求解复杂互补约束即可实现逼真弹性响应。
+- **值得看**：打通了经典物理几何仿真与深度隐式表征，为元宇宙及游戏物理渲染带来开箱即用的实时引擎。
+
+---
+
+## 五、机器人与具身智能
+
+### 1. GPT-6-Astra是否已跨入具身智能时代？
+
+**Has GPT-6-Astra Achieved Embodied Intelligence?**
+SenseNova ｜ 🔥 HF 478 赞 ｜ 💻 [代码](https://github.com/OpenSenseNova/SenseNova-RoboRSI) ｜ [arXiv:2610.22471](https://arxiv.org/abs/2610.22471)
+
+- **问题**：顶尖前沿大模型在机器人操控与导航上展现出通用潜力，但其能力究竟是否达到了真正的实体物理智能仍缺乏实证审视。
+- **做法**：覆盖桌面操作、人形机、移动底盘与灵巧手等12大基准，评测其上下文演示学习与快慢双系统（Astra配合底层π0.5）执行表现。
+- **效果**：在增加思考步数时表现惊艳，但在8类真实真机部署中暴露出演示数据高昂、不可逆故障无法恢复以及物理时间不可压缩等瓶颈。
+- **值得看**：全面客观地指出前沿模型已跨越“具身操作胜任力”门槛，但离工业落地的“实用具身智能”仍有显著鸿沟。
+
+### 2. EgoXperience：从人类日常第一人称经验中学习世界坐标具身表征
+
+**EgoXperience: Learning World-Grounded Egocentric Representations from Human Experience**
+Ropedia ｜ 🔥 HF 189 赞 ｜ 💻 [代码](https://github.com/Ropedia/EgoXperience) ｜ [arXiv:2610.26625](https://arxiv.org/abs/2610.26625)
+
+- **问题**：从单目第一人称视频重建人体与环境交互常面临相机、手部与物体坐标系脱节的问题，缺乏统一的世界基准约束。
+- **做法**：研发EgoX-Engine自动标注引擎，将SLAM世界对齐与几何物体跟踪结合，构建50小时EgoX-Data-6M，单次前向联合重建全要素。
+- **效果**：在统一世界坐标系下，相机、手部与深度误差相比最强基线分别暴降68.9%、65.6%与42.9%，物体位姿提升28.0%。
+- **值得看**：首次在单次前向前向网络中实现了相机轨迹、场景网格与双手-物体交互的全局度量一致性重建。
+
+### 3. DONIC：基于人类演示的通用双手机器人灵巧跟踪控制
+
+**DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations**
+Ropedia ｜ 🔥 HF 161 赞 ｜ 💻 [代码](https://github.com/Ropedia/DONIC) ｜ [arXiv:2610.29997](https://arxiv.org/abs/2610.29997)
+
+- **问题**：双手机器人高频接触操控极其复杂，因多接触点协同约束严苛与高质量真机双手数据匮乏，现有控制模型多局限于单手。
+- **做法**：利用人类双手演示的触觉与运动先验，构建通用的双手协调接触跟踪策略与物理约束空间。
+- **效果**：在多样化接触密集型双手日常操控任务中实现高度稳健的轨迹追踪，大幅提升抓取与复杂双手倒换成功率。
+- **值得看**：为人形机器人攻克极具挑战性的高自由度双手协同灵巧操作提供了稳固的通用控制框架。
+
+### 4. Ropedia W0：融合万小时人类经验的跨本体移动操作世界基座模型
+
+**Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience**
+Ropedia ｜ 🔥 HF 151 赞 ｜ 💻 [代码](https://github.com/Ropedia/ropedia-w0) ｜ [arXiv:2610.26855](https://arxiv.org/abs/2610.26855)
+
+- **问题**：移动与操作复合任务的动作空间异构，多模态物理交互复杂，难以构建跨不同机器人本体的通用世界模型。
+- **做法**：汇聚1万小时第一人称人类数据与3千小时机器人数据，统一用相机位姿编码移动、投影骨架编码操作，经蒸馏支持分钟级实时预测。
+- **效果**：横扫DreamDojo、Ψ_0、AgiBot等5大跨本体评测榜单，支持分钟级实时推演，成功驱动VR实时互动与模型规划。
+- **值得看**：打通了人类经验向具身机器人运动-操作世界模型的规模化迁移路径。
+
+### 5. 集群经验学习：无需人工干预的分布式机器人自我进化范式
+
+**Learning from Fleet Experience: A Collective Learning Paradigm for Robots**
+🔥 HF 137 赞 ｜ [arXiv:2610.25736](https://arxiv.org/abs/2610.25736)
+
+- **问题**：当机器人部署规模成百上千时，依赖人类专家人工接管纠错的数据收集模式根本无法跟上机群扩张。
+- **做法**：提出集群经验学习（CEL），当单机受挫时以失败上下文从机群共享成功库中检索相应片段作为自监督标签，辅以容错异步训练系统。
+- **效果**：在5项真实机械臂装配任务中成功率达93.3%至99.2%；在96台机器人手机包装实验中成功率从79.2%飙升至98.3%。
+- **值得看**：摆脱了对人类远程遥操作示范的依赖，展示了分布式机器人机群“互帮互助、群体进化”的工业级自愈潜力。
+
+### 6. ScaleNav：基于网络海量视频预训练的语言引导局部导航
+
+**ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation**
+🔥 HF 91 赞 ｜ 💻 [代码](https://github.com/MachEmbodied/ScaleNav) ｜ [arXiv:2610.25690](https://arxiv.org/abs/2610.25690)
+
+- **问题**：语言引导的端到端导航策略难以泛化到新场景，而真机数据采集昂贵、仿真环境存在明显的虚实迁移壁垒。
+- **做法**：从网络大规模第一人称视频中预训练目标导向视觉动态世界模型，再通过带动作标签的仿真数据进行动作对齐与联合微调。
+- **效果**：在HabitatGS-LN基准上取得94.9%的优异成功率，并在四足机器狗真机复杂环境下展现出极佳的实机导航泛化力。
+- **值得看**：用现实中免费且近乎无限的网络主观视角视频作为导航策略预训练底座，显著拓宽了具身智能的数据来源。
+
+### 7. VLA-Rolling：自适应复用动作尾部实现更少去噪步数与更高控制精度
+
+**VLA-Rolling: Fewer Denoising Steps, Better Control via Adaptive Action Reuse**
+ZJU-OmniAI ｜ 🔥 HF 64 赞 ｜ 💻 [代码](https://github.com/ZJU-OmniAI/VLA-Rolling) ｜ [arXiv:2610.25043](https://arxiv.org/abs/2610.25043)
+
+- **问题**：流匹配VLA模型生成一批动作块后通常只执行前几个动作即重新去噪，未执行的“动作尾部”被直接丢弃造成巨大浪费。
+- **做法**：提出无需微调模型的推理优化框架，将动作尾部作为先验继承，评估置信度后自适应分配重新加噪与去噪预算。
+- **效果**：在LIBERO、MetaWorld等16组模型-基准组合中均实现降本提速（最高加速1.48倍），在14组中成功率反而提升最多15.08%。
+- **值得看**：证明被丢弃的动作尾部蕴含宝贵去噪进度，为VLA实时推理控制提供了一种立竿见影的“免费午餐”。
+
+### 8. AgenticRoboRL：将代码智能体后训练范式引入具身机器人规划器
+
+**AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics**
+University of Central Florida ｜ 🔥 HF 49 赞 ｜ 💻 [代码](https://github.com/xinxinliu-ai/AgenticRoboRL) ｜ [arXiv:2610.28589](https://arxiv.org/abs/2610.28589)
+
+- **问题**：机器人智能体系统过度依赖闭源超大模型作为规划器，缺乏通过针对性后训练增强开源中轻量规划器自身能力的有效方案。
+- **做法**：借鉴编程智能体的SFT与多轮强化学习范式，设计特定外设适配器将规划器交互日志与执行结果打通，进行端到端RL微调。
+- **效果**：在LIBERO-PRO复杂长程任务上，使9B轻量规划器的成功率从18.1%暴增至71.0%，直逼依赖外挂记忆的顶尖Codex水平。
+- **值得看**：证明智能体代码后训练的配方能够直接降维打击具身机器人规划难题，极大降低了具身大脑对闭源API的依赖。
+
+### 9. HandsOn：面向跨本体泛化灵巧操作的大规模仿真基准平台
+
+**HandsOn: A Large-Scale Simulation Benchmark for Generalizable Dexterous Manipulation**
+🔥 HF 10 赞 ｜ 💻 [代码](https://github.com/TsinghuaC3I/HandsOn) ｜ [arXiv:2610.26765](https://arxiv.org/abs/2610.26765)
+
+- **问题**：具身操作研究缺乏统一支持多种机械臂、多自由度灵巧手以及刚性/关节/可变形复杂物体的跨本体标准化仿真评测。
+- **做法**：平台集成5款机械臂、6款灵巧手及约200类资产，包含1.8万条精选人类演示与66个任务，涵盖核心评测与零样本跨任务迁移。
+- **效果**：评测发现顶尖多任务策略在核心集成功率仅29.1%，未经针对性微调的GPT-6在零样本迁移集成功率仅1.9%。
+- **值得看**：用扎实的物理仿真环境暴露了当前多智能体与VLA策略在建立接触、精细协调等物理交互细节上的真实瓶颈。
+
+### 10. BRACE：兼顾外力交互与复杂地形的人形机器人全身运动自适应跟踪
+
+**BRACE: Adapting Whole-Body References for Force and Terrain Aware Humanoid Motion Tracking**
+Multiply Labs ｜ 🔥 HF 9 赞 ｜ 💻 [代码](https://github.com/multiplylabs/brace) ｜ [arXiv:2610.07052](https://arxiv.org/abs/2610.07052)
+
+- **问题**：遥操作人类轨迹通常在平地且无负载状态下录制，导致人形机器人追踪时对斜坡地形和末端外力施加毫无感知而频频失稳。
+- **做法**：将地形贴合度与末端力旋量联合补偿直接折叠进跟踪参考轨迹，并通过DAgger将双专家网络蒸馏为纯本体感知的流匹配单学生模型。
+- **效果**：在宇树Unitree-G1人形机器人真机上成功验证，无需高度图或测力传感器即可在复杂斜坡上边走边施加指定接触力。
+- **值得看**：让远程操作员只需提供平地常规动作，机器人即可在本体端自主化解地形与载荷波动，显著增强真机适应力。
+
+---
+
+## 六、智能眼镜 / 可穿戴 / 第一人称视觉
+
+### 1. Holi-World：从海量第一人称人类经验构建全景动态世界智能生态
+
+**Holi-World: Building Holistic World Intelligence from Human-Ego Experience**
+Ropedia ｜ 🔥 HF 172 赞 ｜ 💻 [代码](https://github.com/Ropedia/holi-world) ｜ [arXiv:2610.26549](https://arxiv.org/abs/2610.26549)
+
+- **问题**：智能眼镜等可穿戴设备积累海量第一人称视频，如何低成本将无序记录自动化转化为具备时空连贯性的动态世界表征仍是难题。
+- **做法**：研发贯穿采集、表征、自动生成到训练的生态系统，自动关联持久场景与演化目标，产出8万条问答对并训练4B端到端模型。
+- **效果**：在ScanNet++等多基准上动态跟踪与静态感知俱优，在HOLIWORLD-Bench与EgoDynamic4D时空推理能力显著飞跃。
+- **值得看**：构建起从连续人类第一视角生活流中自动汲取知识、无需繁复手工标注的具身世界模型全栈框架。
+
+### 2. GazeLens：视线驱动自适应Token压缩赋能轻量智能眼镜视频问答
+
+**GazeLens for Efficient Egocentric Video Question Answering with Simple Gaze-Driven Adaptive Token Reduction**
+热度未测得 ｜ [arXiv:2610.28502](https://arxiv.org/abs/2610.28502)
+
+- **问题**：智能眼镜算力与电池极其受限，端侧小VLM若处理全网格帧会导致算力过载，而盲目空间裁剪又极易丢弃提问所需上下文。
+- **做法**：结合HOG与清晰度筛选帧，利用高斯池化构建视线中心与互补背景表征，经门控动态融合，每帧仅保留2个Token。
+- **效果**：在StreamGaze第一人称视频问答基准上取得优于全网格基线的宏观/微观准确率，同时大幅降低前向推理FLOPs。
+- **值得看**：巧用佩戴者注视点天然先验，为边缘眼镜设备运行多模态长视频推理提供了优雅的极致压缩范本。
+
+### 3. SplatXR：基于头显端3D高斯泼溅的多层扩展现实交互工具包
+
+**SplatXR: A Toolkit for Multi-Layered Extended Reality via On-Headset 3D Gaussian Splatting**
+热度未测得 ｜ [arXiv:2610.26338](https://arxiv.org/abs/2610.26338)
+
+- **问题**：3D高斯泼溅渲染保真度极高，但因缺乏明确网格表面几何，难以在XR头显中直接实现虚拟物体遮挡、碰撞与物理阴影交互。
+- **做法**：开发Unity开源工具包，提出多层现实架构，集成独立渲染器、泼溅转网格重建、泼溅物理碰撞、混合以及端侧物体重建管线。
+- **效果**：在Meta Quest等主流XR头显上实现了物理实体即时数字化与高保真虚拟物体的无缝混合渲染与物理接触交互。
+- **值得看**：填补了3D Gaussian Splatting在前沿可穿戴XR头显交互与物理引擎集成上的工程空白。
+
+### 4. GenXR-Bench：评测编程智能体开发交互式XR应用实战能力的基准测试
+
+**GenXR-Bench: Benchmarking Coding Agents for Interactive XR Development**
+热度未测得 ｜ 💻 [代码](https://github.com/whuang37/genxr-bench) ｜ [arXiv:2610.29014](https://arxiv.org/abs/2610.29014)
+
+- **问题**：XR软件高度依赖连续用户空间运动、传感器异步生命周期与实体环境感知，传统代码智能体评测无法检验XR交互开发能力。
+- **做法**：首创涵盖112个真实XR开发任务的基准，通过脚本化与自适应空间交互以及视觉断言在真实消费级XR硬件上自动化评测。
+- **效果**：前沿顶尖模型在GenXR-Bench上的Pass@1最高仅达50.9%，频繁暴露出传感器异步周期误解与空间具身语义失效。
+- **值得看**：开辟了代码智能体在空间计算与3D可穿戴交互软件开发垂直领域的全新评测前沿。
+
+### 5. ProactEgoMem：评测可穿戴流式第一人称视频中主动记忆维持的基准
+
+**ProactEgoMem: Benchmarking Proactive Memory in Streaming Egocentric Video**
+热度未测得 ｜ [arXiv:2610.30089](https://arxiv.org/abs/2610.30089)
+
+- **问题**：现有可穿戴AI助手多为被动应答，真正减负需要智能体在后台敏锐察觉外界环境变迁并主动记录关键信息。
+- **做法**：定义信息抓取、状态跟踪与位置追踪三大主动任务，并在通知级别与后台工具干预维护级别设立分层评测协议。
+- **效果**：在日常与科研两大流式视频赛道中，即使当前顶尖专有及开源流式多模态模型也无法兼顾及时性与准确度。
+- **值得看**：直击可穿戴设备AI助手的终极形态——从“等候指令”跃升为“先知先觉的主动记忆伴侣”。
+
+### 6. 无需帧只需频域：面向智能眼镜的超低带宽隐私自适应框架
+
+**No Frames, Just Frequencies: Bandwidth-Efficient Deployment-Time Adaptation for Smart Glasses**
+热度未测得 ｜ [arXiv:2610.29607](https://arxiv.org/abs/2610.29607)
+
+- **问题**：智能眼镜摄像头若频繁将原始图像回传主机以应对场景分布漂移，将带来高昂功耗、带宽瓶颈与致命隐私泄漏。
+- **做法**：在眼镜端仅计算紧凑的频域特征描述符发送给主机，主机据此合成域偏移数据并更新模型副本，不传输任何像素画面。
+- **效果**：在ConvNeXt、TinyViT等轻量主干上以213倍至784倍的带宽压缩率，恢复了高达93%至95%的监督适配增益。
+- **值得看**：兼顾极致网络带宽、轻量计算与隐私保护，为边缘智能眼镜的模型持续在线适配提供绝佳方案。
+
+### 7. V-JEPA Hand：单次前向从第一人称视频极速恢复双手3D位姿与相机轨迹
+
+**V-JEPA Hand: Simple, Accurate and Fast 3D Hand and Camera Trajectory Recovery from Egocentric Videos**
+热度未测得 ｜ [arXiv:2610.26780](https://arxiv.org/abs/2610.26780)
+
+- **问题**：现有第一视角手势与视角追踪大多依赖多阶段级联流水线，存在累积误差且延迟高，难以支撑实时交互。
+- **做法**：基于自监督V-JEPA 2.1构建极简前向前向网络，单次前向通过查询预测器同时解算双手段位姿与相机运动至共享世界系。
+- **效果**：在ARCTIC与HOT3D等权威数据集上关节误差均达同类最低，单张RTX A6000推理帧率高达93.4 FPS。
+- **值得看**：摆脱传统繁复SLAM管线，以超高吞吐率实现世界坐标系下的高精度双手交互捕获，极其利好AR手势操控。
+
+### 8. Gaze2HOI：注视感知意图消歧驱动的第一人称双手-物体交互预测
+
+**Gaze2HOI: Gaze-Aware Intention Disambiguation for Egocentric Hand-Object Interaction Forecasting**
+热度未测得 ｜ [arXiv:2610.27877](https://arxiv.org/abs/2610.27877)
+
+- **问题**：在第一视角下预测未来数秒内佩戴者即将操作什么物体，因手部意图多变与接触几何模糊，极难提前准确预判。
+- **做法**：利用眼动注视点的注视强度与时序衰减调制VLM表征，预测前置接触场，驱动扩散模型联合生成物体6D轨迹与双手关节运动。
+- **效果**：在阶段细分基准EgoAIM上，意图推理与动作轨迹预测准确率均刷新SOTA，特定交互阶段逼近真值上限。
+- **值得看**：将视线生理特征与物理接触场作为意图锚点，为头戴设备的预判式交互与主动辅助铺平道路。
+
+### 9. 肌电Token化：以微小比特率无损保留可穿戴手势运动解码信息
+
+**EMG Tokenization Preserves Movement Information at a Fraction of the Bitrate**
+热度未测得 ｜ [arXiv:2610.32674](https://arxiv.org/abs/2610.32674)
+
+- **问题**：高密度可穿戴无线表面肌电（sEMG）手势腕带电极多、采样率高，蓝牙传输带宽与电池寿命不堪重负。
+- **做法**：提出因果离散Token化方法，对比基于频谱自编码与临近电极空频表征（SPAR），在端侧微控制器直接量化压缩。
+- **效果**：数据载荷相比原始肌电暴降41倍，平均3D手部位姿解码误差增幅小于0.01毫米，在Cortex-M55单片机上处理仅需20毫秒。
+- **值得看**：为Meta肌电手环等前沿神经接口提供了高压缩、高保真、低延时的通用端侧量化协议。
+
+### 10. 虚实多尺度协作：非对称MR-VR远程专家桌面化身注视点控制实证评估
+
+**Remote Expert Evaluation of Tabletop Avatar Gaze Control in Asymmetric Multi-Scale MR--VR Collaboration**
+热度未测得 ｜ [arXiv:2610.26360](https://arxiv.org/abs/2610.26360)
+
+- **问题**：远程专家（MR俯瞰全局）与现场操作员（VR第一人称同尺度）之间存在尺度不对称，专家注视意图难以直观同步。
+- **做法**：通过物理微缩沙盘结合可穿戴触控/头控化身，系统对比全沉浸VR头控、浮动屏幕头控与触控板三种注视同步方案。
+- **效果**：29名受试者在工业双机故障排查任务中证实，全沉浸VR与直接头控结合方案在排障协同效率与空间认知上表现最优。
+- **值得看**：为工业远程专家指导系统的化身注视感知与非对称多模态人机交互设计提供了详实的实证准则。

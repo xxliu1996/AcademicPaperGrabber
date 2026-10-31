@@ -1,0 +1,1411 @@
+{
+  "generated_at": "2026-10-26T03:49:55.352725+00:00",
+  "theme": "vlm",
+  "theme_title": "多模态 / 视觉语言",
+  "theme_subtitle": "VLM、图像与视频生成、文档与视频理解",
+  "accent": "#3a5a7a",
+  "week_start": "2026-10-19",
+  "week_end": "2026-10-25",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 224,
+  "measured_heat_count": 25,
+  "papers": [
+    {
+      "arxiv_id": "2610.28402",
+      "title": "StreamEval: Evaluating Interactive Streaming Video Generation Models",
+      "abstract": "As streaming video generation advances, enabling real-time interaction with generated video is becoming increasingly important. We introduce StreamEval, a unified benchmark for interactive streaming video generation spanning five tasks: avatar dialogue, avatar performance, world generation, instruction editing, and reference editing. StreamEval comprises 300 scripted test cases lasting 15-300s, each specifying initial assets, incrementally arriving multimodal requests, and explicit requirements for state changes and content preservation. Performance is assessed along four evaluation dimensions: task execution, state consistency, visual fidelity, and audiovisual coordination, instantiated through ten task-specific metrics on a 0-100 scale. Evaluating 37 distinct models across 300 test cases, we find that high visual quality and identity retention do not necessarily coincide with reliable request execution or sustained state consistency. In particular, request execution remains challenging: the highest task-specific scores are 36.90 for Following among seven avatar-performance models, 25.93 for Following in text-conditioned world generation, and 15.00 for Edit Success among three reported reference-editing models. These findings identify reliable request execution under timing and preservation constraints as a central challenge for advancing omni-modal real-time interactive systems. The leaderboard is available at https://streameval.ai",
+      "authors": [
+        "StreamEval Team"
+      ],
+      "published": "2026-10-20",
+      "updated": "2026-10-23",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.28402",
+      "pdf_url": "https://arxiv.org/pdf/2610.28402v2",
+      "hf_upvotes": 577,
+      "hf_url": "https://huggingface.co/papers/2610.28402",
+      "github_repo": "https://github.com/StreamEval/StreamEval",
+      "github_repo_source": "hf",
+      "github_stars": 349,
+      "project_page": "https://streameval.ai/",
+      "hf_published": "2026-10-20",
+      "hf_featured": "2026-10-22",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "vlm",
+      "fit": 10.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 34.521,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "multimodal",
+          "omni",
+          "video generation"
+        ],
+        "category": 2.0,
+        "popularity": 30.02,
+        "stars_counted": 349,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 577 赞 ｜ 💻 [代码](https://github.com/StreamEval/StreamEval)",
+      "authors_display": "StreamEval Team"
+    },
+    {
+      "arxiv_id": "2610.31329",
+      "title": "WeVisOne-VL: Unified Visual Perception from Objects to Pixels",
+      "abstract": "Existing vision-language models (VLMs) remain unreliable for fine-grained visual perception. In this report, we present WeVisOne-VL (WeChat Vision All-in-One), a powerful VLM that unifies object-level and pixel-level perception through structured next-token prediction. It supports multiple visual tasks including object detection, referring localization, counting, OCR, segmentation, and matting, enabling localization at any user-specific granularity, from points and boxes to masks and alpha mattes. Architecturally, we integrate a lightweight pixel decoder into the VLM via a special <OBJ> token to generate instance-level pixel outputs. We train the model with a three-stage curriculum SFT followed by mixed-task RL. Across over 30 benchmarks, WeVisOne-VL demonstrates leading performance on both object-level and pixel-level tasks, while maintaining robust rejection for object-absent queries. By releasing WeVisOne-VL to the open-source community, we hope to advance VLMs from broad visual understanding toward truly reliable perception systems for real-world deployment.",
+      "authors": [
+        "Tianming Liang",
+        "Junyi Pan",
+        "Yuxi Li",
+        "Canmiao Fu",
+        "Zhipeng Huang",
+        "Chong Sun",
+        "Chen Li",
+        "Jing Lyu"
+      ],
+      "published": "2026-10-22",
+      "updated": "2026-10-22",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.31329",
+      "pdf_url": "https://arxiv.org/pdf/2610.31329v1",
+      "hf_upvotes": 244,
+      "hf_url": "https://huggingface.co/papers/2610.31329",
+      "github_repo": "https://github.com/Tencent/WeVisOne-VL",
+      "github_repo_source": "hf",
+      "github_stars": 193,
+      "project_page": "https://tencent.github.io/WeVisOne-VL",
+      "organization": "Tencent",
+      "hf_published": "2026-10-22",
+      "hf_featured": "2026-10-23",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "vlm",
+      "fit": 17.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 27.87,
+      "score_breakdown": {
+        "keyword_raw": 15,
+        "keyword_matched": [
+          "vision-language",
+          "vlm",
+          "vlms",
+          "ocr",
+          "segmentation"
+        ],
+        "category": 2.0,
+        "popularity": 21.62,
+        "stars_counted": 193,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 244 赞 ｜ 💻 [代码](https://github.com/Tencent/WeVisOne-VL)",
+      "authors_display": "Tianming Liang, Junyi Pan, Yuxi Li, Canmiao Fu, Zhipeng Huang, Chong Sun 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.29989",
+      "title": "Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation",
+      "abstract": "Autoregressive video diffusion models generate videos chunk by chunk, yet producing plausible continuations does not guarantee that they capture how scenes evolve. Under teacher forcing, strong temporal redundancy may allow local visual continuity to serve as a shortcut for current-chunk denoising, reducing the pressure to model visual evolution. We introduce Future Chunk Prediction (FCP), an auxiliary objective jointly optimized with teacher-forced denoising that predicts temporally separated chunks without access to the intervening visual context. Drawing supervision directly from training videos, FCP requires no additional pretrained visual encoder and leaves autoregressive inference unchanged. Our method achieves superior physical plausibility over standard teacher-forced autoregressive training with a lower overall training compute budget, highlighting the effectiveness and efficiency of future-chunk supervision for modeling visual evolution. Intriguingly, our visualizations suggest that FCP fosters a more structured representation space, which may be valuable for building autoregressive world models.",
+      "authors": [
+        "Ruopeng Gao",
+        "Yukun Huang",
+        "Jiarui Hu",
+        "Shuai Wang",
+        "Wenbo Hu",
+        "Ying Shan",
+        "Limin Wang"
+      ],
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Project page: https://hellorpg.github.io/looking-ahead/",
+      "abs_url": "https://arxiv.org/abs/2610.29989",
+      "pdf_url": "https://arxiv.org/pdf/2610.29989v1",
+      "hf_upvotes": 171,
+      "hf_url": "https://huggingface.co/papers/2610.29989",
+      "github_repo": "https://github.com/TencentARC/Looking-Ahead",
+      "github_repo_source": "hf",
+      "github_stars": 106,
+      "project_page": "https://hellorpg.github.io/looking-ahead/",
+      "organization": "ARC Lab, Tencent",
+      "hf_published": "2026-10-21",
+      "hf_featured": "2026-10-22",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 9.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 22.934,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "video generation",
+          "diffusion",
+          "visual encoder"
+        ],
+        "category": 2.0,
+        "popularity": 18.68,
+        "stars_counted": 106,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 171 赞 ｜ 💻 [代码](https://github.com/TencentARC/Looking-Ahead)",
+      "authors_display": "Ruopeng Gao, Yukun Huang, Jiarui Hu, Shuai Wang, Wenbo Hu, Ying Shan 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.23479",
+      "title": "HexaShell: A Thin Harness for Exploring the Limits of VLM Agents as Robot Coding Agents",
+      "abstract": "Agents built on vision language models (VLMs) now compete with learned policies on robot manipulation leaderboards. We ask how far a coding agent can go when it controls a robot instead of a computer, and where it stops. Our system, HexaShell, keeps the harness thin: it only turns the agent's commands into robot motion. The agent drives a robot with two arms through one command line. It sees three RGB cameras and knows their calibration. After each failed attempt, the agent reads the log, finds the cause, and writes or fixes small programs called tools. In this way it keeps what it learns as code, as a coding agent does when it fixes a failing test. The tools may use only what the robot observes. They use triangulation to find where objects are, relative to each other and to the gripper. If two cameras see the same point, the point lies where the two camera rays meet. If a point lies on a known plane, such as the table or the top of a block, it lies where its ray meets that plane. When the head camera is not enough, the robot moves a wrist camera to get a second view. We build the tools on only ten layouts of one seed per task, then freeze them and test them on ten new layouts of the same seed. We use Codex with GPT-6-Astra at medium reasoning effort. On all 42 RoboDojo tasks, HexaShell reaches a success rate of 39.7% and a progress score of 48.0, averaged in the same way as the leaderboard. This is a new state of the art on RoboDojo. The limit is contact, not reasoning: pushing reaches 92.5% and memory tasks 65.0%, but tight insertion only 8.3%. When the agent fails, it usually sees the failure but cannot make the motion work. We open source the tools evolved so far at https://github.com/HexaFuture/HexaShell.",
+      "authors": [
+        "Hongcheng Gao",
+        "Alex Zhou",
+        "Jay Zhu",
+        "Zelin Zheng",
+        "Shijia Ge",
+        "Xiping Li",
+        "Di Wu",
+        "Yazhe Wang",
+        "Jianshu Zeng",
+        "Xuan Shangguan",
+        "Yongli Wang",
+        "Yexing Wan",
+        "Lingyu He",
+        "Zhiqi Jia",
+        "Sihang Wu",
+        "Xiao He"
+      ],
+      "hf_upvotes": 123,
+      "hf_url": "https://huggingface.co/papers/2610.23479",
+      "github_repo": "https://github.com/HexaFuture/HexaShell",
+      "github_repo_source": "hf",
+      "github_stars": 156,
+      "project_page": "https://hexafuture.ai/home/",
+      "organization": "HexaFuture",
+      "hf_published": "2026-10-16",
+      "hf_featured": "2026-10-19",
+      "abs_url": "https://arxiv.org/abs/2610.23479",
+      "pdf_url": "https://arxiv.org/pdf/2610.23479",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 12.0,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 22.091,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "vision language",
+          "vlm",
+          "vlms"
+        ],
+        "category": 0.0,
+        "popularity": 17.09,
+        "stars_counted": 156,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 123 赞 ｜ 💻 [代码](https://github.com/HexaFuture/HexaShell)",
+      "authors_display": "Hongcheng Gao, Alex Zhou, Jay Zhu, Zelin Zheng, Shijia Ge, Xiping Li 等 16 人"
+    },
+    {
+      "arxiv_id": "2610.26860",
+      "title": "OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory",
+      "abstract": "Multimodal large language models (MLLMs) have made rapid progress on visual reasoning, yet many tasks require evidence that is difficult to obtain through internal reasoning alone: our controlled study on 22 benchmarks shows that simply increasing the inference budget of the base model yields only modest gains. Such tasks demand grounded perception, external knowledge, and numerical measurements obtained through heterogeneous tools, whose outputs must be made interpretable to the model and retained across reasoning steps. We introduce OpenVLHarness, a multimodal reasoning harness organized around a capability layer and persistent multimodal memory. The capability layer combines task-level tool interfaces with evidence rendering, providing consistent access to heterogeneous backends and converting their outputs into model-readable observations. Persistent multimodal memory retains the corresponding images, structured data, and web references as addressable artifacts throughout each query. A coding interface executes generated programs over stored data, enabling computations that combine results from multiple tools. Together, these mechanisms support an iterative process of acquiring, inspecting, and composing multimodal evidence. Evaluated on 22 benchmarks with eight open and proprietary backbones, OpenVLHarness improves average scores by 9.7-12.6 points over matched no-tool baselines, including +11.2 with Qwen3-VL-8B, +9.7 with Kimi K3, and +9.9 with GPT-6 Astra. With GPT-6 Luna at medium reasoning effort, OpenVLHarness outperforms the base model, Codex, and Visual Sketchpad at maximum effort by 7.7-8.5 points while incurring at most 37% of their model-token cost.",
+      "authors": [
+        "Yu Zhou",
+        "Cheng-Fu Yang",
+        "Rui Sun",
+        "Di Wu",
+        "Sibo Peng",
+        "Mingyang Zhang",
+        "Zhen Yang",
+        "Ruiyi Zhang",
+        "Nanyun Peng",
+        "Zhe Gan",
+        "Kai-Wei Chang"
+      ],
+      "hf_upvotes": 120,
+      "hf_url": "https://huggingface.co/papers/2610.26860",
+      "github_repo": "https://github.com/uclanlp/OpenVLHarness",
+      "github_repo_source": "hf",
+      "github_stars": 252,
+      "project_page": "https://openvlharness.github.io/",
+      "organization": "Apple",
+      "hf_published": "2026-10-19",
+      "hf_featured": "2026-10-20",
+      "abs_url": "https://arxiv.org/abs/2610.26860",
+      "pdf_url": "https://arxiv.org/pdf/2610.26860",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "published": "2026-10-19",
+      "updated": "2026-10-19",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "cs.MM"
+      ],
+      "theme": "vlm",
+      "fit": 12.5,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 22.079,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "mllms",
+          "multimodal",
+          "visual reasoning"
+        ],
+        "category": 2.5,
+        "popularity": 16.95,
+        "stars_counted": 252,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 120 赞 ｜ 💻 [代码](https://github.com/uclanlp/OpenVLHarness)",
+      "authors_display": "Yu Zhou, Cheng-Fu Yang, Rui Sun, Di Wu, Sibo Peng, Mingyang Zhang 等 11 人"
+    },
+    {
+      "arxiv_id": "2610.26659",
+      "title": "SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?",
+      "abstract": "Spatial intelligence requires agents to actively acquire visual evidence and integrate observations into a coherent representation of the three-dimensional world. Yet spatial question answering offers limited evidence of whether models can construct accurate metric maps through autonomous exploration. We introduce SpatialScout, a benchmark for evaluating vision-language model (VLM) agents on active object-level 3D mapping. SpatialScout comprises 80 diverse indoor scenes containing 3,140 target objects. Given an object inventory, RGB observations, camera calibration, and camera poses, agents control a camera to explore each scene and estimate object centers in a shared coordinate frame. The task requires coordinating viewpoint selection, cross-view association, geometric estimation, and map revision under bounded interaction budgets. Evaluation jointly measures localization accuracy and target coverage through object-scale overlap scores that penalize missing predictions. Experiments with frontier VLMs reveal substantial limitations: the strongest evaluated model, Claude Opus 5.5, achieves a mean overlap score of 41.71%, with 47.23% of targets exceeding an intersection-over-union (IoU) threshold of 0.5 and only 3.25% exceeding 0.9. These results reveal a substantial gap between recovering coarse object layouts and constructing complete, precise metric maps. SpatialScout provides a quantitative testbed for developing agents that build reliable 3D spatial representations through active perception. Code is available at https://github.com/JesseZZZZZ/SpatialScout.",
+      "authors": [
+        "Zhaoxi Zhang",
+        "Hao Liang",
+        "Linxuan Wu",
+        "Yiming Wu",
+        "Yifu Yuan",
+        "Kun Liang",
+        "Chenming Tang",
+        "Meiyi Qiang",
+        "Wentao Zhang",
+        "Weikang Li"
+      ],
+      "published": "2026-10-19",
+      "updated": "2026-10-22",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.26659",
+      "pdf_url": "https://arxiv.org/pdf/2610.26659v3",
+      "hf_upvotes": 170,
+      "hf_url": "https://huggingface.co/papers/2610.26659",
+      "github_repo": "https://github.com/JesseZZZZZ/SpatialScout",
+      "github_repo_source": "hf",
+      "github_stars": 10,
+      "project_page": "https://spatialscout.osslab-pku.org",
+      "organization": "Peking University",
+      "hf_published": "2026-10-19",
+      "hf_featured": "2026-10-22",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "vlm",
+      "fit": 14.75,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 21.603,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "vision-language",
+          "vlm",
+          "vlms"
+        ],
+        "category": 2.75,
+        "popularity": 15.92,
+        "stars_counted": 10,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 170 赞 ｜ 💻 [代码](https://github.com/JesseZZZZZ/SpatialScout)",
+      "authors_display": "Zhaoxi Zhang, Hao Liang, Linxuan Wu, Yiming Wu, Yifu Yuan, Kun Liang 等 10 人"
+    },
+    {
+      "arxiv_id": "2610.30926",
+      "title": "Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation",
+      "abstract": "Cinematic video generation requires both temporal inference from limited inputs (i.e., sparse rather than frame-by-frame guidance) and factor-aware control of character, scene, action, and camera. Multimodal large language models (MLLMs) offer useful priors for both capabilities, but their representations are not automatically actionable for video generation: a Video Diffusion Transformer (DiT) may bypass them through native conditioning pathways, and using them does not ensure either factor-aware control or generation-compatible temporal prediction. We propose Factor-Aware Predictive Learning (FAPL), which establishes effective MLLM latent use as a shared prerequisite and then targets the two capabilities with complementary learning signals. First, latent-only generator grounding trains the DiT with a frozen MLLM and connector, strengthening the DiT's use of MLLM latents for generation. Second, for factor-aware control, paired videos specify a target-factor change and non-target preservation, and factor-span replacement trains the DiT to realize this relationship in its output. Third, for temporal inference, text-only and text-plus-complete-video observations share a video target, and the trained DiT is then frozen while the MLLM and connector are optimized through it. This final stage trains limited-input representations for generation while retaining complete-observation reconstruction as a complementary training mode. Extensive experiments demonstrate our consistently better performance on three cinematic video generation tasks (i.e., sparse-to-video, factor-aware editing, and multi-shot generation) over baselines and validate FAPL's contributions to MLLM feature use, temporal control, and factor coordination.",
+      "authors": [
+        "Songlin Yang",
+        "Zhe Wang",
+        "Xiaotong Zhao",
+        "Xi Wang",
+        "Ran Zhang",
+        "Shuai Li",
+        "Taiyi Wu",
+        "Songlian Li",
+        "Eric Liu",
+        "Alan Zhao",
+        "Anyi Rao"
+      ],
+      "published": "2026-10-22",
+      "updated": "2026-10-23",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.30926",
+      "pdf_url": "https://arxiv.org/pdf/2610.30926v2",
+      "hf_upvotes": 174,
+      "hf_url": "https://huggingface.co/papers/2610.30926",
+      "github_repo": "https://github.com/Songlin1998/ShotVerse2.0",
+      "github_repo_source": "hf",
+      "github_stars": 3,
+      "project_page": "https://shotverse.github.io/fapl/",
+      "organization": "Tencent",
+      "hf_published": "2026-10-22",
+      "hf_featured": "2026-10-23",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "vlm",
+      "fit": 18.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 19.691,
+      "score_breakdown": {
+        "keyword_raw": 16,
+        "keyword_matched": [
+          "mllm",
+          "mllms",
+          "multimodal",
+          "video generation",
+          "diffusion",
+          "grounding"
+        ],
+        "category": 2.0,
+        "popularity": 13.19,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 174 赞 ｜ 💻 [代码](https://github.com/Songlin1998/ShotVerse2.0)",
+      "authors_display": "Songlin Yang, Zhe Wang, Xiaotong Zhao, Xi Wang, Ran Zhang, Shuai Li 等 11 人"
+    },
+    {
+      "arxiv_id": "2610.11942",
+      "title": "Right Screen, Wrong Transition: World Models as Verifiers for GUI Agents",
+      "abstract": "A login screen that appears after a tap on Sign in is expected; the same screen after a tap on View order is an attack. For GUI agents, safety is therefore a property of the transition rather than of the screen, and a monitor that inspects only screens can be defeated by reusing a legitimate one. Judging a transition requires an expectation of what should have followed the action. Existing GUI world models provide one, but they output it as text, code, or images, so checking it against the observed screen requires a second model to judge the two. We argue that a world model meant for verification should instead predict in the space in which observations are encoded, and present LGWM, a decoder-free, action-conditioned world model that predicts the representation of the next screen directly, trained without semantic annotation on 1.85M real GUI transitions. Verification reduces to a vector comparison, and the same signal reveals whether a mismatch is harmful. We evaluate on RSWT-BENCH, a diagnostic where each credential screen appears under both a legitimate and a hijacked transition, so detectors that see only the screen are at chance by construction. The training-free score reaches 0.987 AUC at 17 ms per decision, on par with the strongest closed-source VLMs and about ten AUC points above generative GUI world models at over three orders of magnitude lower latency. The residual direction reaches 0.953 AUC at separating harmful from benign violations, where prompted VLMs are near chance. Further analyses show that the prediction is a usable future state rather than an anomaly score. World models have mostly served as simulators or planners; our results point to a third role, verification, for which predicting in representation space is the natural design.",
+      "authors": [
+        "Jiaming Zhang",
+        "Xuan Wang",
+        "Fuyao Zhang",
+        "Yang Cao",
+        "Lingjuan Lyu",
+        "Wei Yang Bryan Lim"
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.11942",
+      "pdf_url": "https://arxiv.org/pdf/2610.11942v1",
+      "hf_upvotes": 188,
+      "hf_url": "https://huggingface.co/papers/2610.11942",
+      "github_repo": "https://github.com/jiamingzhang94/lgwm",
+      "github_repo_source": "hf",
+      "github_stars": 3,
+      "project_page": "https://jiamingzhang.netlify.app/lgwm/",
+      "hf_published": "2026-10-08",
+      "hf_featured": "2026-10-22",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 17.211,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "vlms"
+        ],
+        "category": 2.0,
+        "popularity": 13.71,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 188 赞 ｜ 💻 [代码](https://github.com/jiamingzhang94/lgwm)",
+      "authors_display": "Jiaming Zhang, Xuan Wang, Fuyao Zhang, Yang Cao, Lingjuan Lyu, Wei Yang Bryan Lim"
+    },
+    {
+      "arxiv_id": "2610.20538",
+      "title": "PrismaCoder: Pushing the Boundaries of Open Multimodal Code Intelligence through Decomposed Rubric Synthesis",
+      "abstract": "Multimodal code intelligence connects the symbolic world of programs with the visual world their execution creates. Interest in this capability is burgeoning, as models are increasingly asked to produce charts, webpages, animations, and semi-structured documents. Recently, proprietary models have pushed far ahead, producing interactive artifacts even from a text description or a screenshot alone. Yet their data and training remain closed, and open progress is held back by the quantity and quality of available data and by the pipelines and methods for producing it. Quality is the harder of the two, since a sample must be correct as a program, well built, and above all visually right once rendered. No existing signal covers all three. Execution often returns just a pass or fail, code similarity does not map to the visual output, and task-specific verifiers do not generalize. To push open progress further, we start from the data side with PrismaForge, a hierarchical data pipeline centered on a synthesized rubric that decomposes these factors into checkable criteria. The same rubric serves as both filter and reward: it curates the supervised corpus, then drives reinforcement learning on visual-coding tasks. Leveraging PrismaForge for data synthesis and filtering, we build PrismaCoder-2M, the most diverse open dataset for multimodal code intelligence and the largest to date. On the model side, we train PrismaCoder-9B and PrismaCoder-35B on this data and release both. They lead the open state of the art by a wide margin and rival leading proprietary systems. Our analyses further show that the proposed rubric-based pipeline improves multimodal coding performance across model backbones. We release our code and data at https://qiushisun.github.io/PrismaCoder-Home/.",
+      "authors": [
+        "Qiushi Sun",
+        "Jingyang Gong",
+        "Yang Liu",
+        "Qiaosheng Chen",
+        "Zhangyue Yin",
+        "Zixian Huang",
+        "Hanxu Hu",
+        "Jing Xiong",
+        "Fangzhi Xu",
+        "Haochen Tan",
+        "Haoli Bai",
+        "Lifeng Shang",
+        "Xiaoguang Li",
+        "Ben Kao",
+        "Qipeng Guo",
+        "Lingpeng Kong",
+        "Jiahui Gao"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "cs.SE"
+      ],
+      "comment": "Work in progress",
+      "abs_url": "https://arxiv.org/abs/2610.20538",
+      "pdf_url": "https://arxiv.org/pdf/2610.20538v1",
+      "hf_upvotes": 72,
+      "hf_url": "https://huggingface.co/papers/2610.20538",
+      "github_repo": "https://github.com/QiushiSun/PrismaCoder",
+      "github_repo_source": "hf",
+      "github_stars": 41,
+      "project_page": "https://qiushisun.github.io/PrismaCoder-Home/",
+      "organization": "NLP Group of The University of Hong Kong",
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-22",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 5.5,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 16.345,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "multimodal"
+        ],
+        "category": 2.5,
+        "popularity": 12.97,
+        "stars_counted": 41,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 72 赞 ｜ 💻 [代码](https://github.com/QiushiSun/PrismaCoder)",
+      "authors_display": "Qiushi Sun, Jingyang Gong, Yang Liu, Qiaosheng Chen, Zhangyue Yin, Zixian Huang 等 17 人"
+    },
+    {
+      "arxiv_id": "2610.23986",
+      "title": "BlenderWorld: Benchmarking Visual Agents for 3D Creation from Real-World References",
+      "abstract": "Recent advances in multimodal large language models (MLLMs) have enabled them to act as autonomous agents, creating and editing 3D models via code or direct software manipulation. In practical workflows, these models must infer object shapes, materials, spatial layouts, and lighting from diverse references while strictly following instructions to reconstruct, modify, or design 3D content. However, existing benchmarks provide limited coverage of such open-ended requests across real-world scenarios. To bridge this gap, we introduce BlenderWorld, the first comprehensive benchmark dedicated to evaluating frontier models on realistic 3D creation tasks. BlenderWorld comprises 223 tasks spanning architecture, products, natural environments, and scientific visualization, driven by text, image, video, and structured specification inputs. To rigorously assess these complex deliverables, we establish a unified evaluation protocol: we render the submitted Blender projects from multiple viewpoints and evaluate them against 2,651 task-specific binary rubrics alongside holistic visual quality scores. Benchmarking thirteen frontier models reveals that GPT-6-Astra achieves the highest overall fused score of 79.9, followed by Opus-5 (73.0) and GPT-5.6-Sol (67.7). Ultimately, our findings reveal a critical bottleneck: while current models can parse broad instructions, they still profoundly struggle with fine-grained 3D spatial coherence and accurate structural reproduction in Blender, leaving substantial headroom for future 3D-native agentics.",
+      "authors": [
+        "Xinyu Fang",
+        "Yuchi Wang",
+        "Weihao Yu",
+        "Rongyao Fang",
+        "Zhaohai Li",
+        "Zhixun Li",
+        "Tiancheng Gu",
+        "Xilin Wei",
+        "Yuhang Zang",
+        "Hongsheng Li",
+        "Dahua Lin",
+        "Guofeng Zhang",
+        "Shuai Bai",
+        "Zhibo Yang",
+        "Dayiheng Liu"
+      ],
+      "hf_upvotes": 40,
+      "hf_url": "https://huggingface.co/papers/2610.23986",
+      "github_repo": "https://github.com/QwenLM/BlenderWorld",
+      "github_repo_source": "hf",
+      "github_stars": 269,
+      "project_page": "https://blenderworld.github.io/",
+      "organization": "Qwen",
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-20",
+      "abs_url": "https://arxiv.org/abs/2610.23986",
+      "pdf_url": "https://arxiv.org/pdf/2610.23986",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 7.0,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 16.075,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "mllms",
+          "multimodal"
+        ],
+        "category": 0.0,
+        "popularity": 12.32,
+        "stars_counted": 269,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 40 赞 ｜ 💻 [代码](https://github.com/QwenLM/BlenderWorld)",
+      "authors_display": "Xinyu Fang, Yuchi Wang, Weihao Yu, Rongyao Fang, Zhaohai Li, Zhixun Li 等 15 人"
+    },
+    {
+      "arxiv_id": "2610.25404",
+      "title": "MT Forcing: Towards Stable and Consistent Multi-Turn Image Editing with Autoregressive Diffusion",
+      "abstract": "Multi-turn image editing aims to modify an image according to a sequence of instructions, enabling more effective interactive visual content creation for users. However, existing methods often exhibit noticeable drift after only a few editing turns, manifesting in two aspects: 1) unstable visual quality, with accumulating artifacts and degraded details; and 2) inconsistent image content, with unintended changes to preserved regions and prior edits. To address these challenges, we propose MT Forcing, a novel training paradigm for multi-turn image editing with unified multimodal models (UMMs) based on autoregressive diffusion. Specifically, we propose Single-Turn Distribution Matching Distillation (Single-Turn DMD), which supervises student self-rollouts with a teacher that applies cumulative edits to the source image in a single turn, providing visual-quality guidance without recursive error accumulation. Additionally, we introduce Teacher-Forcing Guidance, which supervises history-dependent transitions on reference trajectories during warmup and as a regularizer during distillation, encouraging cross-turn content consistency beyond what per-turn distribution matching alone can ensure. Extensive experiments demonstrate that our approach significantly improves the multi-turn image editing capabilities of UMMs, yielding more stable visual quality and stronger cross-turn consistency.",
+      "authors": [
+        "Houyuan Chen",
+        "Fanzhou Wang",
+        "Xiangyu Fan",
+        "Zesong Qiu",
+        "Yukun Wei",
+        "Songlin Yang",
+        "Zhitao Yang",
+        "Lvmin Zhang",
+        "Pei Yang",
+        "Hao Zhao",
+        "Lei Yang",
+        "Anyi Rao"
+      ],
+      "hf_upvotes": 47,
+      "hf_url": "https://huggingface.co/papers/2610.25404",
+      "github_repo": "https://github.com/houyuanchen111/MT-Forcing",
+      "github_repo_source": "hf",
+      "github_stars": 26,
+      "project_page": "https://houyuanchen111.github.io/mt-forcing.github.io/",
+      "organization": "SenseNova",
+      "hf_published": "2026-10-18",
+      "hf_featured": "2026-10-20",
+      "abs_url": "https://arxiv.org/abs/2610.25404",
+      "pdf_url": "https://arxiv.org/pdf/2610.25404",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 11.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 15.561,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "multimodal",
+          "unified multimodal",
+          "image editing",
+          "diffusion"
+        ],
+        "category": 0.0,
+        "popularity": 10.81,
+        "stars_counted": 26,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 47 赞 ｜ 💻 [代码](https://github.com/houyuanchen111/MT-Forcing)",
+      "authors_display": "Houyuan Chen, Fanzhou Wang, Xiangyu Fan, Zesong Qiu, Yukun Wei, Songlin Yang 等 12 人"
+    },
+    {
+      "arxiv_id": "2610.28416",
+      "title": "Code2Video-Compass: A Comprehensive Benchmark for General-Purpose Code-Based Video Generation across T2V, I2V, and V2V",
+      "abstract": "Code-based video generation offers fine-grained control, targeted editing, and component reuse compared with direct video generation. This approach requires multimodal large language models (MLLMs) to translate visual and temporal requirements into executable programs that produce complete videos. However, existing code-based benchmarks primarily target specialized tasks, leaving complete video creation across diverse creative categories and input modalities insufficiently evaluated. We introduce Code2Video-Compass, a general-purpose benchmark for code-based video generation across text-to-video (T2V), image-to-video (I2V), and video-to-video (V2V) settings. Code2Video-Compass comprises 2,104 tasks spanning 10 categories, 24 subtypes, and three complexity dimensions covering construction, dynamic animation, and state dependency. It combines tasks curated from textual instructions and visual references with corresponding T2V, I2V, and V2V tasks derived from complete professional and user-created videos. We propose a dual-level evaluation framework combining 12 objective metrics and five subjective metrics. Objective evaluation covers operational performance, video quality, text-video alignment, and reference fidelity, while subjective evaluation uses an MLLM judge to evaluate instruction following and holistic video quality. Extensive evaluation of 15 recent proprietary and open-weight MLLMs from nine families reveals that even leading models face challenges in reliably generating high-quality complete videos aligned with textual and visual requirements, with performance generally declining as construction, dynamic animation, and state-dependency complexity increases. We anticipate that Code2Video-Compass will advance reliable, coherent, and controllable code-based video generation and inspire broader progress in programmatic visual creation.",
+      "authors": [
+        "Zhenghan Chen",
+        "Zekai Shao",
+        "Xin Lin",
+        "Leting Cheng",
+        "Siming Chen"
+      ],
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.28416",
+      "pdf_url": "https://arxiv.org/pdf/2610.28416v1",
+      "hf_upvotes": 31,
+      "hf_url": "https://huggingface.co/papers/2610.28416",
+      "github_repo": "https://github.com/code2video-compass/Code2Video-Compass",
+      "github_repo_source": "hf",
+      "github_stars": 6,
+      "project_page": "https://code2video-compass.github.io",
+      "organization": "Fudan University",
+      "hf_published": "2026-10-20",
+      "hf_featured": "2026-10-23",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "vlm",
+      "fit": 19.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 14.84,
+      "score_breakdown": {
+        "keyword_raw": 17,
+        "keyword_matched": [
+          "mllm",
+          "mllms",
+          "multimodal",
+          "video generation",
+          "text-to-video"
+        ],
+        "category": 2.75,
+        "popularity": 7.9,
+        "stars_counted": 6,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 31 赞 ｜ 💻 [代码](https://github.com/code2video-compass/Code2Video-Compass)",
+      "authors_display": "Zhenghan Chen, Zekai Shao, Xin Lin, Leting Cheng, Siming Chen"
+    },
+    {
+      "arxiv_id": "2610.24738",
+      "title": "Editing Images into Reusable Layers via Compositional Edit-Prior Distillation",
+      "abstract": "High-quality image editing requires precise modification of target regions while preserving the content of unrelated regions. Existing editing models produce flattened outputs that limit precise local manipulation and layer reuse, while decomposition methods typically optimize layer recovery separately from instruction-driven editing. To this end, we introduce LayerEditor, a unified framework that couples instruction-guided image editing with controllable generation of reusable RGBA layers. At its core, In-Context RGB-Alpha Token Modeling jointly represents the edited canvas and an ordered sequence of RGB-Alpha layers within a single token sequence, enabling semantic edits and explicit control over individual layer content. To retain the pretrained model's editing capability during adaptation to layered outputs, we propose Compositional Edit-Prior Distillation, which transfers its editing prior to both the edited canvas and the image composed from the predicted layers. To support training and evaluation, we construct LayerEditor-100K, a large-scale paired image-editing dataset with ordered RGBA layer annotations, and introduce dedicated benchmarks for layered editing. Extensive experiments demonstrate that LayerEditor maintains strong editing fidelity while generating accurate RGBA layers, supporting both flexible layer-level manipulation and multi-layer decomposition.",
+      "authors": [
+        "Wen Xue",
+        "Yong Liu",
+        "Xueheng Li",
+        "Si Wu",
+        "Yong Xu",
+        "Yipeng Sun",
+        "Yan Li",
+        "Simiu Gu"
+      ],
+      "published": "2026-10-17",
+      "updated": "2026-10-17",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "24 pages, 13 figures. Includes appendices",
+      "abs_url": "https://arxiv.org/abs/2610.24738",
+      "pdf_url": "https://arxiv.org/pdf/2610.24738v1",
+      "hf_upvotes": 184,
+      "hf_url": "https://huggingface.co/papers/2610.24738",
+      "organization": "jingdong",
+      "hf_published": "2026-10-17",
+      "hf_featured": "2026-10-23",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "vlm",
+      "fit": 5.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 14.815,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "image editing"
+        ],
+        "category": 2.0,
+        "popularity": 13.56,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 184 赞",
+      "authors_display": "Wen Xue, Yong Liu, Xueheng Li, Si Wu, Yong Xu, Yipeng Sun 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.21783",
+      "title": "Learning to Think and Explore in 3D World",
+      "abstract": "We study how vision-language models (VLMs) can learn to think and actively explore in 3D space. Instead of providing multi-view images, videos, or 3D representations to the model, we preserve the native visual encoding of VLMs, i.e., a single image, one at a time, just like humans, and treat the 3D representation only as an environment with which the model can interact through actions (e.g., move left) and observations (rendered images). Each rollout begins from an initial first-person view and a visual question. The model can then iteratively reason, navigate, and reorient its viewpoint before committing to a final answer. Following an initial trajectory-supervised finetuning, we apply reinforcement learning (RL) with rewards driven primarily by final-answer correctness. Crucially, RL provides no direct supervision over which viewpoints the model should visit or which exploration actions it should take. Instead, the model must learn an effective exploration policy solely from the extent to which its interactions improve performance. Across six 3D benchmarks, our model ACT3D achieves an average accuracy of 53.2% that improves its base Qwen model by 22.0% and surpasses proprietary Gemini 3.6 Flash. ACT3D also outperforms existing open-source 3D methods while using 50-70% fewer input frames, and generalizes to unseen domains with an average improvement of 5.9% over its supervised initialization. Further analysis reveals adaptive, question-conditioned exploration. Performance gains over the base model increase from 0.6% on questions answerable from the initial view to 16.3% on those requiring extensive exploration. ACT3D searches for occluded targets, avoids unnecessary exploration, and acquires complementary viewpoints for spatial comparisons. These findings demonstrate that outcome-based RL enables VLMs not only to reason over visual evidence, but also to learn when and how to acquire it.",
+      "authors": [
+        "Yijiang Li",
+        "Bingyang Wang",
+        "Nuno Vasconcelos"
+      ],
+      "hf_upvotes": 141,
+      "hf_url": "https://huggingface.co/papers/2610.21783",
+      "project_page": "https://williamium3000.github.io/act3d/",
+      "organization": "University of California at San Diego",
+      "hf_published": "2026-10-15",
+      "hf_featured": "2026-10-19",
+      "abs_url": "https://arxiv.org/abs/2610.21783",
+      "pdf_url": "https://arxiv.org/pdf/2610.21783",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 8.0,
+      "alt_theme": "wearable-xr",
+      "routed_by": "topic",
+      "score": 14.374,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "vision-language",
+          "vlms"
+        ],
+        "category": 0.0,
+        "popularity": 11.87,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 141 赞",
+      "authors_display": "Yijiang Li, Bingyang Wang, Nuno Vasconcelos"
+    },
+    {
+      "arxiv_id": "2610.23374",
+      "title": "MOSS-Image Technical Report",
+      "abstract": "Recent closed-source image generation systems can produce diverse visual content from simple compositions to information-dense graphics, yet open-weight text-to-image models still struggle with dense text and intricate layouts. To narrow this gap, we introduce MOSS-Image, an open generation system that combines high-fidelity visual synthesis with intent-aware composition. First, we pretrain a 5B single-stream diffusion transformer (DiT) from scratch with a carefully designed recipe, enabling bilingual long-form text rendering and precise layout control. Second, we develop an intention-aware agentic prompt enhancement (PE) module that translates diverse user requests into detailed content and layout specifications. Together, they enable MOSS-Image to generate text-rich and layout-coherent images. We further introduce LongLongTextBench (LLTB) for evaluating long-form English and Chinese text rendering, and RealLayoutArena (RLA) for end-to-end layout-rich generation. MOSS-Image achieves state-of-the-art performance among open-weight models on LLTB, with an average text coverage of 96.3%. On RLA, MOSS-Image ranks second in the end-to-end system comparison, while its backbone ranks first among generators evaluated with shared enhanced prompts. We will release the model, training recipe, and evaluation framework to support further research and promote the text-to-image community.",
+      "authors": [
+        "MOSI. AI"
+      ],
+      "hf_upvotes": 103,
+      "hf_url": "https://huggingface.co/papers/2610.23374",
+      "github_repo": "https://github.com/OpenMOSS/MOSS-Image",
+      "github_repo_source": "hf",
+      "github_stars": 1817,
+      "project_page": "https://openmoss.ai/MOSS-Image/",
+      "organization": "OpenMOSS",
+      "hf_published": "2026-10-16",
+      "hf_featured": "2026-10-19",
+      "abs_url": "https://arxiv.org/abs/2610.23374",
+      "pdf_url": "https://arxiv.org/pdf/2610.23374",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 6.0,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 13.649,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "image generation",
+          "text-to-image",
+          "diffusion"
+        ],
+        "category": 0.0,
+        "popularity": 10.15,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 103 赞 ｜ 💻 [代码](https://github.com/OpenMOSS/MOSS-Image)",
+      "authors_display": "MOSI. AI"
+    },
+    {
+      "arxiv_id": "2610.26853",
+      "title": "InfiniDream: Open-Ended Photorealistic 3D Worlds Through Procedural Generation",
+      "abstract": "Procedural generation plays a key role in synthetic data creation and game development, offering greater controllability, editability, and diversity than static mesh representations. However, VLM-based code generation often produces relatively simple 3D assets, while sophisticated photorealistic procedural systems require extensive manual development. Existing VLM-guided procedural methods remain largely constrained by predefined factories and APIs, limiting their ability to create novel asset types. We introduce InfiniDream, a VLM-driven framework for open-ended procedural 3D world generation. First, we propose Symbolically Constrained Asset Generation, which leverages existing procedural algorithms to create novel, photorealistic assets while preserving editability and seed-based diversity. Second, we develop an end-to-end text-to-world pipeline that combines semantic scene planning with Deterministic Frustum-Guided Grid Placement to construct large-scale 3D worlds with precise object placement, procedural population, and animation. Extensive evaluations on 100 object and 20 scene generation tasks demonstrate improvements across four perceptual metrics. Diversity analysis, ablation studies, and human preference evaluations further validate the effectiveness of our framework. Project page: https://yichuanh.github.io/infinidream-page/",
+      "authors": [
+        "Yi-Chuan Huang",
+        "Hao-Jen Chien",
+        "Zheng-Hui Huang",
+        "Yu-Lun Liu",
+        "Kaipeng Zhang",
+        "Zhixiang Wang"
+      ],
+      "hf_upvotes": 35,
+      "hf_url": "https://huggingface.co/papers/2610.26853",
+      "github_repo": "https://github.com/yichuanH/InfiniDream",
+      "github_repo_source": "hf",
+      "github_stars": 40,
+      "project_page": "https://yichuanh.github.io/infinidream-page/",
+      "organization": "Alaya Lab",
+      "hf_published": "2026-10-19",
+      "hf_featured": "2026-10-20",
+      "abs_url": "https://arxiv.org/abs/2610.26853",
+      "pdf_url": "https://arxiv.org/pdf/2610.26853",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 4.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 13.372,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "vlm"
+        ],
+        "category": 0.0,
+        "popularity": 10.37,
+        "stars_counted": 40,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 35 赞 ｜ 💻 [代码](https://github.com/yichuanH/InfiniDream)",
+      "authors_display": "Yi-Chuan Huang, Hao-Jen Chien, Zheng-Hui Huang, Yu-Lun Liu, Kaipeng Zhang, Zhixiang Wang"
+    },
+    {
+      "arxiv_id": "2610.28444",
+      "title": "EvaOmni: An Evidence-Grounded Benchmark for Audio-Visual Reasoning",
+      "abstract": "Omni LLMs can naturally locate key audio and visual evidence and integrate information across modalities for audiovisual reasoning. Existing audio-visual reasoning benchmarks that mainly rely on multiple-choice questions usually score models solely based on answer correctness, making it difficult to assess whether a model truly forms a reasoning chain from evidence to the correct answer. In addition, textual or unimodal shortcuts may allow models to answer correctly without analyzing the necessary audio-visual evidence, further weakening the reliability of evaluation benchmarks. To address these issues, we introduce EvaOmni, an evidence-grounded benchmark containing 392 videos and 1,027 purely human-annotated question-answer pairs, covering 15 capabilities and three levels: retrieval and localization, basic understanding, and complex reasoning. We design a series of rigorous annotation procedures in which experts annotate audio and visual evidence and construct video-based distractors; humans review whether questions meet strict inspection criteria, and finally models filter textual and unimodal shortcuts. Beyond high-quality question-answer pairs, we require models to simultaneously return the answer and supporting evidence intervals in order to evaluate the complete reasoning chain. We propose the Coverage Grounded Score (C.G.) to measure how much annotated evidence a model identifies, and the Bottleneck Grounded Score (B.G.) to penalize poor temporal localization in either modality; both are incorporated into answer correctness. Across 7 open-weight and 17 proprietary Omni LLMs, Gemini3.7-Flash achieved the highest overall accuracy (79.4%), C.G. (70.8%), and B.G. (35.1%). At Level 3, it reached 79.1% accuracy, but its B.G. was only 12.3%. These results show that even the most advanced models still have room for development in grounded audio-visual reasoning.",
+      "authors": [
+        "Xiaoxing Hu",
+        "Wenxi Yao",
+        "Chaoyuan Shi",
+        "Ziqi Ye",
+        "Xiaorong Guo",
+        "Peixuan Li",
+        "Zhuoran Sun",
+        "Ziyang Gong",
+        "Peiyuan Zhang",
+        "Mingxin Liu",
+        "Shuran Ma",
+        "Hongbo Liu",
+        "Xiaomin Yu",
+        "Yu Tian",
+        "Wentao Wang",
+        "Zhenjie Yang",
+        "Jian Hu",
+        "Yunhang Shen",
+        "Haoyu Cao",
+        "Xue Yang"
+      ],
+      "published": "2026-10-20",
+      "updated": "2026-10-21",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Project: https://xiaoxing2001.github.io/EvaOmni.github.io/",
+      "abs_url": "https://arxiv.org/abs/2610.28444",
+      "pdf_url": "https://arxiv.org/pdf/2610.28444v2",
+      "hf_upvotes": 27,
+      "hf_url": "https://huggingface.co/papers/2610.28444",
+      "github_repo": "https://github.com/VisionXLab/EvaOmni",
+      "github_repo_source": "hf",
+      "github_stars": 24,
+      "project_page": "https://xiaoxing2001.github.io/EvaOmni.github.io/",
+      "organization": "SJTU VisionXLab",
+      "hf_published": "2026-10-20",
+      "hf_featured": "2026-10-21",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "vlm",
+      "fit": 9.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 13.309,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "omni",
+          "audio-visual",
+          "visual reasoning"
+        ],
+        "category": 2.0,
+        "popularity": 9.06,
+        "stars_counted": 24,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 27 赞 ｜ 💻 [代码](https://github.com/VisionXLab/EvaOmni)",
+      "authors_display": "Xiaoxing Hu, Wenxi Yao, Chaoyuan Shi, Ziqi Ye, Xiaorong Guo, Peixuan Li 等 20 人"
+    },
+    {
+      "arxiv_id": "2610.31494",
+      "title": "AgentVQA: A Unified Benchmark for Agentic Visual Understanding",
+      "abstract": "Vision-language models (VLMs) can perform a broad range of tasks across diverse settings, yet their performance in agentic contexts remains poorly understood. Although online evaluations in simulators and real-world environments are essential for measuring interactive agent performance, they are costly and challenging to scale. Complementary offline VQA benchmarks can enable faster and more reliable comparisons across agentic domains, yet existing benchmarks remain limited and fragmented. To address this gap, we introduce AgentVQA, an offline benchmark for evaluating VLMs on realistic agentic scenarios across five agent domains: Web Agents, Robotics, Egocentric Videos, Games, and Spatial Planning. We build AgentVQA by manually selecting 1000 challenging, real-world agent examples from 23 source datasets and adapting them for reliable offline evaluation. The resulting benchmark preserves realistic scenarios from interactive environments across diverse domains, and its model rankings track those from corresponding online evaluations. Across the 22 evaluated models, the best achieves only 58.5% accuracy. Our cross-domain analysis shows that errors are driven primarily by failures to ground and maintain accurate representations of the current and evolving visual state, including localizing relevant UI elements, interpreting motion, tracking state changes over time, and inferring 3D spatial relationships, rather than by task misinterpretation or downstream logical reasoning.",
+      "authors": [
+        "Advait Gupta",
+        "Sachin Konan",
+        "Tom Yin",
+        "Gabriel Sarch",
+        "Zhuang Liu"
+      ],
+      "published": "2026-10-22",
+      "updated": "2026-10-22",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Project page: https://zlab-princeton.github.io/AgentVQA",
+      "abs_url": "https://arxiv.org/abs/2610.31494",
+      "pdf_url": "https://arxiv.org/pdf/2610.31494v1",
+      "hf_upvotes": 18,
+      "hf_url": "https://huggingface.co/papers/2610.31494",
+      "github_repo": "https://github.com/zlab-princeton/AgentVQA",
+      "github_repo_source": "hf",
+      "github_stars": 8,
+      "project_page": "https://zlab-princeton.github.io/AgentVQA",
+      "organization": "zlab-princeton",
+      "hf_published": "2026-10-22",
+      "hf_featured": "2026-10-23",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "vlm",
+      "fit": 13.0,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 12.129,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "vision-language",
+          "vlms",
+          "vqa"
+        ],
+        "category": 2.0,
+        "popularity": 6.88,
+        "stars_counted": 8,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 18 赞 ｜ 💻 [代码](https://github.com/zlab-princeton/AgentVQA)",
+      "authors_display": "Advait Gupta, Sachin Konan, Tom Yin, Gabriel Sarch, Zhuang Liu"
+    },
+    {
+      "arxiv_id": "2610.30023",
+      "title": "RealMe: Immersive Volumetric Video from Minimal Captures",
+      "abstract": "This paper addresses the problem of creating immersive volumetric videos from sparse and low-resolution capture resources. Conventional dense multi-view reconstruction methods can produce high-quality volumetric videos, but their reliance on costly capture setups makes them impractical in real-world scenarios. Recent approaches use generative models to relax capture requirements, but still suffer from limited resolution and 4D inconsistency. To overcome these constraints, we propose RealMe, a unified framework built around a high-resolution video diffusion model that enhances limited captures into high-resolution (2K), 4D-consistent videos for volumetric video reconstruction. Specifically, RealMe constructs auxiliary data from capture videos and encodes them into latents along with layout-aware positional embeddings. The video diffusion model adapts factorized spatio-temporal attention to the multi-view capture layout, denoises these latents across viewpoints and time, and decodes them into enhanced videos to refine the 4D representation. This adaptation helps the model capture temporal dynamics and multi-view relationships, leading to more 4D-consistent generation. To reduce the data gap between generated videos and real captures, we apply a latent frequency loss that provides frequency-domain supervision in latent space. Extensive experiments on the public DNA-Rendering benchmark and our self-captured RealVV dataset demonstrate that RealMe is able to create immersive volumetric videos and outperforms state-of-the-art methods in visual fidelity and 4D consistency.",
+      "authors": [
+        "Chenxu Zhou",
+        "Zhiyuan Yu",
+        "Yudong Jin",
+        "Yinji Shentu",
+        "Yu Zhang",
+        "Jiaming Sun",
+        "Xiaowei Zhou"
+      ],
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "19 pages, 11 figures, including supplementary material. To appear in SIGGRAPH Asia 2026 Conference Papers. Project page: https://zju3dv.github.io/realme",
+      "abs_url": "https://arxiv.org/abs/2610.30023",
+      "pdf_url": "https://arxiv.org/pdf/2610.30023v1",
+      "hf_upvotes": 28,
+      "hf_url": "https://huggingface.co/papers/2610.30023",
+      "github_repo": "https://github.com/zju3dv/RealMe",
+      "github_repo_source": "hf",
+      "github_stars": 28,
+      "project_page": "https://zju3dv.github.io/realme/",
+      "organization": "zju3dv",
+      "hf_published": "2026-10-21",
+      "hf_featured": "2026-10-22",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 3.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 12.082,
+      "score_breakdown": {
+        "keyword_raw": 1,
+        "keyword_matched": [
+          "diffusion"
+        ],
+        "category": 2.0,
+        "popularity": 9.33,
+        "stars_counted": 28,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 28 赞 ｜ 💻 [代码](https://github.com/zju3dv/RealMe)",
+      "authors_display": "Chenxu Zhou, Zhiyuan Yu, Yudong Jin, Yinji Shentu, Yu Zhang, Jiaming Sun 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.23279",
+      "title": "Xiaomi-Lens-0 Technical Report",
+      "abstract": "Multimodal large language models (MLLMs) answer questions about whole images well, yet they still struggle with fine-grained region understanding. A key reason is that text-only supervision never specifies which regions support an answer. To close this gap, we present Xiaomi-Lens-0, a 4B MLLM built on Qwen3.5 that predicts masks from its own visual representations. Specifically, a lightweight decoder combines vision-encoder patch features with visual latents, the language model's mask-token states, so mask supervision reaches the shared backbone without an additional segmentation encoder. Because each latent decodes to a mask, the model can interleave reasoning with region-specific latents and thus think with visual latents, while grounded reasoning traces supervise the regions it visits during chain-of-thought. As a result, across all eight RefCOCO, RefCOCO+, and RefCOCOg splits, Xiaomi-Lens-0 gains 5.6 points on average over Qwen3.5 in referring comprehension and achieves the highest segmentation cIoU among compared models. Moreover, it surpasses Qwen3.5 across all perception benchmarks. Homepage: https://seerray-lab.github.io/Xiaomi-Lens-0{this https URL}",
+      "authors": [
+        "Pei Fu",
+        "Yike Liu",
+        "Yue Sun",
+        "Hanmo Wang",
+        "Xiuwen Xi",
+        "Ruoceng Zhang",
+        "Shaojie Zhang",
+        "Chao Jiang",
+        "Hang Li",
+        "Bingrui Liu",
+        "Zhenbo Luo",
+        "Heng Qu",
+        "Changjian Xu",
+        "Ming Xu",
+        "Jian Luan"
+      ],
+      "hf_upvotes": 49,
+      "hf_url": "https://huggingface.co/papers/2610.23279",
+      "github_repo": "https://github.com/SeerRay-Lab/Xiaomi-Lens-0",
+      "github_repo_source": "hf",
+      "github_stars": 77,
+      "project_page": "https://seerray-lab.github.io/Xiaomi-Lens-0",
+      "organization": "SeerRay-Lab",
+      "hf_published": "2026-10-16",
+      "hf_featured": "2026-10-19",
+      "abs_url": "https://arxiv.org/abs/2610.23279",
+      "pdf_url": "https://arxiv.org/pdf/2610.23279",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 12.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 12.0,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "mllm",
+          "mllms",
+          "multimodal",
+          "segmentation"
+        ],
+        "category": 0.0,
+        "popularity": 7.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 49 赞 ｜ 💻 [代码](https://github.com/SeerRay-Lab/Xiaomi-Lens-0)",
+      "authors_display": "Pei Fu, Yike Liu, Yue Sun, Hanmo Wang, Xiuwen Xi, Ruoceng Zhang 等 15 人"
+    },
+    {
+      "arxiv_id": "2610.22602",
+      "title": "Stuck on Shuffle: On Attribute-Object Binding in Vision-Language Models",
+      "abstract": "Retrieval is a fundamental task in multimodal systems: given an image or text query, the goal is to find the most relevant images or texts in a collection, often using a shared embedding space. Reliable retrieval requires these embeddings to capture not only which concepts are present, but also how they are composed. One key compositional challenge is attribute--object binding: encoding which attributes belong to which objects. Existing benchmarks provide a limited view of this capability, typically covering a subset of modality pairings, simple two-object swaps, or small attribute sets. Consequently, it remains unclear how robustly current models preserve attribute--object bindings across different modality pairings and more complex settings. We therefore introduce SABER, a controlled benchmark for evaluating attribute--object binding across all four image and text modality pairings, spanning diverse attribute types and scenes with up to ten objects. Evaluating models on SABER reveals substantial binding failures in both CLIP-style dual encoders and recent MLLM-based embedders. These findings motivate us to ask how binding can be improved efficiently. While multimodal supervision may be effective, collecting suitable images is difficult and costly. Text, on the other hand, is well suited to binding supervision: it is cheap to generate, supports a broader range of attributes and enables precisely controlled hard negatives. We thus finetune an MLLM-based embedder exclusively on synthetic attribute-binding text. Despite the absence of image supervision, the gains transfer to cross-modal and image--image retrieval while preserving general multimodal embedding performance. Our model achieves SOTA results on SABER while also improving on negation and instance-retrieval benchmarks, demonstrating broader benefits of our binding-focused supervision.",
+      "authors": [
+        "Netanel Y. Tamir",
+        "Michael Green",
+        "Issar Tzachor",
+        "Or Shimshi",
+        "Dvir Samuel",
+        "Or Patashnik",
+        "Rami Ben-Ari"
+      ],
+      "hf_upvotes": 18,
+      "hf_url": "https://huggingface.co/papers/2610.22602",
+      "github_repo": "https://github.com/Netanel-Tamir/Stuck-On-Shuffle",
+      "github_repo_source": "hf",
+      "github_stars": 3,
+      "project_page": "https://stuck-on-shuffle.github.io/",
+      "hf_published": "2026-10-15",
+      "hf_featured": "2026-10-19",
+      "abs_url": "https://arxiv.org/abs/2610.22602",
+      "pdf_url": "https://arxiv.org/pdf/2610.22602",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 13.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.156,
+      "score_breakdown": {
+        "keyword_raw": 13,
+        "keyword_matched": [
+          "vision-language",
+          "mllm",
+          "multimodal",
+          "clip"
+        ],
+        "category": 0.0,
+        "popularity": 5.91,
+        "stars_counted": 3,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 18 赞 ｜ 💻 [代码](https://github.com/Netanel-Tamir/Stuck-On-Shuffle)",
+      "authors_display": "Netanel Y. Tamir, Michael Green, Issar Tzachor, Or Shimshi, Dvir Samuel, Or Patashnik 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.19419",
+      "title": "WinARDet: Compressed Window Auto-Regression for Long-Horizon Vision-Language Grounding",
+      "abstract": "MLLM-based detectors formulate vision-language grounding as autoregressive coordinate generation, yet in dense scenes, they often collapse into a box repetition loop, repeatedly emitting identical boxes until the decoding budget is exhausted. We trace this failure to historical-answer attention takeover: Under full-history autoregression, repeated coordinate tokens in the growing answer history attract disproportionate attention, crowding out the attention sinks needed to attend to new visual evidence. % To break this loop, in this paper, we propose Compressed Window Auto-Regression (WinAR). This new mechanism partitions a long answer sequence into consecutive generation windows and restricts full token-level autoregression to the current window only while compressing each previous window into a fixed set of latent tokens that condition subsequent decoding. This design reduces the repeated exposure to raw historical coordinates that triggers the attention takeover, yet preserves cross-window dependencies essential for coherent multi-object generation. On RSDense, which contains 200-2,000 objects per image, our model WinARDet improves RexOmni F1-score (IoU=0.5) from 32.16 to 39.36 over the baseline, while reducing the redundancy rate from 35.48% to 13.00%. WinARDet also generalizes across decoding strategies and output formats, including parallel box decoding and polygon generation, providing a practical paradigm for long-horizon vision-language grounding across scene densities.",
+      "authors": [
+        "Chenxu Wang",
+        "Hangyi Kuang",
+        "Bo-Wen Yin",
+        "Yuxuan Li",
+        "Quan-Sheng Zeng",
+        "Yang Zhang",
+        "Xu Guo",
+        "Xiang Li",
+        "Qibin Hou"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.19419",
+      "pdf_url": "https://arxiv.org/pdf/2610.19419v1",
+      "hf_upvotes": 8,
+      "hf_url": "https://huggingface.co/papers/2610.19419",
+      "github_repo": "https://github.com/facias914/WinARDet",
+      "github_repo_source": "hf",
+      "github_stars": 17,
+      "project_page": "https://github.com/facias914/WinARDet",
+      "organization": "Nankai University",
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-21",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 11.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.047,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "vision-language",
+          "mllm",
+          "grounding"
+        ],
+        "category": 2.0,
+        "popularity": 6.3,
+        "stars_counted": 17,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 8 赞 ｜ 💻 [代码](https://github.com/facias914/WinARDet)",
+      "authors_display": "Chenxu Wang, Hangyi Kuang, Bo-Wen Yin, Yuxuan Li, Quan-Sheng Zeng, Yang Zhang 等 9 人"
+    },
+    {
+      "arxiv_id": "2610.23987",
+      "title": "What Generation Knows: Unlocking Fine-Grained Understanding in Unified Multimodal Models",
+      "abstract": "Fine-grained visual understanding requires distinguishing subtle differences in local attributes and spatial relations, yet remains challenging for existing vision-language models. Unified multimodal models (UMMs) offer a new opportunity through generation pathways that preserve rich visual information complementary to understanding. However, existing generation-assisted understanding methods mainly rely on generative supervision or explicit generation and have not systematically explored direct use of native generation-side representations. To address this gap, we systematically analyze what generation-side representations offer for fine-grained understanding, finding that they are more sensitive to fine-grained semantic changes, capture task-relevant changes missed by understanding-side representations, and depend on correct spatial organization for this advantage. Guided by these findings, we design GAFU, a post-training framework that unlocks native generation-side information for fine-grained understanding. It compresses generation-side visual representations into compact \\(G\\) tokens that preserve fine-grained visual details, enabling task-conditioned retrieval by the understanding pathway. Experiments show that GAFU consistently outperforms SFT baselines trained on the same data across diverse visual understanding tasks and UMM architectures, with maximum relative improvements of 20.00\\%, 17.94\\%, and 8.62\\% on VStar-Bench, OmniSpatial, and VSR-Bench, respectively. Overall, GAFU converts complementary information from the generation pathway into gains in fine-grained visual understanding, providing an effective path toward synergy between generation and understanding in UMMs.",
+      "authors": [
+        "Tengju Ru",
+        "Weitong Lian",
+        "Zecong Tang",
+        "Zhiheng Liu",
+        "Lingyi Meng",
+        "Haoran Li",
+        "Kaixuan Wang",
+        "Bohao Li",
+        "Xihui Liu"
+      ],
+      "published": "2026-10-14",
+      "updated": "2026-10-14",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.23987",
+      "pdf_url": "https://arxiv.org/pdf/2610.23987v1",
+      "hf_upvotes": 39,
+      "hf_url": "https://huggingface.co/papers/2610.23987",
+      "github_repo": "https://github.com/LRuca/GAFU",
+      "github_repo_source": "hf",
+      "github_stars": 28,
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-23",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "vlm",
+      "fit": 13.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 10.995,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "vision-language",
+          "multimodal",
+          "unified multimodal"
+        ],
+        "category": 2.0,
+        "popularity": 6.24,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 39 赞 ｜ 💻 [代码](https://github.com/LRuca/GAFU)",
+      "authors_display": "Tengju Ru, Weitong Lian, Zecong Tang, Zhiheng Liu, Lingyi Meng, Haoran Li 等 9 人"
+    },
+    {
+      "arxiv_id": "2610.22321",
+      "title": "AVC-Reward: Event-Centric Audio-Video Consistency Evaluation",
+      "abstract": "As joint audio-video generation models become more capable, they can generate audio-visual scenes exhibiting three forms of complexity: multi-event composition, multi-layer audio mixture, and asymmetric cross-modal relations. However, current evaluations largely reuse metrics from earlier simple and unidirectional tasks. They typically evaluate an audio-video clip as a whole and rely on simple predefined relations, making them unsuitable for these increasingly complex scenes. We propose an event-centric evaluation framework that disentangles audio and visual events at the event level, analyzes each event independently, cross-validates relations across modalities, and aggregates the judgments into a coarse-to-fine, three-level consistency metric. The metric assesses global narrative harmony, event-level temporal synchronization, and fine-grained attribute alignment, providing a general formulation for audio-video consistency evaluation across diverse generation settings and cross-modal relations. We instantiate the metric as AVC-Reward, a trainable audio-video reward model. To evaluate the agreement between automatic judgments and human perception across generation paradigms and relation complexities, we construct AVC-Benchmark, which is primarily built from diverse positive and negative samples generated by various types of audio-video generation models. AVC-Reward achieves state-of-the-art alignment with human judgment among automatic methods, provides interpretable rationales that localize failures, and improves the audio-video consistency of a joint generation model when used as an online reinforcement-learning signal. Project page: https://tsuki0512.github.io/AVC-Reward.github.io/",
+      "authors": [
+        "Yuruo Wu",
+        "Kaihang Pan",
+        "Kai Shen",
+        "Jiacheng Li",
+        "Shuyuan Tu",
+        "Jisheng Dang",
+        "Li Tuoyu",
+        "Juncheng Li",
+        "Siliang Tang"
+      ],
+      "hf_upvotes": 16,
+      "hf_url": "https://huggingface.co/papers/2610.22321",
+      "github_repo": "https://github.com/Tsuki0512/AVC-Reward",
+      "github_repo_source": "hf",
+      "github_stars": 12,
+      "project_page": "https://tsuki0512.github.io/AVC-Reward.github.io/",
+      "organization": "Zhejiang University",
+      "hf_published": "2026-10-15",
+      "hf_featured": "2026-10-19",
+      "abs_url": "https://arxiv.org/abs/2610.22321",
+      "pdf_url": "https://arxiv.org/pdf/2610.22321",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 7.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 10.828,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "video generation",
+          "clip",
+          "audio-visual"
+        ],
+        "category": 0.0,
+        "popularity": 7.08,
+        "stars_counted": 12,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 16 赞 ｜ 💻 [代码](https://github.com/Tsuki0512/AVC-Reward)",
+      "authors_display": "Yuruo Wu, Kaihang Pan, Kai Shen, Jiacheng Li, Shuyuan Tu, Jisheng Dang 等 9 人"
+    },
+    {
+      "arxiv_id": "2610.28827",
+      "title": "WorldStream: Streaming Interactive 3D Worlds with Hierarchical Planning and Persistent State",
+      "abstract": "We present WorldStream, an open-ended 3D world model with three simultaneous capabilities: it extends playable terrain beyond any pre-specified map, acts on open-ended language in the running world, and restores visited places with their edits. A hierarchical planner over a typed decision model emits structured decision state: Macro fixes settlement, ecology, transport, and hydrological structure across a group of tiles; Micro specializes that contract into tile semantics under measured terrain and accepted neighbor commitments. Deterministic local code compiles accepted plans into terrain, roads, settlements, vegetation, and entities. Streaming separates their reach: plans run ahead along the predicted corridor, compilation only where movement will soon need it, geometry behind the user released. One world record retains plans, seeds, object identities and mutable state, boundary commitments, and edits by attribute, revised as the user advances and edits; returning tiles recompile from it. The same record grounds interaction: the model acts on existing entities, including stateful NPCs that update as they act, edits the present region, or attaches intent to unplanned regions. Together they yield a world expanding under bounded budgets, connected across independently planned tiles, and interactive.",
+      "authors": [
+        "Xiaoxiao Ma",
+        "Weiyang Jin",
+        "Yanwen Ma",
+        "Haoran Li",
+        "Zhixiang Wei",
+        "Songchun Zhang",
+        "Yaowei Li",
+        "Junhao Zhuang",
+        "Zeyue Xue",
+        "Yuming Li",
+        "Zheming Fu",
+        "Haoyang Huang",
+        "Nan Duan",
+        "Feng Zhao"
+      ],
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "comment": "19 pages, 18 figures",
+      "abs_url": "https://arxiv.org/abs/2610.28827",
+      "pdf_url": "https://arxiv.org/pdf/2610.28827v1",
+      "hf_upvotes": 20,
+      "hf_url": "https://huggingface.co/papers/2610.28827",
+      "github_repo": "https://github.com/krennic999/WorldStream",
+      "github_repo_source": "hf",
+      "github_stars": 23,
+      "project_page": "https://krennic999.github.io/WorldStream/",
+      "hf_published": "2026-10-20",
+      "hf_featured": "2026-10-22",
+      "sources": [
+        "hf"
+      ],
+      "theme": "vlm",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 10.786,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 2.0,
+        "popularity": 8.29,
+        "stars_counted": 23,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 20 赞 ｜ 💻 [代码](https://github.com/krennic999/WorldStream)",
+      "authors_display": "Xiaoxiao Ma, Weiyang Jin, Yanwen Ma, Haoran Li, Zhixiang Wei, Songchun Zhang 等 14 人"
+    }
+  ]
+}
