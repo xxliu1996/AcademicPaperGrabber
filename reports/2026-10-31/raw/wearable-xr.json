@@ -1,0 +1,519 @@
+{
+  "generated_at": "2026-10-31T19:34:17.374836+00:00",
+  "theme": "wearable-xr",
+  "theme_title": "智能眼镜 / 可穿戴 / 第一人称视觉",
+  "theme_subtitle": "AR 眼镜、头显交互、egocentric 视觉、可穿戴感知",
+  "accent": "#8a5a2b",
+  "week_start": "2026-10-25",
+  "week_end": "2026-10-31",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 11,
+  "measured_heat_count": 1,
+  "papers": [
+    {
+      "arxiv_id": "2610.33966",
+      "title": "InteractiveWorld: A Verifiable Human-Centric Environment for Building Better Interactive MLLM Assistants",
+      "abstract": "People have long dreamed of an assistant that is always there to guide them and remind what they forget, from new dishes to lost keys. Powered by multimodal large language models (MLLMs), egocentric AI assistants on wearable devices are bringing this dream within reach: they see what the user sees and give instructions for user's physical work when necessary. However, testing such assistance is challenging and usually requires real people. The expensive and rare real interaction data leaves a key question unanswered: Can today's MLLMs truly help people in physical world? To answer this question, we propose InteractiveWorld, the first verifiable environment for closed-loop interaction between human and AI assistant. Unlike existing robot-centric simulators, InteractiveWorld lets the assistant guide a human agent who observes the scene, understands instructions, and acts independently. It thus realistically simulates how AI assistant collaborates with human: the assistant instructs, the human acts, and the environment executes actions and updates what they see next. Building on it, we introduce InteractiveBench, the first dynamic benchmark for egocentric AI assistants, with 120 multi-turn tasks across six categories. In each task, the assistant guides the human in real time, and every instruction shapes the outcome, which is scored by verifiable, state-based rewards. Experiments with 12 frontier MLLMs show they are still far from reliable assistants. Even the strongest model, Claude Fable 5.1, achieves at most 20% and 25% on long-horizon Guidance and Planning tasks, respectively. Overall, our work offers a verifiable platform and a rigorous evaluation set, laying a solid foundation for research on interactive MLLM assistants that truly help people in the physical world.",
+      "authors": [
+        "Qinsi Wang",
+        "Wei Wen",
+        "Chong Zhou",
+        "Saksham Suri",
+        "Zechun Liu",
+        "Lemeng Wu",
+        "Hai Helen Li",
+        "Yiran Chen",
+        "Raghuraman Krishnamoorthi",
+        "Qi Qian"
+      ],
+      "published": "2026-10-25",
+      "updated": "2026-10-25",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.33966",
+      "pdf_url": "https://arxiv.org/pdf/2610.33966v1",
+      "hf_upvotes": 76,
+      "hf_url": "https://huggingface.co/papers/2610.33966",
+      "github_repo": "https://github.com/facebookresearch/InteractiveWorld",
+      "github_repo_source": "hf",
+      "github_stars": 132,
+      "project_page": "https://meta-interactiveworld.github.io/",
+      "organization": "Meta",
+      "hf_published": "2026-10-25",
+      "hf_featured": "2026-10-27",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "wearable-xr",
+      "fit": 11.75,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 19.524,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "egocentric",
+          "wearable"
+        ],
+        "category": 2.75,
+        "popularity": 14.59,
+        "stars_counted": 132,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 76 赞 ｜ 💻 [代码](https://github.com/facebookresearch/InteractiveWorld)",
+      "authors_display": "Qinsi Wang, Wei Wen, Chong Zhou, Saksham Suri, Zechun Liu, Lemeng Wu 等 10 人"
+    },
+    {
+      "arxiv_id": "2610.36674",
+      "title": "Beyond the 1D Reality-Virtuality Continuum: A 2D Framework for Seven Extended Reality Paradigms",
+      "abstract": "The Reality-Virtuality (RV) continuum helps in describing the relationship between physical and computer-generated environments. However, the increasing number of Extended Reality (XR) paradigms introduces new technologies. Their characteristics cannot be completely represented by a single real-virtual dimension. It can be noted that XR systems not only vary in their proportion of real and virtual content but also adds, suppresses, or transforms information available to the user. This work proposes a framework for characterizing seven XR realities, namely Virtual Reality (VR), Augmented Reality (AR), Mixed Reality (MR), Augmented Virtuality (AV), Phenomenal Reality (PR), Annexing Reality (AnR), and Diminished Reality (DR). It uses a two-dimensional extension of the conventional 1D RV continuum. The first dimension helps in identification of the position of an XR technology between real and virtual environments. The second dimension captures information addition and subtraction. The proposed approach gives a qualitative basis for comparing existing and emerging XR paradigms within a unified XR framework.",
+      "authors": [
+        "Rajashekhar Vachiravelu Saminathan"
+      ],
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": "Accepted for IndiaHCI 2026 Conference in the Student Research Consortium held at Indian Institute of Technology - Hyderabad, India; 7 pages, 4 figures",
+      "abs_url": "https://arxiv.org/abs/2610.36674",
+      "pdf_url": "https://arxiv.org/pdf/2610.36674v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 23.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.75,
+      "score_breakdown": {
+        "keyword_raw": 21,
+        "keyword_matched": [
+          "augmented reality",
+          "mixed reality",
+          "extended reality",
+          "virtual reality",
+          "xr",
+          "vr"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Rajashekhar Vachiravelu Saminathan"
+    },
+    {
+      "arxiv_id": "2610.38825",
+      "title": "Evaluating Visual Realism of AI-Generated Videos with Eye Tracking",
+      "abstract": "Human evaluation of AI-generated videos has so far relied on explicit human feedback, such as judgments or ratings. While these signals capture the conclusions viewers reach, they fail to offer insights into the perception that leads to them. This paper investigates eye tracking as a complementary human evaluation signal for AI-generated videos. We conducted two Visual Turing Test (VTT) experiments with a total of 90 participants on videos generated by latest generative models, in which participants watched each video twice and then gave their feedback. Across the experiments, we collected 4,286 valid eye-tracking trials on 438 videos. Our analysis indicates that gaze patterns offer informative evaluation signals that align with explicit human feedback. Building on the findings, we propose the first computational method GazeEval to predict the perceived visual realism of AI-generated videos from eye-tracking data. It achieves 71.3% accuracy in prediction, providing evidence that eye tracking data carries informative signals about how people evaluate a video. We release the study data to support further research on eye tracking for evaluating AI-generated video.",
+      "authors": [
+        "Danqing Shi",
+        "Lan Jiang",
+        "Jake Lyons",
+        "Miri Zilka"
+      ],
+      "published": "2026-10-28",
+      "updated": "2026-10-28",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.38825",
+      "pdf_url": "https://arxiv.org/pdf/2610.38825v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 14.5,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.625,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "gaze",
+          "eye tracking",
+          "eye-tracking"
+        ],
+        "category": 3.5,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Danqing Shi, Lan Jiang, Jake Lyons, Miri Zilka"
+    },
+    {
+      "arxiv_id": "2610.36014",
+      "title": "Immersive Commons: Designing Ephemeral Spatial Dialogue for Co-Located Mixed Reality Environments",
+      "abstract": "Head-mounted mixed reality (MR) often prioritises individual immersion, potentially drawing attention away from others sharing the room. This paper asks how MR can support co-located spatial dialogue through embodied interaction and activity visible to non-headset observers. We introduce Immersive Commons, a design framework, and Atmos Messages, a prototype combining gesture-based, ephemeral spatial messages with voice transcription, preset text, and a public floor-plan overview. Following a Research through Design approach, fifteen participants created 236 messages across two sessions, including 48 voice-authored messages. Questionnaire responses highlighted playfulness and social awareness, while observations suggested opportunities for exchange grounded in the architectural setting. Interaction clustered near the public display, although this was also where participants put on their headsets. These findings suggest the potential of ephemeral spatial messaging to support co-located exchange, with playfulness, shared visibility, and architectural context informing the design of more social and situated MR experiences.",
+      "authors": [
+        "Wuwu Ran",
+        "Mohammed Faraj Al-Suwaidi"
+      ],
+      "published": "2026-10-26",
+      "updated": "2026-10-26",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.MM"
+      ],
+      "comment": "14 pages, 8 figures. Accepted at SIGraDi 2026, the Conference of the Iberoamerican Society of Digital Graphics",
+      "abs_url": "https://arxiv.org/abs/2610.36014",
+      "pdf_url": "https://arxiv.org/pdf/2610.36014v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 13.75,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 3.438,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "head-mounted",
+          "mixed reality",
+          "immersive"
+        ],
+        "category": 2.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Wuwu Ran, Mohammed Faraj Al-Suwaidi"
+    },
+    {
+      "arxiv_id": "2610.38629",
+      "title": "ItemCompass: Real-Time Edge-AI Wearable Vision for Tag-Free Domestic Object Retrieval",
+      "abstract": "Misplacing household objects disrupts daily routines, especially for elderly users. ItemCompass addresses this with a real-time, tag-free wearable AR system that builds a persistent digital twin of the home for natural language object retrieval. A custom eyewear node streams visual and inertial data to an edge server, where YOLOv11n detection, Siamese re-identification, and a Pedestrian Dead Reckoning engine log object locations as Spatial Anchors in InfluxDB. Voice queries are resolved by a local Faster-Whisper and Qwen2 LLM pipeline, delivering concise spoken and AR guidance on a heads-up display. Evaluation shows 0.40 m localization drift, 97.5% step precision, and mAP@0.5 of 0.874, with users rating Accuracy and Trust at 4.6/5.0. The system highlights always-on sensing, conversational spatial memory, and privacy-by-design for wearable computing.",
+      "authors": [
+        "Tsz Lok Cheung",
+        "Jeff Kai-Tai Tang",
+        "Anthony Kong",
+        "Zackary P. T. Sin"
+      ],
+      "published": "2026-10-28",
+      "updated": "2026-10-28",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": "Accepted and presented at the ACM UbiComp / ISWC 2026 Workshop on Wearable Design in Games and Entertainment (WDGE), Shanghai, China",
+      "abs_url": "https://arxiv.org/abs/2610.38629",
+      "pdf_url": "https://arxiv.org/pdf/2610.38629v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 13.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.25,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "heads-up display",
+          "wearable",
+          "always-on"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Tsz Lok Cheung, Jeff Kai-Tai Tang, Anthony Kong, Zackary P. T. Sin"
+    },
+    {
+      "arxiv_id": "2610.35757",
+      "title": "EEGaze: Multimodal Attention Prediction in Visual Search via EEG-Based Saliency Refinement",
+      "abstract": "Visual search is ubiquitous in daily life, from locating keys in a messy apartment to finding a tool in a cluttered workshop or an application icon on a desktop screen. While visual attention is to a large extent driven by image content, research in psychology indicates that user cognitive states have a significant influence on attention allocation. A promising way to access information about cognitive states is via Electroencephalography (EEG) recordings. Despite this potential, previous works in computational attention modeling have largely disregarded EEG, and related studies in psychology operate with abstract, simplistic stimuli, or even artificially guided search procedures. We bridge this gap with two contributions. First, we present EEGaze 140, the largest publicly available multimodal dataset of free visual search with realistic stimuli. The dataset contains synchronized EEG and eye tracking recordings from 36 participants across 140 naturalistic scenes, covering two scenarios: searching for desktop icons and finding tools in cluttered workshop scenes. Second, we introduce EEGazeNet, the first method for human attention prediction in visual search that integrates EEG signals. Our approach consists of a EEG guided refinement stage that adapts the output of a state of the art saliency prediction method to the user current cognitive state. In comprehensive evaluations on EEGaze 140, we show that EEGazeNet consistently outperforms all baselines and ablation conditions.",
+      "authors": [
+        "Mansi Sharma",
+        "Dinar Orazgaliyev",
+        "Antonio Krüger",
+        "Philipp Müller"
+      ],
+      "published": "2026-10-26",
+      "updated": "2026-10-26",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.MM"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.35757",
+      "pdf_url": "https://arxiv.org/pdf/2610.35757v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 7.5,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.875,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "eye tracking"
+        ],
+        "category": 3.5,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Mansi Sharma, Dinar Orazgaliyev, Antonio Krüger, Philipp Müller"
+    },
+    {
+      "arxiv_id": "2610.40636",
+      "title": "Probing Spatial State Representations in Visual Foundation Models",
+      "abstract": "An observer sees only part of the surrounding world, yet must keep track of what lies beyond the current view. Spatial perception therefore involves more than recognizing individual images: it calls for a persistent spatial state that is updated under self-motion and used to guide action. Do visual foundation models provide representations that support such a state? We study this question through four levels of spatial capability---spatial structure, object persistence, predictive spatial update, and actionability---using frozen-feature probes on ten representations under streaming egocentric observations of static indoor environments. The resulting capability profiles vary across tasks, network layers, and prefix lengths: strong readout of the visible scene does not ensure accurate object persistence or future-feature retrieval. Matched controls separate readout accuracy from reliance on visual history and motion. Native future prediction retains recoverable spatial structure, but a spatial reader trained on real features does not transfer to predicted features unchanged. Finally, goal-dependent candidate selection does not establish reliable continuous action utility: predicted actions respond to goal changes, yet supplying the correct goal does not reliably improve progress. Across the four levels, object persistence and actionability build on camera-pose readout, whereas feature prediction builds on visible-scene readout. Together, these findings motivate evaluating spatial representations not only by what can be decoded from them, but by whether that information is maintained beyond observation, updated predictively, and used for goal-directed action.",
+      "authors": [
+        "Baiqiao Yin",
+        "Zhongang Cai",
+        "Ruisi Wang",
+        "Qiwei Liang",
+        "Lei Yang",
+        "Ziwei Liu"
+      ],
+      "published": "2026-10-29",
+      "updated": "2026-10-29",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.40636",
+      "pdf_url": "https://arxiv.org/pdf/2610.40636v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 6.5,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.625,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "egocentric"
+        ],
+        "category": 1.5,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Baiqiao Yin, Zhongang Cai, Ruisi Wang, Qiwei Liang, Lei Yang, Ziwei Liu"
+    },
+    {
+      "arxiv_id": "2610.37271",
+      "title": "An Interactive Mobile Augmented Reality System for Efficient Virtual Model-to-Patient Registration in Thoracic Surgery",
+      "abstract": "Video-Assisted Thoracoscopic Surgery (VATS) is a minimally invasive procedure, where precise surgical port placement is vital, yet it relies heavily on surgeon experience and mental mapping of pre-operative imaging in the operating room. To address this challenge, we present an accessible, interactive mobile augmented reality (AR) framework, HILMARTS, to enable accurate and efficient pre-operative virtual model-to-patient registration for AR-guided surgical navigation. Our system runs on a commercially available LiDAR-equipped iPad and supports a user-in-the-loop workflow through a two-stage coarse-to-fine registration process. First, the user performs a manual alignment using the AR view on the iPad. This initial maneuver is then refined through automatic point-cloud registration leveraging the LiDAR sensor. We further introduce a novel occupancy-grid-based Surface Coverage Score to provide real-time, actionable feedback to the operator on the geometric completeness of LiDAR data capture for reliable point-cloud-based alignment. In a phantom study with 16 participants, the system achieved a 3.31+/-1.26mm registration accuracy in ~4 min with a mean System Usability Scale (SUS) of 84.1. These findings highlight the system's accuracy, efficiency, robustness, and potential clinical usability, and could support its applicability to other AR-based surgical navigation tasks.",
+      "authors": [
+        "Emmanuel Ajaero",
+        "Pascal Spiegler",
+        "George Rakovich",
+        "Marta Kersten-Oertal",
+        "Yiming Xiao"
+      ],
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.37271",
+      "pdf_url": "https://arxiv.org/pdf/2610.37271v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.5,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "augmented reality"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Emmanuel Ajaero, Pascal Spiegler, George Rakovich, Marta Kersten-Oertal, Yiming Xiao"
+    },
+    {
+      "arxiv_id": "2610.39191",
+      "title": "Wearable Biosensors for Early Detection and Continuous Monitoring of Postpartum Depression: A Human-Centered Approach",
+      "abstract": "Postpartum depression (PPD) is the leading cause of maternal mortality in the United States. However, there are significant gaps in PPD screening, detection, and treatment. A main challenge stems from limitations in existing methods for early PPD diagnosis and subsequent monitoring and intervention. Mobile technology that incorporates interactive interfaces and continuous wearable biosensors holds major potential to augment clinical decision-making and enhance PPD care. A number of compelling research directions exist in effectively developing such systems, including user experience design, sensing accuracy during perinatal stages, clinical integration and interoperability, acceptance and adoption, and privacy and ethics. By focusing on wearable devices that center women and their experiences, this paper discusses such challenges and opportunities at the intersections of HCI, inclusive physiological computing, and women's health.",
+      "authors": [
+        "Emma Ricci-De Lucca",
+        "Elizabeth L. Murnane"
+      ],
+      "published": "2026-10-29",
+      "updated": "2026-10-29",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": "2024 PhysioCHI: Towards Best Practices for Integrating Physiological Signals in HCI",
+      "abs_url": "https://arxiv.org/abs/2610.39191",
+      "pdf_url": "https://arxiv.org/pdf/2610.39191v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 1.5,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "wearable"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Emma Ricci-De Lucca, Elizabeth L. Murnane"
+    },
+    {
+      "arxiv_id": "2610.40153",
+      "title": "Hierarchical Step Decomposition for Training-free Online Video Step Grounding",
+      "abstract": "Given a set of procedural steps, Video Step Grounding (VSG) aims to identify which steps occur in a video and localize when they are performed. Existing methods are either offline, requiring access to the full video before making predictions, or online, but relying on fixed-length video segments producing noisy, over-segmented outputs. In this work, we propose Hierarchical Step Decomposition (HSD), a training-free framework for online VSG that leverages the semantic understanding capabilities of Large Multimodal Models. HSD addresses two central challenges in online grounding: constructing semantically coherent temporal segments from a streaming video, and bridging the semantic gap between coarse procedural step descriptions and visual observations. To construct elementary temporal units, HSD incrementally groups incoming segments into semantically consistent events, using an anchor caption that is continuously validated against the visual stream. Based on these events, we perform zero-shot procedural step classification and selectively refine uncertain predictions by decomposing candidate steps into finegrained substeps that capture more nuanced visual evidence. By operating on semantically coherent events rather than every fixed-length segment, HSD reduces redundant computation and produces more stable predictions. Experiments on HT-Step, Ego4D Goal-Step, and CrossTask show that HSD substantially outperforms state-of-the-art methods, overall achieving better step recognition, more accurate temporal localization, and faster inference.",
+      "authors": [
+        "Long Zhou",
+        "Luca Zanella",
+        "Paolo Rota",
+        "Massimiliano Mancini",
+        "Elisa Ricci"
+      ],
+      "published": "2026-10-29",
+      "updated": "2026-10-29",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "WACV 2027",
+      "abs_url": "https://arxiv.org/abs/2610.40153",
+      "pdf_url": "https://arxiv.org/pdf/2610.40153v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 4.75,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 1.188,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "ego4d"
+        ],
+        "category": 0.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Long Zhou, Luca Zanella, Paolo Rota, Massimiliano Mancini, Elisa Ricci"
+    },
+    {
+      "arxiv_id": "2610.38021",
+      "title": "Detecting Brain Cancer Progression Through Signatures of Wearable Accelerometry Data",
+      "abstract": "Glioblastoma and other high-grade gliomas (HGG) have a poor prognosis and are associated with progressive functional decline. The standard of care to assess progressive disease is contrast-enhanced MRI, which is expensive, claustrophobic, and performed only once every 2-3 months. Wearable accelerometers offer a non-invasive alternative for continuously monitoring patient function between clinic visits. However, accelerometry data streams are typically noisy and highly patient-specific, making conventional time series methods and summary statistics poorly suited to detecting clinically meaningful change. This work aims to classify stable versus progressive disease states by applying rough path signatures for feature extraction from wrist-worn accelerometer data. We convert accelerometer recordings from HGG patients enrolled in the BrainWear study into walking-path segments and use signature kernel maximum mean discrepancy (SigMMD) to quantify change in patients' walking behaviour. We overcome the challenge of inter-patient heterogeneity by adjusting for the natural variation in a patient's walking during stable tumour periods. This patient-specific normalisation substantially improves separation, yielding a candidate biomarker of tumour progression. Our results provide proof-of-concept evidence that signature-based analysis of wearable accelerometry can distinguish stable from progressive disease states, motivating larger longitudinal studies of continuous wearable monitoring as a digital biomarker in neuro-oncology.",
+      "authors": [
+        "Rishit Das",
+        "Barbora Barancikova",
+        "Matt Williams"
+      ],
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "13 pages, 7 figures, 4 tables. Accepted at NeurIPS 2026 TS-LIMITS Workshop",
+      "abs_url": "https://arxiv.org/abs/2610.38021",
+      "pdf_url": "https://arxiv.org/pdf/2610.38021v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "wearable-xr",
+      "fit": 4.0,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 1.0,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "wearable"
+        ],
+        "category": 0.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Rishit Das, Barbora Barancikova, Matt Williams"
+    }
+  ]
+}

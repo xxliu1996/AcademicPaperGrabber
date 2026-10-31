@@ -5,7 +5,14 @@
   <link>https://xxliu1996.github.io/AcademicPaperGrabber/</link>
   <description>每周自动抓取六个方向最近一周的热门论文，每个方向 10 篇，人读的那种周报。</description>
   <language>zh-CN</language>
-  <lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <item>
+    <title>AI 论文周报（2026-10-25 – 2026-10-31）</title>
+    <link>https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-31.html</link>
+    <guid isPermaLink="true">https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-31.html</guid>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <description>本周最突出的技术演进趋势是智能系统从“孤立能力突破”全面迈向“系统级可靠性工程与闭环因果表征”。在语言模型与智能体领域，技术评测重心发生关键转向：TraceTrial-Bench 直击脚手架（Harness）设计与故障归因盲区，揭示 31% 的任务成功背后潜藏着系统规范失效；Memory Tax 与 HABIT-Bench 则分别从显存/信息损耗的“记忆税”以及长程弱证据下的习惯归纳视角，为狂热的记忆机制敲响理性警钟；而在复杂闭环探索中，从南京大学自研炉石传说天梯高手的 AutoTavern，到 WorkFactory 的职业场景全链路训练，展现出智能体在环境反馈驱动下的强大自演化能力。在视觉多模态与机器人领域，时空一致性与物理规律成为核心突破口：腾讯混元 Hy-Nomas 与 L3G-World 探索全自由度交互式世界生成，通过潜层 3D 高斯与因果注意力突破长程生成的时空漂移；PDRVLA、Rollback 与 RynnVLA 则不约而同将物理动力学隐空间与经验回溯引入具身智能，使机器人摆脱纯视频推演的高延迟，在真实任务中大幅提升成功率。相比之下，智能眼镜与 XR 可穿戴方向在公众社区热度上明显归于冷静，但 Meta 的 InteractiveWorld 人机闭环验证平台、ItemCompass 边缘 AR 空间寻物等扎实工作，正为常驻端侧的第一人称空间智能筑牢基石。 ｜ llm 10 篇；vlm 10 篇；agent 10 篇；deep-learning 10 篇；robotics 10 篇；wearable-xr 8 篇</description>
+  </item>
   <item>
     <title>AI 论文周报（2026-10-19 – 2026-10-25）</title>
     <link>https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-25.html</link>
