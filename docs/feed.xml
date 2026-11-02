@@ -5,7 +5,14 @@
   <link>https://xxliu1996.github.io/AcademicPaperGrabber/</link>
   <description>每周自动抓取六个方向最近一周的热门论文，每个方向 10 篇，人读的那种周报。</description>
   <language>zh-CN</language>
-  <lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
+  <item>
+    <title>AI 论文周报（2026-10-26 – 2026-11-01）</title>
+    <link>https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-11-01.html</link>
+    <guid isPermaLink="true">https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-11-01.html</guid>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+    <description>本周最突出的技术演进主线，是人工智能正从“静态模态拟合与黑盒概率推演”全面加速迈向“底层物理一致性、自演化可靠性与异构系统工程协同”。在具身智能与多模态世界模型领域，物理规律与几何约束从外挂先验下沉为核心表征：PDRVLA 将物理动力学隐空间注入视觉动作模型，AgiBot 的 Rollback 与 NVIDIA 的 ThinkWorld 则借助动力学链与因果经验回溯，令机器人在想象推演中自主纠偏；OmniShowcase 与腾讯混元 Hy-Nomas 则分别以 3D 高斯与因果注意力打通自由视角视频与交互式世界生成的时空一致性。在智能体与系统工程架构上，产业界正从算法单点突破转向基础设施全链路优化：TAO 针对 Agent 频繁往返 GPU 推理与 CPU 工具调用的瓶颈提出联合流水线调度，WorkFactory 与 UserArena 分别为长程工作流与交互式电商构建可执行基准；同时，CMU 的 FORK 从精准度目标切入破解基于规则 RL 的奖励作弊（Reward Hacking），galilai-group 则从数学上证明了 JEPA 相比 Next-Token 预测在构建柏拉图世界表征上高出数十倍的样本效率。相比之下，智能眼镜与 XR 可穿戴领域虽整体声量偏冷静，但 Meta 的 InteractiveWorld 闭环仿真平台与端侧实时寻物（ItemCompass）等扎实工 ｜ llm 10 篇；vlm 10 篇；agent 10 篇；deep-learning 10 篇；robotics 10 篇；wearable-xr 8 篇</description>
+  </item>
   <item>
     <title>AI 论文周报（2026-10-25 – 2026-10-31）</title>
     <link>https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-10-31.html</link>

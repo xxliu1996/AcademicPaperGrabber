@@ -1,0 +1,1333 @@
+{
+  "generated_at": "2026-11-02T04:40:43.596749+00:00",
+  "theme": "deep-learning",
+  "theme_title": "其他深度学习",
+  "theme_subtitle": "架构、优化、表征学习、语音与可解释性",
+  "accent": "#7a5a2b",
+  "week_start": "2026-10-26",
+  "week_end": "2026-11-01",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 164,
+  "measured_heat_count": 14,
+  "papers": [
+    {
+      "arxiv_id": "2610.32749",
+      "title": "Efficient Streaming Audio-Visual Target Speaker Extraction for Real-World Acoustic Scenes",
+      "abstract": "Streaming audio-visual target speaker extraction (AVTSE) is essential for latency-sensitive applications. However, current causal systems face two coupled gaps. First, standard benchmarks fix the number of speakers at two and ignore the near-/far-field interference, reverberation, and sudden noise of real scenes. Second, high-performance causal architectures are too heavy for edge deployment. Lightweight alternatives try to reclaim capacity by repeatedly invoking a small separator, which offsets the savings. To address the first gap, we release RealSSA, a realistic AVTSE benchmark consisting of RealSSA-Sim and RealSSA-Real. RealSSA-Sim provides controllable simulated scenes with 1--5 dynamic near-field interfering speakers; scenes with far-field interference additionally include 10--15 far-field interfering speakers. RealSSA-Real provides a held-out real-recorded evaluation set. To address the second gap, we propose Falcon, a causal AVTSE method. Its Separator performs multi-scale time-frequency separation in a single encoder--decoder pass. We train Falcon with an encoder-space speaker contrastive loss. This loss suppresses near-field leakage at zero inference cost and transfers across backbones. Falcon achieves state-of-the-art extraction quality on RealSSA-Sim, LRS2-2Mix, LRS3-2Mix, and VoxCeleb2-2Mix. Compared with the causal AV-TFGridNet baseline, it cuts parameters by 91.9%, computation by 20.2 times, and GPU inference latency by 11.1 times. Code and demo are available at https://cslikai.cn/Falcon/.",
+      "authors": [
+        "Wendi Sang",
+        "Kai Li",
+        "Yifan Li",
+        "Jianqiang Huang",
+        "Xiaolin Hu"
+      ],
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD"
+      ],
+      "comment": "28 pages",
+      "abs_url": "https://arxiv.org/abs/2610.32749",
+      "pdf_url": "https://arxiv.org/pdf/2610.32749v1",
+      "hf_upvotes": 136,
+      "hf_url": "https://huggingface.co/papers/2610.32749",
+      "github_repo": "https://github.com/JusperLee/Falcon",
+      "github_repo_source": "hf",
+      "github_stars": 41,
+      "project_page": "https://cslikai.cn/Falcon/",
+      "organization": "Tsinghua Machine Learning Group",
+      "hf_published": "2026-10-23",
+      "hf_featured": "2026-10-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 1.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 13.912,
+      "score_breakdown": {
+        "keyword_raw": 1,
+        "keyword_matched": [
+          "audio"
+        ],
+        "category": 0.0,
+        "popularity": 11.66,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 136 赞 ｜ 💻 [代码](https://github.com/JusperLee/Falcon)",
+      "authors_display": "Wendi Sang, Kai Li, Yifan Li, Jianqiang Huang, Xiaolin Hu"
+    },
+    {
+      "arxiv_id": "2610.35845",
+      "title": "Work Agents: Systems, Capabilities, and Optimization",
+      "abstract": "As foundation models evolve from information generation to digital work execution, agents are increasingly capable of completing complex tasks across tools, applications, and workflows. However, existing research lacks a unified perspective on how agents reliably accomplish delegated work. To address this gap, we present a work-centric, system-level perspective that views work agents as systems combining foundation models and runtime harnesses to execute tasks in stateful workspaces and deliver verifiable outcomes. We introduce two complementary dimensions, work persistence and work openness, to characterize working conditions, and classify digital work into five forms according to task scope and organization. Building on this framework, we identify five core capability families required for reliable work execution and examine approaches to model optimization, harness optimization, and their joint optimization. We further analyze existing evaluation methods and metrics from the perspective of work outcomes. Finally, we discuss future research directions, including sustained work delegation, adaptation to open environments, and the interaction between work execution and capability improvement. This paper provides a unified framework for understanding, optimizing, and evaluating work agents, supporting the development of systems capable of delivering reliable, verifiable, and practically valuable work outcomes.",
+      "authors": [
+        "Zishan Xu",
+        "Enjun Du",
+        "Mingqi Gao",
+        "Cheng Yang",
+        "Junhao Shen",
+        "Zirong Chen",
+        "Zhiyuan Yao",
+        "Yifu Guo",
+        "Yuquan Lu",
+        "Jinyang Huang",
+        "Zhengxi Lu",
+        "Siyi Liu",
+        "Ziyu Zheng",
+        "Yongqi Zhang",
+        "Difan Zou",
+        "Weiwen Liu"
+      ],
+      "hf_upvotes": 116,
+      "hf_url": "https://huggingface.co/papers/2610.35845",
+      "github_repo": "https://github.com/EnjunDu/awesome-working-agent",
+      "github_repo_source": "hf",
+      "github_stars": 71,
+      "project_page": "https://enjundu.com/blog/working_agents",
+      "organization": "Shanghai Jiao Tong University",
+      "hf_published": "2026-10-26",
+      "hf_featured": "2026-10-27",
+      "abs_url": "https://arxiv.org/abs/2610.35845",
+      "pdf_url": "https://arxiv.org/pdf/2610.35845",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 13.27,
+      "score_breakdown": {
+        "keyword_raw": 2,
+        "keyword_matched": [
+          "optimization"
+        ],
+        "category": 0.0,
+        "popularity": 10.77,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 116 赞 ｜ 💻 [代码](https://github.com/EnjunDu/awesome-working-agent)",
+      "authors_display": "Zishan Xu, Enjun Du, Mingqi Gao, Cheng Yang, Junhao Shen, Zirong Chen 等 16 人"
+    },
+    {
+      "arxiv_id": "2610.32195",
+      "title": "Principia: Test-Time Hypotheses to Principle Construction for Scientific Discovery",
+      "abstract": "Scientific discovery requires identifying the scientific principles underlying observed phenomena to guide further investigation. As these empirical principles are often unknown in complex discovery processes, they are constructed via a hypotheses-to-principle pipeline to obtain recurring causalities from progressively accumulated observations during test-time discovery. However, constructing this knowledge requires substantial domain expertise, time, and effort, making this translation stage a bottleneck for scientific discovery. To address this limitation, we propose Principia, an LLM-based framework that constructs and continually refines scientific principles at test time. Drawing on how human researchers develop principles, Principia forms comparative causal hypotheses from related inputs and their observed outcomes, then synthesizes recurring relationships across these hypotheses into inductive principles. By applying the constructed hypotheses and inductive principles to the task, it obtains new observations, revises the hypotheses used based on these new observations, and reconstructs principles from the updated hypotheses, allowing scientific knowledge to continuously evolve throughout test-time discovery. Across benchmarks spanning molecular optimization, protein engineering, gene perturbation, and molecular property prediction, Principia outperforms baselines relying on internal knowledge, external sources, or experience summaries, while generating principles that are plausible and consistent with the scientific literature, demonstrating its effectiveness in constructing and refining task-specific hypotheses and principles at test time for scientific discovery. Our code is available at https://github.com/DongkiKim95/Principia.",
+      "authors": [
+        "Dongki Kim",
+        "Sangwoo Park",
+        "Jinheon Baek",
+        "Soyeong Jeong",
+        "Sung Ju Hwang"
+      ],
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.32195",
+      "pdf_url": "https://arxiv.org/pdf/2610.32195v1",
+      "hf_upvotes": 42,
+      "hf_url": "https://huggingface.co/papers/2610.32195",
+      "organization": "KAIST AI",
+      "hf_published": "2026-10-23",
+      "hf_featured": "2026-10-27",
+      "sources": [
+        "hf"
+      ],
+      "github_repo": "https://github.com/DongkiKim95/Principia",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 8.75,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 11.487,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "optimization",
+          "protein",
+          "molecular"
+        ],
+        "category": 2.75,
+        "popularity": 7.8,
+        "stars_counted": 2,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 2,
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 42 赞 ｜ 💻 [代码](https://github.com/DongkiKim95/Principia)",
+      "authors_display": "Dongki Kim, Sangwoo Park, Jinheon Baek, Soyeong Jeong, Sung Ju Hwang"
+    },
+    {
+      "arxiv_id": "2610.34415",
+      "title": "Spatial Audio Generation and Editing with Executable Plans and Self-Distilling Transfusion",
+      "abstract": "Spatial audio authoring coordinates source decisions with soundfield synthesis. For editing, plans specify what to change and retain, while reference audio supplies further acoustic detail. We present AMBIT, a unified framework for native First-Order Ambisonics (FOA) generation and editing with three connected contributions. First, a shared Transfusion backbone couples autoregressive planning with rectified-flow rendering through executable ScenePlans that specify source content, activity, and 3D trajectories. For editing, the plan describes the full target scene, including retained sources; contrastive features ground the requested change, while full reference latents supply residual acoustic detail for preservation. Second, an FOA-aware continuous VAE combines shared-decoder omnidirectional recovery, asymmetric grouped KL, and spatial covariance matching to preserve content and inter-channel structure. Third, joint Transfusion on-policy self-distillation (OPSD) refines planning on student-generated prefixes and rendering at sampling states reached under student plans, with target-conditioned teachers supervising both modes of the shared student. Evaluations across speech, music, and sound show improved generation content and spatial quality, acoustic fidelity during instruction-guided editing, and unedited-source preservation over the compared baselines. Project page: https://wjm-george.github.io/AMBIT/",
+      "authors": [
+        "Kam Man Wu",
+        "Yu Zhang",
+        "Pengjun Fang",
+        "Mingfei Chen",
+        "Weijia Chen",
+        "Zeyue Tian",
+        "Qifeng Chen"
+      ],
+      "hf_upvotes": 50,
+      "hf_url": "https://huggingface.co/papers/2610.34415",
+      "github_repo": "https://github.com/WJM-George/AMBIT",
+      "github_repo_source": "hf",
+      "github_stars": 20,
+      "project_page": "https://wjm-george.github.io/AMBIT/",
+      "organization": "NoizAI",
+      "hf_published": "2026-10-25",
+      "hf_featured": "2026-10-27",
+      "abs_url": "https://arxiv.org/abs/2610.34415",
+      "pdf_url": "https://arxiv.org/pdf/2610.34415",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 1.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 9.321,
+      "score_breakdown": {
+        "keyword_raw": 1,
+        "keyword_matched": [
+          "audio"
+        ],
+        "category": 0.0,
+        "popularity": 7.07,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 50 赞 ｜ 💻 [代码](https://github.com/WJM-George/AMBIT)",
+      "authors_display": "Kam Man Wu, Yu Zhang, Pengjun Fang, Mingfei Chen, Weijia Chen, Zeyue Tian 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.31668",
+      "title": "Reading, Writing, Sharing, and Interacting with the World through Video",
+      "abstract": "Video foundation models have advanced rapidly in understanding and generating visual sequences, while video world models seek to capture the underlying dynamics of the world they depict. Despite their different objectives, both concern the relationship between video observations and an evolving world. This survey adopts world modeling as a unifying lens for examining these developments. Viewing an observed video as a partial, lossy, and temporally ordered projection of a latent temporal world, we organize the literature around four complementary operations: reading infers world properties from observed video; writing synthesizes video from specified or learned world conditions; sharing integrates understanding and generation through common modeling mechanisms; and interacting predicts and updates world states under actions and evolving observations. This perspective distinguishes temporal coherence in observed or generated sequences from consistency in the underlying world state. Across tasks, representations, models, datasets, and benchmarks, we trace a shift in emphasis from clip-level recognition and perceptual fidelity toward persistent state, controllable evolution, physical and causal validity, and evaluation grounded in interaction and downstream decisions, and we distill the open challenges that follow.",
+      "authors": [
+        "Shengqiong Wu",
+        "Meng Luo",
+        "Bobo Li",
+        "Ziwei Liu",
+        "Shuicheng Yan",
+        "Ming-Hsuan Yang",
+        "Philip Torr",
+        "Hao Fei"
+      ],
+      "hf_upvotes": 47,
+      "hf_url": "https://huggingface.co/papers/2610.31668",
+      "github_repo": "https://github.com/vid-gen/awesome-video-world-model",
+      "github_repo_source": "hf",
+      "github_stars": 34,
+      "project_page": "https://vid-gen.github.io/video-world-model-survey/",
+      "organization": "University of Oxford",
+      "hf_published": "2026-10-22",
+      "hf_featured": "2026-10-26",
+      "abs_url": "https://arxiv.org/abs/2610.31668",
+      "pdf_url": "https://arxiv.org/pdf/2610.31668",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 8.856,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 6.86,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 47 赞 ｜ 💻 [代码](https://github.com/vid-gen/awesome-video-world-model)",
+      "authors_display": "Shengqiong Wu, Meng Luo, Bobo Li, Ziwei Liu, Shuicheng Yan, Ming-Hsuan Yang 等 8 人"
+    },
+    {
+      "arxiv_id": "2601.15351",
+      "title": "OmniSpectra: A Unified Foundation Model for Universal Spectra Representation Learning",
+      "abstract": "Standard sequence models encode position by token rank rather than physical coordinate, typically forcing practitioners to destructively resample continuous physical signals such as spectra observed across heterogeneous instruments. We identify this coordinate mismatch as a structural limitation in cross-instrument representation learning, and propose OmniSpectra, a wavelength-native foundation model for spectral representation learning: a continuous-coordinate masked autoencoder that discards the integer pixel indexing of sequence modeling. Mapping physical coordinates to a logarithmic basis turns the multiplicative scaling induced by cosmological redshift into a uniform additive shift. In continuous rotary position embeddings, this shared shift cancels from relative token distances rather than producing grid-dependent positional distortion. We further counter the spectral bias inherent to implicit neural decoders with a physics-grounded, resolution-gated Fourier decoder that provides anti-aliasing. Pretrained on eight surveys and benchmarked against seven baselines, our model reaches state-of-the-art performance with only 12.2M parameters while outperforming substantially larger models, indicating that encoding physical structure can substitute for parameter scale.",
+      "authors": [
+        "Md Khairul Islam",
+        "Zeyu Xia",
+        "Adam S. Bolton",
+        "Judy Fox"
+      ],
+      "published": "2026-01-21",
+      "updated": "2026-10-23",
+      "primary_category": "astro-ph.IM",
+      "categories": [
+        "astro-ph.IM",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2601.15351",
+      "pdf_url": "https://arxiv.org/pdf/2601.15351v2",
+      "hf_upvotes": 44,
+      "hf_url": "https://huggingface.co/papers/2601.15351",
+      "hf_published": "2026-10-23",
+      "hf_featured": "2026-10-29",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 3.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.571,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "representation learning"
+        ],
+        "category": 0.75,
+        "popularity": 6.63,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 44 赞",
+      "authors_display": "Md Khairul Islam, Zeyu Xia, Adam S. Bolton, Judy Fox"
+    },
+    {
+      "arxiv_id": "2610.32894",
+      "title": "LoCA: Enabling Multi-Modality in Geospatial Location Encoders",
+      "abstract": "Location encoders map geographic coordinates to high-dimensional descriptors through contrastive alignment with paired Earth Observation imagery. We prove that this construction is structurally limited: any Lipschitz location encoder produces an output of intrinsic dimension at most 2, regardless of architecture or bandwidth, which forces the contrastive loss to strictly exceed its asymptotic optimum. Empirically, joint training also collapses the encoder's embedding covariance to low rank. Although dimension-limited, current location encoders sidestep this spectral collapse by training against a frozen image encoder, which we reinterpret as a covariance regularizer that supplies a high-rank target for the location encoder to fold onto. However, extending this approach to multimodal inputs is challenging, as location encoders should simultaneously map a single location to multiple, potentially incompatible, descriptors. We identify two requirements a regularizer must satisfy for location encoding in multimodal regimes: co-alignment across modalities, since adapters alone cannot align independently pretrained encoders; and high effective rank, since the location encoder inherits its target's spectrum. We propose LoCA (Location Contrastive Alignment), a two-stage pipeline that satisfies both. Stage 1 jointly trains Sentinel-1 and Sentinel-2 encoders with contrastive learning, producing a co-aligned, high-rank multimodal target. Stage 2 freezes the image encoders and trains a location and a tabular metadata encoder as projection adapters with multi-view contrastive learning. Against five state-of-the-art encoders on 17 tasks ranging from land cover and wildfire forecasting to geophysical, socio-economic, biodiversity and climate applications, LoCA achieves the most task wins, is the only model to outperform every other on a majority of tasks, and wins 68.8% of all per-task comparisons.",
+      "authors": [
+        "Panagiotis Koromilas",
+        "Eleanna Vali",
+        "Diogenis Antonopoulos",
+        "Eleni Saka",
+        "Dimitris Christofis",
+        "Nikolaos Ioannis Bountos",
+        "Konstantin Klemmer",
+        "Ioannis Papoutsis",
+        "Yannis Panagakis",
+        "Mihalis A. Nicolaou"
+      ],
+      "hf_upvotes": 5,
+      "hf_url": "https://huggingface.co/papers/2610.32894",
+      "github_repo": "https://github.com/eleannavali/LoCA",
+      "github_repo_source": "hf",
+      "github_stars": 4,
+      "hf_published": "2026-10-23",
+      "hf_featured": "2026-10-26",
+      "abs_url": "https://arxiv.org/abs/2610.32894",
+      "pdf_url": "https://arxiv.org/pdf/2610.32894",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 5.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 6.917,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "forecasting",
+          "contrastive learning"
+        ],
+        "category": 0.0,
+        "popularity": 4.17,
+        "stars_counted": 4,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 5 赞 ｜ 💻 [代码](https://github.com/eleannavali/LoCA)",
+      "authors_display": "Panagiotis Koromilas, Eleanna Vali, Diogenis Antonopoulos, Eleni Saka, Dimitris Christofis, Nikolaos Ioannis Bountos 等 10 人"
+    },
+    {
+      "arxiv_id": "2610.37364",
+      "title": "EmbeddingGemma 2: Unified and Efficient Multimodal Representations",
+      "abstract": "We present EmbeddingGemma 2, an open multimodal embedding model which natively represents text, images, audio, video, and combinations thereof in a unified space. Our approach introduces improvements such as simplified per-layer embeddings and a multi-stage curriculum with modality and objective progression which ensure strong quality across unimodal, cross-modal, and mixed-modal evaluations. Notably, in comprehensive embedding benchmarks across all modalities, EmbeddingGemma 2 establishes a new Pareto frontier, outperforming both specialist models and models two to twelve times larger. Furthermore, our design offers flexibility for resource-constrained environments, supporting selective modality encoder loading, adjustable vision token budgets, truncatable embedding dimensions, and quantized weights. We present ablations analyzing key decisions and release EmbeddingGemma 2 to promote further research.",
+      "authors": [
+        "Henrique Schechter Vera",
+        "Sahil Dua",
+        "Jovan Andonov",
+        "Sara Smoot",
+        "Sebastian Russo",
+        "Ivan Llanos",
+        "Max Matveev",
+        "Jae Hyeon Yoo",
+        "Kat Black",
+        "Shih-Cheng Huang",
+        "Josiah Aklilu",
+        "Maarten Grootendorst",
+        "Omar Sanseviero",
+        "Chandramouli Amarnath",
+        "Ian Ballantyne",
+        "Zhe Li",
+        "Daniel Salz",
+        "Ibrahim Alabdulmohsin",
+        "Ilya Philippov",
+        "Kristen Quan",
+        "Glenn Cameron",
+        "Edouard Yvinec",
+        "Luciano Martins",
+        "Doug Reid",
+        "Sindhu Raghuram Panyam",
+        "Weiyi Wang",
+        "Hengxuan Ying",
+        "Madhuri Shanbhogue",
+        "Tanmaya Dabral",
+        "Shanfeng Zhang",
+        "Juyeong Ji",
+        "Renjie Wu",
+        "Joe Zou",
+        "Xu Chen",
+        "Yunan Zhang",
+        "Yu-Hui Chen",
+        "Matthew Soulanille",
+        "Vinod Mamillapalli",
+        "Yi-Chun Kuo",
+        "Wai Hon Law",
+        "Matt Kreileder",
+        "Alice Zheng",
+        "Suril Shah",
+        "Mogan Shieh",
+        "Pooja Consul",
+        "Alberto Montes",
+        "Andreas Hess",
+        "Andres Sevilla",
+        "Babak Samari",
+        "Brendan McCloskey",
+        "Brian Potetz",
+        "Daniel Cer",
+        "Georgios Kathareios",
+        "Gustavo Hernández Ábrego",
+        "Hesen Zhang",
+        "Ji Ma",
+        "Jiaxing Wu",
+        "Keegan Mosley",
+        "Paul Suganthan",
+        "Rui Meng",
+        "Shen Gao",
+        "Shengcao Cao",
+        "Yi-Ting Chen",
+        "Yichang Chen",
+        "Zhongli Ding",
+        "Kendra Byrne",
+        "Cormac Brick",
+        "Olivier Lacombe",
+        "Qin Yin",
+        "Tris Warkentin",
+        "Armand Joulin",
+        "Tom Duerig",
+        "Mojtaba Seyedhosseini"
+      ],
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL",
+        "cs.CV",
+        "cs.SD"
+      ],
+      "comment": "28 pages. Models are available on HuggingFace (at https://huggingface.co/google/embeddinggemma-2) and LiteRT (at https://huggingface.co/litert-community/embeddinggemma-2-740m-litert-lm)",
+      "abs_url": "https://arxiv.org/abs/2610.37364",
+      "pdf_url": "https://arxiv.org/pdf/2610.37364v1",
+      "hf_upvotes": 30,
+      "hf_url": "https://huggingface.co/papers/2610.37364",
+      "organization": "Google",
+      "hf_published": "2026-10-27",
+      "hf_featured": "2026-10-28",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "project_page": "https://huggingface.co/google/embeddinggemma-2",
+      "theme": "deep-learning",
+      "fit": 3.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 6.727,
+      "score_breakdown": {
+        "keyword_raw": 1,
+        "keyword_matched": [
+          "audio"
+        ],
+        "category": 2.0,
+        "popularity": 5.48,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 30 赞",
+      "authors_display": "Henrique Schechter Vera, Sahil Dua, Jovan Andonov, Sara Smoot, Sebastian Russo, Ivan Llanos 等 73 人"
+    },
+    {
+      "arxiv_id": "2610.36095",
+      "title": "Instruction Capacity: Behavior and Degradation of Language Models under Controlled Load",
+      "abstract": "The quality with which language models follow instructions falls as the load grows, yet there is still no quantity that expresses the limit of a model in units of load with an uncertainty. We propose an instrument in which the load consists of rules that replace single-token words in a text without meaning: such an instruction is atomic, the rules are independent by the construction of the task, and the outcome of every application of a rule is determined by a computable reference answer. Every occurrence of a word to be replaced becomes a Bernoulli trial with a known position in the answer and a known rule number. The statistical model first measures the shape of the dependence of the probability of a right replacement on the text length, the word position, the replacement density, the number of rules and the rule number, then describes it by smooth laws and restores a reference level that does not depend on the choice of the coding. The model yields the instruction capacity - the number of rules held at a given share of right replacements - with an uncertainty. A measurement of GPT-4o mini (2958 requests, 642,430 trials) gave regular laws for every load factor and for the collapse of the answer; the instruction capacity was about 37-38 rules at a share of right replacements of 0.95, and about 18-19 rules at the full replacement density. The code of the instrument, the measurement data and the passport are open, and every number of the passport is recomputed from the published points. The passport of a model serves as the calibration of a future meter of the instruction load of prompts.",
+      "authors": [
+        "Hennadii Kutomanov"
+      ],
+      "published": "2026-10-26",
+      "updated": "2026-10-26",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "70 pages, 20 figures. Code and data: https://github.com/kutomanovhennadii/instruction-capacity",
+      "abs_url": "https://arxiv.org/abs/2610.36095",
+      "pdf_url": "https://arxiv.org/pdf/2610.36095v1",
+      "hf_upvotes": 4,
+      "hf_url": "https://huggingface.co/papers/2610.36095",
+      "github_repo": "https://github.com/kutomanovhennadii/instruction-capacity",
+      "github_repo_source": "hf",
+      "github_stars": 0,
+      "project_page": "https://huggingface.co/spaces/kutomanovhennadii/iec-instrument",
+      "hf_published": "2026-10-26",
+      "hf_featured": "2026-10-29",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.5,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "uncertainty",
+          "calibration"
+        ],
+        "category": 2.0,
+        "popularity": 2.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 4 赞 ｜ 💻 [代码](https://github.com/kutomanovhennadii/instruction-capacity)",
+      "authors_display": "Hennadii Kutomanov"
+    },
+    {
+      "arxiv_id": "2610.17117",
+      "title": "Gluing Local Contexts into Global Meaning: A Sheaf-Theoretic Decomposition of Transformer Representations",
+      "abstract": "Existing interpretability tools do not test whether a representation keeps the same content when only the phrasing changes. We treat each paraphrase pair as a local witness that two activations should agree and build a cellular sheaf over the paraphrase graph; its Laplacian L_F answers the question on a frozen model with no training. The kernel H^0 is a content subspace: at 20 dimensions it beats the preserved subspace of the concept eraser LEACE on held-out CounterFact fact retrieval across eight architectures by a mean +17.1\\,pp, and constraining all paraphrases of a fact jointly adds a further +6.5\\,pp. The spectral complement concentrates causal influence: ablating the most paraphrase-variable coordinates, a coordinate-wise proxy for it, changes model outputs 5.6 to 26.5times more than ablating coordinates of matched per-coordinate variability, across nine models from 124M to 13B parameters. Stacking layers into a grid creates b_1 = N(L-1) algebraic 1-cycles, and the resulting model-derived harmonic mass varies by nearly three orders of magnitude across six architectures and ranks them as their steering fragility does (Spearman ρ= 0.90, exact one-sided permutation p = 0.014). The same paraphrase graph yields the content subspace, the influence directions, and the fragility measure. Project page: https://cwru-aism.github.io/gluing-lc-page/",
+      "authors": [
+        "Bryce Grant",
+        "Peng Wang"
+      ],
+      "published": "2026-10-12",
+      "updated": "2026-10-30",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "comment": "NeurIPS 2026 Poster, ICLR Unifying Concept Representation Learning",
+      "abs_url": "https://arxiv.org/abs/2610.17117",
+      "pdf_url": "https://arxiv.org/pdf/2610.17117v2",
+      "hf_upvotes": 3,
+      "hf_url": "https://huggingface.co/papers/2610.17117",
+      "github_repo": "https://github.com/CWRU-AISM/gluing-lc",
+      "github_repo_source": "hf",
+      "github_stars": 0,
+      "project_page": "https://cwru-aism.github.io/gluing-lc-page/",
+      "hf_published": "2026-10-12",
+      "hf_featured": "2026-10-27",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 7.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.482,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "representation learning",
+          "interpretability"
+        ],
+        "category": 1.0,
+        "popularity": 1.73,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 3 赞 ｜ 💻 [代码](https://github.com/CWRU-AISM/gluing-lc)",
+      "authors_display": "Bryce Grant, Peng Wang"
+    },
+    {
+      "arxiv_id": "2610.36184",
+      "title": "Lipi-Ghor: A Large-Scale, Diarized, Multi-Domain Bengali Speech Corpus and a Scalable Pipeline for Building It",
+      "abstract": "Bengali, spoken by over 230 million people, remains severely under-resourced in spoken language research. Existing open Bengali ASR corpora are confined to short, read or crowd-sourced speech and lack speaker diarization and long-form audio. We present Lipi-Ghor, a large-scale weakly-supervised Bengali speech corpus comprising 885 hours of audio sourced from 998 YouTube videos across 596 unique channels, spanning 17 diverse domains including audiobooks, drama, religious sermons, news, and regional dialects. Each recording is annotated in SSTT format (Speaker, Speech, Transcription, Timestamp), which combines automated diarization with Bengali YouTube caption tracks. To our knowledge, Lipi-Ghor is the first Bengali speech corpus to pair large-scale coverage with speaker-diarized, long-form audio annotations, both of which are absent from existing open Bengali resources. We also present the construction methodology as a replicable pipeline for any language with a sufficient captioned YouTube presence. Targeted channel curation across a handful of rich domains yields corpus scales that were previously out of reach for low-resource languages. We benchmark four widely-used ASR models under zero-shot and fine-tuned conditions. All four degrade consistently on emotive, dialectal, and long-form content. Because caption targets are noisy, we also release a human-annotated gold evaluation split, verified by 17 volunteer annotators over 30 hours of human-in-the-loop correction and stratified across all 17 domains. We release our original contributions (video-ID lists, diarization output, pipeline code, and the gold annotations) under CC-BY-4.0, and distribute caption-derived transcripts for research use only; no raw audio is redistributed.",
+      "authors": [
+        "Sanjid Hasan",
+        "A H M Fuad",
+        "Risalat Labib",
+        "Bayazid Hasan Simon"
+      ],
+      "published": "2026-10-26",
+      "updated": "2026-10-26",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "comment": "12 pages, 7 figures. Published in the Proceedings of the Speech and Audio Language Models Workshop (2nd Edition), pages 190-201, 2026",
+      "abs_url": "https://arxiv.org/abs/2610.36184",
+      "pdf_url": "https://arxiv.org/pdf/2610.36184v1",
+      "hf_upvotes": 1,
+      "hf_url": "https://huggingface.co/papers/2610.36184",
+      "github_repo": "https://github.com/Sanjidh090/Lipi-Ghor-bn-882-SSTT",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "project_page": "https://lipi-ghor.github.io/",
+      "organization": "Team Villagers",
+      "hf_published": "2026-10-26",
+      "hf_featured": "2026-10-28",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 4.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.832,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "asr",
+          "audio"
+        ],
+        "category": 0.0,
+        "popularity": 1.83,
+        "stars_counted": 1,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 1 赞 ｜ 💻 [代码](https://github.com/Sanjidh090/Lipi-Ghor-bn-882-SSTT)",
+      "authors_display": "Sanjid Hasan, A H M Fuad, Risalat Labib, Bayazid Hasan Simon"
+    },
+    {
+      "arxiv_id": "2610.17821",
+      "title": "FLOMSS: Generative Music Source Separation by Flow Matching",
+      "abstract": "Music source separation (MSS) has been conventionally addressed by discriminative methods. Recently, flow matching has emerged as a strong generative paradigm for modeling complex data distributions, with successful applications across diverse domains. These advances motivate us to systematically investigate flow matching for MSS in a four-source (Vocals, Bass, Drums, Other) setting in full-band stereo. Specifically, we investigate prediction targets, flow paths, single-source versus multi-source modeling, and mixture consistency constraints. Beyond the signal-level metrics commonly used for MSS, such as signal-to-distortion ratio, we further evaluate MSS methods using embedding-based metrics, as well as a listening test, providing a comprehensive benchmark. On MUSDB18-HQ, our proposed model exhibits competitive performance in both objective and subjective tests, highlighting the potential of flow matching for generative MSS. Demo: https://ik4sumii.github.io/FLOMSS/",
+      "authors": [
+        "Shuyang Cui",
+        "Zhi Zhong",
+        "Keisuke Toyama",
+        "Koichi Saito",
+        "Qiyu Wu",
+        "Yukara Ikemiya",
+        "Junghyun Koo",
+        "Kin Wai Cheuk",
+        "Woosung Choi",
+        "Giorgio Fabbro",
+        "Wei-Hsiang Liao",
+        "Shusuke Takahashi",
+        "Yuki Mitsufuji"
+      ],
+      "hf_upvotes": 12,
+      "hf_url": "https://huggingface.co/papers/2610.17821",
+      "project_page": "https://ik4sumii.github.io/FLOMSS/",
+      "hf_published": "2026-10-14",
+      "hf_featured": "2026-10-26",
+      "abs_url": "https://arxiv.org/abs/2610.17821",
+      "pdf_url": "https://arxiv.org/pdf/2610.17821",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 3.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.714,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "flow matching"
+        ],
+        "category": 0.0,
+        "popularity": 3.46,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 12 赞",
+      "authors_display": "Shuyang Cui, Zhi Zhong, Keisuke Toyama, Koichi Saito, Qiyu Wu, Yukara Ikemiya 等 13 人"
+    },
+    {
+      "arxiv_id": "2610.29477",
+      "title": "TenetBench: A Clause-Anchored Russian Corpus for Evaluating Language Models against Professional Codes of Ethics",
+      "abstract": "Codes of professional ethics guide and restrict specialists, who increasingly work with assistants built on large language models. Such an assistant can breach the user's code, or help the user breach it, without the user noticing. Evaluations reporting broad categories of harm cannot show how often this happens or which provision is breached. TenetBench pairs 3,433 requests conflicting with clauses of fifteen Russian-language professional codes with benign twins that differ only in the legitimacy of what is asked. An automated pipeline generates the tasks from the text of a code, so the corpus grows with every code added and a provision yields new tasks on every run. It also produced tasks and human-validated verdicts from two English codes of other jurisdictions. In human validation of the frozen pipeline, specialists rated 0.995 of the conflicting tasks plausible, and the model judge agreed with the adjudicated label at Gwet's AC1 of at least 0.894 on 1,860 elements. We evaluated fourteen model and reasoning-mode combinations on whether they produce the conflicting text, decline or warn. Eleven of the fourteen produce conflicting content on most such requests, mostly without a warning, and nearly three warnings in four accompany conflicting content. The models that conform more do so by declining while still serving the legitimate twin, and enabling reasoning halved the refusals of two models. We hope the dataset and pipeline will help evaluate how language models observe professional norms and let diagnostic datasets be built for particular professions and organisations.",
+      "authors": [
+        "Yegor Anichkov",
+        "Valery Vinogradov",
+        "Andrey Furov",
+        "Marina Polukoshko",
+        "Sergey Bolovtsov"
+      ],
+      "hf_upvotes": 21,
+      "hf_url": "https://huggingface.co/papers/2610.29477",
+      "hf_published": "2026-10-21",
+      "hf_featured": "2026-10-26",
+      "abs_url": "https://arxiv.org/abs/2610.29477",
+      "pdf_url": "https://arxiv.org/pdf/2610.29477",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 4.583,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 4.58,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 21 赞",
+      "authors_display": "Yegor Anichkov, Valery Vinogradov, Andrey Furov, Marina Polukoshko, Sergey Bolovtsov"
+    },
+    {
+      "arxiv_id": "2610.41956",
+      "title": "Chronos-2: A foundation model for multivariate time series forecasting",
+      "abstract": "Accurate forecasting with uncertainty quantification is critical in a variety of scientific applications ranging from epidemiology and economics to energy systems and earth sciences. Yet most forecasting models still need to be developed and trained separately for each domain-specific dataset. Time series foundation models (TSFMs) aim to remove this limitation and enable the application of the same model across domains through large-scale pretraining. However, most existing TSFMs treat each time series independently and therefore cannot model interactions among time series and external drivers. Here, we introduce Chronos-2, a foundation model for zero-shot forecasting that models the interactions between multivariate time series and heterogeneous covariates, which commonly arise in scientific applications. The model infers relationships among time series directly from historical context and generates probabilistic forecasts without task-specific treatment. Across various benchmarks, Chronos-2 achieves state-of-the-art accuracy on average by improving skill scores by 5.2 percentage points relative to the strongest baselines and increasing win rates by 10 percentage points. Chronos-2 is also computationally efficient, generating forecasts for 100 time series in under one second on a single mid-range GPU, 50x and 1000x faster end-to-end than the best task-specific point and probabilistic forecasters, respectively. In addition, we demonstrate its effectiveness in diverse scientific settings -- including infectious-disease forecasting, macroeconomic modeling, carbon-flux prediction, and runoff simulation -- where the model matches or surpasses specialized methods developed for each domain. These results show that a single pretrained model can capture structure shared across temporal systems.",
+      "authors": [
+        "Abdul Fatir Ansari",
+        "Oleksandr Shchur",
+        "Jaris Küken",
+        "Andreas Auer",
+        "Boran Han",
+        "Pedro Mercado",
+        "Syama Sundar Rangapuram",
+        "Huibin Shen",
+        "Lorenzo Stella",
+        "Xiyuan Zhang",
+        "Mononito Goswami",
+        "Shubham Kapoor",
+        "Danielle C. Maddix",
+        "Pablo Guerron",
+        "Florian Saupe",
+        "Markus Reichstein",
+        "Tony Hu",
+        "Junming Yin",
+        "Nick Erickson",
+        "Prateek Mutalik Desai",
+        "Hao Wang",
+        "Huzefa Rangwala",
+        "George Karypis",
+        "Yuyang Wang",
+        "Michael Bohlke-Schneider"
+      ],
+      "published": "2026-10-30",
+      "updated": "2026-10-30",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "comment": "41 pages, 9 figures. Extended version of the Chronos-2 technical report (arXiv:2510.15821), adding scientific case studies (epidemiology, macroeconomics, carbon flux, hydrology, hierarchical forecasting), additional baselines, ablation studies, and calibration analysis. Code: https://github.com/amazon-science/chronos-forecasting",
+      "abs_url": "https://arxiv.org/abs/2610.41956",
+      "pdf_url": "https://arxiv.org/pdf/2610.41956v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/amazon-science/chronos-forecasting",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 11.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.438,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "time series",
+          "forecasting",
+          "uncertainty",
+          "calibration"
+        ],
+        "category": 2.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/amazon-science/chronos-forecasting)",
+      "authors_display": "Abdul Fatir Ansari, Oleksandr Shchur, Jaris Küken, Andreas Auer, Boran Han, Pedro Mercado 等 25 人"
+    },
+    {
+      "arxiv_id": "2610.31288",
+      "title": "DISC: Domain-Integrated Similarity Cost for Time-Series Dataset",
+      "abstract": "The growth of time-series datasets and foundation models has made dataset comparison a central part of time-series workflows. Assessing source-target transfer before model adaptation requires similarity estimates that can summarize transfer-related dataset relationships without exhaustive source-target evaluation over every candidate pair. Many metrics have been proposed for measuring similarity between time-series datasets, but they capture different dataset relationships and vary in how well they align with downstream utility across tasks. We evaluate this gap by measuring the correlation between source-target similarity scores and downstream forecasting errors in out-of-distribution and transfer-learning settings. We propose Domain-Integrated Similarity Cost (DISC), a learnable aggregation framework that uses calibration transfer observations to select, weight, and combine similarity metrics for different downstream tasks. By integrating complementary metric values, DISC better distinguishes source-target dataset differences that matter for downstream behavior. After calibration, DISC scores source-target pairs using only their similarity-metric values and yields higher alignment than single-metric references on the reported split. These results show that time-series dataset similarity is task-dependent, and that learned metric integration provides a stronger proxy for downstream transfer behavior than manually selecting one similarity metric.",
+      "authors": [
+        "Yen-Ku Liu",
+        "Hongjie Chen",
+        "Franck Dernoncourt",
+        "Ryan Rossi"
+      ],
+      "hf_upvotes": 8,
+      "hf_url": "https://huggingface.co/papers/2610.31288",
+      "hf_published": "2026-10-22",
+      "hf_featured": "2026-10-26",
+      "abs_url": "https://arxiv.org/abs/2610.31288",
+      "pdf_url": "https://arxiv.org/pdf/2610.31288",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.328,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "forecasting",
+          "calibration",
+          "out-of-distribution"
+        ],
+        "category": 0.0,
+        "popularity": 2.83,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 8 赞",
+      "authors_display": "Yen-Ku Liu, Hongjie Chen, Franck Dernoncourt, Ryan Rossi"
+    },
+    {
+      "arxiv_id": "2610.37963",
+      "title": "Self-Supervised Latent Action-Conditioned World Modeling for Time Series",
+      "abstract": "Time-series data play an important role in various tasks, such as weather forecasting, web traffic analysis, and speech recognition. Recently, pioneering studies have increasingly adopted Joint-Embedding Predictive Architecture (JEPA) based encoders to learn time-series representations through latent-space prediction. However, they often overlook the underlying factors governing transitions between time-series observations. In this work, we hypothesize that explicitly modeling the information behind changes in time series can facilitate time-series modeling. Building on this hypothesis, we propose ACTS-WM, a self-supervised latent action-conditioned world model framework for time-series analysis. First, we introduce a latent action modeling approach that infers the underlying information behind time-series transitions as latent actions, without requiring explicit action annotations. We then develop a JEPA-based encoder and an action-conditioned world model to predict target time-series representations conditioned on the learned latent actions and task information. We evaluate ACTS-WM across 4 representative tasks on 22 datasets from diverse domains, covering univariate and multivariate forecasting and classification. Comprehensive experiments demonstrate that ACTS-WM can improve downstream performance over pretrained JEPA-based encoders by learning complementary representations.",
+      "authors": [
+        "Chia-Han Kuo",
+        "Chengshuai Zhao",
+        "Huan Liu",
+        "Lo Pang-Yun Ting"
+      ],
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.37963",
+      "pdf_url": "https://arxiv.org/pdf/2610.37963v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 15.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.938,
+      "score_breakdown": {
+        "keyword_raw": 13,
+        "keyword_matched": [
+          "time series",
+          "forecasting",
+          "self-supervised",
+          "speech recognition",
+          "weather"
+        ],
+        "category": 2.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Chia-Han Kuo, Chengshuai Zhao, Huan Liu, Lo Pang-Yun Ting"
+    },
+    {
+      "arxiv_id": "2610.35032",
+      "title": "AutoPRL: Automated Path Representation Learning via a Learnable View Generator",
+      "abstract": "Self-supervised learning has emerged as a powerful paradigm for Path Representation Learning (PRL) in road networks. PRL aims to learn informative representations of paths traversed by moving objects, such as vehicles, where each path consists of a sequence of connected road segments. These representations are essential for various downstream tasks, including travel-time estimation and path ranking. However, existing methods often suffer from ineffective view generation and inefficient training procedures due to their reliance on heuristic augmentations and computationally intensive contrastive learning. To address these issues, we propose AutoPRL, an effective and efficient self-supervised PRL framework that integrates three key components. The Automatic Data Augmentation (AutoDA) module employs variational autoencoders to generate semantically meaningful and diverse feature-level path views by modeling each topology-aware node embedding with a Gaussian latent distribution, thereby mitigating information loss and enhancing representation quality. Second, the Cross-View Decoupled Contrastive (CVDC) learning mechanism improves training efficiency by disentangling the optimization of positive and negative pairs across node- and path-level views, enabling more stable contrastive learning. Third, an Adaptive Co-Training (ACT) module dynamically adjusts uncertainty-based loss weights to balance multiple objectives, ensuring efficient and scalable training. Extensive experiments on three real-world datasets demonstrate that AutoPRL achieves strong and consistent performance in both effectiveness and efficiency across multiple downstream tasks.",
+      "authors": [
+        "Sean Bin Yang",
+        "Ying Sun",
+        "Yunyao CHeng",
+        "Hao Miao",
+        "Jilin Hu",
+        "Bin Yang",
+        "Torben Bach Pedersen",
+        "Christian S. Jensen"
+      ],
+      "published": "2026-10-26",
+      "updated": "2026-10-26",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "Accepted by IEEE TKDE 2026",
+      "abs_url": "https://arxiv.org/abs/2610.35032",
+      "pdf_url": "https://arxiv.org/pdf/2610.35032v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 15.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.938,
+      "score_breakdown": {
+        "keyword_raw": 13,
+        "keyword_matched": [
+          "optimization",
+          "self-supervised",
+          "contrastive learning",
+          "representation learning",
+          "uncertainty"
+        ],
+        "category": 2.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Sean Bin Yang, Ying Sun, Yunyao CHeng, Hao Miao, Jilin Hu, Bin Yang 等 8 人"
+    },
+    {
+      "arxiv_id": "2610.34663",
+      "title": "Video World Models Need Predictable Latents",
+      "abstract": "Video world models trained on large-scale robot data promise a safe and scalable approach for learning and evaluating policies that act in the physical world. However, they still struggle with long-horizon rollouts and out-of-distribution generalization, and they remain computationally demanding at inference time. Typically, video world models make predictions in the latent space of a reconstruction-trained autoencoder, which however is not directly optimized for dynamics modeling. On the other hand, world models designed for latent planning usually optimize latents to be predictable, but they forgo accurate prediction of observations in pixel space. In this paper, we show that it is possible to achieve the best of both worlds: a latent geometry optimized to make future prediction as simple as possible without sacrificing accurate prediction of future observations. More precisely, we find that temporal objectives for representation learning, paired with a past-conditioned decoder architecture, lead to consistent improvements in generative video world models at the same training budget. The gains include up to 5x cheaper inference, over 7x faster training, and 15-24% lower pixel and perceptual errors out of distribution and over long horizons. Our world models also agree more closely with real-world policy evaluation when using a vision-language model to judge task success from their pixel-space predictions. Overall, our study indicates that temporal predictability is an important design criterion for the latent space of video world models, and provides concrete guidance on how to incorporate it into the training of autoencoders.",
+      "authors": [
+        "Mattia Scardecchia",
+        "Sherry Yang"
+      ],
+      "published": "2026-10-26",
+      "updated": "2026-10-26",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV",
+        "cs.RO"
+      ],
+      "comment": "54 pages, 25 figures, 14 tables. Code: https://github.com/mattia-scardecchia/predictable-latents",
+      "abs_url": "https://arxiv.org/abs/2610.34663",
+      "pdf_url": "https://arxiv.org/pdf/2610.34663v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/mattia-scardecchia/predictable-latents",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 9.75,
+      "alt_theme": "robotics",
+      "routed_by": "topic",
+      "score": 3.938,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "generalization",
+          "representation learning",
+          "out-of-distribution"
+        ],
+        "category": 2.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/mattia-scardecchia/predictable-latents)",
+      "authors_display": "Mattia Scardecchia, Sherry Yang"
+    },
+    {
+      "arxiv_id": "2610.38079",
+      "title": "Neural Compression of Long ADMM Trajectory for Multiparametric Quadratic Program",
+      "abstract": "Solving large-scale multiparametric quadratic programs (mpQPs) in real time often requires thousands of iterative optimization updates, creating a major computational bottleneck in model predictive control and learning-enabled systems. This paper proposes TQPNet, a self-supervised neural compression framework that learns to compress long ADMM optimization trajectories into a compact neural warm start followed by a few refinement iterations. We derive a low-dimensional ADMM scheme operating on the primal-dual variables $(x,β)$ and show that its iteration admits an equivalent ReLU-layer representation, termed ADMM(ReLU). Building on this insight, TQPNet combines a multilayer perceptron with ReLU activations (MLP(ReLU)) and a small number of unrolled ADMM(ReLU) refinement layers. The network is trained offline using an optimality-condition-informed residual loss, eliminating the need for solver-generated labels. The proposed residual-based framework enables both self-supervised training and online solution certification through adaptive ADMM(ReLU) refinement. Experiments on large-scale mpQPs and real-time MPC applications demonstrate that TQPNet achieves high accuracy, strong generalization, and substantially faster inference than conventional optimization-based methods.",
+      "authors": [
+        "Liang Wu",
+        "Honghui Zheng",
+        "Bo Yang",
+        "Xu Yang",
+        "Yilin Mo",
+        "Ján Drgoňa"
+      ],
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "comment": "Accepted at NeurIPS 2026. Code: https://github.com/SOLARIS-JHU/TQPNet",
+      "abs_url": "https://arxiv.org/abs/2610.38079",
+      "pdf_url": "https://arxiv.org/pdf/2610.38079v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/SOLARIS-JHU/TQPNet",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 8.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.5,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "optimization",
+          "generalization",
+          "self-supervised"
+        ],
+        "category": 1.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/SOLARIS-JHU/TQPNet)",
+      "authors_display": "Liang Wu, Honghui Zheng, Bo Yang, Xu Yang, Yilin Mo, Ján Drgoňa"
+    },
+    {
+      "arxiv_id": "2610.38793",
+      "title": "Trustworthy Distributed Machine Learning in Cloud-Edge-IoT Systems: A Heterogeneity-Aware Survey of Security, Privacy, and Robustness",
+      "abstract": "Distributed machine learning (DML), including conventional distributed training and federated learning (FL), enables collaborative model development across cloud-edge-IoT systems without fully centralizing raw data. However, distributing data, computation, updates, and orchestration increases the attack surface and introduces coupled challenges across privacy, robustness, reliability, fairness, and governance. This survey presents a security-centered, heterogeneity-aware roadmap for trustworthy DML, with FL treated as a prominent high-risk case. We first characterize the assets, adversaries, trust assumptions, and coordination patterns that define DML/FL security boundaries. We then analyze how statistical, system, and trust heterogeneity, including non-IID data, resource asymmetry, intermittent participation, and cross-silo/cross-device trust differences, affect convergence, fairness, attack detectability, and defense reliability. Next, we synthesize attack-defense interactions across poisoning, backdoors, Byzantine manipulation, privacy leakage, model extraction, network/orchestration attacks, Sybil behavior, and strategic participation. We further compare layered defenses, including robust aggregation, drift-aware optimization, differential privacy, secure aggregation, homomorphic encryption, secure multiparty computation, trusted execution environments, watermarking, provenance, authenticated communication, and monitoring. Finally, we discuss deployment, evaluation, governance, and open research guidelines, emphasizing reproducible, non-independent and identically distributed (non-IID) partitions, attack-aware benchmarks, privacy budgets, attack success rate, client-level disparity, latency, communication, memory, energy/carbon overhead, and auditable lifecycle artifacts.",
+      "authors": [
+        "Long Dang",
+        "Ali Alfatemi",
+        "Kaiqi Xiong",
+        "Mohammed Aledhari",
+        "Abdellah Chehri",
+        "Shawqi Al-Maliki",
+        "Mohamed Rahouti"
+      ],
+      "published": "2026-10-28",
+      "updated": "2026-10-28",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.DC",
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.38793",
+      "pdf_url": "https://arxiv.org/pdf/2610.38793v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 13.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.25,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "optimization",
+          "convergence",
+          "federated learning",
+          "robustness",
+          "differential privacy",
+          "privacy"
+        ],
+        "category": 1.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Long Dang, Ali Alfatemi, Kaiqi Xiong, Mohammed Aledhari, Abdellah Chehri, Shawqi Al-Maliki 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.37074",
+      "title": "Systematic Morphometric Brain Autoencoding for Representation Learning in Neurodegenerative Diseases",
+      "abstract": "Early identification of neurodegenerative disorders using structural T1-weighted MRI is essential for timely clinical intervention, yet supervised deep learning models often struggle to generalize due to limited annotations and scanner-induced distribution shift. Self-supervised learning offers a promising alternative; however, existing approaches are largely adapted from natural image paradigms, relying on contrastive objectives or generic masked reconstruction with voxel-wise losses, which may not fully capture the distributed morphometric patterns associated with neurodegeneration. We introduce SYMBA (SYstematic Morphometric Brain Autoencoding), a self-supervised pretraining framework specifically designed for structural brain MRI. SYMBA integrates anatomically constrained masking, a multi-scale structural similarity (MS-SSIM) reconstruction objective, and a progressive curriculum that transitions from local anatomical detail to global brain morphology. These components explicitly incorporate neuroanatomical structure into the self-supervised objective rather than relying on generic image priors. Pretrained on 6,953 T1-weighted MRI scans from nine heterogeneous cohorts, SYMBA is evaluated using frozen linear probing on two independent unseen datasets, enabling a strict assessment of out-of-distribution generalization. Across multiple clinical tasks, SYMBA consistently outperforms recent neuroimaging foundation models, achieving 0.930 AUROC for Alzheimer's disease classification, 0.772 for mild cognitive impairment conversion prediction, and strong performance in amyloid status prediction. In low-label regimes, SYMBA demonstrates high sample efficiency, reaching approximately 0.90 AUROC for AD/CN classification using only six labeled subjects.",
+      "authors": [
+        "Nuria Balbás-Esteban",
+        "Albert Belenguer-Llorens",
+        "Elaheh Moradi",
+        "Jussi Tohka",
+        "Vanessa Gómez-Verdejo",
+        "Carlos Sevilla-Salcedo"
+      ],
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2610.37074",
+      "pdf_url": "https://arxiv.org/pdf/2610.37074v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 13.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.25,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "generalization",
+          "self-supervised",
+          "representation learning",
+          "probing",
+          "out-of-distribution"
+        ],
+        "category": 1.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Nuria Balbás-Esteban, Albert Belenguer-Llorens, Elaheh Moradi, Jussi Tohka, Vanessa Gómez-Verdejo, Carlos Sevilla-Salcedo"
+    },
+    {
+      "arxiv_id": "2610.35378",
+      "title": "TransECG-SSL: Hybrid Self-Supervised Representation Learning for ECG Arrhythmia Classification",
+      "abstract": "Cross-dataset generalisation remains a major challenge for automated electrocardiogram (ECG) arrhythmia classification because of differences in patient populations, acquisition protocols, annotation practices, and class distributions. Learning representations that remain informative across independent datasets could reduce reliance on dataset-specific labelled data. We propose TransECG-SSL, a self-supervised framework for transferable heartbeat representation learning from unlabelled ECG data. A Transformer encoder is pretrained using a hybrid objective combining masked signal reconstruction and contrastive learning, then frozen and evaluated by linear probing under patient-disjoint evaluation. Experiments across three public ECG databases and seven source--target settings show that Hybrid SSL consistently outperforms randomly initialised Transformers and achieves higher balanced accuracy than architecture-matched source-supervised pretraining. Reconstruction-only SSL remains competitive with Hybrid SSL, whereas contrastive-only pretraining performs substantially worse, highlighting the importance of masked reconstruction for transferability. Cross-dataset transfer nevertheless reduces balanced accuracy relative to target-specific self-supervised pretraining, while minority arrhythmia classes remain challenging under severe class imbalance. These findings demonstrate the potential of label-efficient self-supervised learning for cross-dataset ECG representation transfer while highlighting persistent limitations from domain shift and class imbalance.",
+      "authors": [
+        "Ahtisham Ayyub",
+        "Fasih Haider",
+        "Muhammad Rehan Usman",
+        "Saturnino Luz",
+        "Christos Politis",
+        "Muhammad Arslan Usman"
+      ],
+      "published": "2026-10-26",
+      "updated": "2026-10-26",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Submitted to IEEE Journal of Biomedical and Health Informatics",
+      "abs_url": "https://arxiv.org/abs/2610.35378",
+      "pdf_url": "https://arxiv.org/pdf/2610.35378v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 13.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.25,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "self-supervised",
+          "contrastive learning",
+          "representation learning",
+          "probing"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Ahtisham Ayyub, Fasih Haider, Muhammad Rehan Usman, Saturnino Luz, Christos Politis, Muhammad Arslan Usman"
+    },
+    {
+      "arxiv_id": "2610.34756",
+      "title": "Mechanistic Insights into LoRA: Layer Sparsity for Adaptive Fine-Tuning via Path Patching",
+      "abstract": "Low-Rank Adaptation (LoRA) has emerged as the dominant paradigm for parameter-efficient fine-tuning of large language models. Standard all-layer LoRA applies adaptation throughout the transformer, despite heterogeneous contributions from its components. In this work, we conduct a systematic mechanistic interpretability analysis to understand how LoRA affects model internals. We observe that LoRA's adaptation effect is highly non-uniform, with significant component-wise and layer-wise sparsity. Most critically, we find that important layers are highly task-dependent, with limited overlap across tasks. Motivated by these insights, we propose Adaptive-LoRA, a calibration-driven method that automatically identifies task-specific layers via frozen-base zero-ablation, enabling efficient layer selection without exhaustive search. Extensive experiments on Qwen2.5-1.5B across 11 diverse reasoning tasks demonstrate that Adaptive-LoRA outperforms full-layer LoRA while using only 30% of layers, achieving a $3.5\\times$ reduction in adapter parameters. This work bridges mechanistic interpretability and practical efficiency, providing both fundamental insights and a principled approach for adaptive fine-tuning.",
+      "authors": [
+        "Fei Zuo",
+        "Yizhou Huang",
+        "Kezhi Wang"
+      ],
+      "published": "2026-10-26",
+      "updated": "2026-10-26",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "comment": "Accepted at NeurIPS 2026 (Main Track). 31 pages, including appendices and the paper checklist",
+      "abs_url": "https://arxiv.org/abs/2610.34756",
+      "pdf_url": "https://arxiv.org/pdf/2610.34756v1",
+      "sources": [
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 13.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 3.25,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "sparsity",
+          "interpretability",
+          "mechanistic interpretability",
+          "calibration"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得",
+      "authors_display": "Fei Zuo, Yizhou Huang, Kezhi Wang"
+    },
+    {
+      "arxiv_id": "2610.36703",
+      "title": "RankFormer: Rethinking Time Series Transformers through Representation Capacity Analysis and Progressive Decoding",
+      "abstract": "Multivariate time series forecasting plays a critical role in Web and cyber-physical systems, where large-scale services and IoT infrastructures generate complex temporal data. Transformer-based models have achieved strong empirical performance in this domain, yet the principles governing the expressive capacity of their learned representations remain insufficiently understood. Moreover, many existing models rely on simplified decoding strategies, including channel-independent modeling and direct projection heads, which limit their ability to capture complex multivariate dynamics. To address these challenges, we propose RankFormer, a novel encoder-decoder architecture for multivariate time series forecasting. We establish a rank-based analysis framework to investigate how tokenization, embedding, and attention designs affect the representation capacity of time series Transformers. Our analysis reveals that patchification increases the potential representation capacity by aggregating multiple temporal observations into each token, while subsequent encoding operations determine how much of this capacity is realized. Guided by these insights, we develop a rank-enhancing encoder with Hourglass Attention to improve rank stability during information interaction. Furthermore, we introduce the Interactive Progressive Decoder (IPD), which improves future trajectory modeling through global-guided cross-channel interaction and progressive refinement. Extensive experiments on real-world long-term forecasting benchmarks demonstrate that RankFormer achieves competitive performance against state-of-the-art methods. Code repository: https://github.com/TangPeiwang/Rankformer.",
+      "authors": [
+        "Peiwang Tang",
+        "Cheng HE",
+        "Xijie Liang",
+        "Defu Lian"
+      ],
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "12 pages",
+      "abs_url": "https://arxiv.org/abs/2610.36703",
+      "pdf_url": "https://arxiv.org/pdf/2610.36703v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/TangPeiwang/Rankformer",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 7.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 3.25,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "time series",
+          "forecasting"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 0,
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/TangPeiwang/Rankformer)",
+      "authors_display": "Peiwang Tang, Cheng HE, Xijie Liang, Defu Lian"
+    },
+    {
+      "arxiv_id": "2610.36572",
+      "title": "Learning from Points and Patches: A Pre-trained Hybrid Attention Transformer for Time Series Analysis",
+      "abstract": "Time-series data generated by Web services and connected systems support applications such as user activity analysis, service monitoring, and resource management. However, learning transferable representations from heterogeneous time series remains challenging due to diverse temporal patterns, variable sequence lengths, and limited high-quality annotations. Despite the success of pre-training in natural language processing and computer vision, effective time-series pre-training requires strategies tailored to temporal data. We propose TimeHAT (Hybrid Attention Transformer), a general-purpose pre-training framework for time-series analysis that addresses two complementary questions: what to learn and how to learn. For what to learn, we introduce a Unified Point-Patch Masking Strategy (UPPMS) that integrates point-level and patch-level supervision within a unified framework for contextual reconstruction and causal extrapolation, enabling the model to capture both fine-grained temporal variations and broader temporal patterns. For how to learn, we develop a Hybrid Attention Encoder (HAE) that combines prefix-constrained bidirectional attention in initial layers with directional hybrid attention in deeper layers, aiming to preserve effective contextual interactions while mitigating rank degeneration. We evaluate TimeHAT across real-world datasets and four downstream tasks: classification, long-term forecasting, imputation, and anomaly detection. Experiments cover fine-tuning, few-shot, and zero-shot transfer settings, demonstrating competitive performance across diverse time-series analysis tasks. Code is available at https://github.com/TangPeiwang/TimeHAT.",
+      "authors": [
+        "Peiwang Tang",
+        "Cheng HE",
+        "Yupeng Ye",
+        "Weitai Zhang",
+        "Qinghua Sun",
+        "Defu Lian"
+      ],
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "12 pages. Code: https://github.com/TangPeiwang/TimeHAT",
+      "abs_url": "https://arxiv.org/abs/2610.36572",
+      "pdf_url": "https://arxiv.org/pdf/2610.36572v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/TangPeiwang/TimeHAT",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 7.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 3.25,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "time series",
+          "forecasting"
+        ],
+        "category": 2.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/TangPeiwang/TimeHAT)",
+      "authors_display": "Peiwang Tang, Cheng HE, Yupeng Ye, Weitai Zhang, Qinghua Sun, Defu Lian"
+    }
+  ]
+}
