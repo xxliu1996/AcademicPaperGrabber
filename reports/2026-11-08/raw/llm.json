@@ -1,0 +1,1408 @@
+{
+  "generated_at": "2026-11-09T04:58:24.373079+00:00",
+  "theme": "llm",
+  "theme_title": "大语言模型",
+  "theme_subtitle": "预训练、后训练、推理与长上下文",
+  "accent": "#2f6f5e",
+  "week_start": "2026-11-02",
+  "week_end": "2026-11-08",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 304,
+  "measured_heat_count": 25,
+  "papers": [
+    {
+      "arxiv_id": "2611.03233",
+      "title": "Axion 1.0: Open Agent Foundation Models, Simplified",
+      "abstract": "We introduce Axion 1.0, a fully open agent foundation model that combines strong and broad agentic capabilities with a remarkably simple training recipe. Axion 1.0 is trained in only three stages: two lightweight supervised fine-tuning stages followed by reinforcement learning, without dedicated mid-training, direct preference optimization (DPO), or on-policy distillation (OPD). The first SFT stage develops strong self-contained reasoning through model-aware data construction, where we synthesize challenging problems and adversarially strengthen them based on the base model's own successful solution strategies. The second stage extends these capabilities to tool-dependent reasoning through a scalable pipeline for constructing diverse and automatically verifiable tasks grounded in real-world data sources and deterministic computation. Finally, reinforcement learning further strengthens long-horizon reasoning and interaction with external tools and environments. Despite this compact training recipe, Axion 1.0 achieves strong performance across a broad suite of agentic benchmarks and is competitive with leading commercial models on several of them. Equally importantly, Axion 1.0 is open beyond model weights: we release the complete recipe, including data construction, generation, filtering, verification, prompts, and training code, enabling the entire development process to be reproduced and extended. Axion 1.0 demonstrates that strong agent foundation models can be both open and simple, offering a practical and reproducible path toward advancing open agentic intelligence.",
+      "authors": [
+        "Yuqi Jia",
+        "Yunjie Tian",
+        "Jiayu Zheng",
+        "Yijun Liang",
+        "Jingchen Sun",
+        "Mengyu Zhao",
+        "Di Fu"
+      ],
+      "hf_upvotes": 49,
+      "hf_url": "https://huggingface.co/papers/2611.03233",
+      "github_repo": "https://github.com/bytedance/axion1_0",
+      "github_repo_source": "hf",
+      "github_stars": 62,
+      "project_page": "https://axion1-0.github.io/",
+      "hf_published": "2026-11-02",
+      "hf_featured": "2026-11-04",
+      "abs_url": "https://arxiv.org/abs/2611.03233",
+      "pdf_url": "https://arxiv.org/pdf/2611.03233",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-03",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "theme": "llm",
+      "fit": 12.75,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 17.159,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "sft",
+          "dpo",
+          "preference optimization",
+          "reasoning",
+          "distillation",
+          "fine-tuning"
+        ],
+        "category": 0.75,
+        "popularity": 11.97,
+        "stars_counted": 62,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 49 赞 ｜ 💻 [代码](https://github.com/bytedance/axion1_0)",
+      "authors_display": "Yuqi Jia, Yunjie Tian, Jiayu Zheng, Yijun Liang, Jingchen Sun, Mengyu Zhao 等 7 人"
+    },
+    {
+      "arxiv_id": "2611.06518",
+      "title": "EmoReward: Self-Evolving Reward Calibration for Emotional Video Generation RL",
+      "abstract": "Group Relative Policy Optimization (GRPO) has advanced generative model post-training in verifiable domains such as code and mathematics, but evaluating video quality, especially emotional expression, often depends on subjective aesthetics and has no uniquely correct target. Existing approaches typically rely on fixed rewards for visual quality, motion quality, and text alignment that poorly capture emotional intent and can invite reward hacking, while RLHF is difficult to scale and subject to individual aesthetic differences that complicate the calibration of facial, body motion, and chromatic cues across narrative contexts. We introduce EmoReward, a new self-evolving training mechanism that distills evidence reliability from reward traces collected during an actual training run to adaptively guide multi-reward weight allocation in subsequent training by determining which emotional evidence to trust and how much to weight it. EmoReward first plans specific grounding cues from the emotional prompt to guide evaluation, then uses heterogeneous signal primitives to score the generated video during the act stage. Reflective Reward Gating calibrates their contributions through instance-level gates for phase, face confidence, conflict, and subtlety, then renormalizes weights over the active set to produce the sample's fused reward. RewardMemory then estimates each primitive's reliability from rollout scores and outcomes within each emotional regime in the finished training run, then fixes bounded multipliers that calibrate fusion weights in the next training run without updating reward models. Experiments on HunyuanVideo 1.5 show improvements across multiple RL algorithms and compare EmoReward with other agentic reward methods under SAGE-GRPO. Ablations and transfer experiments on SD 3.5 and FLUX further support adaptive reward calibration for visual generation.",
+      "authors": [
+        "Mingzhe Zheng",
+        "Yue Wu",
+        "Jing Tan",
+        "Chang Zou",
+        "Dengyang Jiang",
+        "Zeyue Tian",
+        "Xuanhua He",
+        "Ryan Xu",
+        "Yunyang Ge",
+        "Sihui Ji",
+        "Yunlong Lin",
+        "Kaihang Pan",
+        "Hongru Yan",
+        "Sixiang Chen",
+        "Dianyi Wang",
+        "Julian Zhang",
+        "Weijie Kong",
+        "Changlin Li",
+        "Lanqing Guo",
+        "Zhao Zhong",
+        "Qifeng Chen",
+        "Harry Yang"
+      ],
+      "hf_upvotes": 27,
+      "hf_url": "https://huggingface.co/papers/2611.06518",
+      "github_repo": "https://github.com/Tencent-Hunyuan/EmoReward",
+      "github_repo_source": "hf",
+      "github_stars": 38,
+      "project_page": "https://emoreward-project.github.io/",
+      "organization": "Tencent Hunyuan",
+      "hf_published": "2026-11-04",
+      "hf_featured": "2026-11-05",
+      "abs_url": "https://arxiv.org/abs/2611.06518",
+      "pdf_url": "https://arxiv.org/pdf/2611.06518",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 12.0,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 14.592,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "post-training",
+          "rlhf",
+          "grpo",
+          "alignment",
+          "prompt"
+        ],
+        "category": 0.0,
+        "popularity": 9.59,
+        "stars_counted": 38,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 27 赞 ｜ 💻 [代码](https://github.com/Tencent-Hunyuan/EmoReward)",
+      "authors_display": "Mingzhe Zheng, Yue Wu, Jing Tan, Chang Zou, Dengyang Jiang, Zeyue Tian 等 22 人"
+    },
+    {
+      "arxiv_id": "2611.03424",
+      "title": "IdeaTaste: Do LLMs Share the Research Taste of Human Researchers?",
+      "abstract": "Research taste, the judgment of what to read, which problems to pursue, and which methods to try, increasingly shapes the work of AI scientists, yet it remains far less understood than their ability to execute research. We introduce IdeaTaste, a benchmark that scores an LLM by how closely the research proposals it writes from a literature snapshot frozen at 2025 match the work the same communities published in 2026. Our experiments span six contemporary language models and four research areas from established to emerging fields, covering more than 90{,}000 proposals in total. LLM agents fall well short of human communities in both the literature they cite and the ideas they state, reaching about 26\\% of the human level on citation matching and only 18\\% on idea matching. Their populations can cite as diversely as a community and take up its tasks and methods, yet rarely arrive at the concrete approaches and research plans it pursues. Neither richer field context nor larger populations substantially close this gap. In blinded expert review, AI proposals trail the 2026 papers least in presentation and most in expected success, echoing their gap in concrete approaches, and those whose ideas no human paper shares fare worst, suggesting weaker directions rather than overlooked opportunities. These results indicate that the main bottleneck in AI research taste lies less in finding the directions a community works on than in turning them into the concrete approaches it goes on to pursue. We release IdeaTaste as an open, continuously updated leaderboard (https://cxcscmu.github.io/IdeaTaste) that benchmarks contemporary AI proposals against future publication cycles.",
+      "authors": [
+        "Shanshan Zhong",
+        "Chen Xu",
+        "Jingjie Ning",
+        "Zhengzhong Liu",
+        "Aviral Kumar",
+        "Chenyan Xiong"
+      ],
+      "hf_upvotes": 47,
+      "hf_url": "https://huggingface.co/papers/2611.03424",
+      "github_repo": "https://github.com/cxcscmu/IdeaTaste",
+      "github_repo_source": "hf",
+      "github_stars": 31,
+      "project_page": "https://cxcscmu.github.io/IdeaTaste/",
+      "organization": "Carnegie Mellon University School of Computer Science",
+      "hf_published": "2026-11-02",
+      "hf_featured": "2026-11-03",
+      "abs_url": "https://arxiv.org/abs/2611.03424",
+      "pdf_url": "https://arxiv.org/pdf/2611.03424",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 14.515,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "llm",
+          "llms"
+        ],
+        "category": 0.0,
+        "popularity": 11.01,
+        "stars_counted": 31,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 47 赞 ｜ 💻 [代码](https://github.com/cxcscmu/IdeaTaste)",
+      "authors_display": "Shanshan Zhong, Chen Xu, Jingjie Ning, Zhengzhong Liu, Aviral Kumar, Chenyan Xiong"
+    },
+    {
+      "arxiv_id": "2611.03743",
+      "title": "EvoMemState: Evolving Memory State for Personal Agents",
+      "abstract": "Long-term memory enables large language model (LLM) agents to provide continuous personalized assistance by retaining user information across interactions. Existing systems support this process through fact extraction, organization, updating, and retrieval, but largely maintain memories as independent facts. This fact-centric paradigm may overlook how new facts update, constrain, or conflict with earlier ones, while leaving their applicability, role, and priority for the current request implicit. In this paper, we introduce EvoMemState, a state-centric framework that augments persistent facts with two complementary states: Relational States that capture how facts remain valid and relate to one another as memory evolves, and a Reasoning State that determines how these facts should be applied to the current request. Specifically, EvoMemState consists of three key components: (i) Ontology-Guided Memory State Induction extracts Persistent Facts and constructs Relational States that maintain their validity, scope, and evolving relations. (ii) RL-Based State Evolution internalizes memory-use experience into a policy through reinforcement learning to generate a request-specific Reasoning State. (iii) State-Aware Reasoning then combines the relevant facts with their Relational States and the generated Reasoning State to guide the personal agent. Extensive experiments on long-term dialogue and memory-use benchmarks demonstrate consistent improvements over existing memory systems in retrieval completeness and memory-grounded response accuracy. Our code and implementation details are available at https://github.com/XMUDeepLIT/EvoMemState.git.",
+      "authors": [
+        "Zhishang Xiang",
+        "Yunbo Tang",
+        "Zhongqiao Liu",
+        "Junkai Chen",
+        "Zerui Chen",
+        "Qingguo Hu",
+        "Yuxuan Zhang",
+        "William Grant",
+        "Qinggang Zhang",
+        "Jinsong Su"
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2611.03743",
+      "pdf_url": "https://arxiv.org/pdf/2611.03743v1",
+      "hf_upvotes": 33,
+      "hf_url": "https://huggingface.co/papers/2611.03743",
+      "github_repo": "https://github.com/XMUDeepLIT/EvoMemState",
+      "github_repo_source": "hf",
+      "github_stars": 27,
+      "hf_published": "2026-11-02",
+      "hf_featured": "2026-11-06",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 11.75,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 14.181,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "large language model",
+          "language model",
+          "llm",
+          "reasoning"
+        ],
+        "category": 0.75,
+        "popularity": 9.74,
+        "stars_counted": 27,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 33 赞 ｜ 💻 [代码](https://github.com/XMUDeepLIT/EvoMemState)",
+      "authors_display": "Zhishang Xiang, Yunbo Tang, Zhongqiao Liu, Junkai Chen, Zerui Chen, Qingguo Hu 等 10 人"
+    },
+    {
+      "arxiv_id": "2611.02846",
+      "title": "SpecOPD: Branch-Parallel On-Policy Distillation for Speculative Decoding",
+      "abstract": "Speculative decoding (SD) accelerates large language model inference by reducing the sequential cost of token-by-token generation. Advanced SD methods reduce proposal cost with parallel drafters that predict entire blocks in one forward pass, but overall speedup still depends on acceptance length. On-policy distillation (OPD) can push well-trained drafters beyond acceptance-length plateaus, yet conventional pipelines collect supervision through sequential draft-and-verify rollouts. Our key insight is that on-policy supervision need not inherit these dependencies: a draft block can be supervised using only its reference prefix and draft-sampled history. We propose SpecOPD, a branch-parallel OPD framework that parallelizes draft sampling and target supervision across independent branches drawn from the evolving drafter policy at reference anchors. We pack these branches into proposal trees to share target-prefix computation, using tree masks for full attention, branch-consistent indexer groups for sparse attention, and indexed state replay for linear attention to preserve each branch's history. We train the drafter with an E2E-TV surrogate that directly targets acceptance length. Our study spans 8B full-attention (GQA), 27B full-linear (GQA--GDN), and 125B sparse-linear (QSA--GDN) targets, three parallel draft architectures (DFlash, DSpark, and DFlash V2), and four task domains (dialogue, coding, mathematics, and agentic). SpecOPD achieves up to 41.45% higher mean acceptance length, 16.09times supervised-token throughput over sequential-rollout OPD under native configurations, and up to 3.56times generation speedup over autoregressive decoding.",
+      "authors": [
+        "Tianyu Liu",
+        "Jun Zhang",
+        "Wenjie Huang",
+        "Yuhao Shen",
+        "Tianqi Xu",
+        "Xinyue Hao",
+        "Hongyaoxing Gu",
+        "Xuyang Liu",
+        "Baolin Zhang",
+        "Yating Zhu",
+        "Shuang Ge",
+        "Jun Dai",
+        "Lei Chen",
+        "Yue Li",
+        "Mingchen Wan"
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2611.02846",
+      "pdf_url": "https://arxiv.org/pdf/2611.02846v1",
+      "hf_upvotes": 15,
+      "hf_url": "https://huggingface.co/papers/2611.02846",
+      "github_repo": "https://github.com/QwenApp/SpecOPD",
+      "github_repo_source": "hf",
+      "github_stars": 26,
+      "project_page": "https://qwenapp.github.io/SpecOPD/en.html",
+      "organization": "Qwen",
+      "hf_published": "2026-11-02",
+      "hf_featured": "2026-11-05",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "llm",
+      "fit": 15.75,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 13.765,
+      "score_breakdown": {
+        "keyword_raw": 15,
+        "keyword_matched": [
+          "large language model",
+          "language model",
+          "speculative decoding",
+          "distillation",
+          "decoding",
+          "inference"
+        ],
+        "category": 0.75,
+        "popularity": 7.83,
+        "stars_counted": 26,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 15 赞 ｜ 💻 [代码](https://github.com/QwenApp/SpecOPD)",
+      "authors_display": "Tianyu Liu, Jun Zhang, Wenjie Huang, Yuhao Shen, Tianqi Xu, Xinyue Hao 等 15 人"
+    },
+    {
+      "arxiv_id": "2611.00617",
+      "title": "Words Caught in the Heart: Simulating Person-Specific Expression for Self-Opaque Clients in Psychotherapy",
+      "abstract": "Psychotherapy clients may experience distress before they can coherently describe it, and their expression changes with emotion, perceived safety, and trust. Large language model-based client simulators often rely on clinically organized case descriptions, which can encourage responses explaining the client's difficulties more clearly than their current understanding warrants. We propose Pandora, a psychotherapy client simulation framework that models how psychological experience becomes situated, individual expression. Pandora updates psychological and relational states in response to therapist interventions, constructs subjective appraisals and attributions, and plans response content and strategy. A separate expression planner combines these decisions with language patterns distilled from the client's utterances to guide linguistic realization. We evaluate Pandora against five baselines on 115 cases from four counseling and motivational interviewing datasets. It achieves the highest expression similarity and overall disclosure-alignment score among the compared systems. In a four-evaluator study of 45 matched disclosure items, Pandora receives AI-like judgments in 7.2% of ratings, compared with 43.3--67.2% for the baselines and 35.6% without expression planning. The ablation also reduces expression similarity. These results support explicit expression planning in client simulation to improve alignment with individual language patterns and reduce perceived AI-like expression in the evaluated setting.",
+      "authors": [
+        "Mengxi Xiao",
+        "Jingjing Chen",
+        "Ziyan Kuang",
+        "Jiarong Song",
+        "Wenhao Zhao",
+        "Zuchen Han",
+        "Yihuai Xu",
+        "Xiyang Huang",
+        "Jie Gong",
+        "Yuechen Jiang",
+        "Xueqing Peng",
+        "Yankai Chen",
+        "Xiaoyan Qu",
+        "Min Peng",
+        "Qianqian Xie"
+      ],
+      "hf_upvotes": 77,
+      "hf_url": "https://huggingface.co/papers/2611.00617",
+      "github_repo": "https://github.com/whunextgen/Pandora",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "project_page": "https://clain.org/Pandora/",
+      "organization": "CLAIN-WHU",
+      "hf_published": "2026-10-31",
+      "hf_featured": "2026-11-04",
+      "abs_url": "https://arxiv.org/abs/2611.00617",
+      "pdf_url": "https://arxiv.org/pdf/2611.00617",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 9.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 13.025,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "large language model",
+          "language model",
+          "alignment"
+        ],
+        "category": 0.0,
+        "popularity": 8.77,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 77 赞 ｜ 💻 [代码](https://github.com/whunextgen/Pandora)",
+      "authors_display": "Mengxi Xiao, Jingjing Chen, Ziyan Kuang, Jiarong Song, Wenhao Zhao, Zuchen Han 等 15 人"
+    },
+    {
+      "arxiv_id": "2611.04814",
+      "title": "Think Less, Locally: Local Preference Learning for Reasoning Compression",
+      "abstract": "Large reasoning models achieve strong performance on challenging tasks, but their long chain-of-thought often incurs substantial inference costs by continuing to deliberate after sufficient information has been obtained. Existing reasoning compression methods primarily operate on reasoning trajectories, paying less attention to the local decision of whether further reasoning is necessary given the current state. We propose LoCo, a local preference learning method for reasoning compression. LoCo detects candidate overthinking states from the model's own traces, freezes the corresponding reasoning prefixes, regenerates shorter verified continuations from the same states, and trains on the resulting state-conditioned preference pairs with DPO. This formulation teaches the model when to continue reasoning and when to conclude, rather than simply encouraging shorter trajectories overall. We construct training data entirely from self-generated mathematical traces and evaluate LoCo on five mathematical and three code generation benchmarks. LoCo reduces completion length by 41.7\\%--45.4\\% on mathematics and 23.4\\%--36.3\\% on code, while maintaining or improving accuracy and achieving the best AUC across all code benchmarks. LoCo consistently improves the accuracy-efficiency trade-off on mathematics and transfers effectively to code generation despite math-only training, demonstrating the cross-domain generality of local preference learning for reasoning compression. The code and model will be publicly released at https://github.com/MuyaoYuan/LoCo.",
+      "authors": [
+        "Muyao Yuan",
+        "Liyan Xu",
+        "Weizhan Zhang",
+        "Muyan Jiao",
+        "Jiangnan Li",
+        "Jinchao Zhang",
+        "Jie Zhou"
+      ],
+      "hf_upvotes": 63,
+      "hf_url": "https://huggingface.co/papers/2611.04814",
+      "github_repo": "https://github.com/MuyaoYuan/LoCo",
+      "github_repo_source": "hf",
+      "github_stars": 11,
+      "project_page": "https://huggingface.co/MuyaoYuan/LoCo-7B",
+      "organization": "Tencent",
+      "hf_published": "2026-11-03",
+      "hf_featured": "2026-11-04",
+      "abs_url": "https://arxiv.org/abs/2611.04814",
+      "pdf_url": "https://arxiv.org/pdf/2611.04814",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "published": "2026-11-03",
+      "updated": "2026-11-03",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "theme": "llm",
+      "fit": 8.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 12.125,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "dpo",
+          "chain-of-thought",
+          "reasoning",
+          "inference"
+        ],
+        "category": 1.75,
+        "popularity": 7.94,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 63 赞 ｜ 💻 [代码](https://github.com/MuyaoYuan/LoCo)",
+      "authors_display": "Muyao Yuan, Liyan Xu, Weizhan Zhang, Muyan Jiao, Jiangnan Li, Jinchao Zhang 等 7 人"
+    },
+    {
+      "arxiv_id": "2610.37826",
+      "title": "DeFT-RAG: Decomposing Multi-Hop Questions into Self-Contained Sub-Questions with Reusable Answers",
+      "abstract": "Retrieval-augmented generation (RAG) lets a large language model (LLM) answer questions by retrieving relevant passages from a large corpus. However, RAG struggles with multi-hop questions, which require chaining facts spread across several documents through intermediate entities that the question never mentions. Graph-based RAG methods retrieve once from the entities a question names and so rarely recover the full evidence chain. Iterative RAG methods recover it step by step, but their accuracy is limited by the many tasks they ask the LLM to perform, such as planning the sub-questions, deciding their dependencies, rewriting them as answers arrive, and keeping track of what is known. We propose DeFT-RAG, a RAG framework built on three components. First, DeFT-RAG generates one self-contained sub-question at a time from the original question and the sub-questions answered so far with their answers (QA pairs). Each sub-question names every entity it asks about, which removes the need to plan, track dependencies or rewrite, and lets the LLM focus on a single fine-grained task at a time. Second, DeFT-RAG moves the remaining LLM work outside the LLM: rule-based updates to a QA table that keeps track of what is known, and yes/no decisions made by a fine-tuned lightweight decision model. Third, DeFT-RAG caches the QA pairs and reuses an answer when a later question asks a sub-question with the same meaning. On MuSiQue, 2WikiMultiHopQA and HotpotQA, DeFT-RAG achieves the best accuracy among thirteen baselines with both gpt-4o-mini and Qwen3.6 as the backbone, while giving the LLM fewer input tokens than any other iterative method. With a QA cache shared across 1,000 MuSiQue questions, 23.1% of sub-questions are answered from the cache, which reduces LLM calls by 12.9% without lowering accuracy.",
+      "authors": [
+        "Dingyi Kang",
+        "Bingzhe Li"
+      ],
+      "hf_upvotes": 13,
+      "hf_url": "https://huggingface.co/papers/2610.37826",
+      "github_repo": "https://github.com/Dingyi-Kang/DeFT-RAG",
+      "github_repo_source": "hf",
+      "github_stars": 9,
+      "hf_published": "2026-10-30",
+      "hf_featured": "2026-11-03",
+      "abs_url": "https://arxiv.org/abs/2610.37826",
+      "pdf_url": "https://arxiv.org/pdf/2610.37826",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 17.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 12.119,
+      "score_breakdown": {
+        "keyword_raw": 17,
+        "keyword_matched": [
+          "large language model",
+          "language model",
+          "llm",
+          "retrieval-augmented",
+          "rag",
+          "gpt"
+        ],
+        "category": 0.0,
+        "popularity": 6.37,
+        "stars_counted": 9,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 13 赞 ｜ 💻 [代码](https://github.com/Dingyi-Kang/DeFT-RAG)",
+      "authors_display": "Dingyi Kang, Bingzhe Li"
+    },
+    {
+      "arxiv_id": "2611.03344",
+      "title": "FLAMIA: FLAsh MIcroscaling Attention for Fast and Causally Safe Training on Blackwell",
+      "abstract": "Attention remains a substantial computational cost in Transformer training, particularly at long context lengths. NVIDIA Blackwell GPUs provide high-throughput low-precision matrix multiplication, but exploiting it in attention requires addressing quantization overhead, causal information leakage through shared scales, and numerical inconsistencies between the forward and backward passes. We present FLAMIA, a family of attention kernels for Blackwell with MXFP8 and mixed NVFP4/FP8 training paths. Our design combines token-block scaling that reuses quantized operands across matrix orientations, targeted safeguards against scale-induced leakage, and consistent forward and backward computations. Fused quantization and architecture-specific kernel optimizations reduce overhead, while document-local scaling and workload-aware scheduling support variable-length documents directly in packed layouts without repacking. Across various causal packed-document workloads, the MXFP8 path accelerates the combined forward and backward attention call, including quantization, by factors of 1.10--1.40times on B200 and 1.06--1.42times on B300 relative to the fastest evaluated baseline for each workload. We validate training stability and quality preservation on pretraining Llama-style models. These results show how jointly designing quantization, training numerics, and document scheduling translates low-bit hardware throughput into practical attention acceleration.",
+      "authors": [
+        "Fedor Velikonivtsev",
+        "Mikhail Koltakov",
+        "Denis Kuznedelev"
+      ],
+      "hf_upvotes": 19,
+      "hf_url": "https://huggingface.co/papers/2611.03344",
+      "github_repo": "https://github.com/yandex-research/flamia-blackwell-attention",
+      "github_repo_source": "hf",
+      "github_stars": 11,
+      "organization": "Yandex Research",
+      "hf_published": "2026-11-02",
+      "hf_featured": "2026-11-03",
+      "abs_url": "https://arxiv.org/abs/2611.03344",
+      "pdf_url": "https://arxiv.org/pdf/2611.03344",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 10.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.528,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "pretraining",
+          "long context",
+          "quantization",
+          "llama",
+          "transformer"
+        ],
+        "category": 0.75,
+        "popularity": 7.34,
+        "stars_counted": 11,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 19 赞 ｜ 💻 [代码](https://github.com/yandex-research/flamia-blackwell-attention)",
+      "authors_display": "Fedor Velikonivtsev, Mikhail Koltakov, Denis Kuznedelev"
+    },
+    {
+      "arxiv_id": "2611.07909",
+      "title": "EDGAR: Efficient Diffusion-Driven Gaussian Avatar Refinement via Synthetic Failure",
+      "abstract": "Recent advances in Gaussian splatting have enabled efficient and photorealistic head avatar reconstruction, yet monocular video-based or image-based methods still suffer from under-constrained geometry and texture, leading to artifacts such as blurring, stretching, and temporal instability. We present EDGAR (Efficient Diffusion-Driven Gaussian Avatar Refinement), a conditional diffusion framework designed to enhance the quality of Gaussian avatars by correcting artifacts while preserving identity fidelity. To train EDGAR, we construct EDGAR-SET, a hybrid triplet dataset composed of real-captured and synthetic-rendered samples, which simulates realistic Gaussian avatar failure cases by pairing degraded renderings with ground-truth and reference images. EDGAR refines degraded frames through a fusion block that injects identity features extracted by the self-supervised Sapiens model into a one-step diffusion backbone, enabling effective artifact removal without sacrificing efficiency. Our EDGAR model incorporates a Mixture-of-Experts (MoE) architecture to address diverse degradation types and severity levels. The refined multi-view renderings are subsequently used as pseudo-targets to optimize a single underlying Gaussian avatar, so that the final avatar can be rendered without applying EDGAR to every output frame. Experiments on three different Gaussian avatar reconstruction methods, each evaluated under three different settings, show improvements in both perceptual and reconstruction measures over the raw outputs and an SDEdit-style refinement baseline. In addition, cross-view evaluation demonstrates improved calibrated consistency, while tests under large yaw and open-mouth expressions verify robustness under extreme settings. These results collectively indicate a useful operating regime for recoverable appearance artifacts. The code is available at https://kwanyun.github.io/edgar/",
+      "authors": [
+        "Kwan Yun",
+        "Minhyeok Bang",
+        "Colette Suhjung Koo",
+        "Junyong Noh"
+      ],
+      "published": "2026-11-05",
+      "updated": "2026-11-05",
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.CV",
+        "cs.LG",
+        "cs.MM"
+      ],
+      "comment": "Accepted to ACM Transactions on Graphics",
+      "abs_url": "https://arxiv.org/abs/2611.07909",
+      "pdf_url": "https://arxiv.org/pdf/2611.07909v1",
+      "hf_upvotes": 16,
+      "hf_url": "https://huggingface.co/papers/2611.07909",
+      "github_repo": "https://github.com/kwanyun/edgar-code",
+      "github_repo_source": "hf",
+      "github_stars": 21,
+      "project_page": "https://kwanyun.github.io/edgar/",
+      "organization": "KAIST",
+      "hf_published": "2026-11-05",
+      "hf_featured": "2026-11-06",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "llm",
+      "fit": 5.75,
+      "alt_theme": "deep-learning",
+      "routed_by": "topic",
+      "score": 11.147,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "mixture-of-experts",
+          "moe"
+        ],
+        "category": 0.75,
+        "popularity": 7.71,
+        "stars_counted": 21,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 16 赞 ｜ 💻 [代码](https://github.com/kwanyun/edgar-code)",
+      "authors_display": "Kwan Yun, Minhyeok Bang, Colette Suhjung Koo, Junyong Noh"
+    },
+    {
+      "arxiv_id": "2611.06425",
+      "title": "D3D: Decoupled Diffusion Drafting for Asynchronous Speculative Decoding",
+      "abstract": "Target-conditioned diffusion drafters predict candidate tokens in parallel, yet each new block must wait for updated target-model hidden states. This forces drafting and verification to run sequentially, limiting speedup even though each block is generated in one pass. We introduce D3D, a standalone diffusion drafter that removes this inter-round dependency. D3D combines blockwise denoising with auxiliary autoregressive supervision to achieve long accepted prefixes without target hidden states. This independence lets D3D draft successor blocks during verification in one packed pass, enabling asynchronous speculative decoding. We progressively prune layers according to their effect on acceptance length to reduce the cost of packed drafting. Removing five of 36 layers retains over 99\\% of mean acceptance length across three benchmarks with Qwen3-8B as the target. Across seven benchmarks, D3D averages 5.00times and 5.71times decoding speedup with Qwen3-8B and Qwen3-32B targets, compared with 4.03times and 3.67times for DFlash. On GSM8K with Qwen3-32B, speedup reaches 7.48times. Code is publicly available at https://github.com/fudan-generative-vision/D3D.",
+      "authors": [
+        "Baoyou Chen",
+        "Ruiqiao Mei",
+        "Guancong Lin",
+        "Tao Song",
+        "Weihao Yuan",
+        "Qun Liu",
+        "Siyu Zhu"
+      ],
+      "hf_upvotes": 19,
+      "hf_url": "https://huggingface.co/papers/2611.06425",
+      "github_repo": "https://github.com/fudan-generative-vision/D3D",
+      "github_repo_source": "hf",
+      "github_stars": 20,
+      "organization": "Fudan University",
+      "hf_published": "2026-11-04",
+      "hf_featured": "2026-11-05",
+      "abs_url": "https://arxiv.org/abs/2611.06425",
+      "pdf_url": "https://arxiv.org/pdf/2611.06425",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "published": "2026-11-04",
+      "updated": "2026-11-04",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 6.5,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.137,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "speculative decoding",
+          "decoding"
+        ],
+        "category": 1.5,
+        "popularity": 8.01,
+        "stars_counted": 20,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 19 赞 ｜ 💻 [代码](https://github.com/fudan-generative-vision/D3D)",
+      "authors_display": "Baoyou Chen, Ruiqiao Mei, Guancong Lin, Tao Song, Weihao Yuan, Qun Liu 等 7 人"
+    },
+    {
+      "arxiv_id": "2611.01120",
+      "title": "StreamDuo: A Live Commentator and a Research Agent for Unseen Games",
+      "abstract": "Streaming video LLMs can now commentate live gameplay, but they are trained and tested on the same games. We study cross-game streaming commentary, in which a model trained on one game commentates games it has never seen, and find that current commentators transfer their timing but not their knowledge of the game world. We propose StreamDuo, which pairs a trainable commentator with a frozen research agent that reads the wiki of the game being played. When the commentator sees something it cannot name, it sends the current frames, and the research agent returns a few wiki entries two seconds later while the stream continues. We train only the commentator, on a single game, in two stages. Information-gain labels teach it to ask only where an answer would help it say what the human caster said, and on-policy self-distillation from a copy of itself that sees the ideal answer teaches it to use noisy answers. Trained on Baldur's Gate 3 and tested on ten unseen games, StreamDuo raises entity recall from 0.082 to 0.116 over Proact-VL trained on the same data, cuts source-game leakage from 9.9% to 1.0%, and achieves the best timing and the highest judged liveliness and overall quality among streaming models.",
+      "authors": [
+        "Zixian Gao",
+        "Penghao Luo",
+        "Xiangcheng Cao",
+        "Lixin Xiu",
+        "Ziqi Cai",
+        "Zhen Li",
+        "Erwin Wu",
+        "Kaipeng Zhang"
+      ],
+      "hf_upvotes": 22,
+      "hf_url": "https://huggingface.co/papers/2611.01120",
+      "github_repo": "https://github.com/ZixianGao/StreamDuo-code",
+      "github_repo_source": "hf",
+      "github_stars": 13,
+      "project_page": "https://zixiangao.github.io/StreamDuo/",
+      "organization": "Alaya Lab",
+      "hf_published": "2026-10-31",
+      "hf_featured": "2026-11-05",
+      "abs_url": "https://arxiv.org/abs/2611.01120",
+      "pdf_url": "https://arxiv.org/pdf/2611.01120",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 5.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 11.107,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "llms",
+          "distillation"
+        ],
+        "category": 0.0,
+        "popularity": 7.86,
+        "stars_counted": 13,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 22 赞 ｜ 💻 [代码](https://github.com/ZixianGao/StreamDuo-code)",
+      "authors_display": "Zixian Gao, Penghao Luo, Xiangcheng Cao, Lixin Xiu, Ziqi Cai, Zhen Li 等 8 人"
+    },
+    {
+      "arxiv_id": "2611.05304",
+      "title": "LoopVQ: Sub 1-bit KV Cache Quantization for Looped Transformers",
+      "abstract": "Looped transformers are a parameter-efficient alternative to standard transformers for language modeling. By reapplying the same layers across multiple loop steps, recent looped language models match the performance of non-looped models several times their size. While this architecture effectively reduces parameter memory, each loop step still stores its own keys and values, so the key-value (KV) cache grows linearly with the number of loop steps and becomes the main memory bottleneck. We observe that the KV cache of looped models is highly redundant along the loop axis and that the loop steps differ substantially in their sensitivity to quantization. Based on these observations, we propose LoopVQ, a KV cache vector quantization method for looped transformers that codes channels of multiple loop steps jointly, and fine-tunes the codebooks to match the output of the full-precision model. At 0.5 bits per element, LoopVQ outperforms existing KV cache vector quantization methods for standard LLMs on general, long chain-of-thought reasoning, and long-context retrieval tasks with Ouro and Huginn models. Its design is orthogonal to these methods, and combined with TaSQ, it retains much of the BF16 accuracy even at 0.25 bits per element. We also implement LoopVQ in SGLang, where it nearly halves the decode latency at a 32K-token context and raises the peak serving throughput by up to 4.3times and 6.1times on the 1.4B and 2.6B Ouro models compared to the BF16 baseline.",
+      "authors": [
+        "Minsoo Cheong",
+        "Sungjoo Yoo"
+      ],
+      "published": "2026-11-03",
+      "updated": "2026-11-03",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2611.05304",
+      "pdf_url": "https://arxiv.org/pdf/2611.05304v1",
+      "hf_upvotes": 11,
+      "hf_url": "https://huggingface.co/papers/2611.05304",
+      "github_repo": "https://github.com/mscheong01/LoopVQ",
+      "github_repo_source": "hf",
+      "github_stars": 3,
+      "project_page": "https://mscheong01.github.io/loopvq/",
+      "organization": "Seoul National University",
+      "hf_published": "2026-11-03",
+      "hf_featured": "2026-11-05",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "llm",
+      "fit": 14.5,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 10.605,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "llms",
+          "chain-of-thought",
+          "reasoning",
+          "kv cache",
+          "quantization"
+        ],
+        "category": 2.5,
+        "popularity": 4.98,
+        "stars_counted": 3,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 11 赞 ｜ 💻 [代码](https://github.com/mscheong01/LoopVQ)",
+      "authors_display": "Minsoo Cheong, Sungjoo Yoo"
+    },
+    {
+      "arxiv_id": "2611.08483",
+      "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
+      "abstract": "LLM-guided evolutionary search uses AI agents to improve programs for mathematical and computational problems by iteratively refining solutions and combining high-scoring methods. However, the process is often slow because the LLM generates a long textual chain of thought for each round and must repeat this generation many times to maintain population diversity. We present SwarmEvolve, a framework in which hundreds of low-cost agents per round work in swarms, reason in latent space without decoding to text, and share information by passing KV caches. Each swarm studies the problem from a different angle. A novelty filter keeps the most distinct agent ideas by directly measuring the distances between the agents' hidden state vectors. Crossover of ideas happens naturally in latent space, as a summarizer agent receives the combined KV caches of all swarm members. On 21 problems in mathematical discovery and scientific computing, SwarmEvolve gets the highest average score and needs a median of only 3 to 8 minutes to reach the best scores that other state-of-the-art frameworks reach in 60 minutes. On several problems, SwarmEvolve with Qwen3 8B improves on the solutions that AlphaEvolve first found with frontier LLMs. Our work shows that agent swarms that communicate in latent space offer a fast, low-cost approach to program search for scientific problems.",
+      "authors": [
+        "Qile Jiang",
+        "George Em Karniadakis"
+      ],
+      "published": "2026-11-05",
+      "updated": "2026-11-05",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.NE"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2611.08483",
+      "pdf_url": "https://arxiv.org/pdf/2611.08483v1",
+      "hf_upvotes": 9,
+      "hf_url": "https://huggingface.co/papers/2611.08483",
+      "github_repo": "https://github.com/Qile-J/SwarmEvolve",
+      "github_repo_source": "hf",
+      "github_stars": 11,
+      "organization": "Brown University",
+      "hf_published": "2026-11-05",
+      "hf_featured": "2026-11-06",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 11.75,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 10.419,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "llm",
+          "llms",
+          "chain of thought",
+          "decoding"
+        ],
+        "category": 0.75,
+        "popularity": 5.98,
+        "stars_counted": 11,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 9 赞 ｜ 💻 [代码](https://github.com/Qile-J/SwarmEvolve)",
+      "authors_display": "Qile Jiang, George Em Karniadakis"
+    },
+    {
+      "arxiv_id": "2610.37481",
+      "title": "Follow the Gradient: Tracing Safety Degradation Back to Training Data",
+      "abstract": "Fine-tuning Large Language Models (LLMs) on instruction data can quietly erode their safety, even when no training example looks harmful. Because this safety-degrading data looks benign, standard content filters struggle to catch it. We tackle this problem by developing SimpleLoRIF, a scalable gradient embedding method that identifies fine-tuning examples whose gradients align with unsafe behavior. By simplifying a low-rank attribution method and restricting backpropagation to the final four transformer blocks, SimpleLoRIF can embed datasets on the order of a million examples, boosting gradient attribution from a small-scale analysis tool into a practical filter for full post-training datasets. We first validate it on emergent misalignment, where we find that gradients can connect insecure-code training data to the broadly harmful behaviors that appear after fine-tuning, with AUC as high as 0.865 in the gradient space of misaligned models. We then use SimpleLoRIF to build SafeTulu, a version of Tulu 3 with the 20% of examples most gradient-aligned with unsafe responses removed. Training on SafeTulu reduces GCG attack success rate by up to 22% across Qwen, Llama, and Olmo, outperforming both LLM-as-a-judge and prior gradient-based filtering, while largely preserving or even improving capability. Finally, we analyzed the removed data and identify possibly under-studied sources of safety degradation, such as tool-execution failures and narrative arithmetic. We release SafeTulu along with a Hugging Face Space that lets researchers build their own customized versions of SafeTulu to fine-tune on, such as by changing the removal fraction or filtering only certain subsets.",
+      "authors": [
+        "Saket Reddy",
+        "Amro Abbas",
+        "Anshuman Suri",
+        "Ari Morcos",
+        "David Schwab",
+        "Pratyush Maini"
+      ],
+      "hf_upvotes": 31,
+      "hf_url": "https://huggingface.co/papers/2610.37481",
+      "project_page": "https://www.datologyai.com/blog/follow-the-gradient",
+      "organization": "DatologyAI",
+      "hf_published": "2026-10-27",
+      "hf_featured": "2026-11-02",
+      "abs_url": "https://arxiv.org/abs/2610.37481",
+      "pdf_url": "https://arxiv.org/pdf/2610.37481",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 16.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 10.068,
+      "score_breakdown": {
+        "keyword_raw": 16,
+        "keyword_matched": [
+          "llm",
+          "llms",
+          "post-training",
+          "fine-tuning",
+          "llama",
+          "qwen",
+          "transformer"
+        ],
+        "category": 0.0,
+        "popularity": 5.57,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 31 赞",
+      "authors_display": "Saket Reddy, Amro Abbas, Anshuman Suri, Ari Morcos, David Schwab, Pratyush Maini"
+    },
+    {
+      "arxiv_id": "2610.41260",
+      "title": "SketchDirector: Complex Scene Sketching via Agentic Layout Reasoning and Detail Refinement",
+      "abstract": "Existing sketch generation methods often rely on image guidance and are largely limited to individual objects or simplified scenes, leaving text-guided complex scene sketching underexplored. We present SketchDirector, an agentic framework that mimics the human sketching workflow for automatic multi-concept scene sketching. Given a scene-level text prompt, SketchDirector first employs a large language model~(LLM) to decompose the scene into multiple draft assets, where each is represented by a set of Bézier curves. Then, an agentic reasoning loop iteratively plans and executes their spatial arrangement, guided by self-evolving memory. Finally, a detail refinement module leverages diffusion priors to enhance sketch quality while preserving geometric structure. To support future research and applications in multi-concept scene sketch generation, we further introduce the MCSketch8K dataset, comprising editable vector assets, compositional layouts, and object-level manipulation annotations. Extensive experiments show that SketchDirector outperforms state-of-the-art baselines in semantic and compositional quality while effectively preserving overall contour organization during refinement. The project page is: https://yiki77.github.io/SketchDirector/{https://yiki77.github.io/SketchDirector/}.",
+      "authors": [
+        "Yiqi Liang",
+        "Xiaodong Cun"
+      ],
+      "hf_upvotes": 2,
+      "hf_url": "https://huggingface.co/papers/2610.41260",
+      "github_repo": "https://github.com/GVCLab/SketchDirector",
+      "github_repo_source": "hf",
+      "github_stars": 15,
+      "project_page": "https://yiki77.github.io/SketchDirector/",
+      "organization": "GVC Lab at Great Bay University",
+      "hf_published": "2026-10-30",
+      "hf_featured": "2026-11-02",
+      "abs_url": "https://arxiv.org/abs/2610.41260",
+      "pdf_url": "https://arxiv.org/pdf/2610.41260",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 12.0,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 9.741,
+      "score_breakdown": {
+        "keyword_raw": 12,
+        "keyword_matched": [
+          "large language model",
+          "language model",
+          "llm",
+          "reasoning",
+          "prompt"
+        ],
+        "category": 0.0,
+        "popularity": 4.74,
+        "stars_counted": 15,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 2 赞 ｜ 💻 [代码](https://github.com/GVCLab/SketchDirector)",
+      "authors_display": "Yiqi Liang, Xiaodong Cun"
+    },
+    {
+      "arxiv_id": "2611.07854",
+      "title": "Towards Foundation Decision Models: Drex",
+      "abstract": "Autoregressive approaches with large language models, such as long chain-of-thought reasoning, have become the default for new AI applications because they reach higher accuracy on a wide range of tasks. In production, however, they give inconsistent answers, require parsing of outputs, and add cost and latency. Decision models address this: given a question and a set of options supplied by the user, they return a probability distribution over the options without autoregressive decoding. We present Drex, a family of four open decision models with 8B (DLM), 9B (v1.5), 35B with 3B active (v2.0), and 27B (Max) parameters. Each request consists of a state (a document, record, or agent context, optionally with images) and questions about it, each asking for a choice among options, a yes/no judgment, or a score on an ordered scale. Training combines supervised fine-tuning with reinforcement learning from adjusted feedback (RLAF), plus vision tuning for Max. Ablations show that RLAF improves accuracy and that consistency losses improve robustness to option order. On Decision Index 0.4.1, Max sets a new state of the art among the decision models we compare (67.52 on the public suite vs. 60.70 for Jev 1.14.0). On Decision Bench v4, it is statistically tied with d3-turbo and GPT-6 Sol and trails Claude Opus 5.5 by 1.6 points, and it has the highest accuracy among decision models on DecideBench. Max answers a typical request in 183 ms, against about 2.0 s for GPT-6 Sol and 3.5 s for Claude Opus 5.5, and its outputs are stable under option reordering. All four models are open source: https://github.com/nace-ai/drex-decision-models",
+      "authors": [
+        "Nischay Dhankhar",
+        "Alisher Amantay",
+        "Zhanibek Datbayev",
+        "Darkhan Akhmetov",
+        "Yash Shah",
+        "Nurmukhamed Ubaidullayev",
+        "Raman Saparkhan",
+        "Dos Baha",
+        "Abulhair Saparov"
+      ],
+      "published": "2026-11-05",
+      "updated": "2026-11-05",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "comment": "51 pages, 13 figures, 25 tables. Models and code: https://huggingface.co/nace-ai",
+      "abs_url": "https://arxiv.org/abs/2611.07854",
+      "pdf_url": "https://arxiv.org/pdf/2611.07854v1",
+      "hf_upvotes": 22,
+      "hf_url": "https://huggingface.co/papers/2611.07854",
+      "github_repo": "https://github.com/nace-ai/drex-decision-models",
+      "github_repo_source": "hf",
+      "github_stars": 122,
+      "project_page": "https://huggingface.co/nace-ai",
+      "organization": "Nace.AI",
+      "hf_published": "2026-11-05",
+      "hf_featured": "2026-11-06",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "llm",
+      "fit": 12.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 9.69,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "chain-of-thought",
+          "reasoning",
+          "decoding",
+          "fine-tuning",
+          "gpt"
+        ],
+        "category": 2.0,
+        "popularity": 4.69,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 22 赞 ｜ 💻 [代码](https://github.com/nace-ai/drex-decision-models)",
+      "authors_display": "Nischay Dhankhar, Alisher Amantay, Zhanibek Datbayev, Darkhan Akhmetov, Yash Shah, Nurmukhamed Ubaidullayev 等 9 人"
+    },
+    {
+      "arxiv_id": "2610.41574",
+      "title": "BYOD: Build Your Own DLM - Efficient Autoregressive-to-Diffusion Language Model Conversion",
+      "abstract": "Unlike autoregressive (AR) models, diffusion language models (DLMs) permit parallel token updates, flexible generation, and bidirectional attention, but leading systems rely on costly pretraining or full-model fine-tuning. We present Build Your Own DLM (BYOD), a generalizable LoRA-only recipe for parameter-efficient AR-to-DLM conversion. Without architecture-specific tuning, BYOD induces diffusion generation in Gemma 2 9B, Llama 3.1 8B, Qwen2.5 7B, and Ministral 8B; to our knowledge, this is the first reported AR-to-DLM conversion of a Mistral model. The adapters comprise 4.1-5.8% of final parameters while every base-model parameter remains frozen; each 25,000-iteration conversion needs at most 102.4M tokens, processed in 3.1-4.0 hours on one Google Colab GPU. All four models generate from fully masked sequences, use bidirectional context in a controlled attention test, and retain substantial parent-model knowledge. BYOD-Gemma is the strongest BYOD conversion on our nine-task evaluation, reaching 50.6% average accuracy compared with 51.9% for LLaDA 8B Instruct in the same harness. Open-generation quality at low network function evaluation (NFE) budgets remains the principal limitation: BYOD perplexity is 8.3-11.1 versus 4.1 for LLaDA and 2.2-3.0 for the AR parents when generating 128 tokens in 64 steps. To enable further experimentation and inspection, we provide a standalone training and evaluation implementation and interactive demos for all four conversions. BYOD thus provides a practical route for extending diffusion generation to other existing model families while identifying the gap that efficient conversion must next close.",
+      "authors": [
+        "Ruurd J. A. Kuiper",
+        "Robert A. Bagheri"
+      ],
+      "hf_upvotes": 10,
+      "hf_url": "https://huggingface.co/papers/2610.41574",
+      "github_repo": "https://github.com/RuurdKuiper/BYOD",
+      "github_repo_source": "hf",
+      "github_stars": 2,
+      "project_page": "https://colab.research.google.com/github/RuurdKuiper/BYOD/blob/main/notebooks/train_diffusion.ipynb",
+      "organization": "University Medical Center Utrecht",
+      "hf_published": "2026-10-30",
+      "hf_featured": "2026-11-03",
+      "abs_url": "https://arxiv.org/abs/2610.41574",
+      "pdf_url": "https://arxiv.org/pdf/2610.41574",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 11.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 9.231,
+      "score_breakdown": {
+        "keyword_raw": 11,
+        "keyword_matched": [
+          "language model",
+          "pretraining",
+          "fine-tuning",
+          "lora",
+          "llama"
+        ],
+        "category": 0.0,
+        "popularity": 4.48,
+        "stars_counted": 2,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 10 赞 ｜ 💻 [代码](https://github.com/RuurdKuiper/BYOD)",
+      "authors_display": "Ruurd J. A. Kuiper, Robert A. Bagheri"
+    },
+    {
+      "arxiv_id": "2611.04634",
+      "title": "VeriSpoof: Beyond Real or Fake with One Audio LLM",
+      "abstract": "A speech deepfake detector estimates whether a recording is synthetic, but a forensic analyst also asks which system produced it, whether recordings share a source, and what evidence supports each conclusion. We present VeriSpoof, an audio language model that unifies five tasks with shared weights: deepfake detection, generator attribution (generator, acoustic model and vocoder), recording-condition analysis, synthesized-span localisation, and source verification. Each decision is supported by grounded rationales whose statements can be independently verified. Answers are scored by sentence likelihood, allowing detection and source verification to be thresholded without separate heads. Rationale statements can be checked against waveform measurements, span labels, or generator metadata. Counterfactual examples train decisions to follow the stated evidence. Across the 14 Speech-DF-Arena test sets, VeriSpoof-Plus achieves 2.14% pooled EER, ranking third of 28 systems and first among open-weight systems. VeriSpoof-Base, trained only on official training splits of eight corpora, achieves 4.43% EER, less than half that of the next open-weight detector. With the same weights, VeriSpoof-Plus verifies whether recordings from generators unseen in training share a source at 6.2% EER. Controlled studies show that the audio representation governs detection, the LLM governs recording comparison, and source supervision is necessary for neural-codec fakes. Statement-checkable rationales catch partial fakes missed by one-step answers (99.6% vs. 78.4% on PartialEdit) and determine decisions under edits unseen in training (99.5%). Training updates only 29.7M of 2.85B parameters, fitting a single 24 GB GPU with gradient checkpointing. We release both models, inference code, a demo, and VeriSpoof-Bench, the evaluation suite covering these questions.",
+      "authors": [
+        "Yang Xiao",
+        "Ting Dang"
+      ],
+      "published": "2026-11-03",
+      "updated": "2026-11-03",
+      "primary_category": "eess.AS",
+      "categories": [
+        "eess.AS",
+        "cs.CR",
+        "cs.SD"
+      ],
+      "comment": "Tech Report",
+      "abs_url": "https://arxiv.org/abs/2611.04634",
+      "pdf_url": "https://arxiv.org/pdf/2611.04634v1",
+      "hf_upvotes": 5,
+      "hf_url": "https://huggingface.co/papers/2611.04634",
+      "github_repo": "https://github.com/swagshaw/verispoof",
+      "github_repo_source": "hf",
+      "github_stars": 9,
+      "project_page": "https://swagshaw.github.io/verispoof/",
+      "organization": "The University of Melbourne",
+      "hf_published": "2026-11-03",
+      "hf_featured": "2026-11-05",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 7.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 8.749,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "language model",
+          "llm",
+          "inference"
+        ],
+        "category": 0.0,
+        "popularity": 5.0,
+        "stars_counted": 9,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 5 赞 ｜ 💻 [代码](https://github.com/swagshaw/verispoof)",
+      "authors_display": "Yang Xiao, Ting Dang"
+    },
+    {
+      "arxiv_id": "2610.40738",
+      "title": "Apriel Voice 27B Preview: An Open Model for Speech, Reasoning, and Tool Use",
+      "abstract": "A capable voice assistant must do more than recognize words; it must understand requests, reason over context, sustain conversations, and act through tools. We present Apriel Voice 27B Preview, an open speech-language model that unifies these capabilities within a shared reasoning backbone while retaining text and image input modalities. Built on the post-trained Gemma 4 26B-A4B checkpoint, Apriel Voice directly processes speech and generates both responses and tool calls without requiring a separate dialogue model. We introduce a two-stage training procedure to adapt the model to speech. The first stage establishes the speech interface, while the second jointly adapts the projector and backbone through supervised fine-tuning, text replay, and source-dependent cross-entropy and forward Kullback--Leibler divergence supervision. Automatically constructed speech-conditioned dialogues provide conversational training data, while local teacher serving, overlapping teacher and student computation, and fused full-vocabulary losses enable efficient online distillation. In thinking mode, Apriel Voice achieves a score of 98.90 on Big Bench Audio, 81.13 on Speech-BFCL, and a task success rate of 65.51% on τ-Voice, with a mean latency of 1.91 seconds. It also achieves 51.27% English EVA accuracy and 74.13% experience pass@1. Finally, we deploy Apriel Voice 27B Preview on a custom serving platform to support interactive voice interactions.",
+      "authors": [
+        "Aman Tiwari",
+        "Akshay Kalkunte",
+        "Akintunde Oladipo",
+        "Jash Shah",
+        "Tara Bogavelli",
+        "Hoang Nguyen",
+        "Nishanth Madhusudhan",
+        "Vishal Juneja",
+        "Sridhar Nemala",
+        "Srinivas Sunkara",
+        "Sathwik Tejaswi Madhusudhan",
+        "Shruthan Radhakrishna",
+        "Masoud Hashemi",
+        "Kelechi Ogueji",
+        "Khalil Slimi",
+        "Saloni Mittal",
+        "Pulkit Pattnaik",
+        "Shashank Maiya",
+        "Dhruv Jhamb",
+        "Esakkivel Esakkiraja",
+        "Katrina Stankiewicz",
+        "Gabrielle Gauthier Melançon",
+        "Fanny Riols",
+        "Amit Saha",
+        "Lakshmi Sirisha Chodisetty",
+        "Nitin Aggarwal",
+        "Anil Madamala",
+        "Sagar Davasam",
+        "Segan Subramanian",
+        "Vikas Yadav",
+        "Sai Rajeswar Mudumba"
+      ],
+      "hf_upvotes": 36,
+      "hf_url": "https://huggingface.co/papers/2610.40738",
+      "project_page": "https://servicenow-ai-apriel.hf.space/home",
+      "organization": "ServiceNow-AI",
+      "hf_published": "2026-10-29",
+      "hf_featured": "2026-11-02",
+      "abs_url": "https://arxiv.org/abs/2610.40738",
+      "pdf_url": "https://arxiv.org/pdf/2610.40738",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 8.0,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 8.5,
+      "score_breakdown": {
+        "keyword_raw": 8,
+        "keyword_matched": [
+          "language model",
+          "reasoning",
+          "distillation",
+          "fine-tuning"
+        ],
+        "category": 0.0,
+        "popularity": 6.0,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 36 赞",
+      "authors_display": "Aman Tiwari, Akshay Kalkunte, Akintunde Oladipo, Jash Shah, Tara Bogavelli, Hoang Nguyen 等 31 人"
+    },
+    {
+      "arxiv_id": "2611.03998",
+      "title": "Dory1.0-4B: A Looped Normalized-GPT",
+      "abstract": "We introduce Dory1.0-4B, a 4-billion-parameter looped (latent-recurrent) language model with elastic depth: a single checkpoint serves different inference compute budgets. Dory1.0-4B is built on a normalized Transformer (nGPT) backbone with interleaved sliding-window and full-attention layers, organized into an input block, a shared recurrent block, and an output block. At inference, the recurrent block can be applied a variable number of times. We pre-trained Dory1.0-4B on 6 trillion tokens. The first 4.5 trillion tokens were trained in NVFP4, and additional pre-training then extended the context length to 256K tokens. Next, we post-trained the model using Supervised Fine-Tuning (SFT) and Reinforcement Learning with Verifiable Rewards (RLVR), with a difficulty-aware loop curriculum that routes harder prompts to deeper loops. Increasing the loop count improves accuracy, with the largest gains on coding, agentic, and long-context benchmarks. With two or more loops, Dory1.0-4B outperforms larger models such as Qwen3.5-9B, Gemma 4 12B, and Gemma 4 26B-A4B on average across 12 benchmarks. Looping also makes Dory1.0-4B more token-efficient on agentic benchmarks: with four loops, it generates 1.3-2.5x fewer tokens than with one loop, as the extra computation is spent in latent space rather than on longer outputs. To reduce memory during looping, Dory1.0-4B caches keys and values only from the last loop, keeping its KV-cache footprint equal to that of a non-looped model at any loop count while retaining most of the accuracy gains. We open-source the BF16, MXFP8, NVFP4, and GGUF quantized checkpoints.",
+      "authors": [
+        "Maxim Fishman",
+        "Simeng Sun",
+        "Shantanu Acharya",
+        "Faisal Ladhak",
+        "Brian Chmiel",
+        "Santiago Akle Serano",
+        "Ron Banner",
+        "Boris Ginsburg",
+        "Krishna C. Puvvada"
+      ],
+      "hf_upvotes": 12,
+      "hf_url": "https://huggingface.co/papers/2611.03998",
+      "organization": "NVIDIA",
+      "hf_published": "2026-11-02",
+      "hf_featured": "2026-11-04",
+      "abs_url": "https://arxiv.org/abs/2611.03998",
+      "pdf_url": "https://arxiv.org/pdf/2611.03998",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "project_page": null,
+      "theme": "llm",
+      "fit": 20.0,
+      "alt_theme": "agent",
+      "routed_by": "topic",
+      "score": 8.464,
+      "score_breakdown": {
+        "keyword_raw": 18,
+        "keyword_matched": [
+          "language model",
+          "pre-training",
+          "sft",
+          "rlvr",
+          "context length",
+          "fine-tuning",
+          "inference",
+          "gpt",
+          "transformer"
+        ],
+        "category": 2.0,
+        "popularity": 3.46,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 12 赞",
+      "authors_display": "Maxim Fishman, Simeng Sun, Shantanu Acharya, Faisal Ladhak, Brian Chmiel, Santiago Akle Serano 等 9 人"
+    },
+    {
+      "arxiv_id": "2611.03685",
+      "title": "LOLPlay: Benchmarking Real-Time Visual Agents in League of Legends",
+      "abstract": "Visual agents need to coordinate reasoning and action while their environment evolves during inference. We introduce LOLPlay, a benchmark in native League of Legends with 36 champion-specific tasks spanning resource management, combat, cooperation, and objectives. Agents interact through screenshots and mouse--keyboard actions; automated initialization and 82 executable subgoal checks distinguish partial progress from completion. Across 324 task evaluations of three models at three reasoning-effort settings, GPT-6 Astra achieves the highest task success rate of 25.0\\% at low and medium effort, and the highest subgoal success rate of 40.3\\% at medium effort. However, high effort improves neither metric over low effort for any model. For Astra, longer requests leave fewer interaction rounds, suggesting a cost to additional reasoning in real-time control. Trajectories reveal incomplete subgoal composition and actions executing after the observed scene changes, motivating agents that combine visual reasoning with timely action.",
+      "authors": [
+        "Zhaojian Yu"
+      ],
+      "hf_upvotes": 9,
+      "hf_url": "https://huggingface.co/papers/2611.03685",
+      "github_repo": "https://github.com/answers111/LOLPlay",
+      "github_repo_source": "hf",
+      "github_stars": 6,
+      "project_page": "https://answers111.github.io/LOL-Play-homepage/",
+      "hf_published": "2026-10-25",
+      "hf_featured": "2026-11-04",
+      "abs_url": "https://arxiv.org/abs/2611.03685",
+      "pdf_url": "https://arxiv.org/pdf/2611.03685",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 4.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 8.335,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "reasoning",
+          "inference",
+          "gpt"
+        ],
+        "category": 0.0,
+        "popularity": 5.34,
+        "stars_counted": 6,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 9 赞 ｜ 💻 [代码](https://github.com/answers111/LOLPlay)",
+      "authors_display": "Zhaojian Yu"
+    },
+    {
+      "arxiv_id": "2611.08089",
+      "title": "SAE Interprets MoE: Sparse AutoEncoders Reveal That MoE Experts Exhibit Human-Interpretable Fine-Grained Specialization",
+      "abstract": "Mixture-of-Experts (MoE) models route each token to a few of many experts, yet what an individual expert is responsible for remains unsettled. Existing analyses count how often an expert is selected on domain-labeled corpora, an instrument that fixes the taxonomy in advance, stays coarse, and records selection rather than contribution. We instead study specialization in feature space by training a sparse autoencoder (SAE) on the output of an MoE layer. Since this output is a router-weighted sum of expert outputs and the SAE encoder is affine, the pre-activation of every latent decomposes exactly over the experts. Aggregated over a corpus, this gives each expert a dominant set of latents whose activation it principally drives. On layers 4, 30 and 46 of Qwen3-30B-A3B, contribution is far more concentrated than gating, most latents have only one or two dominators, and the overlap between dominant sets concentrates on a few expert pairs. Auto-interpreting these sets reveals a division of labor below coarse domains, with distinct experts for Java and front-end web code, or for geometry and for arithmetic and polynomials, while the coarse domains themselves take very unequal numbers of experts. Our SAEs and code are available at https://github.com/Bytedance-Seed/SAE-Interprets-MoE.",
+      "authors": [
+        "Anyuan Zhuo",
+        "Shaohua Zhang",
+        "Yuan Lin",
+        "Pinyan Lu"
+      ],
+      "published": "2026-11-05",
+      "updated": "2026-11-05",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2611.08089",
+      "pdf_url": "https://arxiv.org/pdf/2611.08089v1",
+      "hf_upvotes": 8,
+      "hf_url": "https://huggingface.co/papers/2611.08089",
+      "github_repo": "https://github.com/ByteDance-Seed/SAE-interprets-MoE",
+      "github_repo_source": "hf",
+      "github_stars": 3,
+      "project_page": "https://bytedance-seed.github.io/SAE-interprets-MoE/",
+      "organization": "ByteDance Seed",
+      "hf_published": "2026-11-05",
+      "hf_featured": "2026-11-06",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "theme": "llm",
+      "fit": 5.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.929,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "mixture-of-experts",
+          "moe"
+        ],
+        "category": 0.75,
+        "popularity": 4.49,
+        "stars_counted": 3,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 8 赞 ｜ 💻 [代码](https://github.com/ByteDance-Seed/SAE-interprets-MoE)",
+      "authors_display": "Anyuan Zhuo, Shaohua Zhang, Yuan Lin, Pinyan Lu"
+    },
+    {
+      "arxiv_id": "2610.37918",
+      "title": "Venus-DefakerOne2: A Vision-Forensics Foundation Model with Broader Coverage",
+      "abstract": "Real-world forgery is inherently heterogeneous: it manifests not only as digital manipulation but also as physical spoofing, and is carried not only by images but also by videos. Despite substantial progress, a unified anti-forgery foundation model covering such a broad threat spectrum remains absent. In this paper, we present Venus-DefakerOne2, which substantially extends the forensic capability boundary along both the forgery-form and media-type dimensions. Trained on tens of millions of open-source and in-house samples, it incorporates two key designs. Tide-Style-Tuning alternates LoRA and full-parameter fine-tuning to balance computational efficiency, generalization, and hard-sample fitting while mitigating catastrophic forgetting. Entropy-based Test Adaptation determines the optimal prediction modality by analyzing prediction entropy. Venus-DefakerOne2 achieves new state-of-the-art performance across a comprehensive suite of benchmarks, including DeepFake faces (96.7%), AI-generated images (93.3%), tampered documents (87.6%), manipulated natural images (89.6%), physical spoofs (93.1%), and AI-generated videos (96.0%). It significantly outperforms both specialized expert models and its predecessor, DefakerOne, establishing itself as a powerful and versatile foundation model for binary-decision forensic tasks.",
+      "authors": [
+        "Chenfan Qu",
+        "Yachao Liang",
+        "Mingqi Fang",
+        "Jiangwei Xie",
+        "Zhenming Wang",
+        "Baoyue Zhang",
+        "Changjiang Jiang",
+        "Zheng Chang",
+        "Fanli Jin",
+        "Xuekang Zhu",
+        "Kaiwen Feng",
+        "Junchi Li",
+        "Weihong Zhang",
+        "Haoyue Wang",
+        "Chenfeng Zhang",
+        "Yinan Xia",
+        "Fangming Cui",
+        "Dong Fan",
+        "Jingjing Liu",
+        "Tianyi Zhang",
+        "Luobin Chen",
+        "Ji-Zhe Zhou",
+        "Sheng Li",
+        "Wei Wang",
+        "Bin Li",
+        "Ran He",
+        "Xinpeng Zhang",
+        "Linna Zhou",
+        "Jian Liu",
+        "Weiqiang Wang"
+      ],
+      "hf_upvotes": 22,
+      "hf_url": "https://huggingface.co/papers/2610.37918",
+      "github_repo": "https://github.com/inclusionAI/DefakerOne2",
+      "github_repo_source": "hf",
+      "github_stars": 93,
+      "project_page": "https://venus-guangjian.github.io/Venus-DeFakerOne2/",
+      "organization": "inclusionAI",
+      "hf_published": "2026-10-27",
+      "hf_featured": "2026-11-02",
+      "abs_url": "https://arxiv.org/abs/2610.37918",
+      "pdf_url": "https://arxiv.org/pdf/2610.37918",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 4.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.69,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "fine-tuning",
+          "lora"
+        ],
+        "category": 0.0,
+        "popularity": 4.69,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 22 赞 ｜ 💻 [代码](https://github.com/inclusionAI/DefakerOne2)",
+      "authors_display": "Chenfan Qu, Yachao Liang, Mingqi Fang, Jiangwei Xie, Zhenming Wang, Baoyue Zhang 等 30 人"
+    },
+    {
+      "arxiv_id": "2611.06498",
+      "title": "Signed but Steerable: Measuring and Closing the Text-Vector Integrity Gap in Offline Retrieval-Augmented Generation",
+      "abstract": "Offline retrieval-augmented generation (RAG) on edge devices is updated through signed knowledge packs that carry text and precomputed embedding vectors. A signature proves who published a pack, not that its vectors encode its text. We study this text-vector integrity gap. A verifier that recomputes vectors and accepts them within a cosine tolerance concedes a predictable share of queries to an attacker who controls the vectors: the hijack rate equals the distribution of angular retrieval margins at the tolerance (the margin law). Margins are small in five corpora and two embedding models, so an idealised tolerance at the level of floating-point noise leaves up to 5.5% of queries exposed (at most 1.2% in any corpus once exact duplicate documents are excluded), and a threshold calibrated from our CPU INT8-FP32 comparison of a small embedding model (at the empirical 0.1% quantile of honest cosines) leaves 98-100% exposed; on a Raspberry Pi 5 running a local language model, such an attack lowers correct answers from 0.75 to 0.39. Integrity audits of compressed vector stores fare no better: on a FAISS product-quantisation index over 57,638 documents, tampered vectors that all pass the audit put the attacker's document first for 25% of targets. Verifying quantisation codes instead, with ambiguity decided by the verifier, a calibrated guard band and canonicalisation, accepted every honest vector in our samples on three platforms and left the publisher no choice. We also show that common floating-point and dynamic-INT8 inference pipelines are not bit-reproducible across batch sizes or architectures, and report pre-registered negative results on abstention, context pruning and semantic screening. We release code and data.",
+      "authors": [
+        "Georgios Feretzakis",
+        "Alexandros Papaspyridis"
+      ],
+      "published": "2026-11-04",
+      "updated": "2026-11-04",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "comment": "20 pages, 2 figures, 7 tables. Code and data: https://github.com/securagenai/signed-but-steerable (DOI 10.5281/zenodo.23948839)",
+      "abs_url": "https://arxiv.org/abs/2611.06498",
+      "pdf_url": "https://arxiv.org/pdf/2611.06498v1",
+      "hf_upvotes": 4,
+      "hf_url": "https://huggingface.co/papers/2611.06498",
+      "github_repo": "https://github.com/securagenai/signed-but-steerable",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "project_page": "https://doi.org/10.5281/zenodo.23948839",
+      "organization": "securagen.ai P.C.",
+      "hf_published": "2026-11-04",
+      "hf_featured": "2026-11-06",
+      "sources": [
+        "hf"
+      ],
+      "theme": "llm",
+      "fit": 9.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.269,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "language model",
+          "retrieval-augmented",
+          "rag",
+          "inference"
+        ],
+        "category": 0.75,
+        "popularity": 2.83,
+        "stars_counted": 1,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 4 赞 ｜ 💻 [代码](https://github.com/securagenai/signed-but-steerable)",
+      "authors_display": "Georgios Feretzakis, Alexandros Papaspyridis"
+    }
+  ]
+}

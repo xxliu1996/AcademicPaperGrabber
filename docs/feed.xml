@@ -5,7 +5,14 @@
   <link>https://xxliu1996.github.io/AcademicPaperGrabber/</link>
   <description>每周自动抓取六个方向最近一周的热门论文，每个方向 10 篇，人读的那种周报。</description>
   <language>zh-CN</language>
-  <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 08 Nov 2026 00:00:00 +0000</lastBuildDate>
+  <item>
+    <title>AI 论文周报（2026-11-02 – 2026-11-08）</title>
+    <link>https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-11-08.html</link>
+    <guid isPermaLink="true">https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-11-08.html</guid>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+    <description>本周最显著的技术演进主线，是人工智能正从“单点生成与孤立规划”加速迈向“长程闭环控制、局部推理压缩与系统级协同工程”。在推理与模型架构端，产业界正集中反思“冗长过度思考”与推理开销：腾讯 LoCo 提出局部偏好学习直击长思维链空转，Qwen SpecOPD 与 D3D 则持续深耕投机解码与显存量化，推动高质量推理从学术算力竞赛转向端侧普惠。在具身智能与多模态世界模型方向，物理现实与动作空间的深度对齐成为共识：NVIDIA 的 VFlash 与快手可灵分别在瞬时几何规划与长程视频语义可控性上给出扎实解法，而 Wave Forcing 则以序列波前并行打破了流式视频生成的自回归延迟瓶颈。在智能体系统层面，演进重点正从单体 Prompt 调优跃升至类操作系统（OS）的全链路基础设施：人大的 CoworkOS 与微软的混合接口系统，正在为多智能体工业级落地铺设真实底座。相比之下，智能眼镜与可穿戴 XR 领域本周公开发表较少，但研究界在低功耗事件相机交互、免相机的眼动感知（GazeTags）及消费级 VR 头显具身示教上，依然交出了低调而实用的工程答卷。 ｜ llm 10 篇；vlm 10 篇；agent 10 篇；deep-learning 10 篇；robotics 10 篇；wearable-xr 8 篇</description>
+  </item>
   <item>
     <title>AI 论文周报（2026-10-26 – 2026-11-01）</title>
     <link>https://xxliu1996.github.io/AcademicPaperGrabber/r/2026-11-01.html</link>

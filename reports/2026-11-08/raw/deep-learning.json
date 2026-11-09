@@ -1,0 +1,1227 @@
+{
+  "generated_at": "2026-11-09T04:58:24.373079+00:00",
+  "theme": "deep-learning",
+  "theme_title": "其他深度学习",
+  "theme_subtitle": "架构、优化、表征学习、语音与可解释性",
+  "accent": "#7a5a2b",
+  "week_start": "2026-11-02",
+  "week_end": "2026-11-08",
+  "pick": 10,
+  "authenticated_github": true,
+  "arxiv_data_complete": true,
+  "candidate_count": 153,
+  "measured_heat_count": 20,
+  "papers": [
+    {
+      "arxiv_id": "2611.00859",
+      "title": "Wave Forcing: Towards Speed-of-Light Streaming Video Generation",
+      "abstract": "Real-time long-video generation requires continuous output with consistent appearance and natural motion. Existing chunk-wise autoregressive methods face challenges in both generation efficiency and long-video quality: serialized denoising and history-cache refresh require two forward passes even with one-step denoising, and longer rollouts can degrade quality and cause camera drift. We propose Wave Forcing (WF), which co-designs generation, training, and execution for continuous video output with multi-step denoising. WF uses chunk-wise causal attention to access earlier, cleaner chunks before their denoising is complete, and distributes staggered denoising and cache-refresh stages across full-model replicas to achieve 1F1C: one output chunk per concurrent forward round after pipeline fill. To adapt the model to this continuous generation process, we develop a three-stage training procedure that successively introduces mixed-noise denoising, motion supervision, and causal adaptation using self-generated history. To execute this process efficiently, Wave Runtime (WaveRT) uses Wave Parallelism (WP) for early K/V delivery and communication-computation overlap, together with optimized kernels and pipelined VAE decoding. Experiments on Wan2.1-T2V-1.3B show that 5-step WF maintains overall quality comparable to Rolling Forcing while achieving higher Dynamic Degree on both short and long videos. Our system efficiency experiments show that 4-step WF achieves 147.6 DiT FPS and 134.8 end-to-end FPS on eight H200 GPUs, yielding 7.07x the single-GPU end-to-end throughput. In DiT-only tests with matched SageAttention+W8A8 backends, denoising steps, and GPU counts, WP delivers up to 2.53x the throughput of the faster of the Ulysses and Ring context-parallel baselines across six model scales (1.3B-14B).",
+      "authors": [
+        "Yijie Jin",
+        "Yuxuan Liu",
+        "Jiajun Xu",
+        "Ye Huang",
+        "Chuzhi Wang",
+        "Jiayang Li",
+        "Ruiyang Chen",
+        "Chenling Hong",
+        "Xu Wang",
+        "Zhijie Deng"
+      ],
+      "hf_upvotes": 127,
+      "hf_url": "https://huggingface.co/papers/2611.00859",
+      "github_repo": "https://github.com/SJTU-DENG-Lab/WaveForcing",
+      "github_repo_source": "hf",
+      "github_stars": 130,
+      "project_page": "https://sjtu-deng-lab.github.io/WaveForcing/",
+      "organization": "DENG Lab @ SJTU",
+      "hf_published": "2026-10-31",
+      "hf_featured": "2026-11-03",
+      "abs_url": "https://arxiv.org/abs/2611.00859",
+      "pdf_url": "https://arxiv.org/pdf/2611.00859",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 19.12,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 17.12,
+        "stars_counted": 130,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 127 赞 ｜ 💻 [代码](https://github.com/SJTU-DENG-Lab/WaveForcing)",
+      "authors_display": "Yijie Jin, Yuxuan Liu, Jiajun Xu, Ye Huang, Chuzhi Wang, Jiayang Li 等 10 人"
+    },
+    {
+      "arxiv_id": "2611.02737",
+      "title": "MoviEdit: Long-form Multi-Shot Video Editing Made Easy",
+      "abstract": "Long-form multi-shot video editing requires an intended edit to remain coherent across abrupt changes in scene, viewpoint, and subject appearance, while processing substantially longer visual context than conventional single-shot editors. We introduce MoviEdit, an end-to-end framework for scalable long-form multi-shot video editing that jointly addresses the challenges of data, modeling, and evaluation. To provide cross-shot supervision data at scale, we develop automatic data-generation pipelines spanning synchronized multi-view footage, real-world multi-shot videos, and generated multi-shot content, yielding 87K paired editing videos without manual annotation. Architecturally, MoviEdit employs a cascaded bidirectional-autoregressive design: a lightweight bidirectional stage first establishes a globally coherent editing draft over a spatiotemporally compressed representation, which is then autoregressively propagated and refined over the full video. We further introduce MoviEdit-Bench, a dedicated benchmark for systematic evaluation of long-form multi-shot video editing. Extensive experiments show that MoviEdit substantially outperforms existing open-source models and performs on par with industry frontier models across text-guided and image-guided editing. Visit our project page for complete results and to access the benchmark: https://multi-shot-edit.github.io/",
+      "authors": [
+        "Suhyeon Lee",
+        "Zhengang Li",
+        "Soo Ye Kim",
+        "Peihao Zhu",
+        "Jong Chul Ye",
+        "Chun-Hao Paul Huang",
+        "Duygu Ceylan",
+        "Yan Kang",
+        "Hyeonho Jeong"
+      ],
+      "hf_upvotes": 74,
+      "hf_url": "https://huggingface.co/papers/2611.02737",
+      "github_repo": "https://github.com/adobe-research/MoviEdit-Bench",
+      "github_repo_source": "hf",
+      "github_stars": 18,
+      "project_page": "https://multi-shot-edit.github.io/",
+      "organization": "Adobe",
+      "hf_published": "2026-11-02",
+      "hf_featured": "2026-11-04",
+      "abs_url": "https://arxiv.org/abs/2611.02737",
+      "pdf_url": "https://arxiv.org/pdf/2611.02737",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 14.136,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 12.14,
+        "stars_counted": 18,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 74 赞 ｜ 💻 [代码](https://github.com/adobe-research/MoviEdit-Bench)",
+      "authors_display": "Suhyeon Lee, Zhengang Li, Soo Ye Kim, Peihao Zhu, Jong Chul Ye, Chun-Hao Paul Huang 等 9 人"
+    },
+    {
+      "arxiv_id": "2610.42136",
+      "title": "ReLift: Dense 3D Tracking as Lifted Trajectory Repair",
+      "abstract": "Dense 3D tracking from monocular video requires establishing point correspondences over time, estimating their depth, and inferring their trajectories during occlusion. Existing methods typically learn these tasks jointly, a demanding objective given the scarcity of 4D supervision. We show that strong pretrained 2D trackers and 3D geometry models provide an effective foundation: lifted trajectories, with occluded segments simply interpolated, already rival dedicated 3D trackers using the same geometry. However, lifted trajectories inherit correspondence and depth errors, and under occlusion, their depth comes from the occluder rather than the tracked point. We introduce ReLift, an efficient feed-forward framework that recasts dense 3D tracking as geometric trajectory repair and completion. At its core, a trajectory corrector alternates attention along and across trajectories to preserve reliable observations, repair corrupted positions, and complete missing motion. Using only geometric inputs allows us to train directly on 3D trajectories with simulated lifting errors, decoupling training from images and from any specific tracker or geometry model. Concentrating 4D supervision on trajectory refinement yields a reusable model that consistently improves lifted trajectories across trackers and geometry providers without retraining, so it benefits directly from future advances in either component. On WorldTrack, ReLift achieves state-of-the-art mean accuracy, improving on the strongest baselines by 2.1 APD on all points and 3.0 on dynamic points, with faster configurations remaining competitive with leading 3D trackers while running faster than 4RC. Visit our supplementry page for more examples and code.",
+      "authors": [
+        "Assaf Singer",
+        "Maroun Khriesh",
+        "Noam Rotstein",
+        "Yoni Kasten",
+        "Or Litany"
+      ],
+      "hf_upvotes": 28,
+      "hf_url": "https://huggingface.co/papers/2610.42136",
+      "github_repo": "https://github.com/ReLift3D/ReLift",
+      "github_repo_source": "hf",
+      "github_stars": 79,
+      "project_page": "https://relift3d.github.io/",
+      "organization": "Technion Israel institute of technology",
+      "hf_published": "2026-10-30",
+      "hf_featured": "2026-11-02",
+      "abs_url": "https://arxiv.org/abs/2610.42136",
+      "pdf_url": "https://arxiv.org/pdf/2610.42136",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 12.55,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 10.55,
+        "stars_counted": 79,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 28 赞 ｜ 💻 [代码](https://github.com/ReLift3D/ReLift)",
+      "authors_display": "Assaf Singer, Maroun Khriesh, Noam Rotstein, Yoni Kasten, Or Litany"
+    },
+    {
+      "arxiv_id": "2610.37257",
+      "title": "GameVerse: A Minute-Scale Gameplay Dataset for Long-Horizon Interactive World Modeling",
+      "abstract": "Recent advances in interactive world models have made it possible to generate controllable, dynamic environments from action inputs. Yet current models struggle to maintain coherence beyond roughly one minute of rollout, a limitation rooted not in model capacity but in the scarcity of long-horizon training data. Existing gameplay video datasets typically consist of clips under ten seconds, with captions that describe whole clips in coarse and undifferentiated text, which is insufficient for controllable long-horizon generation. We address this with GameVerse, a minute-scale gameplay video dataset purpose-built for long-horizon interactive world modeling. GameVerse contains 69.7K clips spanning 1,655 hours and 349.6 million frames across diverse first- and third-person gameplay, including 1,358 hours of continuous two-minute sequences, an order of magnitude longer than prior datasets. Clips pass through a unified pipeline of scene-consistent segmentation, quality filtering, camera pose estimation, and event-based caption annotation. Each clip is paired with a temporally stable camera trajectory that remains coherent across minutes, together with captions that separate static scene context from dynamic foreground events and align to event boundaries rather than fixed time windows. Comprehensive analysis shows that GameVerse surpasses existing public datasets in scale, diversity, and annotation quality. Experiments further demonstrate that training on GameVerse substantially extends the temporal horizon of interactive world models.",
+      "authors": [
+        "Kang He",
+        "Wenshuo Peng",
+        "Chuanhao Li",
+        "Zihui Gao",
+        "Xiaojie Xu",
+        "Zhengyuan Lin",
+        "Yuzhe Ding",
+        "Donghong Ji",
+        "Kaipeng Zhang",
+        "Yongtao Ge"
+      ],
+      "hf_upvotes": 37,
+      "hf_url": "https://huggingface.co/papers/2610.37257",
+      "github_repo": "https://github.com/kangverse/GameVerse",
+      "github_repo_source": "hf",
+      "github_stars": 12,
+      "project_page": "https://kangverse.github.io/GameVerse/",
+      "organization": "Alaya Lab",
+      "hf_published": "2026-10-31",
+      "hf_featured": "2026-11-05",
+      "abs_url": "https://arxiv.org/abs/2610.37257",
+      "pdf_url": "https://arxiv.org/pdf/2610.37257",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 11.161,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 9.16,
+        "stars_counted": 12,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 37 赞 ｜ 💻 [代码](https://github.com/kangverse/GameVerse)",
+      "authors_display": "Kang He, Wenshuo Peng, Chuanhao Li, Zihui Gao, Xiaojie Xu, Zhengyuan Lin 等 10 人"
+    },
+    {
+      "arxiv_id": "2610.31222",
+      "title": "GLOW-FM: Efficient Generative Low-Light Image Enhancement with One-Step Latent Flow Matching",
+      "abstract": "Low-light image enhancement (LLIE) aims to recover well-exposed and perceptually faithful images from severely degraded observations. Recent diffusion-based generative methods achieve strong perceptual quality by leveraging powerful image priors, but their iterative sampling incurs substantial computational cost, limiting practical deployment. Despite recent efficiency gains in generative LLIE, high-quality enhancement with a single function evaluation and low overall computation remains challenging, particularly under diverse real-world low-light conditions. We introduce GLOW-FM, a one-step latent flow-matching framework for efficient generative LLIE. GLOW-FM performs conditional transport in the latent space of a frozen Tiny-VAE and leverages Terminal Velocity Matching (TVM) to enable enhancement with a single function evaluation. Matched comparisons with alternative one-step objectives support TVM as an effective design choice, and, to the best of our knowledge, this is its first adaptation to image restoration and specifically to LLIE. Extensive experiments on challenging real-world benchmarks demonstrate that GLOW-FM achieves competitive image quality and state-of-the-art cross-dataset generalization while requiring only a single function evaluation and 34 GFLOPs for the small variant. These findings highlight the potential of GLOW-FM to bring generative LLIE closer to practical deployment through single-step inference and compact latent modeling. Code will be made publicly available upon publication.",
+      "authors": [
+        "Ariel Lapid",
+        "Yuval Haitman",
+        "Reuven Peretz",
+        "Arnon Netzer",
+        "Idit Diamant"
+      ],
+      "hf_upvotes": 13,
+      "hf_url": "https://huggingface.co/papers/2610.31222",
+      "github_repo": "https://github.com/arm-research/AAIR-GLOW-FM",
+      "github_repo_source": "hf",
+      "github_stars": 18,
+      "project_page": "https://arm-research.github.io/AAIR-GLOW-FM",
+      "organization": "Arm",
+      "hf_published": "2026-10-22",
+      "hf_featured": "2026-11-02",
+      "abs_url": "https://arxiv.org/abs/2610.31222",
+      "pdf_url": "https://arxiv.org/pdf/2610.31222",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 5.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 10.389,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "generalization",
+          "flow matching"
+        ],
+        "category": 0.0,
+        "popularity": 7.14,
+        "stars_counted": 18,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 13 赞 ｜ 💻 [代码](https://github.com/arm-research/AAIR-GLOW-FM)",
+      "authors_display": "Ariel Lapid, Yuval Haitman, Reuven Peretz, Arnon Netzer, Idit Diamant"
+    },
+    {
+      "arxiv_id": "2611.06043",
+      "title": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription",
+      "abstract": "Streaming speech recognition is increasingly consumed by machines, such as translators and voice agents, that act on each token as it appears. A token that is later revised costs wasted work or a wrong action. In this work, we present Confucius4-R2T2 (short for Real Real-Time Transcription), a stable-prefix streaming ASR model that never modifies its earlier output while maintaining high accuracy and low latency. R2T2 is obtained by post-training Qwen3-ASR-1.7B on 1,500 hours of Chinese and English audio while freezing its pre-trained audio encoder and projector. The adaptation is based on the concept of Longest Stable Prefix (LSP), a new notion that we introduce in this work. We prove that LSP is monotone under the prefix order, consistent with the full-audio output, and maximal among labels that equal a whole earlier output. Learning from LSP labels converts a full-context model into a stable-prefix streaming one without any architectural change. Extensive evaluations show that R2T2 brings streaming recognition close to the base model's full-context quality while delivering stable text with low emission lag. Its gains extend beyond the post-training languages, demonstrating a practical path from full-context ASR to stable streaming. We open-source the model weights and code at https://huggingface.co/netease-youdao/Confucius4-R2T2 and https://github.com/netease-youdao/Confucius4-R2T2.",
+      "authors": [
+        "Daniel Huang",
+        "Qi He",
+        "Shaoxiong Duan",
+        "Yingjie Li",
+        "Qiao Cheng",
+        "Yitao Duan"
+      ],
+      "published": "2026-11-04",
+      "updated": "2026-11-04",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.SD"
+      ],
+      "comment": "30 pages, 6 figures, 8 tables. Code and model weights available at https://github.com/netease-youdao/Confucius4-R2T2 and https://huggingface.co/netease-youdao/Confucius4-R2T2",
+      "abs_url": "https://arxiv.org/abs/2611.06043",
+      "pdf_url": "https://arxiv.org/pdf/2611.06043v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/netease-youdao/Confucius4-R2T2",
+      "github_repo_source": "abstract",
+      "project_page": "https://huggingface.co/netease-youdao/Confucius4-R2T2",
+      "theme": "deep-learning",
+      "fit": 7.75,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 9.938,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "speech recognition",
+          "asr",
+          "audio"
+        ],
+        "category": 0.75,
+        "popularity": 6.0,
+        "stars_counted": 870,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "github_stars": 870,
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/netease-youdao/Confucius4-R2T2)",
+      "authors_display": "Daniel Huang, Qi He, Shaoxiong Duan, Yingjie Li, Qiao Cheng, Yitao Duan"
+    },
+    {
+      "arxiv_id": "2611.02476",
+      "title": "GigaSpeech 3: Scaling Multi-Dialect Arabic Speech Recognition with Weakly Labeled Data",
+      "abstract": "Dialectal Arabic speech recognition remains constrained by the scarcity of dialect-resolved transcribed speech despite the abundance of web audio. We introduce GigaSpeech 3, a corpus of 39,000 hours and 10 million weakly transcribed speech segments covering Algerian, Egyptian, Iraqi, Saudi, and Syrian Arabic. Starting from 60 hours of manual transcription per dialect, we train labeling models using speech-recognition-biased self-supervised learning and apply them to dialect-matched web audio. Data selection and four rounds of noisy-student refinement for Saudi and Syrian Arabic yield the final corpus. We validate its utility through dialect-specific and multi-dialect speech recognition training and cross-domain evaluation. On GigaSpeechBench, the final dialect-specific models outperform their labeling models across all five dialects and achieve a macro-average word error rate of 23.86%, a 16.6% relative reduction from the strongest third-party system covering all five dialects, while outperforming the best third-party result on three dialects. A multi-dialect model using self-predicted dialect identities achieves a macro-average word error rate of 25.51% while also supporting Modern Standard Arabic. Across eight conditions from three external corpora, a GigaSpeech 3-trained Zipformer achieves the lowest word error rate among six evaluated models in every condition, while adapting the Qwen3 speech recognizer on GigaSpeech 3 improves performance across all eight conditions. We release the corpus and recipes as a foundation for dialect-aware Arabic speech processing.",
+      "authors": [
+        "Junzhe Liu",
+        "Yujie Tu",
+        "Yifan Yang",
+        "Peng Wang",
+        "Haoran Wang",
+        "Guodong Lin",
+        "Leyan Liao",
+        "Chengquan Zhang",
+        "Zhifu Gao",
+        "Xiangang Li",
+        "Qinyuan Cheng",
+        "Xipeng Qiu",
+        "Wei-Qiang Zhang",
+        "Guoguo Chen",
+        "Kai Yu",
+        "Xie Chen"
+      ],
+      "hf_upvotes": 2,
+      "hf_url": "https://huggingface.co/papers/2611.02476",
+      "github_repo": "https://github.com/Antares-97/GigaSpeech3",
+      "github_repo_source": "hf",
+      "github_stars": 20,
+      "project_page": "https://huggingface.co/datasets/speechcolab/gigaspeech3",
+      "organization": "SJTU Cross Media Language Intelligence Lab",
+      "hf_published": "2026-11-03",
+      "hf_featured": "2026-11-04",
+      "abs_url": "https://arxiv.org/abs/2611.02476",
+      "pdf_url": "https://arxiv.org/pdf/2611.02476",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 7.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 8.818,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "self-supervised",
+          "speech recognition",
+          "audio"
+        ],
+        "category": 0.0,
+        "popularity": 5.07,
+        "stars_counted": 20,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 2 赞 ｜ 💻 [代码](https://github.com/Antares-97/GigaSpeech3)",
+      "authors_display": "Junzhe Liu, Yujie Tu, Yifan Yang, Peng Wang, Haoran Wang, Guodong Lin 等 16 人"
+    },
+    {
+      "arxiv_id": "2610.41994",
+      "title": "DAMI: Dual-Axis Memory Initialization for Enhanced Long-Context Retrieval in Gated Linear Attention",
+      "abstract": "Linear attention scales linearly with sequence length, but its finite-state memory can limit long-context retrieval. In gated linear recurrences, memory retention depends on state decay, which is shaped jointly by gate parameters A_log and dt_bias and by input activations. In controlled Gated DeltaNet (GDN) experiments, both parameters remain highly correlated with their initial values after training, highlighting the importance of initialization. Therefore, we introduce Dual-Axis Memory Initialization (DAMI), which jointly configures these parameters before training. DAMI assigns geometric timescales across heads for varied retrieval distances and a low-high-low input-sensitivity profile across layers. A small activation sample calibrates the GDN-family implementation to match both behavioral targets without adding trainable parameters. Across GDN, KDA, GDN2, Mamba-2, and RWKV-7, DAMI improves average RULER-style retrieval accuracy by 5.29 to 16.71 percentage points over the corresponding random-initialization baselines. Performance on language modeling, commonsense reasoning, and 2K real-world retrieval remains broadly comparable to those baselines. Our code is available at https://speedai.com/research/dami.",
+      "authors": [
+        "Zhangchi Feng",
+        "Harry Jiang",
+        "Yangyifei Luo",
+        "Ray Zhang",
+        "Richong Zhang"
+      ],
+      "hf_upvotes": 5,
+      "hf_url": "https://huggingface.co/papers/2610.41994",
+      "github_repo": "https://github.com/SpeedAI-Lab/DAMI",
+      "github_repo_source": "hf",
+      "github_stars": 9,
+      "project_page": "https://speedai.com/research/dami",
+      "organization": "SpeedAI",
+      "hf_published": "2026-10-30",
+      "hf_featured": "2026-11-03",
+      "abs_url": "https://arxiv.org/abs/2610.41994",
+      "pdf_url": "https://arxiv.org/pdf/2610.41994",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 3.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.749,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "mamba"
+        ],
+        "category": 0.0,
+        "popularity": 5.0,
+        "stars_counted": 9,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 5 赞 ｜ 💻 [代码](https://github.com/SpeedAI-Lab/DAMI)",
+      "authors_display": "Zhangchi Feng, Harry Jiang, Yangyifei Luo, Ray Zhang, Richong Zhang"
+    },
+    {
+      "arxiv_id": "2611.00172",
+      "title": "From Fragmentation to Fusion: A Survey and Roadmap for Omnimodal Embeddings",
+      "abstract": "Embedding models underpin virtually every modern AI system, from search engines to recommendation systems. Despite shared mathematical foundations, research on embedding models remains fragmented by modality: the communities develop largely in isolation, seldom exchanging insights. We argue that this fragmentation obscures a deeper convergence. Driven by contrastive learning, Transformer architectures, and a granularity shift, embedding research across modalities is converging toward a common set of principles, even as modality-specific challenges remain underexplored. To reason across this convergence without conflating it, we propose a framework of three progressively harder capabilities: coverage, comparability, and compositionality. Three paths toward unification satisfy these in turn: transformation broadens coverage, alignment enables comparability, and joint embedding, the terminus we advocate, aims at compositionality. This position paper traces the resulting evolution, providing the first unified, cross-cutting treatment of omnimodal embedding research.",
+      "authors": [
+        "Ziyin Zhang",
+        "Yuyu Guo",
+        "Ying Zhang",
+        "Siqiao Xue",
+        "Zihan Liao",
+        "Jin Qin",
+        "Wenjie Yang",
+        "Siyuan Yang",
+        "Shijie Li",
+        "Cheng Chen",
+        "Hao Wu",
+        "Zhaoyang Zhu",
+        "Ruipeng Li",
+        "Zhaokun Jiang",
+        "Lei Lei",
+        "Rui Wang",
+        "Hang Yu",
+        "Rui Wang"
+      ],
+      "hf_upvotes": 24,
+      "hf_url": "https://huggingface.co/papers/2611.00172",
+      "github_repo": "https://github.com/codefuse-ai/Awesome-Omnimodal-Embeddings",
+      "github_repo_source": "hf",
+      "github_stars": 22,
+      "organization": "CodeFuse AI",
+      "hf_published": "2026-10-30",
+      "hf_featured": "2026-11-03",
+      "abs_url": "https://arxiv.org/abs/2611.00172",
+      "pdf_url": "https://arxiv.org/pdf/2611.00172",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 5.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 7.649,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "convergence",
+          "contrastive learning"
+        ],
+        "category": 0.0,
+        "popularity": 4.9,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 24 赞 ｜ 💻 [代码](https://github.com/codefuse-ai/Awesome-Omnimodal-Embeddings)",
+      "authors_display": "Ziyin Zhang, Yuyu Guo, Ying Zhang, Siqiao Xue, Zihan Liao, Jin Qin 等 18 人"
+    },
+    {
+      "arxiv_id": "2611.01815",
+      "title": "When Does Latent Prediction Error Support Physical Surprise Claims in Video World Models?",
+      "abstract": "Prediction errors from video world models are often treated as physical surprise, but they can also reflect appearance, static content, motion, or ordinary prediction difficulty. We present an evaluation framework that separates what frozen representations contain, how they organize appearance and physical differences, and what changes a model's own prediction error. On IntPhys2, a benchmark of physically possible and impossible events, we compare representations from latent prediction, masked pixel reconstruction, and simple visual statistics. Appearance remains easy to decode, while V-JEPA2 exposes modest information about whether events are possible or impossible. Looking at the latent geometry, appearance changes become smaller compared with differences between videos, their directions line up more consistently across scenes, and their overlap with physical changes decreases in deeper layers. Across action-conditioned models, incorrect actions raise prediction error, while appearance changes also produce substantial responses. In Physion++ video clips, repeating a single frame can produce higher error than the original clip, while changing color throughout the clip can lower it. Using Kubric, a simulation and rendering framework, we find that impossible events can produce lower error than possible events. A fixed error threshold also incorrectly flags many possible events as impossible. A model can therefore represent physical information and respond to incorrect actions without its native prediction error reliably measuring physical surprise.",
+      "authors": [
+        "Anton Hristov",
+        "Aleksandar Slavov",
+        "Vasil Vasilev"
+      ],
+      "hf_upvotes": 25,
+      "hf_url": "https://huggingface.co/papers/2611.01815",
+      "github_repo": "https://github.com/3-ml/jepa-surprise",
+      "github_repo_source": "hf",
+      "github_stars": 0,
+      "project_page": "https://3-ml.github.io/jepa-surprise/",
+      "hf_published": "2026-11-01",
+      "hf_featured": "2026-11-03",
+      "abs_url": "https://arxiv.org/abs/2611.01815",
+      "pdf_url": "https://arxiv.org/pdf/2611.01815",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 7.0,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 5.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 25 赞 ｜ 💻 [代码](https://github.com/3-ml/jepa-surprise)",
+      "authors_display": "Anton Hristov, Aleksandar Slavov, Vasil Vasilev"
+    },
+    {
+      "arxiv_id": "2611.05609",
+      "title": "On the Generalization Limitation of On-Policy Distillation for Post-RL Consolidation",
+      "abstract": "Multi-teacher on-policy distillation (MOPD) extends on-policy distillation (OPD) to consolidate capabilities from multiple teachers. Although prior work reports near-perfect in-distribution (IND) distillation performance, we find that this can mask incomplete capability consolidation beyond the supervised distribution. A preliminary study on synthetic reasoning shows that OPD does not fully transfer teachers' generalization capabilities. We then extend this investigation to real-world tasks, evaluating extrapolative and compositional generalization across mathematical reasoning, coding, agent, and long-context capabilities using Qwen3 models. Across extrapolative settings, OPD and MOPD reach 96.04-102.73% of their teachers' IND scores. Yet their out-of-distribution (OOD) scores remain 2.45-16.25% below the base model's. Across three compositional settings, MOPD improves IND performance over the base model, but its performance on composed tasks as OOD remains 18.19-24.34% below that of the best teachers. To understand these gaps, we examine teacher capability and data coverage as two potential bottlenecks. Jointly alleviating these bottlenecks eliminates OOD forgetting in our experiments and suggests the potential for generalization beyond the teacher. (M)OPD also reduces OOD forgetting on average relative to its reinforcement learning (RL) baselines. Analysis of the associated update geometry reveals smaller and more spectrally concentrated updates on average than those of the RL baselines, along with greater shared update structure under MOPD. Motivated by these findings, we propose geometry-based patching and base-preserving replay to improve OOD performance while largely preserving IND performance. Our findings identify a blind spot in capability consolidation via (M)OPD, highlighting the need for algorithms that explicitly support OOD retention and generalization.",
+      "authors": [
+        "Yichen Wang",
+        "Yufa Zhou",
+        "Siqi Zhu",
+        "Haozheng Luo",
+        "Jingzhi Bao",
+        "Zhichao Liu",
+        "Zijun Wei"
+      ],
+      "hf_upvotes": 24,
+      "hf_url": "https://huggingface.co/papers/2611.05609",
+      "project_page": "https://yichenzw.com/opd-generalization.github.io/",
+      "organization": "ByteDance",
+      "hf_published": "2026-11-03",
+      "hf_featured": "2026-11-05",
+      "abs_url": "https://arxiv.org/abs/2611.05609",
+      "pdf_url": "https://arxiv.org/pdf/2611.05609",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "published": "2026-11-03",
+      "updated": "2026-11-03",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "27 pages, 12 figures. Project page: https://yichenzw.com/opd-generalization.github.io/",
+      "theme": "deep-learning",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 6.899,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "generalization",
+          "out-of-distribution"
+        ],
+        "category": 2.0,
+        "popularity": 4.9,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 24 赞",
+      "authors_display": "Yichen Wang, Yufa Zhou, Siqi Zhu, Haozheng Luo, Jingzhi Bao, Zhichao Liu 等 7 人"
+    },
+    {
+      "arxiv_id": "2611.02112",
+      "title": "Order-Only On-Policy Distillation",
+      "abstract": "On-policy distillation (OPD) trains a student on its own generations by matching the teacher's token probabilities. These probabilities entangle two kinds of information: which tokens the teacher prefers, and how confident it is. The latter reflects the teacher's own capacity and calibration, which a smaller student may be unable to reproduce. Because the teacher temperature changes these values without changing the ordering, OPD is also sensitive to the temperature choice. We ask whether the teacher's ordering of candidate tokens is enough, and propose Order-Only On-Policy Distillation (O^{3}PD). At each student-generated prefix, O^{3}PD trains the student to reproduce the order of the teacher's top-K tokens, without fitting their probability values. The objective is therefore invariant to the teacher temperature and needs no temperature tuning. Across six teacher--student pairs, O^{3}PD outperforms OPD on the average over HMMT25, AIME24, and AIME25 in every pair, by up to 2.9 points, with gains of up to 5.6 points on AIME25. Other ranking losses yield similar gains, so the benefit comes from ordinal supervision itself. Analysis shows that O^{3}PD departs further from the teacher's probabilities than OPD, yet reproduces its ranking more faithfully and yields a stronger student. The ranking, not the probability values, thus carries the knowledge that on-policy distillation needs to transfer.",
+      "authors": [
+        "Guangzeng Han",
+        "Yu Wu",
+        "Xiaolei Huang"
+      ],
+      "hf_upvotes": 35,
+      "hf_url": "https://huggingface.co/papers/2611.02112",
+      "hf_published": "2026-11-01",
+      "hf_featured": "2026-11-03",
+      "abs_url": "https://arxiv.org/abs/2611.02112",
+      "pdf_url": "https://arxiv.org/pdf/2611.02112",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 2.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 6.416,
+      "score_breakdown": {
+        "keyword_raw": 2,
+        "keyword_matched": [
+          "calibration"
+        ],
+        "category": 0.0,
+        "popularity": 5.92,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 35 赞",
+      "authors_display": "Guangzeng Han, Yu Wu, Xiaolei Huang"
+    },
+    {
+      "arxiv_id": "2611.04408",
+      "title": "Halley: A Predictive Control Plane for Optical AI Data Center Networks",
+      "abstract": "A frontier AI model is trained in an AI data center, on tens of thousands of accelerators joined by a dedicated network, and every training step ends with all of them exchanging data at once. Between racks, that network is optical, and each of its four layers, from lasers to switches, runs a fixed or after-the-fact policy. Lasers sharing an enclosure, cooling, and power can fail together. At a fixed spare ratio, correlated failure provably caps a pool's availability however large it grows. In this paper, we present a comprehensive predictive control plane framework, called Halley, that reads each resource's next state and acts before the failure occurs. It has four components, each carrying a formal guarantee: LightReserve that sizes the laser pool to provide a coverage bound, FoldFit that schedules the switch within 11/9 of the optimal, ThermaLead that holds a microring with one-step-ahead control, and TriageGuard that protects the highest-risk modules first. Halley gives each layer a predictive controller that defers to the deployed policy when unsure. Composed from simulations at that point, effective goodput, the share of ideal throughput kept, rises from 65.2\\% to 76.5\\% if a window that exhausts its spares is lost. If only the dark channels' bandwidth is lost, it reaches 67.4\\%. Per megawatt, that is up to 1.03--1.17 times the training; for the same training, up to 3.3--14.7\\% less data center capacity. Halley's fallback circuits are formally verified and are shown to achieve close timing on a commercial FPGA, and pass a 130~nm signoff.",
+      "authors": [
+        "Manav Mishra",
+        "Krishna M. Sivalingam"
+      ],
+      "hf_upvotes": 33,
+      "hf_url": "https://huggingface.co/papers/2611.04408",
+      "hf_published": "2026-11-03",
+      "hf_featured": "2026-11-05",
+      "abs_url": "https://arxiv.org/abs/2611.04408",
+      "pdf_url": "https://arxiv.org/pdf/2611.04408",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 0.0,
+      "alt_theme": null,
+      "routed_by": "hf-rescue",
+      "score": 5.745,
+      "score_breakdown": {
+        "keyword_raw": 0,
+        "keyword_matched": [],
+        "category": 0.0,
+        "popularity": 5.74,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 33 赞",
+      "authors_display": "Manav Mishra, Krishna M. Sivalingam"
+    },
+    {
+      "arxiv_id": "2611.06042",
+      "title": "UniRestorer++: Scalable Universal Image Restoration with Multi-Granularity Degradation Modeling",
+      "abstract": "Universal image restoration aims to handle diverse degradations within a single model, but a reliable scaling strategy remains underexplored. Increasing backbone depth and width can lead to performance saturation, while degradation-aware specialization depends on accurate degradation estimation and is vulnerable to errors on out-of-distribution and real-world inputs. We propose UniRestorer++, a scalable framework based on multi-granularity degradation modeling. It progressively refines degradation groups and introduces group-specific experts, coupling capacity growth with specialization. Degradation-estimation-based routing selects a root-to-leaf path, while granularity-estimation-based routing chooses a level along that path to balance specialization and robustness. Spatially dense degradation representation maps further enable region-aware routing for spatially non-uniform corruptions. We develop CDD-50, a benchmark covering 50 degradation categories from single to penta-degradation. Experiments show approximately log-linear PSNR trends over the evaluated model-size range and stronger scaling gains on out-of-distribution and real-world data than vanilla MoE scaling. UniRestorer++ achieves state-of-the-art performance across benchmarks and demonstrates zero-shot generalization and few-shot transfer on real-world images. Code: https://github.com/mrluin/UniRestorer_plusplus",
+      "authors": [
+        "Jingbo Lin",
+        "Zhilu Zhang",
+        "Fan Li",
+        "Renjing Pei",
+        "Wenbo Li",
+        "Hang Xu",
+        "Hongzhi Zhang",
+        "Wangmeng Zuo"
+      ],
+      "published": "2026-11-04",
+      "updated": "2026-11-04",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2611.06042",
+      "pdf_url": "https://arxiv.org/pdf/2611.06042v1",
+      "hf_upvotes": 2,
+      "hf_url": "https://huggingface.co/papers/2611.06042",
+      "github_repo": "https://github.com/mrluin/UniRestorer_plusplus",
+      "github_repo_source": "hf",
+      "github_stars": 2,
+      "hf_published": "2026-11-04",
+      "hf_featured": "2026-11-05",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 5.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.483,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "generalization",
+          "out-of-distribution",
+          "robustness"
+        ],
+        "category": 0.0,
+        "popularity": 2.73,
+        "stars_counted": 2,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 2 赞 ｜ 💻 [代码](https://github.com/mrluin/UniRestorer_plusplus)",
+      "authors_display": "Jingbo Lin, Zhilu Zhang, Fan Li, Renjing Pei, Wenbo Li, Hang Xu 等 8 人"
+    },
+    {
+      "arxiv_id": "2611.04760",
+      "title": "Koopman Generative Operators for Efficient Probabilistic Time-Series Forecasting",
+      "abstract": "Probabilistic time-series forecasting requires models that simultaneously capture structured temporal dynamics, expressive uncertainty, and efficient inference, yet existing approaches fall short of this goal: latent dynamical models impose structure but rely on restrictive generation mechanisms, while modern generative methods such as diffusion and flow matching achieve flexibility at the cost of iterative and computationally expensive sampling. We introduce the Koopman Generative Operator (KGO), a probabilistic forecasting method that conceptualizes prediction as the evolution of structured uncertainty. KGO integrates three core components: (1) Koopman Patch Embedding (KoPE) for temporally consistent latent trajectory extrapolation; (2) Koopman Flow Matching (KoFM), which enables fast, single-step generation through a closed-form matrix exponential in a Koopman latent space, bypassing iterative sampling; and (3) an Adaptive Uncertainty Gate (AUG), which provides probabilistic forecasts by adapting uncertainty per-variable and per-horizon, corresponding to a learned decomposition of aleatoric uncertainty without manual tuning. By unifying these components, KGO achieves state-of-the-art accuracy on 13/17 ProbTS benchmarks in CRPS and 16/17 in NMAE. Further, by eliminating iterative sampling, KGO delivers at least a 25times reduction in inference time compared to iterative generative models. These results position KGO as a practical and principled framework that advances the accuracy-efficiency trade-off in probabilistic time-series forecasting, combining leading accuracy on the evaluated benchmarks with fast, single-step generation.",
+      "authors": [
+        "Raz Marshanski",
+        "Liran Nochumsohn",
+        "Mayank Jauhari",
+        "Boris N. Oreshkin",
+        "Omri Azencot"
+      ],
+      "published": "2026-11-03",
+      "updated": "2026-11-03",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Accepted at NeurIPS 2026",
+      "abs_url": "https://arxiv.org/abs/2611.04760",
+      "pdf_url": "https://arxiv.org/pdf/2611.04760v1",
+      "hf_upvotes": 3,
+      "hf_url": "https://huggingface.co/papers/2611.04760",
+      "github_repo": "https://github.com/azencot-group/KGO",
+      "github_repo_source": "hf",
+      "github_stars": 56,
+      "organization": "The Sequential Learning Group",
+      "hf_published": "2026-11-03",
+      "hf_featured": "2026-11-05",
+      "sources": [
+        "hf",
+        "arxiv"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 9.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 5.482,
+      "score_breakdown": {
+        "keyword_raw": 7,
+        "keyword_matched": [
+          "forecasting",
+          "flow matching",
+          "uncertainty"
+        ],
+        "category": 2.0,
+        "popularity": 1.73,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 3 赞 ｜ 💻 [代码](https://github.com/azencot-group/KGO)",
+      "authors_display": "Raz Marshanski, Liran Nochumsohn, Mayank Jauhari, Boris N. Oreshkin, Omri Azencot"
+    },
+    {
+      "arxiv_id": "2611.04414",
+      "title": "SphereFlow: Missing Modality Imputation via Geometric Transport on Hypersphere",
+      "abstract": "Missing modality imputation aims to synthesize unobserved modalities from observed ones. Existing methods treat each modality as living on its own latent manifold, forcing the generator to learn a long, unstructured jump between them. We present SphereFlow, which takes a fundamentally different view: by projecting all modalities into a shared hyperspherical latent space via a frozen self-supervised encoder, cross-modal imputation reduces to short-range geometric transport between nearby points on the sphere. Realizing this idea with flow matching, however, exposes two geometric conflicts: the standard Gaussian noise source is catastrophically mismatched with the unit-norm data manifold, and the linear interpolation path departs the sphere surface into a region where the decoder has no training signal. We resolve both with simple, geometry-aware modifications: replacing the noise source with the observed-modality latent so that the velocity field learns only the cross-modal displacement, and training the decoder with a time-weighted loss that extends its domain to the near-surface region traversed by the flow. We prove that this data-as-source formulation reduces the worst-case off-manifold deviation from a quantity that grows with the latent dimension to a small, dimension-independent bound governed by inter-modality similarity. Experiments on BraTS multi-modal MRI imputation and CT-MRI translation demonstrate state-of-the-art generation fidelity across all settings, while downstream brain tumor segmentation with our imputed data closes roughly eighty percent of the gap to the full-modality oracle. Code is available at https://github.com/WTHH031230/SphereFlow.",
+      "authors": [
+        "Huihan Wang",
+        "Juncheng Wang",
+        "Yuxiang Feng",
+        "Wenlong Hou",
+        "Guoqi Yu",
+        "Chao Xu",
+        "Yang Liu",
+        "Baigui Sun",
+        "Shujun Wang"
+      ],
+      "hf_upvotes": 1,
+      "hf_url": "https://huggingface.co/papers/2611.04414",
+      "github_repo": "https://github.com/WTHH031230/SphereFlow",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "hf_published": "2026-11-03",
+      "hf_featured": "2026-11-04",
+      "abs_url": "https://arxiv.org/abs/2611.04414",
+      "pdf_url": "https://arxiv.org/pdf/2611.04414",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 6.0,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 4.832,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "flow matching",
+          "self-supervised"
+        ],
+        "category": 0.0,
+        "popularity": 1.83,
+        "stars_counted": 1,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 1 赞 ｜ 💻 [代码](https://github.com/WTHH031230/SphereFlow)",
+      "authors_display": "Huihan Wang, Juncheng Wang, Yuxiang Feng, Wenlong Hou, Guoqi Yu, Chao Xu 等 9 人"
+    },
+    {
+      "arxiv_id": "2610.40119",
+      "title": "SynthFaces: Balanced Large Scale Human Dataset",
+      "abstract": "The pursuit of fair and equitable AI in human-centric tasks is critically hindered by the inherent biases and privacy risks of real-world datasets, which offer imbalanced representations of identity and often contain sensitive personal information. Consequently, state-of-the-art generative models trained on this skewed data exhibit unfair performance, particularly in identity-preserving generation. In this work we propose a pipeline for controllable generation of dataset with diverse faces for generative models training and finetuning. We achieve this by expanding foundational Arc2Face diffusion model with a flow matching generative model in the manifold of identity embeddings. We demonstrate that such approach achieves both goals of generative fidelity and label diversity not present in real human-centric datasets. As a result we collect and further contextualize a highly balanced identity-centric dataset of humans named SynthFaces. By design, our released images and identities are synthetic, reducing direct reliance on real personal images; we empirically check identity separation with a nearest-neighbor non-leakage metric. We purpose it for training and tuning of fair models for various downstream tasks, and showcase its usability in finetuning an existing adapter-based method for personalized generation.",
+      "authors": [
+        "Sergey Karpukhin",
+        "Denis Bobkov",
+        "Kirill Morozov",
+        "Aibek Alanov"
+      ],
+      "published": "2026-10-29",
+      "updated": "2026-10-29",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "accepted at BMVC 2026 github: https://github.com/ControlGenAI/SynthFaces",
+      "abs_url": "https://arxiv.org/abs/2610.40119",
+      "pdf_url": "https://arxiv.org/pdf/2610.40119v1",
+      "hf_upvotes": 1,
+      "hf_url": "https://huggingface.co/papers/2610.40119",
+      "github_repo": "https://github.com/ControlGenAI/SynthFaces",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "hf_published": "2026-10-29",
+      "hf_featured": "2026-11-06",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 6.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.832,
+      "score_breakdown": {
+        "keyword_raw": 6,
+        "keyword_matched": [
+          "flow matching",
+          "diffusion model",
+          "privacy"
+        ],
+        "category": 0.0,
+        "popularity": 1.83,
+        "stars_counted": 1,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 1 赞 ｜ 💻 [代码](https://github.com/ControlGenAI/SynthFaces)",
+      "authors_display": "Sergey Karpukhin, Denis Bobkov, Kirill Morozov, Aibek Alanov"
+    },
+    {
+      "arxiv_id": "2611.05593",
+      "title": "GaussianRenderFormer: Transformer-based Rendering of 3D Gaussian Splats",
+      "abstract": "Can a neural network learn to render 3D Gaussian splats on its own, with no rasterizer in the renderer? We present GaussianRenderFormer, a transformer that takes a set of Gaussians and a camera and outputs the image directly. Each Gaussian becomes one token in a view-independent encoder, and a view-dependent decoder turns small patches of camera rays into pixels by attending to those tokens. Trained on 26,820 Objaverse objects pruned to 20,000 Gaussians each, GaussianRenderFormer renders 300 unseen objects at 38.08 dB PSNR against the full, unpruned splats, while rasterizing the same pruned input reaches 44.02 dB. The gap is not one of generalization, and our diagnostics are consistent with a bottleneck in the view decoder: telling it the projected footprint of each Gaussian, which it could in principle infer, adds 1.4 dB. Under-training is not ruled out. Code, trained models and videos: https://svlwoof.github.io/gaussianrenderformer",
+      "authors": [
+        "Shahaf Valencia Levy",
+        "Sagie Benaim"
+      ],
+      "published": "2026-11-03",
+      "updated": "2026-11-03",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "comment": "Under review at TMLR. 32 pages. Project page: https://svlwoof.github.io/gaussianrenderformer",
+      "abs_url": "https://arxiv.org/abs/2611.05593",
+      "pdf_url": "https://arxiv.org/pdf/2611.05593v1",
+      "hf_upvotes": 3,
+      "hf_url": "https://huggingface.co/papers/2611.05593",
+      "github_repo": "https://github.com/SVLwoof/gaussianformer",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "project_page": "https://svlwoof.github.io/gaussianrenderformer/",
+      "organization": "The Hebrew University of Jerusalem",
+      "hf_published": "2026-11-03",
+      "hf_featured": "2026-11-05",
+      "sources": [
+        "hf"
+      ],
+      "theme": "deep-learning",
+      "fit": 4.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.732,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "generalization",
+          "neural network"
+        ],
+        "category": 1.0,
+        "popularity": 1.73,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 3 赞 ｜ 💻 [代码](https://github.com/SVLwoof/gaussianformer)",
+      "authors_display": "Shahaf Valencia Levy, Sagie Benaim"
+    },
+    {
+      "arxiv_id": "2610.38252",
+      "title": "A Tutorial on Generative Models for Music Audio",
+      "abstract": "Music audio generation spans instrumental clips, full songs with vocals, edits of existing recordings, and systems that play alongside a musician in real time. This monograph explains the methods behind these systems for readers familiar with neural-network training who are new to music generation. It introduces neural audio codecs and autoencoders, autoregressive and masked token models, diffusion and flow matching, sampling acceleration, and preference optimization in a shared notation. Worked examples connect training objectives and sampling procedures to published systems. The application sections relate the musical requirements of instrumental generation, songs, editing, and live performance to model design. Comparison tables record representations, methods, inputs, tasks, and release information documented in papers and official sources. Symbolic composition, speech, and sound effects are included where they connect to music audio. We explain how to interpret automatic metrics and learned judges, design and report listening tests, and assess evidence about data provenance, memorization, attribution, and output detection. Selected legal decisions and disputes illustrate the implications for training and release. The reviewed systems combine established generative paradigms with new representations, planning stages, and post-training procedures. Differences in data, scale, and evaluation limit what cross-system comparisons can establish about the sources of reported gains.",
+      "authors": [
+        "Mateusz Modrzejewski",
+        "Joanna Kurkowska",
+        "Dorien Herremans"
+      ],
+      "hf_upvotes": 6,
+      "hf_url": "https://huggingface.co/papers/2610.38252",
+      "organization": "AMAAI Lab",
+      "hf_published": "2026-10-28",
+      "hf_featured": "2026-11-03",
+      "abs_url": "https://arxiv.org/abs/2610.38252",
+      "pdf_url": "https://arxiv.org/pdf/2610.38252",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 9.0,
+      "alt_theme": "llm",
+      "routed_by": "topic",
+      "score": 4.699,
+      "score_breakdown": {
+        "keyword_raw": 9,
+        "keyword_matched": [
+          "optimization",
+          "flow matching",
+          "audio",
+          "music generation"
+        ],
+        "category": 0.0,
+        "popularity": 2.45,
+        "stars_counted": null,
+        "code_bonus": 0.0,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 6 赞",
+      "authors_display": "Mateusz Modrzejewski, Joanna Kurkowska, Dorien Herremans"
+    },
+    {
+      "arxiv_id": "2611.05164",
+      "title": "Basin2Vec: Learning Basin-Centric Embeddings for Scalable Hydrological Modeling",
+      "abstract": "Reliable streamflow prediction across time and in ungauged basins requires representations that capture hydrologically relevant basin characteristics. Existing methods rely on either fixed handcrafted attributes or general-purpose Earth observation embeddings not tailored to basin structure. We introduce \\textbf{Basin2Vec}, a self-supervised framework that learns compact basin representations from hydroclimatic and physiographic data without observed streamflow. Basin2Vec organizes representation learning around basin scale and relationships across space and time. Across multiple forecasting architectures, it consistently outperforms predefined attributes and general-purpose geospatial embeddings in temporal generalization and zero-shot spatial transfer. Basin2Vec provides average relative gains of up to 8.3% temporally and achieves 3.5x the median predictive performance of the strongest baselines on unseen basins. These results demonstrate the effectiveness of basin-centric pretraining for transferable hydrologic prediction. Code is available at https://github.com/Muhammad-Talha-MT/basin2vec",
+      "authors": [
+        "Muhammad Talha",
+        "Xiaofeng Liu",
+        "Yuan Yang",
+        "Pang-Ning Tan",
+        "A. Pouyan Nejadhashemi"
+      ],
+      "published": "2026-11-03",
+      "updated": "2026-11-03",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2611.05164",
+      "pdf_url": "https://arxiv.org/pdf/2611.05164v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/Muhammad-Talha-MT/basin2vec",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 12.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.688,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "generalization",
+          "forecasting",
+          "self-supervised",
+          "representation learning"
+        ],
+        "category": 2.75,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 0,
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/Muhammad-Talha-MT/basin2vec)",
+      "authors_display": "Muhammad Talha, Xiaofeng Liu, Yuan Yang, Pang-Ning Tan, A. Pouyan Nejadhashemi"
+    },
+    {
+      "arxiv_id": "2611.03438",
+      "title": "Align Once to Explain: Feature Alignment for Scalable B-cosification of Foundational Vision Transformers",
+      "abstract": "Foundational vision models have become the de facto standard for many vision tasks due to their strong performance. However, they are notoriously opaque and remain hard to interpret. We present ALOE (ALign Once to Explain), a one-time, label-free feature alignment approach that efficiently converts foundational vision models into inherently interpretable B-cos variants. Once aligned, the B-cos backbone is used as a drop-in replacement across several downstream tasks-amortizing the cost of interpretability. ALOE is robust across pre-training paradigms (supervised, self-supervised, vision-language) and can preserve teacher-level generalization with orders of magnitude less data than training from scratch. On classification, it strongly outperforms vanilla B-cosification (e.g., +10.5 p.p. top-1 on ImageNet for DINOv3 ViT-B/16), retains strong linear probing, k-NN, and zero-shot transfer competitive with foundational backbones (DINOv3, SigLIP2) across diverse downstream datasets. It also preserves spatially structured features useful for dense prediction, while yielding well-localized and highly human-interpretable explanations by design.",
+      "authors": [
+        "Raphael Maser",
+        "Siddhartha Gairola",
+        "Sukrut Rao",
+        "Bernt Schiele"
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "CVPR 2026. 29 pages incl. appendix. R. Maser and S. Gairola contributed equally. This version's models are trained without the regularization term and differ slightly from the CVPR version. Code: https://github.com/rmaser/ALOE ; Models: https://huggingface.co/collections/rmaser/aloe",
+      "abs_url": "https://arxiv.org/abs/2611.03438",
+      "pdf_url": "https://arxiv.org/pdf/2611.03438v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/rmaser/ALOE",
+      "github_repo_source": "abstract",
+      "project_page": "https://huggingface.co/collections/rmaser/aloe",
+      "theme": "deep-learning",
+      "fit": 10.0,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 4.5,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "generalization",
+          "self-supervised",
+          "interpretability",
+          "probing"
+        ],
+        "category": 0.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.5
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/rmaser/ALOE)",
+      "authors_display": "Raphael Maser, Siddhartha Gairola, Sukrut Rao, Bernt Schiele"
+    },
+    {
+      "arxiv_id": "2611.07473",
+      "title": "Echoes of Error: Residual-Directional Local Rollout Consistency for Timeseries Forecasting",
+      "abstract": "In time-series forecasting, rollout errors are not merely one-step fitting discrepancies: once fed back into the evolving state, they can perturb future predictions. We formalize this effect through local rollout consistency, which compares the next prediction produced under teacher forcing with that produced under free running. In principle, this consistency can be enforced directly by tracking the residual-induced perturbation of the next state. In practice, however, the residual-to-state alignment operator is often difficult to design when the input state and output block have different dimensions, heterogeneous components, or architecture-dependent layouts. We therefore use a first-order local surrogate that penalizes the Jacobian-vector product of the predictor along the actual feedback perturbation, suppressing precisely the directions through which self-generated errors remain visible to future predictions. We further give the same loss a geometric interpretation near a predictive manifold: by controlling residual-induced directions that probe the normal bundle, the objective yields theoretical conditions under which free-running trajectories remain inside a stability tube around the manifold. Experiments on time series forecasting tasks support this view, showing that the proposed regularization improves predictive accuracy. More broadly, our results suggest a training principle for time-series forecasters and sequential predictors: a model should not only make small one-step errors, but also learn not to let its own errors echo into the future. Code is available at https://github.com/Wangzzzzzzzz/Echoes-Of-Error.",
+      "authors": [
+        "Zheng Wang",
+        "Kaixuan Zhang",
+        "Xiaonan Lu",
+        "Wanfang Chen"
+      ],
+      "published": "2026-11-05",
+      "updated": "2026-11-05",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "Accepted for publication at NeurIPS 2026",
+      "abs_url": "https://arxiv.org/abs/2611.07473",
+      "pdf_url": "https://arxiv.org/pdf/2611.07473v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/Wangzzzzzzzz/Echoes-Of-Error",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 7.75,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.269,
+      "score_breakdown": {
+        "keyword_raw": 5,
+        "keyword_matched": [
+          "time series",
+          "forecasting"
+        ],
+        "category": 2.75,
+        "popularity": 0.83,
+        "stars_counted": 1,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "github_stars": 1,
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/Wangzzzzzzzz/Echoes-Of-Error)",
+      "authors_display": "Zheng Wang, Kaixuan Zhang, Xiaonan Lu, Wanfang Chen"
+    },
+    {
+      "arxiv_id": "2611.09309",
+      "title": "Interpretable Context-Aware Multi-Label Retinal Classification with Dual-Hub Heterogeneous Graph Neural Network",
+      "abstract": "Multi-label retinal screening requires capturing co-occurring pathologies and clinical context, yet standard multimodal fusion remains opaque. We propose a dual-hub heterogeneous graph neural network (GNN) that couples spatial fundus features and structured clinical covariates through cross-modal message passing while providing inherent interpretability. Rather than relying on post-hoc saliency approximations, our architecture exposes multi-level decision pathways during forward aggregation: spatially biased self-attention captures lesion-level patch interactions, while modality-specific graph attention coefficients explicitly quantify the contribution of visual regions and clinical risk factors to each disease node. Evaluated on the BRSET dataset (16,266 photographs from 8,524 patients), the proposed model achieves 76.1% Macro-AUPRC across seven conditions, matching or exceeding image-only (75.9%) and ResNet-50+MLP fusion (75.9%) baselines, with largest contextual gains in macular edema (+3.5%) and diabetic retinopathy (+2.1%). Codebase is available at: https://github.com/proshanto-c/ca-mlc-refactor.",
+      "authors": [
+        "Proshanto Chanda",
+        "Munib Mesinovic",
+        "Tingting Zhu",
+        "Abhirup Banerjee"
+      ],
+      "published": "2026-11-06",
+      "updated": "2026-11-06",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": null,
+      "abs_url": "https://arxiv.org/abs/2611.09309",
+      "pdf_url": "https://arxiv.org/pdf/2611.09309v1",
+      "sources": [
+        "arxiv"
+      ],
+      "github_repo": "https://github.com/proshanto-c/ca-mlc-refactor",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 11.0,
+      "alt_theme": "vlm",
+      "routed_by": "topic",
+      "score": 4.25,
+      "score_breakdown": {
+        "keyword_raw": 10,
+        "keyword_matched": [
+          "graph neural network",
+          "gnn",
+          "neural network",
+          "interpretability"
+        ],
+        "category": 1.0,
+        "popularity": 0.0,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "none",
+      "heat_label": "热度未测得 ｜ 💻 [代码](https://github.com/proshanto-c/ca-mlc-refactor)",
+      "authors_display": "Proshanto Chanda, Munib Mesinovic, Tingting Zhu, Abhirup Banerjee"
+    },
+    {
+      "arxiv_id": "2610.41278",
+      "title": "AuditFL: A Contract-Backed Clearing Layer for Open Federated Learning",
+      "abstract": "Federated learning (FL) keeps raw data local, but most deployments still rely on a trusted coordinator for client admission, checkpoint distribution, update collection, aggregation, and rewards. This paper presents AuditFL, a contract-backed clearing layer for auditable FL in open settings. AuditFL keeps training and aggregation off chain, stores model artifacts in an assumed reliable off-chain artifact store, and records only content identifiers and economic state on chain. Clients reserve update tickets with deposits, publish update identifiers, and later claim refunds or rewards; the task coordinator publishes global checkpoints and finalizes rounds through deterministic settlement rules. The design does not remove the aggregator, but makes its on-chain round decisions attributable, replayable, auditable, and economically constrained. We implement AuditFL as both a deterministic state-machine prototype and a Solidity contract on a local Ethereum-compatible Anvil chain. On full MNIST with Dirichlet non-IID splits, 12 rounds, and up to 200 clients, AuditFL preserves the Plain FL learning trajectory while its overhead follows closed-form control-plane models. At 200 clients, the contract run issues 5,026 transactions, stores 2,413 off-chain artifacts (144.9 MiB), and consumes 829.7M EVM gas, dominated by per-client reserve and publish calls. Controlled dropout, invalid-update, and artifact-unavailability stress tests reduce inclusion nearly linearly but still finalize rounds, with final-accuracy changes remaining within a few tenths of an accuracy percentage point even under high injected failure rates.",
+      "authors": [
+        "Alexandros Balla",
+        "Spyros Lalis"
+      ],
+      "hf_upvotes": 1,
+      "hf_url": "https://huggingface.co/papers/2610.41278",
+      "github_repo": "https://github.com/katastrofh/AuditFL",
+      "github_repo_source": "hf",
+      "github_stars": 1,
+      "organization": "HKUST",
+      "hf_published": "2026-10-30",
+      "hf_featured": "2026-11-02",
+      "abs_url": "https://arxiv.org/abs/2610.41278",
+      "pdf_url": "https://arxiv.org/pdf/2610.41278",
+      "sources": [
+        "hf"
+      ],
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 3.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 4.082,
+      "score_breakdown": {
+        "keyword_raw": 3,
+        "keyword_matched": [
+          "federated learning"
+        ],
+        "category": 0.0,
+        "popularity": 1.83,
+        "stars_counted": 1,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 1 赞 ｜ 💻 [代码](https://github.com/katastrofh/AuditFL)",
+      "authors_display": "Alexandros Balla, Spyros Lalis"
+    },
+    {
+      "arxiv_id": "2610.41789",
+      "title": "Hard Sample-Conditioned Decorrelated Attention for Robust Face Recognition",
+      "abstract": "Multi-head attention in Vision Transformers (ViTs) allows independent attention patterns across heads, but without explicit regularization, heads may learn redundant patterns rather than complementary roles. Correlation-based penalties encourage head disentanglement, yet apply uniform regularization across all training samples. In face recognition (FR), hard samples whose embeddings lie close to competing identities are critical for optimization and generalization. Motivated by this, we propose ViT-HarDis, which conditions attention head disentanglement on sample difficulty: samples with high cosine similarity to negative class centers receive stronger head decorrelation, enforcing specialization where identity ambiguity is highest. Experiments show improvements over both the baseline and uniform disentanglement on most benchmarks. Our analysis shows that ViT-HarDis reduces the similarity of hard samples to competing class centers while decreasing inter-head attention similarity, and that applying disentanglement only to the final transformer layers outperforms regularizing the entire network. Trained on WebFace4M, ViT-HarDis achieves SOTA results among ViT-based methods on IJB-B, IJB-C, and TinyFace Rank-1, while achieving the best IJB-B and TinyFace results when trained on MS1MV3, improving FR without architectural modifications or additional inference cost. Code: https://github.com/TaharChettaoui/Hard-Sample-Conditioned-Attention-for-FR.",
+      "authors": [
+        "Tahar Chettaoui",
+        "Guray Ozgur",
+        "Eduarda Caldeira",
+        "Naser Damer",
+        "Fadi Boutros"
+      ],
+      "published": "2026-10-30",
+      "updated": "2026-10-30",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted at the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2027)",
+      "abs_url": "https://arxiv.org/abs/2610.41789",
+      "pdf_url": "https://arxiv.org/pdf/2610.41789v1",
+      "hf_upvotes": 2,
+      "hf_url": "https://huggingface.co/papers/2610.41789",
+      "organization": "Fraunhofer IGD",
+      "hf_published": "2026-10-30",
+      "hf_featured": "2026-11-06",
+      "sources": [
+        "hf"
+      ],
+      "github_repo": "https://github.com/TaharChettaoui/Hard-Sample-Conditioned-Attention-for-FR",
+      "github_repo_source": "abstract",
+      "project_page": null,
+      "theme": "deep-learning",
+      "fit": 4.0,
+      "alt_theme": null,
+      "routed_by": "topic",
+      "score": 3.914,
+      "score_breakdown": {
+        "keyword_raw": 4,
+        "keyword_matched": [
+          "optimization",
+          "generalization"
+        ],
+        "category": 0.0,
+        "popularity": 1.41,
+        "stars_counted": null,
+        "code_bonus": 1.5,
+        "project_page_bonus": 0.0
+      },
+      "heat_source": "hf",
+      "heat_label": "🔥 HF 2 赞 ｜ 💻 [代码](https://github.com/TaharChettaoui/Hard-Sample-Conditioned-Attention-for-FR)",
+      "authors_display": "Tahar Chettaoui, Guray Ozgur, Eduarda Caldeira, Naser Damer, Fadi Boutros"
+    }
+  ]
+}
